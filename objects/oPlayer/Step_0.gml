@@ -10,6 +10,12 @@ jumpQueuFramesElapsed = 0;
 }
 
 
+//increase gravity if falling
+if(vsp > 0)
+{
+vsp = vsp + .75
+}
+
 //calculate movement
  var move = key_right - key_left;
  hsp = walksp * move;
