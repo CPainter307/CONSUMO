@@ -24,7 +24,7 @@ vsp = vsp + .75
  
  if(((totalJumps - currentJumps) > 0) && (jumpQueuFramesElapsed <= 6))
  {	 
- vsp = -10;
+ vsp = -15;
  currentJumps = currentJumps + 1;
  }
  
@@ -99,7 +99,8 @@ vsp = vsp + .75
  
  }
  
- if(hsp != 0) image_xscale = sign(hsp);
+ //if (hsp != 0) image_xscale = sign(hsp);
+ if (hsp != 0) image_xscale = 0.05 * sign(hsp);
  
  jumpQueuFramesElapsed++;
  
