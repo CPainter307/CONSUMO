@@ -100,7 +100,7 @@ vsp = vsp + .75
  }
  
  //if (hsp != 0) image_xscale = sign(hsp);
- if (hsp != 0) image_xscale = 0.05 * sign(hsp);
+ if (hsp != 0) image_xscale = 0.055 * sign(hsp);
  
  jumpQueuFramesElapsed++;
  
