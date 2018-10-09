@@ -22,7 +22,7 @@ vsp = vsp + .75
  hsp = walksp * move;
  vsp = vsp + grv;
  
- if(((totalJumps - currentJumps) > 0) && (jumpQueuFramesElapsed <= 6))
+ if(((totalJumps - currentJumps) > 0) && (jumpQueuFramesElapsed <= 3))
  {	 
  vsp = -15;
  currentJumps = currentJumps + 1;
