@@ -121,7 +121,7 @@ vsp = vsp + .75
  }
  
  //if (hsp != 0) image_xscale = sign(hsp);
- if (hsp != 0) image_xscale = 0.055 * sign(hsp);
+ if (hsp != 0 && (place_meeting (x, y + 1, oWall))) image_xscale = 0.055 * sign(hsp);
  
  jumpQueuFramesElapsed++;
  
