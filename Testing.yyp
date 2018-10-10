@@ -31,6 +31,14 @@
     },
     "resources": [
         {
+            "Key": "1a4efb0f-a14d-4221-a271-823d70f0aa90",
+            "Value": {
+                "id": "7fd5288b-8e8d-42ca-a70f-45c5a88ef921",
+                "resourcePath": "rooms\\rCliff1\\rCliff1.yy",
+                "resourceType": "GMRoom"
+            }
+        },
+        {
             "Key": "1ad9e7c4-7f44-4383-b062-342cbaf8f49a",
             "Value": {
                 "id": "002bce57-560a-4d31-94c1-8816b99ee1e4",

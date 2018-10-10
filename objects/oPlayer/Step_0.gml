@@ -4,6 +4,7 @@ key_right = keyboard_check(vk_right) ||  (gamepad_axis_value(0,gp_axislh) > 0);
 key_jump = keyboard_check_pressed(vk_up) || (gamepad_button_check_pressed(0,gp_face1));
 key_jump_held = keyboard_check(vk_up) || (gamepad_button_check(0,gp_face1));
 
+var framesInAir = 0;
 
 if(key_jump)
 {
@@ -19,8 +20,27 @@ vsp = vsp + .75
 
 //calculate movement
  var move = key_right - key_left;
- hsp = walksp * move;
- vsp = vsp + grv;
+ 
+ if(vsp == 0 && place_meeting(x ,y + 1,oWall)) { 
+	 hsp = walksp * move;
+	 vsp = vsp + grv;
+ }
+ else if(hsp == 0) {
+	  hsp = walksp * move;
+	  vsp = vsp + grv;
+ }
+		  
+ else if(key_right && hsp < 0) {  //moving 
+	 hsp = hsp + (1/power(2, framesInAir));
+	 vsp = vsp + grv;
+	 framesInAir+=.01;
+ }
+ else if(key_left && hsp > 0) {
+	 hsp = hsp - (1/power(2, framesInAir));
+	 vsp = vsp + grv;
+	 framesInAir+=.01;
+ }
+	 
  
  if(((totalJumps - currentJumps) > 0) && (jumpQueuFramesElapsed <= 3))
  {	 
@@ -57,6 +77,7 @@ vsp = vsp + .75
 		{
 			y = y + sign(vsp);
 		}
+	framesInAir = 0;
  vsp = 0;
  }
  y = y + vsp;
@@ -104,3 +125,6 @@ vsp = vsp + .75
  
  jumpQueuFramesElapsed++;
  
+ //if(vsp != 0) {
+	 //if (hsp > 0) {
+		 
