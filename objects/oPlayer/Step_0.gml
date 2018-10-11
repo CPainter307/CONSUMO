@@ -27,7 +27,8 @@ vsp = vsp + .75
  }
  else if(hsp == 0) {
 	  hsp = walksp * move;
-	  vsp = vsp + grv;
+//	  vsp = vsp + grv;			This line added extra gravity to stationary jumps as long as the line that fixed flying jumps was there
+
  }
 		  
  else if(key_right && hsp < 0) {  //moving 
@@ -53,9 +54,9 @@ vsp = vsp + .75
 	 vsp = max(vsp, 0);
 	 currentJumps = currentJumps + 1;
  }
+if (!key_jump) vsp += grv; // New line that fixes flying jumps
+if (key_jump_held && place_meeting(x,y + vsp,oWall)) vsp += grv;
 
- 
- 
  
  //horizontal collision
  if(place_meeting(x+hsp ,y,oWall))
