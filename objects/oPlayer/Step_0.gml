@@ -11,6 +11,10 @@ if(key_jump)
 jumpQueuFramesElapsed = 0;
 }
 
+//increases the Coyote Jump buffer if falling
+if(!place_meeting(x,y + vsp,oWall))	buff += 0.3;
+
+if (buff >= 1.2 && currentJumps == 0) currentJumps += 1;
 
 //increase gravity if falling
 if(vsp > 0)
@@ -71,9 +75,10 @@ if (key_jump_held && place_meeting(x,y + vsp,oWall)) vsp += grv;
  
  
  
- //vertical collision
+ //vertical collision (includes Coyote Jump buffer reset)
   if(place_meeting(x,y + vsp,oWall))
  { 
+	buff = 0.3;
 	while(!place_meeting(x,y+sign(vsp),oWall))
 		{
 			y = y + sign(vsp);

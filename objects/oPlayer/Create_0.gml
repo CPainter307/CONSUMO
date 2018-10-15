@@ -2,6 +2,7 @@ hsp = 0;
 vsp = 0;
 grv = 1.25;
 walksp = 10;
+buff = 0.3;
 
 jumpQueuFramesElapsed = 10;
 
