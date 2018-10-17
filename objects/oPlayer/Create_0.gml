@@ -9,6 +9,7 @@ jumpQueuFramesElapsed = 10;
 
 totalJumps = 1;
 currentJumps = 0;
+spriteTurnFrames = 0;
 
 var framesInAir = 0;
 

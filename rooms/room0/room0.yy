@@ -100,7 +100,8 @@
         "c20fd0a6-b337-49ad-9a6c-fbfb315a8ff9",
         "5a6119d6-e634-4773-bf37-fc877992ec2d",
         "b6444dbf-cef2-45cf-9f28-f6bbbc1e6c9e",
-        "687e7b83-3f76-45c5-8b1d-17fc972b7d31"
+        "687e7b83-3f76-45c5-8b1d-17fc972b7d31",
+        "a738c054-22a3-4250-8bf6-8fb5ded0e7aa"
     ],
     "IsDnD": false,
     "layers": [
@@ -118,7 +119,8 @@
             "inheritSubLayers": false,
             "inheritVisibility": false,
             "instances": [
-{"name": "inst_1FB640B6","id": "be78540b-10d9-4fd6-99e1-26441c3147dc","colour": { "Value": 4294967295 },"creationCodeFile": "","creationCodeType": "","ignore": false,"inheritCode": false,"inheritItemSettings": false,"IsDnD": false,"m_originalParentID": "00000000-0000-0000-0000-000000000000","m_serialiseFrozen": false,"modelName": "GMRInstance","name_with_no_file_rename": "inst_1FB640B6","objId": "62cf4f0e-d09f-407c-9c6d-048155cc676a","properties": null,"rotation": 0,"scaleX": 0.05,"scaleY": 0.05,"mvc": "1.0","x": 224,"y": 352}
+{"name": "inst_1FB640B6","id": "be78540b-10d9-4fd6-99e1-26441c3147dc","colour": { "Value": 4294967295 },"creationCodeFile": "","creationCodeType": "","ignore": false,"inheritCode": false,"inheritItemSettings": false,"IsDnD": false,"m_originalParentID": "00000000-0000-0000-0000-000000000000","m_serialiseFrozen": false,"modelName": "GMRInstance","name_with_no_file_rename": "inst_1FB640B6","objId": "62cf4f0e-d09f-407c-9c6d-048155cc676a","properties": null,"rotation": 0,"scaleX": 0.5,"scaleY": 0.5,"mvc": "1.0","x": 256,"y": 256},
+{"name": "inst_3F727E89","id": "a738c054-22a3-4250-8bf6-8fb5ded0e7aa","colour": { "Value": 4294967295 },"creationCodeFile": "","creationCodeType": "","ignore": false,"inheritCode": false,"inheritItemSettings": false,"IsDnD": false,"m_originalParentID": "00000000-0000-0000-0000-000000000000","m_serialiseFrozen": false,"modelName": "GMRInstance","name_with_no_file_rename": "inst_3F727E89","objId": "001bea3a-62d5-4e93-9578-0b72d071bdb1","properties": null,"rotation": 0,"scaleX": 1,"scaleY": 1,"mvc": "1.0","x": 512,"y": 352}
             ],
             "layers": [
 
@@ -298,16 +300,16 @@
     },
     "roomSettings":     {
         "id": "d6d188e3-db9d-4283-84a8-95a308840843",
-        "Height": 1080,
+        "Height": 3000,
         "inheritRoomSettings": false,
         "modelName": "GMRoomSettings",
         "persistent": false,
         "mvc": "1.0",
-        "Width": 1920
+        "Width": 5000
     },
     "mvc": "1.0",
     "views": [
-{"id": "061d8aec-768d-4fcc-8e86-1f342fba5936","hborder": 32,"hport": 768,"hspeed": -1,"hview": 768,"inherit": false,"modelName": "GMRView","objId": "62cf4f0e-d09f-407c-9c6d-048155cc676a","mvc": "1.0","vborder": 32,"visible": true,"vspeed": -1,"wport": 1024,"wview": 1024,"xport": 0,"xview": 40,"yport": 0,"yview": 0},
+{"id": "061d8aec-768d-4fcc-8e86-1f342fba5936","hborder": 32,"hport": 1080,"hspeed": -1,"hview": 720,"inherit": false,"modelName": "GMRView","objId": "00000000-0000-0000-0000-000000000000","mvc": "1.0","vborder": 32,"visible": true,"vspeed": -1,"wport": 1920,"wview": 1280,"xport": 0,"xview": 40,"yport": 0,"yview": 0},
 {"id": "15a71897-d3a4-4ced-bcd2-fa486dd163c1","hborder": 32,"hport": 768,"hspeed": -1,"hview": 768,"inherit": false,"modelName": "GMRView","objId": "00000000-0000-0000-0000-000000000000","mvc": "1.0","vborder": 32,"visible": false,"vspeed": -1,"wport": 1024,"wview": 1024,"xport": 0,"xview": 0,"yport": 0,"yview": 0},
 {"id": "0d6a8813-b48d-4228-b6e9-9d064984cad3","hborder": 32,"hport": 768,"hspeed": -1,"hview": 768,"inherit": false,"modelName": "GMRView","objId": "00000000-0000-0000-0000-000000000000","mvc": "1.0","vborder": 32,"visible": false,"vspeed": -1,"wport": 1024,"wview": 1024,"xport": 0,"xview": 0,"yport": 0,"yview": 0},
 {"id": "32bf12a0-246a-4ffb-9154-509111b467eb","hborder": 32,"hport": 768,"hspeed": -1,"hview": 768,"inherit": false,"modelName": "GMRView","objId": "00000000-0000-0000-0000-000000000000","mvc": "1.0","vborder": 32,"visible": false,"vspeed": -1,"wport": 1024,"wview": 1024,"xport": 0,"xview": 0,"yport": 0,"yview": 0},

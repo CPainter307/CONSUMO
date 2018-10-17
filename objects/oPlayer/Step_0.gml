@@ -22,6 +22,17 @@ if(vsp > 0)
 vsp = vsp + .75
 }
 
+//sprite turning mid air (BROKEN)
+/**
+if (vsp < 0) {
+	spriteTurnFrames++;
+	while (spriteTurnFrames < 5) {
+		//if (hsp != 0) image_xscale = 0.5 * sign(hsp);
+	}
+}
+**/
+
+
 //calculate movement
  var move = key_right - key_left;
  
@@ -95,7 +106,8 @@ if (key_jump_held && place_meeting(x,y + vsp,oWall)) vsp += grv;
  {
  currentJumps = 0;
  currentWallJumps = 0;
- sprite_index=sPlayerIdle;
+ spriteTurnFrames = 0;
+ //sprite_index=sPlayerIdle;
 
  }
  
@@ -127,7 +139,7 @@ if (key_jump_held && place_meeting(x,y + vsp,oWall)) vsp += grv;
  }
  
  //if (hsp != 0) image_xscale = sign(hsp);
- if (hsp != 0 && (place_meeting (x, y + 1, oWall))) image_xscale = 0.055 * sign(hsp);
+ if (hsp != 0 && (place_meeting (x, y + 1, oWall))) image_xscale = 0.5 * sign(hsp);
  
  jumpQueuFramesElapsed++;
  
