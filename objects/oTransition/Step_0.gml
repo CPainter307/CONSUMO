@@ -40,3 +40,4 @@ if (mode != TRANS_MODE.OFF)
 		}
 	}
 }
+if (gamepad_button_check_pressed(0, gp_start)) SlideTransition(TRANS_MODE.RESTART);
