@@ -1,5 +1,5 @@
-/// @description Insert description here
-if keyboard_check_pressed(vk_escape || gamepad_button_check_pressed(0, gp_start)) key_pressed = true;
+/// @description Control pause menu
+if (keyboard_check_pressed(vk_escape) || gamepad_button_check_pressed(0, gp_start)) key_pressed = true;
 
 if (key_pressed && isPaused == false)
 {

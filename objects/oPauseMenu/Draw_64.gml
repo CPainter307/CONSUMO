@@ -1,4 +1,4 @@
-/// @desc Draw menu
+/// @desc Draw pause menu if game is paused
 if (isPaused)
 {
 draw_set_font(fMenu);

@@ -1,4 +1,4 @@
-/// @desc (insert desc)
+/// @desc Menu variables
 isPaused = false;
 
 gui_width = display_get_gui_width();
