@@ -175,6 +175,14 @@
             }
         },
         {
+            "Key": "6c313a0f-d075-4357-b96a-17984d0e2576",
+            "Value": {
+                "id": "23af1dba-1451-451b-a1e6-4b8b9433c085",
+                "resourcePath": "rooms\\rPause\\rPause.yy",
+                "resourceType": "GMRoom"
+            }
+        },
+        {
             "Key": "75016770-f450-49fe-aed5-07fea41f8f77",
             "Value": {
                 "id": "9260f677-e501-4851-a8ad-308300ab267a",
@@ -300,6 +308,14 @@
                 "id": "5839c93e-1e2a-404c-bc78-c353bfa4c123",
                 "resourcePath": "scripts\\SlideTransition\\SlideTransition.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "e1553f56-5769-479f-9e2c-9201c675d444",
+            "Value": {
+                "id": "c931edda-61d0-44fa-b51e-5d3db0810291",
+                "resourcePath": "objects\\oPauseMenu\\oPauseMenu.yy",
+                "resourceType": "GMObject"
             }
         },
         {
