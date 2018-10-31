@@ -87,6 +87,14 @@
             }
         },
         {
+            "Key": "32bacf76-4b5e-4dce-9afa-1e0430bd3dc2",
+            "Value": {
+                "id": "2a0cff47-ddb6-48c7-87f2-1968bda65ea6",
+                "resourcePath": "sprites\\sRightArm\\sRightArm.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "3720b116-d27f-4839-bcc4-34695369503e",
             "Value": {
                 "id": "0d59fc3b-daf8-4b3b-96c0-b0f3b0120f0c",
@@ -199,6 +207,14 @@
             }
         },
         {
+            "Key": "87f1e45c-65ea-4e71-9472-04f7a5ef4cb3",
+            "Value": {
+                "id": "39cd2b32-d7c0-4083-af83-377f6a7628ea",
+                "resourcePath": "objects\\oLeftArm\\oLeftArm.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "89f0dd24-a8f1-4624-982d-bb2cad92dd36",
             "Value": {
                 "id": "1367ad06-39f2-40b1-8cdd-6eb590846d59",
@@ -255,6 +271,14 @@
             }
         },
         {
+            "Key": "b0c17613-445c-4843-b231-5bdb1fd8d5a6",
+            "Value": {
+                "id": "8c17b246-9f76-49d5-90b6-fe080e186113",
+                "resourcePath": "sprites\\sLeftArm\\sLeftArm.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "beb99be7-c827-4acd-a31a-fe0906981ff6",
             "Value": {
                 "id": "b930a5d4-43fe-4db6-bcb1-d47fbaa76024",
@@ -287,6 +311,14 @@
             }
         },
         {
+            "Key": "c7637e2f-adcb-453f-9328-15209d3c6c12",
+            "Value": {
+                "id": "a84503c6-48e9-4998-9635-1a86eed6a14a",
+                "resourcePath": "sprites\\sLeftArmMoving\\sLeftArmMoving.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "cc98d028-7bdd-4680-85f3-c87a7baa481e",
             "Value": {
                 "id": "9bd51ae0-9147-40a4-badd-977f2ed000d9",
@@ -300,6 +332,14 @@
                 "id": "5839c93e-1e2a-404c-bc78-c353bfa4c123",
                 "resourcePath": "scripts\\SlideTransition\\SlideTransition.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "de6db9be-abae-4a97-8c72-eb26d906c3d5",
+            "Value": {
+                "id": "8a19b0f5-3db1-4a79-a919-a21418a66be5",
+                "resourcePath": "objects\\oRightArm\\oRightArm.yy",
+                "resourceType": "GMObject"
             }
         },
         {

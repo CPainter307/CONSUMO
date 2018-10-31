@@ -15,6 +15,7 @@ if (key_pressed && isPaused == true)
 	menu_control = false;
 	key_pressed = false;
 }
+
 //Keyboard controls
 if (menu_control)
 {
