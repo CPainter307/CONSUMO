@@ -2,7 +2,7 @@
     "id": "c7637e2f-adcb-453f-9328-15209d3c6c12",
     "modelName": "GMSprite",
     "mvc": "1.12",
-    "name": "sLeftArmMoving",
+    "name": "sForwardArmMoving",
     "For3D": false,
     "HTile": false,
     "VTile": false,

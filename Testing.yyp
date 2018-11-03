@@ -90,7 +90,7 @@
             "Key": "32bacf76-4b5e-4dce-9afa-1e0430bd3dc2",
             "Value": {
                 "id": "2a0cff47-ddb6-48c7-87f2-1968bda65ea6",
-                "resourcePath": "sprites\\sRightArm\\sRightArm.yy",
+                "resourcePath": "sprites\\sRearArm\\sRearArm.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -282,7 +282,7 @@
             "Key": "b0c17613-445c-4843-b231-5bdb1fd8d5a6",
             "Value": {
                 "id": "8c17b246-9f76-49d5-90b6-fe080e186113",
-                "resourcePath": "sprites\\sLeftArm\\sLeftArm.yy",
+                "resourcePath": "sprites\\sForwardArm\\sForwardArm.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -322,7 +322,7 @@
             "Key": "c7637e2f-adcb-453f-9328-15209d3c6c12",
             "Value": {
                 "id": "a84503c6-48e9-4998-9635-1a86eed6a14a",
-                "resourcePath": "sprites\\sLeftArmMoving\\sLeftArmMoving.yy",
+                "resourcePath": "sprites\\sForwardArmMoving\\sForwardArmMoving.yy",
                 "resourceType": "GMSprite"
             }
         },
