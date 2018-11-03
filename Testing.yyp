@@ -135,6 +135,14 @@
             }
         },
         {
+            "Key": "5880aace-f6f3-405d-ab4b-9ec341472119",
+            "Value": {
+                "id": "c46058f5-32d9-4f48-861c-d0243f3817f3",
+                "resourcePath": "rooms\\oFlatSurface\\oFlatSurface.yy",
+                "resourceType": "GMRoom"
+            }
+        },
+        {
             "Key": "5f317ddc-9c4a-4e85-a865-38206fa98c83",
             "Value": {
                 "id": "4b9c8fdd-38d8-4f2b-af9a-2da59569ebf9",

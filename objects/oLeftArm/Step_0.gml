@@ -12,3 +12,14 @@ else {
 	sprite_index = sLeftArm;
 }
 
+//Flips arm based on player position and movement (incomplete)
+if (oPlayer.hsp < 0)
+{
+	image_xscale = 0.07 * sign(oPlayer.hsp);
+	x = oPlayer.x + 12;
+}
+else if (oPlayer.hsp > 0)
+{
+	image_xscale = 0.07 / sign(oPlayer.hsp);
+	x = oPlayer.x - 12;
+}
