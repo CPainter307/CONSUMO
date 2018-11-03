@@ -139,7 +139,16 @@ if (key_jump_held && place_meeting(x,y + vsp,oWall)) vsp += grv;
  }
  
  //if (hsp != 0) image_xscale = sign(hsp);
- if (hsp != 0 && (place_meeting (x, y + 1, oWall))) image_xscale = 0.5 * sign(hsp);
+ if (hsp != 0 && (place_meeting (x, y + 1, oWall))) {
+	 if (sign(hsp) < 0) {
+		 facingRight = false;
+	 } 
+	 else if (sign(hsp) > 0) {
+		 facingRight = true;
+	 }
+	 
+	 image_xscale = 0.5 * sign(hsp);
+ }
  
  jumpQueuFramesElapsed++;
  

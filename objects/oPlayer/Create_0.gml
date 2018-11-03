@@ -11,6 +11,8 @@ totalJumps = 1;
 currentJumps = 0;
 spriteTurnFrames = 0;
 
+facingRight = true;
+
 var framesInAir = 0;
 
 gamepad_set_axis_deadzone(0, 0.35)
