@@ -139,7 +139,7 @@ if (key_jump_held && place_meeting(x,y + vsp,oWall)) vsp += grv;
  }
  
  //if (hsp != 0) image_xscale = sign(hsp);
- if (hsp != 0 && (place_meeting (x, y + 1, oWall))) {
+ if ((place_meeting (x, y + 1, oWall)) && hsp != 0) {
 	 if (sign(hsp) < 0) {
 		 facingRight = false;
 	 } 
