@@ -9,20 +9,16 @@ if (oPlayer.hsp > 0)
 }
 else if (oPlayer.hsp < 0)
 {
-	x = oFrontArm.x - 6;
+	x = oFrontArm.x - 50;
 	y = oFrontArm.y + 25
 }
-else
-{
+else if (oPlayer.facingRight && oPlayer.hsp == 0) {
 	x = oFrontArm.x + 6;
-	y = oFrontArm.y + 25	
+	y = oFrontArm.y + 25;
 }
-
-
-if (mouse_check_button_pressed(mb_left))
-{
-	//Destroys the held object and creates the idle object (WIP. Currently not working)
-	instance_destroy();
-	instance_create_layer(x,y + sin(get_timer()/200000)*5, "Objects", oTestProp);
-	oTestProp.isPickingUp = false;
+else if (!oPlayer.facingRight && oPlayer.hsp == 0){
+	if (oPlayer.hsp != 0 && oPlayer.vsp == 0) {
+		x = oFrontArm.x - 50;
+		y = oFrontArm.y + 25;
+	}
 }
