@@ -4,3 +4,4 @@ isPickingUp = false;
 x = x;
 y = ystart + sin(get_timer()/200000)*5;
 pickUpBuff = 4;
+isTouching = false;

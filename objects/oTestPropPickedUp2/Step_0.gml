@@ -27,7 +27,6 @@ if (mouse_check_button_pressed(mb_left) || gamepad_button_check_pressed(0,gp_sho
 {
 	instance_destroy();
 	instance_create_layer(x,y + sin(get_timer()/200000)*5, "Objects", oTestProp);
-	while (oTestProp.pickUpBuff <= 4) oTestProp.pickUpBuff += 1;
 	oTestProp.image_xscale = 0.25;
 	oTestProp.image_yscale = 0.25;
 	//oTestProp.isPickingUp = false;	

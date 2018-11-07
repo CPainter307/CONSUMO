@@ -1,11 +1,17 @@
 /// @description Insert description here
 // You can write your code in this editor
-if (mouse_check_button_pressed(mb_left) || gamepad_button_check_pressed(0,gp_shoulderl) && isPickingUp == false && pickUpBuff == 4)
+x = x;
+y = ystart + sin(get_timer()/200000)*5;
+
+if (place_meeting(x,y,oPlayerPickUpRadius))
+{
+	isTouching = true;
+}
+if (isTouching && mouse_check_button_pressed(mb_left) || gamepad_button_check_pressed(0,gp_shoulderl))
 {
 	isPickingUp = true;
-	pickUpBuff = 0;
+	isTouching = false;
 }
-
 if (isPickingUp)
 {
 	//Destroys the idle test object and creates the picked up object and places it in your hand
