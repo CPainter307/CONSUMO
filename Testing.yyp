@@ -311,6 +311,14 @@
             }
         },
         {
+            "Key": "b67f9c45-7360-4e7e-bd24-57b4cb7c9f71",
+            "Value": {
+                "id": "e75eb71d-82b0-4653-9e17-d96512809f48",
+                "resourcePath": "sprites\\sPlayerPickUpRadius\\sPlayerPickUpRadius.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "beb99be7-c827-4acd-a31a-fe0906981ff6",
             "Value": {
                 "id": "b930a5d4-43fe-4db6-bcb1-d47fbaa76024",
@@ -356,6 +364,14 @@
                 "id": "9bd51ae0-9147-40a4-badd-977f2ed000d9",
                 "resourcePath": "options\/windows\/options_windows.yy",
                 "resourceType": "GMWindowsOptions"
+            }
+        },
+        {
+            "Key": "d7c1f0cb-6316-4e72-97d7-4129dad3e0d0",
+            "Value": {
+                "id": "40852d51-e04c-4faf-a720-cf7604708016",
+                "resourcePath": "objects\\oPlayerPickUpRadius\\oPlayerPickUpRadius.yy",
+                "resourceType": "GMObject"
             }
         },
         {
