@@ -22,3 +22,12 @@ else if (!oPlayer.facingRight && oPlayer.hsp == 0){
 		y = oFrontArm.y + 25;
 	}
 }
+
+if (mouse_check_button(mb_left) || gamepad_button_check(0,gp_shoulderl))
+{
+	instance_destroy();
+	instance_create_layer(x,y + sin(get_timer()/200000)*5, "Objects", oTestProp);
+	oTestProp.image_xscale = 0.25;
+	oTestProp.image_yscale = 0.25;
+	oTestProp.isPickingUp = false;	
+}

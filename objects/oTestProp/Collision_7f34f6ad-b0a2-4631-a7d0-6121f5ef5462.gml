@@ -1,6 +1,6 @@
 /// @description Insert description here
 // You can write your code in this editor
-if (mouse_check_button(mb_left) && isPickingUp == false)
+if (mouse_check_button(mb_left) || gamepad_button_check(0,gp_shoulderl) && isPickingUp == false)
 {
 	isPickingUp = true;
 }
