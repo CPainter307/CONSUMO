@@ -39,6 +39,14 @@
             }
         },
         {
+            "Key": "08ef8912-29d7-4486-81ee-b5b4aece33e6",
+            "Value": {
+                "id": "c508fdaa-ef44-4df6-bf15-18066f0fe6ca",
+                "resourcePath": "sprites\\sBigX\\sBigX.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "16370021-6f87-4568-a72a-bbae314186ae",
             "Value": {
                 "id": "aaaa3737-2911-4069-9546-84ce8444d4ef",
@@ -95,6 +103,14 @@
             }
         },
         {
+            "Key": "2bd84ed1-5f88-4e60-af9d-b5c13e859fc2",
+            "Value": {
+                "id": "e7fb51ed-d48e-480b-a807-3b17c19b1f6d",
+                "resourcePath": "sprites\\sSmile\\sSmile.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "2c27fb43-7e9c-4239-a765-c27b057171d8",
             "Value": {
                 "id": "94ebbc06-0127-4ed1-9ff2-e1083fabb568",
@@ -124,6 +140,14 @@
                 "id": "a87f66f5-9f89-43fb-aaa6-ee5a1c31248a",
                 "resourcePath": "sprites\/sPlayer\/sPlayer.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "3e8a1ce9-4164-4377-ac00-2279848a8ab7",
+            "Value": {
+                "id": "405acbd8-0475-44ea-8452-1f26ee3af33a",
+                "resourcePath": "objects\\oRightHandCheck\\oRightHandCheck.yy",
+                "resourceType": "GMObject"
             }
         },
         {
@@ -439,6 +463,14 @@
             }
         },
         {
+            "Key": "e2ec277b-7610-4582-a3ee-9bc9c3751bcf",
+            "Value": {
+                "id": "5cd4ed9c-3217-4f3f-93cc-a82e2590f2df",
+                "resourcePath": "sprites\\sCheck\\sCheck.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "eb2243e0-d3be-4b7f-aa27-36459281a9c2",
             "Value": {
                 "id": "5c59d49e-6393-42e9-bd6d-af574ecf755b",
@@ -459,6 +491,14 @@
             "Value": {
                 "id": "2390c676-1373-4bb8-a358-9422962232e0",
                 "resourcePath": "objects\/oTransition\/oTransition.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "f35fbbd1-adab-4855-a242-54f7fade692b",
+            "Value": {
+                "id": "50e1b059-dda1-4413-ab52-3607cb0de69a",
+                "resourcePath": "objects\\oLeftHandCheck\\oLeftHandCheck.yy",
                 "resourceType": "GMObject"
             }
         },

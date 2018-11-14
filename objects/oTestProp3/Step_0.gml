@@ -11,22 +11,48 @@ else
 {
 	isTouching = false;	
 }
-if (isTouching && (mouse_check_button_pressed(mb_left) || gamepad_button_check_pressed(0,gp_shoulderl)))
+
+//check for left arm pick up
+if (isTouching && oPlayer.holdingL = false && (mouse_check_button_pressed(mb_left) || gamepad_button_check_pressed(0,gp_shoulderl)))
 {
 	isPickingUpL = true;
 	isTouching = false;
+	oPlayer.holdingL = true;
 }
 if (isPickingUpL)
 {
 	//Destroys the idle test object and creates the picked up object and places it in your hand
 	if (oPlayer.facingRight)
 	{
-		instance_create_layer(oFrontArm.x + 6,oFrontArm.y + 25,"leftArmLayer",oTestPropPickedUp3);
+		instance_create_layer(oFrontArm.x + 6,oFrontArm.y + 25,"leftArmLayer",oTestPropPickedUp2);
 	}
 	else
 	{
-		instance_create_layer(oFrontArm.x - 50,oFrontArm.y + 25,"leftArmLayer",oTestPropPickedUp3);
+		instance_create_layer(oFrontArm.x - 50,oFrontArm.y + 25,"leftArmLayer",oTestPropPickedUp2);
 	}
 	instance_destroy();	
 	isPickingUpL = false;
 }
+
+//check for right arm pick up
+if (isTouching && oPlayer.holdingR = false && (mouse_check_button_pressed(mb_right) || gamepad_button_check_pressed(0,gp_shoulderr)))
+{
+	isPickingUpR = true;
+	isTouching = false;
+	oPlayer.holdingR = true;
+}
+if (isPickingUpR)
+{
+	//Destroys the idle test object and creates the picked up object and places it in your hand
+	if (oPlayer.facingRight)
+	{
+		instance_create_layer(oFrontArm.x + 50, oFrontArm.y + 25,"rightObjectLayer",oTestPropPickedUp2);
+	}
+	else
+	{
+		instance_create_layer(oFrontArm.x - 10, oFrontArm.y + 35,"rightObjectLayer",oTestPropPickedUp2);
+	}
+	instance_destroy();	
+	isPickingUpR = false;
+}
+

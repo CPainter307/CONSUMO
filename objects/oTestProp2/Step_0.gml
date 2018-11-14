@@ -13,10 +13,11 @@ else
 }
 
 //check for left arm pick up
-if (isTouching && (mouse_check_button_pressed(mb_left) || gamepad_button_check_pressed(0,gp_shoulderl)))
+if (isTouching && oPlayer.holdingL = false && (mouse_check_button_pressed(mb_left) || gamepad_button_check_pressed(0,gp_shoulderl)))
 {
 	isPickingUpL = true;
 	isTouching = false;
+	oPlayer.holdingL = true;
 }
 if (isPickingUpL)
 {
@@ -29,15 +30,16 @@ if (isPickingUpL)
 	{
 		instance_create_layer(oFrontArm.x - 50,oFrontArm.y + 25,"leftArmLayer",oTestPropPickedUp2);
 	}
-	instance_destroy();	
+	instance_destroy(id);	
 	isPickingUpL = false;
 }
 
 //check for right arm pick up
-if (isTouching && (mouse_check_button_pressed(mb_right) || gamepad_button_check_pressed(0,gp_shoulderr)))
+if (isTouching && oPlayer.holdingR = false && (mouse_check_button_pressed(mb_right) || gamepad_button_check_pressed(0,gp_shoulderr)))
 {
 	isPickingUpR = true;
 	isTouching = false;
+	oPlayer.holdingR = true;
 }
 if (isPickingUpR)
 {
@@ -50,7 +52,12 @@ if (isPickingUpR)
 	{
 		instance_create_layer(oFrontArm.x - 10, oFrontArm.y + 35,"rightObjectLayer",oTestPropPickedUp2);
 	}
-	instance_destroy();	
+	instance_destroy(id);	
 	isPickingUpR = false;
 }
 
+//SELF DESTRUCT SEQUENCE
+self_destruct = keyboard_check(vk_delete);
+	if (self_destruct) {
+		instance_destroy(id);
+	}

@@ -17,8 +17,8 @@ var framesInAir = 0;
 
 gamepad_set_axis_deadzone(0, 0.35)
 
-objectInRightHand = false;
-objectInLeftHand = false;
+holdingL = false;
+holdingR = false;
 
 
 /* potential other variables

@@ -25,8 +25,9 @@ else if (!oPlayer.facingRight && oPlayer.hsp == 0 && layer_has_instance("leftArm
 
 if (mouse_check_button_pressed(mb_left) || gamepad_button_check_pressed(0,gp_shoulderl) && layer_has_instance("leftArmLayer", oTestPropPickedUp2))
 {
-	instance_destroy();
+	instance_destroy(id);
 	instance_create_layer(x,y + sin(get_timer()/200000)*5, "Objects", oTestProp2);
+	oPlayer.holdingL = false;
 	oTestProp2.image_xscale = 0.25;
 	oTestProp2.image_yscale = 0.25;
 	//oTestProp.isPickingUp = false;
@@ -56,8 +57,9 @@ else if (!oPlayer.facingRight && oPlayer.hsp == 0 && layer_has_instance("rightOb
 
 if (mouse_check_button_pressed(mb_right) || gamepad_button_check_pressed(0,gp_shoulderr) && layer_has_instance("rightObjectLayer", oTestPropPickedUp2))
 {
-	instance_destroy();
+	instance_destroy(id);
 	instance_create_layer(x,y + sin(get_timer()/200000)*5, "Objects", oTestProp2);
+	oPlayer.holdingR = false;
 	oTestProp2.image_xscale = 0.25;
 	oTestProp2.image_yscale = 0.25;
 	//oTestProp.isPickingUp = false;
