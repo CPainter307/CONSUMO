@@ -1,18 +1,18 @@
 {
-    "id": "3e8a1ce9-4164-4377-ac00-2279848a8ab7",
+    "id": "a0dddaee-d803-47f1-b725-aab4ac6d4852",
     "modelName": "GMObject",
     "mvc": "1.0",
-    "name": "oRightHandCheck",
+    "name": "oPlayerGUI",
     "eventList": [
         {
-            "id": "de345331-2398-4398-9b65-8db358961315",
+            "id": "19bce784-789c-426e-bfcd-72031d7821cf",
             "modelName": "GMEvent",
             "mvc": "1.0",
             "IsDnD": false,
             "collisionObjectId": "00000000-0000-0000-0000-000000000000",
-            "enumb": 0,
-            "eventtype": 3,
-            "m_owner": "3e8a1ce9-4164-4377-ac00-2279848a8ab7"
+            "enumb": 64,
+            "eventtype": 8,
+            "m_owner": "a0dddaee-d803-47f1-b725-aab4ac6d4852"
         }
     ],
     "maskSpriteId": "00000000-0000-0000-0000-000000000000",
@@ -33,6 +33,6 @@
     "physicsStartAwake": true,
     "properties": null,
     "solid": false,
-    "spriteId": "2bd84ed1-5f88-4e60-af9d-b5c13e859fc2",
+    "spriteId": "00000000-0000-0000-0000-000000000000",
     "visible": true
 }
