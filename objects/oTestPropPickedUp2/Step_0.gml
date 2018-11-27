@@ -17,6 +17,8 @@ else if (oPlayer.facingRight && oPlayer.hsp == 0 && layer_has_instance("leftArmL
 	y = oFrontArm.y + 25;
 }
 else if (!oPlayer.facingRight && oPlayer.hsp == 0 && layer_has_instance("leftArmLayer", oTestPropPickedUp2)){
+	x = oFrontArm.x - 50;
+	y = oFrontArm.y + 25;
 	if (oPlayer.hsp != 0 && oPlayer.vsp == 0) {
 		x = oFrontArm.x - 50;
 		y = oFrontArm.y + 25;
@@ -49,6 +51,8 @@ else if (oPlayer.facingRight && oPlayer.hsp == 0 && layer_has_instance("rightObj
 	y = oFrontArm.y + 25;
 }
 else if (!oPlayer.facingRight && oPlayer.hsp == 0 && layer_has_instance("rightObjectLayer", oTestPropPickedUp2)){
+	x = oFrontArm.x - 10; 
+	y = oFrontArm.y + 35;
 	if (oPlayer.hsp != 0 && oPlayer.vsp == 0) {
 		x = oFrontArm.x - 10;
 		y = oFrontArm.y + 35;
