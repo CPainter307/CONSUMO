@@ -17,7 +17,6 @@ if (isTouching && oPlayer.holdingL = false && (mouse_check_button_pressed(mb_lef
 {
 	isPickingUpL = true;
 	isTouching = false;
-	oPlayer.holdingL = true;
 }
 if (isPickingUpL)
 {
@@ -32,6 +31,7 @@ if (isPickingUpL)
 	}
 	instance_destroy(id);	
 	isPickingUpL = false;
+	oPlayer.holdingL = true;
 }
 
 //check for right arm pick up
@@ -39,7 +39,6 @@ if (isTouching && oPlayer.holdingR = false && (mouse_check_button_pressed(mb_rig
 {
 	isPickingUpR = true;
 	isTouching = false;
-	oPlayer.holdingR = true;
 }
 if (isPickingUpR)
 {
@@ -54,6 +53,7 @@ if (isPickingUpR)
 	}
 	instance_destroy(id);	
 	isPickingUpR = false;
+	oPlayer.holdingR = true;
 }
 
 //SELF DESTRUCT SEQUENCE
