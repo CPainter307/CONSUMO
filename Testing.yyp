@@ -55,14 +55,6 @@
             }
         },
         {
-            "Key": "16b10deb-6e5c-4a5b-9f43-56a3009b4281",
-            "Value": {
-                "id": "09b35986-6f91-4ad8-8506-00f5e09b9c71",
-                "resourcePath": "objects\\oTestPropPickedUp3\\oTestPropPickedUp3.yy",
-                "resourceType": "GMObject"
-            }
-        },
-        {
             "Key": "1a4efb0f-a14d-4221-a271-823d70f0aa90",
             "Value": {
                 "id": "7fd5288b-8e8d-42ca-a70f-45c5a88ef921",
@@ -180,6 +172,14 @@
                 "id": "c46058f5-32d9-4f48-861c-d0243f3817f3",
                 "resourcePath": "rooms\/rFlatSurface\/rFlatSurface.yy",
                 "resourceType": "GMRoom"
+            }
+        },
+        {
+            "Key": "5cdb1082-1884-4721-b922-0a88cdeb1b54",
+            "Value": {
+                "id": "729dd673-8957-40d9-ac3b-addf7834aa8c",
+                "resourcePath": "scripts\\ClosestUnheld\\ClosestUnheld.yy",
+                "resourceType": "GMScript"
             }
         },
         {
@@ -319,14 +319,6 @@
             }
         },
         {
-            "Key": "91ba9cd2-10ea-43b9-b84c-317cc633cce2",
-            "Value": {
-                "id": "2ab7a087-98a4-4b29-af90-768b22eef2d4",
-                "resourcePath": "objects\\oApplePickedUp\\oApplePickedUp.yy",
-                "resourceType": "GMObject"
-            }
-        },
-        {
             "Key": "93aa92e7-b1b4-47af-8fbc-708ea0fc95b1",
             "Value": {
                 "id": "476efb7b-9eb3-4130-959a-f97779574dab",
@@ -380,14 +372,6 @@
                 "id": "f6a018e4-744d-4bab-b538-8f862ba0d216",
                 "resourcePath": "options\/linux\/options_linux.yy",
                 "resourceType": "GMLinuxOptions"
-            }
-        },
-        {
-            "Key": "aa3e4f2f-c910-4b2e-9a2a-0c4168931ab6",
-            "Value": {
-                "id": "484a14ef-1a82-40a7-b21a-6dbf9130b6c8",
-                "resourcePath": "objects\\oTestProp3\\oTestProp3.yy",
-                "resourceType": "GMObject"
             }
         },
         {
@@ -535,6 +519,14 @@
             }
         },
         {
+            "Key": "edb1db8e-2b99-4512-84d9-8c3e537f7ae7",
+            "Value": {
+                "id": "e716988d-868b-4fac-b5bc-156bf9c33d0d",
+                "resourcePath": "objects\\oHoldableObject\\oHoldableObject.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "eee8c51a-38a7-4f1d-b9fa-2a2a07c1bc19",
             "Value": {
                 "id": "54d5a61d-437d-4d34-ad71-20e95077feda",
@@ -568,7 +560,8 @@
         }
     ],
     "script_order": [
-        "dacfbf48-744c-498d-bfb9-da8c9be92688"
+        "dacfbf48-744c-498d-bfb9-da8c9be92688",
+        "5cdb1082-1884-4721-b922-0a88cdeb1b54"
     ],
     "tutorial": ""
 }

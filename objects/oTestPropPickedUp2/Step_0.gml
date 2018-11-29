@@ -69,8 +69,18 @@ if (mouse_check_button_pressed(mb_right) || gamepad_button_check_pressed(0,gp_sh
 	//oTestProp.isPickingUp = false;
 }
 
+
+
+
+
+
+
+
+
+
 //New cases that might fix items
 
+/**
 if (mouse_check_button_pressed(mb_left) || gamepad_button_check_pressed(0,gp_shoulderl) && oPlayer.holdingL && oPlayer.holdingR)
 {
 	var layerId = layer_get_id("leftArmLayer");
