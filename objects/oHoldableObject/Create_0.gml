@@ -3,3 +3,4 @@
 followingL = false;
 followingR = false;
 thrown = false;
+highlighted = false;

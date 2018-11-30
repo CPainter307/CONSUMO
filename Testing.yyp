@@ -111,6 +111,14 @@
             }
         },
         {
+            "Key": "2dc3aed9-d66a-4be6-8d81-556884f4f0e8",
+            "Value": {
+                "id": "27115c8a-3cbf-415e-96d3-afed3b3df7de",
+                "resourcePath": "sprites\\sAppleHighlight\\sAppleHighlight.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "32bacf76-4b5e-4dce-9afa-1e0430bd3dc2",
             "Value": {
                 "id": "2a0cff47-ddb6-48c7-87f2-1968bda65ea6",
@@ -263,6 +271,14 @@
             }
         },
         {
+            "Key": "77fb1a68-dea7-4081-9e8e-a37d47e70324",
+            "Value": {
+                "id": "9ed6aae3-cb05-4617-9413-99d88aea4192",
+                "resourcePath": "sprites\\sprite21\\sprite21.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "7ad6d434-c4f6-41ef-b88b-5f8c9c819659",
             "Value": {
                 "id": "8d4d2f5c-104c-43ed-8567-3d9f237adbff",
@@ -316,6 +332,14 @@
                 "id": "1367ad06-39f2-40b1-8cdd-6eb590846d59",
                 "resourcePath": "views\/89f0dd24-a8f1-4624-982d-bb2cad92dd36.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "921bced2-89d2-48b4-925b-564704613ae3",
+            "Value": {
+                "id": "b2e4e89f-0171-4fdb-b773-b22859370361",
+                "resourcePath": "sprites\\sprite22\\sprite22.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
