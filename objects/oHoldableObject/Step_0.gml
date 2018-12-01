@@ -33,7 +33,8 @@ if (followingR == true) {
 //if we're being thrown from right
 
 //if we're just bro-chad chilling homie
-/**
+
 if (!followingL && !followingR) {
-	gravity = 4;
+	//move_contact_solid(270, 12);
+	//speed = 0;
 }

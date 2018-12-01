@@ -24,7 +24,9 @@ if (weCanPickUp) {
 		if (oPlayer.holdingL == false) {
 				ID.followingL = true;
 				ID.highlighted = false;
+				itemInLeftHand = ID; //now we know what's in our left hand
 				oPlayer.holdingL = true; //not sure if this is the best place to put this yet
+				weCanPickUp = false; //prevents empty right hand crash
 		}
 	}
 	//right hand pick up
@@ -33,7 +35,9 @@ if (weCanPickUp) {
 		if (oPlayer.holdingR == false) {
 				ID.followingR = true;
 				ID.highlighted = false;
+				itemInRightHand = ID; //now we know what's in our right hand
 				oPlayer.holdingR = true; //not sure if this is the best place to put this yet
+				weCanPickUp = false; //prevents empty left hand crash
 		}
 	}
 }
