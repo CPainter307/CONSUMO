@@ -12,6 +12,9 @@ if (followingL == true) {
 		x = oFrontArm.x - 50;
 		y = oFrontArm.y +25;
 	}
+	//still some glitchy placing here - not sure how to fix yet
+	gravity = 0; 
+	other.solid = false; 
 }
 
 //if we're holding in the right hand
@@ -20,12 +23,16 @@ if (followingR == true) {
 		depth = 350;
 		x = oFrontArm.x + 50;
 		y = oFrontArm.y + 25;
+
 	}
 	else {
 		depth = 350;
 		x = oFrontArm.x - 10;
 		y = oFrontArm.y + 35;
 	}
+	//still some glitchy placing here - not sure how to fix yet
+	gravity = 0;
+	other.solid = false; 
 }
 
 //if we're being thrown from left
@@ -33,8 +40,6 @@ if (followingR == true) {
 //if we're being thrown from right
 
 //if we're just bro-chad chilling homie
-
 if (!followingL && !followingR) {
-	//move_contact_solid(270, 12);
-	//speed = 0;
+	gravity = 1;
 }

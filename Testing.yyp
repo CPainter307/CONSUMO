@@ -47,6 +47,14 @@
             }
         },
         {
+            "Key": "0a127fb3-1840-447f-9cfd-47c67b902e73",
+            "Value": {
+                "id": "88aea6dc-9a31-484d-9065-9f730a3e654d",
+                "resourcePath": "views\\0a127fb3-1840-447f-9cfd-47c67b902e73.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
             "Key": "16370021-6f87-4568-a72a-bbae314186ae",
             "Value": {
                 "id": "aaaa3737-2911-4069-9546-84ce8444d4ef",
@@ -151,10 +159,26 @@
             }
         },
         {
+            "Key": "504525ab-effa-4174-8173-4e6f2e63ddae",
+            "Value": {
+                "id": "611fe769-40a8-4168-abbf-695c4dbd33dd",
+                "resourcePath": "views\\504525ab-effa-4174-8173-4e6f2e63ddae.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
             "Key": "527b8fe3-68e6-4004-bc79-e34aa5ea4a7e",
             "Value": {
                 "id": "cdec39b1-6a27-4ba3-9649-bd1c33d63c32",
                 "resourcePath": "views\/527b8fe3-68e6-4004-bc79-e34aa5ea4a7e.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "528cf088-71ec-4869-9354-829d5b8fe004",
+            "Value": {
+                "id": "27934824-722d-4915-bad6-f3904be9ba31",
+                "resourcePath": "views\\528cf088-71ec-4869-9354-829d5b8fe004.yy",
                 "resourceType": "GMFolder"
             }
         },
@@ -164,6 +188,14 @@
                 "id": "9c7db66f-1c08-45a1-93d3-fc0fc8391b3c",
                 "resourcePath": "sprites\\sHandWindow\\sHandWindow.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "541f6cca-98ca-4d8e-9674-c7166cd7b3c6",
+            "Value": {
+                "id": "60b7ed14-2462-4510-b5d6-93fae0b2445d",
+                "resourcePath": "objects\\oCandle\\oCandle.yy",
+                "resourceType": "GMObject"
             }
         },
         {
@@ -327,11 +359,27 @@
             }
         },
         {
+            "Key": "9185db79-f131-46fd-aac8-d2d5a644f284",
+            "Value": {
+                "id": "14711390-5670-47ab-8670-e8c929505c68",
+                "resourcePath": "objects\\oMeat\\oMeat.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "93aa92e7-b1b4-47af-8fbc-708ea0fc95b1",
             "Value": {
                 "id": "476efb7b-9eb3-4130-959a-f97779574dab",
                 "resourcePath": "views\/93aa92e7-b1b4-47af-8fbc-708ea0fc95b1.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "9661a3ac-9622-4f89-b1f3-1b1d518825bb",
+            "Value": {
+                "id": "8b995f60-0de1-4f73-b34a-4e929f80bde3",
+                "resourcePath": "sprites\\sMeat\\sMeat.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -348,6 +396,14 @@
                 "id": "7a88de18-d2fb-4619-b5ec-988220581c1a",
                 "resourcePath": "objects\\oPlayerGUI\\oPlayerGUI.yy",
                 "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "a12e8aca-c7b1-4056-b555-0ad3bfcb6ddc",
+            "Value": {
+                "id": "7a8533ba-37aa-4734-8d9e-0abd4eae71fd",
+                "resourcePath": "sprites\\sCandle\\sCandle.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -380,6 +436,14 @@
                 "id": "f6a018e4-744d-4bab-b538-8f862ba0d216",
                 "resourcePath": "options\/linux\/options_linux.yy",
                 "resourceType": "GMLinuxOptions"
+            }
+        },
+        {
+            "Key": "aacc4468-a478-419c-bde9-35b925bdbcc6",
+            "Value": {
+                "id": "58519bca-c104-4823-93d9-337f96883f7c",
+                "resourcePath": "views\\aacc4468-a478-419c-bde9-35b925bdbcc6.yy",
+                "resourceType": "GMFolder"
             }
         },
         {
@@ -508,6 +572,14 @@
                 "id": "c931edda-61d0-44fa-b51e-5d3db0810291",
                 "resourcePath": "objects\/oPauseMenu\/oPauseMenu.yy",
                 "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "e21a3dc0-4d95-4bf6-a076-16cba2150aa9",
+            "Value": {
+                "id": "ea9d2c76-852e-4e0e-a56b-2a7260ed088f",
+                "resourcePath": "views\\e21a3dc0-4d95-4bf6-a076-16cba2150aa9.yy",
+                "resourceType": "GMFolder"
             }
         },
         {
