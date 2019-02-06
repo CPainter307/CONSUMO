@@ -5,17 +5,15 @@ x = oPlayer.x;
 y = oPlayer.y;
 
 //if we press the left button while an object is in left hand
+var haxis = gamepad_axis_value(0, gp_axislh);
+var vaxis = gamepad_axis_value(0, gp_axislv);
+var dir = point_direction(0, 0, haxis, vaxis);
 if (mouse_check_button_pressed(mb_left) || gamepad_button_check_pressed(0,gp_shoulderl)) {
 	if (oPlayer.holdingL) {
 		itemInLeftHand.followingL = false;
 		throwingL = true;
 		itemInLeftHand.speed = 20;
-		if (oPlayer.facingRight) {
-			itemInLeftHand.direction = 50;
-		}
-		else {
-			itemInLeftHand.direction = 130;
-		}
+		itemInLeftHand.direction = dir;
 		//declare itemInLeftHand null here?
 	}
 }
@@ -26,12 +24,7 @@ if (mouse_check_button_pressed(mb_right) || gamepad_button_check_pressed(0, gp_s
 		itemInRightHand.followingR = false;
 		throwingR = true;
 		itemInRightHand.speed = 20;
-		if (oPlayer.facingRight) {
-			itemInRightHand.direction = 50;
-		}
-		else {
-			itemInRightHand.direction = 130;
-		}
+		itemInRightHand.direction = dir;
 		//declare itemInRightHand null here?
 	}
 }
