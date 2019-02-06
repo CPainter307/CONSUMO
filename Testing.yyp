@@ -367,6 +367,14 @@
             }
         },
         {
+            "Key": "8f301e93-e2f4-472f-ae51-0f9fbaca03c0",
+            "Value": {
+                "id": "97a013a3-97cb-45d7-9e56-ca4dc730b84d",
+                "resourcePath": "sprites\\sIndicatorCircle\\sIndicatorCircle.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "9185db79-f131-46fd-aac8-d2d5a644f284",
             "Value": {
                 "id": "14711390-5670-47ab-8670-e8c929505c68",
@@ -471,6 +479,14 @@
             }
         },
         {
+            "Key": "b94ff4c9-ca16-43e9-a64e-9f99ced17332",
+            "Value": {
+                "id": "1e8e7133-95ef-44a4-8c48-4d4d378f59bb",
+                "resourcePath": "sprites\\sIndicatorArrow\\sIndicatorArrow.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "b9dc492b-8c18-4278-aab8-ae36bf543f15",
             "Value": {
                 "id": "cebb545c-7003-4027-ad21-21ddf150c283",
@@ -539,6 +555,14 @@
             "Value": {
                 "id": "541734df-82ae-40a6-98a7-6838f586b4fe",
                 "resourcePath": "objects\\oTestPropPickedUp2\\oTestPropPickedUp2.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "d306f6a5-a038-420d-90a7-0d28c40e4cc5",
+            "Value": {
+                "id": "d42cfcf9-f82c-4179-8244-bbc9d9f2477c",
+                "resourcePath": "objects\\oAngleIndicator\\oAngleIndicator.yy",
                 "resourceType": "GMObject"
             }
         },
