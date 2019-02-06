@@ -18,7 +18,7 @@ if (followingL) {
 	}
 	//still some glitchy placing here - not sure how to fix yet
 	gravity = 0; 
-	other.solid = false; 	
+	//other.solid = false; 	
 }
 
 if (followingR) {
@@ -35,5 +35,5 @@ if (followingR) {
 	}
 	//still some glitchy placing here - not sure how to fix yet
 	gravity = 0;
-	other.solid = false; 	
+	//other.solid = false; 	
 }
