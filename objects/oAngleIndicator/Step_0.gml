@@ -6,5 +6,16 @@ if (instance_exists(oPlayer)) {
 	y = oPlayer.y - 100;
 }
 
-//rotate sprite (ONLY WORKS WITH MOUSE RIGHT NOW)
-image_angle = point_direction(oPlayer.x, oPlayer.y, mouse_x, mouse_y);
+//rotate sprite 
+var haxis;
+var vaxis;
+
+if (!gamepad_is_connected(0)) {
+	image_angle = point_direction(oPlayer.x, oPlayer.y, mouse_x, mouse_y);
+}
+
+if (gamepad_is_connected(0)) {
+	haxis = gamepad_axis_value(0, gp_axislh);
+	vaxis = gamepad_axis_value(0, gp_axislv);
+	image_angle = point_direction(oPlayer.x, oPlayer.y, haxis, vaxis);
+}
