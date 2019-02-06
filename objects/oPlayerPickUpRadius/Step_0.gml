@@ -5,8 +5,12 @@ x = oPlayer.x;
 y = oPlayer.y;
 
 //if we press the left button while an object is in left hand
-var haxis = gamepad_axis_value(0, gp_axislh);
-var vaxis = gamepad_axis_value(0, gp_axislv);
+var haxis;
+var vaxis;
+if (gamepad_is_connected(0)) {
+	haxis = gamepad_axis_value(0, gp_axislh);
+	vaxis = gamepad_axis_value(0, gp_axislv);
+}
 var dir = point_direction(0, 0, haxis, vaxis);
 if (mouse_check_button_pressed(mb_left) || gamepad_button_check_pressed(0,gp_shoulderl)) {
 	if (oPlayer.holdingL) {

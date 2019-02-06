@@ -2,6 +2,7 @@
 
 //if we're holding in the left hand
 if (followingL == true) {
+	speed = 0;
 	if (oPlayer.facingRight) {
 		depth = 350;
 		x = oFrontArm.x + 6;
@@ -19,6 +20,7 @@ if (followingL == true) {
 
 //if we're holding in the right hand
 if (followingR == true) {
+	speed = 0;
 	if (oPlayer.facingRight) {
 		depth = 350;
 		x = oFrontArm.x + 50;
@@ -40,6 +42,6 @@ if (followingR == true) {
 //if we're being thrown from right
 
 //if we're just bro-chad chilling homie
-if (!followingL && !followingR) {
+if (!followingL && !followingR && !position_meeting(x, y, oWall)) {
 	gravity = 1;
 }
