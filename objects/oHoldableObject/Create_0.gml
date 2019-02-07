@@ -4,6 +4,7 @@ followingL = false;
 followingR = false;
 thrown = false;
 highlighted = false;
+playedPickupSound = false;
 
 thisSprite = sprite_index;
 gravity = 1;

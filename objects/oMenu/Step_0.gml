@@ -9,18 +9,21 @@ if (menu_control)
 {
 	if (keyboard_check_pressed(vk_up) || (gamepad_button_check_pressed(0, gp_padu)))
 	{
+		audio_play_sound(snd_menu_select, 8, false);
 		menu_cursor++;
 		if (menu_cursor >= menu_items) menu_cursor = 0;
 	}
 	
 	if (keyboard_check_pressed(vk_down) || (gamepad_button_check_pressed(0, gp_padd)))
 	{
+		audio_play_sound(snd_menu_select, 8, false);
 		menu_cursor--;
 		if (menu_cursor < 0) menu_cursor = menu_items - 1;
 	}
 	
 	if (keyboard_check_pressed(vk_enter) || (gamepad_button_check_pressed(0,gp_face1)))
 	{
+		audio_play_sound(snd_menu_confirm, 10, false);
 		menu_x_target = gui_width+200;
 		menu_committed = menu_cursor;
 		menu_control = false
