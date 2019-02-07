@@ -3,6 +3,7 @@ key_left = keyboard_check(ord("A")) || (gamepad_axis_value(0,gp_axislh) < 0);
 key_right = keyboard_check(ord("D")) ||  (gamepad_axis_value(0,gp_axislh) > 0);
 key_jump = keyboard_check_pressed(vk_space) || (gamepad_button_check_pressed(0,gp_face1));
 key_jump_held = keyboard_check(vk_space) || (gamepad_button_check(0,gp_face1));
+key_lock = gamepad_button_check(0, gp_shoulderl);
 
 var framesInAir = 0;
 
@@ -21,17 +22,6 @@ if(vsp > 0)
 {
 vsp = vsp + .75
 }
-
-//sprite turning mid air (BROKEN)
-/**
-if (vsp < 0) {
-	spriteTurnFrames++;
-	while (spriteTurnFrames < 5) {
-		//if (hsp != 0) image_xscale = 0.5 * sign(hsp);
-	}
-}
-**/
-
 
 //calculate movement
  var move = key_right - key_left;
@@ -107,7 +97,7 @@ if (key_jump_held && place_meeting(x,y + vsp,oWall)) vsp += grv;
  currentJumps = 0;
  currentWallJumps = 0;
  spriteTurnFrames = 0;
- //sprite_index=sPlayerIdle;
+ //sprite_index = sPlayerIdle;
 
  }
  
@@ -152,6 +142,4 @@ if (key_jump_held && place_meeting(x,y + vsp,oWall)) vsp += grv;
  
  jumpQueuFramesElapsed++;
  
- //if(vsp != 0) {
-	 //if (hsp > 0) {
 		 

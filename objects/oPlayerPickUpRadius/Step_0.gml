@@ -12,11 +12,9 @@ var vaxis;
 if (gamepad_is_connected(0)) {
 	haxis = gamepad_axis_value(0, gp_axislh);
 	vaxis = gamepad_axis_value(0, gp_axislv);
-	stickDir = point_direction(x, y, haxis, vaxis);
-		//default drop
-		dir = 270;
+	stickDir = point_direction(0, 0, haxis, vaxis);
 		//east throw
-		if (stickDir >= 337.5 && stickDir < 22.5) {
+		if (stickDir >= 337.5 || stickDir < 22.5) {
 			dir = 0;
 		}
 		//northeast throw
@@ -46,6 +44,10 @@ if (gamepad_is_connected(0)) {
 		//southeast throw
 		if (stickDir >= 292.5 && stickDir < 337.5) {
 			dir = 315;
+		}
+		//default drop
+		if (haxis == 0 && vaxis == 0) {
+			dir = 270;	
 		}
 }
 //keyboard controls
