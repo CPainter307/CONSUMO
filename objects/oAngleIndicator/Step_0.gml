@@ -7,15 +7,20 @@ if (instance_exists(oPlayer)) {
 }
 
 //rotate sprite 
-var haxis;
-var vaxis;
 
+	
 if (!gamepad_is_connected(0)) {
+	sprite_index = sIndicatorArrow;
 	image_angle = point_direction(oPlayer.x, oPlayer.y, mouse_x, mouse_y);
+
 }
 
 if (gamepad_is_connected(0)) {
 	haxis = gamepad_axis_value(0, gp_axislh);
 	vaxis = gamepad_axis_value(0, gp_axislv);
-	image_angle = point_direction(oPlayer.x, oPlayer.y, haxis, vaxis);
+	sprite_index = sIndicatorArrow;
+	image_angle = oPlayerPickUpRadius.dir;
+	if (haxis == 0 && vaxis == 0) {
+		sprite_index = sIndicatorCircle;
+	}
 }
