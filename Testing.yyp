@@ -47,6 +47,22 @@
             }
         },
         {
+            "Key": "01aa1b50-beaa-4420-a673-fd0193acb779",
+            "Value": {
+                "id": "639b35d8-d821-4cbf-8ff3-856e7e8e0721",
+                "resourcePath": "sprites\\sRightBumper\\sRightBumper.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "071ac0d5-79ad-4451-8d0b-831d4d5cefe5",
+            "Value": {
+                "id": "82946eb6-54a7-4774-a644-953a9987e35d",
+                "resourcePath": "sprites\\sRightClick\\sRightClick.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "08ef8912-29d7-4486-81ee-b5b4aece33e6",
             "Value": {
                 "id": "c508fdaa-ef44-4df6-bf15-18066f0fe6ca",
@@ -60,6 +76,22 @@
                 "id": "88aea6dc-9a31-484d-9065-9f730a3e654d",
                 "resourcePath": "views\\0a127fb3-1840-447f-9cfd-47c67b902e73.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "12a9e4fc-528f-4985-993d-1553e1edd15c",
+            "Value": {
+                "id": "348ceb0e-488f-4757-b1cd-fac31fc2dd1d",
+                "resourcePath": "sprites\\sLeftBumper\\sLeftBumper.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "15d4be3c-c3ef-4e8a-bcfb-73ba6c2662f8",
+            "Value": {
+                "id": "d07cad86-6653-4f15-958e-56a4ec696e23",
+                "resourcePath": "sprites\\sTargetRed\\sTargetRed.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -511,6 +543,14 @@
             }
         },
         {
+            "Key": "aace4c3d-9826-4f5c-905b-a1553e206eb7",
+            "Value": {
+                "id": "70bb40cc-79d6-44b2-8700-258a33f62e7b",
+                "resourcePath": "sprites\\sTargetGreen\\sTargetGreen.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "afe6f778-7ee5-4dbe-9d1b-2641612a5e3e",
             "Value": {
                 "id": "d565e4c6-e852-4820-9942-4b4ea4c192bd",
@@ -631,6 +671,14 @@
             }
         },
         {
+            "Key": "d49d19b1-5c8a-4263-bd72-e607985ebd18",
+            "Value": {
+                "id": "023060ef-3c07-4732-b466-b6729382fc24",
+                "resourcePath": "objects\\oTarget\\oTarget.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "d7c1f0cb-6316-4e72-97d7-4129dad3e0d0",
             "Value": {
                 "id": "40852d51-e04c-4faf-a720-cf7604708016",
@@ -652,6 +700,14 @@
                 "id": "5839c93e-1e2a-404c-bc78-c353bfa4c123",
                 "resourcePath": "scripts\/SlideTransition\/SlideTransition.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "dc739142-f6eb-4ee1-a41e-a084134ca45f",
+            "Value": {
+                "id": "25b51cd8-0b4e-4b84-9f60-3e7f97a33987",
+                "resourcePath": "sounds\\snd_target_hit\\snd_target_hit.yy",
+                "resourceType": "GMSound"
             }
         },
         {
@@ -700,6 +756,14 @@
                 "id": "e716988d-868b-4fac-b5bc-156bf9c33d0d",
                 "resourcePath": "objects\\oHoldableObject\\oHoldableObject.yy",
                 "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "eea5d172-caef-4a3b-afe4-9fdea298f3dc",
+            "Value": {
+                "id": "e354a895-bb9a-4ab1-9884-91fcdb335be4",
+                "resourcePath": "sprites\\sLeftClick\\sLeftClick.yy",
+                "resourceType": "GMSprite"
             }
         },
         {

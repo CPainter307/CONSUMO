@@ -3,6 +3,8 @@
 var itemInLeftHand;
 var itemInRightHand;
 var dir;
+var imageDir;
+var spd;
 
 weCanPickUp = false;
 

@@ -15,39 +15,47 @@ if (gamepad_is_connected(0)) {
 	stickDir = point_direction(0, 0, haxis, vaxis);
 		//east throw
 		if (stickDir >= 337.5 || stickDir < 22.5) {
-			dir = 0;
+			imageDir = 0;
+			dir = 20;
 		}
 		//northeast throw
 		if (stickDir >= 22.5 && stickDir < 67.5) {
-			dir = 45;
+			imageDir = 45;
+			dir = 55;
 		}
 		//north throw
 		if (stickDir >= 67.5 && stickDir < 112.5) {
-			dir = 90;	
+			imageDir = 90;
+			dir = 90;
 		}
 		//nortwest throw
 		if (stickDir >= 112.5 && stickDir < 157.5) {
-			dir = 135;
+			imageDir = 135;
+			dir = 115;
 		}
 		//west throw
 		if (stickDir >= 157.5 && stickDir < 202.5) {
-			dir = 180;
+			imageDir = 180;
+			dir = 160;
 		}
 		//southwest throw
 		if (stickDir >= 202.5 && stickDir < 247.5) {
-			dir = 225;	
+			imageDir = 225;
+			dir = 225;
 		}
 		//south throw
 		if (stickDir >= 247.5 && stickDir < 292.5) {
+			imageDir = 270;
 			dir = 270;
 		}
 		//southeast throw
 		if (stickDir >= 292.5 && stickDir < 337.5) {
+			imageDir = 315;
 			dir = 315;
 		}
 		//default drop
 		if (haxis == 0 && vaxis == 0) {
-			dir = 270;	
+			dir = 270;
 		}
 }
 //keyboard controls
@@ -60,7 +68,7 @@ if (mouse_check_button_pressed(mb_left) || gamepad_button_check_pressed(0,gp_sho
 	if (oPlayer.holdingL) {
 		itemInLeftHand.followingL = false;
 		throwingL = true;
-		itemInLeftHand.speed = 20;
+		itemInLeftHand.speed = 25;
 		itemInLeftHand.direction = dir;
 		
 	}
@@ -71,7 +79,7 @@ if (mouse_check_button_pressed(mb_right) || gamepad_button_check_pressed(0, gp_s
 	if (oPlayer.holdingR) {
 		itemInRightHand.followingR = false;
 		throwingR = true;
-		itemInRightHand.speed = 20;
+		itemInRightHand.speed = 25;
 		itemInRightHand.direction = dir;
 	}
 }
