@@ -10,17 +10,25 @@ if (instance_exists(oPlayer)) {
 
 	
 if (!gamepad_is_connected(0)) {
+	keyU = keyboard_check(ord("W"));
+	keyL = keyboard_check(ord("A"));
+	keyD = keyboard_check(ord("S"));
+	keyR = keyboard_check(ord("D"));
 	sprite_index = sIndicatorArrow;
-	image_angle = point_direction(oPlayer.x, oPlayer.y, mouse_x, mouse_y);
-
+	image_angle = oPlayerPickUpRadius.imageDir;
+	if (!keyU && !keyL && !keyD && !keyR) {
+		sprite_index = sIndicatorCircle;
+	}
 }
 
 if (gamepad_is_connected(0)) {
-	haxis = gamepad_axis_value(0, gp_axislh);
-	vaxis = gamepad_axis_value(0, gp_axislv);
+	padU = gamepad_button_check(0, gp_padu);
+	padL = gamepad_button_check(0, gp_padl);
+	padD = gamepad_button_check(0, gp_padd);
+	padR = gamepad_button_check(0, gp_padr);
 	sprite_index = sIndicatorArrow;
 	image_angle = oPlayerPickUpRadius.imageDir;
-	if (haxis == 0 && vaxis == 0) {
+	if (!padU && !padL && !padD && !padR) {
 		sprite_index = sIndicatorCircle;
 	}
 }

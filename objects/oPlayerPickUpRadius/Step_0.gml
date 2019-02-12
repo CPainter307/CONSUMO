@@ -4,82 +4,165 @@
 x = oPlayer.x;
 y = oPlayer.y;
 
+//declare variables every frame
 var stickDir;
 var haxis;
 var vaxis;
+imageDir = 0;
 
-//gamepad controls
+//gamepad
+padU = gamepad_button_check(0, gp_padu);
+padL = gamepad_button_check(0, gp_padl);
+padD = gamepad_button_check(0, gp_padd);
+padR = gamepad_button_check(0, gp_padr);
+
+//keyboard
+keyU = keyboard_check(ord("W"));
+keyL = keyboard_check(ord("A"));
+keyD = keyboard_check(ord("S"));
+keyR = keyboard_check(ord("D"));
+keyLeftHand = keyboard_check_pressed(ord("J"));
+keyRightHand = keyboard_check_pressed(ord("L"));
+
+
+//gamepad controls throw
 if (gamepad_is_connected(0)) {
-	haxis = gamepad_axis_value(0, gp_axislh);
-	vaxis = gamepad_axis_value(0, gp_axislv);
-	stickDir = point_direction(0, 0, haxis, vaxis);
 		//east throw
-		if (stickDir >= 337.5 || stickDir < 22.5) {
+		if (padR) {
 			imageDir = 0;
 			dir = 20;
 		}
-		//northeast throw
-		if (stickDir >= 22.5 && stickDir < 67.5) {
-			imageDir = 45;
-			dir = 55;
-		}
-		//north throw
-		if (stickDir >= 67.5 && stickDir < 112.5) {
-			imageDir = 90;
-			dir = 90;
-		}
-		//nortwest throw
-		if (stickDir >= 112.5 && stickDir < 157.5) {
-			imageDir = 135;
-			dir = 115;
-		}
-		//west throw
-		if (stickDir >= 157.5 && stickDir < 202.5) {
-			imageDir = 180;
-			dir = 160;
-		}
-		//southwest throw
-		if (stickDir >= 202.5 && stickDir < 247.5) {
-			imageDir = 225;
-			dir = 225;
-		}
 		//south throw
-		if (stickDir >= 247.5 && stickDir < 292.5) {
+		if (padD) {
 			imageDir = 270;
 			dir = 270;
 		}
+		//north throw
+		if (padU) {
+			imageDir = 90;
+			dir = 90;
+		}
+		//west throw
+		if (padL) {
+			imageDir = 180;
+			dir = 160;
+		}
+		//northeast throw
+		if (padU && padR) {
+			imageDir = 45;
+			dir = 55;
+		}
+		//nortwest throw
+		if (padU && padL) {
+			imageDir = 135;
+			dir = 115;
+		}
+		//southwest throw
+		if (padD && padL) {
+			imageDir = 225;
+			dir = 225;
+		}
 		//southeast throw
-		if (stickDir >= 292.5 && stickDir < 337.5) {
+		if (padD && padR) {
 			imageDir = 315;
 			dir = 315;
 		}
 		//default drop
-		if (haxis == 0 && vaxis == 0) {
+		if (!padU && !padL && !padD && !padR) {
 			dir = 270;
 		}
 }
-//keyboard controls
+
+//keyboard controls throw
 if (!gamepad_is_connected(0)) {
-	dir = point_direction(x, y, mouse_x, mouse_y);
+		//east throw
+		if (keyR) {
+			imageDir = 0;
+			dir = 20;
+		}
+		//south throw
+		if (keyD) {
+			imageDir = 270;
+			dir = 270;
+		}
+		//north throw
+		if (keyU) {
+			imageDir = 90;
+			dir = 90;
+		}
+		//west throw
+		if (keyL) {
+			imageDir = 180;
+			dir = 160;
+		}
+		//northeast throw
+		if (keyU && keyR) {
+			imageDir = 45;
+			dir = 55;
+		}
+		//nortwest throw
+		if (keyU && keyL) {
+			imageDir = 135;
+			dir = 115;
+		}
+		//southwest throw
+		if (keyD && keyL) {
+			imageDir = 225;
+			dir = 225;
+		}
+		//southeast throw
+		if (keyD && keyR) {
+			imageDir = 315;
+			dir = 315;
+		}
+		//default drop
+		if (!keyU && !keyL && !keyD && !keyR) {
+			dir = 270;
+		}
 }
 
-//if we press the left button while an object is in left hand
-if (mouse_check_button_pressed(mb_left) || gamepad_button_check_pressed(0,gp_shoulderl)) {
-	if (oPlayer.holdingL) {
-		itemInLeftHand.followingL = false;
-		throwingL = true;
-		itemInLeftHand.speed = 25;
-		itemInLeftHand.direction = dir;
-		
+//gamepad control throw
+if (gamepad_is_connected(0)) {
+	//if we press the left button while an object is in left hand
+	if (gamepad_button_check_pressed(0, gp_shoulderl)) {
+		if (oPlayer.holdingL) {
+			itemInLeftHand.followingL = false;
+			throwingL = true;
+			itemInLeftHand.speed = 25;
+			itemInLeftHand.direction = dir;
+		}
+	}
+
+	//if we press the right button while an object is in right hand
+	if (gamepad_button_check_pressed(0, gp_shoulderr)) {
+		if (oPlayer.holdingR) {
+			itemInRightHand.followingR = false;
+			throwingR = true;
+			itemInRightHand.speed = 25;
+			itemInRightHand.direction = dir;
+		}
 	}
 }
 
-//if we press the right button while an object is in right hand
-if (mouse_check_button_pressed(mb_right) || gamepad_button_check_pressed(0, gp_shoulderr)) {
-	if (oPlayer.holdingR) {
-		itemInRightHand.followingR = false;
-		throwingR = true;
-		itemInRightHand.speed = 25;
-		itemInRightHand.direction = dir;
+//keyboard control throw
+if (!gamepad_is_connected(0)) {
+	//if we press the left button while an object is in left hand
+	if (keyLeftHand) {
+		if (oPlayer.holdingL) {
+			itemInLeftHand.followingL = false;
+			throwingL = true;
+			itemInLeftHand.speed = 25;
+			itemInLeftHand.direction = dir;
+		}
+	}
+
+	//if we press the right button while an object is in right hand
+	if (keyRightHand) {
+		if (oPlayer.holdingR) {
+			itemInRightHand.followingR = false;
+			throwingR = true;
+			itemInRightHand.speed = 25;
+			itemInRightHand.direction = dir;
+		}
 	}
 }

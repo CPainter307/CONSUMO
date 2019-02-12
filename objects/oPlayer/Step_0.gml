@@ -1,9 +1,20 @@
 //Get Player input
-key_left = keyboard_check(ord("A")) || (gamepad_axis_value(0,gp_axislh) < 0);
-key_right = keyboard_check(ord("D")) ||  (gamepad_axis_value(0,gp_axislh) > 0);
-key_jump = keyboard_check_pressed(vk_space) || (gamepad_button_check_pressed(0,gp_face1));
-key_jump_held = keyboard_check(vk_space) || (gamepad_button_check(0,gp_face1));
-key_lock = gamepad_button_check(0, gp_shoulderl);
+
+//keyboard
+if (!gamepad_is_connected(0)) {
+	key_left = keyboard_check(ord("A"))
+	key_right = keyboard_check(ord("D"))
+	key_jump = keyboard_check_pressed(vk_space)
+	key_jump_held = keyboard_check(vk_space)
+}
+
+//gamepad
+if (gamepad_is_connected(0)) {
+	key_left = gamepad_button_check(0, gp_padl);
+	key_right = gamepad_button_check(0, gp_padr);
+	key_jump = gamepad_button_check_pressed(0,gp_face1);
+	key_jump_held = gamepad_button_check(0,gp_face1);
+}
 
 var framesInAir = 0;
 

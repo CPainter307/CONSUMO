@@ -16,11 +16,12 @@ for (var i = 0; i < ds_list_size(itemList); i++) {
 	}
 }
 
+//gamepad controls
+if (gamepad_is_connected(0)) {
 //if there is an item we can pick up
 if (weCanPickUp) {
 	//if both buttons are pressed simultaneously
-	if ((mouse_check_button_pressed(mb_left) || gamepad_button_check_pressed(0, gp_shoulderl)) &&
-		(mouse_check_button_pressed(mb_right) || gamepad_button_check_pressed(0, gp_shoulderr))) {
+	if (gamepad_button_check_pressed(0, gp_shoulderl) && gamepad_button_check_pressed(0, gp_shoulderr)) {
 			//default to left hand
 			if (oPlayer.holdingL ==  false && weCanPickUp) {
 				ID.followingL = true;
@@ -39,7 +40,7 @@ if (weCanPickUp) {
 			}
 		}
 	//left hand pick up
-	if (mouse_check_button_pressed(mb_left) || gamepad_button_check_pressed(0,gp_shoulderl) && weCanPickUp) {
+	if (gamepad_button_check_pressed(0,gp_shoulderl) && weCanPickUp) {
 		// if player isn't holding something in left hand, get picked up
 		if (oPlayer.holdingL == false) {
 				ID.followingL = true;
@@ -50,7 +51,7 @@ if (weCanPickUp) {
 		}
 	}
 	//right hand pick up
-	if (mouse_check_button_pressed(mb_right) || gamepad_button_check_pressed(0, gp_shoulderr) && weCanPickUp) {
+	if (gamepad_button_check_pressed(0, gp_shoulderr) && weCanPickUp) {
 		//if player isn't holding something in right hand, get picked up
 		if (oPlayer.holdingR == false) {
 				ID.followingR = true;
@@ -61,4 +62,52 @@ if (weCanPickUp) {
 		}
 	}
 }
+}
 
+//keyboard controls
+if (!gamepad_is_connected(0)) {
+//if there is an item we can pick up
+if (weCanPickUp) {
+	//if both buttons are pressed simultaneously
+	if (keyboard_check_pressed(ord("J")) && keyboard_check_pressed(ord("L"))) {
+			//default to left hand
+			if (oPlayer.holdingL ==  false && weCanPickUp) {
+				ID.followingL = true;
+				ID.highlighted = false;
+				itemInLeftHand = ID; //now we know what's in our left hand
+				oPlayer.holdingL = true; //not sure if this is the best place to put this yet
+				weCanPickUp = false; //prevents empty right hand crash
+			}
+			//next to right hand
+			if (oPlayer.holdingR == false && weCanPickUp) {
+				ID.followingR = true;
+				ID.highlighted = false;
+				itemInRightHand = ID; //now we know what's in our right hand
+				oPlayer.holdingR = true; //not sure if this is the best place to put this yet
+				weCanPickUp = false; //prevents empty left hand crash
+			}
+		}
+	//left hand pick up
+	if (keyboard_check_pressed(ord("J")) && weCanPickUp) {
+		// if player isn't holding something in left hand, get picked up
+		if (oPlayer.holdingL == false) {
+				ID.followingL = true;
+				ID.highlighted = false;
+				itemInLeftHand = ID; //now we know what's in our left hand
+				oPlayer.holdingL = true; //not sure if this is the best place to put this yet
+				weCanPickUp = false; //prevents empty right hand crash
+		}
+	}
+	//right hand pick up
+	if (keyboard_check_pressed(ord("L")) && weCanPickUp) {
+		//if player isn't holding something in right hand, get picked up
+		if (oPlayer.holdingR == false) {
+				ID.followingR = true;
+				ID.highlighted = false;
+				itemInRightHand = ID; //now we know what's in our right hand
+				oPlayer.holdingR = true; //not sure if this is the best place to put this yet
+				weCanPickUp = false; //prevents empty left hand crash
+		}
+	}
+}
+}

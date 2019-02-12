@@ -10,8 +10,8 @@ if (gamepad_is_connected(0)) {
 	draw_sprite(sRightBumper,0, 1600, 990);
 }
 if (!gamepad_is_connected(0)) {
-	draw_sprite(sLeftClick, 0, 300, 990);
-	draw_sprite(sRightClick, 0, 1600, 990);
+	draw_sprite(sJButton, 0, 300, 990);
+	draw_sprite(sLButton, 0, 1600, 990);
 }
 
 //draw objects in hands (currently the "are we holding" check

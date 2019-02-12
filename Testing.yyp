@@ -39,6 +39,14 @@
             }
         },
         {
+            "Key": "00c9f6b0-a672-4704-974e-86d3d9c258fa",
+            "Value": {
+                "id": "eac257ae-be56-40bf-a63a-dbfba149ad50",
+                "resourcePath": "sprites\\sLButton\\sLButton.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "01689d82-ad40-42a7-9da8-ff44f811b4d6",
             "Value": {
                 "id": "31d8d8da-a8ff-4170-93e1-12ef5f5bae2d",
@@ -684,6 +692,14 @@
                 "id": "40852d51-e04c-4faf-a720-cf7604708016",
                 "resourcePath": "objects\\oPlayerPickUpRadius\\oPlayerPickUpRadius.yy",
                 "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "d888fe4d-bf86-4054-a082-19873033a5b7",
+            "Value": {
+                "id": "e4b11ee4-a2e5-4a98-b09a-06b53935699a",
+                "resourcePath": "sprites\\sJButton\\sJButton.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
