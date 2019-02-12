@@ -16,10 +16,10 @@ if (!gamepad_is_connected(0)) {
 }
 
 if (gamepad_is_connected(0)) {
-	haxis = gamepad_axis_value(0, gp_axislh);
-	vaxis = gamepad_axis_value(0, gp_axislv);
+	haxis = gamepad_axis_value(0, gp_axisrh);
+	vaxis = gamepad_axis_value(0, gp_axisrv);
 	sprite_index = sIndicatorArrow;
-	image_angle = oPlayerPickUpRadius.imageDir;
+	image_angle = oPlayerPickUpRadius.dir;
 	if (haxis == 0 && vaxis == 0) {
 		sprite_index = sIndicatorCircle;
 	}
