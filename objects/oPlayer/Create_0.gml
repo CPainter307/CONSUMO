@@ -20,6 +20,8 @@ gamepad_set_axis_deadzone(0, 0.35)
 holdingL = false;
 holdingR = false;
 
+isLocked = false;
+
 /* potential other variables
 
 int maxCarryWeight

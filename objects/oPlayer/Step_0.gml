@@ -34,8 +34,24 @@ if(vsp > 0)
 vsp = vsp + .75
 }
 
-//calculate movement
- var move = key_right - key_left;
+//calculate movement (player locking mechanics included)
+if (keyboard_check(vk_shift)) || (gamepad_button_check_pressed(0,gp_shoulderl))
+{
+	isLocked = true;
+}
+else
+{
+	isLocked = false;	
+}
+
+if (isLocked)
+{
+	var move = 0;
+}
+else
+{
+	var move = key_right - key_left;	
+}
  
  if(vsp == 0 && place_meeting(x ,y + 1,oWall)) { 
 	 hsp = walksp * move;
@@ -153,4 +169,3 @@ if (key_jump_held && place_meeting(x,y + vsp,oWall)) vsp += grv;
  
  jumpQueuFramesElapsed++;
  
-		 
