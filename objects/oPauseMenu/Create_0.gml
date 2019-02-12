@@ -22,4 +22,6 @@ menu[0] = "Quit";
 menu_items = array_length_1d(menu);
 menu_cursor = 3;
 
+menu_top = menu_y - ((menu_itemheight * 1.5) * menu_items);
+
 key_pressed = false;
