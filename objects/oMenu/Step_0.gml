@@ -27,6 +27,11 @@ if (menu_control)
 		menu_x_target = gui_width+200;
 		menu_committed = menu_cursor;
 		menu_control = false
+		audio_sound_gain(snd_main_theme,0,1000);
+		if (audio_sound_get_gain(snd_main_theme) <= 0)
+		{
+			audio_stop_sound(snd_main_theme);	
+		}
 	}
 	
 	var mouse_y_gui = device_mouse_y_to_gui(0);
