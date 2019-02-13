@@ -35,7 +35,7 @@ vsp = vsp + .75
 }
 
 //calculate movement (player locking mechanics included)
-if (keyboard_check(vk_shift)) || (gamepad_button_check_pressed(0,gp_shoulderl))
+if (keyboard_check(vk_shift)) || (gamepad_button_check(0,gp_shoulderlb))
 {
 	isLocked = true;
 }
