@@ -1,10 +1,15 @@
 /// @description Collision with the walls
 
 if (!followingL && !followingR) { //if we aren't in a hand
-	move_contact_solid(270, 12);
+	//move_contact_solid(270, 12);
 	speed = 0;
 }
-
+if (followingL || followingR) {
+	other.solid = false;
+} else {
+	other.solid = true;	
+}
+/*
 if (followingL) {
 	if (oPlayer.facingRight) {
 		depth = 350;
@@ -36,4 +41,4 @@ if (followingR) {
 	//still some glitchy placing here - not sure how to fix yet
 	gravity = 0;
 	//other.solid = false; 	
-}
+}*/

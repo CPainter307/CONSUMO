@@ -1,0 +1,1 @@
+#macro JUMP_HEIGHT 15; // default 15

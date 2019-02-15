@@ -15,7 +15,7 @@ if (followingL == true) {
 	}
 	//still some glitchy placing here - not sure how to fix yet
 	gravity = 0; 
-	other.solid = false; 
+	//other.solid = false; 
 }
 
 //if we're holding in the right hand
@@ -34,7 +34,7 @@ if (followingR == true) {
 	}
 	//still some glitchy placing here - not sure how to fix yet
 	gravity = 0;
-	other.solid = false; 
+	//other.solid = false; 
 }
 
 //if we're being thrown from left
