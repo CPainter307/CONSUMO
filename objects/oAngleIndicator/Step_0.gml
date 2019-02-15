@@ -6,9 +6,7 @@ if (instance_exists(oPlayer)) {
 	y = oPlayer.y - 100;
 }
 
-//rotate sprite 
-
-	
+//rotate sprite 	
 if (!gamepad_is_connected(0)) {
 	keyU = keyboard_check(ord("W"));
 	keyL = keyboard_check(ord("A"));
@@ -16,7 +14,7 @@ if (!gamepad_is_connected(0)) {
 	keyR = keyboard_check(ord("D"));
 	sprite_index = sIndicatorArrow;
 	image_angle = oPlayerPickUpRadius.imageDir;
-	if (!keyU && !keyL && !keyD && !keyR) {
+	if ((!keyU && !keyL && !keyD && !keyR) && !oPlayer.isLocked) {
 		sprite_index = sIndicatorCircle;
 	}
 }
@@ -28,7 +26,8 @@ if (gamepad_is_connected(0)) {
 	padR = gamepad_button_check(0, gp_padr);
 	sprite_index = sIndicatorArrow;
 	image_angle = oPlayerPickUpRadius.imageDir;
-	if (!padU && !padL && !padD && !padR) {
+	if (gamepad_axis_value(0, gp_axislh) == 0 && gamepad_axis_value(0, gp_axislv) == 0
+	    && gamepad_axis_value(0, gp_axisrh) == 0 && gamepad_axis_value(0, gp_axisrv) == 0) {
 		sprite_index = sIndicatorCircle;
 	}
 }
