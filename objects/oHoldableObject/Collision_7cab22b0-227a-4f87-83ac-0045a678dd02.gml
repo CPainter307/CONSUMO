@@ -3,12 +3,12 @@
 if (!followingL && !followingR) { //if we aren't in a hand
 	//move_contact_solid(270, 12);
 	speed = 0;
-}
+}/*
 if (followingL || followingR) {
 	other.solid = false;
 } else {
 	other.solid = true;	
-}
+}*/
 /*
 if (followingL) {
 	if (oPlayer.facingRight) {
