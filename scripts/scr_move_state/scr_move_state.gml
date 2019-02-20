@@ -68,6 +68,9 @@ if (oPlayerInput.key_jump_held && place_meeting(x,y + vsp,oWall)) {
 if (hsp != 0) {
 	hsp_dir = sign(hsp);	
 }
+if (vsp != 0) {
+	vsp_dir = sign(vsp);
+}
 
 
 
@@ -109,8 +112,9 @@ if(place_meeting(x, y+1, oWall)) {
 var spr_pos = (sPlayer.sprite_width/2)+5;
 var was_free = !position_meeting(x+(spr_pos*hsp_dir), yprevious-4, oWall);
 var is_not_free = position_meeting(x+(spr_pos*hsp_dir), y-4, oWall);
+var near_ground = position_meeting(x, y+(spr_pos*vsp_dir)+60, oWall);
 var moving_down = yprevious < y;
-if (was_free && is_not_free && moving_down && !(oPlayer.holdingL && oPlayer.holdingR)) {
+if (!near_ground && was_free && is_not_free && moving_down && !(oPlayer.holdingL && oPlayer.holdingR)) {
 	hsp = 0;
 	vsp = 0;
 	
