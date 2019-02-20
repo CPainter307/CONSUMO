@@ -4,6 +4,9 @@ if (isPaused)
 draw_set_font(fMenu);
 draw_set_halign(fa_right);
 draw_set_valign(fa_bottom);
+draw_set_color(c_black); // Black rectangle
+draw_rectangle(0,0,room_width,room_height,0); // Draws the rectangle above the tile set
+
 
 for (var i = 0; i < menu_items; i++)
 {
