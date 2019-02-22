@@ -75,8 +75,17 @@ if (gamepad_is_connected(0)) {
 		if (gamepad_axis_value(0,gp_axislh) != 0 || gamepad_axis_value(0, gp_axislv) != 0) {
 			haxis = gamepad_axis_value(0, gp_axislh);
 			vaxis = gamepad_axis_value(0, gp_axislv);
-			dir = point_direction(0, 0, haxis, vaxis);	
-			imageDir = dir;			
+			dir = point_direction(0, 0, haxis, vaxis);
+			imageDir = dir;		
+			
+			//east throw correction
+			if (stickDir >= 337.5 || stickDir < 22.5) {
+				dir = dir + 20;
+			}
+			//west throw correction
+			if (stickDir >= 157.5 && stickDir < 202.5) {
+				dir = dir - 20;
+			}
 		}
 
 		//throwing with right stick while locked
@@ -84,7 +93,16 @@ if (gamepad_is_connected(0)) {
 			haxis = gamepad_axis_value(0, gp_axisrh);
 			vaxis = gamepad_axis_value(0, gp_axisrv);
 			dir = point_direction(0, 0, haxis, vaxis);	
-			imageDir = dir;			
+			imageDir = dir;	
+
+			//east throw correction
+			if (stickDir >= 337.5 || stickDir < 22.5) {
+				dir = dir + 20;
+			}
+			//west throw correction
+			if (stickDir >= 157.5 && stickDir < 202.5) {
+				dir = dir - 20;
+			}
 		}
 
 	}
@@ -152,6 +170,15 @@ if (!gamepad_is_connected(0)) {
 	if (oPlayer.isLocked) {
 		dir = point_direction(x, y, mouse_x, mouse_y);
 		imageDir = dir;
+		
+		//east throw correction
+		if (dir >= 337.5 || dir < 22.5) {
+			dir = dir + 20;
+		}
+		//west throw correction
+		if (dir >= 157.5 && dir < 202.5) {
+			dir = dir - 20;
+		}
 	}
 }
 

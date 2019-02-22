@@ -1,7 +1,9 @@
-ds_list_add(item_list, other.ing_id);
-if(object_get_name(other.object_index) != "oRecipe") {
-	with(other) {
-		instance_destroy();
+if (!other.followingL && !other.followingR) {
+	ds_list_add(item_list, other.ing_id);
+	if(object_get_name(other.object_index) != "oRecipe") {
+		with(other) {
+			instance_destroy();
+		}
 	}
 }
 
