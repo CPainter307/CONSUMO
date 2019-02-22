@@ -109,7 +109,7 @@ if(place_meeting(x, y+1, oWall)) {
 
 
 //ledge grab
-var spr_pos = (sPlayer.sprite_width/2)+6;
+var spr_pos = (79/2)+6;
 var was_free = !position_meeting(x+((spr_pos)*hsp_dir), yprevious-4, oWall);
 var is_not_free = position_meeting(x+((spr_pos)*hsp_dir), y-4, oWall);
 var near_ground = position_meeting(x, y+(spr_pos*vsp_dir)+60, oWall);

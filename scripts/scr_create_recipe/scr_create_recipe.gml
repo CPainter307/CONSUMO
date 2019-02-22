@@ -1,4 +1,4 @@
 /// scr_create_recipe(name, sprite)
-instance_create_depth(x, y-30, -y, oRecipe);
-oRecipe.name = argument0;
-oRecipe.sprite_index = argument1;
+var inst = instance_create_depth(x+50, y-100, -y, oRecipe);
+inst.name = argument0;
+inst.sprite_index = argument1;

@@ -158,20 +158,26 @@ if (!gamepad_is_connected(0)) {
 //throwing
 	//if we press the left button while an object is in left hand
 	if (keyLeftHand) {
-		if (oPlayer.holdingL) {
+		if (instance_exists(itemInLeftHand) and oPlayer.holdingL) {
 			itemInLeftHand.followingL = false;
 			throwingL = true;
 			itemInLeftHand.speed = 25;
 			itemInLeftHand.direction = dir;
+		} else {
+			oPlayer.holdingL = false;
+			throwingL = false;
 		}
 	}
 
 	//if we press the right button while an object is in right hand
 	if (keyRightHand) {
-		if (oPlayer.holdingR) {
+		if (instance_exists(itemInRightHand) and oPlayer.holdingR) {
 			itemInRightHand.followingR = false;
 			throwingR = true;
 			itemInRightHand.speed = 25;
 			itemInRightHand.direction = dir;
+		} else {
+			oPlayer.holdingR = false;
+			throwingR = false;
 		}
 	}

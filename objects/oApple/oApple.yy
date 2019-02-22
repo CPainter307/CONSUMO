@@ -1,38 +1,38 @@
 {
-    "id": "b9dc492b-8c18-4278-aab8-ae36bf543f15",
+    "id": "e8976633-b554-4dea-86ad-cda329ef7a82",
     "modelName": "GMObject",
     "mvc": "1.0",
     "name": "oApple",
     "eventList": [
         {
-            "id": "d296e9a1-0acd-43ef-bedd-b1837469ff2f",
+            "id": "a2a64836-df78-4600-afb5-e7a5e26f1409",
             "modelName": "GMEvent",
             "mvc": "1.0",
             "IsDnD": false,
             "collisionObjectId": "00000000-0000-0000-0000-000000000000",
             "enumb": 1,
             "eventtype": 3,
-            "m_owner": "b9dc492b-8c18-4278-aab8-ae36bf543f15"
+            "m_owner": "e8976633-b554-4dea-86ad-cda329ef7a82"
         },
         {
-            "id": "3381796e-de3b-438b-ba88-dd19f53276af",
+            "id": "40e53a62-a157-4178-abb2-da343c9656e4",
             "modelName": "GMEvent",
             "mvc": "1.0",
             "IsDnD": false,
             "collisionObjectId": "00000000-0000-0000-0000-000000000000",
             "enumb": 0,
             "eventtype": 3,
-            "m_owner": "b9dc492b-8c18-4278-aab8-ae36bf543f15"
+            "m_owner": "e8976633-b554-4dea-86ad-cda329ef7a82"
         },
         {
-            "id": "602f8afe-935f-40f4-b1b5-10872c0f880c",
+            "id": "0bfa6d60-40a8-4429-8497-efa383e9f1d6",
             "modelName": "GMEvent",
             "mvc": "1.0",
             "IsDnD": false,
             "collisionObjectId": "00000000-0000-0000-0000-000000000000",
             "enumb": 0,
             "eventtype": 0,
-            "m_owner": "b9dc492b-8c18-4278-aab8-ae36bf543f15"
+            "m_owner": "e8976633-b554-4dea-86ad-cda329ef7a82"
         }
     ],
     "maskSpriteId": "00000000-0000-0000-0000-000000000000",

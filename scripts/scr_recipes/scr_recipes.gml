@@ -27,8 +27,7 @@ ds_3d_set(ingredients, oMeat.ing_id, oMeat.ing_id, oFish.ing_id, recipe_attribut
 recipe_attributes[0] = "3 Meat Treat";
 recipe_attributes[1] = spr_placeholder_recipe2;
 ds_3d_set(ingredients, oMeat.ing_id, oMeat.ing_id, oMeat.ing_id, recipe_attributes);
-
-
+ds_3d_set(ingredients, oFish.ing_id, oFish.ing_id, oFish.ing_id, recipe_attributes);
 
 //**********************************************************************************
 scr_normalize_recipes();

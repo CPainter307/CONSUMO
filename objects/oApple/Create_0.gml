@@ -1,2 +1,2 @@
 event_inherited();
-ing_id = 0;
+ing_id = 3;

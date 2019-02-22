@@ -815,14 +815,6 @@
             }
         },
         {
-            "Key": "b9dc492b-8c18-4278-aab8-ae36bf543f15",
-            "Value": {
-                "id": "cebb545c-7003-4027-ad21-21ddf150c283",
-                "resourcePath": "objects\\oApple\\oApple.yy",
-                "resourceType": "GMObject"
-            }
-        },
-        {
             "Key": "bc8152a0-b3e4-4b30-b47e-2341c16ab93e",
             "Value": {
                 "id": "d6f75f8f-28f6-4fb7-bffe-d4eee8e08dd1",
@@ -1027,6 +1019,14 @@
             "Value": {
                 "id": "f8f14392-6354-4620-99dc-b6b3386d12f2",
                 "resourcePath": "objects\\oPot\\oPot.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "e8976633-b554-4dea-86ad-cda329ef7a82",
+            "Value": {
+                "id": "340ccbb0-ba80-4688-9a1f-37aab95854b9",
+                "resourcePath": "objects\\oApple\\oApple.yy",
                 "resourceType": "GMObject"
             }
         },
