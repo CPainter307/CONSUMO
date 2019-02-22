@@ -79,11 +79,11 @@ if (gamepad_is_connected(0)) {
 			imageDir = dir;		
 			
 			//east throw correction
-			if (stickDir >= 337.5 || stickDir < 22.5) {
+			if (dir >= 337.5 || dir < 22.5) {
 				dir = dir + 20;
 			}
 			//west throw correction
-			if (stickDir >= 157.5 && stickDir < 202.5) {
+			if (dir >= 157.5 && dir < 202.5) {
 				dir = dir - 20;
 			}
 		}
@@ -96,11 +96,11 @@ if (gamepad_is_connected(0)) {
 			imageDir = dir;	
 
 			//east throw correction
-			if (stickDir >= 337.5 || stickDir < 22.5) {
+			if (dir >= 337.5 || dir < 22.5) {
 				dir = dir + 20;
 			}
 			//west throw correction
-			if (stickDir >= 157.5 && stickDir < 202.5) {
+			if (dir >= 157.5 && dir < 202.5) {
 				dir = dir - 20;
 			}
 		}
