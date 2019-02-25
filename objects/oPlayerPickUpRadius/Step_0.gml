@@ -100,9 +100,19 @@ if (gamepad_is_connected(0)) {
 				dir = dir + 20;
 			}
 			//west throw correction
-			if (dir >= 157.5 && dir < 202.5) {
+			if (dir >= 157.5 && dir																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																									 < 202.5) {
 				dir = dir - 20;
 			}
+		}
+		
+		//sprite flipping
+		if (dir < 90 || dir >= 220) {
+			oPlayer.facingRight = true;
+			oPlayer.image_xscale = 0.5;
+		}
+		if (dir < 220 && dir >= 90) {
+			oPlayer.facingRight = false;
+			oPlayer.image_xscale = -0.5;
 		}
 
 	}
@@ -179,6 +189,17 @@ if (!gamepad_is_connected(0)) {
 		if (dir >= 157.5 && dir < 202.5) {
 			dir = dir - 20;
 		}
+		
+		//sprite flipping
+		if (dir < 90 || dir >= 220) {
+			oPlayer.facingRight = true;
+			oPlayer.image_xscale = 0.5;
+		}
+		if (dir < 220 && dir >= 90) {
+			oPlayer.facingRight = false;;
+			oPlayer.image_xscale = -0.5;
+		}
+
 	}
 }
 

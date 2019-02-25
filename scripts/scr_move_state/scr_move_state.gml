@@ -150,6 +150,7 @@ if(!place_meeting(x, y+1, oWall)) {
 
 
 
+
 //if (hsp != 0) image_xscale = sign(hsp);
 if ((place_meeting (x, y + 1, oWall)) && hsp != 0) {
 	if (sign(hsp) < 0) {

@@ -15,21 +15,3 @@ holdingL = false;
 holdingR = false;
 isLocked = false;
 state = scr_move_state;
-
-/* potential other variables
-
-int maxCarryWeight
-int currentCarryWeight
-
-object ojbectInRightHand
-object objectInLefthand
-
-
-*/
-
-/* potential functions
-
-isHandEmpty(objectInHand) - 
-
-
-*/
