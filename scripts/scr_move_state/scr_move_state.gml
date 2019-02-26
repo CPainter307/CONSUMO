@@ -163,4 +163,53 @@ if ((place_meeting (x, y + 1, oWall)) && hsp != 0) {
 }
 
 jumpQueuFramesElapsed++;
- 
+
+// Back Arm
+//if player facing right
+if (oPlayer.facingRight) {
+	if (oPlayer.hsp != 0 && oPlayer.vsp == 0) {
+		oBackArm.sprite_index = sBackArmL; //later swap for sBackArmLMoving
+	}
+	else {
+		oBackArm.sprite_index = sBackArmL;	
+	}
+	oBackArm.x = oPlayer.x - 0;
+	oBackArm.y = oPlayer.y - 8;
+}
+
+//if player facing left
+else {
+	if (oPlayer.hsp != 0 && oPlayer.vsp == 0) {
+		oBackArm.sprite_index = sBackArmR; //later swap for sBackArmRMoving
+	}
+	else {
+		oBackArm.sprite_index = sBackArmR;
+	}
+	oBackArm.x = oPlayer.x - 0;
+	oBackArm.y = oPlayer.y - 12;
+}
+
+// Front Arm
+//if player facing right
+if (oPlayer.facingRight) {
+	if (oPlayer.hsp != 0 && oPlayer.vsp == 0) {
+		oFrontArm.sprite_index = sFrontArmRMoving;
+	}
+	else {
+		oFrontArm.sprite_index = sFrontArmR;	
+	}
+	oFrontArm.x = oPlayer.x - 13;
+	oFrontArm.y = oPlayer.y - 12;
+}
+
+//if player facing left
+else {
+	if (oPlayer.hsp != 0 && oPlayer.vsp == 0) {
+		oFrontArm.sprite_index = sFrontArmL; //later swap for sFrontArmLMoving
+	}
+	else {
+		oFrontArm.sprite_index = sFrontArmL;
+	}
+	oFrontArm.x = oPlayer.x + 21;
+	oFrontArm.y = oPlayer.y - 12;
+}

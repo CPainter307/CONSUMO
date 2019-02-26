@@ -76,7 +76,7 @@ if (gamepad_is_connected(0)) {
 			haxis = gamepad_axis_value(0, gp_axislh);
 			vaxis = gamepad_axis_value(0, gp_axislv);
 			dir = point_direction(0, 0, haxis, vaxis);
-			imageDir = dir;		
+			if (oPlayer.moveStateExecuted) imageDir = dir;		
 			
 			//east throw correction
 			if (dir >= 337.5 || dir < 22.5) {
@@ -93,7 +93,7 @@ if (gamepad_is_connected(0)) {
 			haxis = gamepad_axis_value(0, gp_axisrh);
 			vaxis = gamepad_axis_value(0, gp_axisrv);
 			dir = point_direction(0, 0, haxis, vaxis);	
-			imageDir = dir;	
+			if (oPlayer.moveStateExecuted) imageDir = dir;	
 
 			//east throw correction
 			if (dir >= 337.5 || dir < 22.5) {
@@ -106,11 +106,11 @@ if (gamepad_is_connected(0)) {
 		}
 		
 		//sprite flipping
-		if (dir < 90 || dir >= 220) {
+		if (dir < 90 || dir >= 220) && (oPlayer.moveStateExecuted) {
 			oPlayer.facingRight = true;
 			oPlayer.image_xscale = 0.5;
 		}
-		if (dir < 220 && dir >= 90) {
+		if (dir < 220 && dir >= 90) && (oPlayer.moveStateExecuted){
 			oPlayer.facingRight = false;
 			oPlayer.image_xscale = -0.5;
 		}
@@ -179,7 +179,7 @@ if (!gamepad_is_connected(0)) {
 	//throwing while locked
 	if (oPlayer.isLocked) {
 		dir = point_direction(x, y, mouse_x, mouse_y);
-		imageDir = dir;
+		if (oPlayer.moveStateExecuted) imageDir = dir;
 		
 		//east throw correction
 		if (dir >= 337.5 || dir < 22.5) {
@@ -191,11 +191,11 @@ if (!gamepad_is_connected(0)) {
 		}
 		
 		//sprite flipping
-		if (dir < 90 || dir >= 220) {
+		if (dir < 90 || dir >= 220) && (oPlayer.moveStateExecuted) {
 			oPlayer.facingRight = true;
 			oPlayer.image_xscale = 0.5;
 		}
-		if (dir < 220 && dir >= 90) {
+		if (dir < 220 && dir >= 90) && (oPlayer.moveStateExecuted) {
 			oPlayer.facingRight = false;;
 			oPlayer.image_xscale = -0.5;
 		}

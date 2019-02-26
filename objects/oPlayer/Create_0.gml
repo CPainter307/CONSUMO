@@ -15,3 +15,4 @@ holdingL = false;
 holdingR = false;
 isLocked = false;
 state = scr_move_state;
+moveStateExecuted = true;
