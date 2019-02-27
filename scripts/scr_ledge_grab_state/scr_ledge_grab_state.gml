@@ -14,3 +14,8 @@ if (oPlayerInput.key_jump) {
 	oPlayer.moveStateExecuted = true;	
 	state = scr_move_state;
 }
+
+if (oPlayer.holdingL && oPlayer.holdingR) {
+	oPlayer.moveStateExecuted = true;
+	state = scr_move_state;
+}
