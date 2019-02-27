@@ -487,6 +487,14 @@
             }
         },
         {
+            "Key": "64222f7c-f8ab-4197-8526-047bcfa43bfc",
+            "Value": {
+                "id": "b6b96eaf-f6fa-487c-b702-0ea6833161e8",
+                "resourcePath": "objects\\oSalt\\oSalt.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "65798030-f19a-438f-971c-87e371645ee9",
             "Value": {
                 "id": "67e2d58f-cd28-45ed-903a-3dacf46d96c1",
@@ -515,6 +523,14 @@
             "Value": {
                 "id": "4a28624f-0ab1-49c9-99e5-2737b34ed70d",
                 "resourcePath": "sprites\\sTestProp\\sTestProp.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "6ca7811e-26d3-4186-bbdd-c2ac58ca2951",
+            "Value": {
+                "id": "9aa73ac2-d1b8-47f6-883c-4e78eb7922fa",
+                "resourcePath": "sprites\\sSalt\\sSalt.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -751,6 +767,14 @@
             }
         },
         {
+            "Key": "a5c4317c-ea6c-463f-b804-1a1d69387fb8",
+            "Value": {
+                "id": "3eac611c-beee-4baf-a872-1be7b0caf738",
+                "resourcePath": "sprites\\sOnion\\sOnion.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "a776711b-6020-4af0-8426-0fe09d9f99b6",
             "Value": {
                 "id": "edc32d6a-1d40-4466-b654-3dc38e14f5f4",
@@ -828,6 +852,14 @@
                 "id": "b930a5d4-43fe-4db6-bcb1-d47fbaa76024",
                 "resourcePath": "fonts\/fMenu\/fMenu.yy",
                 "resourceType": "GMFont"
+            }
+        },
+        {
+            "Key": "c14b810c-dd35-4810-b191-b908f8139770",
+            "Value": {
+                "id": "f42c69af-bf07-439e-93af-72f5076ee53d",
+                "resourcePath": "objects\\oOnion\\oOnion.yy",
+                "resourceType": "GMObject"
             }
         },
         {

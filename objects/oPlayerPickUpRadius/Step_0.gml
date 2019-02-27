@@ -89,11 +89,11 @@ if (gamepad_is_connected(0)) {
 		}
 		
 		//sprite flipping
-		if (dir < 90 || dir >= 270) && (oPlayer.moveStateExecuted) {
+		if (dir < 90 || dir > 270) && (oPlayer.moveStateExecuted) {
 			oPlayer.facingRight = true;
 			oPlayer.image_xscale = 0.5;
 		}
-		if (dir < 270 && dir >= 90) && (oPlayer.moveStateExecuted) {
+		if (dir < 270 && dir > 90) && (oPlayer.moveStateExecuted) {
 			oPlayer.facingRight = false;
 			oPlayer.image_xscale = -0.5;
 		}

@@ -26,8 +26,7 @@ if (gamepad_is_connected(0)) {
 	padR = gamepad_button_check(0, gp_padr);
 	sprite_index = sIndicatorArrow;
 	image_angle = oPlayerPickUpRadius.imageDir;
-	if (gamepad_axis_value(0, gp_axislh) == 0 && gamepad_axis_value(0, gp_axislv) == 0
-	    && gamepad_axis_value(0, gp_axisrh) == 0 && gamepad_axis_value(0, gp_axisrv) == 0) {
+	if (gamepad_axis_value(0, gp_axislh) == 0 && gamepad_axis_value(0, gp_axislv) == 0) {
 		sprite_index = sIndicatorCircle;
 	}
 }

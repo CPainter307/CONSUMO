@@ -1,11 +1,12 @@
 //keyboard
 if (!gamepad_is_connected(0)) {
-	key_left = keyboard_check(ord("A"))
-	key_right = keyboard_check(ord("D"))
-	key_down = keyboard_check(ord("S"))
-	key_jump = keyboard_check_pressed(vk_space)
-	key_jump_held = keyboard_check(vk_space)
-	key_locked = keyboard_check(vk_shift)
+	key_up = keyboard_check(ord("W"));
+	key_left = keyboard_check(ord("A"));
+	key_right = keyboard_check(ord("D"));
+	key_down = keyboard_check(ord("S"));
+	key_jump = keyboard_check_pressed(vk_space);
+	key_jump_held = keyboard_check(vk_space);
+	key_locked = keyboard_check(vk_shift);
 }
 
 //gamepad
