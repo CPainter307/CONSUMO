@@ -11,6 +11,6 @@ if (oPlayerInput.key_jump) {
 		oPlayer.facingRight = false;
 		oPlayer.image_xscale = -0.5;
 	}
+	oPlayer.moveStateExecuted = true;	
 	state = scr_move_state;
-	oPlayer.moveStateExected = true;
 }
