@@ -1,0 +1,1 @@
+with (steam) instance_destroy();

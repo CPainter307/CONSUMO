@@ -6,8 +6,7 @@
     "children": [
         "bc8152a0-b3e4-4b30-b47e-2341c16ab93e",
         "e46c859f-da8a-452e-a347-045e7bac9c87",
-        "f6c7ac52-a641-4870-b4c4-da83fa5f19fd",
-        "9d2adc7e-f2dc-42a7-8717-b2a7c67b2a18"
+        "f6c7ac52-a641-4870-b4c4-da83fa5f19fd"
     ],
     "filterType": "GMObject",
     "folderName": "Cooking",
