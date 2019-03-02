@@ -1,14 +1,23 @@
 {
-    "id": "c14b810c-dd35-4810-b191-b908f8139770",
+    "id": "a6abf43a-fcba-4abc-b6a2-da655408e91f",
     "modelName": "GMObject",
     "mvc": "1.0",
-    "name": "oOnion",
+    "name": "oIngredient",
     "eventList": [
-        
+        {
+            "id": "3db406f3-22a4-4045-a619-8151343c4f3c",
+            "modelName": "GMEvent",
+            "mvc": "1.0",
+            "IsDnD": false,
+            "collisionObjectId": "00000000-0000-0000-0000-000000000000",
+            "enumb": 0,
+            "eventtype": 0,
+            "m_owner": "a6abf43a-fcba-4abc-b6a2-da655408e91f"
+        }
     ],
     "maskSpriteId": "00000000-0000-0000-0000-000000000000",
     "overriddenProperties": null,
-    "parentObjectId": "a6abf43a-fcba-4abc-b6a2-da655408e91f",
+    "parentObjectId": "edb1db8e-2b99-4512-84d9-8c3e537f7ae7",
     "persistent": false,
     "physicsAngularDamping": 0.1,
     "physicsDensity": 0.5,
@@ -24,6 +33,6 @@
     "physicsStartAwake": true,
     "properties": null,
     "solid": false,
-    "spriteId": "a5c4317c-ea6c-463f-b804-1a1d69387fb8",
+    "spriteId": "00000000-0000-0000-0000-000000000000",
     "visible": true
 }

@@ -703,6 +703,14 @@
             }
         },
         {
+            "Key": "8f06968b-1d66-490c-b4fb-19ca0d977ea0",
+            "Value": {
+                "id": "9db2dee6-7f28-488f-b513-9dff3abebfc3",
+                "resourcePath": "objects\\oLettuce\\oLettuce.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "8f301e93-e2f4-472f-ae51-0f9fbaca03c0",
             "Value": {
                 "id": "97a013a3-97cb-45d7-9e56-ca4dc730b84d",
@@ -831,11 +839,27 @@
             }
         },
         {
+            "Key": "a4f56ea6-6ed9-48e0-9029-842a985cbfeb",
+            "Value": {
+                "id": "2037026a-3e72-4ff9-8189-24ea4367b41b",
+                "resourcePath": "sprites\\sLettuce\\sLettuce.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "a5c4317c-ea6c-463f-b804-1a1d69387fb8",
             "Value": {
                 "id": "3eac611c-beee-4baf-a872-1be7b0caf738",
                 "resourcePath": "sprites\\sOnion\\sOnion.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "a6abf43a-fcba-4abc-b6a2-da655408e91f",
+            "Value": {
+                "id": "78092a86-9444-4a00-9651-32bb33b08ea6",
+                "resourcePath": "objects\\oIngredient\\oIngredient.yy",
+                "resourceType": "GMObject"
             }
         },
         {
@@ -916,6 +940,14 @@
                 "id": "d6f75f8f-28f6-4fb7-bffe-d4eee8e08dd1",
                 "resourcePath": "objects\\oCookingVessel\\oCookingVessel.yy",
                 "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "bd99fbd9-bc0d-46fd-a0fa-1d5a850ad216",
+            "Value": {
+                "id": "3b695451-b5d4-466d-944a-75b8830b6e63",
+                "resourcePath": "views\\bd99fbd9-bc0d-46fd-a0fa-1d5a850ad216.yy",
+                "resourceType": "GMFolder"
             }
         },
         {

@@ -1,8 +1,8 @@
 {
-    "id": "c14b810c-dd35-4810-b191-b908f8139770",
+    "id": "8f06968b-1d66-490c-b4fb-19ca0d977ea0",
     "modelName": "GMObject",
     "mvc": "1.0",
-    "name": "oOnion",
+    "name": "oLettuce",
     "eventList": [
         
     ],
@@ -24,6 +24,6 @@
     "physicsStartAwake": true,
     "properties": null,
     "solid": false,
-    "spriteId": "a5c4317c-ea6c-463f-b804-1a1d69387fb8",
+    "spriteId": "a4f56ea6-6ed9-48e0-9029-842a985cbfeb",
     "visible": true
 }
