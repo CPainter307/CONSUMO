@@ -11,7 +11,10 @@
         "a5c4317c-ea6c-463f-b804-1a1d69387fb8",
         "6ca7811e-26d3-4186-bbdd-c2ac58ca2951",
         "a4f56ea6-6ed9-48e0-9029-842a985cbfeb",
-        "4f05d6d5-b060-4c4d-b906-d615cdc45650"
+        "4f05d6d5-b060-4c4d-b906-d615cdc45650",
+        "8ecc03d0-7f9c-4df9-ab04-597713c098c4",
+        "8fbc926d-f363-44e4-a046-7e6bed98fa32",
+        "b92986e6-03fa-4945-a8dd-2cd1b33ad9bd"
     ],
     "filterType": "GMSprite",
     "folderName": "Food",

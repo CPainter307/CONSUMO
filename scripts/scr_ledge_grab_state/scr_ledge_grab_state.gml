@@ -1,5 +1,5 @@
-isLocked = true;
 oPlayer.moveStateExecuted = false;
+isLocked = true;
 
 if (oPlayerInput.key_jump) {
 	vsp -= JUMP_HEIGHT;
@@ -11,11 +11,11 @@ if (oPlayerInput.key_jump) {
 		oPlayer.facingRight = false;
 		oPlayer.image_xscale = -0.5;
 	}
-	oPlayer.moveStateExecuted = true;	
+	//oPlayer.moveStateExecuted = true;	
 	state = scr_move_state;
 }
 
 if (oPlayer.holdingL && oPlayer.holdingR) {
-	oPlayer.moveStateExecuted = true;
+	//oPlayer.moveStateExecuted = true
 	state = scr_move_state;
 }

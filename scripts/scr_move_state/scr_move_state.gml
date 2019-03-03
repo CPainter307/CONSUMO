@@ -1,3 +1,4 @@
+oPlayer.moveStateExecuted = true;
 var framesInAir = 0;
 
 if(oPlayerInput.key_jump) {
