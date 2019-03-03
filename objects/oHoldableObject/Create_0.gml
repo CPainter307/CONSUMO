@@ -1,7 +1,5 @@
 /// @description Initializes variables all holdable objects will have.
 
-ing_id = 0;
-
 followingL = false;
 followingR = false;
 thrown = false;

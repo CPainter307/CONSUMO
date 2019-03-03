@@ -4,7 +4,16 @@
     "mvc": "1.0",
     "name": "oSalt",
     "eventList": [
-        
+        {
+            "id": "394705c8-3a1b-4445-93ee-0918b8b6f647",
+            "modelName": "GMEvent",
+            "mvc": "1.0",
+            "IsDnD": false,
+            "collisionObjectId": "00000000-0000-0000-0000-000000000000",
+            "enumb": 0,
+            "eventtype": 0,
+            "m_owner": "64222f7c-f8ab-4197-8526-047bcfa43bfc"
+        }
     ],
     "maskSpriteId": "00000000-0000-0000-0000-000000000000",
     "overriddenProperties": null,

@@ -4,7 +4,16 @@
     "mvc": "1.0",
     "name": "oLettuce",
     "eventList": [
-        
+        {
+            "id": "48e2b9b9-94fc-4087-ba7e-bfb739c3482b",
+            "modelName": "GMEvent",
+            "mvc": "1.0",
+            "IsDnD": false,
+            "collisionObjectId": "00000000-0000-0000-0000-000000000000",
+            "enumb": 0,
+            "eventtype": 0,
+            "m_owner": "8f06968b-1d66-490c-b4fb-19ca0d977ea0"
+        }
     ],
     "maskSpriteId": "00000000-0000-0000-0000-000000000000",
     "overriddenProperties": null,

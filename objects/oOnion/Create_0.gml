@@ -1,10 +1,10 @@
 event_inherited();
 prepared = true;
-ingrName = "Meat ";
+ingrName = "Onion ";
 type = "booster";
-ing_id = 1;
-hp = 10;
-attack = 0;
+ing_id = 3;
+hp = 0;
+attack = 5;
 defense = 0;
 spd = 0;
 special = false;

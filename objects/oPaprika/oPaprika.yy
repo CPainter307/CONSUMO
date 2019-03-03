@@ -1,18 +1,18 @@
 {
-    "id": "c14b810c-dd35-4810-b191-b908f8139770",
+    "id": "f9a099dd-a875-4445-a9d5-4aaf4bb0df31",
     "modelName": "GMObject",
     "mvc": "1.0",
-    "name": "oOnion",
+    "name": "oPaprika",
     "eventList": [
         {
-            "id": "c58ad705-7b58-481c-9ebd-0178a21a8001",
+            "id": "31f9d0be-af2c-41b2-ac43-42f79b9a99b4",
             "modelName": "GMEvent",
             "mvc": "1.0",
             "IsDnD": false,
             "collisionObjectId": "00000000-0000-0000-0000-000000000000",
             "enumb": 0,
             "eventtype": 0,
-            "m_owner": "c14b810c-dd35-4810-b191-b908f8139770"
+            "m_owner": "f9a099dd-a875-4445-a9d5-4aaf4bb0df31"
         }
     ],
     "maskSpriteId": "00000000-0000-0000-0000-000000000000",
@@ -33,6 +33,6 @@
     "physicsStartAwake": true,
     "properties": null,
     "solid": false,
-    "spriteId": "a5c4317c-ea6c-463f-b804-1a1d69387fb8",
+    "spriteId": "4f05d6d5-b060-4c4d-b906-d615cdc45650",
     "visible": true
 }
