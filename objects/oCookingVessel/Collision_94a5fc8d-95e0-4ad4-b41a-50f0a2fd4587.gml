@@ -1,7 +1,7 @@
 if (!other.followingL && !other.followingR) {
 	ds_list_add(item_list, other);
 	with(other) {
-		//instance_destroy();
+		//moved to another place - REMEMBER TO EVENTUALLY DESTROY ONE DAY
 		x = oIngredientHolder.x;
 		y = oIngredientHolder.y;
 		var sound_num = irandom_range(0,2);
