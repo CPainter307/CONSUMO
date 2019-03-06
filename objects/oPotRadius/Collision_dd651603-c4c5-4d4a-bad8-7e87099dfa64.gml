@@ -1,3 +1,5 @@
+/// @description Insert description here
+
 //if item is not held and pot is not full
 if ((!other.followingL && !other.followingR) && ds_list_size(item_list) < 3) {
 	//add conditions for unprepared item

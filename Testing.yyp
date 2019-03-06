@@ -295,6 +295,14 @@
             }
         },
         {
+            "Key": "30f88a86-1c49-44bc-b580-e0820c9da06c",
+            "Value": {
+                "id": "571efc68-61af-477f-8076-909c585aa32c",
+                "resourcePath": "objects\\oPotRadius\\oPotRadius.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "32bacf76-4b5e-4dce-9afa-1e0430bd3dc2",
             "Value": {
                 "id": "2a0cff47-ddb6-48c7-87f2-1968bda65ea6",
