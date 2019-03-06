@@ -15,6 +15,7 @@ if (position_meeting(x, y, oPlayerPickUpRadius) and (oPlayerPickUpRadius.keyLeft
 	
 	//create oRecipe
 	var inst = instance_create_depth(x, y, -y, oRecipe);
+	currentlyCooking = false;
 	
 	//check for amount of modifiers
 	for (var i = 0; i < 3; i++) {

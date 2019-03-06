@@ -13,3 +13,5 @@ special = false;
 effect = "";
 modifier1 = [1, 1, 1, 1];
 modifier2 = [1, 1, 1, 1];
+
+beingCooked = false;

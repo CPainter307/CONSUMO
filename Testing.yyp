@@ -175,6 +175,14 @@
             }
         },
         {
+            "Key": "1915348f-497c-4576-8135-3f64fc580f1a",
+            "Value": {
+                "id": "df120f56-4a0d-49a1-9e16-84ef705e945d",
+                "resourcePath": "sprites\\sPreparedOnion\\sPreparedOnion.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "19500202-ffb6-4f88-a04b-a8507d823dac",
             "Value": {
                 "id": "89577022-ae2f-453a-ad88-8368cb6a24e8",
@@ -370,7 +378,7 @@
             "Key": "4f05d6d5-b060-4c4d-b906-d615cdc45650",
             "Value": {
                 "id": "c5f78f67-6642-42f3-a203-5a3387bdd20d",
-                "resourcePath": "sprites\\sPaprika\\sPaprika.yy",
+                "resourcePath": "sprites\\sPreparedPaprika\\sPreparedPaprika.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -431,6 +439,14 @@
             }
         },
         {
+            "Key": "53ccfe95-1df6-4e9f-9644-60fe7b76757b",
+            "Value": {
+                "id": "2829bb67-d4ff-4fe1-ab03-fb1c911953af",
+                "resourcePath": "objects\\oPreparedOnion\\oPreparedOnion.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "53ddabff-4353-41a6-b61a-ee6b38563d2b",
             "Value": {
                 "id": "d300c931-51ed-42f9-8550-95fb1340d0ee",
@@ -459,6 +475,14 @@
             "Value": {
                 "id": "23dca332-989b-4e77-b1d6-63a713e7c915",
                 "resourcePath": "sprites\/sPlayerFall\/sPlayerFall.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "567a575e-3864-4dc8-8dca-866ea3d6771e",
+            "Value": {
+                "id": "7c66aa4c-a691-4b3f-a6b7-65bdb1bb255d",
+                "resourcePath": "sprites\\sPreparedSalt\\sPreparedSalt.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -631,14 +655,6 @@
             }
         },
         {
-            "Key": "75b0fcba-b085-4597-b1aa-b9ce161b6adc",
-            "Value": {
-                "id": "dfc93ed0-bc9b-48e1-a9ff-52a153efeb8e",
-                "resourcePath": "scripts\\scr_recipes\\scr_recipes.yy",
-                "resourceType": "GMScript"
-            }
-        },
-        {
             "Key": "77aec9b3-f294-44b6-aeda-6d01ee1b859a",
             "Value": {
                 "id": "61d3d7a0-b25c-478a-b962-ddebdf7e5b1d",
@@ -727,6 +743,14 @@
             }
         },
         {
+            "Key": "8e29a9b1-3405-4aa7-b9ba-cd28e436276f",
+            "Value": {
+                "id": "a40a5a9f-2c56-4c10-a895-fe81851ced4a",
+                "resourcePath": "views\\8e29a9b1-3405-4aa7-b9ba-cd28e436276f.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
             "Key": "8ecc03d0-7f9c-4df9-ab04-597713c098c4",
             "Value": {
                 "id": "1b179d9b-541a-46d3-ace8-65a8cebc9f6c",
@@ -756,6 +780,14 @@
                 "id": "94a27eae-bc62-4db7-9282-8cef7cc0c697",
                 "resourcePath": "sprites\\spr_placeholder_recipe2\\spr_placeholder_recipe2.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "9060e399-5cf2-4b0e-9293-a5d751baa035",
+            "Value": {
+                "id": "0c510094-1164-482d-a077-256fb7ffc139",
+                "resourcePath": "objects\\oPreparedMeat\\oPreparedMeat.yy",
+                "resourceType": "GMObject"
             }
         },
         {
@@ -794,7 +826,7 @@
             "Key": "9661a3ac-9622-4f89-b1f3-1b1d518825bb",
             "Value": {
                 "id": "8b995f60-0de1-4f73-b34a-4e929f80bde3",
-                "resourcePath": "sprites\\sMeat\\sMeat.yy",
+                "resourcePath": "sprites\\sPreparedMeat\\sPreparedMeat.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -943,6 +975,14 @@
             }
         },
         {
+            "Key": "b179b9c6-308b-41f6-929b-d6f4763bf62f",
+            "Value": {
+                "id": "071129de-71b5-4c06-9e18-e18a7ea1ef9a",
+                "resourcePath": "sprites\\sMeat\\sMeat.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "b67f9c45-7360-4e7e-bd24-57b4cb7c9f71",
             "Value": {
                 "id": "e75eb71d-82b0-4653-9e17-d96512809f48",
@@ -995,6 +1035,14 @@
             "Value": {
                 "id": "f42c69af-bf07-439e-93af-72f5076ee53d",
                 "resourcePath": "objects\\oOnion\\oOnion.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "c17f13aa-a386-4367-9038-414a0ed48107",
+            "Value": {
+                "id": "de687b20-9019-4c1c-b5b0-a50fc1123e2b",
+                "resourcePath": "objects\\oEmptyIngredient\\oEmptyIngredient.yy",
                 "resourceType": "GMObject"
             }
         },
@@ -1052,6 +1100,14 @@
                 "id": "a2d46a79-6dd1-40db-8f65-b2a82b4ed27c",
                 "resourcePath": "scripts\\scr_play_pickup_sound\\scr_play_pickup_sound.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "ca4e58d7-47a1-4697-984f-3cc22bbb3ab2",
+            "Value": {
+                "id": "f867fa28-740b-482b-8c2e-936df9710ee5",
+                "resourcePath": "views\\ca4e58d7-47a1-4697-984f-3cc22bbb3ab2.yy",
+                "resourceType": "GMFolder"
             }
         },
         {
@@ -1199,6 +1255,14 @@
             }
         },
         {
+            "Key": "ec2eb2dd-bf88-475c-a772-c8ca424e6ff4",
+            "Value": {
+                "id": "93c31ed5-b7d1-4366-aaa5-3c57caa695f6",
+                "resourcePath": "views\\ec2eb2dd-bf88-475c-a772-c8ca424e6ff4.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
             "Key": "edb1db8e-2b99-4512-84d9-8c3e537f7ae7",
             "Value": {
                 "id": "e716988d-868b-4fac-b5bc-156bf9c33d0d",
@@ -1295,6 +1359,14 @@
             }
         },
         {
+            "Key": "fa47952a-72d1-4873-8f15-d52856dfd81c",
+            "Value": {
+                "id": "306bc62a-ddeb-4445-926a-7bfb9b4aec43",
+                "resourcePath": "objects\\oPreparedSalt\\oPreparedSalt.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "ffe3865c-8ae3-4e03-9269-ec4d4dcd097b",
             "Value": {
                 "id": "86ebf8d5-15d3-4734-a368-66872b53a93b",
@@ -1313,7 +1385,6 @@
         "12f4bc86-c556-4b55-8d68-e5f1c5590a2e",
         "27597571-57bd-4959-b49e-99e3fec0b896",
         "4fe0df13-6617-41bf-af1c-81a6487aea2c",
-        "75b0fcba-b085-4597-b1aa-b9ce161b6adc",
         "7e7ad076-bae5-485e-aaae-88a26f4b4828",
         "f9ad685f-1396-49fe-a3e2-c5117bc4d91a",
         "59e9d743-93b6-4af6-a40b-0424f69bb113",

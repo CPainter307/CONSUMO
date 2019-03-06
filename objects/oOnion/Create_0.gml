@@ -1,5 +1,5 @@
 event_inherited();
-prepared = true;
+prepared = false;
 ingrName = "Onion ";
 type = "booster";
 ing_id = 3;

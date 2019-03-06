@@ -4,17 +4,12 @@
     "mvc": "1.1",
     "name": "4efc1bd6-486f-43a0-bb12-fa900a669714",
     "children": [
-        "9661a3ac-9622-4f89-b1f3-1b1d518825bb",
-        "1f34709b-0e39-45ab-9dc4-5229e9375133",
         "2dc3aed9-d66a-4be6-8d81-556884f4f0e8",
-        "c232e22b-4998-4c77-a496-c20b7513cf46",
-        "a5c4317c-ea6c-463f-b804-1a1d69387fb8",
-        "6ca7811e-26d3-4186-bbdd-c2ac58ca2951",
-        "a4f56ea6-6ed9-48e0-9029-842a985cbfeb",
-        "4f05d6d5-b060-4c4d-b906-d615cdc45650",
         "8ecc03d0-7f9c-4df9-ab04-597713c098c4",
         "8fbc926d-f363-44e4-a046-7e6bed98fa32",
-        "b92986e6-03fa-4945-a8dd-2cd1b33ad9bd"
+        "b92986e6-03fa-4945-a8dd-2cd1b33ad9bd",
+        "ca4e58d7-47a1-4697-984f-3cc22bbb3ab2",
+        "ec2eb2dd-bf88-475c-a772-c8ca424e6ff4"
     ],
     "filterType": "GMSprite",
     "folderName": "Food",

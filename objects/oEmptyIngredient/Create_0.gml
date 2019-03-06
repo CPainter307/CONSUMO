@@ -1,0 +1,10 @@
+event_inherited();
+prepared = false;
+ingrName = "";
+type = "booster";
+ing_id = 1;
+hp = 0;
+attack = 0;
+defense = 0;
+spd = 0;
+special = false;

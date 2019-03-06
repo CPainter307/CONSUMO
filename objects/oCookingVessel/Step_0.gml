@@ -22,4 +22,10 @@ if (ds_list_size(item_list) >= 3) {
 	else {
 		scr_extract_recipe(3);
 	}
+	
+
 }
+
+
+
+
