@@ -8,3 +8,4 @@ attack = 5;
 defense = 0;
 spd = 0;
 special = false;
+runeSprite = sOnionRune;

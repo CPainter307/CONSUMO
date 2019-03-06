@@ -8,3 +8,4 @@ attack = 0;
 defense = 5;
 spd = 0;
 special = false;
+runeSprite = sLettuceRune;

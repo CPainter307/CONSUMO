@@ -714,7 +714,7 @@
             "Key": "7ce5d591-0f3b-4aaa-8791-3a569aeb04bb",
             "Value": {
                 "id": "23c82838-8be4-4489-95c4-16065fa966e3",
-                "resourcePath": "sprites\\sNewPot\\sNewPot.yy",
+                "resourcePath": "sprites\\sPot\\sPot.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -938,7 +938,7 @@
             "Key": "a4078f11-6a2e-4532-b35d-9a203d34d012",
             "Value": {
                 "id": "99283cc5-6e19-47fd-900c-753b41e904ad",
-                "resourcePath": "sprites\\sPot\\sPot.yy",
+                "resourcePath": "sprites\\sOldPot\\sOldPot.yy",
                 "resourceType": "GMSprite"
             }
         },
