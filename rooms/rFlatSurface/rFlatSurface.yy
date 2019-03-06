@@ -45,7 +45,8 @@
         "9cf78c9b-8973-4a6a-866f-323ea29650c9",
         "bec9b8a2-7877-4122-aecf-d0e03821adff",
         "fd1e84b1-7a9a-4bcf-9785-bc2377fafc54",
-        "67216977-87ef-402b-8b93-592336b039b7"
+        "67216977-87ef-402b-8b93-592336b039b7",
+        "afb76f3a-6790-4160-a7fc-7c5df2d1c42f"
     ],
     "IsDnD": false,
     "layers": [
@@ -286,7 +287,7 @@
             "grid_x": 32,
             "grid_y": 32,
             "hierarchyFrozen": false,
-            "hierarchyVisible": true,
+            "hierarchyVisible": false,
             "inheritLayerDepth": false,
             "inheritLayerSettings": false,
             "inheritSubLayers": false,
@@ -306,7 +307,7 @@
             "modelName": "GMRInstanceLayer",
             "mvc": "1.0",
             "userdefined_depth": false,
-            "visible": true
+            "visible": false
         },
         {
             "__type": "GMRTileLayer_Model:#YoYoStudio.MVCFormat",
