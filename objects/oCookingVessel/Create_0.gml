@@ -11,3 +11,6 @@ vesselDefense = 0;
 vesselSpeed = 0;
 
 currentlyCooking = false;
+
+drawText = false;
+textDisappearTimer = 0;

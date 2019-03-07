@@ -1,3 +1,3 @@
-new_x = 0;
-new_y = 0;
+new_x = 227;
+new_y = 426;
 new_room = noone;

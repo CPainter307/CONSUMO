@@ -14,7 +14,7 @@ if (position_meeting(x, y, oPlayerPickUpRadius) and (oPlayerPickUpRadius.keyLeft
 	var total_spd = ing1.spd + ing2.spd + ing3.spd;
 	
 	//create oRecipe
-	var inst = instance_create_depth(x, y, -y, oRecipe);
+	inst = instance_create_depth(x, y, -y, oRecipe);
 	currentlyCooking = false;
 	
 	//check for amount of modifiers
@@ -95,7 +95,8 @@ if (position_meeting(x, y, oPlayerPickUpRadius) and (oPlayerPickUpRadius.keyLeft
 	inst.name = ing1.ingrName + ing2.ingrName + ing3.ingrName;
 	
 	//show recipe quality
-	show_message("Health: " + string(inst.hp) + " Attack: " + string(inst.attack) + " Defense: " + string(inst.defense) + " Speed: " + string(inst.spd) + " Name: " + string(inst.name));
+	//show_message("Health: " + string(inst.hp) + " Attack: " + string(inst.attack) + " Defense: " + string(inst.defense) + " Speed: " + string(inst.spd) + " Name: " + string(inst.name));
+	drawText = true;
 	
 	ds_list_clear(item_list);
 }

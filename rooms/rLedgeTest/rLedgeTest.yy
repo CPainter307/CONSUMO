@@ -2,7 +2,7 @@
 {
     "name": "rLedgeTest",
     "id": "9b7816fa-9dca-4a87-9830-dcc4d815f934",
-    "creationCodeFile": "",
+    "creationCodeFile": "RoomCreationCode.gml",
     "inheritCode": false,
     "inheritCreationOrder": false,
     "inheritLayers": false,

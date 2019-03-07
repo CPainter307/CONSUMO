@@ -43,9 +43,9 @@ if (ds_list_size(item_list) >= 3 && currentlyCooking == false) {
 	ing1 = ds_list_find_value(item_list, 0);
 	ing2 = ds_list_find_value(item_list, 1);
 	ing3 = ds_list_find_value(item_list, 2);
-		//run timeline
-		timeline_index = tl_cooking;
-		timeline_position = 0;
-		timeline_running = true;
-		timeline_loop = false;
+	//run timeline
+	timeline_index = tl_cooking;
+	timeline_position = 0;
+	timeline_running = true;
+	timeline_loop = false;
 }
