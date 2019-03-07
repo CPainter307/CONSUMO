@@ -8,3 +8,4 @@ attack = 0;
 defense = 0;
 spd = 0;
 special = false;
+runeSprite = sFishRune

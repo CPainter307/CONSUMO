@@ -1,14 +1,12 @@
-/// @description Insert description here
-
 //if item is not held and pot is not full
 if ((!other.followingL && !other.followingR) && ds_list_size(item_list) < 3) {
 	//add conditions for unprepared item
 	if (!other.prepared && ds_list_size(item_list) == 0) {
-		ds_list_add(item_list, other);
-		other.beingCooked = true;
 		var empty1 = instance_create_depth(oIngredientHolder.x, oIngredientHolder.y, 300, oEmptyIngredient);
 		var empty2 = instance_create_depth(oIngredientHolder.x, oIngredientHolder.y, 300, oEmptyIngredient);
 		ds_list_add(item_list, empty1);
+		ds_list_add(item_list, other); //the item is added second for rune display
+		other.beingCooked = true;
 		ds_list_add(item_list, empty2);
 	}
 	//add conditions for prepared item

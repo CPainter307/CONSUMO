@@ -4,14 +4,14 @@
 if (followingL == true) {
 	speed = 0;
 	if (oPlayer.facingRight) {
-		depth = 350;
+		depth = 250;
 		x = oFrontArm.x + 6;
 		y = oFrontArm.y + 25;
 	}
 	else {
-		depth = 450;
+		depth = 350;
 		x = oFrontArm.x - 50;
-		y = oFrontArm.y +25;
+		y = oFrontArm.y + 25;
 	}
 	//still some glitchy placing here - not sure how to fix yet
 	gravity = 0; 
@@ -22,13 +22,13 @@ if (followingL == true) {
 if (followingR == true) {
 	speed = 0;
 	if (oPlayer.facingRight) {
-		depth = 350;
+		depth = 250;
 		x = oFrontArm.x + 50;
 		y = oFrontArm.y + 25;
 
 	}
 	else {
-		depth = 350;
+		depth = 250;
 		x = oFrontArm.x - 10;
 		y = oFrontArm.y + 35;
 	}

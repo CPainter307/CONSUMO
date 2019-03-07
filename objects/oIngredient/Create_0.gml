@@ -4,6 +4,7 @@ prepared = false;
 ingrName = "";
 type = "";
 ing_id = 0;
+runeSprite = sBlankRune;
 
 hp = 0;
 attack = 0;

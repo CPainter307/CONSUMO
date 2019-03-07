@@ -351,6 +351,14 @@
             }
         },
         {
+            "Key": "3e508a8b-f241-49df-bcee-35f713fad4d4",
+            "Value": {
+                "id": "9065cf1b-3d1e-494b-ab9a-a01ec6256f2b",
+                "resourcePath": "objects\\oPreparedPaprika\\oPreparedPaprika.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "3f75bce4-5c87-4ed4-a7d8-a2805688078b",
             "Value": {
                 "id": "1dad2698-afc5-4bd3-9cf5-7cf99600b3b1",
@@ -402,7 +410,7 @@
             "Key": "4f05d6d5-b060-4c4d-b906-d615cdc45650",
             "Value": {
                 "id": "c5f78f67-6642-42f3-a203-5a3387bdd20d",
-                "resourcePath": "sprites\\sPreparedPaprika\\sPreparedPaprika.yy",
+                "resourcePath": "sprites\\sPaprika\\sPaprika.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -730,7 +738,7 @@
             "Key": "7ce5d591-0f3b-4aaa-8791-3a569aeb04bb",
             "Value": {
                 "id": "23c82838-8be4-4489-95c4-16065fa966e3",
-                "resourcePath": "sprites\\sNewPot\\sNewPot.yy",
+                "resourcePath": "sprites\\sPot\\sPot.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -970,7 +978,7 @@
             "Key": "a4078f11-6a2e-4532-b35d-9a203d34d012",
             "Value": {
                 "id": "99283cc5-6e19-47fd-900c-753b41e904ad",
-                "resourcePath": "sprites\\sPot\\sPot.yy",
+                "resourcePath": "sprites\\sOldPot\\sOldPot.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -1475,6 +1483,14 @@
             "Value": {
                 "id": "94485a8b-0d2c-4ce5-b552-4384e542006d",
                 "resourcePath": "sprites\\sDoor\\sDoor.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "f980108d-74ce-498c-b558-97cc00595cb2",
+            "Value": {
+                "id": "356461b1-5555-4f43-a8af-47ffc40bb977",
+                "resourcePath": "sprites\\sPreparedPaprika\\sPreparedPaprika.yy",
                 "resourceType": "GMSprite"
             }
         },
