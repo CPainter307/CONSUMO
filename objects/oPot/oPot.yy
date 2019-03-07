@@ -4,16 +4,7 @@
     "mvc": "1.0",
     "name": "oPot",
     "eventList": [
-        {
-            "id": "59a16054-24d6-458a-a888-b135c0f15b82",
-            "modelName": "GMEvent",
-            "mvc": "1.0",
-            "IsDnD": false,
-            "collisionObjectId": "00000000-0000-0000-0000-000000000000",
-            "enumb": 0,
-            "eventtype": 0,
-            "m_owner": "e46c859f-da8a-452e-a347-045e7bac9c87"
-        }
+        
     ],
     "maskSpriteId": "00000000-0000-0000-0000-000000000000",
     "overriddenProperties": null,
