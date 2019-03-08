@@ -9,3 +9,5 @@ defense = 0;
 spd = 0;
 special = false;
 runeSprite = sOnionRune;
+classification = "vegetable";
+adjective = "Onion ";

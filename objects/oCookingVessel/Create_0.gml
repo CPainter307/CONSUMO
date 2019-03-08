@@ -14,3 +14,6 @@ currentlyCooking = false;
 
 drawText = false;
 textDisappearTimer = 0;
+
+mealType = "";
+mealType2 = "";

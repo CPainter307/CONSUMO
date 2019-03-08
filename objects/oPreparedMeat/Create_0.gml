@@ -9,3 +9,5 @@ defense = 0;
 spd = 0;
 special = false;
 runeSprite = sMeatRune;
+classification = "meat";
+adjective = "Meaty ";

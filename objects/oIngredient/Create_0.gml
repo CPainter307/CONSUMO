@@ -5,6 +5,8 @@ ingrName = "";
 type = "";
 ing_id = 0;
 runeSprite = sBlankRune;
+classification = ""; //four types of classi right now: meat, vegetable, seasoning, spice
+adjective = "";
 
 hp = 0;
 attack = 0;

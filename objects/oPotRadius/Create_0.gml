@@ -5,4 +5,7 @@ vesselAttack = 0;
 vesselDefense = 5;
 vesselSpeed = 0;
 
+mealType = "Soup";
+mealType2 = "Boiled ";
+
 y = oPot.y - 25;

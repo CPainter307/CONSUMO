@@ -1,5 +1,5 @@
 event_inherited();
-prepared = false;
+prepared = true;
 ingrName = "";
 type = "booster";
 ing_id = 1;
@@ -9,3 +9,4 @@ defense = 0;
 spd = 0;
 special = false;
 runeSprite = sBlankRune;
+classification = "";

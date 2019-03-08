@@ -935,6 +935,14 @@
             }
         },
         {
+            "Key": "a05e043a-ac1a-469a-9a6a-79ff51b24cc1",
+            "Value": {
+                "id": "ffcfea5e-25b8-459d-b5e5-55fc1f413abf",
+                "resourcePath": "scripts\\scr_extract_recipe_name\\scr_extract_recipe_name.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "a0dddaee-d803-47f1-b725-aab4ac6d4852",
             "Value": {
                 "id": "7a88de18-d2fb-4619-b5ec-988220581c1a",
@@ -1556,6 +1564,7 @@
         "7e7ad076-bae5-485e-aaae-88a26f4b4828",
         "f9ad685f-1396-49fe-a3e2-c5117bc4d91a",
         "59e9d743-93b6-4af6-a40b-0424f69bb113",
+        "a05e043a-ac1a-469a-9a6a-79ff51b24cc1",
         "b107e128-a3fc-4baa-a3ad-0cd2b9f6b60e"
     ],
     "tutorial": ""

@@ -62,6 +62,9 @@ if (position_meeting(x, y, oPlayerPickUpRadius) and (oPlayerPickUpRadius.keyLeft
 	total_attack = total_attack + vesselAttack;
 	total_defense = total_defense + vesselDefense;
 	total_spd = total_spd + vesselSpeed;
+
+	//name recipe
+	scr_extract_recipe_name();
 	
 	//add quality bonus
 	switch (argument0) {
@@ -70,12 +73,14 @@ if (position_meeting(x, y, oPlayerPickUpRadius) and (oPlayerPickUpRadius.keyLeft
 			total_attack *= -1;
 			total_defense *= -1;
 			total_spd *= -1;
+			inst.name = "Raw " + inst.name;
 			break;
 		case 1: // undercooked
 			total_hp *= .5;
 			total_attack *= .5;
 			total_defense *= .5;
 			total_spd *= .5;
+			inst.name = "Undercooked " + inst.name;
 			break;
 		case 2: // JUST RIGHT
 			break;
@@ -84,6 +89,7 @@ if (position_meeting(x, y, oPlayerPickUpRadius) and (oPlayerPickUpRadius.keyLeft
 			total_attack *= .25;
 			total_defense *= .25;
 			total_spd *= .25;
+			inst.name = "Burned " + inst.name;
 			break;
 	}
 	
@@ -92,10 +98,9 @@ if (position_meeting(x, y, oPlayerPickUpRadius) and (oPlayerPickUpRadius.keyLeft
 	inst.attack = total_attack;
 	inst.defense = total_defense;
 	inst.spd = total_spd;
-	inst.name = ing1.ingrName + ing2.ingrName + ing3.ingrName;
+
 	
 	//show recipe quality
-	//show_message("Health: " + string(inst.hp) + " Attack: " + string(inst.attack) + " Defense: " + string(inst.defense) + " Speed: " + string(inst.spd) + " Name: " + string(inst.name));
 	drawText = true;
 	
 	ds_list_clear(item_list);
