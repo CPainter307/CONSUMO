@@ -24,16 +24,16 @@ var numOfNouns = 0;
 for (var i = 0; i < 3; i++) {
 	if (ds_list_find_value(item_list, i).classification == "seasoning") {
 		inst.name += "Seasoned ";
+		break;
 	}
-	break;
 }
 
 //check spices
 for (var i = 0; i < 3; i++) {
 	if (ds_list_find_value(item_list, i).classification == "spice") {
 		inst.name += "Spicy ";
+		break;
 	}
-	break;
 }
 
 //check meats *INCOMPLETE*
@@ -43,12 +43,13 @@ for (var i = 0; i < 3; i++) {
 		meatName = ds_list_find_value(item_list, i).ingrName;
 		if (numOfNouns != 0) {
 			var str = string_copy(inst.name, string_length(inst.name) - string_length(meatName), string_length(inst.name));
-			if (str != meatName) { //string_delete(str, string_length(str), 1)
+			str = string_delete(str, string_length(str), 1)
+			if (str != meatName) {
 				inst.name = inst.name + "& " + meatName + " ";
 			}
 		}
 		if (numOfNouns == 0) {
-			inst.name = inst.name + meatName + "";
+			inst.name = inst.name + meatName + " ";
 			numOfNouns++;
 		}
 	}
