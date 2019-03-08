@@ -36,18 +36,19 @@ for (var i = 0; i < 3; i++) {
 	break;
 }
 
-
-
 //check meats *INCOMPLETE*
 var meatName = "";
 for (var i = 0; i < 3; i++) {
 	if (ds_list_find_value(item_list, i).classification == "meat") {
 		meatName = ds_list_find_value(item_list, i).ingrName;
 		if (numOfNouns != 0) {
-			inst.name = inst.name + "& " + meatName + " ";
+			var str = string_copy(inst.name, string_length(inst.name) - string_length(meatName), string_length(inst.name));
+			if (str != meatName) { //string_delete(str, string_length(str), 1)
+				inst.name = inst.name + "& " + meatName + " ";
+			}
 		}
 		if (numOfNouns == 0) {
-			inst.name = inst.name + meatName + " ";
+			inst.name = inst.name + meatName + "";
 			numOfNouns++;
 		}
 	}
