@@ -111,8 +111,14 @@ if(place_meeting(x, y+1, oWall)) {
 
 //ledge grab
 var spr_pos = (79/2)+6;
-var was_free = !position_meeting(x+((spr_pos)*hsp_dir), yprevious-4, oWall);
-var is_not_free = position_meeting(x+((spr_pos)*hsp_dir), y-4, oWall);
+var offsetx = 30;
+if (oPlayer.facingRight) {
+	offsetx = 30
+} else {
+	offsetx = -30
+}
+var was_free = !position_meeting(x+((spr_pos)*hsp_dir+offsetx), yprevious-4, oWall);
+var is_not_free = position_meeting(x+((spr_pos)*hsp_dir+offsetx), y-4, oWall);
 var near_ground = position_meeting(x, y+(spr_pos*vsp_dir)+60, oWall);
 var moving_down = yprevious < y;
 if (!near_ground && was_free && is_not_free && moving_down && !(oPlayer.holdingL && oPlayer.holdingR)) {
@@ -131,7 +137,7 @@ if (!near_ground && was_free && is_not_free && moving_down && !(oPlayer.holdingL
 	
 	state = scr_ledge_grab_state;
 }
-
+ 
  
  
 //animation
