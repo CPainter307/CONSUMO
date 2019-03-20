@@ -399,6 +399,14 @@
             }
         },
         {
+            "Key": "3fd6afcb-2ba4-4ea2-9c6f-eea02f142556",
+            "Value": {
+                "id": "ba34b162-f2ef-424f-8a29-7e5d2d7538ae",
+                "resourcePath": "objects\\oPreparedFish\\oPreparedFish.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "434bd274-d5cb-4a7f-98c8-500d0932b0b0",
             "Value": {
                 "id": "7345d406-fe8c-4cf8-a975-c0234af7464a",
@@ -468,6 +476,14 @@
                 "id": "611fe769-40a8-4168-abbf-695c4dbd33dd",
                 "resourcePath": "views\\504525ab-effa-4174-8173-4e6f2e63ddae.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "5102e9a4-64d7-4ce6-8f76-6ec99245267d",
+            "Value": {
+                "id": "5f40f2f9-4a8c-485f-bf0b-8eb3a024f4f5",
+                "resourcePath": "objects\\oPreparedLettuce\\oPreparedLettuce.yy",
+                "resourceType": "GMObject"
             }
         },
         {
@@ -604,6 +620,14 @@
                 "id": "e789a43b-55af-44a2-bebd-24221f24451d",
                 "resourcePath": "objects\/oMenu\/oMenu.yy",
                 "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "608adeb5-1365-4803-897d-8694789a1419",
+            "Value": {
+                "id": "2792fdf6-7a1c-4a33-9b2d-c23ea84f3e4c",
+                "resourcePath": "sprites\\sPreparedLetuce\\sPreparedLetuce.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -1460,6 +1484,14 @@
                 "id": "54d5a61d-437d-4d34-ad71-20e95077feda",
                 "resourcePath": "views\/eee8c51a-38a7-4f1d-b9fa-2a2a07c1bc19.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "f23610e2-bb15-426a-9aa8-e1b0cdfe2f57",
+            "Value": {
+                "id": "99c6047c-5d80-4335-996d-5828e642c7e7",
+                "resourcePath": "sprites\\sPreparedFish\\sPreparedFish.yy",
+                "resourceType": "GMSprite"
             }
         },
         {

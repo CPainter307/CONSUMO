@@ -9,6 +9,8 @@ vesselHp = 0;
 vesselAttack = 0;
 vesselDefense = 0;
 vesselSpeed = 0;
+vesselElmatk = 0;
+vesselElmdef = 0;
 
 currentlyCooking = false;
 
