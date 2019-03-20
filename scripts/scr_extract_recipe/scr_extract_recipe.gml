@@ -12,6 +12,8 @@ if (position_meeting(x, y, oPlayerPickUpRadius) and (oPlayerPickUpRadius.keyLeft
 	var total_attack = ing1.attack + ing2.attack + ing3.attack;
 	var total_defense = ing1.defense + ing2.defense + ing3.defense;
 	var total_spd = ing1.spd + ing2.spd + ing3.spd;
+	var total_elmatk = ing1.elmatk + ing2.elmatk + ing3.elmatk;
+	var total_elmdef = ing1.elmdef + ing2.elmdef + ing3.elmdef;
 	
 	//create oRecipe
 	inst = instance_create_depth(x, y, -y, oRecipe);
@@ -30,6 +32,8 @@ if (position_meeting(x, y, oPlayerPickUpRadius) and (oPlayerPickUpRadius.keyLeft
 		total_attack = total_attack * listOfMods[0].modifier1[1];
 		total_defense = total_defense * listOfMods[0].modifier1[2];
 		total_spd = total_spd * listOfMods[0].modifier1[3];
+		total_elmatk = total_elmatk * listOfMods[0].modifier1[4];
+		total_elmdef = total_elmdef * listOfMods[0].modifier1[5];
 	}
 	else if (modifier_amount == 2) {
 		//if two same modifiers, multiply by modifier2
@@ -38,10 +42,12 @@ if (position_meeting(x, y, oPlayerPickUpRadius) and (oPlayerPickUpRadius.keyLeft
 			total_attack = total_attack * listOfMods[0].modifier2[1];
 			total_defense = total_defense * listOfMods[0].modifier2[2];
 			total_spd = total_spd * listOfMods[0].modifier2[3];
+			total_elmatk = total_elmatk * listOfMods[0].modifier2[4];
+			total_elmdef = total_elmdef * listOfMods[0].modifier2[5];
 		} else {
 			// if different multiplier, choose greatest of each HADS value
 			// HADS = hp, attack, defense, speed
-			var hadsArray = array_create(4, noone);
+			var hadsArray = array_create(6, noone);
 			for (var i = 0; i < 4; i++) {
 				if (listOfMods[0].modifier1[i] >= listOfMods[1].modifier1[i]) {
 					hadsArray[i] = listOfMods[0].modifier1[i];
@@ -49,11 +55,13 @@ if (position_meeting(x, y, oPlayerPickUpRadius) and (oPlayerPickUpRadius.keyLeft
 					hadsArray[i] = listOfMods[1].modifier1[i];
 				}
 			}
-			// multiply by new HADS multiplier
+			// multiply by new HADSEE multiplier
 			total_hp = total_hp * hadsArray[0];
 			total_attack = total_attack * hadsArray[1];
 			total_defense = total_defense * hadsArray[2];
 			total_spd = total_spd * hadsArray[3];
+			total_elmatk = total_elmatk * hadsArray[4];
+			total_elmdef = total_elmdef * hadsArray[5];
 		}
 	}
 	
@@ -62,6 +70,8 @@ if (position_meeting(x, y, oPlayerPickUpRadius) and (oPlayerPickUpRadius.keyLeft
 	total_attack = total_attack + vesselAttack;
 	total_defense = total_defense + vesselDefense;
 	total_spd = total_spd + vesselSpeed;
+	total_elmatk = total_elmatk + vesselElmatk;
+	total_elmdef = total_elmdef + vesselElmdef;
 
 	//name recipe
 	scr_extract_recipe_name();
@@ -73,6 +83,8 @@ if (position_meeting(x, y, oPlayerPickUpRadius) and (oPlayerPickUpRadius.keyLeft
 			total_attack *= -1;
 			total_defense *= -1;
 			total_spd *= -1;
+			total_elmatk *= -1;
+			total_elmdef *= -1;
 			inst.name = "Raw " + inst.name;
 			break;
 		case 1: // undercooked
@@ -80,6 +92,8 @@ if (position_meeting(x, y, oPlayerPickUpRadius) and (oPlayerPickUpRadius.keyLeft
 			total_attack *= .5;
 			total_defense *= .5;
 			total_spd *= .5;
+			total_elmatk *= .5;
+			total_elmdef *= .5;
 			inst.name = "Undercooked " + inst.name;
 			break;
 		case 2: // JUST RIGHT
@@ -89,6 +103,8 @@ if (position_meeting(x, y, oPlayerPickUpRadius) and (oPlayerPickUpRadius.keyLeft
 			total_attack *= .25;
 			total_defense *= .25;
 			total_spd *= .25;
+			total_elmatk *= .25;
+			total_elmdef *= .25;
 			inst.name = "Burned " + inst.name;
 			break;
 	}
@@ -98,6 +114,8 @@ if (position_meeting(x, y, oPlayerPickUpRadius) and (oPlayerPickUpRadius.keyLeft
 	inst.attack = total_attack;
 	inst.defense = total_defense;
 	inst.spd = total_spd;
+	inst.elmatk = total_elmatk;
+	inst.elmdef = total_elmdef;
 
 	
 	//show recipe quality

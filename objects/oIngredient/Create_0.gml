@@ -12,9 +12,11 @@ hp = 0;
 attack = 0;
 defense = 0;
 spd = 0;
+elmatk = 0;
+elmdef = 0;
 special = false;
 effect = "";
-modifier1 = [1, 1, 1, 1];
-modifier2 = [1, 1, 1, 1];
+modifier1 = [1, 1, 1, 1, 1, 1];
+modifier2 = [1, 1, 1, 1, 1, 1];
 
 beingCooked = false;
