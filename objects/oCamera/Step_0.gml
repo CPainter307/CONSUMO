@@ -18,7 +18,12 @@ y = clamp(y,view_h_half+buff,room_height-view_h_half);
 // Update camera view
 camera_set_view_pos(cam,x-view_w_half,y-view_h_half);
 
-//Parallax
+/* Parallax
+To change x scrolling speed, change the x/# value. The higher the # value, the slower the scroll.
+Remember, Cave2 needs to scroll the slowest and Cave6 needs to scroll the fastest.
+Cave1 does not need to scroll because it is a solid color. We just stretch that image instead.
+*/
+
 if (layer_exists("Cave2"))
 {
 	layer_x("Cave2",x/8);
