@@ -8,6 +8,12 @@ spd = 0;
 maxspeed = 100;
 hunger = 0;
 maxhunger = 100;
+elmatk = 0;
+maxelmatk = 100;
+elmdef = 0;
+maxelmdef = 100;
+hunger = 0;
+maxhunger = 100;
 
 stallHunger = false;
 stallHungerTimer = 0;

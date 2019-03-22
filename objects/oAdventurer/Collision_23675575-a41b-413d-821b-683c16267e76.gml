@@ -28,6 +28,9 @@ if (other.spd < 0)       s.image_index = 2;
 else if (other.spd == 0 || maxspeed <= spd) s.image_index = 1;
 
 if (hunger < maxhunger) hunger += 50;
-if (hunger >= maxhunger) stallHunger = true;
+if (hunger >= maxhunger) {
+	hunger = 100;
+	stallHunger = true;
+}
 
 with (other) instance_destroy();

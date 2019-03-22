@@ -1,5 +1,5 @@
 draw_self();
-
+/*
 //draw hunger bar
 if (stallHunger) {
 	draw_set_color(c_red);

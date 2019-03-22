@@ -759,6 +759,14 @@
             }
         },
         {
+            "Key": "6e602e98-13c8-4bc6-97e4-942142ce51e8",
+            "Value": {
+                "id": "a55d172e-9253-4545-b96a-46df32cac7a4",
+                "resourcePath": "scripts\\nine_slice_box\\nine_slice_box.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "723e9780-be5d-4a83-991f-a4451e37e3c5",
             "Value": {
                 "id": "bfcb6946-4e08-4ae9-8a6d-7c605b52d265",
@@ -860,6 +868,14 @@
                 "id": "39cd2b32-d7c0-4083-af83-377f6a7628ea",
                 "resourcePath": "objects\/oFrontArm\/oFrontArm.yy",
                 "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "88c2f433-9ba5-486d-98e7-f09baacbbdd3",
+            "Value": {
+                "id": "5106cd1d-312e-4d99-9dd9-0892b30e7768",
+                "resourcePath": "sprites\\sBattleWindow\\sBattleWindow.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -1007,6 +1023,14 @@
             }
         },
         {
+            "Key": "a076be30-c662-4bd0-965a-86e1c43d9a42",
+            "Value": {
+                "id": "e4b72e68-15bd-4dfc-ac61-e5967d297a61",
+                "resourcePath": "sprites\\sBattleWindowHealth\\sBattleWindowHealth.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "a0dddaee-d803-47f1-b725-aab4ac6d4852",
             "Value": {
                 "id": "7a88de18-d2fb-4619-b5ec-988220581c1a",
@@ -1151,6 +1175,14 @@
             }
         },
         {
+            "Key": "afebadf4-5db2-422b-8da1-22fdedf5eee5",
+            "Value": {
+                "id": "55fc1025-0ee3-4e7a-b0a6-d643f3e15bd6",
+                "resourcePath": "sprites\\sBattleWindowStatBG\\sBattleWindowStatBG.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "b107e128-a3fc-4baa-a3ad-0cd2b9f6b60e",
             "Value": {
                 "id": "14ae3fb3-d9bc-45e4-bb3d-74644363587f",
@@ -1163,6 +1195,14 @@
             "Value": {
                 "id": "071129de-71b5-4c06-9e18-e18a7ea1ef9a",
                 "resourcePath": "sprites\\sMeat\\sMeat.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "b592abef-5895-4620-b5e2-945b21c6c3ac",
+            "Value": {
+                "id": "06871355-e583-4e30-b895-aa47960a830c",
+                "resourcePath": "sprites\\sBattleWindowHunger\\sBattleWindowHunger.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -1219,6 +1259,14 @@
             "Value": {
                 "id": "d87953ec-e851-4d68-860b-77c095ade6b2",
                 "resourcePath": "sprites\\sLettuceRune\\sLettuceRune.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "c0345ecf-31eb-455e-8b54-b15bdc4c3685",
+            "Value": {
+                "id": "98b72be4-368c-4206-b473-226ac9d8ab9d",
+                "resourcePath": "sprites\\sBattleWindowStat\\sBattleWindowStat.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -1653,7 +1701,8 @@
         "f9ad685f-1396-49fe-a3e2-c5117bc4d91a",
         "59e9d743-93b6-4af6-a40b-0424f69bb113",
         "a05e043a-ac1a-469a-9a6a-79ff51b24cc1",
-        "b107e128-a3fc-4baa-a3ad-0cd2b9f6b60e"
+        "b107e128-a3fc-4baa-a3ad-0cd2b9f6b60e",
+        "6e602e98-13c8-4bc6-97e4-942142ce51e8"
     ],
     "tutorial": ""
 }
