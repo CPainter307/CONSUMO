@@ -17,7 +17,6 @@ if (position_meeting(x, y, oPlayerPickUpRadius) and (oPlayerPickUpRadius.keyLeft
 	
 	//create oRecipe
 	inst = instance_create_depth(x, y, -y, oRecipe);
-	oRecipe.sprite_index = sWhiteSoup; //This line sets our newly cooked meal to be white soup
 	currentlyCooking = false;
 	
 	//check for amount of modifiers

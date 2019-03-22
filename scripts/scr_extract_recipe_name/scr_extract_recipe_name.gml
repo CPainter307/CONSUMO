@@ -73,6 +73,18 @@ for (var i = 0; i < 3; i++) {
 //check cooking type
 inst.name += mealType;
 
+if string_pos("Vegetable", inst.name) != 0 || string_pos("Seasoned", inst.name) != 0
+{
+	inst.sprite_index = sWhiteSoup; //This line sets our newly cooked meal to be white soup
+}
+if string_pos("Fish", inst.name) != 0
+{
+	inst.sprite_index = sGreenSoup;	
+}
+if string_pos("Meat", inst.name) != 0
+{
+	inst.sprite_index = sBrownSoup;	
+}
 
 //for cooking single objects
 for (var i = 0; i < 3; i++) {
