@@ -4,7 +4,7 @@
 if (leftIngr != noone) {
 	leftIngr.gravity = 0;
 	leftIngr.speed = 0;
-    leftIngr.x = x - 10;
+    leftIngr.x = x - 28;
     leftIngr.y = y - 5;
 
     //removing from table
@@ -16,7 +16,7 @@ if (leftIngr != noone) {
 if (rightIngr != noone) {
 	rightIngr.gravity = 0;
 	rightIngr.speed = 0;
-    rightIngr.x = x + 10;
+    rightIngr.x = x + 28;
     rightIngr.y = y - 5;
 
     //removing from table
