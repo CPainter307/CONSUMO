@@ -1,11 +1,5 @@
 /// @description What happens every step
 
-//left justification
-if (leftIngr == noone && rightIngr != noone) {
-    leftIngr = rightIngr;
-    rightIngr = noone;
-}
-
 //positioning on table
 if (leftIngr != noone) {
 	leftIngr.gravity = 0;
@@ -29,4 +23,11 @@ if (rightIngr != noone) {
     if (rightIngr.followingL || rightIngr.followingR) {
         rightIngr = noone;
     }
+}
+
+
+//left justification
+if (leftIngr == noone && rightIngr != noone) {
+    leftIngr = rightIngr;
+    rightIngr = noone;
 }
