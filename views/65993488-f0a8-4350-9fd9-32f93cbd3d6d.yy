@@ -10,7 +10,8 @@
         "17a5021b-5d85-4cc1-835c-8c9c12cb7ad7",
         "0309885d-6bac-461c-824f-ac3312ede4e9",
         "535d53ba-696e-44a1-b928-b647ee6e134f",
-        "92c6ef00-9d97-4c56-bcc3-ac06db77559c"
+        "92c6ef00-9d97-4c56-bcc3-ac06db77559c",
+        "39e2e2ab-0121-4dc7-9122-4c00a7202b13"
     ],
     "filterType": "GMSprite",
     "folderName": "Cooking",
