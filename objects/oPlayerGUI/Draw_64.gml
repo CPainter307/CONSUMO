@@ -55,8 +55,8 @@ if (instance_exists(adv1)) {
 		draw_sprite_ext(sBattleWindowHunger, 1, xpos+104, ypos+74, (adv1.hunger/adv1.maxhunger), 1, 0, c_red, 1);  // hunger
 	}
 }
-var xpos = view_xport[0]+446;
-var ypos = view_yport[0]+34;
+var xpos = view_xport[0]+46;
+var ypos = view_yport[0]+234;
 if (instance_exists(adv2)) {
 	draw_sprite(sBattleWindowStatBG, 1, xpos+32, ypos+105);
 	draw_sprite_ext(sBattleWindowStat, 1, xpos+42, ypos+137, 1, (adv2.attack/adv2.maxattack), 0, c_white, 1);  // attack
@@ -72,8 +72,8 @@ if (instance_exists(adv2)) {
 		draw_sprite_ext(sBattleWindowHunger, 1, xpos+104, ypos+74, (adv2.hunger/adv2.maxhunger), 1, 0, c_red, 1);  // hunger
 	}
 }
-var xpos = view_xport[0]+846;
-var ypos = view_yport[0]+34;
+var xpos = view_xport[0]+46;
+var ypos = view_yport[0]+434;
 if (instance_exists(adv3)) {
 	draw_sprite(sBattleWindowStatBG, 1, xpos+32, ypos+105);
 	draw_sprite_ext(sBattleWindowStat, 1, xpos+42, ypos+137, 1, (adv3.attack/adv3.maxattack), 0, c_white, 1);  // attack
