@@ -33,24 +33,62 @@ else {
 }
 
 //battle window
+if (instance_exists(Enemy)) {
+	adv1 = ds_list_find_value(Enemy.allAdventurers, 0);
+	adv2 = ds_list_find_value(Enemy.allAdventurers, 1);
+	adv3 = ds_list_find_value(Enemy.allAdventurers, 2);
+}
 var xpos = view_xport[0]+46;
 var ypos = view_yport[0]+34;
-if (instance_exists(oAdventurer)) {
-	draw_sprite(sBattleWindowStatBG, 1, xpos+41, ypos+152);
-	draw_sprite_ext(sBattleWindowStat, 1, xpos+63, ypos+206, 1, (oAdventurer.attack/oAdventurer.maxattack), 0, c_white, 1);  // attack
-	draw_sprite_ext(sBattleWindowStat, 1, xpos+117, ypos+206, 1, (oAdventurer.defense/oAdventurer.maxdefense), 0, c_white, 1);  // defense
-	draw_sprite_ext(sBattleWindowStat, 1, xpos+168, ypos+206, 1, (oAdventurer.spd/oAdventurer.maxspeed), 0, c_white, 1);  // speed
-	draw_sprite_ext(sBattleWindowStat, 1, xpos+222, ypos+206, 1, (oAdventurer.elmatk/oAdventurer.maxelmatk), 0, c_white, 1);  // elm atk
-	draw_sprite_ext(sBattleWindowStat, 1, xpos+276, ypos+206, 1, (oAdventurer.elmdef/oAdventurer.maxelmdef), 0, c_white, 1);  // elm def
+if (instance_exists(adv1)) {
+	draw_sprite(sBattleWindowStatBG, 1, xpos+32, ypos+105);
+	draw_sprite_ext(sBattleWindowStat, 1, xpos+42, ypos+137, 1, (adv1.attack/adv1.maxattack), 0, c_white, 1);  // attack
+	draw_sprite_ext(sBattleWindowStat, 1, xpos+78, ypos+137, 1, (adv1.defense/adv1.maxdefense), 0, c_white, 1);  // defense
+	draw_sprite_ext(sBattleWindowStat, 1, xpos+112, ypos+137, 1, (adv1.spd/adv1.maxspeed), 0, c_white, 1);  // speed
+	draw_sprite_ext(sBattleWindowStat, 1, xpos+148, ypos+137, 1, (adv1.elmatk/adv1.maxelmatk), 0, c_white, 1);  // elm atk
+	draw_sprite_ext(sBattleWindowStat, 1, xpos+184, ypos+137, 1, (adv1.elmdef/adv1.maxelmdef), 0, c_white, 1);  // elm def
 	draw_sprite(sBattleWindow, 1, xpos, ypos);
-	draw_sprite_ext(sBattleWindowHealth, 1, xpos+156, ypos+66, (oAdventurer.hp/oAdventurer.maxhp), 1, 0, c_white, 1);  // hp
-	if (!oAdventurer.stallHunger) {
-		draw_sprite_ext(sBattleWindowHunger, 1, xpos+156, ypos+111, (oAdventurer.hunger/oAdventurer.maxhunger), 1, 0, c_white, 1);  // hunger
+	draw_sprite_ext(sBattleWindowHealth, 1, xpos+104, ypos+44, (adv1.currentHealth/adv1.maxHealth), 1, 0, c_white, 1);  // hp
+	if (!adv1.stallHunger) {
+		draw_sprite_ext(sBattleWindowHunger, 1, xpos+104, ypos+74, (adv1.hunger/adv1.maxhunger), 1, 0, c_white, 1);  // hunger
 	} else {
-		draw_sprite_ext(sBattleWindowHunger, 1, xpos+156, ypos+111, (oAdventurer.hunger/oAdventurer.maxhunger), 1, 0, c_red, 1);  // hunger
+		draw_sprite_ext(sBattleWindowHunger, 1, xpos+104, ypos+74, (adv1.hunger/adv1.maxhunger), 1, 0, c_red, 1);  // hunger
 	}
 }
-
+var xpos = view_xport[0]+446;
+var ypos = view_yport[0]+34;
+if (instance_exists(adv2)) {
+	draw_sprite(sBattleWindowStatBG, 1, xpos+32, ypos+105);
+	draw_sprite_ext(sBattleWindowStat, 1, xpos+42, ypos+137, 1, (adv2.attack/adv2.maxattack), 0, c_white, 1);  // attack
+	draw_sprite_ext(sBattleWindowStat, 1, xpos+78, ypos+137, 1, (adv2.defense/adv2.maxdefense), 0, c_white, 1);  // defense
+	draw_sprite_ext(sBattleWindowStat, 1, xpos+112, ypos+137, 1, (adv2.spd/adv2.maxspeed), 0, c_white, 1);  // speed
+	draw_sprite_ext(sBattleWindowStat, 1, xpos+148, ypos+137, 1, (adv2.elmatk/adv2.maxelmatk), 0, c_white, 1);  // elm atk
+	draw_sprite_ext(sBattleWindowStat, 1, xpos+184, ypos+137, 1, (adv2.elmdef/adv2.maxelmdef), 0, c_white, 1);  // elm def
+	draw_sprite(sBattleWindow, 1, xpos, ypos);
+	draw_sprite_ext(sBattleWindowHealth, 1, xpos+104, ypos+44, (adv2.currentHealth/adv2.maxHealth), 1, 0, c_white, 1);  // hp
+	if (!adv2.stallHunger) {
+		draw_sprite_ext(sBattleWindowHunger, 1, xpos+104, ypos+74, (adv2.hunger/adv2.maxhunger), 1, 0, c_white, 1);  // hunger
+	} else {
+		draw_sprite_ext(sBattleWindowHunger, 1, xpos+104, ypos+74, (adv2.hunger/adv2.maxhunger), 1, 0, c_red, 1);  // hunger
+	}
+}
+var xpos = view_xport[0]+846;
+var ypos = view_yport[0]+34;
+if (instance_exists(adv3)) {
+	draw_sprite(sBattleWindowStatBG, 1, xpos+32, ypos+105);
+	draw_sprite_ext(sBattleWindowStat, 1, xpos+42, ypos+137, 1, (adv3.attack/adv3.maxattack), 0, c_white, 1);  // attack
+	draw_sprite_ext(sBattleWindowStat, 1, xpos+78, ypos+137, 1, (adv3.defense/adv3.maxdefense), 0, c_white, 1);  // defense
+	draw_sprite_ext(sBattleWindowStat, 1, xpos+112, ypos+137, 1, (adv3.spd/adv3.maxspeed), 0, c_white, 1);  // speed
+	draw_sprite_ext(sBattleWindowStat, 1, xpos+148, ypos+137, 1, (adv3.elmatk/adv3.maxelmatk), 0, c_white, 1);  // elm atk
+	draw_sprite_ext(sBattleWindowStat, 1, xpos+184, ypos+137, 1, (adv3.elmdef/adv3.maxelmdef), 0, c_white, 1);  // elm def
+	draw_sprite(sBattleWindow, 1, xpos, ypos);
+	draw_sprite_ext(sBattleWindowHealth, 1, xpos+104, ypos+44, (adv3.currentHealth/adv3.maxHealth), 1, 0, c_white, 1);  // hp
+	if (!adv3.stallHunger) {
+		draw_sprite_ext(sBattleWindowHunger, 1, xpos+104, ypos+74, (adv3.hunger/adv3.maxhunger), 1, 0, c_white, 1);  // hunger
+	} else {
+		draw_sprite_ext(sBattleWindowHunger, 1, xpos+104, ypos+74, (adv3.hunger/adv3.maxhunger), 1, 0, c_red, 1);  // hunger
+	}
+}
 
 // textbox gui
 //nine_slice_box(sTextbox, 30, 50, mouse_x, mouse_y);

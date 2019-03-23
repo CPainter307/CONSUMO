@@ -2,9 +2,6 @@ if (currentHealth <= 0) {
 	ds_list_destroy(allAdventurers);
 	instance_destroy();
 }
-if (ds_list_empty(allAdventurers)) {
-	ds_list_destroy(allAdventurers);
-}
 
 //move 1
 if (((timer_m1) * (baseSpeed/100)) >= move_1[0]) {
