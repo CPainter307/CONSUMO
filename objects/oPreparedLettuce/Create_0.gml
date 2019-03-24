@@ -11,3 +11,4 @@ special = false;
 runeSprite = sLettuceRune;
 classification = "vegetable";
 adjective = "Green ";
+chops = 10;

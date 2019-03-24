@@ -9,3 +9,6 @@ modifier2 = [1, 3, 1, 1, 1, 1]
 runeSprite = sPaprikaRune;
 classification = "seasoning";
 adjective = "Seasoned ";
+chops = 0;
+
+preppedVersion = oPreparedPaprika;

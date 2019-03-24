@@ -11,3 +11,4 @@ special = false;
 runeSprite = sOnionRune;
 classification = "vegetable";
 adjective = "Onion ";
+chops = 10;

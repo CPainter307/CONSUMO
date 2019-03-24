@@ -11,3 +11,4 @@ special = false;
 runeSprite = sMeatRune;
 classification = "meat";
 adjective = "Meaty ";
+chops = 10;

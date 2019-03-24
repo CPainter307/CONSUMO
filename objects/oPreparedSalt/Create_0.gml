@@ -9,3 +9,4 @@ modifier2 = [2, 2, 2, 2, 2, 2]
 runeSprite = sSaltRune;
 classification = "seasoning";
 adjective = "Seasoned ";
+chops = 10;

@@ -11,3 +11,6 @@ special = false;
 runeSprite = sMeatRune;
 classification = "meat";
 adjective = "Meaty ";
+chops = 0;
+
+preppedVersion = oPreparedMeat;

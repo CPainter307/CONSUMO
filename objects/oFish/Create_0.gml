@@ -11,3 +11,6 @@ special = false;
 runeSprite = sFishRune
 classification = "meat";
 adjective = "Fishy ";
+chops = 0;
+
+preppedVersion = oPreparedFish;

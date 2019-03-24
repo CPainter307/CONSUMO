@@ -1,8 +1,7 @@
 /// @description Insert description here
 // You can write your code in this editor
 
-if(leftIngr != noone || rightIngr != noone)
-{
+if((leftIngr != noone && !leftIngr.prepared) || (rightIngr != noone && !rightIngr.prepared)) {	
 	instance_create_layer(x,y-50,"game",oButton)
 	oButton.y = oButton.ystart + sin(get_timer()/100000);
 	
@@ -15,3 +14,5 @@ if(leftIngr != noone || rightIngr != noone)
 		oButton.sprite_index = sButtonE;	
 	}
 }
+
+scr_prep_ingr();

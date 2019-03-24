@@ -6,7 +6,8 @@ if (!other.prepared && !other.followingL && !other.followingR) {
 		leftIngr = other;
 	}
 	if (leftIngr != noone && rightIngr == noone) {
-		leftIngr = noone;
-		rightIngr = other;
+		if (leftIngr != other) {
+			rightIngr = other;
+		}
 	}
 }
