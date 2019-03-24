@@ -19,3 +19,6 @@ textDisappearTimer = 0;
 
 mealType = "";
 mealType2 = "";
+
+textCol = make_color_rgb(57, 31, 33);
+strokeCol = make_color_rgb(249, 230, 207);

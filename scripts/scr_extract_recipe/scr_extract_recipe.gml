@@ -119,6 +119,7 @@ if (position_meeting(x, y, oPlayerPickUpRadius) and (oPlayerPickUpRadius.keyLeft
 
 	
 	//show recipe quality
+	textDisappearTimer = 0;
 	drawText = true;
 	
 	ds_list_clear(item_list);

@@ -23,7 +23,12 @@
         "bb41a904-34cb-4a7c-8493-e910fb11ecbc",
         "1010e2bc-364a-42c6-90f0-0aa741862ed2",
         "73a8bc2d-416b-41bb-b215-a9083f7c8a70",
-        "5c750ac2-9961-4266-b112-9503e9c62803"
+        "5c750ac2-9961-4266-b112-9503e9c62803",
+        "d8270538-ffec-40e3-8acf-ff070cc2c910",
+        "fa10d59e-93df-4184-8f45-e47c1362f908",
+        "4ece7ba5-21b8-4a83-8950-ce720f58367d",
+        "1cc0df2a-b5fc-4831-81c7-1cebc4e39eb0",
+        "99f0e310-7688-45b7-93f2-6e9cd7c71d8f"
     ],
     "filterType": "GMSprite",
     "folderName": "GUI",

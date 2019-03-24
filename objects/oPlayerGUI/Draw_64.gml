@@ -54,6 +54,11 @@ if (instance_exists(adv1)) {
 	} else {
 		draw_sprite_ext(sBattleWindowHunger, 1, xpos+104, ypos+74, (adv1.hunger/adv1.maxhunger), 1, 0, c_red, 1);  // hunger
 	}
+	/*draw_set_color(textCol);
+	draw_set_font(fBattleTextThick);
+	draw_set_halign(fa_left);
+	draw_set_valign(fa_center);
+	draw_text(xpos+105, ypos+29, "HEALTH:")*/
 }
 var xpos = view_xport[0]+46;
 var ypos = view_yport[0]+234;
@@ -71,6 +76,9 @@ if (instance_exists(adv2)) {
 	} else {
 		draw_sprite_ext(sBattleWindowHunger, 1, xpos+104, ypos+74, (adv2.hunger/adv2.maxhunger), 1, 0, c_red, 1);  // hunger
 	}
+	/*draw_set_color(textCol);
+	draw_set_font(fBattleTextThick);
+	draw_text(xpos+105, ypos+29, "HEALTH:")*/
 }
 var xpos = view_xport[0]+46;
 var ypos = view_yport[0]+434;
@@ -88,7 +96,10 @@ if (instance_exists(adv3)) {
 	} else {
 		draw_sprite_ext(sBattleWindowHunger, 1, xpos+104, ypos+74, (adv3.hunger/adv3.maxhunger), 1, 0, c_red, 1);  // hunger
 	}
+	/*draw_set_color(textCol);
+	draw_set_font(fBattleTextThick);
+	draw_text(xpos+105, ypos+29, "HEALTH:")*/
 }
 
 // textbox gui
-//nine_slice_box(sTextbox, 30, 50, mouse_x, mouse_y);
+//nine_slice_box(s9slice, 475, 539, mouse_x, mouse_y);
