@@ -31,3 +31,12 @@ if (leftIngr == noone && rightIngr != noone) {
     leftIngr = rightIngr;
     rightIngr = noone;
 }
+
+//Destroys button if player walks away
+if instance_exists(oButton)
+{
+	if(!place_meeting(x,y,oPrepTable))
+	{
+		instance_destroy(oButton)	
+	}
+}
