@@ -36,26 +36,26 @@ if (drawText and textDisappearTimer < 120 and instance_exists(inst)) {
 	draw_set_halign(fa_center);
 	draw_set_valign(fa_top);
 	draw_set_font(fBattleTextThick);
-	if (inst.hp > 0) draw_text_outlined(xpos+76, ypos+280, strokeCol, textCol, "+" + string(inst.hp));
-	else if (inst.hp < 0) draw_text_outlined(xpos+76, ypos+280, strokeCol, textCol, string(inst.hp));
+	if (inst.hp > 0) draw_text_outlined(xpos+76, ypos+280, OFFWHITE_COL, BROWN_COL, "+" + string(inst.hp));
+	else if (inst.hp < 0) draw_text_outlined(xpos+76, ypos+280, OFFWHITE_COL, BROWN_COL, string(inst.hp));
 	
-	if (inst.attack > 0) draw_text_outlined(xpos+151, ypos+280, strokeCol, textCol, "+" + string(inst.attack));
-	else if (inst.attack < 0) draw_text_outlined(xpos+151, ypos+280, strokeCol, textCol, string(inst.attack));
+	if (inst.attack > 0) draw_text_outlined(xpos+151, ypos+280, OFFWHITE_COL, BROWN_COL, "+" + string(inst.attack));
+	else if (inst.attack < 0) draw_text_outlined(xpos+151, ypos+280, OFFWHITE_COL, BROWN_COL, string(inst.attack));
 
-	if (inst.defense > 0) draw_text_outlined(xpos+219, ypos+280, strokeCol, textCol, "+" + string(inst.defense));
-	else if (inst.defense < 0) draw_text_outlined(xpos+219, ypos+280, strokeCol, textCol, string(inst.defense));
+	if (inst.defense > 0) draw_text_outlined(xpos+219, ypos+280, OFFWHITE_COL, BROWN_COL, "+" + string(inst.defense));
+	else if (inst.defense < 0) draw_text_outlined(xpos+219, ypos+280, OFFWHITE_COL, BROWN_COL, string(inst.defense));
 
-	if (inst.spd > 0) draw_text_outlined(xpos+286, ypos+280, strokeCol, textCol, "+" + string(inst.spd));
-	else if (inst.spd < 0) draw_text_outlined(xpos+286, ypos+280, strokeCol, textCol, string(inst.spd));
+	if (inst.spd > 0) draw_text_outlined(xpos+286, ypos+280, OFFWHITE_COL, BROWN_COL, "+" + string(inst.spd));
+	else if (inst.spd < 0) draw_text_outlined(xpos+286, ypos+280, OFFWHITE_COL, BROWN_COL, string(inst.spd));
 
-	if (inst.elmatk > 0) draw_text_outlined(xpos+364, ypos+280, strokeCol, textCol, "+" + string(inst.elmatk));
-	else if (inst.elmatk < 0) draw_text_outlined(xpos+364, ypos+280, strokeCol, textCol, string(inst.elmatk));
+	if (inst.elmatk > 0) draw_text_outlined(xpos+364, ypos+280, OFFWHITE_COL, BROWN_COL, "+" + string(inst.elmatk));
+	else if (inst.elmatk < 0) draw_text_outlined(xpos+364, ypos+280, OFFWHITE_COL, BROWN_COL, string(inst.elmatk));
 
-	if (inst.elmdef > 0) draw_text_outlined(xpos+430, ypos+280, strokeCol, textCol, "+" + string(inst.elmdef));
-	else if (inst.elmdef < 0) draw_text_outlined(xpos+430, ypos+280, strokeCol, textCol, string(inst.elmdef));
+	if (inst.elmdef > 0) draw_text_outlined(xpos+430, ypos+280, OFFWHITE_COL, BROWN_COL, "+" + string(inst.elmdef));
+	else if (inst.elmdef < 0) draw_text_outlined(xpos+430, ypos+280, OFFWHITE_COL, BROWN_COL, string(inst.elmdef));
 
 	draw_set_font(fBattleTextThin);
-	draw_set_color(textCol);
+	draw_set_color(BROWN_COL);
 	draw_text(xpos+256, ypos+215, inst.name);
 	draw_sprite_ext(inst.sprite_index, 0, xpos+255, ypos+82, 3, 3, 0, c_white, 1);
 	textDisappearTimer++;

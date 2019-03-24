@@ -1039,6 +1039,14 @@
             }
         },
         {
+            "Key": "87e42116-f20e-4279-8632-e2c832ec88bd",
+            "Value": {
+                "id": "6181c20b-d309-480b-9276-2a8d3c48d3c2",
+                "resourcePath": "sprites\\sIconsNeutral\\sIconsNeutral.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "87f1e45c-65ea-4e71-9472-04f7a5ef4cb3",
             "Value": {
                 "id": "39cd2b32-d7c0-4083-af83-377f6a7628ea",
@@ -1223,6 +1231,22 @@
             }
         },
         {
+            "Key": "a12f727a-6b9e-4857-8acf-bd69c33bc4b2",
+            "Value": {
+                "id": "02ff0d96-7302-4a87-8da3-b5a483c450d2",
+                "resourcePath": "sprites\\sIconsNegative\\sIconsNegative.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "a1d596a4-2646-4787-99a0-cd33658c843a",
+            "Value": {
+                "id": "fcd872ce-5cad-471c-89e4-1fab6c03f5da",
+                "resourcePath": "fonts\\fGUITextThick\\fGUITextThick.yy",
+                "resourceType": "GMFont"
+            }
+        },
+        {
             "Key": "a2b203b0-b23d-4325-a61e-f5dbe43462c7",
             "Value": {
                 "id": "ff9f3387-4196-4fde-b8b4-53c7829295d4",
@@ -1372,6 +1396,14 @@
                 "id": "071129de-71b5-4c06-9e18-e18a7ea1ef9a",
                 "resourcePath": "sprites\\sMeat\\sMeat.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "b282e5cc-561a-4c06-a316-1f7dda5257a2",
+            "Value": {
+                "id": "6db185ee-c3a9-4696-93f7-e0b3df5d88bb",
+                "resourcePath": "scripts\\scr_draw_icons\\scr_draw_icons.yy",
+                "resourceType": "GMScript"
             }
         },
         {
@@ -1743,6 +1775,14 @@
             }
         },
         {
+            "Key": "e70c5011-d730-4d1a-b099-67c8d90683e4",
+            "Value": {
+                "id": "35971700-d75f-4299-b7af-2bb72b310d79",
+                "resourcePath": "sprites\\sIconsPositive\\sIconsPositive.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "e8976633-b554-4dea-86ad-cda329ef7a82",
             "Value": {
                 "id": "340ccbb0-ba80-4688-9a1f-37aab95854b9",
@@ -1961,7 +2001,8 @@
         "6e602e98-13c8-4bc6-97e4-942142ce51e8",
         "b6533c49-094f-4662-a258-14d490b59d90",
         "f08795bc-5222-4cd7-8924-a1439d61f4e4",
-        "831c07c0-479d-4e71-9511-e78c2d3bd94c"
+        "831c07c0-479d-4e71-9511-e78c2d3bd94c",
+        "b282e5cc-561a-4c06-a316-1f7dda5257a2"
     ],
     "tutorial": ""
 }

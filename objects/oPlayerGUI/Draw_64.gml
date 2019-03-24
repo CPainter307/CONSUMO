@@ -19,18 +19,47 @@ if (oPlayer.holdingL = false) {
 	draw_sprite(sEmpty, 0, 300, 850);
 }
 else {
-	if (instance_exists(oPlayerPickUpRadius.itemInLeftHand)) {
-		draw_sprite(oPlayerPickUpRadius.itemInLeftHand.sprite_index, 0, 300, 850);
+	var leftH = oPlayerPickUpRadius.itemInLeftHand
+	if (instance_exists(leftH)) {
+		draw_sprite(leftH.sprite_index, 0, 300, 850);
+		
+		//draw text
+		draw_set_font(fGUITextThick)
+		draw_set_halign(fa_center);
+		draw_set_valign(fa_top);
+		if (leftH.object_index == oRecipe) {
+			draw_text_outlined(300, 645, OFFWHITE_COL, BROWN_COL, leftH.mealName)	
+		} else if (object_get_parent(leftH.object_index) == oIngredient) {
+			draw_text_outlined(300, 645, OFFWHITE_COL, BROWN_COL, leftH.ingrName)	
+		}
+		
+		//draw icons
+		scr_draw_icons(300, 695, leftH, draw_icons_l, which_icons_l);
 	}
 }
 if (oPlayer.holdingR = false) {
 	draw_sprite(sEmpty, 0, 1600, 850);
 }
 else {
-	if (instance_exists(oPlayerPickUpRadius.itemInRightHand)) {
-		draw_sprite(oPlayerPickUpRadius.itemInRightHand.sprite_index, 0, 1600, 850);
+	var rightH = oPlayerPickUpRadius.itemInRightHand
+	if (instance_exists(rightH)) {
+		draw_sprite(rightH.sprite_index, 0, 1600, 850);
+		
+		//draw text
+		draw_set_font(fGUITextThick);
+		draw_set_halign(fa_center);
+		draw_set_valign(fa_top);
+		if (rightH.object_index == oRecipe) {
+			draw_text_outlined(1600, 645, OFFWHITE_COL, BROWN_COL, rightH.mealName)	
+		} else if (object_get_parent(rightH.object_index) == oIngredient) {
+			draw_text_outlined(1600, 645, OFFWHITE_COL, BROWN_COL, rightH.ingrName)	
+		}
+		
+		//draw icons
+		scr_draw_icons(1600, 695, rightH, draw_icons_r, which_icons_r);
 	}
 }
+
 
 //battle window
 if (instance_exists(Enemy)) {

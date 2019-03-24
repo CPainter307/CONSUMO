@@ -72,6 +72,7 @@ if (position_meeting(x, y, oPlayerPickUpRadius) and (oPlayerPickUpRadius.keyLeft
 	total_spd = total_spd + vesselSpeed;
 	total_elmatk = total_elmatk + vesselElmatk;
 	total_elmdef = total_elmdef + vesselElmdef;
+	inst.mealName = mealType;
 
 	//name recipe
 	scr_extract_recipe_name();
