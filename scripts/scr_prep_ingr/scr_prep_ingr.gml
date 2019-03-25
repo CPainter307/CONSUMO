@@ -1,6 +1,7 @@
 //case 1
 if (leftIngr != noone && !leftIngr.prepared && rightIngr == noone) {
 	if (oPlayerInput.key_interact) {
+		scr_play_chop_sound();
 		leftIngr.chops++;
 	}
 }
@@ -8,6 +9,7 @@ if (leftIngr != noone && !leftIngr.prepared && rightIngr == noone) {
 //case2
 if (leftIngr != noone && rightIngr != noone && !leftIngr.prepared && !rightIngr.prepared) {
 	if (oPlayerInput.key_interact) {
+		scr_play_chop_sound();
 		leftIngr.chops++;
 	}
 }
@@ -15,6 +17,7 @@ if (leftIngr != noone && rightIngr != noone && !leftIngr.prepared && !rightIngr.
 //case3
 if (leftIngr != noone && rightIngr != noone && !leftIngr.prepared && rightIngr.prepared) {
 	if (oPlayerInput.key_interact) {
+		scr_play_chop_sound();
 		leftIngr.chops++;
 	}
 }
@@ -22,6 +25,7 @@ if (leftIngr != noone && rightIngr != noone && !leftIngr.prepared && rightIngr.p
 //case4
 if (leftIngr != noone && rightIngr != noone && leftIngr.prepared && !rightIngr.prepared) {
 	if (oPlayerInput.key_interact) {
+		scr_play_chop_sound();
 		rightIngr.chops++;
 	}
 }
