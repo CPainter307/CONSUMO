@@ -10,8 +10,9 @@ draw_arrow(x, y, x+vec_x, y+vec_y, 5);*/
 //var spd = point_distance(x,y,mouse_x,mouse_y)/10;
 
 if (oPlayer.holdingL || oPlayer.holdingR) {
-	var xx = x;
-	var yy = y;
+	var xx = oHacky.x;
+	var yy = oHacky.y;
+	oHacky.sprite_index = sHackyChomp;
 
 	var vx = lengthdir_x(24.5,dir);
 	var vy = lengthdir_y(23.5,dir);

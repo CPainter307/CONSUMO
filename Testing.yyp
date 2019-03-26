@@ -359,6 +359,14 @@
             }
         },
         {
+            "Key": "256377e4-5046-4255-a5e7-f8ca8f4ad844",
+            "Value": {
+                "id": "294b3381-5a94-4012-9679-6055a2ab7ee7",
+                "resourcePath": "sprites\\sHacky\\sHacky.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "27597571-57bd-4959-b49e-99e3fec0b896",
             "Value": {
                 "id": "d770e4fd-a4da-413d-acc0-03019cdb56d8",
@@ -935,6 +943,14 @@
             }
         },
         {
+            "Key": "69a7a1eb-d9aa-4bb5-98cd-5069e66388be",
+            "Value": {
+                "id": "f20acf8b-6a81-4ca6-ae1d-e56fec0c7342",
+                "resourcePath": "objects\\oHackyRadius\\oHackyRadius.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "6bcfe450-6ef9-40c0-b343-1700f6f624f6",
             "Value": {
                 "id": "af45a468-6df9-46c5-93ff-45fb47dd9fde",
@@ -956,6 +972,14 @@
                 "id": "a55d172e-9253-4545-b96a-46df32cac7a4",
                 "resourcePath": "scripts\\nine_slice_box\\nine_slice_box.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "715c8fa4-5835-4123-85d6-be95ca953277",
+            "Value": {
+                "id": "4d43eb53-10d4-45b0-b98b-e26139918ff4",
+                "resourcePath": "objects\\oHacky\\oHacky.yy",
+                "resourceType": "GMObject"
             }
         },
         {
@@ -1655,6 +1679,14 @@
             }
         },
         {
+            "Key": "c6bc6f27-e68a-4f7f-86da-5b5a63a2b77d",
+            "Value": {
+                "id": "7fc1f66c-87a6-46e0-a520-603063d98bfe",
+                "resourcePath": "sprites\\sHackyChomp\\sHackyChomp.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "c7637e2f-adcb-453f-9328-15209d3c6c12",
             "Value": {
                 "id": "a84503c6-48e9-4998-9635-1a86eed6a14a",
@@ -1731,6 +1763,14 @@
             "Value": {
                 "id": "01353c7a-bc82-4946-890e-d5574f4c8397",
                 "resourcePath": "sprites\\sPaprikaRune\\sPaprikaRune.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "d306bc70-e05f-4860-80ec-98c2be82d6e2",
+            "Value": {
+                "id": "b28e9da9-4851-4c0c-bd0d-067621e987f2",
+                "resourcePath": "sprites\\sHackyRadius\\sHackyRadius.yy",
                 "resourceType": "GMSprite"
             }
         },
