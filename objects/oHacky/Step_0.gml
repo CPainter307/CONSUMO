@@ -83,4 +83,19 @@ if (instance_exists(oPlayer)) {
 			}*/
 		}
 	}
+	if (!oPlayer.holdingL || !oPlayer.holdingR)
+	{
+		if (x > oPlayer.x && (oPlayerPickUpRadius.throwingL || oPlayerPickUpRadius.throwingR))
+		{
+			image_angle = 0;
+			image_yscale = 1;
+			image_xscale = 1;
+		}
+		if (x < oPlayer.x && (oPlayerPickUpRadius.throwingL || oPlayerPickUpRadius.throwingR))
+		{
+			image_angle = 180;	
+			image_yscale = -1;
+			image_xscale = -1;
+		}
+	}
 }
