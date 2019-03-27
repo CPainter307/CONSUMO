@@ -8,10 +8,19 @@ if (instance_exists(oPlayer)) {
 		if (t >= 2*pi) {
 			t -= 2*pi;
 		}
+		if (oPlayer.facingRight)
+		{
+			image_xscale = 1;	
+		}
+		else
+		{
+			image_xscale = -1;	
+		}
 	}
 
 	if (oPlayer.holdingL || oPlayer.holdingR) {
-		image_angle = oPlayerPickUpRadius.imageDir
+		image_xscale = 1;
+		image_angle = oPlayerPickUpRadius.imageDir;
 		if (image_angle > 90) && (image_angle < 270) {
 			image_yscale = -1;	
 		}
@@ -29,41 +38,41 @@ if (instance_exists(oPlayer)) {
 			keyD = keyboard_check(ord("S"));
 			keyR = keyboard_check(ord("D"));
 			if keyU {
-				x = (oPlayer.x) + sin(get_timer()/400000) * 10;
-				y = (oPlayer.y - 110) + sin(get_timer()/350000) * 10;		
+				x = (oPlayer.x) + sin(get_timer()/400000) * 2;
+				y = (oPlayer.y - 110) + sin(get_timer()/350000) * 2;		
 			}
 			if keyL	{
-				x = (oPlayer.x - 128) + sin(get_timer()/400000) * 10;
-				y = (oPlayer.y) + sin(get_timer()/350000) * 10;	
+				x = (oPlayer.x - 128) + sin(get_timer()/400000) * 2;
+				y = (oPlayer.y) + sin(get_timer()/350000) * 2;	
 			}
 			if keyR	{
-				x = (oPlayer.x + 128) + sin(get_timer()/400000) * 10;
-				y = (oPlayer.y) + sin(get_timer()/350000) * 10;	
+				x = (oPlayer.x + 128) + sin(get_timer()/400000) * 2;
+				y = (oPlayer.y) + sin(get_timer()/350000) * 2;	
 			}
 			if keyD	{
-				x = (oPlayer.x) + sin(get_timer()/400000) * 10;
-				y = (oPlayer.y + 100) + sin(get_timer()/350000) * 10;	
+				x = (oPlayer.x) + sin(get_timer()/400000) * 2;
+				y = (oPlayer.y + 100) + sin(get_timer()/350000) * 2;	
 			}
 			if keyD && keyR	{
-				x = (oPlayer.x + 70) + sin(get_timer()/400000) * 10;
-				y = (oPlayer.y + 100) + sin(get_timer()/350000) * 10;
+				x = (oPlayer.x + 70) + sin(get_timer()/400000) * 2;
+				y = (oPlayer.y + 100) + sin(get_timer()/350000) * 2;
 			}
 			if keyU && keyR {
-				x = (oPlayer.x + 70) + sin(get_timer()/400000) * 10;
-				y = (oPlayer.y - 100) + sin(get_timer()/350000) * 10;
+				x = (oPlayer.x + 70) + sin(get_timer()/400000) * 2;
+				y = (oPlayer.y - 100) + sin(get_timer()/350000) * 2;
 			}
 			if keyD && keyL {
-				x = (oPlayer.x - 70) + sin(get_timer()/400000) * 10;
-				y = (oPlayer.y + 100) + sin(get_timer()/350000) * 10;
+				x = (oPlayer.x - 70) + sin(get_timer()/400000) * 2;
+				y = (oPlayer.y + 100) + sin(get_timer()/350000) * 2;
 			}
 			if keyU && keyL {
-				x = (oPlayer.x - 70) + sin(get_timer()/400000) * 10;
-				y = (oPlayer.y - 100) + sin(get_timer()/350000) * 10;
+				x = (oPlayer.x - 70) + sin(get_timer()/400000) * 2;
+				y = (oPlayer.y - 100) + sin(get_timer()/350000) * 2;
 			}
 			sprite_index = sHacky;
 			if oPlayer.isLocked {
-				x = mouse_x + sin(get_timer()/400000) * 10;
-				y = mouse_y + sin(get_timer()/350000) * 10;
+				x = mouse_x + sin(get_timer()/400000) * 2;
+				y = mouse_y + sin(get_timer()/350000) * 2;
 			}
 			/*if ((!keyU && !keyL && !keyD && !keyR) && !oPlayer.isLocked) {
 				sprite_index = sIndicatorCircle;
@@ -93,9 +102,10 @@ if (instance_exists(oPlayer)) {
 		}
 		if (x < oPlayer.x && (oPlayerPickUpRadius.throwingL || oPlayerPickUpRadius.throwingR))
 		{
-			image_angle = 180;	
-			image_yscale = -1;
-			image_xscale = -1;
+			image_angle = 0;	
+			image_yscale = 1;
+			image_xscale = 1;
+			oPlayer.imageDir = 0;
 		}
 	}
 }
