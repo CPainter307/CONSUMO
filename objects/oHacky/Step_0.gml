@@ -70,10 +70,11 @@ if (instance_exists(oPlayer)) {
 			if oPlayer.isLocked {
 				x = mouse_x + sin(get_timer()/400000) * 2;
 				y = mouse_y + sin(get_timer()/350000) * 2;
+				radX = abs(lengthdir_x(128, oPlayerInput.mouse_dir));
+				radY = abs(lengthdir_y(128, oPlayerInput.mouse_dir));
+				x = clamp(x, oPlayer.x - radX, oPlayer.x + radX);
+				y = clamp(y, oPlayer.y - radY, oPlayer.y + radY);
 			}
-			/*if ((!keyU && !keyL && !keyD && !keyR) && !oPlayer.isLocked) {
-				sprite_index = sIndicatorCircle;
-			}*/
 		}	
 		
 		if (gamepad_is_connected(0)) {

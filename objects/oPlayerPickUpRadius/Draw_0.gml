@@ -1,13 +1,6 @@
-/// @description Insert description here
+/// @description Draws throwing line from Hacky (eventually)
 // You can write your code in this editor
-/*
-var vec_x = lengthdir_x(100, dir);
-var vec_y = lengthdir_y(100, dir);
-draw_set_color(c_red)
-draw_arrow(x, y, x+vec_x, y+vec_y, 5);*/
 
-//var dir = point_direction(x,y,mouse_x,mouse_y);
-//var spd = point_distance(x,y,mouse_x,mouse_y)/10;
 
 if (oPlayer.holdingL || oPlayer.holdingR) {
 	var xx = oPlayer.x;
