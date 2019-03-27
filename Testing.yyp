@@ -279,6 +279,14 @@
             }
         },
         {
+            "Key": "19f7c04c-6648-4b90-a78e-527ccb6c0fd5",
+            "Value": {
+                "id": "71f1e1d5-a086-4bef-b605-f69cd819dd47",
+                "resourcePath": "sprites\\sMushroom\\sMushroom.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "1ad9e7c4-7f44-4383-b062-342cbaf8f49a",
             "Value": {
                 "id": "002bce57-560a-4d31-94c1-8816b99ee1e4",
@@ -423,6 +431,14 @@
             }
         },
         {
+            "Key": "2ed1f1eb-c118-4936-b474-e88610694741",
+            "Value": {
+                "id": "e62b1347-6569-42dc-b60b-30950296f311",
+                "resourcePath": "objects\\oRice\\oRice.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "3066b2a5-0767-4a7e-8f95-fce071779c75",
             "Value": {
                 "id": "3d717bf4-fd6a-41f7-9bb1-a93d4cb0248e",
@@ -540,6 +556,14 @@
                 "id": "7345d406-fe8c-4cf8-a975-c0234af7464a",
                 "resourcePath": "timelines\\tl_cooking\\tl_cooking.yy",
                 "resourceType": "GMTimeline"
+            }
+        },
+        {
+            "Key": "445690bd-3a5e-4c29-9311-0aeed64cc0e6",
+            "Value": {
+                "id": "3e71d410-8e97-4f52-b431-9535ed17b485",
+                "resourcePath": "views\\445690bd-3a5e-4c29-9311-0aeed64cc0e6.yy",
+                "resourceType": "GMFolder"
             }
         },
         {
@@ -820,6 +844,14 @@
                 "id": "e789a43b-55af-44a2-bebd-24221f24451d",
                 "resourcePath": "objects\/oMenu\/oMenu.yy",
                 "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "60761363-5d32-44a8-bd4f-ede9f92546f2",
+            "Value": {
+                "id": "b26ad2e7-1e89-4f47-a6fa-c6fd8aebe8e4",
+                "resourcePath": "sprites\\sPreparedRice\\sPreparedRice.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -1159,6 +1191,14 @@
             }
         },
         {
+            "Key": "8c0246e0-5783-4535-939a-0dbe9da84633",
+            "Value": {
+                "id": "39c0071c-901f-421c-b23f-5f41f8583e51",
+                "resourcePath": "objects\\oMushroom\\oMushroom.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "8c328115-1d66-407b-8cc2-d0e8f72b853e",
             "Value": {
                 "id": "57d1457e-d4f6-46e7-ba34-4004b9614b58",
@@ -1255,6 +1295,14 @@
             }
         },
         {
+            "Key": "96272aed-835d-437a-978f-d1dd58d63a12",
+            "Value": {
+                "id": "b73c4793-c639-4abd-9737-de64fd27fb10",
+                "resourcePath": "sprites\\sPreparedMushroom\\sPreparedMushroom.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "9661a3ac-9622-4f89-b1f3-1b1d518825bb",
             "Value": {
                 "id": "8b995f60-0de1-4f73-b34a-4e929f80bde3",
@@ -1308,6 +1356,14 @@
                 "id": "7a88de18-d2fb-4619-b5ec-988220581c1a",
                 "resourcePath": "objects\\oPlayerGUI\\oPlayerGUI.yy",
                 "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "a104f225-ae61-489b-b608-10dfd85374ee",
+            "Value": {
+                "id": "b950ca25-16e0-4e4e-b1ef-c4b0103c7c33",
+                "resourcePath": "sprites\\sMushroomRune\\sMushroomRune.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -1759,6 +1815,22 @@
             }
         },
         {
+            "Key": "d223b07c-cbcf-4656-a3a0-135cf25e7d07",
+            "Value": {
+                "id": "e3a0acff-1c6d-4e22-88f8-321471404bff",
+                "resourcePath": "sprites\\sRiceRune\\sRiceRune.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "d2b08200-6195-4a32-b51e-b12ba48c8004",
+            "Value": {
+                "id": "7757badf-45de-4283-977c-0c38c1a37c44",
+                "resourcePath": "objects\\oPreparedRice\\oPreparedRice.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "d306bc70-e05f-4860-80ec-98c2be82d6e2",
             "Value": {
                 "id": "b28e9da9-4851-4c0c-bd0d-067621e987f2",
@@ -1783,6 +1855,14 @@
             }
         },
         {
+            "Key": "d62134d5-3e48-47e0-9e98-0cb80193c1a2",
+            "Value": {
+                "id": "1da2a4fb-7e14-4918-9564-d06270fe899c",
+                "resourcePath": "objects\\oPreparedMushroom\\oPreparedMushroom.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "d791d140-7001-442f-80bd-9c62eeeb3885",
             "Value": {
                 "id": "c8bf0244-0511-446e-a0a5-ecedd73cc616",
@@ -1803,6 +1883,14 @@
             "Value": {
                 "id": "92fd18a0-76c5-4f78-bc16-e4ce8964f4c1",
                 "resourcePath": "sprites\\s9slice\\s9slice.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "d86aa963-2122-421c-99dc-b40335dfc128",
+            "Value": {
+                "id": "5d99c7bc-4dd0-41cb-b9b8-1d9b9045399e",
+                "resourcePath": "sprites\\sRice\\sRice.yy",
                 "resourceType": "GMSprite"
             }
         },

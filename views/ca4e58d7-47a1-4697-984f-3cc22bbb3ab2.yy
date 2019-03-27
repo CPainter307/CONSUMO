@@ -10,7 +10,9 @@
         "6ca7811e-26d3-4186-bbdd-c2ac58ca2951",
         "a4f56ea6-6ed9-48e0-9029-842a985cbfeb",
         "b179b9c6-308b-41f6-929b-d6f4763bf62f",
-        "4f05d6d5-b060-4c4d-b906-d615cdc45650"
+        "4f05d6d5-b060-4c4d-b906-d615cdc45650",
+        "19f7c04c-6648-4b90-a78e-527ccb6c0fd5",
+        "d86aa963-2122-421c-99dc-b40335dfc128"
     ],
     "filterType": "GMSprite",
     "folderName": "Whole Ingredients",

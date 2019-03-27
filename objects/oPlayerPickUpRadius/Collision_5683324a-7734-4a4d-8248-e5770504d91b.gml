@@ -21,7 +21,7 @@ if (gamepad_is_connected(0)) {
 //if there is an item we can pick up
 if (weCanPickUp) {
 	//if both buttons are pressed simultaneously
-	if (gamepad_button_check_pressed(0, gp_shoulderl) && gamepad_button_check_pressed(0, gp_shoulderr)) {
+	if (oPlayerInput.key_left_hand && oPlayerInput.key_right_hand) {
 			//default to left hand
 			if (oPlayer.holdingL ==  false && weCanPickUp) {
 				ID.followingL = true;
@@ -40,7 +40,7 @@ if (weCanPickUp) {
 			}
 		}
 	//left hand pick up
-	if (gamepad_button_check_pressed(0,gp_shoulderl) && weCanPickUp) {
+	if (oPlayerInput.key_left_hand && weCanPickUp) {
 		// if player isn't holding something in left hand, get picked up
 		if (oPlayer.holdingL == false) {
 				ID.followingL = true;
@@ -51,7 +51,7 @@ if (weCanPickUp) {
 		}
 	}
 	//right hand pick up
-	if (gamepad_button_check_pressed(0, gp_shoulderr) && weCanPickUp) {
+	if (oPlayerInput.key_right_hand && weCanPickUp) {
 		//if player isn't holding something in right hand, get picked up
 		if (oPlayer.holdingR == false) {
 				ID.followingR = true;
@@ -69,7 +69,7 @@ if (!gamepad_is_connected(0)) {
 //if there is an item we can pick up
 if (weCanPickUp) {
 	//if both buttons are pressed simultaneously
-	if (mouse_check_button_pressed(mb_left) && mouse_check_button_pressed(mb_right)) {
+	if (oPlayerInput.key_left_hand && oPlayerInput.key_right_hand) {
 			//default to left hand
 			if (oPlayer.holdingL ==  false && weCanPickUp) {
 				ID.followingL = true;
@@ -88,7 +88,7 @@ if (weCanPickUp) {
 			}
 		}
 	//left hand pick up
-	if (mouse_check_button_pressed(mb_left) && weCanPickUp) {
+	if (oPlayerInput.key_left_hand && weCanPickUp) {
 		// if player isn't holding something in left hand, get picked up
 		if (oPlayer.holdingL == false) {
 				ID.followingL = true;
@@ -99,7 +99,8 @@ if (weCanPickUp) {
 		}
 	}
 	//right hand pick up
-	if (mouse_check_button_pressed(mb_right) && weCanPickUp) {
+	if (oPlayerInput.key_right_hand
+	&& weCanPickUp) {
 		//if player isn't holding something in right hand, get picked up
 		if (oPlayer.holdingR == false) {
 				ID.followingR = true;

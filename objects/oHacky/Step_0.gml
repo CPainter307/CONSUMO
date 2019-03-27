@@ -33,39 +33,36 @@ if (instance_exists(oPlayer)) {
 		}
 		//rotate sprite 	
 		if (!gamepad_is_connected(0)) {
-			keyU = keyboard_check(ord("W"));
-			keyL = keyboard_check(ord("A"));
-			keyD = keyboard_check(ord("S"));
-			keyR = keyboard_check(ord("D"));
-			if keyU {
+
+			if oPlayerInput.key_up {
 				x = (oPlayer.x) + sin(get_timer()/400000) * 2;
 				y = (oPlayer.y - 110) + sin(get_timer()/350000) * 2;		
 			}
-			if keyL	{
+			if oPlayerInput.key_left	{
 				x = (oPlayer.x - 128) + sin(get_timer()/400000) * 2;
 				y = (oPlayer.y) + sin(get_timer()/350000) * 2;	
 			}
-			if keyR	{
+			if oPlayerInput.key_right	{
 				x = (oPlayer.x + 128) + sin(get_timer()/400000) * 2;
 				y = (oPlayer.y) + sin(get_timer()/350000) * 2;	
 			}
-			if keyD	{
+			if oPlayerInput.key_down	{
 				x = (oPlayer.x) + sin(get_timer()/400000) * 2;
 				y = (oPlayer.y + 100) + sin(get_timer()/350000) * 2;	
 			}
-			if keyD && keyR	{
+			if oPlayerInput.key_down && oPlayerInput.key_right	{
 				x = (oPlayer.x + 70) + sin(get_timer()/400000) * 2;
 				y = (oPlayer.y + 100) + sin(get_timer()/350000) * 2;
 			}
-			if keyU && keyR {
+			if oPlayerInput.key_up && oPlayerInput.key_right {
 				x = (oPlayer.x + 70) + sin(get_timer()/400000) * 2;
 				y = (oPlayer.y - 100) + sin(get_timer()/350000) * 2;
 			}
-			if keyD && keyL {
+			if oPlayerInput.key_down && oPlayerInput.key_left {
 				x = (oPlayer.x - 70) + sin(get_timer()/400000) * 2;
 				y = (oPlayer.y + 100) + sin(get_timer()/350000) * 2;
 			}
-			if keyU && keyL {
+			if oPlayerInput.key_up && oPlayerInput.key_left {
 				x = (oPlayer.x - 70) + sin(get_timer()/400000) * 2;
 				y = (oPlayer.y - 100) + sin(get_timer()/350000) * 2;
 			}
@@ -80,10 +77,6 @@ if (instance_exists(oPlayer)) {
 		}	
 		
 		if (gamepad_is_connected(0)) {
-			padU = gamepad_button_check(0, gp_padu);
-			padL = gamepad_button_check(0, gp_padl);
-			padD = gamepad_button_check(0, gp_padd);
-			padR = gamepad_button_check(0, gp_padr);
 			sprite_index = sHacky;
 			x = (oPlayer.x + 30) + sin(get_timer()/400000) * 10;
 			y = (oPlayer.y - 100) + sin(get_timer()/350000) * 10;

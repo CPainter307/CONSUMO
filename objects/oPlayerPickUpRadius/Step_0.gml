@@ -5,65 +5,57 @@ x = oPlayer.x;
 y = oPlayer.y;
 
 //declare variables every frame
-var stickDir;
-var haxis;
-var vaxis;
 imageDir = 0;
 
 
 //gamepad controls throw
 if (gamepad_is_connected(0)) {
-	keyLeftHand = gamepad_button_check_pressed(0, gp_shoulderl);
-	keyRightHand = gamepad_button_check_pressed(0, gp_shoulderr);
 	
 	//throwing while moving
 	if (!oPlayer.isLocked) {
-	haxis = gamepad_axis_value(0, gp_axislh);
-	vaxis = gamepad_axis_value(0, gp_axislv);
-	stickDir = point_direction(0, 0, haxis, vaxis);
 	
 		//east throw
-		if (stickDir >= 337.5 || stickDir < 22.5) {
+		if (oPlayerInput.stickDir >= 337.5 || oPlayerInput.stickDir < 22.5) {
 			imageDir = 0;
 			dir = 20;
 		}
 		//south throw
-		if (stickDir >= 247.5 && stickDir < 292.5) {
+		if (oPlayerInput.stickDir >= 247.5 && oPlayerInput.stickDir < 292.5) {
 			imageDir = 270;
 			dir = 270;
 		}
 		//north throw
-		if (stickDir >= 67.5 && stickDir < 112.5) {
+		if (oPlayerInput.stickDir >= 67.5 && oPlayerInput.stickDir < 112.5) {
 			imageDir = 90;
 			dir = 90;
 		}
 		//west throw
-		if (stickDir >= 157.5 && stickDir < 202.5) {
+		if (oPlayerInput.stickDir >= 157.5 && oPlayerInput.stickDir < 202.5) {
 			imageDir = 180;
 			dir = 160;
 		}
 		//northeast throw
-		if (stickDir >= 22.5 && stickDir < 67.5) {
+		if (oPlayerInput.stickDir >= 22.5 && oPlayerInput.stickDir < 67.5) {
 			imageDir = 45;
 			dir = 55;
 		}
 		//nortwest throw
-		if (stickDir >= 112.5 && stickDir < 157.5) {
+		if (oPlayerInput.stickDir >= 112.5 && oPlayerInput.stickDir < 157.5) {
 			imageDir = 135;
 			dir = 115;
 		}
 		//southwest throw
-		if (stickDir >= 202.5 && stickDir < 247.5) {
+		if (oPlayerInput.stickDir >= 202.5 && oPlayerInput.stickDir < 247.5) {
 			imageDir = 225;
 			dir = 225;
 		}
 		//southeast throw
-		if (stickDir >= 292.5 && stickDir < 337.5) {
+		if (oPlayerInput.stickDir >= 292.5 && oPlayerInput.stickDir < 337.5) {
 			imageDir = 315;
 			dir = 315;
 		}
 		//default drop
-		if (haxis == 0 && vaxis == 0) {
+		if (oPlayerInput.haxis == 0 && oPlayerInput.vaxis == 0) {
 			dir = 270;
 		}
 	}
@@ -72,11 +64,9 @@ if (gamepad_is_connected(0)) {
 	if (oPlayer.isLocked) {
 
 		//throwing with left stick while locked
-		if (gamepad_axis_value(0,gp_axislh) != 0 || gamepad_axis_value(0, gp_axislv) != 0) {
-			haxis = gamepad_axis_value(0, gp_axislh);
-			vaxis = gamepad_axis_value(0, gp_axislv);
-			dir = point_direction(0, 0, haxis, vaxis);
-			imageDir = dir;		
+		if (oPlayerInput.haxis != 0 || oPlayerInput.vaxis != 0) {
+			dir = point_direction(0, 0, oPlayerInput.haxis, oPlayerInput.vaxis);
+			imageDir = oPlayerInput.stickDir;		
 			
 			//east throw correction
 			if (dir >= 337.5 || dir < 22.5) {
@@ -87,99 +77,84 @@ if (gamepad_is_connected(0)) {
 				dir = dir - 20;
 			}
 		}
-		
-		//sprite flipping
-		/*
-		if (dir < 90 || dir > 270) && (oPlayer.moveStateExecuted) {
-			oPlayer.facingRight = true;
-			oPlayer.image_xscale = 0.5;
-		}
-		if (dir < 270 && dir > 90) && (oPlayer.moveStateExecuted) {
-			oPlayer.facingRight = false;
-			oPlayer.image_xscale = -0.5;
-		}*/
-
 	}
 }
 
 //keyboard controls throw
 if (!gamepad_is_connected(0)) {
-	keyLeftHand = mouse_check_button_pressed(mb_left);
-	keyRightHand = mouse_check_button_pressed(mb_right);	
-	keyU = keyboard_check(ord("W"));
-	keyL = keyboard_check(ord("A"));
-	keyD = keyboard_check(ord("S"));
-	keyR = keyboard_check(ord("D"));
 	
 	//throwing while moving
 	if (!oPlayer.isLocked) {
 	
 		//east throw
-		if (keyR) {
+		if (oPlayerInput.key_right) {
 			imageDir = 0;
 			dir = 20;
 		}
 		//south throw
-		if (keyD) {
+		if (oPlayerInput.key_down) {
 			imageDir = 270;
 			dir = 270;
 		}
 		//north throw
-		if (keyU) {
+		if (oPlayerInput.key_up) {
 			imageDir = 90;
 			dir = 90;
 		}
 		//west throw
-		if (keyL) {
+		if (oPlayerInput.key_left) {
 			imageDir = 180;
 			dir = 160;
 		}
 		//northeast throw
-		if (keyU && keyR) {
+		if (oPlayerInput.key_up && oPlayerInput.key_right) {
 			imageDir = 45;
 			dir = 55;
 		}
 		//nortwest throw
-		if (keyU && keyL) {
+		if (oPlayerInput.key_up && oPlayerInput.key_left) {
 			imageDir = 135;
 			dir = 115;
 		}
 		//southwest throw
-		if (keyD && keyL) {
+		if (oPlayerInput.key_down && oPlayerInput.key_left) {
 			imageDir = 225;
 			dir = 225;
 		}
 		//southeast throw
-		if (keyD && keyR) {
+		if (oPlayerInput.key_down && oPlayerInput.key_right) {
 			imageDir = 315;
 			dir = 315;
 		}
 		//default drop
-		if (!keyU && !keyL && !keyD && !keyR) {
+		if (!oPlayerInput.key_up && !oPlayerInput.key_left && !oPlayerInput.key_down && !oPlayerInput.key_right) {
 			dir = 270;
 		}
 	}
 	
 	//throwing while locked
 	if (oPlayer.isLocked) {
-		dir = point_direction(x, y, mouse_x, mouse_y);
-		imageDir = dir;
+		imageDir = oPlayerInput.mouse_dir;
+		dir = oPlayerInput.mouse_dir;
+		
+		
 		
 		//east throw correction
-		if (dir >= 337.5 || dir < 22.5) {
+		if (oPlayerInput.mouse_dir >= 337.5 || oPlayerInput.mouse_dir < 22.5) {
 			dir = dir + 20;
+			
 		}
 		//west throw correction
-		if (dir >= 157.5 && dir < 202.5) {
+		if (oPlayerInput.mouse_dir >= 157.5 && oPlayerInput.mouse_dir < 202.5) {
 			dir = dir - 20;
 		}
 		
 		//sprite flipping
-		if (dir < 90 || dir >= 270) && (oPlayer.moveStateExecuted) {
+		if (oPlayerInput.mouse_dir < 90 || oPlayerInput.mouse_dir >= 270) && (oPlayer.moveStateExecuted) {
 			oPlayer.facingRight = true;
 			oPlayer.image_xscale = 0.5;
 		}
-		if (dir < 270 && dir >= 90) && (oPlayer.moveStateExecuted) {
+		if (oPlayerInput.mouse_dir < 270 && oPlayerInput.mouse_dir >= 90) && (oPlayer.moveStateExecuted) {
 			oPlayer.facingRight = false;;
 			oPlayer.image_xscale = -0.5;
 		}
@@ -189,7 +164,7 @@ if (!gamepad_is_connected(0)) {
 
 //throwing
 	//if we press the left button while an object is in left hand
-	if (keyLeftHand) {
+	if (oPlayerInput.key_left_hand) {
 		if (instance_exists(itemInLeftHand) and oPlayer.holdingL) {
 			itemInLeftHand.followingL = false;
 			throwingL = true;
@@ -202,7 +177,7 @@ if (!gamepad_is_connected(0)) {
 	}
 
 	//if we press the right button while an object is in right hand
-	if (keyRightHand) {
+	if (oPlayerInput.key_right_hand) {
 		if (instance_exists(itemInRightHand) and oPlayer.holdingR) {
 			itemInRightHand.followingR = false;
 			throwingR = true;

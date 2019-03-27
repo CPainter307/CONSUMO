@@ -1,5 +1,5 @@
 /// scr_extract_recipe(quality)
-if (position_meeting(x, y, oPlayerPickUpRadius) and (oPlayerPickUpRadius.keyLeftHand or oPlayerPickUpRadius.keyRightHand)) {
+if (position_meeting(x, y, oPlayerPickUpRadius) and (oPlayerInput.key_left_hand or oPlayerInput.key_right_hand)) {
 	timeline_index = 360;
 	timeline_running = false;
 	with(steam) instance_destroy();
