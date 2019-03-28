@@ -1,8 +1,12 @@
 /// @description Draws throwing line from Hacky (eventually)
 // You can write your code in this editor
+if ((oPlayer.holdingL || oPlayer.holdingR)) {
+	if (oPlayerInput.key_up || oPlayerInput.key_down || oPlayerInput.key_right || oPlayerInput.key_left) {
+		oHacky.sprite_index = sHackyChomp;
+	}
+}
 
-
-if (oPlayer.holdingL || oPlayer.holdingR) {
+if ((oPlayer.holdingL || oPlayer.holdingR) && oPlayer.isLocked) {
 	var xx = oPlayer.x;
 	var yy = oPlayer.y;
 	oHacky.sprite_index = sHackyChomp;

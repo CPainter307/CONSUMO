@@ -16,6 +16,7 @@ if (!gamepad_is_connected(0)) {
 
 //gamepad
 if (gamepad_is_connected(0)) {
+	key_up = (gamepad_axis_value(0,gp_axislv) < 0);
 	key_left = (gamepad_axis_value(0,gp_axislh) < 0);
 	key_right = (gamepad_axis_value(0,gp_axislh) > 0);
 	key_down = (gamepad_axis_value(0,gp_axislv) > 0);
