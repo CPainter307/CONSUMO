@@ -10,22 +10,22 @@ if (instance_exists(oPlayer)) {
 		}
 		if (oPlayer.facingRight)
 		{
-			image_xscale = 1;	
+			image_xscale = .2;	
 		}
 		else
 		{
-			image_xscale = -1;	
+			image_xscale = -.2;	
 		}
 	}
 
 	if (oPlayer.holdingL || oPlayer.holdingR) {
-		image_xscale = 1;
+		image_xscale = .2;
 		image_angle = oPlayerPickUpRadius.imageDir;
 		if (image_angle > 90) && (image_angle < 270) {
-			image_yscale = -1;	
+			image_yscale = -.2;	
 		}
 		else {
-			image_yscale = 1;	
+			image_yscale = .2;	
 		}
 		if (oPlayer.hsp = 0) {
 			x = (oPlayer.x) + sin(get_timer()/700000) * 10; 
@@ -91,14 +91,14 @@ if (instance_exists(oPlayer)) {
 		if (x > oPlayer.x && (oPlayerPickUpRadius.throwingL || oPlayerPickUpRadius.throwingR))
 		{
 			image_angle = 0;
-			image_yscale = 1;
-			image_xscale = 1;
+			image_yscale = .2;
+			image_xscale = .2;
 		}
 		if (x < oPlayer.x && (oPlayerPickUpRadius.throwingL || oPlayerPickUpRadius.throwingR))
 		{
 			image_angle = 0;	
-			image_yscale = 1;
-			image_xscale = 1;
+			image_yscale = .2;
+			image_xscale = .2;
 			oPlayer.imageDir = 0;
 		}
 	}

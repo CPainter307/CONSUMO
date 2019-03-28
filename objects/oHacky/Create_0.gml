@@ -7,3 +7,6 @@ yrad = 120;
 
 radX = 128;
 radY = 128;
+
+image_xscale = .2;
+image_yscale = .2;

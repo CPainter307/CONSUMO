@@ -11,6 +11,7 @@ if (!gamepad_is_connected(0)) {
 	key_locked = keyboard_check(vk_shift);
 	key_interact = keyboard_check_pressed(ord("E"))
 	mouse_dir = point_direction(x, y, mouse_x, mouse_y);
+	key_inventory = keyboard_check_pressed(vk_tab);
 }
 
 //gamepad
@@ -27,4 +28,5 @@ if (gamepad_is_connected(0)) {
 	haxis = gamepad_axis_value(0, gp_axislh);
 	vaxis = gamepad_axis_value(0, gp_axislv);
 	stickDir = point_direction(0, 0, haxis, vaxis);
+	key_inventory = gamepad_button_check_pressed(0, gp_face4)
 }

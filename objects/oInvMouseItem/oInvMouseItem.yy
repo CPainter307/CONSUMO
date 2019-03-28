@@ -1,44 +1,24 @@
 {
-    "id": "08dedb77-f020-431a-918d-643948a8c5db",
+    "id": "d68c6f25-234d-4849-a3c8-2f19008ff8f6",
     "modelName": "GMObject",
     "mvc": "1.0",
-    "name": "oPlayerInput",
+    "name": "oInvMouseItem",
     "eventList": [
         {
-            "id": "360af61f-5994-4a5f-9567-f421a4b4facc",
-            "modelName": "GMEvent",
-            "mvc": "1.0",
-            "IsDnD": false,
-            "collisionObjectId": "00000000-0000-0000-0000-000000000000",
-            "enumb": 0,
-            "eventtype": 0,
-            "m_owner": "08dedb77-f020-431a-918d-643948a8c5db"
-        },
-        {
-            "id": "d0a4e3ab-4790-4fd5-b88e-01c8ca46b2ff",
-            "modelName": "GMEvent",
-            "mvc": "1.0",
-            "IsDnD": false,
-            "collisionObjectId": "00000000-0000-0000-0000-000000000000",
-            "enumb": 0,
-            "eventtype": 3,
-            "m_owner": "08dedb77-f020-431a-918d-643948a8c5db"
-        },
-        {
-            "id": "1a00c326-d239-47b7-9d8b-87038592058d",
+            "id": "1c711d5c-7780-441d-aade-5443f32a958e",
             "modelName": "GMEvent",
             "mvc": "1.0",
             "IsDnD": false,
             "collisionObjectId": "00000000-0000-0000-0000-000000000000",
             "enumb": 64,
             "eventtype": 8,
-            "m_owner": "08dedb77-f020-431a-918d-643948a8c5db"
+            "m_owner": "d68c6f25-234d-4849-a3c8-2f19008ff8f6"
         }
     ],
     "maskSpriteId": "00000000-0000-0000-0000-000000000000",
     "overriddenProperties": null,
     "parentObjectId": "00000000-0000-0000-0000-000000000000",
-    "persistent": true,
+    "persistent": false,
     "physicsAngularDamping": 0.1,
     "physicsDensity": 0.5,
     "physicsFriction": 0.2,
