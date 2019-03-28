@@ -2,8 +2,8 @@
 // You can write your code in this editor
 if (instance_exists(oPlayer)) {
 	if (!oPlayer.holdingL && !oPlayer.holdingR) {	
-		x = oPlayer.x+xrad*sin(t+pi/2);
-		y = oPlayer.y+yrad*sin(2*t);
+		x = lerp(x, oPlayer.x+xrad*sin(t+pi/2), .3);
+		y = lerp(y, oPlayer.y+yrad*sin(2*t), .3);
 		t += dt;
 		if (t >= 2*pi) {
 			t -= 2*pi;
@@ -28,43 +28,43 @@ if (instance_exists(oPlayer)) {
 			image_yscale = .2;	
 		}
 		if (oPlayer.hsp = 0) {
-			x = (oPlayer.x) + sin(get_timer()/700000) * 10; 
-			y = (oPlayer.y - 75) + sin(get_timer()/750000) * 10;
+			x = lerp(x, (oPlayer.x) + sin(get_timer()/700000) * 10, .3); 
+			y = lerp(y, (oPlayer.y - 75) + sin(get_timer()/750000) * 10, .3);
 		}
 		//rotate sprite 	
 		if (!gamepad_is_connected(0)) {
 
 			if oPlayerInput.key_up {
-				x = (oPlayer.x) + sin(get_timer()/400000) * 2;
-				y = (oPlayer.y - 110) + sin(get_timer()/350000) * 2;		
+				x = lerp(x, (oPlayer.x) + sin(get_timer()/400000) * 2, .3);
+				y = lerp(y, (oPlayer.y - 110) + sin(get_timer()/350000) * 2, .3);		
 			}
 			if oPlayerInput.key_left	{
-				x = (oPlayer.x - 128) + sin(get_timer()/400000) * 2;
-				y = (oPlayer.y) + sin(get_timer()/350000) * 2;	
+				x = lerp(x, (oPlayer.x - 128) + sin(get_timer()/400000) * 2, .3);
+				y = lerp(y, (oPlayer.y) + sin(get_timer()/350000) * 2, .3);	
 			}
 			if oPlayerInput.key_right	{
-				x = (oPlayer.x + 128) + sin(get_timer()/400000) * 2;
-				y = (oPlayer.y) + sin(get_timer()/350000) * 2;	
+				x = lerp(x, (oPlayer.x + 128) + sin(get_timer()/400000) * 2, .3);
+				y = lerp(y, (oPlayer.y) + sin(get_timer()/350000) * 2, .3);	
 			}
 			if oPlayerInput.key_down	{
-				x = (oPlayer.x) + sin(get_timer()/400000) * 2;
-				y = (oPlayer.y + 100) + sin(get_timer()/350000) * 2;	
+				x = lerp(x, (oPlayer.x) + sin(get_timer()/400000) * 2, .3);
+				y = lerp(y, (oPlayer.y + 100) + sin(get_timer()/350000) * 2, .3);	
 			}
 			if oPlayerInput.key_down && oPlayerInput.key_right	{
-				x = (oPlayer.x + 70) + sin(get_timer()/400000) * 2;
-				y = (oPlayer.y + 100) + sin(get_timer()/350000) * 2;
+				x = lerp(x, (oPlayer.x + 70) + sin(get_timer()/400000) * 2, .3);
+				y = lerp(y, (oPlayer.y + 100) + sin(get_timer()/350000) * 2, .3);
 			}
 			if oPlayerInput.key_up && oPlayerInput.key_right {
-				x = (oPlayer.x + 70) + sin(get_timer()/400000) * 2;
-				y = (oPlayer.y - 100) + sin(get_timer()/350000) * 2;
+				x = lerp(x, (oPlayer.x + 70) + sin(get_timer()/400000) * 2, .3);
+				y = lerp(y, (oPlayer.y - 100) + sin(get_timer()/350000) * 2, .3);
 			}
 			if oPlayerInput.key_down && oPlayerInput.key_left {
-				x = (oPlayer.x - 70) + sin(get_timer()/400000) * 2;
-				y = (oPlayer.y + 100) + sin(get_timer()/350000) * 2;
+				x = lerp(x, (oPlayer.x - 70) + sin(get_timer()/400000) * 2, .3);
+				y = lerp(y, (oPlayer.y + 100) + sin(get_timer()/350000) * 2, .3);
 			}
 			if oPlayerInput.key_up && oPlayerInput.key_left {
-				x = (oPlayer.x - 70) + sin(get_timer()/400000) * 2;
-				y = (oPlayer.y - 100) + sin(get_timer()/350000) * 2;
+				x = lerp(x, (oPlayer.x - 70) + sin(get_timer()/400000) * 2, .3);
+				y = lerp(y, (oPlayer.y - 100) + sin(get_timer()/350000) * 2, .3);
 			}
 			sprite_index = sHacky;
 			if oPlayer.isLocked {

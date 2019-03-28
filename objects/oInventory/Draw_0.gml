@@ -44,16 +44,34 @@ if (showInv) {
 	
 	for (var i = 0; i < maxItems; i++) {
 		if (slotSelected[i]) {
-			if (oPlayerInput.key_left_hand and instance_exists(oPlayerPickUpRadius.itemInLeftHand)) {
-				var temp = oPlayerPickUpRadius.itemInLeftHand;
+			if (oPlayerInput.key_left_hand and oPlayerPickUpRadius.itemInLeftHand == noone and global.inventory[i] != noone) { // case 2: hand empty, slot full
 				oPlayerPickUpRadius.itemInLeftHand = global.inventory[i];
-				global.inventory[i] = temp;
+				instance_create_depth(oPlayer.x, oPlayer.y, -y, oPlayerPickUpRadius.itemInLeftHand);
+				global.inventory[i] = noone;
+				oPlayerPickUpRadius.holdingL = false;
+				show_message(oPlayerPickUpRadius.itemInLeftHand.ingrName)
+				if (global.inventory[i] != noone) show_message(global.inventory[i].ingrName);
 			}
-			if (oPlayerInput.key_right_hand and instance_exists(oPlayerPickUpRadius.itemInRightHand)) {
+			else if (oPlayerInput.key_left_hand and oPlayerPickUpRadius.itemInLeftHand != noone and global.inventory[i] == noone) { // case 3: hand full, slot empty
+				global.inventory[i] = oPlayerPickUpRadius.itemInLeftHand;
+				with (oPlayerPickUpRadius.itemInLeftHand) instance_destroy();
+				oPlayerPickUpRadius.itemInLeftHand = noone;
+				oPlayerPickUpRadius.holdingL = false;
+				if (oPlayerPickUpRadius.itemInLeftHand != noone) show_message(oPlayerPickUpRadius.itemInLeftHand.ingrName)
+				show_message(global.inventory[i].ingrName);
+			}
+			/*
+			if (oPlayerInput.key_right_hand and oPlayerPickUpRadius.itemInRightHand != noone) {
 				var temp = oPlayerPickUpRadius.itemInRightHand;
 				oPlayerPickUpRadius.itemInRightHand = global.inventory[i];
 				global.inventory[i] = temp;
-			}
+				oPlayerPickUpRadius.holdingR = false;
+			}  else if (oPlayerInput.key_right_hand and oPlayerPickUpRadius.itemInRightHand == noone) {
+				var temp = oPlayerPickUpRadius.itemInRightHand;
+				oPlayerPickUpRadius.itemInRightHand = global.inventory[i];
+				global.inventory[i] = temp;
+				oPlayerPickUpRadius.holdingR = true;
+			}*/
 		}
 	}
 	
