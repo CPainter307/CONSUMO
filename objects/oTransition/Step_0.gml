@@ -37,6 +37,13 @@ if (mode != TRANS_MODE.OFF)
 				game_restart();
 				break;
 			}
+			case TRANS_MODE.ROOM_RESTART:
+			{
+				mode = TRANS_MODE.INTRO;
+				instance_destroy(oPlayer);
+				room_restart();
+				break;
+			}
 		}
 	}
 }
