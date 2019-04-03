@@ -1,11 +1,11 @@
 Class = "Enemy";
 
-maxHealth = 1000;
+maxHealth = 300;
 currentHealth = maxHealth;
 
-baseAttack = 100;
-baseDefense = 100;
-baseSpeed = 100;
+baseAttack = 10;
+baseDefense = 10;
+baseSpeed = 10;
 
 healthMultiplier = 1;
 attackMultiplier = 1;

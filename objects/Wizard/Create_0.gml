@@ -1,12 +1,12 @@
 event_inherited();
 Class = "Adventurer";
 
-maxHealth = 250;
+maxHealth = 50;
 currentHealth = maxHealth;
 
-baseAttack = 90;
-baseDefense = 38;
-baseSpeed = 60;
+baseAttack = 30;
+baseDefense = 10;
+baseSpeed = 20;
 
 healthMultiplier = 1;
 attackMultiplier = 1.15;

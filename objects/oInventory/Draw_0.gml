@@ -9,7 +9,8 @@ if (showInv) {
 	var dirx = (camera_get_view_x(view_camera[0]) + camera_get_view_width(view_camera[0])/2)
 	var diry = (camera_get_view_y(view_camera[0]) + camera_get_view_height(view_camera[0])/2)
 	var _dir = point_direction(dirx, diry, mouse_x, mouse_y);
-	draw_arrow(dirx, diry, mouse_x, mouse_y, 2);
+	draw_set_color(c_white)
+	draw_arrow(dirx, diry, mouse_x, mouse_y, 8);
 	
 	draw_sprite(sRadialMenu, 0, invx, invy);
 

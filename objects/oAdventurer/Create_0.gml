@@ -5,23 +5,23 @@ currentHealth = 50;
 
 baseAttack = 0;
 attack = 0;
-maxattack = 100;
+maxattack = 30;
 
 baseDefense = 0;
 defense = 0;
-maxdefense = 100;
+maxdefense = 30;
 
 baseSpeed = 0;
 spd = 0;
-maxspeed = 100;
+maxspeed = 30;
 
 baseElmAtk = 0;
 elmatk = 0;
-maxelmatk = 100;
+maxelmatk = 30;
 
 baseElmDef = 0
 elmdef = 0;
-maxelmdef = 100;
+maxelmdef = 30;
 
 hunger = 0;
 maxhunger = 100;
