@@ -1,8 +1,12 @@
 /// @description creates gui that shows player hand inventory
 
+var gwidth = global.view_width, gheight = global.view_height;
+
 //draw white windows
-draw_sprite(sHandWindow, 0, 300, 820);
-draw_sprite(sHandWindow, 0, 1600, 820);
+//draw_sprite(sHandWindow, 0, gwidth*1/6, gheight*41/54);
+//draw_sprite(sHandWindow, 0, gwidth*5/6, gheight*41/54);
+var xl_start = gwidth*1/6, xr_start = gwidth*5/6, y_start = gheight*67.5/100, w_width=gwidth*1/20*1.5, w_height=gheight*17/120*1.5
+draw_sprite_stretched(sHandWindow, 0, xl_start, y_start, w_width, w_height);
 
 //draw controller scheme
 if (gamepad_is_connected(0)) {
