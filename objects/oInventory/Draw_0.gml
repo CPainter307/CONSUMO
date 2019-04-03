@@ -43,42 +43,50 @@ if (showInv) {
 	}
 	
 	for (var i = 0; i < maxItems; i++) {
-		if (slotSelected[i]) {
-			if (oPlayerInput.key_left_hand and oPlayerPickUpRadius.itemInLeftHand == noone and global.inventory[i] != noone) { // case 2: hand empty, slot full
-				oPlayerPickUpRadius.itemInLeftHand = global.inventory[i];
-				instance_create_depth(oPlayer.x, oPlayer.y, -y, oPlayerPickUpRadius.itemInLeftHand);
-				global.inventory[i] = noone;
-				oPlayerPickUpRadius.holdingL = false;
-				show_message(oPlayerPickUpRadius.itemInLeftHand.ingrName)
-				if (global.inventory[i] != noone) show_message(global.inventory[i].ingrName);
-			}
-			else if (oPlayerInput.key_left_hand and oPlayerPickUpRadius.itemInLeftHand != noone and global.inventory[i] == noone) { // case 3: hand full, slot empty
-				global.inventory[i] = oPlayerPickUpRadius.itemInLeftHand;
-				with (oPlayerPickUpRadius.itemInLeftHand) instance_destroy();
-				oPlayerPickUpRadius.itemInLeftHand = noone;
-				oPlayerPickUpRadius.holdingL = false;
-				if (oPlayerPickUpRadius.itemInLeftHand != noone) show_message(oPlayerPickUpRadius.itemInLeftHand.ingrName)
-				show_message(global.inventory[i].ingrName);
-			}
-			/*
-			if (oPlayerInput.key_right_hand and oPlayerPickUpRadius.itemInRightHand != noone) {
-				var temp = oPlayerPickUpRadius.itemInRightHand;
-				oPlayerPickUpRadius.itemInRightHand = global.inventory[i];
-				global.inventory[i] = temp;
-				oPlayerPickUpRadius.holdingR = false;
-			}  else if (oPlayerInput.key_right_hand and oPlayerPickUpRadius.itemInRightHand == noone) {
-				var temp = oPlayerPickUpRadius.itemInRightHand;
-				oPlayerPickUpRadius.itemInRightHand = global.inventory[i];
-				global.inventory[i] = temp;
-				oPlayerPickUpRadius.holdingR = true;
-			}*/
+		if (global.inventory[i] != noone) {
+			//draw sprite corresponding to item into inventory
+			draw_sprite(global.inventory[i].sprite_index, 0, invx+slotX[i], invy+slotY[i]);
 		}
 	}
 	
 	for (var i = 0; i < maxItems; i++) {
-		if (global.inventory[i] != noone) {
-			//draw sprite corresponding to item into inventory
-			draw_sprite(global.inventory[i].sprite_index, 0, invx+slotX[i], invy+slotY[i]);
+		if (slotSelected[i]) {
+			if (oPlayerInput.key_left_hand) {
+				var temp = global.inventory[i];
+				var h = oPlayerPickUpRadius.itemInLeftHand
+				if (h != noone) {
+					h.x = oIngredientHolder.x;
+					h.y = oIngredientHolder.y;
+					oPlayer.holdingL = false;
+					h.followingL = false;
+				} else {
+					oPlayer.holdingL = true;
+				}
+				global.inventory[i] = h;
+				oPlayerPickUpRadius.itemInLeftHand = temp;
+				if (oPlayerPickUpRadius.itemInLeftHand != noone) {
+					oPlayer.holdingL = true;
+					oPlayerPickUpRadius.itemInLeftHand.followingL = true;
+				}
+			}
+			if (oPlayerInput.key_right_hand) {
+				var temp = global.inventory[i];
+				var h = oPlayerPickUpRadius.itemInRightHand
+				if (h != noone) {
+					h.x = oIngredientHolder.x;
+					h.y = oIngredientHolder.y;
+					oPlayer.holdingR = false;
+					h.followingR = false;
+				} else {
+					oPlayer.holdingR = true;
+				}
+				global.inventory[i] = h;
+				oPlayerPickUpRadius.itemInRightHand = temp;
+				if (oPlayerPickUpRadius.itemInRightHand != noone) {
+					oPlayer.holdingR = true;
+					oPlayerPickUpRadius.itemInRightHand.followingR = true;
+				}
+			}
 		}
 	}
 }

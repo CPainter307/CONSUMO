@@ -170,6 +170,8 @@ if (!showInv) {
 			if (instance_exists(itemInLeftHand) and oPlayer.holdingL) {
 				itemInLeftHand.followingL = false;
 				throwingL = true;
+				itemInLeftHand.x = x;
+				itemInLeftHand.y = y;
 				itemInLeftHand.speed = 25;
 				itemInLeftHand.direction = dir;
 			} else {
@@ -183,6 +185,8 @@ if (!showInv) {
 			if (instance_exists(itemInRightHand) and oPlayer.holdingR) {
 				itemInRightHand.followingR = false;
 				throwingR = true;
+				itemInRightHand.x = x;
+				itemInRightHand.y = y;
 				itemInRightHand.speed = 25;
 				itemInRightHand.direction = dir;
 			} else {

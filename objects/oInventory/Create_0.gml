@@ -25,8 +25,8 @@ slotX[3] = 324;  slotY[3] = 639;
 slotX[4] = 77;  slotY[4] = 501;
 slotX[5] = 77;  slotY[5] = 224;
 
-scr_inv_add(oFish);
-scr_inv_add(oFish);
+//scr_inv_add(oFish);
+//scr_inv_add(oFish);
 
 //slotValue[] = 
 
