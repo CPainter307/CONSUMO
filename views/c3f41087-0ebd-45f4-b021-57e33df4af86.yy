@@ -4,10 +4,11 @@
     "mvc": "1.1",
     "name": "c3f41087-0ebd-45f4-b021-57e33df4af86",
     "children": [
+        "f02e5b50-8c6f-417d-a4f8-c274ea9c729f",
+        "b3508d53-212e-49ae-9493-3ccee023f16b",
         "acd15b18-e51e-4f24-9a3b-b6f65ac779ee",
-        "7f0a756b-06a2-4172-8c69-02c5e332de50",
-        "fc57735a-0ed7-4097-b614-9c34d4ee1d01",
-        "97729a27-8cd0-445a-9fd9-e031d6cbd042"
+        "a58ded2c-97b4-4b9b-93ec-8cca274f515e",
+        "05c46c17-db28-4a4d-8c77-c23305a61e22"
     ],
     "filterType": "GMObject",
     "folderName": "Adventurers",

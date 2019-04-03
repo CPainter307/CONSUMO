@@ -1,6 +1,11 @@
 oPlayer.moveStateExecuted = true;
 var framesInAir = 0;
 
+//room restart
+if(oPlayerInput.key_room_reset) {
+	SlideTransition(TRANS_MODE.ROOM_RESTART);
+}
+
 if(oPlayerInput.key_jump) {
 	jumpQueuFramesElapsed = 0;
 }
