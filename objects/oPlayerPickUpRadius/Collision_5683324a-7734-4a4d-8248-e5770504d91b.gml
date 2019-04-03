@@ -24,41 +24,37 @@ if (!showInv) {
 		//if both buttons are pressed simultaneously
 		if (oPlayerInput.key_left_hand && oPlayerInput.key_right_hand) {
 				//default to left hand
-				if (oPlayer.holdingL ==  false && weCanPickUp) {
+				if (oPlayerPickUpRadius.itemInLeftHand == noone && weCanPickUp) {
 					ID.followingL = true;
 					ID.highlighted = false;
 					itemInLeftHand = ID; //now we know what's in our left hand
-					oPlayer.holdingL = true; //not sure if this is the best place to put this yet
 					weCanPickUp = false; //prevents empty right hand crash
 				}
 				//next to right hand
-				if (oPlayer.holdingR == false && weCanPickUp) {
+				if (oPlayerPickUpRadius.itemInRightHand == noone && weCanPickUp) {
 					ID.followingR = true;
 					ID.highlighted = false;
 					itemInRightHand = ID; //now we know what's in our right hand
-					oPlayer.holdingR = true; //not sure if this is the best place to put this yet
 					weCanPickUp = false; //prevents empty left hand crash
 				}
 			}
 		//left hand pick up
 		if (oPlayerInput.key_left_hand && weCanPickUp) {
 			// if player isn't holding something in left hand, get picked up
-			if (oPlayer.holdingL == false) {
+			if (oPlayerPickUpRadius.itemInLeftHand == noone) {
 					ID.followingL = true;
 					ID.highlighted = false;
 					itemInLeftHand = ID; //now we know what's in our left hand
-					oPlayer.holdingL = true; //not sure if this is the best place to put this yet
 					weCanPickUp = false; //prevents empty right hand crash
 			}
 		}
 		//right hand pick up
 		if (oPlayerInput.key_right_hand && weCanPickUp) {
 			//if player isn't holding something in right hand, get picked up
-			if (oPlayer.holdingR == false) {
+			if (oPlayerPickUpRadius.itemInRightHand == noone) {
 					ID.followingR = true;
 					ID.highlighted = false;
 					itemInRightHand = ID; //now we know what's in our right hand
-					oPlayer.holdingR = true; //not sure if this is the best place to put this yet
 					weCanPickUp = false; //prevents empty left hand crash
 			}
 		}
@@ -72,30 +68,27 @@ if (!showInv) {
 		//if both buttons are pressed simultaneously
 		if (oPlayerInput.key_left_hand && oPlayerInput.key_right_hand) {
 				//default to left hand
-				if (oPlayer.holdingL ==  false && weCanPickUp) {
+				if (oPlayerPickUpRadius.itemInLeftHand == noone && weCanPickUp) {
 					ID.followingL = true;
 					ID.highlighted = false;
 					itemInLeftHand = ID; //now we know what's in our left hand
-					oPlayer.holdingL = true; //not sure if this is the best place to put this yet
 					weCanPickUp = false; //prevents empty right hand crash
 				}
 				//next to right hand
-				if (oPlayer.holdingR == false && weCanPickUp) {
+				if (oPlayerPickUpRadius.itemInRightHand == noone && weCanPickUp) {
 					ID.followingR = true;
 					ID.highlighted = false;
 					itemInRightHand = ID; //now we know what's in our right hand
-					oPlayer.holdingR = true; //not sure if this is the best place to put this yet
 					weCanPickUp = false; //prevents empty left hand crash
 				}
 			}
 		//left hand pick up
 		if (oPlayerInput.key_left_hand && weCanPickUp) {
 			// if player isn't holding something in left hand, get picked up
-			if (oPlayer.holdingL == false) {
+			if (oPlayerPickUpRadius.itemInLeftHand == noone) {
 					ID.followingL = true;
 					ID.highlighted = false;
 					itemInLeftHand = ID; //now we know what's in our left hand
-					oPlayer.holdingL = true; //not sure if this is the best place to put this yet
 					weCanPickUp = false; //prevents empty right hand crash
 			}
 		}
@@ -103,11 +96,10 @@ if (!showInv) {
 		if (oPlayerInput.key_right_hand
 		&& weCanPickUp) {
 			//if player isn't holding something in right hand, get picked up
-			if (oPlayer.holdingR == false) {
+			if (oPlayerPickUpRadius.itemInRightHand == noone) {
 					ID.followingR = true;
 					ID.highlighted = false;
 					itemInRightHand = ID; //now we know what's in our right hand
-					oPlayer.holdingR = true; //not sure if this is the best place to put this yet
 					weCanPickUp = false; //prevents empty left hand crash
 			}
 		}

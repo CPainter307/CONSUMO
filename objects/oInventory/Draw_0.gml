@@ -58,15 +58,12 @@ if (showInv) {
 				if (h != noone) {
 					h.x = oIngredientHolder.x;
 					h.y = oIngredientHolder.y;
-					oPlayer.holdingL = false;
 					h.followingL = false;
 				} else {
-					oPlayer.holdingL = true;
 				}
 				global.inventory[i] = h;
 				oPlayerPickUpRadius.itemInLeftHand = temp;
 				if (oPlayerPickUpRadius.itemInLeftHand != noone) {
-					oPlayer.holdingL = true;
 					oPlayerPickUpRadius.itemInLeftHand.followingL = true;
 				}
 			}
@@ -76,15 +73,12 @@ if (showInv) {
 				if (h != noone) {
 					h.x = oIngredientHolder.x;
 					h.y = oIngredientHolder.y;
-					oPlayer.holdingR = false;
 					h.followingR = false;
 				} else {
-					oPlayer.holdingR = true;
 				}
 				global.inventory[i] = h;
 				oPlayerPickUpRadius.itemInRightHand = temp;
 				if (oPlayerPickUpRadius.itemInRightHand != noone) {
-					oPlayer.holdingR = true;
 					oPlayerPickUpRadius.itemInRightHand.followingR = true;
 				}
 			}

@@ -14,7 +14,7 @@ if (oPlayerInput.key_jump) {
 	state = scr_move_state;
 }
 
-if (oPlayer.holdingL && oPlayer.holdingR) {
+if (oPlayerPickUpRadius.itemInLeftHand != noone && oPlayerPickUpRadius.itemInRightHand != noone) {
 	//oPlayer.moveStateExecuted = true
 	state = scr_move_state;
 }

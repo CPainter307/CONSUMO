@@ -1,7 +1,7 @@
 /// @description Insert description here
 // You can write your code in this editor
 if (instance_exists(oPlayer)) {
-	if (!oPlayer.holdingL && !oPlayer.holdingR) {	
+	if (oPlayerPickUpRadius.itemInLeftHand == noone && oPlayerPickUpRadius.itemInRightHand == noone) {	
 		x = lerp(x, oPlayer.x+xrad*sin(t+pi/2), .3);
 		y = lerp(y, oPlayer.y+yrad*sin(2*t), .3);
 		t += dt;
@@ -18,7 +18,7 @@ if (instance_exists(oPlayer)) {
 		}
 	}
 
-	if (oPlayer.holdingL || oPlayer.holdingR) {
+	if (oPlayerPickUpRadius.itemInLeftHand != noone || oPlayerPickUpRadius.itemInRightHand != noone) {
 		image_xscale = .2;
 		image_angle = oPlayerPickUpRadius.imageDir;
 		if (image_angle > 90) && (image_angle < 270) {
@@ -139,7 +139,7 @@ if (instance_exists(oPlayer)) {
 			}
 		}
 	}
-	if (!oPlayer.holdingL || !oPlayer.holdingR)
+	if (oPlayerPickUpRadius.itemInLeftHand == noone || oPlayerPickUpRadius.itemInRightHand == noone)
 	{
 		if (x > oPlayer.x && (oPlayerPickUpRadius.throwingL || oPlayerPickUpRadius.throwingR))
 		{

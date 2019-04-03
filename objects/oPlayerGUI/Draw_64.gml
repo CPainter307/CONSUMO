@@ -15,7 +15,7 @@ if (!gamepad_is_connected(0)) {
 }
 
 //draw objects in hands (currently the "are we holding" check
-if (oPlayer.holdingL = false) {
+if (oPlayerPickUpRadius.itemInLeftHand == noone) {
 	draw_sprite(sEmpty, 0, 300, 850);
 }
 else {
@@ -37,7 +37,7 @@ else {
 		scr_draw_icons(300, 695, leftH, draw_icons_l, which_icons_l);
 	}
 }
-if (oPlayer.holdingR = false) {
+if (oPlayerPickUpRadius.itemInRightHand == noone) {
 	draw_sprite(sEmpty, 0, 1600, 850);
 }
 else {

@@ -21,12 +21,12 @@ weCanPickUp = false;
 
 //reset left throw flags
 if (throwingL) {
-	oPlayer.holdingL = false;
+	itemInLeftHand = noone;
 	throwingL = false;
 }
 
 //reset right throw flags
 if (throwingR) {
-	oPlayer.holdingR = false;
+	itemInRightHand = noone;
 	throwingR = false;
 }

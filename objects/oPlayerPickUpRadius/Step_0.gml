@@ -167,7 +167,7 @@ if (!showInv) {
 	//throwing
 		//if we press the left button while an object is in left hand
 		if (oPlayerInput.key_left_hand) {
-			if (instance_exists(itemInLeftHand) and oPlayer.holdingL) {
+			if (instance_exists(itemInLeftHand) and oPlayerPickUpRadius.itemInLeftHand != noone) {
 				itemInLeftHand.followingL = false;
 				throwingL = true;
 				itemInLeftHand.x = x;
@@ -175,14 +175,13 @@ if (!showInv) {
 				itemInLeftHand.speed = 25;
 				itemInLeftHand.direction = dir;
 			} else {
-				oPlayer.holdingL = false;
 				throwingL = false;
 			}
 		}
 
 		//if we press the right button while an object is in right hand
 		if (oPlayerInput.key_right_hand) {
-			if (instance_exists(itemInRightHand) and oPlayer.holdingR) {
+			if (instance_exists(itemInRightHand) and oPlayerPickUpRadius.itemInRightHand != noone) {
 				itemInRightHand.followingR = false;
 				throwingR = true;
 				itemInRightHand.x = x;
@@ -190,7 +189,6 @@ if (!showInv) {
 				itemInRightHand.speed = 25;
 				itemInRightHand.direction = dir;
 			} else {
-				oPlayer.holdingR = false;
 				throwingR = false;
 			}
 		}
