@@ -1,12 +1,14 @@
 /// @description creates gui that shows player hand inventory
-
+display_set_gui_size(view_wport[0], view_hport[0]);
 var gwidth = global.view_width, gheight = global.view_height;
 
 //draw white windows
-//draw_sprite(sHandWindow, 0, gwidth*1/6, gheight*41/54);
-//draw_sprite(sHandWindow, 0, gwidth*5/6, gheight*41/54);
-var xl_start = gwidth*1/6, xr_start = gwidth*5/6, y_start = gheight*67.5/100, w_width=gwidth*1/20*1.5, w_height=gheight*17/120*1.5
-draw_sprite_stretched(sHandWindow, 0, xl_start, y_start, w_width, w_height);
+draw_sprite(sHandWindow, 0, 300, 820);
+draw_sprite(sHandWindow, 0, 1600, 820);
+//var xl_start = gwidth*1/6, xr_start = gwidth*5/6, y_start = gheight*67.5/100, w_width=gwidth*1/20*1.5, w_height=gheight*17/120*1.5
+//draw_sprite_stretched(sHandWindow, 0, xl_start, y_start, w_width, w_height);
+//draw_sprite_stretched(sHandWindow, 0, xr_start, y_start, w_width, w_height);
+
 
 //draw controller scheme
 if (gamepad_is_connected(0)) {
@@ -92,6 +94,8 @@ if (instance_exists(adv1)) {
 	draw_set_halign(fa_left);
 	draw_set_valign(fa_center);
 	draw_text(xpos+105, ypos+29, "HEALTH:")*/
+
+
 }
 var xpos = view_xport[0]+46;
 var ypos = view_yport[0]+234;
@@ -112,6 +116,8 @@ if (instance_exists(adv2)) {
 	/*draw_set_color(textCol);
 	draw_set_font(fBattleTextThick);
 	draw_text(xpos+105, ypos+29, "HEALTH:")*/
+	
+
 }
 var xpos = view_xport[0]+46;
 var ypos = view_yport[0]+434;
@@ -132,6 +138,7 @@ if (instance_exists(adv3)) {
 	/*draw_set_color(textCol);
 	draw_set_font(fBattleTextThick);
 	draw_text(xpos+105, ypos+29, "HEALTH:")*/
+	
 }
 
 // textbox gui

@@ -71,6 +71,7 @@ if (!showInv) {
 				imageDir = oPlayerInput.stickDir;		
 			
 				//east throw correction
+				/**
 				if (dir >= 337.5 || dir < 22.5) {
 					dir = dir + 20;
 				}
@@ -78,6 +79,7 @@ if (!showInv) {
 				if (dir >= 157.5 && dir < 202.5) {
 					dir = dir - 20;
 				}
+				*/
 			}
 		}
 	}
@@ -138,10 +140,9 @@ if (!showInv) {
 		if (oPlayer.isLocked) {
 			imageDir = oPlayerInput.mouse_dir;
 			dir = oPlayerInput.mouse_dir;
-		
-		
-		
+				
 			//east throw correction
+			/**
 			if (oPlayerInput.mouse_dir >= 337.5 || oPlayerInput.mouse_dir < 22.5) {
 				dir = dir + 20;
 			
@@ -150,6 +151,7 @@ if (!showInv) {
 			if (oPlayerInput.mouse_dir >= 157.5 && oPlayerInput.mouse_dir < 202.5) {
 				dir = dir - 20;
 			}
+			**/
 		
 			//sprite flipping
 			if (oPlayerInput.mouse_dir < 90 || oPlayerInput.mouse_dir >= 270) && (oPlayer.moveStateExecuted) {

@@ -37,6 +37,7 @@ if (followingR == true) {
 	//other.solid = false; 
 }
 
+
 //if we're just bro-chad chilling homie
 if (!followingL && !followingR && !position_meeting(x, y, oWall)) {
 	gravity = 1;
@@ -46,3 +47,4 @@ if (!followingL && !followingR && !position_meeting(x, y, oWall)) {
 if (!followingL && !followingR) {
 	depth = objDepth;
 }
+
