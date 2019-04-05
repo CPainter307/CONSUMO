@@ -7,6 +7,8 @@ highlighted = false;
 playedPickupSound = false;
 objDepth = depth;
 
+pickUpSound = snd_pickup_generic;
+
 thisSprite = sprite_index;
 gravity = 1;
 gravity_direction = 270;

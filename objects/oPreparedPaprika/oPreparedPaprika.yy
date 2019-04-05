@@ -5,7 +5,7 @@
     "name": "oPreparedPaprika",
     "eventList": [
         {
-            "id": "5a78fa7f-6819-462f-9bbf-4b4c798b7ec2",
+            "id": "04414ac1-9018-47db-9da1-791c7df1fd0a",
             "modelName": "GMEvent",
             "mvc": "1.0",
             "IsDnD": false,
@@ -17,7 +17,7 @@
     ],
     "maskSpriteId": "00000000-0000-0000-0000-000000000000",
     "overriddenProperties": null,
-    "parentObjectId": "a6abf43a-fcba-4abc-b6a2-da655408e91f",
+    "parentObjectId": "f9a099dd-a875-4445-a9d5-4aaf4bb0df31",
     "persistent": false,
     "physicsAngularDamping": 0.1,
     "physicsDensity": 0.5,

@@ -5,16 +5,6 @@
     "name": "oMeat",
     "eventList": [
         {
-            "id": "40f1c524-4e2f-49cc-bb65-78c26d13cbea",
-            "modelName": "GMEvent",
-            "mvc": "1.0",
-            "IsDnD": false,
-            "collisionObjectId": "00000000-0000-0000-0000-000000000000",
-            "enumb": 0,
-            "eventtype": 3,
-            "m_owner": "9185db79-f131-46fd-aac8-d2d5a644f284"
-        },
-        {
             "id": "25d9c57d-7da0-46ee-bc50-beba6eb2be59",
             "modelName": "GMEvent",
             "mvc": "1.0",

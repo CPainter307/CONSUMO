@@ -5,7 +5,7 @@
     "name": "oPreparedMushroom",
     "eventList": [
         {
-            "id": "f413ec31-9a37-4b13-ba74-3ce5c540a842",
+            "id": "3bcd5e6b-423c-4f2b-a51f-eed4c68a65ee",
             "modelName": "GMEvent",
             "mvc": "1.0",
             "IsDnD": false,
@@ -17,7 +17,7 @@
     ],
     "maskSpriteId": "00000000-0000-0000-0000-000000000000",
     "overriddenProperties": null,
-    "parentObjectId": "a6abf43a-fcba-4abc-b6a2-da655408e91f",
+    "parentObjectId": "8c0246e0-5783-4535-939a-0dbe9da84633",
     "persistent": false,
     "physicsAngularDamping": 0.1,
     "physicsDensity": 0.5,

@@ -5,7 +5,7 @@
     "name": "oPreparedLettuce",
     "eventList": [
         {
-            "id": "14f259cd-bf93-4a78-8211-22e1aa687873",
+            "id": "4e435b58-052b-40f8-aa5e-8a067f1fe9d9",
             "modelName": "GMEvent",
             "mvc": "1.0",
             "IsDnD": false,
@@ -17,7 +17,7 @@
     ],
     "maskSpriteId": "00000000-0000-0000-0000-000000000000",
     "overriddenProperties": null,
-    "parentObjectId": "a6abf43a-fcba-4abc-b6a2-da655408e91f",
+    "parentObjectId": "8f06968b-1d66-490c-b4fb-19ca0d977ea0",
     "persistent": false,
     "physicsAngularDamping": 0.1,
     "physicsDensity": 0.5,

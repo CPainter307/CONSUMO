@@ -5,7 +5,7 @@
     "name": "oPreparedFish",
     "eventList": [
         {
-            "id": "d3a2cbb1-8e9e-4570-b51d-3a58b2369c32",
+            "id": "9a0eea57-7257-4995-9cd9-4b75622648e4",
             "modelName": "GMEvent",
             "mvc": "1.0",
             "IsDnD": false,
@@ -17,7 +17,7 @@
     ],
     "maskSpriteId": "00000000-0000-0000-0000-000000000000",
     "overriddenProperties": null,
-    "parentObjectId": "a6abf43a-fcba-4abc-b6a2-da655408e91f",
+    "parentObjectId": "da4a7456-a242-46f2-8a01-79ab75d75d89",
     "persistent": false,
     "physicsAngularDamping": 0.1,
     "physicsDensity": 0.5,

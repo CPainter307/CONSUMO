@@ -1,2 +1,9 @@
 event_inherited();
-scr_play_pickup_sound(snd_pickup_meat);
+if (followingL || followingR) {
+	if (oPlayer.facingRight) {
+		image_xscale = 0.4;
+	}
+	else {
+		image_xscale = -0.4;
+	}
+}

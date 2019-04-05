@@ -5,7 +5,7 @@
     "name": "oPreparedOnion",
     "eventList": [
         {
-            "id": "ef3b43f6-efd7-427a-a584-21e2d8cfcb24",
+            "id": "c6f797eb-40d6-4ab7-bfc6-4faea0bb6f72",
             "modelName": "GMEvent",
             "mvc": "1.0",
             "IsDnD": false,
@@ -17,7 +17,7 @@
     ],
     "maskSpriteId": "00000000-0000-0000-0000-000000000000",
     "overriddenProperties": null,
-    "parentObjectId": "a6abf43a-fcba-4abc-b6a2-da655408e91f",
+    "parentObjectId": "c14b810c-dd35-4810-b191-b908f8139770",
     "persistent": false,
     "physicsAngularDamping": 0.1,
     "physicsDensity": 0.5,

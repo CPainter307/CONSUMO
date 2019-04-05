@@ -5,7 +5,7 @@
     "name": "oPreparedRice",
     "eventList": [
         {
-            "id": "8d426eba-4150-4b0c-a3e0-44ebb7d77f0d",
+            "id": "16a3d5b5-a633-460c-8405-465f89077ad5",
             "modelName": "GMEvent",
             "mvc": "1.0",
             "IsDnD": false,
@@ -17,7 +17,7 @@
     ],
     "maskSpriteId": "00000000-0000-0000-0000-000000000000",
     "overriddenProperties": null,
-    "parentObjectId": "a6abf43a-fcba-4abc-b6a2-da655408e91f",
+    "parentObjectId": "2ed1f1eb-c118-4936-b474-e88610694741",
     "persistent": false,
     "physicsAngularDamping": 0.1,
     "physicsDensity": 0.5,

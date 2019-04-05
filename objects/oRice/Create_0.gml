@@ -20,5 +20,6 @@ effect = "";
 modifier1 = [1, 1, 1, 1, 1, 1];
 modifier2 = [1, 1, 1, 1, 1, 1];
 preppedVersion = oPreparedRice;
+pickUpSound = snd_pickup_herb;
 
 beingCooked = false;

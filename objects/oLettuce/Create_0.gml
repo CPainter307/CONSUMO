@@ -14,3 +14,4 @@ adjective = "Green ";
 chops = 0;
 
 preppedVersion = oPreparedLettuce;
+pickUpSound = snd_pickup_herb;

@@ -46,5 +46,6 @@ if (gamepad_is_connected(0)) {
 	haxis = gamepad_axis_value(0, gp_axislh);
 	vaxis = gamepad_axis_value(0, gp_axislv);
 	stickDir = point_direction(0, 0, haxis, vaxis);
-	key_inventory = gamepad_button_check_pressed(0, gp_face4)
+	key_inventory = gamepad_button_check_pressed(0, gp_face4);
+	key_room_reset = gamepad_button_check(0, gp_select);
 }

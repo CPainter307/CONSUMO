@@ -607,6 +607,14 @@
             }
         },
         {
+            "Key": "43b5f575-3c4c-44e4-8b04-d2603f1e9e7c",
+            "Value": {
+                "id": "8ffb4d42-5631-409e-bb0f-20386965b99c",
+                "resourcePath": "sounds\\snd_pickup_generic\\snd_pickup_generic.yy",
+                "resourceType": "GMSound"
+            }
+        },
+        {
             "Key": "445690bd-3a5e-4c29-9311-0aeed64cc0e6",
             "Value": {
                 "id": "3e71d410-8e97-4f52-b431-9535ed17b485",
@@ -1687,6 +1695,14 @@
             }
         },
         {
+            "Key": "b0f0e19e-3b77-4c0b-b299-2a8483e51a98",
+            "Value": {
+                "id": "451648de-bacf-47c6-9932-0be2e6ffb370",
+                "resourcePath": "objects\\oPreparedSalt\\oPreparedSalt.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "b107e128-a3fc-4baa-a3ad-0cd2b9f6b60e",
             "Value": {
                 "id": "14ae3fb3-d9bc-45e4-bb3d-74644363587f",
@@ -2380,14 +2396,6 @@
                 "id": "25c7bb1d-074b-424f-9e2d-e989a22c8ef3",
                 "resourcePath": "sprites\/sMealWindowNeutral\/sMealWindowNeutral.yy",
                 "resourceType": "GMSprite"
-            }
-        },
-        {
-            "Key": "fa47952a-72d1-4873-8f15-d52856dfd81c",
-            "Value": {
-                "id": "306bc62a-ddeb-4445-926a-7bfb9b4aec43",
-                "resourcePath": "objects\/oPreparedSalt\/oPreparedSalt.yy",
-                "resourceType": "GMObject"
             }
         },
         {

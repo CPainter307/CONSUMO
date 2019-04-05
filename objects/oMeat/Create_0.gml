@@ -14,3 +14,4 @@ adjective = "Meaty ";
 chops = 0;
 
 preppedVersion = oPreparedMeat;
+pickUpSound = snd_pickup_meat;

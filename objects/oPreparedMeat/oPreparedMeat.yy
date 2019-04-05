@@ -5,7 +5,7 @@
     "name": "oPreparedMeat",
     "eventList": [
         {
-            "id": "a0e0274f-bdf4-4e4a-ba7d-8ea1202df371",
+            "id": "3d7ee816-4f62-41aa-bae3-90f7c3afc45b",
             "modelName": "GMEvent",
             "mvc": "1.0",
             "IsDnD": false,
@@ -17,7 +17,7 @@
     ],
     "maskSpriteId": "00000000-0000-0000-0000-000000000000",
     "overriddenProperties": null,
-    "parentObjectId": "a6abf43a-fcba-4abc-b6a2-da655408e91f",
+    "parentObjectId": "9185db79-f131-46fd-aac8-d2d5a644f284",
     "persistent": false,
     "physicsAngularDamping": 0.1,
     "physicsDensity": 0.5,

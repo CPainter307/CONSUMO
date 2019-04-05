@@ -14,3 +14,4 @@ adjective = "Fishy ";
 chops = 0;
 
 preppedVersion = oPreparedFish;
+pickUpSound = snd_pickup_meat;

@@ -12,3 +12,4 @@ adjective = "Seasoned ";
 chops = 0;
 
 preppedVersion = oPreparedSalt;
+pickUpSound = snd_pickup_herb;

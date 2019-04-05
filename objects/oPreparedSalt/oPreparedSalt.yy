@@ -1,23 +1,23 @@
 {
-    "id": "fa47952a-72d1-4873-8f15-d52856dfd81c",
+    "id": "b0f0e19e-3b77-4c0b-b299-2a8483e51a98",
     "modelName": "GMObject",
     "mvc": "1.0",
     "name": "oPreparedSalt",
     "eventList": [
         {
-            "id": "a7736696-e33e-4f1c-af6d-5097f446460b",
+            "id": "3d16dd22-e87a-4a2b-9452-fff5e6036db7",
             "modelName": "GMEvent",
             "mvc": "1.0",
             "IsDnD": false,
             "collisionObjectId": "00000000-0000-0000-0000-000000000000",
             "enumb": 0,
             "eventtype": 0,
-            "m_owner": "fa47952a-72d1-4873-8f15-d52856dfd81c"
+            "m_owner": "b0f0e19e-3b77-4c0b-b299-2a8483e51a98"
         }
     ],
     "maskSpriteId": "00000000-0000-0000-0000-000000000000",
     "overriddenProperties": null,
-    "parentObjectId": "a6abf43a-fcba-4abc-b6a2-da655408e91f",
+    "parentObjectId": "64222f7c-f8ab-4197-8526-047bcfa43bfc",
     "persistent": false,
     "physicsAngularDamping": 0.1,
     "physicsDensity": 0.5,

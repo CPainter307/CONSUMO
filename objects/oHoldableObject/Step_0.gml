@@ -48,3 +48,5 @@ if (!followingL && !followingR) {
 	depth = objDepth;
 }
 
+//play sound
+scr_play_pickup_sound(pickUpSound);

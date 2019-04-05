@@ -14,3 +14,4 @@ adjective = "Onion ";
 chops = 0;
 
 preppedVersion = oPreparedOnion;
+pickUpSound = snd_pickup_herb;
