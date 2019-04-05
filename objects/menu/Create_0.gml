@@ -1,6 +1,6 @@
 global.pause			= false;
-global.view_width		= camera_get_view_width(view_camera[0]);
-global.view_height		= camera_get_view_height(view_camera[0]);
+global.view_width		= view_wport[0];
+global.view_height		= view_hport[0];
 
 //Global Input Variables
 global.key_up			= ord("W");
