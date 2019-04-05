@@ -191,6 +191,14 @@
             }
         },
         {
+            "Key": "11706cde-6698-4b7e-8da5-7dca53e3d1fd",
+            "Value": {
+                "id": "292c9a0f-e610-4555-a308-2ce22d90dacc",
+                "resourcePath": "sounds\\snd_pickup_generic\\snd_pickup_generic.yy",
+                "resourceType": "GMSound"
+            }
+        },
+        {
             "Key": "124c3998-f431-45dd-8adf-12f96e4a974a",
             "Value": {
                 "id": "22141248-ac29-45e7-b337-a0633e6f3365",
@@ -535,6 +543,14 @@
             }
         },
         {
+            "Key": "387a3fb6-4944-4cad-bc74-9ec6b2e3af7d",
+            "Value": {
+                "id": "55876680-3ed0-4ae3-affd-4fa0b12984c0",
+                "resourcePath": "sounds\\snd_pickup_crunchy\\snd_pickup_crunchy.yy",
+                "resourceType": "GMSound"
+            }
+        },
+        {
             "Key": "39071f12-a0c6-4571-bd02-e502ec2a6947",
             "Value": {
                 "id": "7094a4f7-1a94-424c-808a-cad242bd03fb",
@@ -604,14 +620,6 @@
                 "id": "7345d406-fe8c-4cf8-a975-c0234af7464a",
                 "resourcePath": "timelines\/tl_cooking\/tl_cooking.yy",
                 "resourceType": "GMTimeline"
-            }
-        },
-        {
-            "Key": "43b5f575-3c4c-44e4-8b04-d2603f1e9e7c",
-            "Value": {
-                "id": "8ffb4d42-5631-409e-bb0f-20386965b99c",
-                "resourcePath": "sounds\\snd_pickup_generic\\snd_pickup_generic.yy",
-                "resourceType": "GMSound"
             }
         },
         {
@@ -1204,6 +1212,14 @@
                 "id": "910ee738-d14a-42c1-ac53-61a7d83342b0",
                 "resourcePath": "sprites\/sWizard\/sWizard.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "791d49a5-f191-4df9-be37-4f43bb28dcfc",
+            "Value": {
+                "id": "435e30a4-e5da-4028-896c-66c169db0ed1",
+                "resourcePath": "sounds\\snd_pickup_grainy\\snd_pickup_grainy.yy",
+                "resourceType": "GMSound"
             }
         },
         {

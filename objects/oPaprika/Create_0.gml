@@ -12,4 +12,4 @@ adjective = "Seasoned ";
 chops = 0;
 
 preppedVersion = oPreparedPaprika;
-pickUpSound = snd_pickup_herb;
+pickUpSound = snd_pickup_generic;
