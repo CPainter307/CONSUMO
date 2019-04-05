@@ -7,6 +7,10 @@ if(oPlayerInput.key_room_reset) {
 }
 
 if(oPlayerInput.key_jump) {
+	if (!jumped) {
+		scr_play_jump_sound();
+		jumped = true;
+	}
 	jumpQueuFramesElapsed = 0;
 }
 
@@ -16,11 +20,13 @@ if(!place_meeting(x, y + vsp, oWall)) {
 }
 
 if (buff >= 1.2 && currentJumps == 0) {
+	jumped = false;
 	currentJumps += 1;
 }
 
 //increase gravity if falling
 if(vsp > 0) {
+	jumped = true;
 	vsp += .75
 }
 
@@ -58,6 +64,7 @@ if (((totalJumps - currentJumps) > 0) && (jumpQueuFramesElapsed <= 3)) {
 }
 
 if  (vsp < 0 && !oPlayerInput.key_jump_held) {
+	jumped = false;
 	vsp = max(vsp, 0);
 	currentJumps += 1;
 }
@@ -67,6 +74,7 @@ if (!oPlayerInput.key_jump) {
 }
 
 if (oPlayerInput.key_jump_held && place_meeting(x,y + vsp,oWall)) {
+	jumped = false;
 	vsp += grv;
 }
 
@@ -93,6 +101,10 @@ x += hsp;
  
 //vertical collision (includes Coyote Jump buffer reset)
 if(place_meeting(x, y+vsp, oWall)) { 
+	if (jumped) {
+		jumped = false;
+		scr_play_land_sound();
+	}
 	buff = 0.3;
 	while(!place_meeting(x, y+sign(vsp), oWall)) {
 		y += sign(vsp);
@@ -106,6 +118,7 @@ y += vsp;
  
 //ground detection
 if(place_meeting(x, y+1, oWall)) {
+	jumped = false;
 	currentJumps = 0;
 	currentWallJumps = 0;
 	spriteTurnFrames = 0;
