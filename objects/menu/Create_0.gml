@@ -61,8 +61,8 @@ ds_menu_settings = create_menu_page(
 );
 
 ds_menu_audio = create_menu_page(
-	["Master",			menu_element_type.slider,			change_volume,			0.5,				[0,1]],
-	["Sounds",			menu_element_type.slider,			change_volume,			0.2,				[0,1]],
+	["Master",			menu_element_type.slider,			change_volume,			1,				[0,1]],
+	["Sounds",			menu_element_type.slider,			change_volume,			1,				[0,1]],
 	["Music",			menu_element_type.slider,			change_volume,			1,				[0,1]],
 	["Back",			menu_element_type.page_transfer,	menu_page.settings]
 );
