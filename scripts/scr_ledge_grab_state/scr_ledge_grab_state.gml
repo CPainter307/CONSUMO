@@ -1,6 +1,6 @@
 oPlayer.moveStateExecuted = false;
 isLocked = true;
-show_debug_message("test")
+
 if (oPlayerInput.key_jump) {
 	scr_play_jump_sound();
 	vsp -= JUMP_HEIGHT;

@@ -1,16 +1,14 @@
 oPlayer.moveStateExecuted = true;
 var framesInAir = 0;
 
+
 //room restart
 if(oPlayerInput.key_room_reset) {
 	SlideTransition(TRANS_MODE.ROOM_RESTART);
 }
 
+
 if(oPlayerInput.key_jump) {
-	if (!jumped) {
-		scr_play_jump_sound();
-		jumped = true;
-	}
 	jumpQueuFramesElapsed = 0;
 }
 
@@ -20,14 +18,12 @@ if(!place_meeting(x, y + vsp, oWall)) {
 }
 
 if (buff >= 1.2 && currentJumps == 0) {
-	jumped = false;
 	currentJumps += 1;
 }
 
 //increase gravity if falling
 if(vsp > 0) {
-	jumped = true;
-	vsp += .75
+	vsp += .5
 }
 
 //calculate movement (player locking mechanics included)
@@ -43,40 +39,42 @@ if (isLocked) {
 	var move = oPlayerInput.key_right - oPlayerInput.key_left;	
 }
  
+ 
 if (vsp == 0 && place_meeting(x ,y + 1,oWall)) { 
 	hsp = walksp * move;
-	vsp += grv;
 } else if (hsp == 0) {
 	hsp = walksp * move;
 } else if (oPlayerInput.key_right && hsp < 0) {  //moving 
 	hsp += (1/power(2, framesInAir));
-	vsp += grv;
 	framesInAir += .01;
 } else if (oPlayerInput.key_left && hsp > 0) {
 	hsp -= (1/power(2, framesInAir));
-	vsp += grv;
 	framesInAir += .01;
 }
-
-if (((totalJumps - currentJumps) > 0) && (jumpQueuFramesElapsed <= 3)) {	 
+/*
+if (((totalJumps - currentJumps) > 0) && (jumpQueuFramesElapsed <= 3)) {
 	vsp = -JUMP_HEIGHT;
 	currentJumps += 1;
-}
+}*/
 
 if  (vsp < 0 && !oPlayerInput.key_jump_held) {
-	jumped = false;
-	vsp = max(vsp, 0);
+	vsp = max(vsp, -8);
 	currentJumps += 1;
 }
 
-if (!oPlayerInput.key_jump) {
-	vsp += grv;
+show_debug_message(string(vsp));
+if (oPlayerInput.key_jump_held and vsp > -JUMP_HEIGHT and !peakReached) {
+	vsp -= 3
+	if (vsp < -JUMP_HEIGHT) {
+		peakReached = true;
+	}
+} else {
+	vsp += grv;	
 }
-
+/*
 if (oPlayerInput.key_jump_held && place_meeting(x,y + vsp,oWall)) {
-	jumped = false;
 	vsp += grv;
-}
+}*/
 
 
 if (hsp != 0) {
@@ -85,7 +83,6 @@ if (hsp != 0) {
 if (vsp != 0) {
 	vsp_dir = sign(vsp);
 }
-
 
 
 //horizontal collision
@@ -101,10 +98,6 @@ x += hsp;
  
 //vertical collision (includes Coyote Jump buffer reset)
 if(place_meeting(x, y+vsp, oWall)) { 
-	if (jumped) {
-		jumped = false;
-		scr_play_land_sound();
-	}
 	buff = 0.3;
 	while(!place_meeting(x, y+sign(vsp), oWall)) {
 		y += sign(vsp);
@@ -118,7 +111,7 @@ y += vsp;
  
 //ground detection
 if(place_meeting(x, y+1, oWall)) {
-	jumped = false;
+	peakReached = false;
 	currentJumps = 0;
 	currentWallJumps = 0;
 	spriteTurnFrames = 0;
@@ -177,22 +170,23 @@ if(!place_meeting(x, y+1, oWall)) {
 
 
 //if (hsp != 0) image_xscale = sign(hsp);
-if ((place_meeting (x, y + 1, oWall)) && hsp != 0) {
-	if (sign(hsp) < 0) {
-		facingRight = false;
-	} 
-	else if (sign(hsp) > 0) {
-		facingRight = true;
-	}
-	image_xscale = 0.5 * sign(hsp);
+if (oPlayerInput.key_left) {
+	facingRight = false;
+	image_xscale = -.5
+} 
+else if (oPlayerInput.key_right) {
+	facingRight = true;
+	image_xscale = .5
 }
+	
+
 
 jumpQueuFramesElapsed++;
 
 // Back Arm
 //if player facing right
 if (oPlayer.facingRight) {
-	if (oPlayer.hsp != 0 && oPlayer.vsp == 0) {
+	if (oPlayer.hsp != 0) {
 		oBackArm.sprite_index = sBackArmL; //later swap for sBackArmLMoving
 	}
 	else {
@@ -204,7 +198,7 @@ if (oPlayer.facingRight) {
 
 //if player facing left
 else {
-	if (oPlayer.hsp != 0 && oPlayer.vsp == 0) {
+	if (oPlayer.hsp != 0) {
 		oBackArm.sprite_index = sBackArmR; //later swap for sBackArmRMoving
 	}
 	else {
@@ -217,7 +211,7 @@ else {
 // Front Arm
 //if player facing right
 if (oPlayer.facingRight) {
-	if (oPlayer.hsp != 0 && oPlayer.vsp == 0) {
+	if (oPlayer.hsp != 0) {
 		oFrontArm.sprite_index = sFrontArmRMoving;
 	}
 	else {
@@ -229,7 +223,7 @@ if (oPlayer.facingRight) {
 
 //if player facing left
 else {
-	if (oPlayer.hsp != 0 && oPlayer.vsp == 0) {
+	if (oPlayer.hsp != 0) {
 		oFrontArm.sprite_index = sFrontArmL; //later swap for sFrontArmLMoving
 	}
 	else {
