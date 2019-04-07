@@ -727,14 +727,6 @@
             }
         },
         {
-            "Key": "4f466801-3b27-4af5-b5db-7f16684d7a0b",
-            "Value": {
-                "id": "663e8e94-b42d-4f7e-b7ce-03374a2248f0",
-                "resourcePath": "objects\/oBackgroundMove\/oBackgroundMove.yy",
-                "resourceType": "GMObject"
-            }
-        },
-        {
             "Key": "4fa97df0-cfcd-4c8e-8eaa-e386c650230a",
             "Value": {
                 "id": "0db7f35c-f50b-4bf8-bc97-f5c77f11c5d2",
