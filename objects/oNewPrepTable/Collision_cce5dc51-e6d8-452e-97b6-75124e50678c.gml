@@ -1,4 +1,4 @@
-if(!empty) {	
+if (!empty) {
 	instance_create_layer(x,y-100,"game",oButton)
 	oButton.y = oButton.ystart + sin(get_timer()/100000);
 	
@@ -10,8 +10,8 @@ if(!empty) {
 	{
 		oButton.sprite_index = sButtonE;	
 	}
+}	
 	
-	scr_prep_ingrs();
+scr_prep_ingrs();
 
-}
 
