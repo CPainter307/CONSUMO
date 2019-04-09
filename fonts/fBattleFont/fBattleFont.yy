@@ -1,7 +1,7 @@
 {
     "id": "c3ef0a66-94a6-4f62-aafa-1d01beb6606a",
     "modelName": "GMFont",
-    "mvc": "1.1",
+    "mvc": "1.0",
     "name": "fBattleFont",
     "AntiAlias": 1,
     "TTFName": "",
@@ -10,7 +10,6 @@
     "charset": 0,
     "first": 0,
     "fontName": "Arial",
-    "glyphOperations": 0,
     "glyphs": [
         {
             "Key": 32,
@@ -1453,9 +1452,8 @@
             }
         }
     ],
-    "hinting": 0,
+    "image": null,
     "includeTTF": false,
-    "interpreter": 0,
     "italic": false,
     "kerningPairs": [
         {
@@ -2148,8 +2146,6 @@
         }
     ],
     "last": 0,
-    "maintainGms1Font": false,
-    "pointRounding": 0,
     "ranges": [
         {
             "x": 32,

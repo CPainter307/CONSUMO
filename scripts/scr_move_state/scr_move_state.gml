@@ -1,7 +1,20 @@
 
 #region JUMP & MOVE
+
+//locking
+if (oPlayerInput.key_locked) {
+	isLocked = true;
+} else {
+	isLocked = false;	
+}
+
+if (isLocked) {
+	var move = 0;
+} else {
+	var move = oPlayerInput.key_right - oPlayerInput.key_left;	
+}
+
 //react to input
-move = oPlayerInput.key_right - oPlayerInput.key_left;
 hsp = move * movespeed;
 if (vsp < 10) vsp += grav;
 
@@ -36,7 +49,7 @@ var was_free = !position_meeting(x+(50*hsp_dir), yprevious-20, oWall);
 var is_not_free = position_meeting(x+(50*hsp_dir), y, oWall);
 var near_ground = position_meeting(x, y+100, oWall);
 
-if (!near_ground and was_free and is_not_free and vsp > 0) {
+if (!near_ground and was_free and is_not_free and vsp > 0 and !(oPlayerPickUpRadius.itemInLeftHand != noone and oPlayerPickUpRadius.itemInLeftHand != noone)) {
 	hsp = 0;
 	vsp = 0;
 	//move against ledge
