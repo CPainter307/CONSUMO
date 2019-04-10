@@ -3,7 +3,7 @@ global.view_width		= view_wport[0];
 global.view_height		= view_hport[0];
 
 //Global Input Variables
-global.key_up			= ord("W");
+/*global.key_up			= ord("W");
 global.key_down			= ord("S");
 global.key_left			= ord("A");
 global.key_right		= ord("D");
@@ -15,7 +15,22 @@ global.key_interact		= ord("E");
 global.key_inventory	= ord("Q");
 global.key_room_reset		= ord("K");
 //global.key_select		= vk_enter;
-global.key_pause		= vk_escape;
+global.key_pause		= vk_escape;*/
+
+if(gamepad_is_connected(0)) {
+	global.input_type = inputs.analog_stick;
+	change_input_type(1);
+}
+else {
+	global.input_type = inputs.keyboard;
+	change_input_type(0);
+}
+
+enum inputs {
+	keyboard,
+	analog_stick,
+	d_pad
+}
 
 display_set_gui_size(global.view_width, global.view_height);
 
