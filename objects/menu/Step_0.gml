@@ -1,4 +1,4 @@
-if(keyboard_check_pressed(global.key_pause)) { script_execute(pause_game); }
+if(keyboard_check_pressed(global.key_pause) || gamepad_button_check_pressed(0, global.key_pause)) { script_execute(pause_game); }
 
 if(!global.pause) exit;
 
