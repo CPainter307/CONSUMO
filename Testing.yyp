@@ -831,11 +831,11 @@
             }
         },
         {
-            "Key": "54b7a69d-8710-416d-8e0c-6869e0fcda54",
+            "Key": "54cb1a8d-79d2-4b07-8e91-33daa441ab1e",
             "Value": {
-                "id": "1cf9dd62-39b9-4c04-a5f6-54443885b48f",
-                "resourcePath": "sprites\/sPrepareBack\/sPrepareBack.yy",
-                "resourceType": "GMSprite"
+                "id": "976c926c-0f9f-4869-b7ba-feec0c5d45d0",
+                "resourcePath": "objects\\oChoppingGameBar\\oChoppingGameBar.yy",
+                "resourceType": "GMObject"
             }
         },
         {
@@ -1087,6 +1087,14 @@
             }
         },
         {
+            "Key": "6a188d77-d797-4719-affd-2d03fc032920",
+            "Value": {
+                "id": "e2dc7a85-01a2-4a82-97ed-374daba869f3",
+                "resourcePath": "scripts\\scr_prep_ingrs\\scr_prep_ingrs.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "6b33a68e-5b36-41a5-849e-a7b1300f2ac0",
             "Value": {
                 "id": "9af0b4dc-852d-4f00-90ec-26e7ef4ca377",
@@ -1188,14 +1196,6 @@
                 "id": "ac3dd036-fb0c-43f6-8eaa-0b279052d50f",
                 "resourcePath": "sounds\/snd_chop_1\/snd_chop_1.yy",
                 "resourceType": "GMSound"
-            }
-        },
-        {
-            "Key": "77ae7b1f-5e10-408c-b55d-aed97c0205b8",
-            "Value": {
-                "id": "e014aa5e-77a4-4b5b-a8a0-373c6b5cc7c7",
-                "resourcePath": "sprites\/sPrepareBar\/sPrepareBar.yy",
-                "resourceType": "GMSprite"
             }
         },
         {
@@ -1727,6 +1727,14 @@
             }
         },
         {
+            "Key": "af0d7c5a-552e-437d-8417-a00471d5cd66",
+            "Value": {
+                "id": "09838b79-b324-471f-92de-7c605db77981",
+                "resourcePath": "sprites\\sPrepareBar\\sPrepareBar.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "afa8c8b5-e10b-4dde-81ba-4f243f430fde",
             "Value": {
                 "id": "905327c2-7994-42bb-8aca-051c21c911ad",
@@ -1823,6 +1831,14 @@
             }
         },
         {
+            "Key": "b7a772aa-9cd1-48bc-8386-6519714ea0f1",
+            "Value": {
+                "id": "ea112cba-d4f8-409b-b661-248d36e39605",
+                "resourcePath": "objects\\oChoppingGameReticle\\oChoppingGameReticle.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "b92986e6-03fa-4945-a8dd-2cd1b33ad9bd",
             "Value": {
                 "id": "1b413db4-6c46-44f3-b33d-a607d882dad3",
@@ -1868,6 +1884,14 @@
                 "id": "3b695451-b5d4-466d-944a-75b8830b6e63",
                 "resourcePath": "views\/bd99fbd9-bc0d-46fd-a0fa-1d5a850ad216.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "be3c758f-2fae-4df0-ac52-a05721946cca",
+            "Value": {
+                "id": "ec8eaaf9-0171-42c5-b3a0-f3fbdb4bfa99",
+                "resourcePath": "sprites\\sPrepareBar1\\sPrepareBar1.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -2487,6 +2511,14 @@
             }
         },
         {
+            "Key": "fa4602b2-4942-4204-9c78-6fe121efaee3",
+            "Value": {
+                "id": "e24fddc1-ce52-417a-9b27-93d1f9d8fb04",
+                "resourcePath": "objects\\oNewPrepTable\\oNewPrepTable.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "fc57735a-0ed7-4097-b614-9c34d4ee1d01",
             "Value": {
                 "id": "3edf4091-656c-40f8-8adf-4cf16cf67279",
@@ -2563,6 +2595,7 @@
         "59e9d743-93b6-4af6-a40b-0424f69bb113",
         "a05e043a-ac1a-469a-9a6a-79ff51b24cc1",
         "4790bf6a-2eab-4d7a-afb5-496e3477fdd8",
+        "6a188d77-d797-4719-affd-2d03fc032920",
         "543ba772-7b7a-4608-9a4e-1517daf78a4c",
         "d28725b5-804a-4925-8ca5-f1da2989c98b",
         "4e32a6c2-0d68-4a68-948f-31b55fd6c526",

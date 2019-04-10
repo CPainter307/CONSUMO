@@ -6,6 +6,7 @@ thrown = false;
 highlighted = false;
 playedPickupSound = false;
 objDepth = depth;
+placed = false;
 
 pickUpSound = snd_pickup_generic;
 
