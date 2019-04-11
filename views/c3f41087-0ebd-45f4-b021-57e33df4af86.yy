@@ -8,7 +8,8 @@
         "b3508d53-212e-49ae-9493-3ccee023f16b",
         "acd15b18-e51e-4f24-9a3b-b6f65ac779ee",
         "a58ded2c-97b4-4b9b-93ec-8cca274f515e",
-        "05c46c17-db28-4a4d-8c77-c23305a61e22"
+        "05c46c17-db28-4a4d-8c77-c23305a61e22",
+        "5203b628-2534-445d-b080-52230db4f9b6"
     ],
     "filterType": "GMObject",
     "folderName": "Adventurers",

@@ -1,34 +1,34 @@
 {
-    "id": "a0dddaee-d803-47f1-b725-aab4ac6d4852",
+    "id": "cedc1511-b8a4-4a98-9306-34eb98dff9de",
     "modelName": "GMObject",
     "mvc": "1.0",
     "name": "oPlayerGUI",
     "eventList": [
         {
-            "id": "19bce784-789c-426e-bfcd-72031d7821cf",
-            "modelName": "GMEvent",
-            "mvc": "1.0",
-            "IsDnD": false,
-            "collisionObjectId": "00000000-0000-0000-0000-000000000000",
-            "enumb": 64,
-            "eventtype": 8,
-            "m_owner": "a0dddaee-d803-47f1-b725-aab4ac6d4852"
-        },
-        {
-            "id": "979e877c-b1d4-4bfd-84ce-d9dbf9a6ec55",
+            "id": "7a1b2f6f-caf4-4d3a-bac4-c5ddb5268003",
             "modelName": "GMEvent",
             "mvc": "1.0",
             "IsDnD": false,
             "collisionObjectId": "00000000-0000-0000-0000-000000000000",
             "enumb": 0,
             "eventtype": 0,
-            "m_owner": "a0dddaee-d803-47f1-b725-aab4ac6d4852"
+            "m_owner": "cedc1511-b8a4-4a98-9306-34eb98dff9de"
+        },
+        {
+            "id": "f0b1529d-d5b8-48b7-95dc-fbda95922149",
+            "modelName": "GMEvent",
+            "mvc": "1.0",
+            "IsDnD": false,
+            "collisionObjectId": "00000000-0000-0000-0000-000000000000",
+            "enumb": 64,
+            "eventtype": 8,
+            "m_owner": "cedc1511-b8a4-4a98-9306-34eb98dff9de"
         }
     ],
     "maskSpriteId": "00000000-0000-0000-0000-000000000000",
     "overriddenProperties": null,
     "parentObjectId": "00000000-0000-0000-0000-000000000000",
-    "persistent": true,
+    "persistent": false,
     "physicsAngularDamping": 0.1,
     "physicsDensity": 0.5,
     "physicsFriction": 0.2,

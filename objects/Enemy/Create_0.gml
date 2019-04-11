@@ -17,9 +17,3 @@ move_2 = [110, 10, 1];
 
 timer_m1 = 0;
 timer_m2 = 0;
-
-allAdventurers = ds_list_create();
-for (var i = 0; i < instance_number(oAdventurer); i++)
-{
-	ds_list_add(allAdventurers, instance_find(oAdventurer, i));
-}

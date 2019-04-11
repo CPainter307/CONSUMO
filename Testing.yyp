@@ -319,6 +319,14 @@
             }
         },
         {
+            "Key": "1abae9cb-fc96-4888-b062-637c66b6e212",
+            "Value": {
+                "id": "f5fdd986-a37f-4fa5-af60-64ca15d7e86d",
+                "resourcePath": "objects\\eFrogEgg\\eFrogEgg.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "1ad9e7c4-7f44-4383-b062-342cbaf8f49a",
             "Value": {
                 "id": "002bce57-560a-4d31-94c1-8816b99ee1e4",
@@ -767,6 +775,14 @@
             }
         },
         {
+            "Key": "5203b628-2534-445d-b080-52230db4f9b6",
+            "Value": {
+                "id": "8ad78618-c88e-42ae-9514-c2175a697a8f",
+                "resourcePath": "objects\\oParty\\oParty.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "527b8fe3-68e6-4004-bc79-e34aa5ea4a7e",
             "Value": {
                 "id": "cdec39b1-6a27-4ba3-9649-bd1c33d63c32",
@@ -842,7 +858,7 @@
             "Key": "54dc7a2d-2fa2-4eba-a07a-a0cf7aefd6c5",
             "Value": {
                 "id": "cb2fa0f5-4616-4766-bad6-73786eb1c291",
-                "resourcePath": "objects\/Enemy\/Enemy.yy",
+                "resourcePath": "objects\\Enemy\\Enemy.yy",
                 "resourceType": "GMObject"
             }
         },
@@ -1239,6 +1255,14 @@
             }
         },
         {
+            "Key": "7ce09ea4-7724-4fd4-b61d-01c75ce96045",
+            "Value": {
+                "id": "9f3c68fe-c6ba-42a0-90eb-5fa7933c9049",
+                "resourcePath": "views\\7ce09ea4-7724-4fd4-b61d-01c75ce96045.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
             "Key": "7ce5d591-0f3b-4aaa-8791-3a569aeb04bb",
             "Value": {
                 "id": "23c82838-8be4-4489-95c4-16065fa966e3",
@@ -1540,14 +1564,6 @@
                 "id": "ffcfea5e-25b8-459d-b5e5-55fc1f413abf",
                 "resourcePath": "scripts\/scr_extract_recipe_name\/scr_extract_recipe_name.yy",
                 "resourceType": "GMScript"
-            }
-        },
-        {
-            "Key": "a0dddaee-d803-47f1-b725-aab4ac6d4852",
-            "Value": {
-                "id": "7a88de18-d2fb-4619-b5ec-988220581c1a",
-                "resourcePath": "objects\/oPlayerGUI\/oPlayerGUI.yy",
-                "resourceType": "GMObject"
             }
         },
         {
@@ -2071,10 +2087,26 @@
             }
         },
         {
+            "Key": "cedc1511-b8a4-4a98-9306-34eb98dff9de",
+            "Value": {
+                "id": "877c4b91-5bd1-4d63-80c7-0e9011ffdf07",
+                "resourcePath": "objects\\oPlayerGUI\\oPlayerGUI.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "d05d185c-85fc-410a-a1e8-81219b45574c",
             "Value": {
                 "id": "01353c7a-bc82-4946-890e-d5574f4c8397",
                 "resourcePath": "sprites\/sPaprikaRune\/sPaprikaRune.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "d1ec92aa-585d-45e8-879b-efeb90049f45",
+            "Value": {
+                "id": "06d7e6e9-ffd3-420c-8001-0cabd6d9a169",
+                "resourcePath": "sprites\\sFrogEgg\\sFrogEgg.yy",
                 "resourceType": "GMSprite"
             }
         },

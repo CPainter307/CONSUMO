@@ -49,7 +49,7 @@ var was_free = !position_meeting(x+(50*hsp_dir), yprevious-20, oWall);
 var is_not_free = position_meeting(x+(50*hsp_dir), y, oWall);
 var near_ground = position_meeting(x, y+100, oWall);
 
-if (!near_ground and was_free and is_not_free and vsp > 0 and !(oPlayerPickUpRadius.itemInLeftHand != noone and oPlayerPickUpRadius.itemInLeftHand != noone)) {
+if (!near_ground and was_free and is_not_free and vsp > 0 and !(oPlayerPickUpRadius.itemInRightHand != noone and oPlayerPickUpRadius.itemInLeftHand != noone)) {
 	hsp = 0;
 	vsp = 0;
 	//move against ledge
@@ -100,6 +100,7 @@ if (place_meeting(x, y+vsp+10, oWall)) {
 
 #region ARMS
 // Back Arm
+/**
 //if player facing right
 if (oPlayer.facingRight) {
 	if (oPlayer.hsp != 0) {
@@ -122,10 +123,11 @@ else {
 	}
 	oBackArm.x = oPlayer.x - 0;
 	oBackArm.y = oPlayer.y - 12;
-}
+} **/
 
 // Front Arm
 //if player facing right
+/**
 if (oPlayer.facingRight) {
 	if (oPlayer.hsp != 0) {
 		oFrontArm.sprite_index = sFrontArmRMoving;
@@ -147,7 +149,8 @@ else {
 	}
 	oFrontArm.x = oPlayer.x + 21;
 	oFrontArm.y = oPlayer.y - 12;
-}
+	}
+**/
 #endregion
 
 #region ANIMATION
@@ -176,6 +179,7 @@ else if (oPlayerInput.key_right) {
 }
 #endregion
 
+#region ARCHIVE
 
 //show_message(string(groundjumpbuffer));
 
@@ -342,3 +346,4 @@ if (!near_ground && was_free && is_not_free && moving_down && !(oPlayerPickUpRad
 /*
 jumpQueuFramesElapsed++;
 */
+#endregion

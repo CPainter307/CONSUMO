@@ -64,7 +64,7 @@ if (oPlayerInput.key_interact && !empty) {
 //calculate how many chops and reset reticle
 if (instance_exists(reticle) && instance_exists(bar)) {
 	//reticle.x++;
-	reticle.x = reticle.x + 5;
+	reticle.x = reticle.x + 4;
 	if (reticle.x >= boundRight) {
 		reticle.x = boundLeft;
 	}
