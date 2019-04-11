@@ -7,6 +7,11 @@ if (oPlayerInput.key_jump) {
 	state = scr_move_state;
 }
 
+if (oPlayerPickUpRadius.itemInLeftHand != noone && oPlayerPickUpRadius.itemInRightHand != noone) {
+	state = scr_move_state;
+}
+
+#region ARCHIVE
 /*
 if (oPlayerInput.key_jump) {
 	scr_play_jump_sound();
@@ -25,4 +30,5 @@ if (oPlayerInput.key_jump) {
 if (oPlayerPickUpRadius.itemInLeftHand != noone && oPlayerPickUpRadius.itemInRightHand != noone) {
 	//oPlayer.moveStateExecuted = true
 	state = scr_move_state;
-}
+} */
+#endregion

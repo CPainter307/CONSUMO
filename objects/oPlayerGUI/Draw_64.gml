@@ -68,14 +68,14 @@ else {
 
 
 //battle window
-if (instance_exists(Enemy)) {
-	adv1 = ds_list_find_value(Enemy.allAdventurers, 0);
-	adv2 = ds_list_find_value(Enemy.allAdventurers, 1);
-	adv3 = ds_list_find_value(Enemy.allAdventurers, 2);
+if (instance_exists(oParty)) {
+	adv1 = ds_list_find_value(oParty.allAdventurers, 0);
+	adv2 = ds_list_find_value(oParty.allAdventurers, 1);
+	adv3 = ds_list_find_value(oParty.allAdventurers, 2);
 }
 var xpos = view_xport[0]+46;
 var ypos = view_yport[0]+34;
-if (instance_exists(adv1)) {
+if (adv1 != noone) {
 	draw_sprite(sBattleWindowStatBG, 1, xpos+32, ypos+105);
 	draw_sprite_ext(sBattleWindowStat, 1, xpos+42, ypos+137, 1, (adv1.attack/adv1.maxattack), 0, c_white, 1);  // attack
 	draw_sprite_ext(sBattleWindowStat, 1, xpos+78, ypos+137, 1, (adv1.defense/adv1.maxdefense), 0, c_white, 1);  // defense
@@ -99,7 +99,7 @@ if (instance_exists(adv1)) {
 }
 var xpos = view_xport[0]+46;
 var ypos = view_yport[0]+234;
-if (instance_exists(adv2)) {
+if (adv2 != noone) {
 	draw_sprite(sBattleWindowStatBG, 1, xpos+32, ypos+105);
 	draw_sprite_ext(sBattleWindowStat, 1, xpos+42, ypos+137, 1, (adv2.attack/adv2.maxattack), 0, c_white, 1);  // attack
 	draw_sprite_ext(sBattleWindowStat, 1, xpos+78, ypos+137, 1, (adv2.defense/adv2.maxdefense), 0, c_white, 1);  // defense
@@ -121,7 +121,7 @@ if (instance_exists(adv2)) {
 }
 var xpos = view_xport[0]+46;
 var ypos = view_yport[0]+434;
-if (instance_exists(adv3)) {
+if (adv3 != noone) {
 	draw_sprite(sBattleWindowStatBG, 1, xpos+32, ypos+105);
 	draw_sprite_ext(sBattleWindowStat, 1, xpos+42, ypos+137, 1, (adv3.attack/adv3.maxattack), 0, c_white, 1);  // attack
 	draw_sprite_ext(sBattleWindowStat, 1, xpos+78, ypos+137, 1, (adv3.defense/adv3.maxdefense), 0, c_white, 1);  // defense
