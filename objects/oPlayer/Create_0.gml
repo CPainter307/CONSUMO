@@ -30,6 +30,8 @@ canjump = 0;
 groundjumpbuffer = 0;
 landed = false;
 
+global.canMove = true;
+
 /*
 grav = 7;
 v0 = 0;

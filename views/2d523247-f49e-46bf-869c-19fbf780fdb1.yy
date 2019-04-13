@@ -14,7 +14,7 @@
         "37925b11-0d0b-4603-881a-112f2152a49f"
     ],
     "filterType": "GMSprite",
-    "folderName": "Adventureres",
+    "folderName": "Adventurers",
     "isDefaultView": false,
     "localisedFolderName": ""
 }
