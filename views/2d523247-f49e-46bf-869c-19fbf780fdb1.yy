@@ -11,7 +11,8 @@
         "254b1914-b348-4c7c-9661-4b6c816c786c",
         "e37e2e9c-81a1-489b-8a5b-f4c391e17e10",
         "78ec00fd-560f-42a4-b690-ed0ada224020",
-        "37925b11-0d0b-4603-881a-112f2152a49f"
+        "37925b11-0d0b-4603-881a-112f2152a49f",
+        "533c8058-1319-451d-b7bf-1122ab877cce"
     ],
     "filterType": "GMSprite",
     "folderName": "Adventurers",

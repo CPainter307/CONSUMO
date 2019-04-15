@@ -1,8 +1,8 @@
 
 #region JUMP & MOVE
 
+//react to input
 if (global.canMove) {
-	//react to input
 	move = oPlayerInput.key_right - oPlayerInput.key_left;
 	hsp = move * movespeed;
 	if (vsp < 10) vsp += grav;
@@ -16,43 +16,47 @@ if (global.canMove) {
 		canjump = 0;
 		landed = false;
 	}
+} else { // during cutscenes
+	if (vsp < 10) vsp += grav;
+	hsp = 0;
+	sprite_index = sPlayerIdle;
+}
 
-	//analog jump height
-	if (vsp < 0 and !oPlayerInput.key_jump_held) {
-		if (vsp > -7) { // min jump height
-			vsp = max(vsp, 0)
-		}
+//analog jump height
+if (vsp < 0 and !oPlayerInput.key_jump_held) {
+	if (vsp > -7) { // min jump height
+		vsp = max(vsp, 0)
 	}
+}
 
-	//increase gravity if falling
-	if (vsp > 0) { 
-		vsp += grav*1.5
+//increase gravity if falling
+if (vsp > 0) { 
+	vsp += grav*1.5
+}
+
+//ledge grab
+if (hsp != 0) {
+	hsp_dir = sign(hsp);
+}
+
+var was_free = !position_meeting(x+(50*hsp_dir), yprevious-20, oWall);
+var is_not_free = position_meeting(x+(50*hsp_dir), y, oWall);
+var near_ground = position_meeting(x, y+100, oWall);
+
+if (!near_ground and was_free and is_not_free and vsp > 0) {
+	hsp = 0;
+	vsp = 0;
+	//move against ledge
+	while (!place_meeting(x+hsp_dir, y, oWall)) {
+		x += hsp_dir;
 	}
-
-	//ledge grab
-	if (hsp != 0) {
-		hsp_dir = sign(hsp);
-	}
-
-	var was_free = !position_meeting(x+(50*hsp_dir), yprevious-20, oWall);
-	var is_not_free = position_meeting(x+(50*hsp_dir), y, oWall);
-	var near_ground = position_meeting(x, y+100, oWall);
-
-	if (!near_ground and was_free and is_not_free and vsp > 0) {
-		hsp = 0;
-		vsp = 0;
-		//move against ledge
-		while (!place_meeting(x+hsp_dir, y, oWall)) {
-			x += hsp_dir;
-		}
 	
-		//make sure we are the right height
-		while(position_meeting(x+(50*hsp_dir), y-5, oWall)) {
-			y--;
-		}
-	
-		state = scr_ledge_grab_state;
+	//make sure we are the right height
+	while(position_meeting(x+(50*hsp_dir), y-5, oWall)) {
+		y--;
 	}
+	
+	state = scr_ledge_grab_state;
 }
 
 #endregion
@@ -155,14 +159,15 @@ if(!place_meeting(x, y+1, oWall)) {
 		sprite_index = sPlayerRun;
 	}
 }
-
-if (oPlayerInput.key_left) {
-	facingRight = false;
-	image_xscale = -.5
-} 
-else if (oPlayerInput.key_right) {
-	facingRight = true;
-	image_xscale = .5
+if (global.canMove) {
+	if (oPlayerInput.key_left) {
+		facingRight = false;
+		image_xscale = -.5
+	} 
+	else if (oPlayerInput.key_right) {
+		facingRight = true;
+		image_xscale = .5
+	}
 }
 #endregion
 

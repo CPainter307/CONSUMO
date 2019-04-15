@@ -10,4 +10,12 @@ creator = noone;
 charCount = 0;
 name = "";
 
-voice = snd_voice_oldman_1;
+enum voice {
+	oldman,
+	lizard
+}
+portrait = sLizardPortrait;
+//voice_snd = voice.oldman;
+
+textboxPosX = (camera_get_view_width(view_camera[0])/2) - 255
+textboxPosY = (camera_get_view_height(view_camera[0])) - 220

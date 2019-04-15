@@ -343,6 +343,14 @@
             }
         },
         {
+            "Key": "1b1ebe26-173c-40bf-a08b-27b70f69678a",
+            "Value": {
+                "id": "ba27824d-51e7-43c9-b91e-86c7967d1d8b",
+                "resourcePath": "sounds\\snd_voice_lizard_5\\snd_voice_lizard_5.yy",
+                "resourceType": "GMSound"
+            }
+        },
+        {
             "Key": "1bc6adce-4e96-4833-91e9-a25c347e9ed6",
             "Value": {
                 "id": "0bd3eae6-bf76-4bd4-9139-017ad44f3d25",
@@ -500,6 +508,14 @@
                 "id": "e62b1347-6569-42dc-b60b-30950296f311",
                 "resourcePath": "objects\/oRice\/oRice.yy",
                 "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "3040a1e4-26d6-415d-ae63-fc3eb1d49aa2",
+            "Value": {
+                "id": "d4c81170-c809-430e-97c7-a1d2777fee27",
+                "resourcePath": "sounds\\snd_voice_lizard_4\\snd_voice_lizard_4.yy",
+                "resourceType": "GMSound"
             }
         },
         {
@@ -828,6 +844,22 @@
                 "id": "27934824-722d-4915-bad6-f3904be9ba31",
                 "resourcePath": "views\/528cf088-71ec-4869-9354-829d5b8fe004.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "53177913-a212-4287-ba06-d52e07a159b4",
+            "Value": {
+                "id": "2aeaf686-daaa-4c36-a42f-c9185f82eff5",
+                "resourcePath": "scripts\\scr_play_voice\\scr_play_voice.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "533c8058-1319-451d-b7bf-1122ab877cce",
+            "Value": {
+                "id": "e0673782-50ba-49bb-8ad1-0f51dbaf52cc",
+                "resourcePath": "sprites\\sLizardPortrait\\sLizardPortrait.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -1434,7 +1466,7 @@
             "Key": "84077f48-6221-431b-973a-524b34ce5d3d",
             "Value": {
                 "id": "cc1a9def-d5dc-492a-b2d0-6ff8402adc55",
-                "resourcePath": "scripts\\scr_play_voice_sound\\scr_play_voice_sound.yy",
+                "resourcePath": "scripts\\scr_play_oldman_voice_sound\\scr_play_oldman_voice_sound.yy",
                 "resourceType": "GMScript"
             }
         },
@@ -1508,6 +1540,14 @@
                 "id": "714e30c4-7095-40ac-8ed5-18740e6c7f4c",
                 "resourcePath": "sprites\\sDustParticle\\sDustParticle.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "8d128a25-167e-4baf-8931-ab1332e4765d",
+            "Value": {
+                "id": "740c6019-6102-4de9-b7e6-386d80b3ce65",
+                "resourcePath": "sounds\\snd_voice_oldman_5\\snd_voice_oldman_5.yy",
+                "resourceType": "GMSound"
             }
         },
         {
@@ -1764,6 +1804,14 @@
                 "id": "99283cc5-6e19-47fd-900c-753b41e904ad",
                 "resourcePath": "sprites\/sOldPot\/sOldPot.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "a4692228-484c-4a61-b464-803425c6e106",
+            "Value": {
+                "id": "78cd6ced-72ba-442b-8b96-e736fa48ad64",
+                "resourcePath": "scripts\\scr_play_lizard_voice_sound\\scr_play_lizard_voice_sound.yy",
+                "resourceType": "GMScript"
             }
         },
         {
@@ -2359,6 +2407,14 @@
             }
         },
         {
+            "Key": "d7d15300-c080-4aee-a5df-f8a4819e51c4",
+            "Value": {
+                "id": "91ce7ff7-85cd-4fac-9259-7908f4a2441d",
+                "resourcePath": "sounds\\snd_voice_oldman_4\\snd_voice_oldman_4.yy",
+                "resourceType": "GMSound"
+            }
+        },
+        {
             "Key": "d8270538-ffec-40e3-8acf-ff070cc2c910",
             "Value": {
                 "id": "92fd18a0-76c5-4f78-bc16-e4ce8964f4c1",
@@ -2463,6 +2519,14 @@
             }
         },
         {
+            "Key": "e1ab8fc3-e3ab-44a0-832d-f05b3d91ead7",
+            "Value": {
+                "id": "13302148-873b-47fb-b7b6-ff40a91e91d4",
+                "resourcePath": "sounds\\snd_voice_lizard_3\\snd_voice_lizard_3.yy",
+                "resourceType": "GMSound"
+            }
+        },
+        {
             "Key": "e21a3dc0-4d95-4bf6-a076-16cba2150aa9",
             "Value": {
                 "id": "ea9d2c76-852e-4e0e-a56b-2a7260ed088f",
@@ -2508,6 +2572,14 @@
                 "id": "340ccbb0-ba80-4688-9a1f-37aab95854b9",
                 "resourcePath": "objects\/oApple\/oApple.yy",
                 "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "e9603e4b-2c11-44b7-ab75-2d94a05c4792",
+            "Value": {
+                "id": "c700487f-2c53-4f17-a38f-4837afc1ffce",
+                "resourcePath": "sounds\\snd_voice_lizard_2\\snd_voice_lizard_2.yy",
+                "resourceType": "GMSound"
             }
         },
         {
@@ -2636,6 +2708,14 @@
                 "id": "627e7c11-96ec-4552-a014-3203899022ce",
                 "resourcePath": "options\/mac\/options_mac.yy",
                 "resourceType": "GMMacOptions"
+            }
+        },
+        {
+            "Key": "f628f6dc-4582-4b2d-ba07-a789636a0117",
+            "Value": {
+                "id": "f0b3682f-8d38-4ee7-aa69-d1fe6aa1b154",
+                "resourcePath": "sounds\\snd_voice_lizard_1\\snd_voice_lizard_1.yy",
+                "resourceType": "GMSound"
             }
         },
         {
@@ -2810,9 +2890,11 @@
         "ff083015-e041-46c3-9661-a937275dcb35",
         "4503fc36-cb69-42bb-9511-e9884a8fa50b",
         "84077f48-6221-431b-973a-524b34ce5d3d",
+        "a4692228-484c-4a61-b464-803425c6e106",
         "c9b4431a-b807-41cd-8000-e05259b3b145",
         "eed93249-d65e-46e5-ac21-5f4c11b54200",
         "98fb5ed9-686c-4bcf-b281-0517bdfc224a",
+        "53177913-a212-4287-ba06-d52e07a159b4",
         "ee8e8732-a1ff-4a28-8ebe-d66683df181f",
         "4b73355a-586a-4c6c-94b2-f6862a3cc8d7",
         "57c547ef-c24a-4269-940c-5a518ff1b620",
