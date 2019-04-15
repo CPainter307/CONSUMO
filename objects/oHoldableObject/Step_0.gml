@@ -4,12 +4,12 @@
 if (followingL == true) {
 	speed = 0;
 	if (oPlayer.facingRight) {
-		depth = 350;
+		if (instance_exists(oFrontArm)) depth = oFrontArm.depth + 1;
 		x = oFrontArm.x + 6;
 		y = oFrontArm.y + 25;
 	}
 	else {
-		depth = 450;
+		if (instance_exists(oPlayer)) depth = oPlayer.depth + 1;
 		x = oFrontArm.x - 50;
 		y = oFrontArm.y + 25;
 	}
@@ -22,13 +22,13 @@ if (followingL == true) {
 if (followingR == true) {
 	speed = 0;
 	if (oPlayer.facingRight) {
-		depth = 350;
+		if (instance_exists(oFrontArm)) depth = oFrontArm.depth + 1;
 		x = oFrontArm.x + 50;
 		y = oFrontArm.y + 25;
 
 	}
 	else {
-		depth = 350;
+		if (instance_exists(oFrontArm)) depth = oFrontArm.depth + 1;
 		x = oFrontArm.x - 10;
 		y = oFrontArm.y + 35;
 	}

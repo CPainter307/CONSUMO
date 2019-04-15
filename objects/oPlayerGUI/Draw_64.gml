@@ -95,6 +95,7 @@ if (adv1 != noone) {
 	draw_set_valign(fa_center);
 	draw_text(xpos+105, ypos+29, "HEALTH:")*/
 
+/*
 
 }
 var xpos = view_xport[0]+46;
@@ -118,6 +119,7 @@ if (adv2 != noone) {
 	draw_text(xpos+105, ypos+29, "HEALTH:")*/
 	
 
+
 }
 var xpos = view_xport[0]+46;
 var ypos = view_yport[0]+434;
@@ -138,8 +140,4 @@ if (adv3 != noone) {
 	/*draw_set_color(textCol);
 	draw_set_font(fBattleTextThick);
 	draw_text(xpos+105, ypos+29, "HEALTH:")*/
-	
 }
-
-// textbox gui
-//nine_slice_box(s9slice, 475, 539, mouse_x, mouse_y);
