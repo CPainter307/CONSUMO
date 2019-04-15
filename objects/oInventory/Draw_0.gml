@@ -59,7 +59,6 @@ if (showInv) {
 					h.x = oIngredientHolder.x;
 					h.y = oIngredientHolder.y;
 					h.followingL = false;
-				} else {
 				}
 				global.inventory[i] = h;
 				oPlayerPickUpRadius.itemInLeftHand = temp;
@@ -74,7 +73,6 @@ if (showInv) {
 					h.x = oIngredientHolder.x;
 					h.y = oIngredientHolder.y;
 					h.followingR = false;
-				} else {
 				}
 				global.inventory[i] = h;
 				oPlayerPickUpRadius.itemInRightHand = temp;

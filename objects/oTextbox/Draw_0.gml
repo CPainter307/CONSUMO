@@ -11,7 +11,12 @@ draw_set_halign(fa_center);
 draw_text(x+(boxWidth/2), y+yBuffer, name);
 
 //draw dialogue
-if (charCount < string_length(text[page])) charCount+=1; // displays one character every frame 
+if (charCount < string_length(text[page])) {
+	charCount+=1; // displays one character every frame
+	if (charCount mod 4 == 0) {
+		scr_play_voice_sound();
+	}
+}
 textPart = string_copy(text[page], 1, charCount);
 
 draw_set_font(fBattleTextThick)

@@ -10,3 +10,4 @@ creator = noone;
 charCount = 0;
 name = "";
 
+voice = snd_voice_oldman_1;

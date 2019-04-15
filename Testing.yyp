@@ -1127,6 +1127,14 @@
             }
         },
         {
+            "Key": "66e20805-eca5-4c0c-8b54-fab175912667",
+            "Value": {
+                "id": "c9f44ffa-4340-4066-bd93-b90fc3927127",
+                "resourcePath": "sounds\\snd_voice_oldman_2\\snd_voice_oldman_2.yy",
+                "resourceType": "GMSound"
+            }
+        },
+        {
             "Key": "68d9a4a4-a989-495b-bc21-2320d40a7ad6",
             "Value": {
                 "id": "4d918f91-c3bf-4135-8eb8-c5ac08817dd3",
@@ -1407,6 +1415,14 @@
             }
         },
         {
+            "Key": "84077f48-6221-431b-973a-524b34ce5d3d",
+            "Value": {
+                "id": "cc1a9def-d5dc-492a-b2d0-6ff8402adc55",
+                "resourcePath": "scripts\\scr_play_voice_sound\\scr_play_voice_sound.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "8676c2a4-7992-4093-93ec-1bec68d82622",
             "Value": {
                 "id": "9604653d-0f26-4be5-9e15-832f3fdf9cca",
@@ -1452,6 +1468,14 @@
                 "id": "39c0071c-901f-421c-b23f-5f41f8583e51",
                 "resourcePath": "objects\/oMushroom\/oMushroom.yy",
                 "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "8c27b509-a66a-4864-b9ae-157c3133150a",
+            "Value": {
+                "id": "6c7ec33a-2eca-47c6-a295-7a077396aaaa",
+                "resourcePath": "sounds\\snd_voice_oldman_1\\snd_voice_oldman_1.yy",
+                "resourceType": "GMSound"
             }
         },
         {
@@ -1964,6 +1988,14 @@
                 "id": "7e692c37-22e0-4dc1-b152-f4337b259783",
                 "resourcePath": "sprites\/sBattleWindowStat\/sBattleWindowStat.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "bb8194bc-e72c-4df8-9a28-801c7ab30d4a",
+            "Value": {
+                "id": "b315fec5-9292-4d0c-b3e4-c4bf115b2308",
+                "resourcePath": "sounds\\snd_voice_oldman_3\\snd_voice_oldman_3.yy",
+                "resourceType": "GMSound"
             }
         },
         {
@@ -2753,6 +2785,7 @@
         "d23eaa3e-270b-4cc1-ba61-46c193d2a237",
         "ff083015-e041-46c3-9661-a937275dcb35",
         "4503fc36-cb69-42bb-9511-e9884a8fa50b",
+        "84077f48-6221-431b-973a-524b34ce5d3d",
         "c9b4431a-b807-41cd-8000-e05259b3b145",
         "eed93249-d65e-46e5-ac21-5f4c11b54200",
         "98fb5ed9-686c-4bcf-b281-0517bdfc224a",
