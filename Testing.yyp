@@ -583,6 +583,14 @@
             }
         },
         {
+            "Key": "39608c57-6c29-4f73-81dc-8c1db8ede544",
+            "Value": {
+                "id": "ccbcaec6-841c-4334-9767-06bef87fa385",
+                "resourcePath": "objects\\oAutoTrigger\\oAutoTrigger.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "39e2e2ab-0121-4dc7-9122-4c00a7202b13",
             "Value": {
                 "id": "ca848edf-8478-4265-a884-9f8fc1c46ec4",
@@ -1311,6 +1319,14 @@
             }
         },
         {
+            "Key": "79874b07-94d2-4f62-b32e-0b767baeb1bd",
+            "Value": {
+                "id": "6d304e16-fe43-44f5-a4ec-b23d76a3d622",
+                "resourcePath": "rooms\\rCutscene\\rCutscene.yy",
+                "resourceType": "GMRoom"
+            }
+        },
+        {
             "Key": "7989797a-cb13-44b7-8f62-ffa40029bb56",
             "Value": {
                 "id": "9c1465c6-6c6f-4458-a360-857449a59fa3",
@@ -1524,6 +1540,14 @@
                 "id": "9db2dee6-7f28-488f-b513-9dff3abebfc3",
                 "resourcePath": "objects\/oLettuce\/oLettuce.yy",
                 "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "8f135a57-643d-4ed5-bc4f-6630c01528bf",
+            "Value": {
+                "id": "a9c285c8-1663-4a32-99e5-8e0992a85561",
+                "resourcePath": "scripts\\cutscene_create_textbox\\cutscene_create_textbox.yy",
+                "resourceType": "GMScript"
             }
         },
         {
@@ -2799,7 +2823,8 @@
         "f033814b-8d01-423a-b362-1b09f459935b",
         "074795d2-f267-487f-aad3-ddc7dec9f34c",
         "3a7cb534-4170-4714-876d-06514756aaca",
-        "5e8969c2-7a07-4590-a249-ad8589e3c5a8"
+        "5e8969c2-7a07-4590-a249-ad8589e3c5a8",
+        "8f135a57-643d-4ed5-bc4f-6630c01528bf"
     ],
     "tutorial": ""
 }

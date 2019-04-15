@@ -2,6 +2,9 @@ global.pause			= false;
 global.view_width		= view_wport[0];
 global.view_height		= view_hport[0];
 
+global.textboxPosX = (camera_get_view_width(view_camera[0])/2) - 255
+global.textboxPosY = (camera_get_view_height(view_camera[0])) - 220
+
 //Global Input Variables
 global.key_up			= ord("W");
 global.key_down			= ord("S");

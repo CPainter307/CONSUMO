@@ -1,7 +1,7 @@
 if (place_meeting(x, y, oPlayer)) {
 	if (oPlayerInput.key_interact) {
 		if (myTextbox == noone) {
-			myTextbox = instance_create_layer(textboxPosX, textboxPosY, "Text", oTextbox)
+			myTextbox = instance_create_layer(global.textboxPosX, global.textboxPosY, "Text", oTextbox)
 			myTextbox.text = myText;
 			myTextbox.creator = self;
 			myTextbox.name = myName;

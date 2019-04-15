@@ -5,3 +5,7 @@ timer = 0;
 
 x_dest = -1;
 y_dest = -1;
+
+myTextbox = noone;
+myName = "";
+myText[0] = "";

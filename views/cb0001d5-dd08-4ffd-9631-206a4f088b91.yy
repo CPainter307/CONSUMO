@@ -14,7 +14,8 @@
         "f033814b-8d01-423a-b362-1b09f459935b",
         "074795d2-f267-487f-aad3-ddc7dec9f34c",
         "3a7cb534-4170-4714-876d-06514756aaca",
-        "5e8969c2-7a07-4590-a249-ad8589e3c5a8"
+        "5e8969c2-7a07-4590-a249-ad8589e3c5a8",
+        "8f135a57-643d-4ed5-bc4f-6630c01528bf"
     ],
     "filterType": "GMScript",
     "folderName": "Cutscenes",

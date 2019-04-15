@@ -60,7 +60,50 @@
         }
     ],
     "physicsStartAwake": true,
-    "properties": null,
+    "properties": [
+        {
+            "id": "c874f95a-6fd8-4784-989b-98ede36e8f90",
+            "modelName": "GMObjectProperty",
+            "mvc": "1.0",
+            "listItems": null,
+            "multiselect": false,
+            "rangeEnabled": false,
+            "rangeMax": 10,
+            "rangeMin": 0,
+            "resourceFilter": 1023,
+            "value": "rFlatSurface",
+            "varName": "new_room",
+            "varType": 5
+        },
+        {
+            "id": "d2751e30-d384-4f97-83a7-0ae703225eda",
+            "modelName": "GMObjectProperty",
+            "mvc": "1.0",
+            "listItems": null,
+            "multiselect": false,
+            "rangeEnabled": false,
+            "rangeMax": 10,
+            "rangeMin": 0,
+            "resourceFilter": 1023,
+            "value": "0",
+            "varName": "new_x",
+            "varType": 1
+        },
+        {
+            "id": "a92f11c3-58cf-4aff-8315-407e71a32991",
+            "modelName": "GMObjectProperty",
+            "mvc": "1.0",
+            "listItems": null,
+            "multiselect": false,
+            "rangeEnabled": false,
+            "rangeMax": 10,
+            "rangeMin": 0,
+            "resourceFilter": 1023,
+            "value": "0",
+            "varName": "new_y",
+            "varType": 1
+        }
+    ],
     "solid": false,
     "spriteId": "f910e5f8-3f9f-4072-ab95-ebae909cd3b1",
     "visible": true
