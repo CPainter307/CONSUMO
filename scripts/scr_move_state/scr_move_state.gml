@@ -169,13 +169,22 @@ if(!place_meeting(x, y+1, oWall)) {
 	}
 }
 
-if (oPlayerInput.key_left) {
+if (oPlayerInput.key_left) && (!isLocked) {
 	facingRight = false;
-	image_xscale = -.5
+	//image_xscale = -.5
 } 
-else if (oPlayerInput.key_right) {
+else if (oPlayerInput.key_right) && (!isLocked) {
 	facingRight = true;
-	image_xscale = .5
+	//image_xscale = .5
+}
+
+if (facingRight)
+{
+	image_xscale = 0.5;	
+}
+else
+{
+	image_xscale = -0.5;	
 }
 #endregion
 

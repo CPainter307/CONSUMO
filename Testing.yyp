@@ -1223,6 +1223,14 @@
             }
         },
         {
+            "Key": "78a43033-c60d-4327-b1a0-a2c56ac3e780",
+            "Value": {
+                "id": "2cf3485f-0009-4dea-af52-a73aef5422b7",
+                "resourcePath": "sprites\\sRogueIdle\\sRogueIdle.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "78ec00fd-560f-42a4-b690-ed0ada224020",
             "Value": {
                 "id": "910ee738-d14a-42c1-ac53-61a7d83342b0",
@@ -2164,6 +2172,14 @@
                 "id": "023060ef-3c07-4732-b466-b6729382fc24",
                 "resourcePath": "objects\/oTarget\/oTarget.yy",
                 "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "d5d92beb-4e5a-46ed-9ab1-01f78d610d90",
+            "Value": {
+                "id": "0856a327-9725-4f58-992c-19bed30c90a2",
+                "resourcePath": "sprites\\sRogueAttacking\\sRogueAttacking.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
