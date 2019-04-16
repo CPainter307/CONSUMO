@@ -48,3 +48,10 @@ if (sprite_index == sRogueAttacking) && (image_index == 5)
 	{
 		sprite_index = sRogueIdle;	
 	}
+	
+if (healthThisFrame > currentHealth)
+{
+	flash = 3;
+}
+
+healthThisFrame = currentHealth;

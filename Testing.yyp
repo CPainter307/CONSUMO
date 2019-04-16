@@ -1727,6 +1727,14 @@
             }
         },
         {
+            "Key": "a3ec3092-c466-4638-a24f-c249dfb76ec8",
+            "Value": {
+                "id": "13f120a4-958a-44b8-994b-053a81d29f35",
+                "resourcePath": "shaders\\shHit\\shHit.yy",
+                "resourceType": "GMShader"
+            }
+        },
+        {
             "Key": "a3ffd620-5883-4891-bdcf-edea2c2b4142",
             "Value": {
                 "id": "73a863ef-0691-498e-9472-980588d4f300",

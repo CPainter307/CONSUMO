@@ -17,3 +17,6 @@ move_2 = [60, 60];
 
 timer_m1 = 0;
 timer_m2 = 0;
+
+healthThisFrame = currentHealth;
+flash = 0;
