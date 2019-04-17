@@ -2,6 +2,10 @@ global.pause			= false;
 global.view_width		= view_wport[0];
 global.view_height		= view_hport[0];
 
+//Analog Stick Check
+global.check			= 0;
+
+//Hardcoded Input Variables
 global.hard_up			= vk_up;
 global.hard_down		= vk_down;
 global.hard_left		= vk_left;

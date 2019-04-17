@@ -17,11 +17,11 @@ if (global.input_type == inputs.keyboard) {
 	input_enter_p		= keyboard_check_pressed(global.key_jump);
 }
 else if (global.input_type == inputs.analog_stick) {
-	input_up_p			= (gamepad_axis_value(0, global.key_up) < 0);
-	input_down_p		= (gamepad_axis_value(0, global.key_down) > 0);
-	input_left_p		= (gamepad_axis_value(0, global.key_left) < 0);
-	input_right_p		= (gamepad_axis_value(0, global.key_right) > 0);
-	input_enter_p		= gamepad_button_check_pressed(0, global.key_jump);
+	input_up_p			= stick_menu_movement(global.key_up);
+	input_down_p		= stick_menu_movement(global.key_down);
+	input_left_p		= stick_menu_movement(global.key_left);
+	input_right_p		= stick_menu_movement(global.key_right);
+	input_enter_p		= gamepad_button_check_pressed(0, global.key_jump)
 }
 else {
 	input_up_p			= gamepad_button_check_pressed(0, global.key_up);

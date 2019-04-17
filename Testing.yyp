@@ -1783,6 +1783,14 @@
             }
         },
         {
+            "Key": "ad94b6cf-cda9-4a50-bc7f-a80a4f298675",
+            "Value": {
+                "id": "7b4f3dde-7606-4e9c-bac5-6301ca2565f0",
+                "resourcePath": "scripts\\stick_menu_movement\\stick_menu_movement.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "afa8c8b5-e10b-4dde-81ba-4f243f430fde",
             "Value": {
                 "id": "905327c2-7994-42bb-8aca-051c21c911ad",
@@ -2668,6 +2676,7 @@
         "596df740-99d7-4b09-980d-5665291fb610",
         "b23d0973-7eef-45a2-95e9-6789e7fc5844",
         "189b9195-dea5-49f1-a225-4e853cc4ed89",
+        "ad94b6cf-cda9-4a50-bc7f-a80a4f298675",
         "f9ad685f-1396-49fe-a3e2-c5117bc4d91a",
         "59e9d743-93b6-4af6-a40b-0424f69bb113",
         "a05e043a-ac1a-469a-9a6a-79ff51b24cc1",
