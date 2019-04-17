@@ -14,7 +14,7 @@ switch (axis_dir) {
 			check = 1;
 			output = 1;
 		}
-		else if((gamepad_axis_value(0, axis_dir) == 0) && check == 1) { //when released
+		else if((gamepad_axis_value(0, axis_dir) >= 0) && check == 1) { //when released
 			check = 0;
 			output = 0;
 		}
@@ -29,7 +29,7 @@ switch (axis_dir) {
 			check = 1;
 			output = 1;
 		}
-		else if((gamepad_axis_value(0, axis_dir) == 0) && check == 1) { //when released
+		else if((gamepad_axis_value(0, axis_dir) <= 0) && check == 1) { //when released
 			check = 0;
 			output = 0;
 		}
@@ -44,7 +44,7 @@ switch (axis_dir) {
 			check = 1;
 			output = 1;
 		}
-		else if((gamepad_axis_value(0, axis_dir) == 0) && check == 1) { //when released
+		else if((gamepad_axis_value(0, axis_dir) >= 0) && check == 1) { //when released
 			check = 0;
 			output = 0;
 		}
@@ -59,7 +59,7 @@ switch (axis_dir) {
 			check = 1;
 			output = 1;
 		}
-		else if((gamepad_axis_value(0, axis_dir) == 0) && check == 1) { //when released
+		else if((gamepad_axis_value(0, axis_dir) <= 0) && check == 1) { //when released
 			check = 0;
 			output = 0;
 		}
