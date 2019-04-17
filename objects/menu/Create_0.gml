@@ -2,6 +2,12 @@ global.pause			= false;
 global.view_width		= view_wport[0];
 global.view_height		= view_hport[0];
 
+global.hard_up			= vk_up;
+global.hard_down		= vk_down;
+global.hard_left		= vk_left;
+global.hard_right		= vk_right;
+global.hard_enter		= vk_enter;
+
 //Global Input Variables
 /*global.key_up			= ord("W");
 global.key_down			= ord("S");

@@ -1,8 +1,8 @@
 {
-    "id": "f88fd37e-31d5-409d-886a-b3fef9b79eac",
+    "id": "189b9195-dea5-49f1-a225-4e853cc4ed89",
     "modelName": "GMScript",
     "mvc": "1.0",
-    "name": "scr_get_input",
+    "name": "last_gamepad",
     "IsCompatibility": false,
     "IsDnD": false
 }
