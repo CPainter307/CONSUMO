@@ -18,7 +18,7 @@ draw_sprite(portrait, 0, x+491, y-1)
 if (charCount < string_length(text[page])) {
 	charCount+=1; // displays one character every frame
 	if (charCount mod 4 == 0) {
-		scr_play_voice();
+		//scr_play_voice();
 	}
 }
 textPart = string_copy(text[page], 1, charCount);

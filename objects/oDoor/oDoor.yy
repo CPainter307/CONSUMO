@@ -60,7 +60,50 @@
         }
     ],
     "physicsStartAwake": true,
-    "properties": null,
+    "properties": [
+        {
+            "id": "3bc1b2ce-08cc-47a3-a895-41d657edc872",
+            "modelName": "GMObjectProperty",
+            "mvc": "1.0",
+            "listItems": null,
+            "multiselect": false,
+            "rangeEnabled": false,
+            "rangeMax": 10,
+            "rangeMin": 0,
+            "resourceFilter": 1023,
+            "value": "noone",
+            "varName": "new_room",
+            "varType": 5
+        },
+        {
+            "id": "9d495276-07bd-4bb4-b1f9-ad83a052dce6",
+            "modelName": "GMObjectProperty",
+            "mvc": "1.0",
+            "listItems": null,
+            "multiselect": false,
+            "rangeEnabled": false,
+            "rangeMax": 10,
+            "rangeMin": 0,
+            "resourceFilter": 1023,
+            "value": "0",
+            "varName": "new_x",
+            "varType": 0
+        },
+        {
+            "id": "d423c76a-6568-4843-94f5-989f99d9a8a6",
+            "modelName": "GMObjectProperty",
+            "mvc": "1.0",
+            "listItems": null,
+            "multiselect": false,
+            "rangeEnabled": false,
+            "rangeMax": 10,
+            "rangeMin": 0,
+            "resourceFilter": 1023,
+            "value": "0",
+            "varName": "new_y",
+            "varType": 0
+        }
+    ],
     "solid": false,
     "spriteId": "f910e5f8-3f9f-4072-ab95-ebae909cd3b1",
     "visible": true

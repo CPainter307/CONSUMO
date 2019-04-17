@@ -354,7 +354,7 @@
             "Key": "1a52a2c0-7fe2-461c-9dab-4db73d9416f5",
             "Value": {
                 "id": "0218c7b8-aad7-426f-9da6-d9d970d08bdb",
-                "resourcePath": "objects\\oTextBox\\oTextBox.yy",
+                "resourcePath": "objects\\oTextbox\\oTextbox.yy",
                 "resourceType": "GMObject"
             }
         },
@@ -591,6 +591,14 @@
             }
         },
         {
+            "Key": "31021679-af37-447d-a2b6-b264779b99cf",
+            "Value": {
+                "id": "736775e5-b69d-46ab-abb4-69a60f844fb5",
+                "resourcePath": "scripts\\scr_play_voice\\scr_play_voice.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "32ac9078-82fb-4e87-acd8-a373856daed1",
             "Value": {
                 "id": "6227e693-5bf6-4389-8f35-4c506c27100b",
@@ -788,6 +796,14 @@
                 "id": "c877ec34-001c-484e-baf7-dac95da208ce",
                 "resourcePath": "objects\/oSteam\/oSteam.yy",
                 "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "4aff9f72-5ccf-4018-97dd-5746e3fbcf43",
+            "Value": {
+                "id": "477133fe-754d-4ceb-9236-145bc35f0f9e",
+                "resourcePath": "rooms\\rCutscene\\rCutscene.yy",
+                "resourceType": "GMRoom"
             }
         },
         {
@@ -1028,14 +1044,6 @@
                 "id": "ef195637-9365-4447-91f7-88490baa4523",
                 "resourcePath": "objects\/oInvButton\/oInvButton.yy",
                 "resourceType": "GMObject"
-            }
-        },
-        {
-            "Key": "59d85528-7cb6-4f85-a9dc-bed982ba2907",
-            "Value": {
-                "id": "55e0a2b4-250e-410e-8aaf-3f8b8bc66570",
-                "resourcePath": "fonts\/fBattleTextThick\/fBattleTextThick.yy",
-                "resourceType": "GMFont"
             }
         },
         {
@@ -2018,7 +2026,7 @@
             "Key": "b0bd1477-0b35-4d9b-8da0-6de15396f7cb",
             "Value": {
                 "id": "6dc9b924-d11d-4893-8168-cada32160669",
-                "resourcePath": "sprites\\sTextBox\\sTextBox.yy",
+                "resourcePath": "sprites\\sTextbox\\sTextbox.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -2116,6 +2124,14 @@
                 "id": "674ff2e6-60ba-4935-81e0-02a5ec144007",
                 "resourcePath": "scripts\\cutscnee_instance_destroy_nearest\\cutscnee_instance_destroy_nearest.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "b747c6ac-fe1d-4453-9581-b083d024820a",
+            "Value": {
+                "id": "cace614a-3256-4859-891d-eda5f5bed2a7",
+                "resourcePath": "objects\\oTutorial\\oTutorial.yy",
+                "resourceType": "GMObject"
             }
         },
         {
@@ -2252,6 +2268,14 @@
                 "id": "40e13bfe-be32-4727-b2fc-c94168efaedf",
                 "resourcePath": "sprites\/sFish\/sFish.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "c24b12b1-ce97-4081-9136-99b79a769c4f",
+            "Value": {
+                "id": "b5a7771b-c2f2-4984-8932-924aa12dcc8c",
+                "resourcePath": "objects\\oCutscene\\oCutscene.yy",
+                "resourceType": "GMObject"
             }
         },
         {
@@ -2951,6 +2975,14 @@
             }
         },
         {
+            "Key": "ff74834e-cdc6-4066-a0e8-c64429ab6e19",
+            "Value": {
+                "id": "b53adfc1-5f8d-4935-a3d3-7140cd97fa21",
+                "resourcePath": "fonts\\fBattleTextThick\\fBattleTextThick.yy",
+                "resourceType": "GMFont"
+            }
+        },
+        {
             "Key": "ff97ac86-78c2-4a88-b034-194e92ec7696",
             "Value": {
                 "id": "13387661-4def-419c-9bd6-d8551e224e67",
@@ -3008,6 +3040,7 @@
         "98fb5ed9-686c-4bcf-b281-0517bdfc224a",
         "3ea87c76-ba28-49fe-b673-22895010f358",
         "07e90023-23f9-49cd-a009-a8e7c28e0153",
+        "31021679-af37-447d-a2b6-b264779b99cf",
         "c29ad4b3-24cc-4185-98ce-983c71cac0eb",
         "9490bc48-3d40-4c3c-a786-d4d443841f37",
         "ba8663ee-3034-4876-977b-e0162afcb0c8",

@@ -2,7 +2,7 @@
     "id": "b0bd1477-0b35-4d9b-8da0-6de15396f7cb",
     "modelName": "GMSprite",
     "mvc": "1.12",
-    "name": "sTextBox",
+    "name": "sTextbox",
     "For3D": false,
     "HTile": false,
     "VTile": false,

@@ -8,9 +8,9 @@
         "37ea53cb-bbce-4b09-9260-7810c74728a6",
         "c3ef0a66-94a6-4f62-aafa-1d01beb6606a",
         "df448b7a-b62d-4fba-8aaf-4752b01b1ab5",
-        "59d85528-7cb6-4f85-a9dc-bed982ba2907",
         "a1d596a4-2646-4787-99a0-cd33658c843a",
-        "0c9ad342-43cd-46c5-a37d-6bbc825b5a40"
+        "0c9ad342-43cd-46c5-a37d-6bbc825b5a40",
+        "ff74834e-cdc6-4066-a0e8-c64429ab6e19"
     ],
     "filterType": "GMFont",
     "folderName": "fonts",
