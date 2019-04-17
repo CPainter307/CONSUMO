@@ -56,6 +56,15 @@ if (!other.followingL and !other.followingR) {
 		hunger = 100;
 		stallHunger = true;
 	}
+	
+	if (other.hp < 0 || other.attack < 0 || other.defense < 0 || other.spd < 0)
+	{
+		flash = 3;	
+	}
+	else
+	{
+		shaderBuff = 1;	
+	}
 
 	with (other) instance_destroy();
 }

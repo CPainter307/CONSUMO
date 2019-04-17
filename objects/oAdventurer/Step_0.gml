@@ -42,3 +42,9 @@ if (!stallHunger and hunger >= 0) {
 } else if (stallHunger) {
 	stallHungerTimer++;	
 }
+
+
+if (healthThisFrame > currentHealth)
+{
+	flash = 3;
+}

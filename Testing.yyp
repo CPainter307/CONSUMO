@@ -1551,6 +1551,14 @@
             }
         },
         {
+            "Key": "8227928e-4995-463c-9855-7591d6bdadac",
+            "Value": {
+                "id": "da1efe8e-073d-4f59-83a4-e0bd4c63bb1e",
+                "resourcePath": "shaders\\shBuff\\shBuff.yy",
+                "resourceType": "GMShader"
+            }
+        },
+        {
             "Key": "831c07c0-479d-4e71-9511-e78c2d3bd94c",
             "Value": {
                 "id": "24fa5671-7f21-4d45-85a3-38330dc66e0f",

@@ -43,3 +43,7 @@ h = noone;
 a = noone;
 d = noone;
 s = noone;
+
+healthThisFrame = currentHealth;
+flash = 0;
+shaderBuff = 0;
