@@ -16,3 +16,10 @@ if(((timer_m2) * (baseSpeed/100)) >= move_2[0]) {
 
 timer_m2++;
 timer_m1++;
+
+if (healthThisFrame > currentHealth)
+{
+	flash = 3;
+}
+
+healthThisFrame = currentHealth;

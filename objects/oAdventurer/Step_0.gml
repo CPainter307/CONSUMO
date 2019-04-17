@@ -46,5 +46,7 @@ if (!stallHunger and hunger >= 0) {
 
 if (healthThisFrame > currentHealth)
 {
-	flash = 3;
+	flash = 1;
 }
+
+healthThisFrame = currentHealth;
