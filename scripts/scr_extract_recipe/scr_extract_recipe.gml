@@ -48,7 +48,7 @@ if (position_meeting(x, y, oPlayerPickUpRadius) and (oPlayerInput.key_left_hand 
 			// if different multiplier, choose greatest of each HADS value
 			// HADS = hp, attack, defense, speed
 			var hadsArray = array_create(6, noone);
-			for (var i = 0; i < 4; i++) {
+			for (var i = 0; i < 6; i++) {
 				if (listOfMods[0].modifier1[i] >= listOfMods[1].modifier1[i]) {
 					hadsArray[i] = listOfMods[0].modifier1[i];
 				} else {

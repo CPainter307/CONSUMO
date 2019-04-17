@@ -1,4 +1,5 @@
 var recipeName = "";
+var containsGrain = false;
 
 //check for meat and vegetable
 var meatAndVeggie = false;
@@ -70,8 +71,23 @@ for (var i = 0; i < 3; i++) {
 
 }
 
-//check cooking type
-inst.name += mealType;
+//check for grain type
+for (var i = 0; i < 3; i++) {
+	if (ds_list_find_value(item_list, i).classification == "grain") {
+		containsGrain = true;
+	
+	}
+}
+
+//add meal name
+if (containsGrain) {
+	inst.name += mealType3;
+}
+else {
+	//add cooking type
+	inst.name += mealType;
+}
+
 
 if string_pos("Vegetable", inst.name) != 0 || string_pos("Seasoned", inst.name) != 0
 {
@@ -84,6 +100,10 @@ if string_pos("Fish", inst.name) != 0
 if string_pos("Meat", inst.name) != 0
 {
 	inst.sprite_index = sBrownSoup;	
+}
+if string_pos("Stew", inst.name) != 0
+{
+	inst.sprite_index = sOrangeSoup;
 }
 
 //for cooking single objects

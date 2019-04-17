@@ -5,7 +5,7 @@ ingrName = "Rice";
 type = "booster";
 ing_id = 0;
 runeSprite = sRiceRune;
-classification = "vegetable"; //four types of classi right now: meat, vegetable, seasoning, spice
+classification = "grain"; //four types of classi right now: meat, vegetable, seasoning, spice
 adjective = "Grainy ";
 chops = 0;
 
