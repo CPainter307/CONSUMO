@@ -3,7 +3,8 @@
 if (!instance_exists(oPlayer)) exit;
 
 x = lerp(x, oPlayer.x, .2)
-y = lerp(y, oPlayer.y-view_h/4, .2)
+y = lerp(y, oPlayer.y-view_h/8, .2)
+//y-view_h/4
 x = clamp(x, view_w/2, room_width-view_w/2)
 y = clamp(y, view_h/2, room_height-view_h/2)
 camera_set_view_pos(view_camera[0], x-view_w/2, y-view_h/2);

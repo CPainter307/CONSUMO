@@ -14,7 +14,8 @@
         "78a43033-c60d-4327-b1a0-a2c56ac3e780",
         "1ef81242-89e3-4aff-8500-475e53f269fe",
         "d5d92beb-4e5a-46ed-9ab1-01f78d610d90",
-        "37925b11-0d0b-4603-881a-112f2152a49f"
+        "37925b11-0d0b-4603-881a-112f2152a49f",
+        "d8597a1a-f693-4eb5-89cc-77503536a981"
     ],
     "filterType": "GMSprite",
     "folderName": "Adventureres",
