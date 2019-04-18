@@ -319,6 +319,14 @@
             }
         },
         {
+            "Key": "173bae8b-cfd9-4e19-b767-7c8d11367816",
+            "Value": {
+                "id": "643a8e8b-99e5-46f1-ba2b-f2b79eceefb9",
+                "resourcePath": "objects\\oOldman\\oOldman.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "17a5021b-5d85-4cc1-835c-8c9c12cb7ad7",
             "Value": {
                 "id": "29f78121-cba4-43bc-9627-1b85e0733384",
@@ -531,6 +539,14 @@
             "Value": {
                 "id": "294b3381-5a94-4012-9679-6055a2ab7ee7",
                 "resourcePath": "sprites\/sHacky\/sHacky.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "27118221-fb3e-46ed-80fc-f1a600478585",
+            "Value": {
+                "id": "6a1ad320-e60e-4f72-bb80-04d6244016d3",
+                "resourcePath": "sprites\\sOldmanPortrait\\sOldmanPortrait.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -2892,6 +2908,14 @@
                 "id": "340ccbb0-ba80-4688-9a1f-37aab95854b9",
                 "resourcePath": "objects\/oApple\/oApple.yy",
                 "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "e984cb30-1ab5-4e32-9043-2aa068299c4d",
+            "Value": {
+                "id": "d7ba90ee-0127-4e1d-8457-bef9a9d4f1e2",
+                "resourcePath": "sprites\\sOldmann\\sOldmann.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
