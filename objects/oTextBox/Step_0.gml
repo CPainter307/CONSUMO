@@ -1,4 +1,4 @@
-if (oPlayerInput.key_interact and alarm_get(0) <= 0) {
+if ((oPlayerInput.key_interact or oPlayerInput.key_jump) and alarm_get(0) <= 0) {
 	if (charCount < string_length(text[page])) {
 		charCount = string_length(text[page]);	
 	} else if (page+1 < array_length_1d(text)) {

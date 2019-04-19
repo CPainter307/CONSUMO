@@ -1,7 +1,7 @@
 {
     "id": "ff74834e-cdc6-4066-a0e8-c64429ab6e19",
     "modelName": "GMFont",
-    "mvc": "1.1",
+    "mvc": "1.0",
     "name": "fBattleTextThick",
     "AntiAlias": 1,
     "TTFName": "",
@@ -10,7 +10,6 @@
     "charset": 0,
     "first": 0,
     "fontName": "Lilita One",
-    "glyphOperations": 0,
     "glyphs": [
         {
             "Key": 32,
@@ -2863,16 +2862,13 @@
             }
         }
     ],
-    "hinting": 0,
+    "image": null,
     "includeTTF": false,
-    "interpreter": 0,
     "italic": false,
     "kerningPairs": [
         
     ],
     "last": 0,
-    "maintainGms1Font": false,
-    "pointRounding": 0,
     "ranges": [
         {
             "x": 32,

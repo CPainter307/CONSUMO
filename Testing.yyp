@@ -975,6 +975,14 @@
             }
         },
         {
+            "Key": "51ffc865-8e08-4c49-b6db-ddfcf82a28f8",
+            "Value": {
+                "id": "2cac2678-0609-4ab2-b0dd-cfcfa4de5554",
+                "resourcePath": "sprites\\sPlayerTargetGreen\\sPlayerTargetGreen.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "5203b628-2534-445d-b080-52230db4f9b6",
             "Value": {
                 "id": "8ad78618-c88e-42ae-9514-c2175a697a8f",
@@ -1491,6 +1499,14 @@
             "Value": {
                 "id": "61d3d7a0-b25c-478a-b962-ddebdf7e5b1d",
                 "resourcePath": "sprites\/sFrontArmR\/sFrontArmR.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "78484fe1-ed93-41ca-8d55-797fe360f7a4",
+            "Value": {
+                "id": "ca6d04cc-d29e-4567-a235-fa6bef11ef97",
+                "resourcePath": "sprites\\sPebble\\sPebble.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -2095,6 +2111,14 @@
             }
         },
         {
+            "Key": "a81c36d9-26fc-4c2a-a549-48f50ad7eb36",
+            "Value": {
+                "id": "65881243-a6cf-49c5-9594-f455a054009b",
+                "resourcePath": "objects\\oPebble\\oPebble.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "a9188620-a624-4a5a-83ae-a1b53faf038b",
             "Value": {
                 "id": "f6a018e4-744d-4bab-b538-8f862ba0d216",
@@ -2599,6 +2623,14 @@
             }
         },
         {
+            "Key": "cd437be5-f000-4069-a34f-a87e38db1a2b",
+            "Value": {
+                "id": "12ce895e-7d51-4238-a878-31bc75b58eef",
+                "resourcePath": "objects\\oPlayerTarget\\oPlayerTarget.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "cedc1511-b8a4-4a98-9306-34eb98dff9de",
             "Value": {
                 "id": "877c4b91-5bd1-4d63-80c7-0e9011ffdf07",
@@ -2674,7 +2706,7 @@
             "Key": "d49d19b1-5c8a-4263-bd72-e607985ebd18",
             "Value": {
                 "id": "023060ef-3c07-4732-b466-b6729382fc24",
-                "resourcePath": "objects\/oTarget\/oTarget.yy",
+                "resourcePath": "objects\\oThrowTarget\\oThrowTarget.yy",
                 "resourceType": "GMObject"
             }
         },
@@ -2932,6 +2964,14 @@
                 "id": "93c31ed5-b7d1-4366-aaa5-3c57caa695f6",
                 "resourcePath": "views\/ec2eb2dd-bf88-475c-a772-c8ca424e6ff4.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "ecd7d98d-ef63-48a1-8d7f-b815c76753c2",
+            "Value": {
+                "id": "908928c5-4ba1-47fb-b8c2-4ca6e1c1035c",
+                "resourcePath": "sprites\\sPlayerTargetRed\\sPlayerTargetRed.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
