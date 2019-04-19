@@ -527,6 +527,14 @@
             }
         },
         {
+            "Key": "24aa2574-3994-4fce-9ce8-723819431a42",
+            "Value": {
+                "id": "5503a109-d1d2-4c0b-9c20-8ed050a23a13",
+                "resourcePath": "objects\\oThrowTargetTracker\\oThrowTargetTracker.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "254b1914-b348-4c7c-9661-4b6c816c786c",
             "Value": {
                 "id": "6b51f700-7695-42d1-8aa5-99737793ca53",
@@ -1935,6 +1943,14 @@
             }
         },
         {
+            "Key": "a03e6612-f16d-435a-a748-799d2da885b9",
+            "Value": {
+                "id": "bd682b97-c05d-4a03-80f7-bb937e5a898f",
+                "resourcePath": "views\\a03e6612-f16d-435a-a748-799d2da885b9.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
             "Key": "a05e043a-ac1a-469a-9a6a-79ff51b24cc1",
             "Value": {
                 "id": "ffcfea5e-25b8-459d-b5e5-55fc1f413abf",
@@ -2092,6 +2108,14 @@
                 "id": "edc32d6a-1d40-4466-b654-3dc38e14f5f4",
                 "resourcePath": "sprites\/sWall\/sWall.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "a78c04ab-8ccb-432e-bdbe-3ae38dcdeee9",
+            "Value": {
+                "id": "29e31c21-fd60-454a-af9c-a6d167ba2272",
+                "resourcePath": "objects\\oPlayerTargetTracker\\oPlayerTargetTracker.yy",
+                "resourceType": "GMObject"
             }
         },
         {
