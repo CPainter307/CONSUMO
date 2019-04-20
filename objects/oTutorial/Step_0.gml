@@ -57,13 +57,13 @@ if (instance_exists(oPlayerTarget)) {
 if (text2) {
 	var currentTrigger = instance_create_depth(0, 0, 0, oAutoTrigger);
 	currentTrigger.t_scene_info = [
-		[cutscene_create_textbox, ["Good. Legs are done. Now show me what those arms can do, boy."], "Old Man", voice.oldman, sOldmanPortrait],
-		[cutscene_create_textbox, ["Pick these up and throw them at my targets best you can."], "Old Man", voice.oldman, sOldmanPortrait],
+		[cutscene_create_textbox, ["Good. Legs are done. Now show me what those arms can do, boy.","Pick these up and throw them at my targets best you can."], "Old Man", voice.oldman, sOldmanPortrait],
+		//[cutscene_create_textbox, [], "Old Man", voice.oldman, sOldmanPortrait],
 		[cutscene_wait, .5],
 		[cutscene_instance_create, 2751, 1982, "Objects", oPebble],
 		[cutscene_instance_create, 2926, 1984, "Objects", oPebble],
-		[cutscene_create_textbox, ["Use " + leftHandString + " to hold in your left hand and " + rightHandString + " to throw in your right."], "Old Man", voice.oldman, sOldmanPortrait],	
-		[cutscene_create_textbox, ["Press again to throw. Hold " + lockString +" to aim with precision."], "Old Man", voice.oldman, sOldmanPortrait],	
+		[cutscene_create_textbox, ["Use " + leftHandString + " to hold in your left hand and " + rightHandString + " to throw in your right.","Press again to throw. Hold " + lockString +" to aim with precision."], "Old Man", voice.oldman, sOldmanPortrait],	
+		//[cutscene_create_textbox, [], "Old Man", voice.oldman, sOldmanPortrait],	
 		[cutscene_instance_create, 2303, 1663, "Objects", oThrowTarget],
 		[cutscene_instance_create, 3245, 1809, "Objects", oThrowTarget],
 		[cutscene_instance_create, 2744, 1758, "Objects", oThrowTarget],
@@ -92,17 +92,25 @@ if (instance_exists(oThrowTarget)) {
 if (text3) {
 	var currentTrigger = instance_create_depth(0, 0, 0, oAutoTrigger);
 	currentTrigger.t_scene_info = [
-		[cutscene_create_textbox, ["Alright good. You're looking nice and warm, boy. Now, let's go over cooking."], "Old Man", voice.oldman, sOldmanPortrait],
-		[cutscene_create_textbox, ["What, surprised? Trust me, you're still gonna be learning on the job."], "Old Man", voice.oldman, sOldmanPortrait],
-		[cutscene_create_textbox, ["Your client is gonna be doing the hard work out there and he's gonna be hungry."], "Old Man", voice.oldman, sOldmanPortrait],
-		[cutscene_create_textbox, ["Not only will the food you prepare for him heal him up good, it's the difference between life and death."], "Old Man", voice.oldman, sOldmanPortrait],
-		]
+		[cutscene_instance_destroy, oPebble],
+		[cutscene_create_textbox, ["Alright good. You're looking nice and warm, boy. Now, let's go over cooking.",
+								   "What, surprised? Trust me, you're still gonna be learning on the job.",
+								   "Your client is gonna be doing the hard work out there and he's gonna be hungry.",
+								   "Your client is gonna be doing the hard work out there and he's gonna be hungry.",
+								   "Not only will the food you prepare for him heal him up good, it's the difference between life and death."],
+								   "Old Man", voice.oldman, sOldmanPortrait],
+		[cutscene_instance_create, 2751, 1982, "Cooking", oMeat],
+		[cutscene_instance_create, 2606, 2016, "Cooking", oPot],
+		[cutscene_instance_create, 2606, 2006, "Cooking", oPotRadius],
+	]
+	oPlayerPickUpRadius.itemInLeftHand = noone;
+	oPlayerPickUpRadius.itemInRightHand = noone;
 	
 	text3 = false;
 }
 
 //resize your pebbs
-if instance_exists(oPebble) {
-	oPebble.image_xscale = 0.5;
-	oPebble.image_yscale = 0.5;
+if instance_exists(oIngredient) {
+	oIngredient.image_xscale = 0.5;
+	oIngredient.image_yscale = 0.5;
 }
