@@ -25,4 +25,5 @@ textPart = string_copy(text[page], 1, charCount);
 
 draw_set_font(fBattleTextThick)
 draw_set_halign(fa_left);
+stringHeight = string_height("H")+5;
 draw_text_ext(x+xBuffer, y+stringHeight+yBuffer+10, textPart, stringHeight, boxWidth);

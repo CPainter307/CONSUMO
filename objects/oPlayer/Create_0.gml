@@ -15,6 +15,7 @@ facingRight = true;
 isLocked = false;
 state = scr_move_state;
 moveStateExecuted = true;
+global.canMove = true;
 
 em = part_emitter_create(global.ps);
 part_emitter_region(global.ps, em, x-42.5, x+42.5, y+60, y+70, ps_shape_ellipse, ps_distr_gaussian);

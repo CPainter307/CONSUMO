@@ -1,24 +1,3 @@
-if (gamepad_is_connected(0)) {
-	jumpString = "the A button";
-	moveString = "the left stick";
-	leftHandString = "the left bumper";
-	rightHandString = "the right bumper";
-	lockString = "the right trigger";
-	chopString = "the X button";
-}
-else {
-	jumpString = "the space bar";
-	moveString = "WASD";
-	leftHandString = "left click";
-	rightHandString = "right click";
-	lockString = "shift";
-	chopString = "E";
-}
-
-if (instance_exists(oRecipe)) {
-	show_message("test");
-}
-
 if (instance_exists(oPlayer) && text1) {
 	var currentTrigger = instance_create_depth(0, 0, 0, oAutoTrigger);
 	currentTrigger.t_scene_info = [
@@ -30,17 +9,6 @@ if (instance_exists(oPlayer) && text1) {
 		[cutscene_instance_create, 2828, 1856, "Objects", oPlayerTarget],
 		[cutscene_instance_create, 0, 0, "Game", oPlayerTargetTracker]
 	]
-		/**
-		var pTarget1 = instance_create_layer(2303, 1663, "Objects", oPlayerTarget);
-		var pTarget2 = instance_create_layer(2828, 1856, "Objects", oPlayerTarget);
-		var pTarget3 = instance_create_layer(3360, 1727, "Objects", oPlayerTarget);	
-		pTarget1.image_xscale = 1.5;
-		pTarget1.image_yscale = 1.5;
-		pTarget2.image_xscale = 1.5;
-		pTarget2.image_yscale = 1.5;
-		pTarget3.image_xscale = 1.5;
-		pTarget3.image_yscale = 1.5;
-		**/
 	text1 = false;
 }
 
@@ -75,7 +43,6 @@ if (text2) {
 		[cutscene_instance_create, 2744, 1758, "Objects", oThrowTarget],
 		[cutscene_instance_create, 0, 0, "Game", oThrowTargetTracker],
 	]
-	
 	text2 = false;
 }
 
@@ -102,12 +69,11 @@ if (text3) {
 		[cutscene_create_textbox, ["Alright good. You're looking nice and warm, boy. Now, let's go over cooking.",
 								   "What, surprised? Trust me, you're still gonna be learning on the job.",
 								   "Your client is gonna be doing the hard work out there and he's gonna be hungry.",
-								   "Your client is gonna be doing the hard work out there and he's gonna be hungry.",
 								   "Not only will the food you prepare for him heal him up good, it's the difference between life and death."],
 								   "Old Man", voice.oldman, sOldmanPortrait],
 		[cutscene_instance_create, 2751, 1982, "Cooking", oMeat],
-		[cutscene_instance_create, 2606, 2016, "Cooking", oPot],
-		[cutscene_instance_create, 2606, 2006, "Cooking", oPotRadius],
+		[cutscene_instance_create, 2463, 2016, "Pot", oPot],
+		[cutscene_instance_create, 2463, 2006, "RadiusAndRunes", oPotRadius],
 		[cutscene_instance_create, 0, 0, "Game", oRecipeTracker],
 		[cutscene_wait, .5],
 		[cutscene_create_textbox, ["Every ingredient has a different property. For instance, this hearty meat can heal wounds.",
@@ -192,23 +158,23 @@ if (text4) {
 								   "If you prepare an ingredient beforehand, you can throw three into the pot before they'll start cooking!",
 		], "Old Man", voice.oldman, sOldmanPortrait],
 		[cutscene_wait, .5],
-		[cutscene_instance_create, 2751, 1982, "Objects", oMeat],
+		[cutscene_instance_create, 3102, 1982, "Objects", oMeat],
 		[cutscene_instance_create, 2856, 1984, "Objects", oOnion],
 		[cutscene_instance_create, 3010, 1984, "Objects", oSalt],
-		[cutscene_instance_create, 2483, 1979, "Objects", oNewPrepTable],
+		[cutscene_instance_create, 2676, 1979, "Objects", oNewPrepTable],
 		[cutscene_create_textbox, ["Throw those on the table then use " + chopString + " to chop them up. Then cook them into a dish!",
 		], "Old Man", voice.oldman, sOldmanPortrait],
-		[cutscene_instance_destroy, oOnion],
+		[cutscene_instance_destroy, oRecipe],
+		[cutscene_change_variable, oTutorial, "text5", true],
 	]
 	
 	oPlayerPickUpRadius.itemInLeftHand = noone;
 	oPlayerPickUpRadius.itemInRightHand = noone;
 	text4 = false;
-	text5 = true;
 }
 
-if (instance_exists(oRecipe) and text5) {
-	timer = 0;
+if (instance_exists(oRecipe) && text5) {
+
 	var inst = instance_nearest(x, y, oRecipe);
 	if (string_pos("Soup", inst.name) != 0) {
 		var currentTrigger = instance_create_depth(0, 0, 0, oAutoTrigger);
@@ -225,23 +191,30 @@ if (instance_exists(oRecipe) and text5) {
 									   "Good luck!"
 			], "Old Man", voice.oldman, sOldmanPortrait],
 		]
+		text5 = false;
 	}
 	if (string_pos("Soup", inst.name) == 0) {
 		var currentTrigger = instance_create_depth(0, 0, 0, oAutoTrigger);
 			currentTrigger.t_scene_info = [
 				[cutscene_wait, 2],
+				[cutscene_instance_destroy, oRecipe],
+				[cutscene_instance_destroy, oIngredient],
+				[cutscene_instance_create, 3102, 1982, "Objects", oMeat],
+				[cutscene_instance_create, 2856, 1984, "Objects", oOnion],
+				[cutscene_instance_create, 3010, 1984, "Objects", oSalt],
+				[cutscene_change_variable, oTutorial, "text5", true],
+				[cutscene_change_variable, oPlayerPickUpRadius, "itemInLeftHand", noone],
+				[cutscene_change_variable, oPlayerPickUpRadius, "itemInRightHand", noone],
 				[cutscene_create_textbox, ["Boy, I told you to cook all three of them! You've just thrown a whole ingredient in the pot!",
 										   "Take the ingredients to the table and chop all three of them, then put them in!",
 										   "Kids these days..."
 				], "Old Man", voice.oldman, sOldmanPortrait],
-				[cutscene_instance_destroy, oRecipe],
-				[cutscene_instance_destroy, oIngredient],
-				[cutscene_instance_create, 2751, 1982, "Objects", oMeat],
-				[cutscene_instance_create, 2856, 1984, "Objects", oOnion],
-				[cutscene_instance_create, 3010, 1984, "Objects", oSalt]
+
 			]
-		oPlayerPickUpRadius.itemInLeftHand = noone;
-		oPlayerPickUpRadius.itemInRightHand = noone;
+			
+		text5 = false;
+		//oPlayerPickUpRadius.itemInLeftHand = noone;
+		//oPlayerPickUpRadius.itemInRightHand = noone;
 		if (instance_exists(oNewPrepTable)) { 
 			oNewPrepTable.ingr1 = noone;
 			oNewPrepTable.ingr2 = noone;
