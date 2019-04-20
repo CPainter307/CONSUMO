@@ -87,6 +87,7 @@ if (position_meeting(x, y, oPlayerPickUpRadius) and (oPlayerInput.key_left_hand 
 			total_elmatk *= -1;
 			total_elmdef *= -1;
 			inst.name = "Raw " + inst.name;
+			inst.quality = 0;
 			break;
 		case 1: // undercooked
 			total_hp *= .5;
@@ -96,8 +97,10 @@ if (position_meeting(x, y, oPlayerPickUpRadius) and (oPlayerInput.key_left_hand 
 			total_elmatk *= .5;
 			total_elmdef *= .5;
 			inst.name = "Undercooked " + inst.name;
+			inst.quality = 1;
 			break;
 		case 2: // JUST RIGHT
+			inst.quality = 2;
 			break;
 		case 3: // burnt
 			total_hp *= .25;
@@ -107,6 +110,7 @@ if (position_meeting(x, y, oPlayerPickUpRadius) and (oPlayerInput.key_left_hand 
 			total_elmatk *= .25;
 			total_elmdef *= .25;
 			inst.name = "Burned " + inst.name;
+			inst.quality = 3;
 			break;
 	}
 	

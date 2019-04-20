@@ -4,6 +4,7 @@ if (gamepad_is_connected(0)) {
 	leftHandString = "the left bumper";
 	rightHandString = "the right bumper";
 	lockString = "the right trigger";
+	chopString = "the X button";
 }
 else {
 	jumpString = "the space bar";
@@ -11,6 +12,11 @@ else {
 	leftHandString = "left click";
 	rightHandString = "right click";
 	lockString = "shift";
+	chopString = "E";
+}
+
+if (instance_exists(oRecipe)) {
+	show_message("test");
 }
 
 if (instance_exists(oPlayer) && text1) {
@@ -61,7 +67,7 @@ if (text2) {
 		//[cutscene_create_textbox, [], "Old Man", voice.oldman, sOldmanPortrait],
 		[cutscene_wait, .5],
 		[cutscene_instance_create, 2751, 1982, "Objects", oPebble],
-		[cutscene_instance_create, 2926, 1984, "Objects", oPebble],
+		[cutscene_instance_create, 2856, 1984, "Objects", oPebble],
 		[cutscene_create_textbox, ["Use " + leftHandString + " to hold in your left hand and " + rightHandString + " to throw in your right.","Press again to throw. Hold " + lockString +" to aim with precision."], "Old Man", voice.oldman, sOldmanPortrait],	
 		//[cutscene_create_textbox, [], "Old Man", voice.oldman, sOldmanPortrait],	
 		[cutscene_instance_create, 2303, 1663, "Objects", oThrowTarget],
@@ -102,11 +108,146 @@ if (text3) {
 		[cutscene_instance_create, 2751, 1982, "Cooking", oMeat],
 		[cutscene_instance_create, 2606, 2016, "Cooking", oPot],
 		[cutscene_instance_create, 2606, 2006, "Cooking", oPotRadius],
+		[cutscene_instance_create, 0, 0, "Game", oRecipeTracker],
+		[cutscene_wait, .5],
+		[cutscene_create_textbox, ["Every ingredient has a different property. For instance, this hearty meat can heal wounds.",
+								   "But your client isn't going to eat this raw. If he does he'll lower our health rating."], "Old Man", voice.oldman, sOldmanPortrait],
+		[cutscene_wait, .5],
+		[cutscene_create_textbox, ["..."], "Old Man", voice.oldman, sOldmanPortrait],
+		[cutscene_wait, .5],
+		[cutscene_create_textbox, ["That was just a joke! Our rating's already in the negatives.",
+								   "Anyways, you'll have to cook this up before they eat it.",
+								   "Throw this in the pot and it'll cook.",
+								   "Take it too early and raw food will hurt your client. Too long it'll burn and lose potency. Wait till it's just right.",
+								   "A true cook can tell!"], "Old Man", voice.oldman, sOldmanPortrait],
 	]
+	
 	oPlayerPickUpRadius.itemInLeftHand = noone;
 	oPlayerPickUpRadius.itemInRightHand = noone;
 	
 	text3 = false;
+}
+
+if (instance_exists(oRecipeTracker)) {
+	if (oRecipeTracker.raw) {
+		instance_destroy(oRecipeTracker);
+		var currentTrigger = instance_create_depth(0, 0, 0, oAutoTrigger);
+		currentTrigger.t_scene_info = [
+			[cutscene_wait, 2],
+			[cutscene_instance_destroy, oRecipe],
+			[cutscene_create_textbox, ["Too early! That meat's still trying to graze in the meadow! Again!"], "Old Man", voice.oldman, sOldmanPortrait],
+			[cutscene_instance_create, 2751, 1982, "Cooking", oMeat],
+			[cutscene_instance_create, 0, 0, "Game", oRecipeTracker],
+		]
+		oPlayerPickUpRadius.itemInLeftHand = noone;
+		oPlayerPickUpRadius.itemInRightHand = noone;
+	} else if (oRecipeTracker.undercooked) {
+		instance_destroy(oRecipeTracker);
+		var currentTrigger = instance_create_depth(0, 0, 0, oAutoTrigger);
+		currentTrigger.t_scene_info = [
+			[cutscene_wait, 2],
+			[cutscene_instance_destroy, oRecipe],
+			[cutscene_instance_destroy, oRecipeTracker],
+			[cutscene_create_textbox, ["Close, boy! Pulled it a little too early, but it'll do. Here's an insider secret: the steam will start to shimmer when it's JUST right."], "Old Man", voice.oldman, sOldmanPortrait],
+			
+		]
+		oPlayerPickUpRadius.itemInLeftHand = noone;
+		oPlayerPickUpRadius.itemInRightHand = noone;
+		text4 = true;
+	} else if (oRecipeTracker.perfect) {
+		instance_destroy(oRecipeTracker);
+		var currentTrigger = instance_create_depth(0, 0, 0, oAutoTrigger);
+		currentTrigger.t_scene_info = [
+			[cutscene_wait, 2],
+			[cutscene_instance_destroy, oRecipe],
+			[cutscene_instance_destroy, oRecipeTracker],
+			[cutscene_create_textbox, ["Now that's what I'm talking about! Perfectly cooked! I knew I hired you for a reason, boy!"], "Old Man", voice.oldman, sOldmanPortrait],
+		]
+		oPlayerPickUpRadius.itemInLeftHand = noone;
+		oPlayerPickUpRadius.itemInRightHand = noone;
+		text4 = true;
+	} else if (oRecipeTracker.burnt) {
+		instance_destroy(oRecipeTracker);
+		var currentTrigger = instance_create_depth(0, 0, 0, oAutoTrigger);
+		currentTrigger.t_scene_info = [
+			[cutscene_wait, 2],
+			[cutscene_instance_destroy, oRecipe],
+			[cutscene_create_textbox, ["Great job boy, that's the exact chunk of charcoal I needed for my fireplace!","Oh, wait, I wanted food. Again!"], "Old Man", voice.oldman, sOldmanPortrait],
+			[cutscene_instance_create, 2751, 1982, "Cooking", oMeat],
+			[cutscene_instance_create, 0, 0, "Game", oRecipeTracker],
+		]
+		oPlayerPickUpRadius.itemInLeftHand = noone;
+		oPlayerPickUpRadius.itemInRightHand = noone;
+	}
+}
+
+if (text4) {
+	var currentTrigger = instance_create_depth(0, 0, 0, oAutoTrigger);
+	currentTrigger.t_scene_info = [
+		[cutscene_wait, .5],
+		[cutscene_create_textbox, ["Congratulations, you've cooked up some boiled meat!",
+								   "What's that? You aren't appetized?",
+								   "Of course not! It's hot wet meat! You can't call this cooking!",
+								   "Listen up, the meat you just cooked is a whole ingredient. Throw that in the pot and it'll just cook itself.",
+								   "If you prepare an ingredient beforehand, you can throw three into the pot before they'll start cooking!",
+		], "Old Man", voice.oldman, sOldmanPortrait],
+		[cutscene_wait, .5],
+		[cutscene_instance_create, 2751, 1982, "Objects", oMeat],
+		[cutscene_instance_create, 2856, 1984, "Objects", oOnion],
+		[cutscene_instance_create, 3010, 1984, "Objects", oSalt],
+		[cutscene_instance_create, 2483, 1979, "Objects", oNewPrepTable],
+		[cutscene_create_textbox, ["Throw those on the table then use " + chopString + " to chop them up. Then cook them into a dish!",
+		], "Old Man", voice.oldman, sOldmanPortrait],
+		[cutscene_instance_destroy, oOnion],
+	]
+	
+	oPlayerPickUpRadius.itemInLeftHand = noone;
+	oPlayerPickUpRadius.itemInRightHand = noone;
+	text4 = false;
+	text5 = true;
+}
+
+if (instance_exists(oRecipe) and text5) {
+	timer = 0;
+	var inst = instance_nearest(x, y, oRecipe);
+	if (string_pos("Soup", inst.name) != 0) {
+		var currentTrigger = instance_create_depth(0, 0, 0, oAutoTrigger);
+		currentTrigger.t_scene_info = [
+			[cutscene_wait, 2],
+			[cutscene_create_textbox, ["Well, you did it. Your first meal. I'm proud of you boy.",
+			], "Old Man", voice.oldman, sOldmanPortrait],
+			[cutscene_wait, .5],
+			[cutscene_create_textbox, ["Let's see, anything I'm forgetting?",
+									   "Oh! Remember you can't take anything out of a pot unless it's started cooking in there, so be careful!",
+									   "And remember the most important rule.",
+									   "Keep the client alive!",
+									   "You've got this boy! And if you don't, there won't be anyone to protect you from the monsters anyways, so at least it'll all be over.",
+									   "Good luck!"
+			], "Old Man", voice.oldman, sOldmanPortrait],
+		]
+	}
+	if (string_pos("Soup", inst.name) == 0) {
+		var currentTrigger = instance_create_depth(0, 0, 0, oAutoTrigger);
+			currentTrigger.t_scene_info = [
+				[cutscene_wait, 2],
+				[cutscene_create_textbox, ["Boy, I told you to cook all three of them! You've just thrown a whole ingredient in the pot!",
+										   "Take the ingredients to the table and chop all three of them, then put them in!",
+										   "Kids these days..."
+				], "Old Man", voice.oldman, sOldmanPortrait],
+				[cutscene_instance_destroy, oRecipe],
+				[cutscene_instance_destroy, oIngredient],
+				[cutscene_instance_create, 2751, 1982, "Objects", oMeat],
+				[cutscene_instance_create, 2856, 1984, "Objects", oOnion],
+				[cutscene_instance_create, 3010, 1984, "Objects", oSalt]
+			]
+		oPlayerPickUpRadius.itemInLeftHand = noone;
+		oPlayerPickUpRadius.itemInRightHand = noone;
+		if (instance_exists(oNewPrepTable)) { 
+			oNewPrepTable.ingr1 = noone;
+			oNewPrepTable.ingr2 = noone;
+			oNewPrepTable.ingr3 = noone;
+		}
+	}
 }
 
 //resize your pebbs

@@ -671,6 +671,14 @@
             }
         },
         {
+            "Key": "31bcf939-ea79-4238-a07b-f4cf9ede6255",
+            "Value": {
+                "id": "5051c436-48d5-4bb7-b80f-3c07888243db",
+                "resourcePath": "objects\\oRecipeTracker\\oRecipeTracker.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "32ac9078-82fb-4e87-acd8-a373856daed1",
             "Value": {
                 "id": "6227e693-5bf6-4389-8f35-4c506c27100b",
@@ -2887,6 +2895,14 @@
             }
         },
         {
+            "Key": "dfc70b97-d918-404b-9078-a4ca56c42bc9",
+            "Value": {
+                "id": "99128e5f-d3ae-41d0-8e8a-847e5020c3da",
+                "resourcePath": "scripts\\cutscene_recipe_destroy\\cutscene_recipe_destroy.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "e02e0e9f-a2f7-42cb-bece-23ab3d9fadf2",
             "Value": {
                 "id": "46b86e22-534e-4578-ac9e-113edfb60adb",
@@ -3339,7 +3355,8 @@
         "b6bd426a-cf07-4238-b2d7-f0e87b966314",
         "cc8d0000-ff20-438c-b164-5dccba467751",
         "bca2c273-4751-4991-889f-950c864e3dee",
-        "5f8a42d3-2b8e-4372-91b2-5fd7144acbd3"
+        "5f8a42d3-2b8e-4372-91b2-5fd7144acbd3",
+        "dfc70b97-d918-404b-9078-a4ca56c42bc9"
     ],
     "tutorial": ""
 }
