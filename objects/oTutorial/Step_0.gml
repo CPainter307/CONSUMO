@@ -36,7 +36,7 @@ if (text2) {
 		[cutscene_wait, .5],
 		[cutscene_instance_create, 2751, 1982, "Objects", oPebble],
 		[cutscene_instance_create, 2856, 1984, "Objects", oPebble],
-		[cutscene_create_textbox, ["Use " + leftHandString + " to hold in your left hand and " + rightHandString + " to throw in your right.","Press again to throw. Hold " + lockString +" to aim with precision."], "Old Man", voice.oldman, sOldmanPortrait],	
+		[cutscene_create_textbox, ["Use " + leftHandString + " to hold in your left hand and " + rightHandString + " to hold in your right.","Press again to throw. Hold " + lockString +" to aim with precision."], "Old Man", voice.oldman, sOldmanPortrait],	
 		//[cutscene_create_textbox, [], "Old Man", voice.oldman, sOldmanPortrait],	
 		[cutscene_instance_create, 2303, 1663, "Objects", oThrowTarget],
 		[cutscene_instance_create, 3245, 1809, "Objects", oThrowTarget],
