@@ -1,1 +1,1 @@
-with (steam) sprite_index = sSteam4;
+with (steam) sprite_index = sSteam3;

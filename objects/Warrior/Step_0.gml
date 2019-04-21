@@ -1,6 +1,8 @@
 //for cutscenes
 if (startFight) {
 	global.fightStarted = true;
+} else {
+	global.fightStarted = false;	
 }
 
 //check if dead

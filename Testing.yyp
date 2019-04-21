@@ -559,6 +559,14 @@
             }
         },
         {
+            "Key": "240bd9be-1ba6-4f0d-9951-d8abf58629d4",
+            "Value": {
+                "id": "dd09518e-894c-4161-a012-5601830c010c",
+                "resourcePath": "scripts\\cutscene_stop_sound\\cutscene_stop_sound.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "24aa2574-3994-4fce-9ce8-723819431a42",
             "Value": {
                 "id": "5503a109-d1d2-4c0b-9c20-8ed050a23a13",
@@ -2359,6 +2367,14 @@
             }
         },
         {
+            "Key": "ae2b6714-ea5e-4ab8-8b58-97db1aabac8e",
+            "Value": {
+                "id": "a9b2d93c-f02a-498a-8a26-a1d38f855a6d",
+                "resourcePath": "objects\\oDemo\\oDemo.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "af0d7c5a-552e-437d-8417-a00471d5cd66",
             "Value": {
                 "id": "09838b79-b324-471f-92de-7c605db77981",
@@ -3159,6 +3175,14 @@
             }
         },
         {
+            "Key": "e49304bf-e511-4c82-86bf-c14d3ef8eee8",
+            "Value": {
+                "id": "f6c66f5f-0e7b-4d65-a86a-41dfb634ced5",
+                "resourcePath": "scripts\\cutscene_fade_sound\\cutscene_fade_sound.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "e5d3f1c4-ff77-410e-a619-ad3107e45c5b",
             "Value": {
                 "id": "6499fe86-55ba-4b2d-b973-694ba59487ab",
@@ -3577,7 +3601,9 @@
         "5f8a42d3-2b8e-4372-91b2-5fd7144acbd3",
         "945f5be9-bcee-4f26-9665-2e5902a45d03",
         "5d741126-703d-4152-8296-20760055aca2",
-        "c6bb5513-ac0d-4af9-b04b-039a7e0377cc"
+        "c6bb5513-ac0d-4af9-b04b-039a7e0377cc",
+        "e49304bf-e511-4c82-86bf-c14d3ef8eee8",
+        "240bd9be-1ba6-4f0d-9951-d8abf58629d4"
     ],
     "tutorial": ""
 }

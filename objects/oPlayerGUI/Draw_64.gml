@@ -76,12 +76,12 @@ if (instance_exists(oParty)) {
 var xpos = view_xport[0]+46;
 var ypos = view_yport[0]+34;
 if (adv1 != noone) {
-	draw_sprite(sBattleWindowStatBG, 1, xpos+32, ypos+105);
-	draw_sprite_ext(sBattleWindowStat, 1, xpos+42, ypos+137, 1, (adv1.attack/adv1.maxattack), 0, c_white, 1);  // attack
-	draw_sprite_ext(sBattleWindowStat, 1, xpos+78, ypos+137, 1, (adv1.defense/adv1.maxdefense), 0, c_white, 1);  // defense
-	draw_sprite_ext(sBattleWindowStat, 1, xpos+112, ypos+137, 1, (adv1.spd/adv1.maxspeed), 0, c_white, 1);  // speed
-	draw_sprite_ext(sBattleWindowStat, 1, xpos+148, ypos+137, 1, (adv1.elmatk/adv1.maxelmatk), 0, c_white, 1);  // elm atk
-	draw_sprite_ext(sBattleWindowStat, 1, xpos+184, ypos+137, 1, (adv1.elmdef/adv1.maxelmdef), 0, c_white, 1);  // elm def
+	draw_sprite_ext(sBattleWindowStatBG, 1, xpos+32, ypos+105, 2, 1, 0, c_white, 1);
+	draw_sprite_ext(sBattleWindowStat, 1, xpos+42, ypos+137, 2, (adv1.attack/adv1.maxattack), 0, c_white, 1);  // attack
+	draw_sprite_ext(sBattleWindowStat, 1, xpos+78, ypos+137, 2, (adv1.defense/adv1.maxdefense), 0, c_white, 1);  // defense
+	draw_sprite_ext(sBattleWindowStat, 1, xpos+112, ypos+137, 2, (adv1.spd/adv1.maxspeed), 0, c_white, 1);  // speed
+	draw_sprite_ext(sBattleWindowStat, 1, xpos+148, ypos+137, 2, (adv1.elmatk/adv1.maxelmatk), 0, c_white, 1);  // elm atk
+	draw_sprite_ext(sBattleWindowStat, 1, xpos+184, ypos+137, 2, (adv1.elmdef/adv1.maxelmdef), 0, c_white, 1);  // elm def
 	draw_sprite(sBattleWindow, 1, xpos, ypos);
 	draw_sprite_ext(sBattleWindowHealth, 1, xpos+104, ypos+44, (adv1.currentHealth/adv1.maxHealth), 1, 0, c_white, 1);  // hp
 	if (!adv1.stallHunger) {

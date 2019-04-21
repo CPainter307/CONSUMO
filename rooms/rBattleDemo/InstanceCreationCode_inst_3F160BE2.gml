@@ -1,5 +1,5 @@
 t_scene_info = [
-	[cutscene_change_variable, Warrior, "global.fightStarted", false],
+	[cutscene_change_variable, oAdventurer, "startFight", false],
 	[cutscene_change_camera_target, Warrior],
 	[cutscene_wait, 1],
 	[cutscene_change_xscale, Warrior],

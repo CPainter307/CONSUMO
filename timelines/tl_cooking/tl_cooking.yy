@@ -32,11 +32,11 @@
                 "mvc": "1.0",
                 "IsDnD": false,
                 "collisionObjectId": "00000000-0000-0000-0000-000000000000",
-                "enumb": 90,
+                "enumb": 180,
                 "eventtype": 0,
                 "m_owner": "434bd274-d5cb-4a7f-98c8-500d0932b0b0"
             },
-            "moment": 90
+            "moment": 180
         },
         {
             "id": "3f327eae-9ff2-4bad-ba67-dc1bc55b0805",
@@ -49,11 +49,11 @@
                 "mvc": "1.0",
                 "IsDnD": false,
                 "collisionObjectId": "00000000-0000-0000-0000-000000000000",
-                "enumb": 180,
+                "enumb": 270,
                 "eventtype": 0,
                 "m_owner": "434bd274-d5cb-4a7f-98c8-500d0932b0b0"
             },
-            "moment": 180
+            "moment": 270
         },
         {
             "id": "d2f3339d-56cc-458e-9add-a8c4a7a7af8e",
@@ -66,11 +66,11 @@
                 "mvc": "1.0",
                 "IsDnD": false,
                 "collisionObjectId": "00000000-0000-0000-0000-000000000000",
-                "enumb": 270,
+                "enumb": 540,
                 "eventtype": 0,
                 "m_owner": "434bd274-d5cb-4a7f-98c8-500d0932b0b0"
             },
-            "moment": 270
+            "moment": 540
         }
     ]
 }
