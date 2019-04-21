@@ -19,6 +19,7 @@ if (oPlayerInput.key_interact && !empty) {
 				ingr3.chops = ingr3.chops + 1;
 			}
 			//play poor chop sound
+			scr_play_chop_sound();
 		}
 		if (reticle.x > boundLeft + 61 && reticle.x <= boundLeft + 94) {
 			if (ingr1 != noone && !ingr1.prepared) {
@@ -31,6 +32,7 @@ if (oPlayerInput.key_interact && !empty) {
 				ingr3.chops = ingr3.chops + 3;
 			}
 			//play okay chop sound
+			scr_play_chop_sound();
 		}
 		if (reticle.x > boundLeft + 94 && reticle.x <= boundLeft + 114) {
 			if (ingr1 != noone && !ingr1.prepared) {
@@ -43,6 +45,7 @@ if (oPlayerInput.key_interact && !empty) {
 				ingr3.chops = ingr3.chops + 5;
 			}
 			//play good chop sound
+			scr_play_chop_sound();
 		}
 		if (reticle.x > boundLeft + 114 && reticle.x <= boundRight) {
 			if (ingr1 != noone && !ingr1.prepared) {
@@ -55,6 +58,7 @@ if (oPlayerInput.key_interact && !empty) {
 				ingr3.chops = ingr3.chops + 15;
 			}
 			//play superb *licks lips* chop sound
+			audio_play_sound(snd_super_chop, 10, false);
 		}
 		
 	}

@@ -3,7 +3,7 @@ if (instance_exists(oPlayer) && text1) {
 	currentTrigger.t_scene_info = [
 		[cutscene_create_textbox, ["There you are! Were you going to wait all day?", "I know you're new here, but there's no time for relaxin'. Time to learn on the job."], "Old Man", voice.oldman, sOldmanPortrait],
 		[cutscene_wait, .5],
-		[cutscene_create_textbox, ["First let's get you nice and limber.", "Use " + moveString + " to move around and press " + jumpString + " to jump"], "Old Man", voice.oldman, sOldmanPortrait],
+		[cutscene_create_textbox, ["First let's get you nice and limber.", "Use " + moveString + " to move around and press " + jumpString + " to jump."], "Old Man", voice.oldman, sOldmanPortrait],
 		[cutscene_instance_create, 2303, 1663, "Objects", oPlayerTarget],
 		[cutscene_instance_create, 3245, 1809, "Objects", oPlayerTarget],
 		[cutscene_instance_create, 2828, 1856, "Objects", oPlayerTarget],
@@ -161,7 +161,7 @@ if (text4) {
 		[cutscene_instance_create, 3102, 1982, "Objects", oMeat],
 		[cutscene_instance_create, 2856, 1984, "Objects", oOnion],
 		[cutscene_instance_create, 3010, 1984, "Objects", oSalt],
-		[cutscene_instance_create, 2676, 1979, "Objects", oNewPrepTable],
+		[cutscene_instance_create, 2676, 1979, "Cooking", oNewPrepTable],
 		[cutscene_create_textbox, ["Throw those on the table then use " + chopString + " to chop them up. Then cook them into a dish!",
 		], "Old Man", voice.oldman, sOldmanPortrait],
 		[cutscene_instance_destroy, oRecipe],
@@ -221,6 +221,11 @@ if (instance_exists(oRecipe) && text5) {
 			oNewPrepTable.ingr3 = noone;
 		}
 	}
+	text6 = true;
+}
+if (text6) {
+	instance_create_layer(3289, 1922, "Walls", oDoor)
+	text6 = false;
 }
 
 //resize your pebbs

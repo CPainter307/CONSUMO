@@ -8,3 +8,5 @@ reticle = noone;
 bar = noone;
 empty = true;
 fullOfPrepped = false;
+
+knifeCreated = false;

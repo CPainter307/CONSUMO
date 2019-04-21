@@ -23,6 +23,11 @@ if (charCount < string_length(text[page])) {
 }
 textPart = string_copy(text[page], 1, charCount);
 
+//draw arrow
+if (string_length(textPart) >= string_length(text[page])) {
+	draw_sprite(sArrow, 0, x+456, y+155+sin(get_timer()/100000));
+}
+
 draw_set_font(fBattleTextThick)
 draw_set_halign(fa_left);
 stringHeight = string_height("H")+5;

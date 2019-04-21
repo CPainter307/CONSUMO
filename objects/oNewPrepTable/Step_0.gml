@@ -88,6 +88,16 @@ if instance_exists(oButton)
 	}
 }
 
+//Destroys knife icon if player walks away
+if instance_exists(oKnifeIcon)
+{
+	if(!place_meeting(x, y, oPlayerPickUpRadius))
+	{
+		instance_destroy(oKnifeIcon)	
+		knifeCreated = false;
+	}
+}
+
 //Destroy bar if player walks away
 if (instance_exists(oChoppingGameBar)) {
 	if (!place_meeting(x, y, oPlayerPickUpRadius)) { //used to also or empty and fullOfPrepped

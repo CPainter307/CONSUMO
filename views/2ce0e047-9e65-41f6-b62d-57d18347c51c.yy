@@ -11,7 +11,8 @@
         "d791d140-7001-442f-80bd-9c62eeeb3885",
         "c56e23a4-6c46-4c21-9b15-d04b8381916e",
         "5a99068d-618a-4aaf-8c85-fdb28fd2b73e",
-        "0d207a8b-7c13-4cba-8f15-299403bcdf5e"
+        "0d207a8b-7c13-4cba-8f15-299403bcdf5e",
+        "4293a098-7c8b-4717-aa60-5f0854f72fc3"
     ],
     "filterType": "GMSound",
     "folderName": "Cooking",
