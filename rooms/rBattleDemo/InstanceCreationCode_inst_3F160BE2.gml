@@ -35,7 +35,7 @@ t_scene_info = [
 	[cutscene_wait, 2],
 	[cutscene_create_textbox, ["And here comes some of his unholy fury right now!",
 							   ], "Rogue", voice.lizard, sLizardPortrait],
-	[cutscene_move_x, eFrogEgg, 3070],
+	[cutscene_move_x, eFrogEgg, 3197],
 	[cutscene_wait, 1],
 	[cutscene_create_textbox, ["..."
 							   ], "Rogue", voice.lizard, sLizardPortrait],

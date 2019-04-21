@@ -735,6 +735,14 @@
             }
         },
         {
+            "Key": "350f0269-18c4-40b8-bebb-431af7636f50",
+            "Value": {
+                "id": "b6476dd3-ebdc-47a7-a7a5-3950890ce6cd",
+                "resourcePath": "objects\\oMushroomCrate\\oMushroomCrate.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "364a11f0-fc86-44d6-bb20-40fe37eedfe1",
             "Value": {
                 "id": "9294187b-0271-4a6a-9250-1f1b4ab2b172",
@@ -1508,6 +1516,14 @@
                 "id": "50270697-c31e-4e7d-8db7-f58819789948",
                 "resourcePath": "sprites\\sFrontArmR\\sFrontArmR.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "70ae7d92-da36-4c44-abac-a4e628c9f7b7",
+            "Value": {
+                "id": "55f059b1-6a70-4858-ac76-646b03d756b9",
+                "resourcePath": "objects\\oPaprikaCrate\\oPaprikaCrate.yy",
+                "resourceType": "GMObject"
             }
         },
         {
@@ -2923,6 +2939,14 @@
             "Value": {
                 "id": "023060ef-3c07-4732-b466-b6729382fc24",
                 "resourcePath": "objects\\oThrowTarget\\oThrowTarget.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "d52be9bd-a727-41f7-90f4-f5a62c93cb80",
+            "Value": {
+                "id": "afe44fd7-e19b-4f45-865b-c675568fae0e",
+                "resourcePath": "objects\\oFishCrate\\oFishCrate.yy",
                 "resourceType": "GMObject"
             }
         },
