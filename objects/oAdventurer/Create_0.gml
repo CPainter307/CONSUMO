@@ -47,3 +47,6 @@ s = noone;
 healthThisFrame = currentHealth;
 flash = 0;
 shaderBuff = 0;
+
+global.fightStarted = false;
+startFight = false;

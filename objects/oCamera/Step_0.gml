@@ -1,13 +1,19 @@
 /// @description Update camera
 
-if (!instance_exists(oPlayer)) exit;
+if (!instance_exists(target)) exit;
 
-x = lerp(x, oPlayer.x, .2)
-y = lerp(y, oPlayer.y-view_h/8, .2)
+x = lerp(x, target.x, .2)
+y = lerp(y, target.y-view_h/8, .2)
 //y-view_h/4
-x = clamp(x, view_w/2, room_width-view_w/2)
-y = clamp(y, view_h/2, room_height-view_h/2)
+x = clamp(x, (view_w/2)+buff, room_width-(view_w/2)-buff)
+y = clamp(y, (view_h/2)+buff, room_height-(view_h/2)-buff)
 camera_set_view_pos(view_camera[0], x-view_w/2, y-view_h/2);
+
+//screenshake
+x += random_range(-shake_remain, shake_remain);
+y += random_range(-shake_remain, shake_remain);
+shake_remain = max(0, shake_remain-((1/shake_length)*shake_magnitude));
+
 
 /*
 // Update destination
@@ -33,6 +39,12 @@ To change x scrolling speed, change the x/# value. The higher the # value, the s
 Remember, Cave2 needs to scroll the slowest and Cave6 needs to scroll the fastest.
 Cave1 does not need to scroll because it is a solid color. We just stretch that image instead.
 */
+
+if (layer_exists("Cave1"))
+{
+	layer_x("Cave1",x/9.5);
+	layer_y("Cave1",y-view_h/2);
+}
 
 if (layer_exists("Cave2"))
 {

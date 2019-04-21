@@ -631,7 +631,7 @@
                     "modelName": "GMRBackgroundLayer",
                     "mvc": "1.0",
                     "spriteId": "0623ee7e-c9e9-4bec-bc76-f0f0fbfdeb53",
-                    "stretch": true,
+                    "stretch": false,
                     "userdefined_animFPS": false,
                     "userdefined_depth": false,
                     "visible": true,
