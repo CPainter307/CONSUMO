@@ -62,5 +62,5 @@ t_scene_info = [
 							   ], "Rogue", voice.lizard, sLizardPortrait],						   
 	[cutscene_change_camera_target, oPlayer],
 	[cutscene_change_variable, oAdventurer, "startFight", true],
-	[cutscene_play_sound, 2, snd_main_theme, true]
+	[cutscene_play_sound, snd_main_theme, 2, true]
 ]
