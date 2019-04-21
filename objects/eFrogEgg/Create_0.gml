@@ -1,6 +1,6 @@
 Class = "Enemy";
 
-maxHealth = 50;
+maxHealth = 200;
 currentHealth = maxHealth;
 
 baseAttack = 10;

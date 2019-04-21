@@ -9,4 +9,6 @@ mealType = "Soup";
 mealType2 = "Boiled ";
 mealType3 = "Stew";
 
-y = oPot.y - 25;
+thisPot = instance_nearest(x, y, oPot)
+
+y = thisPot.y - 25;
