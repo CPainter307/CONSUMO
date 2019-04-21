@@ -10,6 +10,7 @@ if (instance_exists(oPlayer) && text1) {
 		[cutscene_instance_create, 0, 0, "Game", oPlayerTargetTracker]
 	]
 	text1 = false;
+	oldManText1 = true;
 }
 
 if (instance_exists(oPlayerTarget)) {
@@ -44,6 +45,8 @@ if (text2) {
 		[cutscene_instance_create, 0, 0, "Game", oThrowTargetTracker],
 	]
 	text2 = false;
+	oldManText1 = false;
+	oldManText2 = true;
 }
 
 if (instance_exists(oThrowTarget)) {
@@ -92,6 +95,8 @@ if (text3) {
 	oPlayerPickUpRadius.itemInRightHand = noone;
 	
 	text3 = false;
+	oldManText2 = false;
+	oldManText3 = true;
 }
 
 if (instance_exists(oRecipeTracker)) {
@@ -171,6 +176,8 @@ if (text4) {
 	oPlayerPickUpRadius.itemInLeftHand = noone;
 	oPlayerPickUpRadius.itemInRightHand = noone;
 	text4 = false;
+	oldManText3 = false;
+	oldManText4 = true;
 }
 
 if (instance_exists(oRecipe) && text5) {
@@ -192,6 +199,8 @@ if (instance_exists(oRecipe) && text5) {
 			], "Old Man", voice.oldman, sOldmanPortrait],
 		]
 		text5 = false;
+		oldManText4 = false;
+		oldManText5 = true;
 	}
 	if (string_pos("Soup", inst.name) == 0) {
 		var currentTrigger = instance_create_depth(0, 0, 0, oAutoTrigger);

@@ -37,3 +37,10 @@ else {
 	lockString = "shift";
 	chopString = "E";
 }
+
+oldManText1 = true;
+oldManText2 = false;
+oldManText3 = false;
+oldManText4 = false;
+oldManText5 = false;
+oldManText6 = false;
