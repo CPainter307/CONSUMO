@@ -44,3 +44,5 @@ oldManText3 = false;
 oldManText4 = false;
 oldManText5 = false;
 oldManText6 = false;
+
+door_inst = noone;

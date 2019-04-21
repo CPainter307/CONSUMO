@@ -233,7 +233,10 @@ if (instance_exists(oRecipe) && text5) {
 	text6 = true;
 }
 if (text6) {
-	instance_create_layer(3289, 1922, "Walls", oDoor)
+	door_inst = instance_create_layer(3289, 1922, "Walls", oDoor)
+	door_inst.new_room = rBattleDemo;
+	door_inst.new_x = 2080;
+	door_inst.new_y = 1984;
 	text6 = false;
 }
 
