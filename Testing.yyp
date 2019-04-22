@@ -567,6 +567,14 @@
             }
         },
         {
+            "Key": "24a6c933-0a60-479c-8060-8bf4a12ccf19",
+            "Value": {
+                "id": "eb1af263-30c9-4bf4-9ddc-4de0dcbd7bc8",
+                "resourcePath": "sounds\\snd_battle_theme\\snd_battle_theme.yy",
+                "resourceType": "GMSound"
+            }
+        },
+        {
             "Key": "24aa2574-3994-4fce-9ce8-723819431a42",
             "Value": {
                 "id": "5503a109-d1d2-4c0b-9c20-8ed050a23a13",
@@ -1311,6 +1319,14 @@
             }
         },
         {
+            "Key": "60672b91-40da-4573-b166-a0f20a39a678",
+            "Value": {
+                "id": "960258d6-e869-469c-9ffa-1aec6e53e4da",
+                "resourcePath": "objects\\oTadpoleMech\\oTadpoleMech.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "60761363-5d32-44a8-bd4f-ede9f92546f2",
             "Value": {
                 "id": "b26ad2e7-1e89-4f47-a6fa-c6fd8aebe8e4",
@@ -1532,6 +1548,14 @@
                 "id": "50270697-c31e-4e7d-8db7-f58819789948",
                 "resourcePath": "sprites\\sFrontArmR\\sFrontArmR.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "6f83a96b-7a7b-4d62-9ad5-6ab59d139ade",
+            "Value": {
+                "id": "c0c030f0-5c8f-4449-a61c-85f6b2817cfb",
+                "resourcePath": "sounds\\snd_epic_theme\\snd_epic_theme.yy",
+                "resourceType": "GMSound"
             }
         },
         {
@@ -2084,6 +2108,14 @@
                 "id": "b0205dbb-36ef-4a4e-9f64-52192f2cdd3f",
                 "resourcePath": "sprites\/sMealWindow\/sMealWindow.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "9acaec72-96f9-42e7-a0af-671cd1d6767e",
+            "Value": {
+                "id": "780b8042-da32-46de-bc28-1cd6c1e30b31",
+                "resourcePath": "scripts\\cutscene_set_coords\\cutscene_set_coords.yy",
+                "resourceType": "GMScript"
             }
         },
         {
@@ -3627,7 +3659,8 @@
         "5d741126-703d-4152-8296-20760055aca2",
         "c6bb5513-ac0d-4af9-b04b-039a7e0377cc",
         "e49304bf-e511-4c82-86bf-c14d3ef8eee8",
-        "240bd9be-1ba6-4f0d-9951-d8abf58629d4"
+        "240bd9be-1ba6-4f0d-9951-d8abf58629d4",
+        "9acaec72-96f9-42e7-a0af-671cd1d6767e"
     ],
     "tutorial": ""
 }

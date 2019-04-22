@@ -20,6 +20,7 @@ t_scene_info = [
 							   ], "Rogue", voice.lizard, sLizardPortrait],
 	[cutscene_screenshake, 30, 120],
 	[cutscene_play_sound, snd_cave_rumble, 10, false],
+	[cutscene_play_sound, snd_epic_theme, 9, false],
 	[cutscene_wait, 2],
 	[cutscene_create_textbox, ["Oh boy... here we go."
 							   ], "Rogue", voice.lizard, sLizardPortrait],
@@ -36,6 +37,7 @@ t_scene_info = [
 	[cutscene_create_textbox, ["And here comes some of his unholy fury right now!",
 							   ], "Rogue", voice.lizard, sLizardPortrait],
 	[cutscene_move_x, eFrogEgg, 3197],
+	[cutscene_stop_sound, snd_epic_theme],
 	[cutscene_wait, 1],
 	[cutscene_create_textbox, ["..."
 							   ], "Rogue", voice.lizard, sLizardPortrait],

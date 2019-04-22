@@ -8,6 +8,9 @@ baseAttack = 20;
 baseDefense = 15;
 baseSpeed = 20;
 
+maxattack = 60;
+maxdefense = 45;
+
 healthMultiplier = 1;
 attackMultiplier = 1;
 defenseMultiplier = 1;
