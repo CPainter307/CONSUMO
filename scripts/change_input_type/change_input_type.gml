@@ -1,8 +1,10 @@
 //["Keyboard", "Analog Stick", "D-Pad"]
+var type = 0;
 
 switch (argument0) {
 	case 0:
 		global.input_type = inputs.keyboard;
+		type = 0;
 		
 		//Assign Variables
 		global.key_up			= ord("W");
@@ -22,6 +24,7 @@ switch (argument0) {
 	
 	case 1:
 		global.input_type = inputs.analog_stick;
+		type = 1;
 			
 		//Assign Variables
 		global.key_up			= gp_axislv;
@@ -41,6 +44,7 @@ switch (argument0) {
 	
 	case 2:
 		global.input_type = inputs.d_pad;
+		type = 2;
 		
 		//Assign Variables
 		global.key_up			= gp_padu;
@@ -58,3 +62,20 @@ switch (argument0) {
 		global.key_pause		= gp_start;
 	break;
 }
+
+//Overwrites values in ds_menu_controls
+var grid = ds_menu_controls;
+
+ds_grid_set(grid, 3, 0, type);
+ds_grid_set(grid, 3, 1, global.key_up);
+ds_grid_set(grid, 3, 2, global.key_down);
+ds_grid_set(grid, 3, 3, global.key_left);
+ds_grid_set(grid, 3, 4, global.key_right);
+ds_grid_set(grid, 3, 5, global.key_jump);
+ds_grid_set(grid, 3, 6, global.key_L_hand);
+ds_grid_set(grid, 3, 7, global.key_R_hand);
+ds_grid_set(grid, 3, 8, global.key_lock);
+ds_grid_set(grid, 3, 9, global.key_interact);
+ds_grid_set(grid, 3, 10, global.key_inventory);
+ds_grid_set(grid, 3, 11, global.key_room_reset);
+ds_grid_set(grid, 3, 12, global.key_pause);

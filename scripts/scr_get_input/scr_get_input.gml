@@ -70,10 +70,10 @@ if (global.input_type == inputs.analog_stick) {
 }
 
 if (global.input_type == inputs.d_pad) {
-	key_up = gamepad_button_check_pressed(0, global.key_up);
-	key_down = gamepad_button_check_pressed(0, global.key_down);
-	key_left = gamepad_button_check_pressed(0, global.key_left);
-	key_right = gamepad_button_check_pressed(0, global.key_right);
+	key_up = gamepad_button_check(0, global.key_up);
+	key_down = gamepad_button_check(0, global.key_down);
+	key_left = gamepad_button_check(0, global.key_left);
+	key_right = gamepad_button_check(0, global.key_right);
 	key_jump = gamepad_button_check_pressed(0, global.key_jump);
 	key_jump_held = gamepad_button_check(0, global.key_jump);
 	key_left_hand = gamepad_button_check_pressed(0, global.key_L_hand);

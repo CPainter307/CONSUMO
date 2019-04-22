@@ -8,6 +8,9 @@ global.down_check		= false;
 global.left_check		= false;
 global.right_check		= false;
 
+//Analog
+global.last_button		= noone;
+
 //Hardcoded Input Variables
 global.hard_up			= vk_up;
 global.hard_down		= vk_down;
@@ -31,14 +34,6 @@ global.key_room_reset		= ord("K");
 //global.key_select		= vk_enter;
 global.key_pause		= vk_escape;*/
 
-if(gamepad_is_connected(0)) {
-	global.input_type = inputs.analog_stick;
-	change_input_type(1);
-}
-else {
-	global.input_type = inputs.keyboard;
-	change_input_type(0);
-}
 
 enum inputs {
 	keyboard,
@@ -131,6 +126,15 @@ repeat(array_len){
 }
 
 inputting = false;
+
+if(gamepad_is_connected(0)) {
+	global.input_type = inputs.analog_stick;
+	change_input_type(1);
+}
+else {
+	global.input_type = inputs.keyboard;
+	change_input_type(0);
+}
 
 audio_group_load(audiogroup_soundeffects);
 audio_group_load(audiogroup_music);
