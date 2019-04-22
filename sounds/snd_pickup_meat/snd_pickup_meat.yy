@@ -3,7 +3,7 @@
     "modelName": "GMSound",
     "mvc": "1.0",
     "name": "snd_pickup_meat",
-    "audioGroupGuid": "7b2c4976-1e09-44e5-8256-c527145e03bb",
+    "audioGroupGuid": "ef133a3d-e0b3-44f8-b7aa-e3dae3489085",
     "bitDepth": 1,
     "bitRate": 128,
     "kind": 0,

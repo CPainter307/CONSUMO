@@ -11,7 +11,7 @@ imageDir = 0;
 if (!showInv) {
 
 	//gamepad controls throw
-	if (gamepad_is_connected(0)) {
+	if (global.input_type == inputs.analog_stick) {
 	
 		//throwing while moving
 		if (!oPlayer.isLocked) {
@@ -85,7 +85,7 @@ if (!showInv) {
 	}
 
 	//keyboard controls throw
-	if (!gamepad_is_connected(0)) {
+	if (global.input_type == inputs.keyboard) {
 	
 		//throwing while moving
 		if (!oPlayer.isLocked) {

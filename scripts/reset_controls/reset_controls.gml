@@ -20,3 +20,10 @@ var i = 0; repeat(ds_height) {
 	variable_global_set(ds_grid[# 2, menu.menu_option[menu.page]], default_array[i]);
 	i++;
 }*/
+var input = 0;
+
+if (global.input_type == inputs.keyboard) input = 0;
+else if (global.input_type == inputs.analog_stick) input = 1;
+else if (global.input_type == inputs.d_pad) input = 2;
+
+change_input_type(input);

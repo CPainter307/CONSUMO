@@ -871,6 +871,14 @@
             }
         },
         {
+            "Key": "3e3d5ebe-68cf-4d19-89f1-7d5f0bf89d91",
+            "Value": {
+                "id": "47cb7dce-01bd-4fa8-8f31-e4572b6de8d2",
+                "resourcePath": "scripts\\last_gamepad\\last_gamepad.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "3e508a8b-f241-49df-bcee-35f713fad4d4",
             "Value": {
                 "id": "9065cf1b-3d1e-494b-ab9a-a01ec6256f2b",
@@ -988,6 +996,22 @@
                 "id": "477133fe-754d-4ceb-9236-145bc35f0f9e",
                 "resourcePath": "rooms\\rCutscene\\rCutscene.yy",
                 "resourceType": "GMRoom"
+            }
+        },
+        {
+            "Key": "4b729487-69da-4c68-91a8-4a3a9d1e10b5",
+            "Value": {
+                "id": "ddda11f7-304b-4555-b6c1-adc5d6a00ee0",
+                "resourcePath": "scripts\\change_input_type\\change_input_type.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "4bfbe971-72f3-4a71-81e4-5edaff1cf7be",
+            "Value": {
+                "id": "622794fe-13e4-44a3-8043-05798f6493b4",
+                "resourcePath": "scripts\\change_window_mode\\change_window_mode.yy",
+                "resourceType": "GMScript"
             }
         },
         {
@@ -1204,6 +1228,14 @@
                 "id": "7c66aa4c-a691-4b3f-a6b7-65bdb1bb255d",
                 "resourcePath": "sprites\/sPreparedSalt\/sPreparedSalt.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "56b73475-f386-4fd9-ab91-2a918fe052cc",
+            "Value": {
+                "id": "880f74c3-bdfc-40fb-9a44-b873daa1b65e",
+                "resourcePath": "views\\56b73475-f386-4fd9-ab91-2a918fe052cc.yy",
+                "resourceType": "GMFolder"
             }
         },
         {
@@ -1559,6 +1591,14 @@
             }
         },
         {
+            "Key": "6ecbf5e6-1291-423b-a0be-0847df5e859d",
+            "Value": {
+                "id": "b6919f49-1a35-4d4e-b17c-12d9e1cadcbc",
+                "resourcePath": "scripts\\change_volume\\change_volume.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "6f01bdad-380a-477f-bb52-242df8e4a99e",
             "Value": {
                 "id": "50270697-c31e-4e7d-8db7-f58819789948",
@@ -1628,6 +1668,14 @@
                 "id": "ccbd8aee-3fea-4903-a087-5a41d2d7afd9",
                 "resourcePath": "sprites\/sBattleWindowHunger\/sBattleWindowHunger.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "744169ad-16c1-4a2b-9912-2d9d144c67c1",
+            "Value": {
+                "id": "c786d43a-bfbe-4705-aeaf-a45c2db9399f",
+                "resourcePath": "scripts\\stick_menu_movement\\stick_menu_movement.yy",
+                "resourceType": "GMScript"
             }
         },
         {
@@ -3471,6 +3519,14 @@
             }
         },
         {
+            "Key": "f8aed7ab-81f7-4fcd-9db5-d891bcdfbf2f",
+            "Value": {
+                "id": "e2d98325-d25d-434f-a056-2881b898db5a",
+                "resourcePath": "scripts\\change_resolution\\change_resolution.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "f8b004cf-f50a-4c1f-8751-93613b850e6f",
             "Value": {
                 "id": "fffbaa04-4452-47cc-8fa0-cb2cc382c8c5",
@@ -3650,6 +3706,12 @@
         "df0aa704-7fd2-446f-8295-de88af0f9ebc",
         "3cf49b30-e5e1-4929-a6c1-c789c3915629",
         "15f7a56f-5919-4952-a27b-7de80be3ee3f",
+        "6ecbf5e6-1291-423b-a0be-0847df5e859d",
+        "f8aed7ab-81f7-4fcd-9db5-d891bcdfbf2f",
+        "4bfbe971-72f3-4a71-81e4-5edaff1cf7be",
+        "4b729487-69da-4c68-91a8-4a3a9d1e10b5",
+        "3e3d5ebe-68cf-4d19-89f1-7d5f0bf89d91",
+        "744169ad-16c1-4a2b-9912-2d9d144c67c1",
         "f9ad685f-1396-49fe-a3e2-c5117bc4d91a",
         "59e9d743-93b6-4af6-a40b-0424f69bb113",
         "a05e043a-ac1a-469a-9a6a-79ff51b24cc1",

@@ -36,7 +36,7 @@ if (instance_exists(oPlayer)) {
 			//rotate sprite 
 		
 			//keyboard hacky
-			if (!gamepad_is_connected(0)) {
+			if (global.input_type == inputs.keyboard) {
 
 				if oPlayerInput.key_up {
 					x = lerp(x, (oPlayer.x) + sin(get_timer()/400000) * 2, .3);
@@ -82,7 +82,7 @@ if (instance_exists(oPlayer)) {
 			}	
 		
 			//gamepad hacky
-			if (gamepad_is_connected(0)) {
+			if (global.input_type == inputs.analog_stick) {
 				if (!oPlayer.isLocked) {
 					//east direction
 					if (oPlayerInput.stickDir >= 337.5 || oPlayerInput.stickDir < 22.5) {

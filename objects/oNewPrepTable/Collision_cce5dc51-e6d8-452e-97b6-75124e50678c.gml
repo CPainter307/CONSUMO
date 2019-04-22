@@ -7,13 +7,13 @@ if (!empty) {
 	}
 	oButton.y = oButton.ystart + sin(get_timer()/100000);
 	
-	if(gamepad_is_connected(0))
+	if(global.input_type == inputs.keyboard)
 	{
-		oButton.sprite_index = sButtonX;	
+		oButton.sprite_index = sButtonE;	
 	}
 	else
 	{
-		oButton.sprite_index = sButtonE;	
+		oButton.sprite_index = sButtonX;	
 	}
 
 }

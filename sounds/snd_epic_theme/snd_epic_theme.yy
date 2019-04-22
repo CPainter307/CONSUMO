@@ -3,7 +3,7 @@
     "modelName": "GMSound",
     "mvc": "1.0",
     "name": "snd_epic_theme",
-    "audioGroupGuid": "7b2c4976-1e09-44e5-8256-c527145e03bb",
+    "audioGroupGuid": "0ff14372-89b9-4906-97d4-7fb51aa4dd26",
     "bitDepth": 1,
     "bitRate": 128,
     "kind": 0,

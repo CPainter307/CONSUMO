@@ -6,13 +6,14 @@ draw_sprite(sHandWindow, 0, 300, 820);
 draw_sprite(sHandWindow, 0, 1600, 820);
 
 //draw controller scheme
-if (gamepad_is_connected(0)) {
-	draw_sprite(sLeftBumper, 0, 300, 990);
-	draw_sprite(sRightBumper,0, 1600, 990);
-}
-if (!gamepad_is_connected(0)) {
+if (global.input_type == inputs.keyboard) {
 	draw_sprite(sLeftClick, 0, 300, 990);
 	draw_sprite(sRightClick, 0, 1600, 990);
+}
+
+else {
+	draw_sprite(sLeftBumper, 0, 300, 990);
+	draw_sprite(sRightBumper,0, 1600, 990);
 }
 
 //draw objects in hands (currently the "are we holding" check
