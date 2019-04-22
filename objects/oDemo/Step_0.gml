@@ -73,6 +73,8 @@ if (!instance_exists(eFrogEgg) and !instance_exists(oTadpoleMech)) {
 								   "Well, I'm heading up now. Do I tip you? Or the old guy?"
 							       ], "Rogue", voice.lizard, sLizardPortrait],
 		[cutscene_wait, 1],
+		[cutscene_stop_sound, snd_battle_theme],
+		[cutscene_stop_sound, snd_main_theme],
 		[cutscene_create_textbox, ["Congrats, you won! Thank you for playing. Press CONTINUE to play again."], "", voice.oldman, sEmpty],
 		[cutscene_restart_game]
 	]
@@ -82,6 +84,7 @@ if (instance_exists(Warrior)) {
 	if (Warrior.currentHealth <= 0) {
 	var inst = instance_create_layer(0, 0, "Objects", oAutoTrigger);
 	inst.t_scene_info = [
+		[cutscene_change_variable, oAdventurer, "startFight", false],
 		[cutscene_fade_sound, snd_battle_theme, 0, 2000],
 		[cutscene_fade_sound, snd_main_theme, 0, 2000],
 		[cutscene_change_camera_target, Warrior],
@@ -91,6 +94,8 @@ if (instance_exists(Warrior)) {
 									"...",
 							       ], "Rogue", voice.lizard, sLizardPortrait],
 		[cutscene_wait, 1],
+		[cutscene_stop_sound, snd_battle_theme],
+		[cutscene_stop_sound, snd_main_theme],
 		[cutscene_create_textbox, ["GAME OVER. Press CONTINUE to try again."], "", voice.oldman, sEmpty],	
 		[cutscene_restart_game]
 	]
