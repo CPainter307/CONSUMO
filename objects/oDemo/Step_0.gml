@@ -73,3 +73,18 @@ if (!instance_exists(eFrogEgg) and !instance_exists(oTadpoleMech)) {
 							       ], "Rogue", voice.lizard, sLizardPortrait],	
 	]
 }
+
+if (instance_exists(Warrior)) {
+	if (Warrior.maxHealth <= 0) {
+	var inst = instance_create_layer(0, 0, "Objects", oAutoTrigger);
+	inst.t_scene_info = [
+		[cutscene_fade_sound, snd_battle_theme, 0, 2000],
+		[cutscene_change_camera_target, Warrior],
+		[cutscene_create_textbox, ["Ah... no... not like this...",
+									"Dying... to a bunch of baby frogs... is not cool...",
+									"...at all...",
+									"...",
+							       ], "Rogue", voice.lizard, sLizardPortrait],	
+	]
+	}
+}
