@@ -463,6 +463,14 @@
             }
         },
         {
+            "Key": "1dd458e3-5ec1-4b74-a9b1-ad36c28c6a45",
+            "Value": {
+                "id": "65508dd3-b9e3-4f5b-916d-77870f6b8959",
+                "resourcePath": "objects\\oHandResetter\\oHandResetter.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "1df79352-d35f-476b-867d-8955f39fb1de",
             "Value": {
                 "id": "d907340f-4360-4998-be7a-e15ff4817a96",

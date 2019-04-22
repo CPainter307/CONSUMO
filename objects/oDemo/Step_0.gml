@@ -62,6 +62,8 @@ if (instance_exists(eFrogEgg) and trigger_inst == noone) {
 if (!instance_exists(eFrogEgg) and !instance_exists(oTadpoleMech)) {
 	var inst = instance_create_layer(0, 0, "Objects", oAutoTrigger);
 	inst.t_scene_info = [
+		[cutscene_fade_sound, snd_battle_theme, 0, 2000],
+		[cutscene_change_camera_target, Warrior],
 		[cutscene_create_textbox, ["*pant... pant...*",
 								   "We... I... I did it!",
 								   "Wow!",

@@ -1,28 +1,18 @@
 {
-    "id": "7d348885-fa2a-4863-a4a9-b1d8757c183a",
+    "id": "1dd458e3-5ec1-4b74-a9b1-ad36c28c6a45",
     "modelName": "GMObject",
     "mvc": "1.0",
-    "name": "oGameGUI",
+    "name": "oHandResetter",
     "eventList": [
         {
-            "id": "7737ef24-ef76-4da7-bc0e-ca4907af9792",
+            "id": "d0324c44-a7fb-44ff-9598-88714bff6943",
             "modelName": "GMEvent",
             "mvc": "1.0",
             "IsDnD": false,
             "collisionObjectId": "00000000-0000-0000-0000-000000000000",
             "enumb": 0,
             "eventtype": 0,
-            "m_owner": "7d348885-fa2a-4863-a4a9-b1d8757c183a"
-        },
-        {
-            "id": "4f70750c-cce9-414a-b1db-cae3370fc0c1",
-            "modelName": "GMEvent",
-            "mvc": "1.0",
-            "IsDnD": false,
-            "collisionObjectId": "00000000-0000-0000-0000-000000000000",
-            "enumb": 64,
-            "eventtype": 8,
-            "m_owner": "7d348885-fa2a-4863-a4a9-b1d8757c183a"
+            "m_owner": "1dd458e3-5ec1-4b74-a9b1-ad36c28c6a45"
         }
     ],
     "maskSpriteId": "00000000-0000-0000-0000-000000000000",

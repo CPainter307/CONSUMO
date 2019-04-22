@@ -1,7 +1,8 @@
 event_inherited();
 Class = "Adventurer";
 
-maxHealth = 200;
+//maxHealth = 200;
+maxHealth = 300;
 currentHealth = maxHealth;
 
 baseAttack = 20;
