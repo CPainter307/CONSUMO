@@ -1463,6 +1463,14 @@
             }
         },
         {
+            "Key": "68bf10b9-6036-40ea-b97a-613a65c66883",
+            "Value": {
+                "id": "fed3d5bd-9797-4b01-bacd-2b626f849ebb",
+                "resourcePath": "scripts\\cutscene_restart_game\\cutscene_restart_game.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "68d9a4a4-a989-495b-bc21-2320d40a7ad6",
             "Value": {
                 "id": "4d918f91-c3bf-4135-8eb8-c5ac08817dd3",
@@ -3676,7 +3684,8 @@
         "c6bb5513-ac0d-4af9-b04b-039a7e0377cc",
         "e49304bf-e511-4c82-86bf-c14d3ef8eee8",
         "240bd9be-1ba6-4f0d-9951-d8abf58629d4",
-        "9acaec72-96f9-42e7-a0af-671cd1d6767e"
+        "9acaec72-96f9-42e7-a0af-671cd1d6767e",
+        "68bf10b9-6036-40ea-b97a-613a65c66883"
     ],
     "tutorial": ""
 }

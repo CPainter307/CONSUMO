@@ -7,10 +7,10 @@ if (startFight) {
 
 //check if dead
 if (global.fightStarted) {
-	if(currentHealth <= 0)
-	{
-		instance_destroy()
-	}
+//	if(currentHealth <= 0)
+//	{
+//		instance_destroy()
+//	}
 
 	//move 1
 	if(((timer_m1) * (baseSpeed/100)) >= move_1[0] and instance_exists(Enemy))
