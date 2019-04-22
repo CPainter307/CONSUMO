@@ -2679,6 +2679,14 @@
             }
         },
         {
+            "Key": "c0a944af-4a6a-4241-9252-17721ff0dc65",
+            "Value": {
+                "id": "e9d463d1-c46b-4275-8fc9-111c1669f191",
+                "resourcePath": "sprites\\sTadpoleMechPortrait\\sTadpoleMechPortrait.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "c14b810c-dd35-4810-b191-b908f8139770",
             "Value": {
                 "id": "f42c69af-bf07-439e-93af-72f5076ee53d",
