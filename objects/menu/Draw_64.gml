@@ -93,16 +93,54 @@ yy = 0; repeat(ds_height) {
 		case menu_element_type.input:
 			var current_val = ds_grid[# 3, yy];
 			switch(current_val) {
-				case vk_up:			current_val = "UP KEY"; break;
-				case vk_down:		current_val = "DOWN KEY"; break;
-				case vk_left:		current_val = "LEFT KEY"; break;
-				case vk_right:		current_val = "RIGHT KEY"; break;
-				case vk_space:		current_val = "SPACE"; break;
-				case vk_shift:		current_val = "SHIFT"; break;
-				case vk_enter:		current_val = "ENTER"; break;
-				case vk_escape:		current_val = "ESCAPE"; break;
-				case mb_left:		current_val = "LEFT MOUSE"; break;
-				case mb_right:		current_val = "RIGHT MOUSE"; break;
+				
+				//Virtual Keyboard
+				case vk_left:			current_val = "LEFT KEY"; break;
+				case vk_right:			current_val = "RIGHT KEY"; break;
+				case vk_up:				current_val = "UP KEY"; break;
+				case vk_down:			current_val = "DOWN KEY"; break;
+				case vk_enter:			current_val = "ENTER"; break;
+				case vk_escape:			current_val = "ESCAPE"; break;
+				case vk_space:			current_val = "SPACE"; break;
+				case vk_shift:			current_val = "SHIFT"; break;
+				case vk_control:		current_val = "CONTROL"; break;
+				case vk_alt:			current_val = "ALT"; break;
+				case vk_backspace:		current_val = "BACKSPACE"; break;
+				case vk_tab:			current_val = "TAB"; break;
+				case vk_home:			current_val = "HOME"; break;
+				case vk_end:			current_val = "END"; break;
+				case vk_delete:			current_val = "DELETE"; break;
+				case vk_insert:			current_val = "INSERT"; break;
+				case vk_pageup:			current_val = "PAGE UP"; break;
+				case vk_pagedown:		current_val = "PAGE DOWN"; break;
+				
+				
+				//Mouse
+				case mb_left:			current_val = "LEFT MOUSE"; break;
+				case mb_right:			current_val = "RIGHT MOUSE"; break;
+				
+				//Gamepad
+				case gp_face1:			current_val = "BOTTOM FACE"; break;
+				case gp_face2:			current_val = "RIGHT FACE"; break;
+				case gp_face3:			current_val = "LEFT FACE"; break;
+				case gp_face4:			current_val = "TOP FACE"; break;
+				case gp_shoulderl:		current_val = "LEFT BUMPER"; break;
+				case gp_shoulderlb:		current_val = "LEFT TRIGGER"; break;
+				case gp_shoulderr:		current_val = "RIGHT BUMPER"; break;
+				case gp_shoulderrb:		current_val = "RIGHT TRIGGER"; break;
+				case gp_select:			current_val = "SELECT"; break;
+				case gp_start:			current_val = "START"; break;
+				case gp_stickl:			current_val = "L-STICK CLICK"; break;
+				case gp_stickr:			current_val = "R-STICK CLICK"; break;
+				case gp_padu:			current_val = "D-PAD UP"; break;
+				case gp_padd:			current_val = "D-PAD DOWN"; break;
+				case gp_padl:			current_val = "D-PAD LEFT"; break;
+				case gp_padr:			current_val = "D-PAD RIGHT"; break;
+				case gp_axislh:			current_val = "L-STICK HORIZONTAL"; break;
+				case gp_axislv:			current_val = "L-STICK VERTICAL"; break;
+				case gp_axisrh:			current_val = "R-STICK HORIZONTAL"; break;
+				case gp_axisrv:			current_val = "R-STICK VERTICAL"; break;
+				
 				default: current_val = chr(current_val);
 			}
 			c = c_white;
