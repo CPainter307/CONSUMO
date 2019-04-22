@@ -727,6 +727,14 @@
             }
         },
         {
+            "Key": "325a1005-edc9-4cf4-81df-4c178a022f12",
+            "Value": {
+                "id": "675d5459-e561-4b20-9dbe-12b795e310f7",
+                "resourcePath": "sprites\\sTadpoleMechIdle\\sTadpoleMechIdle.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "32ac9078-82fb-4e87-acd8-a373856daed1",
             "Value": {
                 "id": "6227e693-5bf6-4389-8f35-4c506c27100b",
@@ -2275,6 +2283,14 @@
             "Value": {
                 "id": "3eac611c-beee-4baf-a872-1be7b0caf738",
                 "resourcePath": "sprites\/sOnion\/sOnion.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "a5dad067-d0ae-4c16-97b5-0bd446823495",
+            "Value": {
+                "id": "2c3259f5-e096-4096-bae6-32b74e017063",
+                "resourcePath": "sprites\\sTadpoleMechMove\\sTadpoleMechMove.yy",
                 "resourceType": "GMSprite"
             }
         },
