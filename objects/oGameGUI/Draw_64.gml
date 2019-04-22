@@ -79,6 +79,7 @@ if (adv1 != noone) {
 	draw_sprite_ext(sBattleWindowStat, 1, xpos+148, ypos+137, 1, (adv1.elmatk/adv1.maxelmatk), 0, c_white, 1);  // elm atk
 	draw_sprite_ext(sBattleWindowStat, 1, xpos+184, ypos+137, 1, (adv1.elmdef/adv1.maxelmdef), 0, c_white, 1);  // elm def
 	draw_sprite(sBattleWindow, 1, xpos, ypos);
+	draw_sprite(sLizardBattlePortrait, 1, xpos+26, ypos+85);
 	draw_sprite_ext(sBattleWindowHealth, 1, xpos+104, ypos+44, (adv1.currentHealth/adv1.maxHealth), 1, 0, c_white, 1);  // hp
 	if (!adv1.stallHunger) {
 		draw_sprite_ext(sBattleWindowHunger, 1, xpos+104, ypos+74, (adv1.hunger/adv1.maxhunger), 1, 0, c_white, 1);  // hunger

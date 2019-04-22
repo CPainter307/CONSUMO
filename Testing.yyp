@@ -2135,6 +2135,14 @@
             }
         },
         {
+            "Key": "9cf2fb6b-697a-473e-81ea-ac9bb638726d",
+            "Value": {
+                "id": "cbaf8020-bfe5-47ac-9618-851a1160aa16",
+                "resourcePath": "sprites\\sLizardBattlePortrait\\sLizardBattlePortrait.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "9d1a73b9-e4ab-46df-8118-959c1f67546f",
             "Value": {
                 "id": "8ad910ef-5d5c-42be-b024-706481a64d45",
