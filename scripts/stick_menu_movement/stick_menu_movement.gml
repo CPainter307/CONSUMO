@@ -1,66 +1,85 @@
 var axis_dir = argument0; //gamepad axis
-var check = global.check;
+var u_check = global.up_check;
+var d_check = global.down_check;
+var l_check = global.left_check;
+var r_check = global.right_check;
 var output = 0;
 
 
 //when held
 switch (axis_dir) {
 	case (global.key_up):
-		if((gamepad_axis_value(0, axis_dir) < 0) && check == 1) { //when held
-			check = 1;
+		if((gamepad_axis_value(0, axis_dir) < -0.5) && u_check == true) { //when held
+			u_check = true;
 			output = 0;
 		}
-		else if((gamepad_axis_value(0, axis_dir) < 0) && check == 0) { //when initially pressed
-			check = 1;
+		else if((gamepad_axis_value(0, axis_dir) < -0.5) && u_check == false) { //when initially pressed
+			u_check = true;
 			output = 1;
 		}
-		else if((gamepad_axis_value(0, axis_dir) >= 0) && check == 1) { //when released
-			check = 0;
+		else if((gamepad_axis_value(0, axis_dir) >= -0.5) && u_check == true) { //when released
+			u_check = false;
+			output = 0;
+		}
+		else if((gamepad_axis_value(0, axis_dir) >= -0.5) && u_check == false) { //when no input
+			u_check = false;
 			output = 0;
 		}
 	break;
 	
 	case (global.key_down):
-		if((gamepad_axis_value(0, axis_dir) > 0) && check == 1) { //when held
-			check = 1;
+		if((gamepad_axis_value(0, axis_dir) > 0.5) && d_check == true) { //when held
+			d_check = true;
 			output = 0;
 		}
-		else if((gamepad_axis_value(0, axis_dir) > 0) && check == 0) { //when initially pressed
-			check = 1;
+		else if((gamepad_axis_value(0, axis_dir) > 0.5) && d_check == false) { //when initially pressed
+			d_check = true;
 			output = 1;
 		}
-		else if((gamepad_axis_value(0, axis_dir) <= 0) && check == 1) { //when released
-			check = 0;
+		else if((gamepad_axis_value(0, axis_dir) <= 0.5) && d_check == true) { //when released
+			d_check = false;
+			output = 0;
+		}
+		else if((gamepad_axis_value(0, axis_dir) <= 0.5) && d_check == false) { //when no input
+			d_check = false;
 			output = 0;
 		}
 	break;
 	
 	case (global.key_left):
-		if((gamepad_axis_value(0, axis_dir) < 0) && check == 1) { //when held
-			check = 1;
+		if((gamepad_axis_value(0, axis_dir) < -0.5) && l_check == true) { //when held
+			l_check = true;
 			output = 0;
 		}
-		else if((gamepad_axis_value(0, axis_dir) < 0) && check == 0) { //when initially pressed
-			check = 1;
+		else if((gamepad_axis_value(0, axis_dir) < -0.5) && l_check == false) { //when initially pressed
+			l_check = true;
 			output = 1;
 		}
-		else if((gamepad_axis_value(0, axis_dir) >= 0) && check == 1) { //when released
-			check = 0;
+		else if((gamepad_axis_value(0, axis_dir) >= -0.5) && l_check == true) { //when released
+			l_check = false;
+			output = 0;
+		}
+		else if((gamepad_axis_value(0, axis_dir) >= -0.5) && l_check == false) { //when no input
+			l_check = false;
 			output = 0;
 		}
 	break;
 	
 	case (global.key_right):
-		if((gamepad_axis_value(0, axis_dir) > 0) && check == 1) { //when held
-			check = 1;
+		if((gamepad_axis_value(0, axis_dir) > 0.5) && r_check == true) { //when held
+			r_check = true;
 			output = 0;
 		}
-		else if((gamepad_axis_value(0, axis_dir) > 0) && check == 0) { //when initially pressed
-			check = 1;
+		else if((gamepad_axis_value(0, axis_dir) > 0.5) && r_check == false) { //when initially pressed
+			r_check = true;
 			output = 1;
 		}
-		else if((gamepad_axis_value(0, axis_dir) <= 0) && check == 1) { //when released
-			check = 0;
+		else if((gamepad_axis_value(0, axis_dir) <= 0.5) && r_check == true) { //when released
+			r_check = false;
+			output = 0;
+		}
+		else if((gamepad_axis_value(0, axis_dir) <= 0.5) && r_check == false) { //when no input
+			r_check = false;
 			output = 0;
 		}
 	break;
@@ -120,5 +139,8 @@ else if((gamepad_axis_value(0, axis_dir) == 0) && check == 1) { //right
 }*/
 
 
-global.check = check;
+global.up_check = u_check;
+global.down_check = d_check;
+global.left_check = l_check;
+global.right_check = r_check;
 return output;

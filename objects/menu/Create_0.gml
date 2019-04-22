@@ -3,7 +3,10 @@ global.view_width		= view_wport[0];
 global.view_height		= view_hport[0];
 
 //Analog Stick Check
-global.check			= 0;
+global.up_check			= false;
+global.down_check		= false;
+global.left_check		= false;
+global.right_check		= false;
 
 //Hardcoded Input Variables
 global.hard_up			= vk_up;
@@ -11,6 +14,7 @@ global.hard_down		= vk_down;
 global.hard_left		= vk_left;
 global.hard_right		= vk_right;
 global.hard_enter		= vk_enter;
+global.hard_pause		= vk_escape;
 
 //Global Input Variables
 /*global.key_up			= ord("W");
