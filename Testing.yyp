@@ -3335,6 +3335,14 @@
             }
         },
         {
+            "Key": "e875056d-1025-4bf8-990a-f1f230fdb996",
+            "Value": {
+                "id": "a4ade368-c858-4fb6-8c29-f92b4d845045",
+                "resourcePath": "sounds\\snd_fanfare\\snd_fanfare.yy",
+                "resourceType": "GMSound"
+            }
+        },
+        {
             "Key": "e8976633-b554-4dea-86ad-cda329ef7a82",
             "Value": {
                 "id": "340ccbb0-ba80-4688-9a1f-37aab95854b9",

@@ -49,7 +49,7 @@ if(inputting) {
 			switch(menu_option[page]) {
 				case 0: if(!audio_is_playing(snd_menu_select)) { audio_play_sound(snd_menu_select,1,false); } break;
 				case 1: if(!audio_is_playing(snd_chop_1)) { audio_play_sound(snd_chop_1,1,false); } break;
-				case 2: if(!audio_is_playing(snd_main_theme)) { audio_play_sound(snd_main_theme,1,false); } break;
+				case 2: if(!audio_is_playing(snd_fanfare)) { audio_play_sound(snd_fanfare,1,false); } break;
 			}
 			
 			var hard_hinput = keyboard_check(global.hard_right) - keyboard_check(global.hard_left);
