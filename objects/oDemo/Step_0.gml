@@ -1,5 +1,5 @@
 if (instance_exists(eFrogEgg) and trigger_inst == noone) {
-	if (eFrogEgg.currentHealth <= 20) {
+	if (eFrogEgg.currentHealth <= 50) {
 		mech1 = instance_create_layer(4704, 2976, "Objects", oTadpoleMech);
 		mech2 = instance_create_layer(4896, 2976, "Objects", oTadpoleMech);
 		trigger_inst = instance_create_layer(0, 0, "Objects", oAutoTrigger);
