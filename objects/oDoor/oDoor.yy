@@ -5,13 +5,13 @@
     "name": "oDoor",
     "eventList": [
         {
-            "id": "f01e82b6-4a25-47a8-8e59-30da904541dc",
+            "id": "005c23c4-9fcc-4382-b947-d2c870a1d74e",
             "modelName": "GMEvent",
             "mvc": "1.0",
             "IsDnD": false,
             "collisionObjectId": "00000000-0000-0000-0000-000000000000",
             "enumb": 0,
-            "eventtype": 0,
+            "eventtype": 8,
             "m_owner": "5bc5a640-50a6-4520-b2ec-099e000aac63"
         }
     ],
@@ -102,6 +102,20 @@
             "value": "0",
             "varName": "new_y",
             "varType": 0
+        },
+        {
+            "id": "2381f9d1-5cae-4f1c-b3c8-ba84776fcb9c",
+            "modelName": "GMObjectProperty",
+            "mvc": "1.0",
+            "listItems": null,
+            "multiselect": false,
+            "rangeEnabled": false,
+            "rangeMax": 10,
+            "rangeMin": 0,
+            "resourceFilter": 1023,
+            "value": "\"\"",
+            "varName": "door_text",
+            "varType": 2
         }
     ],
     "solid": false,
