@@ -58,3 +58,16 @@ if (instance_exists(eFrogEgg) and trigger_inst == noone) {
 		]
 	}
 }
+
+if (!instance_exists(eFrogEgg) and !instance_exists(oTadpoleMech)) {
+	var inst = instance_create_layer(0, 0, "Objects", oAutoTrigger);
+	inst.t_scene_info = [
+		[cutscene_create_textbox, ["*pant... pant...*",
+								   "We... I... I did it!",
+								   "Wow!",
+								   "Oh, and uh, thanks for the food.",
+								   "It was pretty good most of the time. Definitely hit the spot during that battle.",
+								   "Well, I'm heading up now. Do I tip you? Or the old guy?"
+							       ], "Rogue", voice.lizard, sLizardPortrait],	
+	]
+}
