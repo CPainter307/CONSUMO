@@ -21,7 +21,7 @@ tar1 = noone;
 tar2 = noone;
 
 
-if (gamepad_is_connected(0)) {
+if (global.input_type == inputs.analog_stick) {
 	jumpString = "the A button";
 	moveString = "the left stick";
 	leftHandString = "the left bumper";
