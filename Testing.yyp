@@ -327,6 +327,14 @@
             }
         },
         {
+            "Key": "1606ceb1-2479-40c4-b7f4-614716322fbb",
+            "Value": {
+                "id": "235fac1f-8981-42ff-a391-ca98da6629a2",
+                "resourcePath": "scripts\\cutscene_set_x\\cutscene_set_x.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "16370021-6f87-4568-a72a-bbae314186ae",
             "Value": {
                 "id": "aaaa3737-2911-4069-9546-84ce8444d4ef",
@@ -3776,6 +3784,7 @@
         "945f5be9-bcee-4f26-9665-2e5902a45d03",
         "5d741126-703d-4152-8296-20760055aca2",
         "c6bb5513-ac0d-4af9-b04b-039a7e0377cc",
+        "1606ceb1-2479-40c4-b7f4-614716322fbb",
         "e49304bf-e511-4c82-86bf-c14d3ef8eee8",
         "240bd9be-1ba6-4f0d-9951-d8abf58629d4",
         "9acaec72-96f9-42e7-a0af-671cd1d6767e",

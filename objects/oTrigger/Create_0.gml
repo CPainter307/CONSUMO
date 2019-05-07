@@ -1,4 +1,5 @@
 t_scene_info = -1;
+t_skip_info = -1;
 
 if (global.input_type = inputs.analog_stick) {
 	jumpString = "the A button";
