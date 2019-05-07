@@ -1639,6 +1639,14 @@
             }
         },
         {
+            "Key": "71c2d47e-c158-4ea3-9888-ed7ff8fe6ed4",
+            "Value": {
+                "id": "d616d38e-cdf3-4974-8e8a-22822c4e857e",
+                "resourcePath": "objects\\oDemoTrigger\\oDemoTrigger.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "723e9780-be5d-4a83-991f-a4451e37e3c5",
             "Value": {
                 "id": "bfcb6946-4e08-4ae9-8a6d-7c605b52d265",
@@ -1844,6 +1852,14 @@
                 "id": "e075726c-5fe9-40a5-a422-eed780c46533",
                 "resourcePath": "views\/7e8df9f6-9e53-4ae9-aaee-6a2b7a0a8e03.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "7ef1d4f1-5199-4c61-9061-236c38ceef03",
+            "Value": {
+                "id": "d1d7166e-0c80-44dc-9ae1-c7f0a4359dfd",
+                "resourcePath": "sprites\\sPot1\\sPot1.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -2628,6 +2644,14 @@
                 "id": "674ff2e6-60ba-4935-81e0-02a5ec144007",
                 "resourcePath": "scripts\\cutscnee_instance_destroy_nearest\\cutscnee_instance_destroy_nearest.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "b6de0286-87a2-4d23-922b-03670b09029c",
+            "Value": {
+                "id": "9ec7847c-944d-4fbe-97c2-80ef5fb1bd38",
+                "resourcePath": "objects\\oDemoBeginning\\oDemoBeginning.yy",
+                "resourceType": "GMObject"
             }
         },
         {

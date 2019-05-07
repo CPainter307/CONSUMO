@@ -4,6 +4,7 @@ if (instance_exists(eFrogEgg) and trigger_inst == noone) {
 		mech2 = instance_create_layer(4896, 2976, "Objects", oTadpoleMech);
 		trigger_inst = instance_create_layer(0, 0, "Objects", oAutoTrigger);
 		trigger_inst.t_scene_info = [
+			[cutscene_fade_sound, snd_battle_theme, 100, 1],
 			[cutscene_change_variable, oAdventurer, "startFight", false],
 			[cutscene_change_variable, oAdventurer, "sprite_index", sRogueIdle],
 			[cutscene_change_camera_target, Warrior],

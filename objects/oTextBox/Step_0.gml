@@ -11,3 +11,4 @@ if ((oPlayerInput.key_interact or oPlayerInput.key_jump) and alarm_get(0) <= 0) 
 		audio_play_sound(snd_textbox_progression,1,0);
 	}
 }
+

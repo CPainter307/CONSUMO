@@ -24,7 +24,7 @@ else {
 myText1[0] = "Use " + moveString + " to move around and press " + jumpString + " to jump."
 
 myText2[0] = "Use " + leftHandString + " to hold in your left hand and " + rightHandString + " to hold in your right."
-myText2[1] = "Press again to throw. Hold " + lockString +" to aim with precision."
+myText2[1] = "Press again to throw in the direction you're moving. Hold " + lockString +" to aim with precision."
 
 myText3[0] = "Throw the meat into the pot and it'll cook."
 myText3[1] = "Take it too early and raw food will hurt your client. Too long it'll burn and lose potency. Wait till it's just right."

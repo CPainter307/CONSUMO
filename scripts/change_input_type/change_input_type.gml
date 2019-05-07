@@ -20,6 +20,7 @@ switch (argument0) {
 		global.key_room_reset	= ord("K");
 		//global.key_select		= vk_enter;
 		global.key_pause		= vk_escape;
+		global.key_skip			= vk_f1;
 	break;
 	
 	case 1:
@@ -40,6 +41,7 @@ switch (argument0) {
 		global.key_room_reset	= gp_select;
 		//global.key_select		= vk_enter;
 		global.key_pause		= gp_start;
+		global.key_skip			= gp_face2;
 	break
 	
 	case 2:
@@ -60,6 +62,7 @@ switch (argument0) {
 		global.key_room_reset	= gp_select;
 		//global.key_select		= vk_enter;
 		global.key_pause		= gp_start;
+		global.key_skip			= gp_face2;
 	break;
 }
 

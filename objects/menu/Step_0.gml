@@ -8,6 +8,7 @@ hard_input_down_p		= keyboard_check_pressed(global.hard_down);
 hard_input_left_p		= keyboard_check_pressed(global.hard_left);
 hard_input_right_p		= keyboard_check_pressed(global.hard_right);
 hard_input_enter_p		= keyboard_check_pressed(global.hard_enter);
+hard_input_skip_p		= keyboard_check_pressed(global.hard_skip);
 
 if (global.input_type == inputs.keyboard) {
 	input_up_p			= keyboard_check_pressed(global.key_up);

@@ -18,6 +18,7 @@ global.hard_left		= vk_left;
 global.hard_right		= vk_right;
 global.hard_enter		= vk_enter;
 global.hard_pause		= vk_escape;
+global.hard_skip		= vk_f1;
 
 //Global Input Variables
 /*global.key_up			= ord("W");
