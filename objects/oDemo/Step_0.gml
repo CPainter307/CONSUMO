@@ -56,6 +56,20 @@ if (instance_exists(eFrogEgg) and trigger_inst == noone) {
 			[cutscene_change_camera_target, oPlayer],
 			[cutscene_change_variable, oAdventurer, "startFight", true]
 		]
+		
+		trigger_inst.t_skip_info = [
+		[cutscene_stop_sound, snd_main_theme],
+		[cutscene_change_variable, mech1, "x", 4040],
+		[cutscene_change_variable, mech1, "y", 2050],
+		[cutscene_change_variable, mech2, "x", 4010],
+		[cutscene_change_variable, mech2, "y", 2050],
+		[cutscene_set_x, mech1, 2843],
+		[cutscene_set_x, mech2, 3270],
+		[cutscene_set_x, eFrogEgg, 3404],
+		[cutscene_play_sound, snd_battle_theme, 10, true],
+		[cutscene_change_camera_target, oPlayer],
+		[cutscene_change_variable, oAdventurer, "startFight", true]
+		]
 	}
 }
 
@@ -73,6 +87,12 @@ if (!instance_exists(eFrogEgg) and !instance_exists(oTadpoleMech)) {
 								   "Well, I'm heading up now. Do I tip you? Or the old guy?"
 							       ], "Rogue", voice.lizard, sLizardPortrait],
 		[cutscene_wait, 1],
+		[cutscene_stop_sound, snd_battle_theme],
+		[cutscene_stop_sound, snd_main_theme],
+		[cutscene_create_textbox, ["Congrats, you won! Thank you for playing. Press CONTINUE to play again."], "", voice.oldman, sEmpty],
+		[cutscene_restart_game]
+	]
+	inst.t_skip_info = [
 		[cutscene_stop_sound, snd_battle_theme],
 		[cutscene_stop_sound, snd_main_theme],
 		[cutscene_create_textbox, ["Congrats, you won! Thank you for playing. Press CONTINUE to play again."], "", voice.oldman, sEmpty],
@@ -96,6 +116,13 @@ if (instance_exists(Warrior)) {
 		[cutscene_wait, 1],
 		[cutscene_stop_sound, snd_battle_theme],
 		[cutscene_stop_sound, snd_main_theme],
+		[cutscene_create_textbox, ["GAME OVER. Press CONTINUE to try again."], "", voice.oldman, sEmpty],	
+		[cutscene_restart_game]
+	]
+	inst.t_skip_info = [
+		[cutscene_change_variable, oAdventurer, "startFight", false],
+		[cutscene_fade_sound, snd_battle_theme, 0, 2000],
+		[cutscene_fade_sound, snd_main_theme, 0, 2000],
 		[cutscene_create_textbox, ["GAME OVER. Press CONTINUE to try again."], "", voice.oldman, sEmpty],	
 		[cutscene_restart_game]
 	]

@@ -1,5 +1,8 @@
 scene_info = -1;
+skip_info = -1;
 scene = 0;
+
+self_id = id;
 
 timer = 0;
 

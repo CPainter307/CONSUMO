@@ -32,3 +32,8 @@ draw_set_font(fBattleTextThick)
 draw_set_halign(fa_left);
 stringHeight = string_height("H")+5;
 draw_text_ext(x+xBuffer, y+stringHeight+yBuffer+10, textPart, stringHeight, boxWidth);
+
+//draw skip choice
+		draw_set_halign(fa_left);
+		//draw_text_outlined(x+32, y-25, OFFWHITE_COL, BROWN_COL, "F1 TO SKIP");
+		draw_text_colour(x+32, y-25, "F1 TO SKIP", OFFWHITE_COL, OFFWHITE_COL, OFFWHITE_COL, OFFWHITE_COL, 1 + sin(get_timer()/1000000));

@@ -66,3 +66,13 @@ t_scene_info = [
 	[cutscene_change_variable, oAdventurer, "startFight", true],
 	[cutscene_play_sound, snd_main_theme, 2, true]
 ]
+
+t_skip_info = [
+	[cutscene_set_x, eFrogEgg, 3197],
+	[cutscene_change_camera_target, oPlayer],
+	[cutscene_change_variable, oAdventurer, "startFight", true],
+	[cutscene_stop_sound, snd_epic_theme],
+	[cutscene_play_sound, snd_main_theme, 2, true],
+	[cutscene_change_xscale, Warrior, -1]
+	//[cutscene_instance_create, 0, 0, "Game", oDemo],
+];

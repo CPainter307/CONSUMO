@@ -9,6 +9,14 @@ if (instance_exists(oPlayer) && text1) {
 		[cutscene_instance_create, 2828, 1856, "Objects", oPlayerTarget],
 		[cutscene_instance_create, 0, 0, "Game", oPlayerTargetTracker]
 	]
+	currentTrigger.t_skip_info = [
+		[cutscene_instance_destroy, oPlayerTarget],
+		[cutscene_instance_destroy, oPlayerTargetTracker],
+		[cutscene_instance_create, 2303, 1663, "Objects", oPlayerTarget],
+		[cutscene_instance_create, 3245, 1809, "Objects", oPlayerTarget],
+		[cutscene_instance_create, 2828, 1856, "Objects", oPlayerTarget],
+		[cutscene_instance_create, 0, 0, "Game", oPlayerTargetTracker]		
+	]
 	text1 = false;
 	oldManText1 = true;
 }
@@ -39,6 +47,17 @@ if (text2) {
 		[cutscene_instance_create, 2856, 1984, "Objects", oPebble],
 		[cutscene_create_textbox, ["Use " + leftHandString + " to hold in your left hand and " + rightHandString + " to hold in your right.","Press again to throw. Hold " + lockString +" to aim with precision."], "Old Man", voice.oldman, sOldmanPortrait],	
 		//[cutscene_create_textbox, [], "Old Man", voice.oldman, sOldmanPortrait],	
+		[cutscene_instance_create, 2303, 1663, "Objects", oThrowTarget],
+		[cutscene_instance_create, 3245, 1809, "Objects", oThrowTarget],
+		[cutscene_instance_create, 2744, 1758, "Objects", oThrowTarget],
+		[cutscene_instance_create, 0, 0, "Game", oThrowTargetTracker],
+	]
+	currentTrigger.t_skip_info = [
+		[cutscene_instance_destroy, oPebble],
+		[cutscene_instance_destroy, oThrowTarget],
+		[cutscene_instance_destroy, oThrowTargetTracker],
+		[cutscene_instance_create, 2751, 1982, "Objects", oPebble],
+		[cutscene_instance_create, 2856, 1984, "Objects", oPebble],
 		[cutscene_instance_create, 2303, 1663, "Objects", oThrowTarget],
 		[cutscene_instance_create, 3245, 1809, "Objects", oThrowTarget],
 		[cutscene_instance_create, 2744, 1758, "Objects", oThrowTarget],
@@ -90,6 +109,17 @@ if (text3) {
 								   "Take it too early and raw food will hurt your client. Too long it'll burn and lose potency. Wait till it's just right.",
 								   "A true cook can tell!"], "Old Man", voice.oldman, sOldmanPortrait],
 	]
+	currentTrigger.t_skip_info = [
+		[cutscene_instance_destroy, oPebble],
+		[cutscene_instance_destroy, oMeat],
+		[cutscene_instance_destroy, oPot],
+		[cutscene_instance_destroy, oPotRadius],
+		[cutscene_instance_destroy, oRecipeTracker],
+		[cutscene_instance_create, 2751, 1982, "Cooking", oMeat],
+		[cutscene_instance_create, 2463, 2016, "Pot", oPot],
+		[cutscene_instance_create, 2463, 2006, "RadiusAndRunes", oPotRadius],
+		[cutscene_instance_create, 0, 0, "Game", oRecipeTracker],
+	]
 	
 	oPlayerPickUpRadius.itemInLeftHand = noone;
 	oPlayerPickUpRadius.itemInRightHand = noone;
@@ -110,6 +140,13 @@ if (instance_exists(oRecipeTracker)) {
 			[cutscene_instance_create, 2751, 1982, "Cooking", oMeat],
 			[cutscene_instance_create, 0, 0, "Game", oRecipeTracker],
 		]
+		currentTrigger.t_skip_info = [
+			[cutscene_instance_destroy, oRecipe],
+			[cutscene_instance_destroy, oMeat],
+			[cutscene_instance_destroy, oRecipeTracker],
+			[cutscene_instance_create, 2751, 1982, "Cooking", oMeat],
+			[cutscene_instance_create, 0, 0, "Game", oRecipeTracker],
+		]
 		oPlayerPickUpRadius.itemInLeftHand = noone;
 		oPlayerPickUpRadius.itemInRightHand = noone;
 	} else if (oRecipeTracker.undercooked) {
@@ -119,8 +156,11 @@ if (instance_exists(oRecipeTracker)) {
 			[cutscene_wait, 2],
 			[cutscene_instance_destroy, oRecipe],
 			[cutscene_instance_destroy, oRecipeTracker],
-			[cutscene_create_textbox, ["Close, boy! Pulled it a little too early, but it'll do. Here's an insider secret: the steam will start to shimmer when it's JUST right."], "Old Man", voice.oldman, sOldmanPortrait],
-			
+			[cutscene_create_textbox, ["Close, boy! Pulled it a little too early, but it'll do. Here's an insider secret: the steam will start to shimmer when it's JUST right."], "Old Man", voice.oldman, sOldmanPortrait],			
+		]
+		currentTrigger.t_skip_info = [
+			[cutscene_instance_destroy, oRecipe],
+			[cutscene_instance_destroy, oRecipeTracker],
 		]
 		oPlayerPickUpRadius.itemInLeftHand = noone;
 		oPlayerPickUpRadius.itemInRightHand = noone;
@@ -134,6 +174,10 @@ if (instance_exists(oRecipeTracker)) {
 			[cutscene_instance_destroy, oRecipeTracker],
 			[cutscene_create_textbox, ["Now that's what I'm talking about! Perfectly cooked! I knew I hired you for a reason, boy!"], "Old Man", voice.oldman, sOldmanPortrait],
 		]
+		currentTrigger.t_skip_info = [
+			[cutscene_instance_destroy, oRecipe],
+			[cutscene_instance_destroy, oRecipeTracker],
+		]
 		oPlayerPickUpRadius.itemInLeftHand = noone;
 		oPlayerPickUpRadius.itemInRightHand = noone;
 		text4 = true;
@@ -144,6 +188,13 @@ if (instance_exists(oRecipeTracker)) {
 			[cutscene_wait, 2],
 			[cutscene_instance_destroy, oRecipe],
 			[cutscene_create_textbox, ["Great job boy, that's the exact chunk of charcoal I needed for my fireplace!","Oh, wait, I wanted food. Again!"], "Old Man", voice.oldman, sOldmanPortrait],
+			[cutscene_instance_create, 2751, 1982, "Cooking", oMeat],
+			[cutscene_instance_create, 0, 0, "Game", oRecipeTracker],
+		]
+		currentTrigger.t_skip_info = [
+			[cutscene_instance_destroy, oRecipe],
+			[cutscene_instance_destroy, oMeat],
+			[cutscene_instance_destroy, oRecipeTracker],
 			[cutscene_instance_create, 2751, 1982, "Cooking", oMeat],
 			[cutscene_instance_create, 0, 0, "Game", oRecipeTracker],
 		]
@@ -172,6 +223,18 @@ if (text4) {
 		[cutscene_instance_destroy, oRecipe],
 		[cutscene_change_variable, oTutorial, "text5", true],
 	]
+	currentTrigger.t_skip_info = [
+		[cutscene_instance_destroy, oMeat],
+		[cutscene_instance_destroy, oMeat],
+		[cutscene_instance_destroy, oMeat],
+		[cutscene_instance_destroy, oMeat],
+		[cutscene_instance_destroy, oRecipe],
+		[cutscene_instance_create, 3102, 1982, "Objects", oMeat],
+		[cutscene_instance_create, 2856, 1984, "Objects", oOnion],
+		[cutscene_instance_create, 3010, 1984, "Objects", oSalt],
+		[cutscene_instance_create, 2676, 1979, "Cooking", oNewPrepTable],
+		[cutscene_change_variable, oTutorial, "text5", true],
+	]
 	
 	oPlayerPickUpRadius.itemInLeftHand = noone;
 	oPlayerPickUpRadius.itemInRightHand = noone;
@@ -198,6 +261,9 @@ if (instance_exists(oRecipe) && text5) {
 									   "Good luck!"
 			], "Old Man", voice.oldman, sOldmanPortrait],
 		]
+		currentTrigger.t_skip_info = [
+			[cutscene_wait, .1],
+		]
 		text5 = false;
 		oldManText4 = false;
 		oldManText5 = true;
@@ -218,7 +284,16 @@ if (instance_exists(oRecipe) && text5) {
 										   "Take the ingredients to the table and chop all three of them, then put them in!",
 										   "Kids these days..."
 				], "Old Man", voice.oldman, sOldmanPortrait],
-
+			]
+			currentTrigger.t_skip_info = [
+				[cutscene_instance_destroy, oRecipe],
+				[cutscene_instance_destroy, oIngredient],
+				[cutscene_instance_create, 3102, 1982, "Objects", oMeat],
+				[cutscene_instance_create, 2856, 1984, "Objects", oOnion],
+				[cutscene_instance_create, 3010, 1984, "Objects", oSalt],
+				[cutscene_change_variable, oTutorial, "text5", true],
+				[cutscene_change_variable, oPlayerPickUpRadius, "itemInLeftHand", noone],
+				[cutscene_change_variable, oPlayerPickUpRadius, "itemInRightHand", noone],
 			]
 			
 		text5 = false;

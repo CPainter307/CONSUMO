@@ -991,6 +991,14 @@
             }
         },
         {
+            "Key": "4ad80c5d-eeb7-4f4f-8084-84f9cce3a15e",
+            "Value": {
+                "id": "14795356-c7d5-4c72-a82e-556312fdcc97",
+                "resourcePath": "scripts\\cutscene_set_y\\cutscene_set_y.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "4aff9f72-5ccf-4018-97dd-5746e3fbcf43",
             "Value": {
                 "id": "477133fe-754d-4ceb-9236-145bc35f0f9e",
@@ -1996,6 +2004,14 @@
                 "id": "2fa5d116-4d91-4fb0-a3d3-94819a064eac",
                 "resourcePath": "sprites\/sPotRadius\/sPotRadius.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "8dc81ece-20f8-4456-a51e-be5963f13a1d",
+            "Value": {
+                "id": "29bda932-f393-4934-886f-f1caf8d88222",
+                "resourcePath": "scripts\\cutscene_set_x\\cutscene_set_x.yy",
+                "resourceType": "GMScript"
             }
         },
         {
@@ -3755,7 +3771,9 @@
         "e49304bf-e511-4c82-86bf-c14d3ef8eee8",
         "240bd9be-1ba6-4f0d-9951-d8abf58629d4",
         "9acaec72-96f9-42e7-a0af-671cd1d6767e",
-        "68bf10b9-6036-40ea-b97a-613a65c66883"
+        "68bf10b9-6036-40ea-b97a-613a65c66883",
+        "8dc81ece-20f8-4456-a51e-be5963f13a1d",
+        "4ad80c5d-eeb7-4f4f-8084-84f9cce3a15e"
     ],
     "tutorial": ""
 }
