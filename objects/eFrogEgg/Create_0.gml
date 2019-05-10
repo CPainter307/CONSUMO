@@ -1,8 +1,8 @@
 Class = "Enemy";
 
-//maxHealth = 200;
+maxHealth = 200;
 //debug only
-maxHealth = 51;
+//maxHealth = 51;
 currentHealth = maxHealth;
 
 baseAttack = 10;

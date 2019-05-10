@@ -8,4 +8,7 @@ switch (voice) {
 	case 2:
 		scr_play_frog_egg_voice_sound();
 	break;
+	case 3:
+		scr_play_hacky_voice_sound();
+	break;
 }

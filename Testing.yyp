@@ -695,6 +695,14 @@
             }
         },
         {
+            "Key": "2ea8e8cc-3334-49ae-810d-05554ce2f81c",
+            "Value": {
+                "id": "1a122df7-3b88-4223-a511-b9745f79a11b",
+                "resourcePath": "sounds\\snd_hacky_voice_5\\snd_hacky_voice_5.yy",
+                "resourceType": "GMSound"
+            }
+        },
+        {
             "Key": "2ed1f1eb-c118-4936-b474-e88610694741",
             "Value": {
                 "id": "e62b1347-6569-42dc-b60b-30950296f311",
@@ -1268,6 +1276,14 @@
                 "id": "0c98e16b-3e7a-423f-a29a-4fd428e56ea9",
                 "resourcePath": "sprites\\sLettuceCrate\\sLettuceCrate.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "580ccf27-0190-4471-be0a-9ecbb0bc53ed",
+            "Value": {
+                "id": "27d0784d-3506-4b15-9c94-17a967b0443f",
+                "resourcePath": "scripts\\scr_play_hacky_voice_sound\\scr_play_hacky_voice_sound.yy",
+                "resourceType": "GMScript"
             }
         },
         {
@@ -2151,6 +2167,14 @@
             }
         },
         {
+            "Key": "97728b28-9692-4259-811a-afd7f4c404ee",
+            "Value": {
+                "id": "62a90b85-9102-421d-9b6a-2b98026cb5bd",
+                "resourcePath": "sounds\\snd_hacky_voice_3\\snd_hacky_voice_3.yy",
+                "resourceType": "GMSound"
+            }
+        },
+        {
             "Key": "97729a27-8cd0-445a-9fd9-e031d6cbd042",
             "Value": {
                 "id": "32e7df1f-8b33-4b9d-8043-67404d42a662",
@@ -2371,6 +2395,14 @@
             "Value": {
                 "id": "8cd52462-92f5-4580-bb4f-487fc4a4d6c9",
                 "resourcePath": "sounds\\snd_land_3\\snd_land_3.yy",
+                "resourceType": "GMSound"
+            }
+        },
+        {
+            "Key": "a51fbd3a-0a30-481d-bacd-fc5c00133156",
+            "Value": {
+                "id": "862fe2f7-e58e-474e-b7fd-948ab9bc58dd",
+                "resourcePath": "sounds\\snd_hacky_voice_2\\snd_hacky_voice_2.yy",
                 "resourceType": "GMSound"
             }
         },
@@ -2919,6 +2951,14 @@
             }
         },
         {
+            "Key": "c7062ba0-83ae-48f7-86d7-f85d5a0e25bf",
+            "Value": {
+                "id": "f427365c-d935-4c7a-b94c-1aa4cb8107ad",
+                "resourcePath": "sounds\\snd_hacky_voice_1\\snd_hacky_voice_1.yy",
+                "resourceType": "GMSound"
+            }
+        },
+        {
             "Key": "c71a70a7-88cf-4229-88ac-f69373397f2d",
             "Value": {
                 "id": "7e7fbe9b-2c38-4ba4-a871-586355e42153",
@@ -3108,6 +3148,14 @@
                 "id": "afe44fd7-e19b-4f45-865b-c675568fae0e",
                 "resourcePath": "objects\\oFishCrate\\oFishCrate.yy",
                 "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "d52dc13c-17cf-4f4c-bf55-1664694d08a4",
+            "Value": {
+                "id": "11dab44a-412f-4d66-b055-191d65516630",
+                "resourcePath": "sprites\\sHackyPortrait\\sHackyPortrait.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -3535,6 +3583,14 @@
             }
         },
         {
+            "Key": "f7a2d471-08bf-4ed7-833c-40020c563813",
+            "Value": {
+                "id": "81e23860-7bb1-407c-a882-7268a95b97b8",
+                "resourcePath": "sounds\\snd_hacky_voice_4\\snd_hacky_voice_4.yy",
+                "resourceType": "GMSound"
+            }
+        },
+        {
             "Key": "f88fd37e-31d5-409d-886a-b3fef9b79eac",
             "Value": {
                 "id": "3c6dcc65-ef76-4e1d-93c8-20e85c73ad71",
@@ -3753,6 +3809,7 @@
         "3ea87c76-ba28-49fe-b673-22895010f358",
         "83ee359e-2a0a-45e3-8c88-0a84fa1891bc",
         "07e90023-23f9-49cd-a009-a8e7c28e0153",
+        "580ccf27-0190-4471-be0a-9ecbb0bc53ed",
         "31021679-af37-447d-a2b6-b264779b99cf",
         "c29ad4b3-24cc-4185-98ce-983c71cac0eb",
         "9490bc48-3d40-4c3c-a786-d4d443841f37",

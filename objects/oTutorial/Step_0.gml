@@ -3,6 +3,7 @@ if (instance_exists(oPlayer) && text1) {
 	currentTrigger.t_scene_info = [
 		[cutscene_create_textbox, ["There you are! Were you going to wait all day?", "I know you're new here, but there's no time for relaxin'. Time to learn on the job."], "Old Man", voice.oldman, sOldmanPortrait],
 		[cutscene_wait, .5],
+		[cutscene_create_textbox, ["You hear that, partner? We're on the job! Finally!", "Oh I can just smell the tasty treats now..."], "Hacky", voice.hacky, sHackyPortrait],
 		[cutscene_create_textbox, ["First let's get you nice and limber.", "Use " + moveString + " to move around and press " + jumpString + " to jump."], "Old Man", voice.oldman, sOldmanPortrait],
 		[cutscene_instance_create, 2303, 1663, "Objects", oPlayerTarget],
 		[cutscene_instance_create, 3245, 1809, "Objects", oPlayerTarget],
@@ -46,6 +47,8 @@ if (text2) {
 		[cutscene_instance_create, 2751, 1982, "Objects", oPebble],
 		[cutscene_instance_create, 2856, 1984, "Objects", oPebble],
 		[cutscene_create_textbox, ["Use " + leftHandString + " to hold in your left hand and " + rightHandString + " to hold in your right.","Press again to throw. Hold " + lockString +" to aim with precision."], "Old Man", voice.oldman, sOldmanPortrait],	
+		[cutscene_wait, .5],
+		[cutscene_create_textbox, ["Psst, hey! Keep an eye on me!", "When you have something to throw, I'll move in the direction you'll throw it!", "And if you hold " + lockString + "... well, that's where I REALLY shine."], "Hacky", voice.hacky, sHackyPortrait],
 		//[cutscene_create_textbox, [], "Old Man", voice.oldman, sOldmanPortrait],	
 		[cutscene_instance_create, 2303, 1663, "Objects", oThrowTarget],
 		[cutscene_instance_create, 3245, 1809, "Objects", oThrowTarget],
@@ -98,8 +101,10 @@ if (text3) {
 		[cutscene_instance_create, 2463, 2006, "RadiusAndRunes", oPotRadius],
 		[cutscene_instance_create, 0, 0, "Game", oRecipeTracker],
 		[cutscene_wait, .5],
-		[cutscene_create_textbox, ["Every ingredient has a different property. For instance, this hearty meat can heal wounds.",
-								   "But your client isn't going to eat this raw. If he does he'll lower our health rating."], "Old Man", voice.oldman, sOldmanPortrait],
+		[cutscene_create_textbox, ["Every ingredient has a different property. For instance, this hearty meat can heal wounds."], "Old Man", voice.oldman, sOldmanPortrait],
+		[cutscene_create_textbox, ["Oh yeah it can. Hey partner, if you're ever curious about what an ingredient does, look at your hand windows.",
+								  "The icons there show you what stats the ingredients will change.", "Remember: green boosts, red lowers!"], "Hacky", voice.hacky, sHackyPortrait],		
+		[cutscene_create_textbox, ["But your client isn't going to eat this raw. If he does he'll lower our health rating."], "Old Man", voice.oldman, sOldmanPortrait],
 		[cutscene_wait, .5],
 		[cutscene_create_textbox, ["..."], "Old Man", voice.oldman, sOldmanPortrait],
 		[cutscene_wait, .5],
@@ -110,10 +115,10 @@ if (text3) {
 								   "A true cook can tell!"], "Old Man", voice.oldman, sOldmanPortrait],
 	]
 	currentTrigger.t_skip_info = [
+		[cutscene_instance_destroy, oPotRadius],
 		[cutscene_instance_destroy, oPebble],
 		[cutscene_instance_destroy, oMeat],
 		[cutscene_instance_destroy, oPot],
-		[cutscene_instance_destroy, oPotRadius],
 		[cutscene_instance_destroy, oRecipeTracker],
 		[cutscene_instance_create, 2751, 1982, "Cooking", oMeat],
 		[cutscene_instance_create, 2463, 2016, "Pot", oPot],
@@ -173,6 +178,7 @@ if (instance_exists(oRecipeTracker)) {
 			[cutscene_instance_destroy, oRecipe],
 			[cutscene_instance_destroy, oRecipeTracker],
 			[cutscene_create_textbox, ["Now that's what I'm talking about! Perfectly cooked! I knew I hired you for a reason, boy!"], "Old Man", voice.oldman, sOldmanPortrait],
+			[cutscene_create_textbox, ["That's my partner!"], "Hacky", voice.hacky, sHackyPortrait],
 		]
 		currentTrigger.t_skip_info = [
 			[cutscene_instance_destroy, oRecipe],
@@ -260,6 +266,8 @@ if (instance_exists(oRecipe) && text5) {
 									   "You've got this boy! And if you don't, there won't be anyone to protect you from the monsters anyways, so at least it'll all be over.",
 									   "Good luck!"
 			], "Old Man", voice.oldman, sOldmanPortrait],
+			[cutscene_wait, 1],
+			[cutscene_create_textbox, ["Wow, what a pep talk.", "Well, what are we waiting for! We've got a customer to feed!"], "Hacky", voice.hacky, sHackyPortrait],
 		]
 		currentTrigger.t_skip_info = [
 			[cutscene_wait, .1],

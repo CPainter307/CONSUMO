@@ -13,7 +13,8 @@ name = "";
 enum voice {
 	oldman,
 	lizard,
-	frog_egg
+	frog_egg, 
+	hacky
 }
 portrait = sLizardPortrait;
 //voice_snd = voice.oldman;

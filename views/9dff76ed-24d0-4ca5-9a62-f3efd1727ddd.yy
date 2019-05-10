@@ -18,7 +18,12 @@
         "302494d5-989b-4964-a7d9-89950ff5dc1b",
         "7c25fbcb-47fb-424e-b4d8-c3734d1bcdb2",
         "babef079-767f-4233-8a3b-e5c60840a30a",
-        "126227ce-8156-4ba6-a8b4-8a0949932b0f"
+        "126227ce-8156-4ba6-a8b4-8a0949932b0f",
+        "c7062ba0-83ae-48f7-86d7-f85d5a0e25bf",
+        "a51fbd3a-0a30-481d-bacd-fc5c00133156",
+        "97728b28-9692-4259-811a-afd7f4c404ee",
+        "f7a2d471-08bf-4ed7-833c-40020c563813",
+        "2ea8e8cc-3334-49ae-810d-05554ce2f81c"
     ],
     "filterType": "GMSound",
     "folderName": "Voices",
