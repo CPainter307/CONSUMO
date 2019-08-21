@@ -1,0 +1,7 @@
+Argument 0: Character being animated
+Argument 1: Animation being played
+Argument 2: Speed at which animation is played
+Argument 3: Character x movement
+Argument 4: Speed at which Character moves on x axis
+Argument 5: Character y movement
+Argument 6: Speed at which Character moves on y axis

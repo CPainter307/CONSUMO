@@ -95,6 +95,14 @@
             }
         },
         {
+            "Key": "037f0719-e33e-441f-8021-821b792c03a9",
+            "Value": {
+                "id": "67ed1e60-0141-4553-b6f2-fa25fc44179b",
+                "resourcePath": "notes\\Animation Arguments.yy",
+                "resourceType": "GMNotes"
+            }
+        },
+        {
             "Key": "05c46c17-db28-4a4d-8c77-c23305a61e22",
             "Value": {
                 "id": "7d679c86-859b-456e-bd0f-0cbc7212caea",
@@ -3359,6 +3367,14 @@
             }
         },
         {
+            "Key": "e2e166c6-de10-478e-be55-1f764f31a9c2",
+            "Value": {
+                "id": "e4988b51-cf4d-4d3d-840f-772130825636",
+                "resourcePath": "scripts\\cutscene_animate_character\\cutscene_animate_character.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "e2ec277b-7610-4582-a3ee-9bc9c3751bcf",
             "Value": {
                 "id": "5cd4ed9c-3217-4f3f-93cc-a82e2590f2df",
@@ -3428,6 +3444,14 @@
                 "id": "340ccbb0-ba80-4688-9a1f-37aab95854b9",
                 "resourcePath": "objects\/oApple\/oApple.yy",
                 "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "e8f132d4-d03a-4d81-8b99-88a1b19d8e02",
+            "Value": {
+                "id": "541134d0-79a2-407c-89cf-ca3ab50af8b8",
+                "resourcePath": "rooms\\rAnimationTest\\rAnimationTest.yy",
+                "resourceType": "GMRoom"
             }
         },
         {
@@ -3848,7 +3872,8 @@
         "8dc81ece-20f8-4456-a51e-be5963f13a1d",
         "4ad80c5d-eeb7-4f4f-8084-84f9cce3a15e",
         "babc34bd-d867-4cbe-8848-18edc626aa80",
-        "d938ad4f-bf2b-4ae6-bdcf-fd465880ec70"
+        "d938ad4f-bf2b-4ae6-bdcf-fd465880ec70",
+        "e2e166c6-de10-478e-be55-1f764f31a9c2"
     ],
     "tutorial": ""
 }
