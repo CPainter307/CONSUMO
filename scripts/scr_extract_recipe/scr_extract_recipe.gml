@@ -17,7 +17,7 @@ if (position_meeting(x, y, oPlayerPickUpRadius) and (oPlayerInput.key_left_hand 
 		var total_elmdef = ing1.elmdef + ing2.elmdef + ing3.elmdef;
 	
 		//create oRecipe
-		inst = instance_create_depth(x, y, ing2.objDepth, oRecipe); //this should be set to whatever the object layer's depth is (hopefully a variable that updates)
+		inst = instance_create_depth(x, y, ing2.objDepth, oRecipe); //creates oRecipe based on second item because it'll always be a full ingredient
 		currentlyCooking = false;
 	
 		//check for amount of modifiers

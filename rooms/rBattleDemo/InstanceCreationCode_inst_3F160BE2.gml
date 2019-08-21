@@ -1,9 +1,11 @@
 t_scene_info = [
+	//[cutscene_stop_cooking_timeline],
 	[cutscene_change_variable, oAdventurer, "startFight", false],
 	[cutscene_change_camera_target, Warrior],
 	[cutscene_wait, 1],
 	[cutscene_change_xscale, Warrior],
 	[cutscene_create_textbox, ["So you finally decided to--"], "Rogue", voice.lizard, sLizardPortrait],
+	[cutscene_stop_cooking_timeline],
 	[cutscene_wait, .5],
 	[cutscene_create_textbox, ["..."], "Rogue", voice.lizard, sLizardPortrait],
 	[cutscene_wait, .5],
@@ -64,7 +66,8 @@ t_scene_info = [
 							   ], "Rogue", voice.lizard, sLizardPortrait],						   
 	[cutscene_change_camera_target, oPlayer],
 	[cutscene_change_variable, oAdventurer, "startFight", true],
-	[cutscene_play_sound, snd_main_theme, 2, true]
+	[cutscene_play_sound, snd_main_theme, 2, true],
+	[cutscene_resume_cooking_timeline],
 ]
 
 t_skip_info = [
@@ -73,6 +76,7 @@ t_skip_info = [
 	[cutscene_change_variable, oAdventurer, "startFight", true],
 	[cutscene_stop_sound, snd_epic_theme],
 	[cutscene_play_sound, snd_main_theme, 2, true],
-	[cutscene_change_xscale, Warrior, -1]
+	[cutscene_change_xscale, Warrior, -1],
+	[cutscene_resume_cooking_timeline],
 	//[cutscene_instance_create, 0, 0, "Game", oDemo],
 ];
