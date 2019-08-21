@@ -3,10 +3,10 @@ t_scene_info = [
 	[cutscene_change_variable, oAdventurer, "startFight", false],
 	[cutscene_change_camera_target, Warrior],
 	[cutscene_wait, 1],
-	[cutscene_animate_character, Warrior, sRogueAttacking, 1, 0, 0, 0, 0], //ANIMATION TESTING CODE
-    [cutscene_wait, 1],													   //
-    [cutscene_animate_character, Warrior, sRogueSurprised, 1, 0, 0, 0, 0], //
-    [cutscene_wait, 1],													   //END ANIMATION TEST CODE
+	[cutscene_animate_character, Warrior, sRogueAttacking, 1, Warrior.x+300, 7, 0, 0], //ANIMATION TESTING CODE
+    [cutscene_wait, 1],																   //
+    [cutscene_animate_character, Warrior, sRogueSurprised, 1, 0, 0, Warrior.y-500, 9], //
+    [cutscene_wait, 1],																   //END ANIMATION TEST CODE
 	[cutscene_change_xscale, Warrior],
 	[cutscene_create_textbox, ["So you finally decided to--"], "Rogue", voice.lizard, sLizardPortrait],
 	[cutscene_wait, .5],
