@@ -1,11 +1,10 @@
 t_scene_info = [
-	//[cutscene_stop_cooking_timeline],
+	[cutscene_stop_cooking_timeline],
 	[cutscene_change_variable, oAdventurer, "startFight", false],
 	[cutscene_change_camera_target, Warrior],
 	[cutscene_wait, 1],
 	[cutscene_change_xscale, Warrior],
 	[cutscene_create_textbox, ["So you finally decided to--"], "Rogue", voice.lizard, sLizardPortrait],
-	[cutscene_stop_cooking_timeline],
 	[cutscene_wait, .5],
 	[cutscene_create_textbox, ["..."], "Rogue", voice.lizard, sLizardPortrait],
 	[cutscene_wait, .5],

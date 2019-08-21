@@ -4,6 +4,7 @@ if (instance_exists(eFrogEgg) and trigger_inst == noone) {
 		mech2 = instance_create_layer(4896, 2976, "Objects", oTadpoleMech);
 		trigger_inst = instance_create_layer(0, 0, "Objects", oAutoTrigger);
 		trigger_inst.t_scene_info = [
+			[cutscene_stop_cooking_timeline],
 			[cutscene_change_variable, oAdventurer, "startFight", false],
 			[cutscene_change_variable, oAdventurer, "sprite_index", sRogueIdle],
 			[cutscene_change_camera_target, Warrior],
@@ -54,7 +55,8 @@ if (instance_exists(eFrogEgg) and trigger_inst == noone) {
 									   ], "Rogue", voice.lizard, sLizardPortrait],	
 			[cutscene_change_xscale, Warrior],
 			[cutscene_change_camera_target, oPlayer],
-			[cutscene_change_variable, oAdventurer, "startFight", true]
+			[cutscene_change_variable, oAdventurer, "startFight", true],
+			[cutscene_resume_cooking_timeline],
 		]
 		
 		trigger_inst.t_skip_info = [
@@ -68,7 +70,8 @@ if (instance_exists(eFrogEgg) and trigger_inst == noone) {
 		[cutscene_set_x, eFrogEgg, 3404],
 		[cutscene_play_sound, snd_battle_theme, 10, true],
 		[cutscene_change_camera_target, oPlayer],
-		[cutscene_change_variable, oAdventurer, "startFight", true]
+		[cutscene_change_variable, oAdventurer, "startFight", true],
+		[cutscene_resume_cooking_timeline],
 		]
 	}
 }
@@ -76,6 +79,7 @@ if (instance_exists(eFrogEgg) and trigger_inst == noone) {
 if (!instance_exists(eFrogEgg) and !instance_exists(oTadpoleMech)) {
 	var inst = instance_create_layer(0, 0, "Objects", oAutoTrigger);
 	inst.t_scene_info = [
+		[cutscene_stop_cooking_timeline],
 		[cutscene_fade_sound, snd_battle_theme, 0, 2000],
 		[cutscene_fade_sound, snd_main_theme, 0, 2000],
 		[cutscene_change_camera_target, Warrior],
@@ -104,6 +108,7 @@ if (instance_exists(Warrior)) {
 	if (Warrior.currentHealth <= 0) {
 	var inst = instance_create_layer(0, 0, "Objects", oAutoTrigger);
 	inst.t_scene_info = [
+		[cutscene_stop_cooking_timeline],
 		[cutscene_change_variable, oAdventurer, "startFight", false],
 		[cutscene_fade_sound, snd_battle_theme, 0, 2000],
 		[cutscene_fade_sound, snd_main_theme, 0, 2000],
