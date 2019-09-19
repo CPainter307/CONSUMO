@@ -1,4 +1,6 @@
-#region JUMP & MOVE
+//this script handles player movement, collision, and animation
+
+	#region JUMP & MOVE
 if (global.canMove) {
 	
 //locking
@@ -68,7 +70,7 @@ if (vsp < 10) vsp += grav;
 		state = scr_ledge_grab_state;
 	}
 
-	#endregion
+
 }
 else {
 	if (hsp != 0) {
@@ -78,6 +80,9 @@ else {
 		vsp = grav * 8
 	}
 }
+
+#endregion
+
 	#region COLLISION
 	//horizontal collision
 	if (place_meeting(x+hsp, y, oWall)) {
