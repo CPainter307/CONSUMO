@@ -1,3 +1,4 @@
+//Jay was here
 gamepad_set_axis_deadzone(0, 0.35)
 /*
 hsp = 0;
