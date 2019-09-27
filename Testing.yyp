@@ -767,6 +767,14 @@
             }
         },
         {
+            "Key": "314854b6-48b5-40df-9cf3-7875daa4e567",
+            "Value": {
+                "id": "18e61316-2359-4cd3-bdc7-d1bf54206c2f",
+                "resourcePath": "objects\\oDisplayManager\\oDisplayManager.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "31bcf939-ea79-4238-a07b-f4cf9ede6255",
             "Value": {
                 "id": "5051c436-48d5-4bb7-b80f-3c07888243db",
@@ -2284,6 +2292,14 @@
                 "id": "507539cf-6d5e-4be0-999e-cce1ab607f1d",
                 "resourcePath": "scripts\\cutscene_instance_create\\cutscene_instance_create.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "9c7510ff-c435-4a39-90e4-32672aa5445c",
+            "Value": {
+                "id": "45b4d6bf-8649-4c61-ac2d-666d07f1445a",
+                "resourcePath": "rooms\\rInit\\rInit.yy",
+                "resourceType": "GMRoom"
             }
         },
         {
