@@ -167,6 +167,14 @@
             }
         },
         {
+            "Key": "093f7355-356b-417f-b4d4-c1f4c88e8d2e",
+            "Value": {
+                "id": "4f20bc41-d4c0-44c2-9b06-dcfb97ec96ed",
+                "resourcePath": "objects\\oPlayerInventory\\oPlayerInventory.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "0a127fb3-1840-447f-9cfd-47c67b902e73",
             "Value": {
                 "id": "88aea6dc-9a31-484d-9065-9f730a3e654d",
@@ -1348,14 +1356,6 @@
                 "id": "3c9b8f8e-e679-4e7d-a649-e5131687203d",
                 "resourcePath": "sprites\/sBrownSoup\/sBrownSoup.yy",
                 "resourceType": "GMSprite"
-            }
-        },
-        {
-            "Key": "591e10cb-142c-4d55-9135-b93d91843699",
-            "Value": {
-                "id": "ef195637-9365-4447-91f7-88490baa4523",
-                "resourcePath": "objects\/oInvButton\/oInvButton.yy",
-                "resourceType": "GMObject"
             }
         },
         {
@@ -2727,14 +2727,6 @@
             }
         },
         {
-            "Key": "b6655325-1bdd-4084-96d2-c8a54e21841e",
-            "Value": {
-                "id": "4b12f87f-a4fc-41b8-9e26-91af9f54b476",
-                "resourcePath": "objects\/oInventory\/oInventory.yy",
-                "resourceType": "GMObject"
-            }
-        },
-        {
             "Key": "b67f9c45-7360-4e7e-bd24-57b4cb7c9f71",
             "Value": {
                 "id": "e75eb71d-82b0-4653-9e17-d96512809f48",
@@ -3259,14 +3251,6 @@
             "Value": {
                 "id": "1da2a4fb-7e14-4918-9564-d06270fe899c",
                 "resourcePath": "objects\/oPreparedMushroom\/oPreparedMushroom.yy",
-                "resourceType": "GMObject"
-            }
-        },
-        {
-            "Key": "d68c6f25-234d-4849-a3c8-2f19008ff8f6",
-            "Value": {
-                "id": "313ac150-cb44-47c4-859a-bdf96af0b282",
-                "resourcePath": "objects\/oInvMouseItem\/oInvMouseItem.yy",
                 "resourceType": "GMObject"
             }
         },

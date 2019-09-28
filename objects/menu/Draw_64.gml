@@ -1,4 +1,4 @@
-if(!global.pause) exit;
+ if(!global.pause) exit;
 
 var gwidth = global.view_width, gheight = global.view_height;
 

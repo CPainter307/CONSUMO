@@ -1,11 +1,11 @@
 
 ////display properties
-ideal_width = 0
-ideal_height = 900
+ideal_width = 1920	
+ideal_height = 1080
 
-aspect_ratio=display_get_width()/display_get_height()
+//aspect_ratio=display_get_width()/display_get_height()
 
-ideal_width = round(ideal_height*aspect_ratio)
+//ideal_width = round(ideal_height*aspect_ratio)
 
 //pixel perfect scaling
 if display_get_width() mod ideal_width != 0 {
@@ -25,9 +25,8 @@ if display_get_height() mod ideal_height != 0 {
 //	ideal_height++
 //} 
 
-//window_set_size(ideal_width, ideal_height)
-window_set_size(display_get_width(), display_get_height())
-alarm_set(0, 1)
-
 surface_resize(application_surface, ideal_width, ideal_height)
+display_set_gui_size(ideal_width, ideal_height)
+window_set_size(ideal_width, ideal_height)
+alarm_set(0, 1)
 
