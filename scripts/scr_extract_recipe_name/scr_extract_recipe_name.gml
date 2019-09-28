@@ -41,7 +41,7 @@ for (var i = 0; i < 3; i++) {
 var meatName = "";
 for (var i = 0; i < 3; i++) {
 	if (ds_list_find_value(item_list, i).classification == "meat") {
-		meatName = ds_list_find_value(item_list, i).ingrName;
+		meatName = ds_list_find_value(item_list, i).name;
 		if (numOfNouns != 0) {
 			var str = string_copy(inst.name, string_length(inst.name) - string_length(meatName), string_length(inst.name));
 			str = string_delete(str, string_length(str), 1)
@@ -109,7 +109,7 @@ if string_pos("Stew", inst.name) != 0
 //for cooking single objects
 for (var i = 0; i < 3; i++) {
 	if (!ds_list_find_value(item_list, i).prepared) {
-		inst.name = mealType2 + ds_list_find_value(item_list, i).ingrName;
+		inst.name = mealType2 + ds_list_find_value(item_list, i).name;
 		break;
 	}
 }

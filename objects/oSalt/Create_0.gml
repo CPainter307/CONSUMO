@@ -1,6 +1,6 @@
 event_inherited();
 prepared = false;
-ingrName = "Salt ";
+name = "Salt ";
 type = "modifier";
 ing_id = 5;
 special = false;

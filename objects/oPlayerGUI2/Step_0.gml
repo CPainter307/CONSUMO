@@ -36,7 +36,7 @@ else {
 		if (leftH.object_index == oRecipe) {
 			draw_text_outlined(300, 645, OFFWHITE_COL, BROWN_COL, leftH.mealName)	
 		} else if (object_get_parent(leftH.object_index) == oIngredient) {
-			draw_text_outlined(300, 645, OFFWHITE_COL, BROWN_COL, leftH.ingrName)	
+			draw_text_outlined(300, 645, OFFWHITE_COL, BROWN_COL, leftH.name)	
 		}
 		
 		//draw icons
@@ -58,7 +58,7 @@ else {
 		if (rightH.object_index == oRecipe) {
 			draw_text_outlined(1600, 645, OFFWHITE_COL, BROWN_COL, rightH.mealName)	
 		} else if (object_get_parent(rightH.object_index) == oIngredient) {
-			draw_text_outlined(1600, 645, OFFWHITE_COL, BROWN_COL, rightH.ingrName)	
+			draw_text_outlined(1600, 645, OFFWHITE_COL, BROWN_COL, rightH.name)	
 		}
 		
 		//draw icons

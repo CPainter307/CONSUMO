@@ -1,5 +1,10 @@
 /// @description Here's what your average pickupabble item will do every frame.
 
+//removes highlight if no longer in range of player
+if oPlayer.pickupRadius <= 0 {
+	highlighted = false	
+}
+
 //if we're holding in the left hand
 if (followingL == true) {
 	speed = 0;

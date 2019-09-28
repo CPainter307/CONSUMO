@@ -1,6 +1,6 @@
 event_inherited();
 prepared = false;
-ingrName = "Meat ";
+name = "Meat ";
 type = "booster";
 ing_id = 1;
 hp = 20;

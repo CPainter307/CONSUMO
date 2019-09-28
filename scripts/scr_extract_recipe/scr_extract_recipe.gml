@@ -38,7 +38,7 @@ if (position_meeting(x, y, oPlayerPickUpRadius) and (oPlayerInput.key_left_hand 
 		}
 		else if (modifier_amount == 2) {
 			//if two same modifiers, multiply by modifier2
-			if (listOfMods[0].ingrName == listOfMods[1].ingrName) {
+			if (listOfMods[0].name == listOfMods[1].name) {
 				total_hp = total_hp * listOfMods[0].modifier2[0];
 				total_attack = total_attack * listOfMods[0].modifier2[1];
 				total_defense = total_defense * listOfMods[0].modifier2[2];
@@ -170,7 +170,7 @@ if (oPlayerInput.key_right_hand and oPlayerPickUpRadius.itemInRightHand == noone
 		}
 		else if (modifier_amount == 2) {
 			//if two same modifiers, multiply by modifier2
-			if (listOfMods[0].ingrName == listOfMods[1].ingrName) {
+			if (listOfMods[0].name == listOfMods[1].name) {
 				total_hp = total_hp * listOfMods[0].modifier2[0];
 				total_attack = total_attack * listOfMods[0].modifier2[1];
 				total_defense = total_defense * listOfMods[0].modifier2[2];

@@ -1,5 +1,5 @@
 event_inherited();
-name = "";
+//name = "";
 mealName = ""; //soup, kabob, etc...
 hp = 0;
 attack = 0;

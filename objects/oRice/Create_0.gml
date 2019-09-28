@@ -1,7 +1,7 @@
 /// @description define variables for ingredients
 event_inherited();
 prepared = false;
-ingrName = "Rice";
+name = "Rice";
 type = "booster";
 ing_id = 0;
 runeSprite = sRiceRune;

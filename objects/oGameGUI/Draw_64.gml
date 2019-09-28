@@ -17,50 +17,50 @@ else {
 }
 
 //draw objects in hands (currently the "are we holding" check
-if (oPlayerPickUpRadius.itemInLeftHand == noone) {
-	draw_sprite(sEmpty, 0, 300, 850);
-}
-else {
-	var leftH = oPlayerPickUpRadius.itemInLeftHand
-	if (instance_exists(leftH)) {
-		draw_sprite(leftH.sprite_index, 0, 300, 850);
+//if (oPlayerPickUpRadius.itemInLeftHand == noone) {
+//	draw_sprite(sEmpty, 0, 300, 850);
+//}
+//else {
+//	var leftH = oPlayerPickUpRadius.itemInLeftHand
+//	if (instance_exists(leftH)) {
+//		draw_sprite(leftH.sprite_index, 0, 300, 850);
 		
-		//draw text
-		draw_set_font(fGUITextThick)
-		draw_set_halign(fa_center);
-		draw_set_valign(fa_top);
-		if (leftH.object_index == oRecipe) {
-			draw_text_outlined(300, 645, OFFWHITE_COL, BROWN_COL, leftH.mealName)	
-		} else if (object_get_parent(leftH.object_index) == oIngredient) {
-			draw_text_outlined(300, 645, OFFWHITE_COL, BROWN_COL, leftH.ingrName)	
-		}
+//		//draw text
+//		draw_set_font(fGUITextThick)
+//		draw_set_halign(fa_center);
+//		draw_set_valign(fa_top);
+//		if (leftH.object_index == oRecipe) {
+//			draw_text_outlined(300, 645, OFFWHITE_COL, BROWN_COL, leftH.mealName)	
+//		} else if (object_get_parent(leftH.object_index) == oIngredient) {
+//			draw_text_outlined(300, 645, OFFWHITE_COL, BROWN_COL, leftH.name)	
+//		}
 		
-		//draw icons
-		scr_draw_icons(300, 695, leftH, draw_icons_l, which_icons_l);
-	}
-}
-if (oPlayerPickUpRadius.itemInRightHand == noone) {
-	draw_sprite(sEmpty, 0, 1600, 850);
-}
-else {
-	var rightH = oPlayerPickUpRadius.itemInRightHand
-	if (instance_exists(rightH)) {
-		draw_sprite(rightH.sprite_index, 0, 1600, 850);
+//		//draw icons
+//		scr_draw_icons(300, 695, leftH, draw_icons_l, which_icons_l);
+//	}
+//}
+//if (oPlayerPickUpRadius.itemInRightHand == noone) {
+//	draw_sprite(sEmpty, 0, 1600, 850);
+//}
+//else {
+//	var rightH = oPlayerPickUpRadius.itemInRightHand
+//	if (instance_exists(rightH)) {
+//		draw_sprite(rightH.sprite_index, 0, 1600, 850);
 		
-		//draw text
-		draw_set_font(fGUITextThick);
-		draw_set_halign(fa_center);
-		draw_set_valign(fa_top);
-		if (rightH.object_index == oRecipe) {
-			draw_text_outlined(1600, 645, OFFWHITE_COL, BROWN_COL, rightH.mealName)	
-		} else if (object_get_parent(rightH.object_index) == oIngredient) {
-			draw_text_outlined(1600, 645, OFFWHITE_COL, BROWN_COL, rightH.ingrName)	
-		}
+//		//draw text
+//		draw_set_font(fGUITextThick);
+//		draw_set_halign(fa_center);
+//		draw_set_valign(fa_top);
+//		if (rightH.object_index == oRecipe) {
+//			draw_text_outlined(1600, 645, OFFWHITE_COL, BROWN_COL, rightH.mealName)	
+//		} else if (object_get_parent(rightH.object_index) == oIngredient) {
+//			draw_text_outlined(1600, 645, OFFWHITE_COL, BROWN_COL, rightH.name)	
+//		}
 		
-		//draw icons
-		scr_draw_icons(1600, 695, rightH, draw_icons_r, which_icons_r);
-	}
-}
+//		//draw icons
+//		scr_draw_icons(1600, 695, rightH, draw_icons_r, which_icons_r);
+//	}
+//}
 
 //battle window
 if (instance_exists(oParty)) {

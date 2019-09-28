@@ -1,6 +1,6 @@
 event_inherited();
 prepared = false;
-ingrName = "Paprika ";
+name = "Paprika ";
 type = "modifier";
 ing_id = 5;
 special = false;

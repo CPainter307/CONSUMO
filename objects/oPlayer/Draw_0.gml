@@ -1,3 +1,4 @@
-draw_self();
-//draw_point_color(x+(50*hsp_dir), yprevious-10, c_red);
-//draw_point_color(x+(50*hsp_dir), y, c_white);
+draw_self()
+draw_set_alpha(.5)
+draw_circle_color(x, y, pickupRadiusSize, c_aqua, c_aqua, false)
+draw_set_alpha(1)
