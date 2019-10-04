@@ -1,127 +1,145 @@
-//this script handles player movement, collision, and animation
-
-	#region JUMP & MOVE
-if (global.canMove) {
-	
-//locking
-if (oPlayerInput.key_locked) {
-	isLocked = true;
+if gamepad_is_connected(0) {
+	xdir = gamepad_axis_value(0, gp_axislh)
+	gamepad_set_axis_deadzone(0, .3)
+	space_pressed = gamepad_button_check_pressed(0, gp_face1)
+	space_released = gamepad_button_check_released(0, gp_face1)
 } else {
-	isLocked = false;	
+	input_right = keyboard_check(ord("D"))
+	input_left =  keyboard_check(ord("A"))
+	xdir = keyboard_check(ord("D")) - keyboard_check(ord("A"))
+	space_pressed = keyboard_check_pressed(vk_space)
+	space_held = keyboard_check(vk_space)              
+	space_released = keyboard_check_released(vk_space)
+	shift_held = keyboard_check(vk_shift)
 }
 
-if (isLocked) {
-	var move = 0;
-} else {
-	var move = oPlayerInput.key_right - oPlayerInput.key_left;	
+if keyboard_check_pressed(ord("R")) {
+	room_restart()	
 }
 
-//react to input
-hsp = move * movespeed;
-if (vsp < 10) vsp += grav;
 
-	
-	canjump--; groundjumpbuffer--;
-	if ((canjump > 0 or groundjumpbuffer > 0) and (oPlayerInput.key_jump)) {
-		part_emitter_burst(global.ps, em, global.pt_dust, 50); // dust particles
-		scr_play_jump_sound();
-		vsp = oPlayerInput.key_jump * -jumpspeed;
-		groundjumpbuffer = 0;
-		canjump = 0;
-		landed = false;
+//add gravity
+if motiony < 0 {
+	motiony += GRAVITY
+} else {
+	motiony += FALL_GRAVITY	
+}
+
+//jumping with buffer
+if on_floor {
+    coyote_buffer = 0
+    if !has_jumped and jump_buffer < JUMP_BUFFER_LENGTH {
+        jump_time = JUMP_TIME
+        jump_buffer = JUMP_BUFFER_LENGTH
+        has_jumped = true
+        motiony = -JUMP_SPEED*3
+    }
+}
+jump_buffer++
+
+if space_pressed {
+    jump_buffer = 0
+    if !has_jumped and coyote_buffer < JUMP_BUFFER_LENGTH {
+        jump_time = JUMP_TIME
+        coyote_buffer = JUMP_BUFFER_LENGTH
+        has_jumped = true
+        motiony = -JUMP_SPEED*3
+    }
+}
+coyote_buffer++
+
+if space_held and jump_time > 0 and has_jumped {
+    motiony = -JUMP_SPEED
+    jump_time--
+}
+
+if space_released {
+    has_jumped = false
+    jump_time = 0
+    if motiony < 0 {
+        motiony = lerp(motiony, 0, JUMP_FALLOFF_SPEED)
+    }
+}
+
+
+//decelerate
+//
+if ((!input_right and motionx > 0 ) or (!input_left and motionx < 0)) { //if try to change direction mid run, the decelleration still remains, switching directions faster.
+	motionx = lerp(motionx, 0, DECCELRATION)
+	if motionx < DECCEL_CUTOFF and motionx > -DECCEL_CUTOFF {
+		motionx = 0	
 	}
+}
 
-	//analog jump height
-	if (vsp < 0 and !oPlayerInput.key_jump_held) {
-		if (vsp > -7) { // min jump height
-			vsp = max(vsp, 0)
+//moving
+if on_floor {
+	if input_right { // moving right
+		motionx += ACCELERATION
+		if motionx >= MAX_SPEED {
+			motionx -= ACCELERATION
+			motionx = lerp(motionx, MAX_SPEED, DECCELRATION)
+			at_max_speed = true
 		}
 	}
-
-
-	
-	//increase gravity if falling
-	if (vsp > 0) { 
-		vsp += grav*1.5
-	 }
-
+	if input_left { // moving left
+		motionx -= ACCELERATION
+		if motionx <= -MAX_SPEED {
+			motionx -= -ACCELERATION
+			motionx = lerp(motionx, -MAX_SPEED, DECCELRATION)
+			at_max_speed = true
+		}
+	}
+} else {
+	if input_right { // moving right
+		motionx += AIR_ACCELERATION
+		if motionx >= MAX_SPEED {
+			motionx -= AIR_ACCELERATION
+			motionx = lerp(motionx, MAX_SPEED, DECCELRATION)
+		}
+	}
+	if input_left { // moving left
+		motionx -= AIR_ACCELERATION
+		if motionx <= -MAX_SPEED {
+			motionx -= -AIR_ACCELERATION
+			motionx = lerp(motionx, -MAX_SPEED, DECCELRATION)
+		}
+	}	
 }
+
+//sprinting
+if (shift_held) {
+	MAX_SPEED = MAX_SPRINT_SPEED
+	ACCELERATION = SPRINT_ACCELERATION
+	AIR_ACCELERATION = SPRINT_AIR_ACCELERATION
+}
+
 else {
-	if (hsp != 0) {
-		hsp = 0;
-	}
-	if (vsp < 0) {
-		vsp = grav * 8
-	}
+	MAX_SPEED = MAX_JOG_SPEED
+	ACCELERATION = JOG_ACCELERATION
+	AIR_ACCELERATION = JOG_AIR_ACCELERATION
 }
 
-#endregion
 
-	#region COLLISION
-	//horizontal collision
-	if (place_meeting(x+hsp, y, oWall)) {
-		while (!place_meeting(x+sign(hsp), y, oWall)) {
-			x += sign(hsp);
-		}
-		hsp = 0;
+//collision
+if (place_meeting(x+motionx, y, oWall)) {
+	while (!place_meeting(x+sign(motionx), y, oWall)) {
+		x += sign(motionx);
 	}
-	x += hsp;
+	motionx = 0;
+}
+x += motionx
 
-	//vertical collision
-	if (!landed and place_meeting(x, y+vsp+5, oWall)) {
-		part_emitter_burst(global.ps, em, global.pt_dust, 50); // dust particles
-		scr_play_land_sound();
-		landed = true;
-	}
-	if (place_meeting(x, y+vsp, oWall)) {
-		while (!place_meeting(x, y+sign(vsp), oWall)) {
-			y += sign(vsp);
-		}
-		vsp = 0;
-	}
-	y += vsp;
-
-	//buffers
-	if (place_meeting(x, y+vsp+10, oWall)) {
-		canjump = 5 // coyote jump buffer time (5 frames)
-		groundjumpbuffer = 10;	
-	}
-	#endregion
-
-	#region ANIMATION
-	//animation
-	if(!place_meeting(x, y+1, oWall)) {
-		if(sign(vsp) < 0) {
-			sprite_index = sPlayerJump;
-		} else if(sign(vsp) > 0) {
-			sprite_index = sPlayerFall;
-		} 
-	} else {
-		if(hsp == 0) {
-			sprite_index = sPlayerIdle;
-		} else {
-			sprite_index = sPlayerRun;
-		}
-	}
-
-	if (oPlayerInput.key_left) && (!isLocked) {
-		facingRight = false;
-		//image_xscale = -.5
-	} 
-	else if (oPlayerInput.key_right) && (!isLocked) {
-		facingRight = true;
-		//image_xscale = .5
-	}
-
-	if (facingRight)
-	{
-		image_xscale = 0.5;	
-	}
-	else
-	{
-		image_xscale = -0.5;	
-	}
-	#endregion
-
-
-
+if (place_meeting(x, y+motiony, oWall)) {
+    jump_time = 0
+    if sign(motiony) > 0 {
+        on_floor = true
+    }
+    has_jumped = false
+    while (!place_meeting(x, y+sign(motiony), oWall)) {
+        y += sign(motiony);
+    }
+    motiony = 0;
+} else {
+    on_floor = false
+}
+y += motiony
