@@ -13,7 +13,7 @@ hsp = 0;
 vsp = 0;
 jumpspeed = 10;
 
-
+held_item = pointer_null
 pickupRadius = noone
 pickupRadiusSize = 80
 

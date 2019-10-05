@@ -61,7 +61,18 @@ repeat (inv_slots) {
 //if we have something picked up with the mouse
 if (pickup_slot != -1) {
 	iitem = inv_grid[# 0, pickup_slot]
-	draw_sprite_ext(iitem[1], 0, mousex, mousey, item_scale, item_scale, 0, c_white, 1)
+	if (oPlayer.facingRight) {
+		if (instance_exists(oFrontArm)) depth = oFrontArm.depth + 1;
+		held_x = oFrontArm.x + 50;
+		held_y = oFrontArm.y + 25;
+
+	}
+	else {
+		if (instance_exists(oFrontArm)) depth = oFrontArm.depth + 1;
+		held_x = oFrontArm.x - 10;
+		held_y = oFrontArm.y + 35;
+	}
+	draw_sprite_ext(iitem[1], 0, held_x, held_y, item_scale, item_scale, 0, c_white, 1)
 	var inum = inv_grid[# 1, pickup_slot]
 	var c = c_white;
 	draw_text_color(mousex, mousey, string(inum), c,c,c,c, 1)
