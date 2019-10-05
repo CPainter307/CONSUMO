@@ -22,5 +22,4 @@ selected_slot = -1
 
 item_scale = .5
 
-held_x = 0;
-held_y = 0;
+mouse_in_inventory = true
