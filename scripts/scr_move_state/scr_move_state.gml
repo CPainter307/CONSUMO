@@ -144,6 +144,7 @@ if (place_meeting(x, y+motiony, oWall)) {
 }
 y += motiony
 
+//animation
 if(!place_meeting(x, y+1, oWall)) {
 		if(sign(vsp) < 0) {
 			sprite_index = sPlayerJump;

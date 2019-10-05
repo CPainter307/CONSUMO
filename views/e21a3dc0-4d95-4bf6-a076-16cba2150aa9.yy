@@ -5,7 +5,8 @@
     "name": "e21a3dc0-4d95-4bf6-a076-16cba2150aa9",
     "children": [
         "edb1db8e-2b99-4512-84d9-8c3e537f7ae7",
-        "a81c36d9-26fc-4c2a-a549-48f50ad7eb36"
+        "a81c36d9-26fc-4c2a-a549-48f50ad7eb36",
+        "b570a4a0-703a-47e9-91eb-f63ba162f48e"
     ],
     "filterType": "GMObject",
     "folderName": "Holdables",

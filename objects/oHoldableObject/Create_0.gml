@@ -2,7 +2,6 @@
 name = ""
 followingL = false;
 followingR = false;
-thrown = false;
 highlighted = false;
 playedPickupSound = false;
 objDepth = depth;
@@ -12,5 +11,3 @@ image_xscale = .5
 image_yscale = .5
 
 pickUpSound = snd_pickup_generic;
-
-thisSprite = sprite_index;
