@@ -143,3 +143,43 @@ if (place_meeting(x, y+motiony, oWall)) {
     on_floor = false
 }
 y += motiony
+
+if(!place_meeting(x, y+1, oWall)) {
+		if(sign(vsp) < 0) {
+			sprite_index = sPlayerJump;
+		} else if(sign(vsp) > 0) {
+			sprite_index = sPlayerFall;
+		} 
+	} else {
+		if(motionx == 0) {
+			sprite_index = sPlayerIdle;
+		} else {
+			sprite_index = sPlayerRun;
+			if (shift_held)
+			{
+				image_speed = 1.2;	
+			}
+			else
+			{
+				image_speed = 1;	
+			}
+		}
+	}
+
+	if (oPlayerInput.key_left) && (!isLocked) {
+		facingRight = false;
+		//image_xscale = -.5
+	} 
+	else if (oPlayerInput.key_right) && (!isLocked) {
+		facingRight = true;
+		//image_xscale = .5
+	}
+
+	if (facingRight)
+	{
+		image_xscale = -0.75;	
+	}
+	else
+	{
+		image_xscale = 0.75;	
+	}
