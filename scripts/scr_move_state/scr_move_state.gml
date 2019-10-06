@@ -49,6 +49,7 @@ if space_pressed {
 coyote_buffer++
 
 if space_held and jump_time > 0 and has_jumped {
+	sprite_index = sPlayerJump
     motiony = -JUMP_SPEED
     jump_time--
 }
@@ -174,6 +175,10 @@ if(!place_meeting(x, y+1, oWall)) {
 		facingRight = true;
 		//image_xscale = .5
 	}
+	
+	if (motiony > 0) {
+		sprite_index = sPlayerFall;
+	}
 
 	if (facingRight)
 	{
@@ -183,3 +188,4 @@ if(!place_meeting(x, y+1, oWall)) {
 	{
 		image_xscale = 1;	
 	}
+	
