@@ -145,47 +145,32 @@ if (place_meeting(x, y+motiony, oWall)) {
 }
 y += motiony
 
-if(!place_meeting(x, y+1, oWall)) {
-		if(sign(vsp) < 0) {
-			sprite_index = sPlayerJump;
-		} else if(sign(vsp) > 0) {
-			sprite_index = sPlayerFall;
-		} 
-	} else {
-		if(motionx == 0) {
-			sprite_index = sPlayerIdle;
-		} else {
-			sprite_index = sPlayerRun;
-			if (shift_held)
-			{
-				image_speed = 1.2;	
-			}
-			else
-			{
-				image_speed = 1;	
-			}
-		}
-	}
+//animation (new)
 
-	if (oPlayerInput.key_left) && (!isLocked) {
-		facingRight = false;
-		//image_xscale = -.5
-	} 
-	else if (oPlayerInput.key_right) && (!isLocked) {
-		facingRight = true;
-		//image_xscale = .5
-	}
+//if (on_floor) {
+//	if (input_right or input_left) {
+//		sprite_index = sPlayerRun;
+//	} else {
+//		sprite_index = sPlayerIdle;
+//	}
 	
-	if (motiony > 0) {
-		sprite_index = sPlayerFall;
-	}
+//	if (shift_held) {
+//		image_speed = 1.2
+//	} else {
+//		image_speed = 1;
+//	}
+//}
 
-	if (facingRight)
-	{
-		image_xscale = -1;	
-	}
-	else
-	{
-		image_xscale = 1;	
-	}
-	
+//if (input_right) facingRight = true;
+//if (input_left) facingRight = false;
+
+//if (motiony > 0) {
+//	sprite_index = sPlayerFall;
+//}
+
+
+//if (facingRight) {
+//	image_xscale = -1;
+//} else {
+//	image_xscale = 1;
+//}
