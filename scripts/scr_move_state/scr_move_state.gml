@@ -34,7 +34,7 @@ if oPlayerInput.key_jump {
 coyote_buffer++
 
 if oPlayerInput.key_jump_held and jump_time > 0 and has_jumped {
-	sprite_index = sPlayerJump
+	//sprite_index = sPlayerJump
     motiony = -JUMP_SPEED
     jump_time--
 }
