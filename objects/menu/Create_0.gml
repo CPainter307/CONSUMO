@@ -19,20 +19,6 @@ global.hard_right		= vk_right;
 global.hard_enter		= vk_enter;
 global.hard_pause		= vk_escape;
 
-//Global Input Variables
-/*global.key_up			= ord("W");
-global.key_down			= ord("S");
-global.key_left			= ord("A");
-global.key_right		= ord("D");
-global.key_jump			= vk_space;
-global.key_L_hand		= mb_left;
-global.key_R_hand		= mb_right;
-global.key_lock			= vk_shift;
-global.key_interact		= ord("E");
-global.key_inventory	= ord("Q");
-global.key_room_reset		= ord("K");
-//global.key_select		= vk_enter;
-global.key_pause		= vk_escape;*/
 
 
 enum inputs {
@@ -104,13 +90,11 @@ ds_menu_controls = create_menu_page(
 	["Left",			menu_element_type.input,			"key_left",				ord("A")],
 	["Right",			menu_element_type.input,			"key_right",			ord("D")],
 	["Jump",			menu_element_type.input,			"key_jump",				vk_space],
-	["Left Hand",		menu_element_type.input,			"key_L_hand",			mb_left],
-	["Right Hand",		menu_element_type.input,			"key_R_hand",			mb_right],
-	["Lock",			menu_element_type.input,			"key_lock",				vk_shift],
+	["Sprint",			menu_element_type.input,			"key_sprint",			vk_shift],
+	["Throw",			menu_element_type.input,			"key_throw",			mb_left],
 	["Interact",		menu_element_type.input,			"key_interact",			ord("E")],
 	["Inventory",		menu_element_type.input,			"key_inventory",		ord("Q")],
 	["Room Reset",		menu_element_type.input,			"key_room_reset",		ord("K")],
-	//["Select",			menu_element_type.input,			"key_select",			vk_enter],
 	["Pause",			menu_element_type.input,			"key_pause",			vk_escape],
 	["Reset Controls",	menu_element_type.script_runner,	reset_controls],
 	["Back",			menu_element_type.page_transfer,	menu_page.settings]
