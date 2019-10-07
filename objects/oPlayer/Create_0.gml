@@ -16,7 +16,8 @@ jumpspeed = 10;
 held_item = pointer_null;
 held_x = 0;
 held_y = 0;
-pickupRadius = noone
+pickupRadius = 0
+itemRadiusList = noone
 pickupRadiusSize = 80
 
 

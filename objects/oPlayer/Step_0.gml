@@ -2,7 +2,8 @@ part_emitter_region(global.ps, em, x-42.5, x+42.5, y+60, y+70, ps_shape_ellipse,
 script_execute(state);
 
 itemRadiusList = ds_list_create()
-pickupRadius = collision_circle_list(x, y, pickupRadiusSize , oHoldableObject2, false, true, itemRadiusList, true)
+pickupRadius = collision_circle_list(x, y, pickupRadiusSize , oHoldableObject, false, true, itemRadiusList, true)
+
 //highlighting items
 if pickupRadius > 0 {
 	for (var i = 0; i < itemRadiusList[| i]; i++) {
@@ -10,7 +11,6 @@ if pickupRadius > 0 {
 	}
 	itemRadiusList[| 0].highlighted = true
 }
-
 
 
 // if we press pickup and we are colliding with some holdable objects, then add the nearest one to our inventory
@@ -56,5 +56,4 @@ if oPlayerInput.key_interact {
 		}
 	}
 } 
-
 ds_list_destroy(itemRadiusList)
