@@ -47,20 +47,29 @@ if (place_meeting(x+hspeed, y, oWall)) {
 	while (!place_meeting(x+sign(hspeed), y, oWall)) {
 		x += sign(hspeed);
 	}
+	if (sign(hspeed) == 1) {
+		
+	}
 	hspeed = 0;
 }
 
 //Vertical
 if (place_meeting(x, y+vspeed, oWall)) {
-    if (sign(vspeed) > 0) {
-        on_floor = true
-    }
+    //if (sign(vspeed) > 0) {
+    //    on_floor = true;
+    //}
+	//else {
+	//	on_floor = false;	
+	//}
+	
     while (!place_meeting(x, y+sign(vspeed), oWall)) {
         y += sign(vspeed);
     }
     vspeed = 0;
-} else {
-    on_floor = false
+	on_floor = true;
+}
+else {
+    on_floor = false;
 }
 
 //Turns off Gravity if on floor
