@@ -23,3 +23,10 @@ image_xscale = .5
 image_yscale = .5
 
 pickUpSound = snd_pickup_generic;
+
+collisionLeft = false;
+collisionRight = false;
+collisionUp = false;
+collisionDown = false;
+
+vertWall = pointer_null;
