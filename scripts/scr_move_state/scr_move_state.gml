@@ -111,12 +111,6 @@ if (place_meeting(x+motionx, y, oWall)) {
 	while (!place_meeting(x+sign(motionx), y, oWall)) {
 		x += sign(motionx);
 	}
-	/*if (sprite_get_bbox_left(oPlayer) > sprite_get_bbox_right(oWall)) {
-		motionx = -1;
-	}
-	if (sprite_get_bbox_left(oPlayer) < sprite_get_bbox_right(oWall)) {
-		motionx = 1;	
-	}*/
 	motionx = 0;
 }
 x += motionx
@@ -151,9 +145,6 @@ if (on_floor) {
 		image_speed = 1;
 	}
 }
-
-//if (oPlayerInput.key_right) facingRight = true;
-//if (oPlayerInput.key_left) facingRight = false;
 
 if (motiony > 0) {
 	sprite_index = sPlayerFall;
