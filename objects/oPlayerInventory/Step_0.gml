@@ -36,8 +36,12 @@ if !mouse_in_inventory {
 #endregion
 
 var inv_grid = global.inventory
-var ss_item = inv_grid[# 0, selected_slot]
-var ps_item = inv_grid[# 0, pickup_slot]
+var ss_item = 0
+var ps_item = 0
+if selected_slot != -1
+	ss_item = inv_grid[# 0, selected_slot]
+if pickup_slot != -1
+	ps_item = inv_grid[# 0, pickup_slot]
 
 if pickup_slot != -1 {
 	//if we click or close our inventory
