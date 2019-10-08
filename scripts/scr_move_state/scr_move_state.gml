@@ -111,6 +111,12 @@ if (place_meeting(x+motionx, y, oWall)) {
 	while (!place_meeting(x+sign(motionx), y, oWall)) {
 		x += sign(motionx);
 	}
+	/*if (sprite_get_bbox_left(oPlayer) > sprite_get_bbox_right(oWall)) {
+		motionx = -1;
+	}
+	if (sprite_get_bbox_left(oPlayer) < sprite_get_bbox_right(oWall)) {
+		motionx = 1;	
+	}*/
 	motionx = 0;
 }
 x += motionx
@@ -132,30 +138,30 @@ y += motiony
 
 //animation (new)
 
-//if (on_floor) {
-//	if (oPlayerInput.key_right or oPlayerInput.key_left) {
-//		sprite_index = sPlayerRun;
-//	} else {
-//		sprite_index = sPlayerIdle;
-//	}
+if (on_floor) {
+	if (oPlayerInput.key_right or oPlayerInput.key_left) {
+		sprite_index = sPlayerRun;
+	} else {
+		sprite_index = sPlayerIdle;
+	}
 	
-//	if (oPlayerInput.key_sprint_held) {
-//		image_speed = 1.2
-//	} else {
-//		image_speed = 1;
-//	}
-//}
+	if (oPlayerInput.key_sprint_held) {
+		image_speed = 1.2
+	} else {
+		image_speed = 1;
+	}
+}
 
 //if (oPlayerInput.key_right) facingRight = true;
 //if (oPlayerInput.key_left) facingRight = false;
 
-//if (motiony > 0) {
-//	sprite_index = sPlayerFall;
-//}
+if (motiony > 0) {
+	sprite_index = sPlayerFall;
+}
 
 
-//if (facingRight) {
-//	image_xscale = -1;
-//} else {
-//	image_xscale = 1;
-//}
+if (motionx > 0) {
+	image_xscale = -1;
+} else if (motionx < 0) {
+	image_xscale = 1;
+}
