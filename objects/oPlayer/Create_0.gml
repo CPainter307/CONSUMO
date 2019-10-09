@@ -57,4 +57,5 @@ jump_buffer = 0
 on_floor = true
 jump_time = 0
 
-p_dt = 0
+s_index = sPlayerIdle
+player_dir = 1

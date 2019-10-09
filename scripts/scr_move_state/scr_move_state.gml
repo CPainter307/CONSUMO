@@ -124,9 +124,11 @@ y += motiony
 
 if (on_floor) {
 	if (motionx != 0) {
-		sprite_index = sPlayerRun;
+		s_index = sPlayerRun;
+		//sprite_index = sPlayerRun
 	} else {
-		sprite_index = sPlayerIdle;
+		s_index = sPlayerIdle;
+		//sprite_index = sPlayerIdle
 	}
 	
 	if (oPlayerInput.key_sprint_held) {
@@ -136,14 +138,18 @@ if (on_floor) {
 	}
 } else {
 	if (motiony > 0) {
-		sprite_index = sPlayerFall;
+		s_index = sPlayerFall;
+		//sprite_index = sPlayerFall
 	} else if motiony <= 0 {
-		sprite_index = sPlayerJump;
+		s_index = sPlayerJump;
+		//sprite_index = sPlayerJump
 	}
 }
 
 if (motionx > 0) {
-	image_xscale = -1;
+	player_dir = -1;
+	//image_xscale = -1
 } else if (motionx < 0) {
-	image_xscale = 1;
+	player_dir = 1;
+	//image_xscale = 1
 }
