@@ -147,6 +147,3 @@ if (motionx > 0) {
 } else if (motionx < 0) {
 	image_xscale = 1;
 }
-
-
-p_dt = delta_time

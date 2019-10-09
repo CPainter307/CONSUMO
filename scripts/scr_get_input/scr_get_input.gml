@@ -24,7 +24,7 @@ if (global.input_type == inputs.analog_stick) {
 	key_right = (gamepad_axis_value(0, global.key_right) > 0);
 	key_jump = gamepad_button_check_pressed(0, global.key_jump);
 	key_jump_held = gamepad_button_check(0, global.key_jump);
-	key_jump_released = keyboard_check_released(global.key_jump);
+	key_jump_released = gamepad_button_check_released(0, global.key_jump);
 	key_locked = gamepad_button_check(0, global.key_lock);
 	key_interact = gamepad_button_check_pressed(0, global.key_interact);
 	haxis = gamepad_axis_value(0, global.key_right);
