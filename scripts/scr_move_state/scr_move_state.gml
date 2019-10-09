@@ -14,6 +14,8 @@ if motiony < 0 {
 if on_floor {
     coyote_buffer = 0
     if !has_jumped and jump_buffer < JUMP_BUFFER_LENGTH {
+		var _dust_part = instance_create_layer(x, y+(sprite_height/2), "BGLayer", oDustParticle)
+		_dust_part.sprite_index = sJumpParticle
         jump_time = JUMP_TIME
         jump_buffer = JUMP_BUFFER_LENGTH
         has_jumped = true
@@ -23,7 +25,9 @@ jump_buffer++
 
 if oPlayerInput.key_jump {
     jump_buffer = 0
-    if !has_jumped and coyote_buffer < JUMP_BUFFER_LENGTH {   
+    if !has_jumped and coyote_buffer < JUMP_BUFFER_LENGTH {  
+		var _dust_part = instance_create_layer(x, y+(sprite_height/2), "BGLayer", oDustParticle)
+		_dust_part.sprite_index = sJumpParticle
 		jump_time = JUMP_TIME
         coyote_buffer = JUMP_BUFFER_LENGTH
         has_jumped = true
@@ -52,6 +56,11 @@ if ((!oPlayerInput.key_right and motionx > 0 ) or (!oPlayerInput.key_left and mo
 //moving
 if on_floor {
 	if oPlayerInput.key_right { // moving right
+		if motionx == 0 {
+			var _dust_part = instance_create_layer(x, bbox_bottom, "BGLayer", oDustParticle)
+			_dust_part.sprite_index = sStartRunParticle
+			_dust_part.image_xscale = -1
+		}
 		motionx += ACCELERATION
 		if motionx >= MAX_SPEED {
 			motionx -= ACCELERATION
@@ -60,6 +69,11 @@ if on_floor {
 		}
 	}
 	if oPlayerInput.key_left { // moving left
+		if motionx == 0 {
+			var _dust_part = instance_create_layer(x, bbox_bottom, "BGLayer", oDustParticle)
+			_dust_part.sprite_index = sStartRunParticle
+			_dust_part.image_xscale = 1
+		}
 		motionx -= ACCELERATION
 		if motionx <= -MAX_SPEED {
 			motionx -= -ACCELERATION
@@ -108,12 +122,16 @@ if (place_meeting(x+motionx, y, oWall)) {
 x += motionx
 
 if (place_meeting(x, y+motiony, oWall)) {
-	if sign(motiony) > 0 {
-		on_floor = true
-	}
     while (!place_meeting(x, y+sign(motiony), oWall)) {
         y += sign(motiony);
     }
+	if sign(motiony) > 0 {
+		if !on_floor {
+			var _dust_part = instance_create_layer(x, bbox_bottom, "BGLayer", oDustParticle)
+			_dust_part.sprite_index = sLandParticle
+		}
+		on_floor = true
+	}
     motiony = 0;
 } else {
 	on_floor = false	
@@ -124,11 +142,11 @@ y += motiony
 
 if (on_floor) {
 	if (motionx != 0) {
-		s_index = sPlayerRun;
-		//sprite_index = sPlayerRun
+		//s_index = sPlayerRun;
+		sprite_index = sPlayerRun
 	} else {
-		s_index = sPlayerIdle;
-		//sprite_index = sPlayerIdle
+		//s_index = sPlayerIdle;
+		sprite_index = sPlayerIdle
 	}
 	
 	if (oPlayerInput.key_sprint_held) {
@@ -138,11 +156,11 @@ if (on_floor) {
 	}
 } else {
 	if (motiony > 0) {
-		s_index = sPlayerFall;
-		//sprite_index = sPlayerFall
+		//s_index = sPlayerFall;
+		sprite_index = sPlayerFall
 	} else if motiony <= 0 {
-		s_index = sPlayerJump;
-		//sprite_index = sPlayerJump
+		//s_index = sPlayerJump;
+		sprite_index = sPlayerJump
 	}
 }
 

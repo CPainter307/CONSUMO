@@ -12,6 +12,17 @@ if pickupRadius > 0 {
 	itemRadiusList[| 0].highlighted = true
 }
 
+//go through doors
+var _door = instance_place(x, y, oDoor)
+if _door != noone {
+	if (oPlayerInput.key_down) {
+		if (room_exists(_door.new_room)) {
+			room_goto(_door.new_room);
+			x = _door.new_x;
+			y = _door.new_y;
+		}
+	}
+}
 
 // if we press pickup and we are colliding with some holdable objects, then add the nearest one to our inventory
 if oPlayerInput.key_interact {

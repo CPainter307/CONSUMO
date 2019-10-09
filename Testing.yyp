@@ -983,6 +983,22 @@
             }
         },
         {
+            "Key": "41f1a16a-d86f-4e8d-a37d-4507b1a5ad76",
+            "Value": {
+                "id": "f960b0bf-c6e8-47c1-a1a3-bd199bde1e66",
+                "resourcePath": "objects\\oDustParticle\\oDustParticle.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "42163e30-9cdb-406b-8d94-4f845924efd9",
+            "Value": {
+                "id": "dfa06221-c49f-4e8e-99e7-f6ca0962baf7",
+                "resourcePath": "views\\42163e30-9cdb-406b-8d94-4f845924efd9.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
             "Key": "4293a098-7c8b-4717-aa60-5f0854f72fc3",
             "Value": {
                 "id": "dd99b685-b88c-4602-8209-417beac20428",
@@ -2287,6 +2303,14 @@
             }
         },
         {
+            "Key": "9cb97cc5-086d-413c-984d-257b633382ba",
+            "Value": {
+                "id": "9fcb5c33-0575-4390-81a6-dfaaccea0ee4",
+                "resourcePath": "sprites\\sJumpParticle\\sJumpParticle.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "9cf2fb6b-697a-473e-81ea-ac9bb638726d",
             "Value": {
                 "id": "cbaf8020-bfe5-47ac-9618-851a1160aa16",
@@ -3311,6 +3335,14 @@
             }
         },
         {
+            "Key": "da805fc6-537b-4a74-8c6b-3886bd1a6f6c",
+            "Value": {
+                "id": "8853556a-6877-4daf-b027-d5a5984e5c45",
+                "resourcePath": "sprites\\sLandParticle\\sLandParticle.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "dacfbf48-744c-498d-bfb9-da8c9be92688",
             "Value": {
                 "id": "5839c93e-1e2a-404c-bc78-c353bfa4c123",
@@ -3372,6 +3404,14 @@
                 "id": "cef75e84-1b37-4e1f-8927-776167a78fa3",
                 "resourcePath": "views\/e0d232fa-5959-4df9-b51c-6095e2e0786b.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "e1bdc48b-33a3-4b79-9dca-33f4c1fed278",
+            "Value": {
+                "id": "1ae06a2f-b877-4b7d-a3b6-dc03d8e41f19",
+                "resourcePath": "sprites\\sStartRunParticle\\sStartRunParticle.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
