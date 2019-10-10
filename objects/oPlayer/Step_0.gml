@@ -74,7 +74,7 @@ ds_list_destroy(itemRadiusList)
 
 #region hand tracking
 
-script_execute(scr_hand_track);
+script_execute(scr_hand_track());
 
 
 #endregion
