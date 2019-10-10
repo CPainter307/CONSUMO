@@ -59,3 +59,6 @@ jump_time = 0
 
 s_index = sPlayerIdle
 player_dir = 1
+
+hand_x = x;
+hand_y = y;

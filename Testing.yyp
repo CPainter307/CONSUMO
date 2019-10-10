@@ -2767,6 +2767,14 @@
             }
         },
         {
+            "Key": "b8eb6c1b-9aee-43f9-b795-7cc30000db1f",
+            "Value": {
+                "id": "3ec38132-c7fc-47cd-a483-cd88e633d752",
+                "resourcePath": "scripts\\scr_hand_track\\scr_hand_track.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "b92986e6-03fa-4945-a8dd-2cd1b33ad9bd",
             "Value": {
                 "id": "1b413db4-6c46-44f3-b33d-a607d882dad3",
@@ -3868,6 +3876,7 @@
         "95eed547-7480-4c76-8d07-3928b36d469a",
         "3b868b0d-ac67-45c9-bd47-4f4138f01fa9",
         "86733b15-7ed6-468d-beae-6658b5c0db8a",
+        "b8eb6c1b-9aee-43f9-b795-7cc30000db1f",
         "7f07d631-0ede-47b2-8017-1b15c919e0ff",
         "745d1ab5-9428-428d-9fc5-669ea6876347",
         "68d9a4a4-a989-495b-bc21-2320d40a7ad6",
