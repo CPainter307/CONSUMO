@@ -20,6 +20,7 @@ if on_floor {
         jump_buffer = JUMP_BUFFER_LENGTH
         has_jumped = true
     }
+	has_jumped = false // Jackson added in this line because we couldn't jump the first time we tried, and this is supposed to fix it. However, if we start seeing additional issues, try removing this line.
 }
 jump_buffer++
 
