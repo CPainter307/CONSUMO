@@ -1,10 +1,12 @@
 if keyboard_check_pressed(ord("Q")) { //TODO: change to global input
 	show_inventory = !show_inventory
 	//set inventory position to the mouse cursor, clamp it to window boundaries
-	inventory_x = clamp(device_mouse_x(0), 0, window_get_width()-((cell_size+buffer)*inv_slot_width))
-	inventory_y = clamp(device_mouse_y(0), 0, window_get_height()-((cell_size+buffer)*inv_slot_height))
 }
 
+if show_inventory {
+	inventory_x = clamp(oPlayer.x + 80, 0, window_get_width()-((cell_size+buffer)*inv_slot_width))
+	inventory_y = clamp(oPlayer.y - 80, 0, window_get_height()-((cell_size+buffer)*inv_slot_height))	
+}
 
 
 #region MOUSE SLOT
