@@ -8,9 +8,9 @@ var _inst = argument0
 var _x = argument1
 var _y = argument2
 var _spd = argument3
-
-var _dirx = lengthdir_x(_spd, _x)
-var _diry = lengthdir_y(_spd, _y)
+var dir = point_direction(oPlayer.x, oPlayer.y, _x, _y)
+var _dirx = lengthdir_x(_spd, dir)
+var _diry = lengthdir_y(_spd, dir)
 with _inst {
 	physics_apply_impulse(x+_dirx, y+_diry, (_x - x) * _spd, -(y - _y) * _spd)
 	oPlayer.motionx = 0
@@ -18,3 +18,6 @@ with _inst {
 	oPlayer.motionx = (-_dirx)
 	oPlayer.motiony = (-_diry)
 }
+
+/*var inst = instance_create_layer(oPlayer.x, oPlayer.y, "Objects", _item[0])
+					throw_object(inst, mouse_x, mouse_y, 20)
