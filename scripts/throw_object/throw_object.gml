@@ -13,6 +13,8 @@ var _dirx = lengthdir_x(_spd, dir)
 var _diry = lengthdir_y(_spd, dir)
 with _inst {
 	physics_apply_impulse(x+_dirx, y+_diry, (_x - x) * _spd, -(y - _y) * _spd)
+	_inst.phy_angular_velocity = 100000
+	
 	oPlayer.motionx = 0
 	oPlayer.motiony = 0
 	oPlayer.motionx = (-_dirx)
