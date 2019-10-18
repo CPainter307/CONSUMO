@@ -33,7 +33,7 @@ if (global.input_type == inputs.analog_stick) {
 	key_inventory = gamepad_button_check_pressed(0, global.key_inventory);
 	key_room_reset = gamepad_button_check(0, global.key_room_reset);
 	key_sprint_held = gamepad_button_check(0, global.key_sprint);
-	key_throw  = keyboard_check_pressed(global.key_throw);
+	key_throw  = gamepad_button_check_pressed(0, global.key_throw);
 }
 
 //if (global.input_type == inputs.d_pad) {

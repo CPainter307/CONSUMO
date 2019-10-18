@@ -23,3 +23,6 @@ selected_slot = -1
 item_scale = .5
 
 mouse_in_inventory = true
+
+gamepad_x = 0
+gamepad_y = 0

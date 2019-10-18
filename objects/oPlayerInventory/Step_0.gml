@@ -1,19 +1,25 @@
-if keyboard_check_pressed(ord("Q")) { //TODO: change to global input
+if oPlayerInput.key_inventory { //TODO: change to global input
 	show_inventory = !show_inventory
-	inventory_x = device_mouse_x_to_gui(0)
-	inventory_y = device_mouse_y_to_gui(0)
+	//if global.input_type == inputs.keyboard {
+	//	inventory_x = device_mouse_x_to_gui(0)
+	//	inventory_y = device_mouse_y_to_gui(0)
+	//} else {
+	inventory_x = oPlayer.x
+	inventory_y = oPlayer.y
+	//}
+
 	//set inventory position to the mouse cursor, clamp it to window boundaries
 }
 
 if show_inventory {
-	//inventory_x = clamp(inventory_x, 0, window_get_width()-((cell_size+buffer)*inv_slot_width))
-	//inventory_y = clamp(inventory_y, 0, window_get_height()-((cell_size+buffer)*inv_slot_height))	
+	inventory_x = clamp(oPlayer.x + 80, 0, window_get_width()-((cell_size+buffer)*inv_slot_width))
+	inventory_y = clamp(oPlayer.y - 80, 0, window_get_height()-((cell_size+buffer)*inv_slot_height))	
 
 }
-if !gamepad_is_connected(0) {
+if global.input_type == inputs.keyboard {
 	#region MOUSE SLOT
-	mousex = device_mouse_x_to_gui(0)
-	mousey = device_mouse_y_to_gui(0)
+	mousex = device_mouse_x(0)
+	mousey = device_mouse_y(0)
 
 	var i_mousex = mousex - inventory_x+cell_size/2
 	var i_mousey = mousey - inventory_y+cell_size/2
@@ -39,18 +45,26 @@ if !gamepad_is_connected(0) {
 	#endregion
 } else {
 	if gamepad_button_check_pressed(0, gp_padu) {
-		nx-=1
+		gamepad_y-=1
 	}
 	if gamepad_button_check_pressed(0, gp_padd) {
-		nx+=1
+		gamepad_y+=1
 	}
 	if gamepad_button_check_pressed(0, gp_padr) {
-		ny+=1
+		gamepad_x+=1
 	}
 	if gamepad_button_check_pressed(0, gp_padl) {
-		ny-=1
+		gamepad_x-=1
 	}
-	selected_slot = nx + (ny * inv_slot_width)
+	selected_slot = gamepad_x + (gamepad_y * inv_slot_width)
+	if !mouse_in_inventory {
+		selected_slot = -1	
+	}
+	if !show_inventory {
+		mouse_in_inventory = false	
+	} else {
+		mouse_in_inventory = true	
+	}
 }
 
 var inv_grid = global.inventory
@@ -63,7 +77,7 @@ if pickup_slot != -1
 
 if pickup_slot != -1 {
 	//if we click or close our inventory
-	if mouse_check_button_pressed(mb_left) { //TODO: change to global input
+	if oPlayerInput.key_throw { //TODO: change to global input
 		if !mouse_in_inventory {
 			#region drop item into the world
 			inv_grid[# 1, pickup_slot] -= 1
@@ -131,7 +145,7 @@ if pickup_slot != -1 {
 	}
 	
 	//drop pickup item into new slot
-	if mouse_check_button_pressed(mb_left) { //TODO: change to global input
+	if oPlayerInput.key_throw { //TODO: change to global input
 		pickup_slot = selected_slot
 	}
 }
