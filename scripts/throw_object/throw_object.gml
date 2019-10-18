@@ -12,6 +12,7 @@ var _spd = argument3
 var _dirx = lengthdir_x(_spd, _x)
 var _diry = lengthdir_y(_spd, _y)
 with _inst {
+	gravity = 0
 	physics_apply_impulse(x+_dirx, y+_diry, (_x - x) * _spd, -(y - _y) * _spd)
 	oPlayer.motionx = 0
 	oPlayer.motiony = 0
