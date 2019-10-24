@@ -88,7 +88,11 @@ if pickup_slot != -1 {
 				var _item = inv_grid[# 0, pickup_slot]
 				if _item != 0 {
 					var inst = instance_create_layer(oPlayer.x, oPlayer.y, "Objects", _item[0])
-					throw_object(inst, mouse_x, mouse_y, 20)
+					if global.input_type == inputs.keyboard {
+						throw_object(inst, mouse_x, mouse_y, 20)
+					} else if global.input_type == inputs.analog_stick {
+						throw_object(inst, oPlayerInput.haxis, oPlayerInput.vaxis, 20)
+					}
 				}
 			}
 			//destroy item in inventory if it was the last one
