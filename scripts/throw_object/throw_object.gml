@@ -17,11 +17,23 @@ var _diry = lengthdir_y(_spd, dir)
 
 
 with _inst {
-	physics_apply_impulse(x+_dirx, y+_diry, (_x - x) * _spd, -(y - _y) * _spd)
-	_inst.phy_angular_velocity = 100000
+	if global.input_type == inputs.keyboard {
+		physics_apply_impulse(x+_dirx, y+_diry, (_x - x) * _spd, -(y - _y) * _spd)
+			_inst.phy_angular_velocity = 100000
 	
-	oPlayer.motionx = 0
-	oPlayer.motiony = 0
-	oPlayer.motionx = (-_dirx)
-	oPlayer.motiony = (-_diry)
+			oPlayer.motionx = 0
+			oPlayer.motiony = 0
+			oPlayer.motionx = (-_dirx)
+			oPlayer.motiony = (-_diry)
+		
+	} else if global.input_type == inputs.analog_stick {
+		physics_apply_impulse(x, y, _x * _spd * 100, _y* _spd * 100)
+		_inst.phy_angular_velocity = 100000
+	
+		oPlayer.motionx = 0
+		oPlayer.motiony = 0
+		oPlayer.motionx = (-_x * _spd)
+		oPlayer.motiony = (-_y * _spd)
+	}
+
 }
