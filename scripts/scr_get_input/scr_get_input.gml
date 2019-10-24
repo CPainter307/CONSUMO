@@ -13,7 +13,7 @@ if (global.input_type == inputs.keyboard) {
 	key_inventory = keyboard_check_pressed(global.key_inventory);
 	key_room_reset = keyboard_check_pressed(global.key_room_reset);
 	key_sprint_held = keyboard_check(global.key_sprint);
-	key_throw = keyboard_check_pressed(global.key_throw);
+	key_throw = mouse_check_button_pressed(global.key_throw);
 }
 
 

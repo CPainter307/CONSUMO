@@ -43,7 +43,8 @@ if global.input_type == inputs.keyboard {
 		selected_slot = -1	
 	}
 	#endregion
-} else {
+} 
+if global.input_type == inputs.analog_stick {
 	if gamepad_button_check_pressed(0, gp_padu) {
 		gamepad_y-=1
 	}
@@ -63,7 +64,7 @@ if global.input_type == inputs.keyboard {
 	if !show_inventory {
 		mouse_in_inventory = false	
 	} else {
-		mouse_in_inventory = true	
+		mouse_in_inventory = true
 	}
 }
 
