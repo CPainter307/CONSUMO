@@ -4,6 +4,12 @@ if !show_inventory {
 
 draw_set_color(c_white)
 
+if pickup_slot != -1 {
+	if (lineToggle) {
+		draw_throw_line()
+	}
+}
+
 //draw bg
 draw_set_alpha(.5)
 draw_rectangle_color(inventory_x-(cell_size/2), inventory_y-(cell_size/2), inventory_x-(cell_size/2)+((cell_size+buffer)*inv_slot_width)-buffer, inventory_y-(cell_size/2)+((cell_size+buffer)*inv_slot_height-buffer), c_ltgray, c_ltgray, c_ltgray, c_ltgray, false)
