@@ -19,6 +19,7 @@ switch (argument0) {
 		global.key_pause		= vk_escape;
 		global.key_sprint		= vk_shift;
 		global.key_throw		= mb_left;
+		global.key_heavy_throw	= mb_right;
 	break;
 	
 	case 1:
@@ -38,6 +39,7 @@ switch (argument0) {
 		global.key_pause		= gp_start;
 		global.key_sprint		= gp_face3;
 		global.key_throw		= gp_shoulderr;
+		global.key_heavy_throw  = gp_shoulderrb;
 	break
 	
 	case 2:
@@ -57,6 +59,7 @@ switch (argument0) {
 		global.key_pause		= gp_start;
 		global.key_sprint		= gp_face3;
 		global.key_throw		= gp_shoulderr;
+		global.key_heavy_throw	= gp_shoulderrb;
 	break;
 }
 
@@ -71,8 +74,9 @@ ds_grid_set(grid, 3, 4, global.key_right);
 ds_grid_set(grid, 3, 5, global.key_jump);
 ds_grid_set(grid, 3, 6, global.key_sprint);
 ds_grid_set(grid, 3, 7, global.key_throw);
-ds_grid_set(grid, 3, 8, global.key_interact);
-ds_grid_set(grid, 3, 9, global.key_inventory);
-ds_grid_set(grid, 3, 10, global.key_room_reset);
-ds_grid_set(grid, 3, 11, global.key_pause);
+ds_grid_set(grid, 3, 8, global.key_heavy_throw);
+ds_grid_set(grid, 3, 9, global.key_interact);
+ds_grid_set(grid, 3, 10, global.key_inventory);
+ds_grid_set(grid, 3, 11, global.key_room_reset);
+ds_grid_set(grid, 3, 12, global.key_pause);
 

@@ -26,7 +26,7 @@ with _inst {
 		physics_apply_impulse(x+_dirx, y+_diry, (_x - x) * _spd, -(y - _y) * _spd)
 			_inst.phy_angular_velocity = 100000
 			
-			if (!oPlayer.on_floor) {
+			if (!oPlayer.on_floor && oPlayerInput.key_heavy_throw) {
 				oPlayer.motionx = 0
 				oPlayer.motiony = 0
 				oPlayer.motionx = (-_dirx)
@@ -78,7 +78,7 @@ with _inst {
 		physics_apply_impulse(x, y, _x * _spd * 100, _y* _spd * 100)
 		_inst.phy_angular_velocity = 100000
 	
-		if (!oPlayer.on_floor) {
+		if (!oPlayer.on_floor && oPlayerInput.key_heavy_throw) {
 			oPlayer.motionx = 0
 			oPlayer.motiony = 0
 			oPlayer.motionx = (-_x * _spd)
