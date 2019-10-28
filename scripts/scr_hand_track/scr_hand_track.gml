@@ -108,14 +108,14 @@ if (sprite_index == sPlayerJump) {
 
     //facing right
     if (player_dir == 1) {
-        hand_x = x + 20;
-        hand_y = y;
+        hand_x = x + 24;
+        hand_y = y - 3;
     }
 
     //facing left
     if (player_dir == -1) {
-        hand_x = x - 20;
-        hand_y = y;
+        hand_x = x - 24;
+        hand_y = y - 3;
     }
 }
 

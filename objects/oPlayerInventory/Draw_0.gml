@@ -1,14 +1,15 @@
+if pickup_slot != -1 {
+	if (lineToggle) {
+		draw_throw_line()
+	}
+}
+
 if !show_inventory {
 	exit	
 }
 
 draw_set_color(c_white)
 
-if pickup_slot != -1 {
-	if (lineToggle) {
-		draw_throw_line()
-	}
-}
 
 //draw bg
 draw_set_alpha(.5)

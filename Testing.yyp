@@ -2287,6 +2287,14 @@
             }
         },
         {
+            "Key": "9a79770a-43f4-44fa-b505-387bd0f86f3d",
+            "Value": {
+                "id": "ddc74be7-ea37-4c72-b441-3f792dc57136",
+                "resourcePath": "sprites\\sReticle\\sReticle.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "9acaec72-96f9-42e7-a0af-671cd1d6767e",
             "Value": {
                 "id": "780b8042-da32-46de-bc28-1cd6c1e30b31",

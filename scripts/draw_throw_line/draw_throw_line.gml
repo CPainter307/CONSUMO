@@ -29,7 +29,9 @@ count = 0;
         yy+=vy; //add dy
         vy+= grav; //add gravity to dy
 		if (instance_position(xx, yy, oWall)) {
-			empty = false;	
+			empty = false;
+			draw_sprite(sReticle, 0, xx, yy) //somehow animate this
+			
 		}
 		else {
 			draw_vertex_color(xx,yy,c_lime,1)
