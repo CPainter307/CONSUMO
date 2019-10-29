@@ -2783,6 +2783,14 @@
             }
         },
         {
+            "Key": "b8cad260-b86f-43f7-a7a6-723057806ef9",
+            "Value": {
+                "id": "991701be-5e45-4501-8ee0-2b9022485898",
+                "resourcePath": "sounds\\snd_toggle_line\\snd_toggle_line.yy",
+                "resourceType": "GMSound"
+            }
+        },
+        {
             "Key": "b8eb6c1b-9aee-43f9-b795-7cc30000db1f",
             "Value": {
                 "id": "3ec38132-c7fc-47cd-a483-cd88e633d752",

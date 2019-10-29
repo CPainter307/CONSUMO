@@ -30,7 +30,9 @@ count = 0;
         vy+= grav; //add gravity to dy
 		if (instance_position(xx, yy, oWall)) {
 			empty = false;
-			draw_sprite(sReticle, 0, xx, yy) //somehow animate this
+			//For some reason, the image speed has to be set to a really low value
+			image_speed = 0.15; //Animates the reticle
+			draw_sprite(sReticle, image_index, xx, yy) //somehow animate 
 			
 		}
 		else {

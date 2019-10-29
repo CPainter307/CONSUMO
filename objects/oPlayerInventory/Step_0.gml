@@ -12,10 +12,12 @@ if oPlayerInput.key_inventory { //TODO: change to global input
 }
 if keyboard_check_pressed(ord("T")) {
 	if lineToggle {
-		lineToggle = false;		
+		lineToggle = false;
+		audio_play_sound(snd_toggle_line,10,false);
 	}
 	else {
 		lineToggle = true;	
+		audio_play_sound(snd_toggle_line,10,false);
 	}
 }
 if show_inventory {
