@@ -48,6 +48,26 @@ enum menu_element_type {
 	input
 }
 
+
+//Other Unrelated Enums
+
+enum direc {
+	none,
+	right,
+	up,
+	left,
+	down,
+	up_right,
+	up_left,
+	down_left,
+	down_right
+}
+
+global.direction8 = true;
+
+//End Other Enums
+
+
 //CREATE MENU PAGES
 /*ds_menu_main = create_menu_page(
 	["New Game",	menu_element_type.script_runner,	new_game],
@@ -92,6 +112,7 @@ ds_menu_controls = create_menu_page(
 	["Jump",			menu_element_type.input,			"key_jump",				vk_space],
 	["Sprint",			menu_element_type.input,			"key_sprint",			vk_shift],
 	["Throw",			menu_element_type.input,			"key_throw",			mb_left],
+	["Heavy Throw",		menu_element_type.input,			"key_heavy_throw",		mb_right],
 	["Interact",		menu_element_type.input,			"key_interact",			ord("E")],
 	["Inventory",		menu_element_type.input,			"key_inventory",		ord("Q")],
 	["Room Reset",		menu_element_type.input,			"key_room_reset",		ord("K")],
