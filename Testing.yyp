@@ -983,6 +983,14 @@
             }
         },
         {
+            "Key": "41c42937-30eb-4b03-a740-0728655f8e52",
+            "Value": {
+                "id": "6deff35a-65ea-4e79-9cdd-e5dd2b04b8d6",
+                "resourcePath": "sprites\\sHazard\\sHazard.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "41f1a16a-d86f-4e8d-a37d-4507b1a5ad76",
             "Value": {
                 "id": "f960b0bf-c6e8-47c1-a1a3-bd199bde1e66",
@@ -3788,6 +3796,14 @@
                 "id": "356461b1-5555-4f43-a8af-47ffc40bb977",
                 "resourcePath": "sprites\/sPreparedPaprika\/sPreparedPaprika.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "f99f4b38-56be-4f18-b459-35e493addac7",
+            "Value": {
+                "id": "fd13da9e-3142-497e-a13a-b2a06c00319e",
+                "resourcePath": "objects\\oHazard\\oHazard.yy",
+                "resourceType": "GMObject"
             }
         },
         {

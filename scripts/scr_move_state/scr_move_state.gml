@@ -139,6 +139,8 @@ if (place_meeting(x, y+motiony, oWall)) {
 }
 y += motiony
 
+if (place_meeting(x, y+1, oHazard)) game_restart();
+
 //animation (new)
 
 if (on_floor) {
