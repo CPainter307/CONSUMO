@@ -115,25 +115,31 @@ else {
 
 //collision
 if (place_meeting(x+motionx, y, oWall)) {
-	while (!place_meeting(x+sign(motionx), y, oWall)) {
-		x += sign(motionx);
+	var inst = instance_place(x+motionx, y, oWall);
+	if (inst.active) {
+		while (!place_meeting(x+sign(motionx), y, oWall)) {
+			x += sign(motionx);
+		}
+		motionx = 0;
 	}
-	motionx = 0;
 }
 x += motionx
 
 if (place_meeting(x, y+motiony, oWall)) {
-    while (!place_meeting(x, y+sign(motiony), oWall)) {
-        y += sign(motiony);
-    }
-	if sign(motiony) > 0 {
-		if !on_floor {
-			var _dust_part = instance_create_layer(x, bbox_bottom, "BGLayer", oDustParticle)
-			_dust_part.sprite_index = sLandParticle
+	var inst = instance_place(x, y+motiony, oWall);
+	if (inst.active) {
+		while (!place_meeting(x, y+sign(motiony), oWall)) {
+		    y += sign(motiony);
 		}
-		on_floor = true
+		if sign(motiony) > 0 {
+			if !on_floor {
+				var _dust_part = instance_create_layer(x, bbox_bottom, "BGLayer", oDustParticle)
+				_dust_part.sprite_index = sLandParticle
+			}
+			on_floor = true
+		}
+		motiony = 0;
 	}
-    motiony = 0;
 } else {
 	on_floor = false	
 }

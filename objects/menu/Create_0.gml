@@ -64,6 +64,7 @@ enum direc {
 }
 
 global.direction8 = true;
+global.switchBlue = true;
 
 //End Other Enums
 
