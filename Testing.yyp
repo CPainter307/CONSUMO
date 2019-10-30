@@ -95,14 +95,6 @@
             }
         },
         {
-            "Key": "037f0719-e33e-441f-8021-821b792c03a9",
-            "Value": {
-                "id": "67ed1e60-0141-4553-b6f2-fa25fc44179b",
-                "resourcePath": "notes\/Animation Arguments.yy",
-                "resourceType": "GMNotes"
-            }
-        },
-        {
             "Key": "05c46c17-db28-4a4d-8c77-c23305a61e22",
             "Value": {
                 "id": "7d679c86-859b-456e-bd0f-0cbc7212caea",
@@ -836,6 +828,14 @@
                 "id": "2a0cff47-ddb6-48c7-87f2-1968bda65ea6",
                 "resourcePath": "sprites\/sBackArmL_old\/sBackArmL_old.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "33714029-3c0a-46c9-b182-df210e48e8c1",
+            "Value": {
+                "id": "fb9ffbf4-6e0a-4af9-968d-962748b17cfb",
+                "resourcePath": "notes\\Room Creation Requirements.yy",
+                "resourceType": "GMNotes"
             }
         },
         {
@@ -2188,6 +2188,14 @@
                 "id": "14711390-5670-47ab-8670-e8c929505c68",
                 "resourcePath": "objects\/oMeat\/oMeat.yy",
                 "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "922b23b6-e875-4270-a3e7-086c03379863",
+            "Value": {
+                "id": "94654e4a-0d34-4001-971a-7f9624f65f6f",
+                "resourcePath": "rooms\\rTest\\rTest.yy",
+                "resourceType": "GMRoom"
             }
         },
         {

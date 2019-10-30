@@ -1,0 +1,27 @@
+ENABLE ROOM PHYSICS
+	Gravity X = 0
+	Gravity Y = 90
+	Pixels To Meters = 0.1
+
+INIT OBJECTS
+	oDisplayManager
+	menu
+	oTransition
+	oPS
+	oIngredientHolder
+	oPlayerInput
+	oGameGUI
+	oIngredientHolder
+	oPlayerInventory
+	
+LAYERS
+	Background
+	Player
+	Walls
+	BGLayer
+	game
+	
+OBJECTS WITHIN LAYERS
+	game
+		oCamera
+		oTransition
