@@ -38,8 +38,8 @@ switch (argument0) {
 		global.key_room_reset	= gp_select;
 		global.key_pause		= gp_start;
 		global.key_sprint		= gp_face3;
-		global.key_throw		= gp_shoulderr;
-		global.key_heavy_throw  = gp_shoulderrb;
+		global.key_throw		= gp_shoulderl;
+		global.key_heavy_throw  = gp_shoulderr;
 	break
 	
 	case 2:
@@ -58,8 +58,8 @@ switch (argument0) {
 		global.key_room_reset	= gp_select;
 		global.key_pause		= gp_start;
 		global.key_sprint		= gp_face3;
-		global.key_throw		= gp_shoulderr;
-		global.key_heavy_throw	= gp_shoulderrb;
+		global.key_throw		= gp_shoulderl;
+		global.key_heavy_throw	= gp_shoulderr;
 	break;
 }
 
