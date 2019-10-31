@@ -140,8 +140,9 @@ if (place_meeting(x, y+motiony, oWall)) {
 		}
 		motiony = 0;
 	}
+	if (!inst.active) on_floor = false;
 } else {
-	on_floor = false	
+	on_floor = false;
 }
 y += motiony
 
