@@ -55,7 +55,9 @@ with _inst {
 					_y = 1;
 					break;
 				default:
-					//do nothing
+					_x = 0;
+					_y = 1;
+					// Had to make this do something. Otherwise, a heavy throw with no directional input would shoot our character into the stratosphere
 			}
 			physics_apply_impulse(x, y, _x * _spd * 100, _y* _spd * 100)
 		}
