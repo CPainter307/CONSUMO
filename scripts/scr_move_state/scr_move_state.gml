@@ -115,32 +115,54 @@ else {
 
 //collision
 if (place_meeting(x+motionx, y, oWall)) {
-	var inst = instance_place(x+motionx, y, oWall);
-	if (inst.active) {
-		while (!place_meeting(x+sign(motionx), y, oWall)) {
-			x += sign(motionx);
+	var inst_list = ds_list_create();
+	instance_place_list(x+motionx, y, oWall, inst_list, false);
+	for (i = 0; i < ds_list_size(inst_list); i++) {
+		var inst = inst_list[| i];
+		if (inst.active) {
+			while (!place_meeting(x+sign(motionx), y, inst)) {
+				x += sign(motionx);
+			}
+			motionx = 0;
 		}
-		motionx = 0;
 	}
+	ds_list_destroy(inst_list);
 }
 x += motionx
 
 if (place_meeting(x, y+motiony, oWall)) {
-	var inst = instance_place(x, y+motiony, oWall);
-	if (inst.active) {
-		while (!place_meeting(x, y+sign(motiony), oWall)) {
-		    y += sign(motiony);
-		}
-		if sign(motiony) > 0 {
-			if !on_floor {
-				var _dust_part = instance_create_layer(x, bbox_bottom, "BGLayer", oDustParticle)
-				_dust_part.sprite_index = sLandParticle
+	var inst_list = ds_list_create();
+	instance_place_list(x, y+motiony, oWall, inst_list, false);
+	for (i = 0; i < ds_list_size(inst_list); i++) {
+		var inst = inst_list[| i];
+		if (inst.active) {
+			while (!place_meeting(x, y+sign(motiony), inst)) {
+			    y += sign(motiony);
 			}
-			on_floor = true
+			if sign(motiony) > 0 {
+				if !on_floor {
+					var _dust_part = instance_create_layer(x, bbox_bottom, "BGLayer", oDustParticle)
+					_dust_part.sprite_index = sLandParticle
+				}
+				on_floor = true
+			}
+			motiony = 0;	
 		}
-		motiony = 0;
 	}
-	if (!inst.active) on_floor = false;
+	var any_active = false;
+	instance_place_list(x, y+motiony, oWall, inst_list, false);
+	for (i = 0; i < ds_list_size(inst_list); i++) {
+		var inst = inst_list[| i];
+		if (inst.active) {
+			any_active = true;	
+			break;
+		}
+		
+	}
+	if (!any_active) {
+		on_floor = false;	
+	}
+	ds_list_destroy(inst_list);
 } else {
 	on_floor = false;
 }
