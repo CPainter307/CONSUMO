@@ -123,8 +123,20 @@ if (place_meeting(x+motionx, y, oWall)) {
 			while (!place_meeting(x+sign(motionx), y, inst)) {
 				x += sign(motionx);
 			}
-			motionx = 0;
 		}
+	}
+	
+	var any_active = false;
+	instance_place_list(x+motionx, y, oWall, inst_list, false);
+	for (i = 0; i < ds_list_size(inst_list); i++) {
+		var inst = inst_list[| i];
+		if (inst.active) {
+			any_active = true;	
+			break;
+		}
+	}
+	if (any_active) {
+		motionx = 0;
 	}
 	ds_list_destroy(inst_list);
 }
@@ -145,8 +157,7 @@ if (place_meeting(x, y+motiony, oWall)) {
 					_dust_part.sprite_index = sLandParticle
 				}
 				on_floor = true
-			}
-			motiony = 0;	
+			}	
 		}
 	}
 	var any_active = false;
@@ -157,10 +168,12 @@ if (place_meeting(x, y+motiony, oWall)) {
 			any_active = true;	
 			break;
 		}
-		
 	}
 	if (!any_active) {
-		on_floor = false;	
+		on_floor = false;
+	}
+	else {
+		motiony = 0;	
 	}
 	ds_list_destroy(inst_list);
 } else {
