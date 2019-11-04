@@ -5,8 +5,15 @@ damp = 0.9967
 
 //draw_self();
 //figure the mouse dir and distance for aiming and force
- dir = point_direction(xx, yy, mouse_x, mouse_y);
- spd = 20;
+if global.input_type == inputs.keyboard {
+	dir = point_direction(xx, yy, mouse_x, mouse_y);
+}
+if global.input_type == inputs.analog_stick {
+	if abs(oPlayerInput.haxis) > .1 or abs(oPlayerInput.vaxis)  > .1 {
+		dir = point_direction(0, 0, oPlayerInput.haxis, oPlayerInput.vaxis);
+	}
+}
+spd = 20;
 //start at x,y of launcher, (my sprite has the origns in the middle of the Y part of the sling)
 empty = true;
 //what are the dx,dy for movement
@@ -45,7 +52,7 @@ empty = true;
 vx = lengthdir_x(spd,dir);
 vy = lengthdir_y(spd,dir);
 //the gravity
-grav = 0.25; 
+grav = 0; 
 //dragging, draw the lineif(mouse_check_button(mb_left))
 count = 0;
 
@@ -58,13 +65,13 @@ count = 0;
 		if (count >= 300) {
 			empty = false;	
 		}
-		//dir = point_direction(xx, yy, xx + vx, yy + vy)
+		dir = point_direction(xx, yy, xx + vx, yy + vy)
         xx+=vx; //add dx
         yy+=vy; //add dy
         vy+= grav; //add gravity to dy
 		dir = point_direction(xx, yy, xx + vx, yy + vy)
 		spd = sqrt(sqr(vx) + sqr(vy))
-		spd = spd * damp
+		spd = spd //* damp
 		vx = lengthdir_x(spd,dir);
 		vy = lengthdir_y(spd,dir);
 		

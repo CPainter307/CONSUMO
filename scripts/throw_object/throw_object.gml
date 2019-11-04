@@ -11,10 +11,15 @@ var _y = argument2
 var _spd = argument3
 
 var dir = point_direction(oPlayer.x, oPlayer.y, _x, _y)
+if global.input_type == inputs.analog_stick {
+	dir = point_direction(0, 0, _x, _y)
+}
 
-var _dirx = lengthdir_x(_spd, dir)
-var _diry = lengthdir_y(_spd, dir)
+var _dirx = lengthdir_x(_spd*30, dir)
+var _diry = lengthdir_y(_spd*30, dir)
 
+physics_world_update_iterations(20)
+physics_world_update_speed(120)
 
 with _inst {
 	if global.input_type == inputs.keyboard {
@@ -59,25 +64,7 @@ with _inst {
 					_y = 1;
 					// Had to make this do something. Otherwise, a heavy throw with no directional input would shoot our character into the stratosphere
 			}
-			physics_apply_impulse(x, y, _x * _spd * 100, _y* _spd * 100)
 		}
-		
-		else physics_apply_impulse(x+_dirx, y+_diry, (_x - x) * _spd, -(y - _y) * _spd)
-			_inst.phy_angular_velocity = 100000
-			
-			if (!oPlayer.on_floor && oPlayerInput.key_heavy_throw) {
-				oPlayer.motionx = 0
-				oPlayer.motiony = 0
-				if (direction8) {
-					oPlayer.motionx = (-_x * _spd)
-					oPlayer.motiony = (-_y * _spd)	
-				}
-				else {
-					oPlayer.motionx = (-_dirx)
-					oPlayer.motiony = (-_diry)
-				}
-			}
-		
 	} else if global.input_type == inputs.analog_stick {
 		//changes direction vars if 8dir is on
 		if (direction8) {
@@ -119,16 +106,31 @@ with _inst {
 					//do nothing
 			}
 		}
-		
-		physics_apply_impulse(x, y, _x * _spd * 100, _y* _spd * 100)
-		_inst.phy_angular_velocity = 100000
-	
-		if (!oPlayer.on_floor && oPlayerInput.key_heavy_throw) {
-			oPlayer.motionx = 0
-			oPlayer.motiony = 0
+	}
+	//heavy throwing
+	if (!oPlayer.on_floor && oPlayerInput.key_heavy_throw) {
+		oPlayer.motionx = 0
+		oPlayer.motiony = 0
+		if (direction8) {
 			oPlayer.motionx = (-_x * _spd)
-			oPlayer.motiony = (-_y * _spd)
+			oPlayer.motiony = (-_y * _spd)	
+		}
+		else {
+			oPlayer.motionx = (-_dirx/30)
+			oPlayer.motiony = (-_diry/30)
 		}
 	}
-
+	//throws object
+	apply_gravity = false
+	//reapplies gravity once it's hit a wall or 10 frames passed
+	alarm_set(0, 10)
+	if direction8 {
+		phy_speed_x = _x * _spd * 30;
+		phy_speed_y = _y * _spd * 30;
+		physics_apply_impulse(phy_position_x,phy_position_y,_x,_y)
+	} else {
+		phy_speed_x = _dirx;
+		phy_speed_y = _diry;
+		physics_apply_impulse(phy_position_x,phy_position_y,_dirx,_diry)
+	}
 }

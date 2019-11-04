@@ -4,18 +4,22 @@ if (oPlayerInput.key_room_reset) {
 
 
 //add gravity
-if motiony < 0 {
-	motiony += GRAVITY
-} else {
-	motiony += FALL_GRAVITY	
+if motiony < MAX_FALL_SPEED {
+	if motiony < 0 {
+		motiony += GRAVITY
+	} else {
+		motiony += FALL_GRAVITY	
+	}
 }
 
 //jumping with buffer
 if on_floor {
     coyote_buffer = 0
     if !has_jumped and jump_buffer < JUMP_BUFFER_LENGTH {
-		var _dust_part = instance_create_layer(x, y+(sprite_height/2), "BGLayer", oDustParticle)
-		_dust_part.sprite_index = sJumpParticle
+		if on_floor {
+			var _dust_part = instance_create_layer(x, y+(sprite_height/2), "BGLayer", oDustParticle)
+			_dust_part.sprite_index = sJumpParticle
+		}
         jump_time = JUMP_TIME
         jump_buffer = JUMP_BUFFER_LENGTH
         has_jumped = true
@@ -27,8 +31,10 @@ jump_buffer++
 if oPlayerInput.key_jump {
     jump_buffer = 0
     if !has_jumped and coyote_buffer < JUMP_BUFFER_LENGTH {  
-		var _dust_part = instance_create_layer(x, y+(sprite_height/2), "BGLayer", oDustParticle)
-		_dust_part.sprite_index = sJumpParticle
+		if on_floor {
+			var _dust_part = instance_create_layer(x, y+(sprite_height/2), "BGLayer", oDustParticle)
+			_dust_part.sprite_index = sJumpParticle
+		}
 		jump_time = JUMP_TIME
         coyote_buffer = JUMP_BUFFER_LENGTH
         has_jumped = true
@@ -41,7 +47,7 @@ if oPlayerInput.key_jump_held and jump_time > 0 and has_jumped {
 	motiony = -JUMP_SPEED
 }
 
-if oPlayerInput.key_jump_released and has_jumped {
+if oPlayerInput.key_jump_released and has_jumped and motiony < 0{
     has_jumped = false
     motiony = lerp(motiony, 0, JUMP_FALLOFF_SPEED)
 }

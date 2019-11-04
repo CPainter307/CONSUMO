@@ -54,7 +54,7 @@
         "id": "a78d4b1e-d2c7-4340-bb4a-27ea3efcd083",
         "inheritPhysicsSettings": false,
         "modelName": "GMRoomPhysicsSettings",
-        "PhysicsWorld": false,
+        "PhysicsWorld": true,
         "PhysicsWorldGravityX": 0,
         "PhysicsWorldGravityY": 10,
         "PhysicsWorldPixToMeters": 0.1,

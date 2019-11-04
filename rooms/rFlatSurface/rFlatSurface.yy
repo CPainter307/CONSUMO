@@ -548,7 +548,7 @@
         "modelName": "GMRoomPhysicsSettings",
         "PhysicsWorld": true,
         "PhysicsWorldGravityX": 0,
-        "PhysicsWorldGravityY": 90,
+        "PhysicsWorldGravityY": 0,
         "PhysicsWorldPixToMeters": 0.1,
         "mvc": "1.0"
     },
