@@ -1,15 +1,15 @@
 ///scr_health_ring(x,y,radius,thickness,maxsegments,segments,startangle,totalangle,direction,colour)
 
-//argument0 = x
-//argument1 = y
-//argument2 = radius
-//argument3 = thickness
-//argument4 = maxsegments
-//argument5 = segments
-//argument6 = startangle
-//argument7 = totalangle
-//argument8 = direction
-//argument9 = colour
+///@arg0 x
+///@arg1 y
+///@arg2 radius
+///@arg3 thickness
+///@arg4 maxsegments
+///@arg5 segments
+///@arg6 startangle
+///@arg7 totalangle
+///@arg8 direction
+///@arg9 colour
 
 anglechange = (argument7/argument4)*(pi/180)
 i = argument6*(pi/180)

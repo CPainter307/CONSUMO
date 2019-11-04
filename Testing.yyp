@@ -967,6 +967,14 @@
             }
         },
         {
+            "Key": "40f7331d-bf4e-46c0-b368-5311dea8eb6d",
+            "Value": {
+                "id": "84ccacc0-503f-49e9-8936-d3e8e01e122d",
+                "resourcePath": "sprites\\sSwordIcon\\sSwordIcon.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "40f7ff36-9081-48db-8e02-1bf53e6e1114",
             "Value": {
                 "id": "6249aa60-dc0a-4656-8efb-b133bbb1f2c3",
@@ -1327,6 +1335,14 @@
             }
         },
         {
+            "Key": "54d6ffc4-7fea-44f3-b2a8-c281bca15fbb",
+            "Value": {
+                "id": "d8749ebb-defa-48eb-8c3a-348f204b2695",
+                "resourcePath": "sprites\\sShoeIcon\\sShoeIcon.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "54dc7a2d-2fa2-4eba-a07a-a0cf7aefd6c5",
             "Value": {
                 "id": "cb2fa0f5-4616-4766-bad6-73786eb1c291",
@@ -1428,6 +1444,14 @@
                 "id": "832efab9-f990-4b33-b8f9-cc1709131711",
                 "resourcePath": "views\/5b9cb3a2-029f-445a-8e89-460a7427d98d.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "5bbdb670-1c84-4f7e-991a-009d96dd4c0e",
+            "Value": {
+                "id": "e790cde3-d8a9-43e7-845a-2bf1caa1da46",
+                "resourcePath": "sprites\\sStatBG\\sStatBG.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -3155,6 +3179,14 @@
             "Value": {
                 "id": "a84503c6-48e9-4998-9635-1a86eed6a14a",
                 "resourcePath": "sprites\/sFrontArmRMoving_old\/sFrontArmRMoving_old.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "c8808a31-df12-4d6b-936e-d26d7346e8f4",
+            "Value": {
+                "id": "6b352eb0-0f2e-4632-b686-8a5994bc3b18",
+                "resourcePath": "sprites\\sShieldIcon\\sShieldIcon.yy",
                 "resourceType": "GMSprite"
             }
         },
