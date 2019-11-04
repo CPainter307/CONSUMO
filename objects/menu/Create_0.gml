@@ -1,6 +1,6 @@
 global.pause			= false;
-global.view_width		= view_wport[0];
-global.view_height		= view_hport[0];
+global.view_width		= display_get_width()
+global.view_height		= display_get_height()
 
 //Analog Stick Check
 global.up_check			= false;

@@ -79,14 +79,6 @@
             }
         },
         {
-            "Key": "02e31b85-ce56-4c44-8d97-34affd09e639",
-            "Value": {
-                "id": "7b1635d7-4270-4ace-8e53-93b64484229a",
-                "resourcePath": "sprites\/sBattleWindow\/sBattleWindow.yy",
-                "resourceType": "GMSprite"
-            }
-        },
-        {
             "Key": "0309885d-6bac-461c-824f-ac3312ede4e9",
             "Value": {
                 "id": "c57d0727-f1fc-4eb0-92b5-50df1d92575b",
@@ -227,14 +219,6 @@
             "Value": {
                 "id": "21e38f96-ae0c-4957-8f3f-f5170cc4a28e",
                 "resourcePath": "sprites\\sPlayer\\sPlayer.yy",
-                "resourceType": "GMSprite"
-            }
-        },
-        {
-            "Key": "1010e2bc-364a-42c6-90f0-0aa741862ed2",
-            "Value": {
-                "id": "415e2de8-64dc-4de7-9a5e-c175c757f68c",
-                "resourcePath": "sprites\/sBattleWindowStatBG\/sBattleWindowStatBG.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -735,6 +719,14 @@
             }
         },
         {
+            "Key": "2e2bbeb5-41a0-4ff1-b614-af704a6f6adb",
+            "Value": {
+                "id": "712a7016-a80a-4c74-9cd8-50ff4a651e15",
+                "resourcePath": "scripts\\scr_health_ring\\scr_health_ring.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "2e552ba3-8d4d-4f87-9afd-34518741af04",
             "Value": {
                 "id": "d9665cc1-2e0e-4beb-8fdb-ac98ecfdc3cd",
@@ -1028,6 +1020,22 @@
                 "id": "7345d406-fe8c-4cf8-a975-c0234af7464a",
                 "resourcePath": "timelines\/tl_cooking\/tl_cooking.yy",
                 "resourceType": "GMTimeline"
+            }
+        },
+        {
+            "Key": "441605e6-a171-405c-b599-8e10e5379cda",
+            "Value": {
+                "id": "6da53345-60c2-4668-b4b0-9e0ac6855cb4",
+                "resourcePath": "objects\\oBattlePortrait\\oBattlePortrait.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "4426b866-afa5-4eb2-90c3-7476a3bf2e21",
+            "Value": {
+                "id": "41e04f1f-3432-4821-863f-517af6c5b9ad",
+                "resourcePath": "scripts\\scr_health_circle\\scr_health_circle.yy",
+                "resourceType": "GMScript"
             }
         },
         {
@@ -1439,14 +1447,6 @@
             }
         },
         {
-            "Key": "5c750ac2-9961-4266-b112-9503e9c62803",
-            "Value": {
-                "id": "3e5e554a-e3dc-45a4-8561-75da995307e7",
-                "resourcePath": "sprites\/sBattleWindowHealth\/sBattleWindowHealth.yy",
-                "resourceType": "GMSprite"
-            }
-        },
-        {
             "Key": "5d741126-703d-4152-8296-20760055aca2",
             "Value": {
                 "id": "ab1666b1-8155-49b7-a694-99d852e0172d",
@@ -1779,14 +1779,6 @@
             "Value": {
                 "id": "3ba378e6-4a52-45b3-91cb-7c288297b887",
                 "resourcePath": "sprites\/sFrontArmL\/sFrontArmL.yy",
-                "resourceType": "GMSprite"
-            }
-        },
-        {
-            "Key": "73a8bc2d-416b-41bb-b215-a9083f7c8a70",
-            "Value": {
-                "id": "ccbd8aee-3fea-4903-a087-5a41d2d7afd9",
-                "resourcePath": "sprites\/sBattleWindowHunger\/sBattleWindowHunger.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -2251,6 +2243,14 @@
             "Value": {
                 "id": "6b1fa92d-6bb4-435e-be8c-608daaec5634",
                 "resourcePath": "sprites\/sSteam4\/sSteam4.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "92dc8d16-56bf-4cb5-97a9-e241edf766ed",
+            "Value": {
+                "id": "a433f975-47c6-4923-a23e-774f9b9cc0ad",
+                "resourcePath": "sprites\\sLizardPortraitBattle\\sLizardPortraitBattle.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -2759,6 +2759,14 @@
             }
         },
         {
+            "Key": "b21bfce7-ad9f-4db1-81b0-7d9765550a91",
+            "Value": {
+                "id": "23601d08-6570-4aae-b931-60c1b385e255",
+                "resourcePath": "sprites\\sBattleWindowBG\\sBattleWindowBG.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "b282e5cc-561a-4c06-a316-1f7dda5257a2",
             "Value": {
                 "id": "6db185ee-c3a9-4696-93f7-e0b3df5d88bb",
@@ -2916,14 +2924,6 @@
                 "id": "78c44881-e94a-4922-b930-14af8a4f3dde",
                 "resourcePath": "sounds\/snd_lizard_voice_2\/snd_lizard_voice_2.yy",
                 "resourceType": "GMSound"
-            }
-        },
-        {
-            "Key": "bb41a904-34cb-4a7c-8493-e910fb11ecbc",
-            "Value": {
-                "id": "7e692c37-22e0-4dc1-b152-f4337b259783",
-                "resourcePath": "sprites\/sBattleWindowStat\/sBattleWindowStat.yy",
-                "resourceType": "GMSprite"
             }
         },
         {
@@ -3903,6 +3903,14 @@
             }
         },
         {
+            "Key": "fa7f4213-325c-4cd5-bf83-d77d67715c4d",
+            "Value": {
+                "id": "6133a2dc-99b8-4177-96fc-ca79e12a07d5",
+                "resourcePath": "sprites\\sBattleWindowOutline\\sBattleWindowOutline.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "fc10538c-61dc-4803-8c0c-230ec0755d43",
             "Value": {
                 "id": "53de26c0-ed53-47a6-8c90-003c5e4089ff",
@@ -4040,7 +4048,9 @@
         "4ad80c5d-eeb7-4f4f-8084-84f9cce3a15e",
         "babc34bd-d867-4cbe-8848-18edc626aa80",
         "d938ad4f-bf2b-4ae6-bdcf-fd465880ec70",
-        "8539600f-1a81-4a8b-81b2-efb003fec0d1"
+        "8539600f-1a81-4a8b-81b2-efb003fec0d1",
+        "2e2bbeb5-41a0-4ff1-b614-af704a6f6adb",
+        "4426b866-afa5-4eb2-90c3-7476a3bf2e21"
     ],
     "tutorial": ""
 }
