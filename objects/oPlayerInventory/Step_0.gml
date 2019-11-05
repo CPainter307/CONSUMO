@@ -87,7 +87,7 @@ if pickup_slot != -1
 
 if pickup_slot != -1 {
 	//if we click or close our inventory
-	if oPlayerInput.key_throw || oPlayerInput.key_heavy_throw { //TODO: change to global input
+	if oPlayerInput.key_throw || oPlayerInput.key_heavy_throw {
 		if !mouse_in_inventory {
 			#region drop item into the world
 			inv_grid[# 1, pickup_slot] -= 1
@@ -117,55 +117,13 @@ if pickup_slot != -1 {
 			}
 			#endregion
 		//putting an item in an empty slot
-		} else if ss_item == 0 {
-			inv_grid[# 0, selected_slot] = inv_grid[# 0, pickup_slot]
-			inv_grid[# 1, selected_slot] = inv_grid[# 1, pickup_slot]
-			
-			inv_grid[# 0, pickup_slot] = 0
-			inv_grid[# 1, pickup_slot] = 0
-
-			pickup_slot = -1
-		//stacking two of the same items
-		} else if (ss_item[0] == ps_item[0]) {
-			if selected_slot != pickup_slot {
-				inv_grid[# 1, selected_slot] += inv_grid[# 1, pickup_slot]
-				inv_grid[# 0, pickup_slot] = 0
-				inv_grid[# 1, pickup_slot] = 0
-			}
-			pickup_slot = -1
-		//swapping two different items
-		} else {
-			var ss_item_num = inv_grid[# 1, selected_slot]
-			inv_grid[# 0, selected_slot] = inv_grid[# 0, pickup_slot]
-			inv_grid[# 1, selected_slot] = inv_grid[# 1, pickup_slot]
-			
-			inv_grid[# 0, pickup_slot] = ss_item
-			inv_grid[# 1, pickup_slot] = ss_item_num
+		} else if ss_item != 0 {
+			pickup_slot = selected_slot
 		}
 	}
 } else if (ss_item != 0  and mouse_in_inventory) {
-	//drop item into game world
-	if mouse_check_button_pressed(mb_right) {
-
-		inv_grid[# 1, selected_slot] -= 1
-		
-		//create the item
-		if instance_exists(oPlayer) {
-			var _item = inv_grid[# 0, selected_slot]
-			if _item != 0 {
-				if (object_exists(_item[0])) {
-				instance_create_layer(oPlayer.x, oPlayer.y, "Objects", _item[0])
-				}
-			}
-		}
-		//destroy item in inventory if it was the last one
-		if inv_grid[# 1, selected_slot] == 0 {
-			inv_grid[# 0, selected_slot] = 0	
-		}
-	}
-	
 	//drop pickup item into new slot
-	if oPlayerInput.key_throw || oPlayerInput.key_heavy_throw { //TODO: change to global input
+	if oPlayerInput.key_throw || oPlayerInput.key_heavy_throw {
 		pickup_slot = selected_slot
 	}
 }

@@ -29,20 +29,26 @@ repeat (inv_slots) {
 	iitem = inv_grid[# 0, ii]
 	
 	switch (ii) {
-		//if we are hovering over the slot
-		case selected_slot:
+		//if our mouse is holding an item
+		case pickup_slot:
+			draw_set_color(c_yellow)
 			draw_set_alpha(.7)
 			draw_rectangle(xx-cell_size/2, yy-cell_size/2, xx+cell_size/2, yy+cell_size/2, false)
+			draw_set_color(c_white)
 			draw_set_alpha(1)
 			if iitem != 0 {
 				draw_sprite_ext(iitem[1], 0, xx, yy, item_scale, item_scale, 0, c_white, 1)
 			}
 		break;
-
-		//if our mouse is holding an item
-		case pickup_slot:
-			if iitem != 0 {
-				draw_sprite_ext(iitem[1], 0, xx, yy, item_scale, item_scale, 0, c_white, .2)
+		//if we are hovering over the slot
+		case selected_slot:
+			if inv_grid[# 0, selected_slot] != 0 {
+				draw_set_alpha(.7)
+				draw_rectangle(xx-cell_size/2, yy-cell_size/2, xx+cell_size/2, yy+cell_size/2, false)
+				draw_set_alpha(1)
+				if iitem != 0 {
+					draw_sprite_ext(iitem[1], 0, xx, yy, item_scale, item_scale, 0, c_white, 1)
+				}
 			}
 		break;
 		
@@ -68,11 +74,5 @@ repeat (inv_slots) {
 //if we have something picked up with the mouse
 if (pickup_slot != -1) {
 	iitem = inv_grid[# 0, pickup_slot]
-
 	oPlayer.held_item = iitem[1]
-	var inum = inv_grid[# 1, pickup_slot]
-	var c = c_white;
-	if global.input_type == inputs.keyboard {
-		draw_text_color(mousex, mousey, string(inum), c,c,c,c, 1)
-	}
 }

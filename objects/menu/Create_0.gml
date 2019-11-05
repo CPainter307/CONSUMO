@@ -63,7 +63,7 @@ enum direc {
 	down_right
 }
 
-global.direction8 = true;
+global.direction8 = false;
 global.switchBlue = true;
 
 //End Other Enums
