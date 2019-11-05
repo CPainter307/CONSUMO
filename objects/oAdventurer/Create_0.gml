@@ -4,24 +4,13 @@ maxHealth = 100;
 currentHealth = 50;
 
 baseAttack = 0;
-attack = 0;
-maxattack = 30;
+attackTimer = 0;
 
 baseDefense = 0;
-defense = 0;
-maxdefense = 30;
+defenseTimer = 0;
 
 baseSpeed = 0;
-spd = 0;
-maxspeed = 30;
-
-baseElmAtk = 0;
-elmatk = 0;
-maxelmatk = 30;
-
-baseElmDef = 0
-elmdef = 0;
-maxelmdef = 30;
+speedTimer = 0;
 
 hunger = 0;
 maxhunger = 100;
@@ -50,3 +39,6 @@ shaderBuff = 0;
 
 global.fightStarted = false;
 startFight = false;
+
+battleWindow = instance_create_depth(100, 100, -y, oBattlePortrait)
+battleWindow.owner = self

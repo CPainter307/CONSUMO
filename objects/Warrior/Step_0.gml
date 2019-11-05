@@ -1,3 +1,4 @@
+event_inherited()
 //for cutscenes
 if (startFight) {
 	global.fightStarted = true;

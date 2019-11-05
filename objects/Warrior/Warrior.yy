@@ -23,33 +23,52 @@
             "enumb": 0,
             "eventtype": 3,
             "m_owner": "05c46c17-db28-4a4d-8c77-c23305a61e22"
-        },
-        {
-            "id": "045bd590-cd53-476e-88a8-5cb43d70b999",
-            "modelName": "GMEvent",
-            "mvc": "1.0",
-            "IsDnD": false,
-            "collisionObjectId": "00000000-0000-0000-0000-000000000000",
-            "enumb": 0,
-            "eventtype": 8,
-            "m_owner": "05c46c17-db28-4a4d-8c77-c23305a61e22"
         }
     ],
     "maskSpriteId": "00000000-0000-0000-0000-000000000000",
     "overriddenProperties": null,
     "parentObjectId": "a58ded2c-97b4-4b9b-93ec-8cca274f515e",
     "persistent": false,
-    "physicsAngularDamping": 0.1,
-    "physicsDensity": 0.5,
-    "physicsFriction": 0.2,
+    "physicsAngularDamping": 0,
+    "physicsDensity": 0,
+    "physicsFriction": 0,
     "physicsGroup": 0,
     "physicsKinematic": false,
-    "physicsLinearDamping": 0.1,
-    "physicsObject": false,
-    "physicsRestitution": 0.1,
-    "physicsSensor": false,
+    "physicsLinearDamping": 0,
+    "physicsObject": true,
+    "physicsRestitution": 0,
+    "physicsSensor": true,
     "physicsShape": 1,
-    "physicsShapePoints": null,
+    "physicsShapePoints": [
+        {
+            "id": "010ee70b-ece4-4ccf-9907-267eb217dcd5",
+            "modelName": "GMPoint",
+            "mvc": "1.0",
+            "x": 0,
+            "y": 0
+        },
+        {
+            "id": "50005202-5d89-4065-9c0b-7b9c1d86b021",
+            "modelName": "GMPoint",
+            "mvc": "1.0",
+            "x": 158,
+            "y": 0
+        },
+        {
+            "id": "8c25c97b-60d0-4c73-8054-fc60c7b89d75",
+            "modelName": "GMPoint",
+            "mvc": "1.0",
+            "x": 158,
+            "y": 191
+        },
+        {
+            "id": "d0084bed-e788-4467-96ea-d005e31202bf",
+            "modelName": "GMPoint",
+            "mvc": "1.0",
+            "x": 0,
+            "y": 191
+        }
+    ],
     "physicsStartAwake": true,
     "properties": null,
     "solid": false,

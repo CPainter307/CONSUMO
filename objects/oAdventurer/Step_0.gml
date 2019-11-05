@@ -1,8 +1,20 @@
 //check if dead
-if(currentHealth <= 0)
-{
+if (currentHealth <= 0) {
 	instance_destroy()
 }
+
+if attackTimer > 0 {
+	attackTimer--
+	battleWindow.cur_atk = attackTimer
+}
+if defenseTimer > 0 {
+	defenseTimer--
+	battleWindow.cur_def = defenseTimer
+} 
+if speedTimer > 0 {
+	speedTimer--
+	battleWindow.cur_spd = speedTimer
+} 
 
 //move 1
 if(((timer_m1) * (baseSpeed/100)) >= move_1[0] and instance_exists(Enemy))

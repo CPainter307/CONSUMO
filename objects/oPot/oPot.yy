@@ -4,11 +4,20 @@
     "mvc": "1.0",
     "name": "oPot",
     "eventList": [
-        
+        {
+            "id": "ab597052-33d8-4e8b-8bdf-165a099ec790",
+            "modelName": "GMEvent",
+            "mvc": "1.0",
+            "IsDnD": false,
+            "collisionObjectId": "00000000-0000-0000-0000-000000000000",
+            "enumb": 0,
+            "eventtype": 0,
+            "m_owner": "e46c859f-da8a-452e-a347-045e7bac9c87"
+        }
     ],
     "maskSpriteId": "00000000-0000-0000-0000-000000000000",
     "overriddenProperties": null,
-    "parentObjectId": "00000000-0000-0000-0000-000000000000",
+    "parentObjectId": "bc8152a0-b3e4-4b30-b47e-2341c16ab93e",
     "persistent": false,
     "physicsAngularDamping": 0.1,
     "physicsDensity": 0.5,

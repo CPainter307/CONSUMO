@@ -18,20 +18,10 @@ if (drawText and textDisappearTimer < 120 and instance_exists(inst)) {
 	else if (inst.spd < 0) var statspd = sMealWindowDec;
 	else var statspd = sMealWindowNeutral;
 	
-	if (inst.elmatk > 0) var stateatk = sMealWindowInc;
-	else if (inst.elmatk < 0) var stateatk = sMealWindowDec;
-	else var stateatk = sMealWindowNeutral;
-	
-	if (inst.elmdef > 0) var statedef = sMealWindowInc;
-	else if (inst.elmdef < 0) var statedef = sMealWindowDec;
-	else var statedef = sMealWindowNeutral;
-	
 	draw_sprite(stathp, 0, xpos+47, ypos+319);
 	draw_sprite(statatk, 0, xpos+123, ypos+319);
 	draw_sprite(statdef, 0, xpos+194, ypos+319);
 	draw_sprite(statspd, 0, xpos+262, ypos+319);
-	draw_sprite(stateatk, 0, xpos+338, ypos+319);
-	draw_sprite(statedef, 0, xpos+405, ypos+319);
 	draw_sprite(sMealWindow, 0, xpos, ypos);
 	draw_set_halign(fa_center);
 	draw_set_valign(fa_top);
@@ -47,12 +37,6 @@ if (drawText and textDisappearTimer < 120 and instance_exists(inst)) {
 
 	if (inst.spd > 0) draw_text_outlined(xpos+286, ypos+280, OFFWHITE_COL, BROWN_COL, "+" + string(inst.spd));
 	else if (inst.spd < 0) draw_text_outlined(xpos+286, ypos+280, OFFWHITE_COL, BROWN_COL, string(inst.spd));
-
-	if (inst.elmatk > 0) draw_text_outlined(xpos+364, ypos+280, OFFWHITE_COL, BROWN_COL, "+" + string(inst.elmatk));
-	else if (inst.elmatk < 0) draw_text_outlined(xpos+364, ypos+280, OFFWHITE_COL, BROWN_COL, string(inst.elmatk));
-
-	if (inst.elmdef > 0) draw_text_outlined(xpos+430, ypos+280, OFFWHITE_COL, BROWN_COL, "+" + string(inst.elmdef));
-	else if (inst.elmdef < 0) draw_text_outlined(xpos+430, ypos+280, OFFWHITE_COL, BROWN_COL, string(inst.elmdef));
 
 	draw_set_font(fBattleTextThin);
 	draw_set_color(BROWN_COL);

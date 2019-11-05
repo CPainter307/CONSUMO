@@ -97,6 +97,12 @@ if pickup_slot != -1 {
 				var _item = inv_grid[# 0, pickup_slot]
 				if _item != 0 {
 					var inst = instance_create_layer(oPlayer.x, oPlayer.y, "Objects", _item[0])
+					if inst.object_index == oRecipe {
+						inst.hp = _item[3]
+						inst.attack = _item[4]
+						inst.defense = _item[5]
+						inst.spd = _item[6]
+					}
 					if global.input_type == inputs.keyboard {
 						throw_object(inst, mouse_x, mouse_y, 20)
 					} else if global.input_type == inputs.analog_stick {
