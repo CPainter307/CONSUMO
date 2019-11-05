@@ -1,14 +1,17 @@
+//reset room
 if (oPlayerInput.key_room_reset) {
 	room_restart()	
 }
 
 
 //add gravity
-if motiony < MAX_FALL_SPEED {
-	if motiony < 0 {
-		motiony += GRAVITY
-	} else {
-		motiony += FALL_GRAVITY	
+if (!dash_lock) {
+	if motiony < MAX_FALL_SPEED {
+		if motiony < 0 {
+			motiony += GRAVITY
+		} else {
+			motiony += FALL_GRAVITY	
+		}
 	}
 }
 
@@ -52,74 +55,79 @@ if oPlayerInput.key_jump_released and has_jumped and motiony < 0{
     motiony = lerp(motiony, 0, JUMP_FALLOFF_SPEED)
 }
 
-//decelerate
-if ((!oPlayerInput.key_right and motionx > 0 ) or (!oPlayerInput.key_left and motionx < 0)) { //if try to change direction mid run, the decelleration still remains, switching directions faster.
-	motionx = lerp(motionx, 0, DECCELRATION)
-	if motionx < DECCEL_CUTOFF and motionx > -DECCEL_CUTOFF {
-		motionx = 0	
-	}
-}
-
-//moving
-if on_floor {
-	if oPlayerInput.key_right { // moving right
-		if motionx == 0 {
-			var _dust_part = instance_create_layer(x, bbox_bottom, "BGLayer", oDustParticle)
-			_dust_part.sprite_index = sStartRunParticle
-			_dust_part.image_xscale = -1
+if (!dash_lock) {
+	
+	//decelerate
+	if ((!oPlayerInput.key_right and motionx > 0 ) or (!oPlayerInput.key_left and motionx < 0)) { //if try to change direction mid run, the decelleration still remains, switching directions faster.
+		motionx = lerp(motionx, 0, DECCELRATION)
+		if motionx < DECCEL_CUTOFF and motionx > -DECCEL_CUTOFF {
+			motionx = 0	
 		}
-		motionx += ACCELERATION
-		if motionx >= MAX_SPEED {
+	}
+
+
+	//moving
+	if on_floor {
+		if oPlayerInput.key_right { // moving right
+			if motionx == 0 {
+				var _dust_part = instance_create_layer(x, bbox_bottom, "BGLayer", oDustParticle)
+				_dust_part.sprite_index = sStartRunParticle
+				_dust_part.image_xscale = -1
+			}
+			motionx += ACCELERATION
+			if motionx >= MAX_SPEED {
+				motionx -= ACCELERATION
+				motionx = lerp(motionx, MAX_SPEED, DECCELRATION)
+				at_max_speed = true
+			}
+		}
+		if oPlayerInput.key_left { // moving left
+			if motionx == 0 {
+				var _dust_part = instance_create_layer(x, bbox_bottom, "BGLayer", oDustParticle)
+				_dust_part.sprite_index = sStartRunParticle
+				_dust_part.image_xscale = 1
+			}
 			motionx -= ACCELERATION
-			motionx = lerp(motionx, MAX_SPEED, DECCELRATION)
-			at_max_speed = true
+			if motionx <= -MAX_SPEED {
+				motionx -= -ACCELERATION
+				motionx = lerp(motionx, -MAX_SPEED, DECCELRATION)
+				at_max_speed = true
+			}
 		}
-	}
-	if oPlayerInput.key_left { // moving left
-		if motionx == 0 {
-			var _dust_part = instance_create_layer(x, bbox_bottom, "BGLayer", oDustParticle)
-			_dust_part.sprite_index = sStartRunParticle
-			_dust_part.image_xscale = 1
+	} else {
+		if oPlayerInput.key_right { // moving right
+			motionx += AIR_ACCELERATION
+			if motionx >= MAX_SPEED {
+				motionx -= AIR_ACCELERATION
+				motionx = lerp(motionx, MAX_SPEED, DECCELRATION)
+			}
 		}
-		motionx -= ACCELERATION
-		if motionx <= -MAX_SPEED {
-			motionx -= -ACCELERATION
-			motionx = lerp(motionx, -MAX_SPEED, DECCELRATION)
-			at_max_speed = true
-		}
-	}
-} else {
-	if oPlayerInput.key_right { // moving right
-		motionx += AIR_ACCELERATION
-		if motionx >= MAX_SPEED {
+		if oPlayerInput.key_left { // moving left
 			motionx -= AIR_ACCELERATION
-			motionx = lerp(motionx, MAX_SPEED, DECCELRATION)
-		}
+			if motionx <= -MAX_SPEED {
+				motionx -= -AIR_ACCELERATION
+				motionx = lerp(motionx, -MAX_SPEED, DECCELRATION)
+			}
+		}	
 	}
-	if oPlayerInput.key_left { // moving left
-		motionx -= AIR_ACCELERATION
-		if motionx <= -MAX_SPEED {
-			motionx -= -AIR_ACCELERATION
-			motionx = lerp(motionx, -MAX_SPEED, DECCELRATION)
-		}
-	}	
-}
 
-//sprinting
-if (oPlayerInput.key_sprint_held) {
-	MAX_SPEED = MAX_SPRINT_SPEED
-	ACCELERATION = SPRINT_ACCELERATION
-	AIR_ACCELERATION = SPRINT_AIR_ACCELERATION
-}
+	//sprinting
+	if (oPlayerInput.key_sprint_held) {
+		MAX_SPEED = MAX_SPRINT_SPEED
+		ACCELERATION = SPRINT_ACCELERATION
+		AIR_ACCELERATION = SPRINT_AIR_ACCELERATION
+	}
 
-else {
-	MAX_SPEED = MAX_JOG_SPEED
-	ACCELERATION = JOG_ACCELERATION
-	AIR_ACCELERATION = JOG_AIR_ACCELERATION
+	else {
+		MAX_SPEED = MAX_JOG_SPEED
+		ACCELERATION = JOG_ACCELERATION
+		AIR_ACCELERATION = JOG_AIR_ACCELERATION
+	}
 }
-
 
 //collision
+
+//horizontal collision
 if (place_meeting(x+motionx, y, oWall)) {
 	var inst_list = ds_list_create();
 	instance_place_list(x+motionx, y, oWall, inst_list, false);
@@ -146,8 +154,9 @@ if (place_meeting(x+motionx, y, oWall)) {
 	}
 	ds_list_destroy(inst_list);
 }
-x += motionx
 
+
+//vertical collision
 if (place_meeting(x, y+motiony, oWall)) {
 	var inst_list = ds_list_create();
 	instance_place_list(x, y+motiony, oWall, inst_list, false);
@@ -185,7 +194,40 @@ if (place_meeting(x, y+motiony, oWall)) {
 } else {
 	on_floor = false;
 }
+
+//corner collision (WIP)
+if (place_meeting(x+motionx, y+motiony, oWall)) {
+	var inst_list = ds_list_create();
+	instance_place_list(x+motionx, y+motiony, oWall, inst_list, false);
+	for (i = 0; i < ds_list_size(inst_list); i++) {
+		var inst = inst_list[| i];
+		if (inst.active) {
+			while (!place_meeting(x+sign(motionx), y+sign(motiony), inst)) {
+				x += sign(motionx);
+				y += sign(motiony);
+			}
+		}
+	}
+	
+	var any_active = false;
+	instance_place_list(x+motionx, y+motiony, oWall, inst_list, false);
+	for (i = 0; i < ds_list_size(inst_list); i++) {
+		var inst = inst_list[| i];
+		if (inst.active) {
+			any_active = true;	
+			break;
+		}
+	}
+	if (any_active) {
+		motionx = 0;
+		motiony = 0;
+	}
+	ds_list_destroy(inst_list);
+}
+
+x += motionx
 y += motiony
+
 
 if (place_meeting(x, y+1, oHazard)) game_restart();
 

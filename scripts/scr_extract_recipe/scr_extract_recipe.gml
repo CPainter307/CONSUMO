@@ -22,7 +22,7 @@ if oPlayerInput.key_interact and place_meeting(x, y, oPlayer) {
 	inst.mealName = mealType;
 
 	//name recipe
-	//scr_extract_recipe_name();
+	scr_extract_recipe_name();
 	
 	//add quality bonus
 	switch (argument0) {
