@@ -35,8 +35,8 @@ if (global.fightStarted) {
 		Hitbox_2.movePower = move_2[1];
 		Hitbox_2.attack = baseAttack;
 		Hitbox_2.attackMultiplier = attackMultiplier;
-		sprite_index = sRogueAttacking;
-		image_index = 1;
+		//sprite_index = sRogueAttacking;
+		//image_index = 1;
 		timer_m2 = 0;
 	}
 
@@ -53,10 +53,10 @@ if (global.fightStarted) {
 		stallHungerTimer++;	
 	}
 
-	if (sprite_index == sRogueAttacking) && (image_index == 5)
+	/*if (sprite_index == sRogueAttacking) && (image_index == 5)
 		{
 			sprite_index = sRogueIdle;	
-		}
+		}*/
 	
 	if (healthThisFrame > currentHealth)
 	{

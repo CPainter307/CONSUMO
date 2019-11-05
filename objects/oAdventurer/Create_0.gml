@@ -42,3 +42,6 @@ startFight = false;
 
 battleWindow = instance_create_depth(100, 100, -y, oBattlePortrait)
 battleWindow.owner = self
+
+attackSprite = noone;
+idleSprite = noone;

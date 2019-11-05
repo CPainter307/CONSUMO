@@ -1,3 +1,9 @@
+This is a work in progress documentation on what is required to create a new room.
+
+Note that these are the minimum requirements to make a room, and if certain objects are added, 
+you many need more objects, properties, or layers in order to make those work.
+
+
 ENABLE ROOM PHYSICS
 	Gravity X = 0
 	Gravity Y = 90

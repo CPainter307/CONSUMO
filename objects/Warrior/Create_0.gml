@@ -21,3 +21,6 @@ move_2 = [60, 5];
 
 timer_m1 = 0;
 timer_m2 = 0;
+
+attackSprite = sRogueAttacking;
+idleSprite = sRogueIdle;
