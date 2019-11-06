@@ -3,4 +3,8 @@
 if (global.switchBlue)
 {
 	active = false;          
-}    
+}
+else
+{
+	active = true;	
+}

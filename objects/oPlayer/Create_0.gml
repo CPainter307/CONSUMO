@@ -42,6 +42,11 @@ pickupRadiusSize = 80
 window_set_size(1920, 1080)
 
 has_jumped = true
+dash_lock = false
+dash_incrementer = 0;
+dash_check = 15;
+post_dash_speed = 20;
+has_heavy_thrown = false;
 
 MAX_SPEED = 0
 ACCELERATION = 0
@@ -62,3 +67,4 @@ player_dir = 1
 
 hand_x = x;
 hand_y = y;
+

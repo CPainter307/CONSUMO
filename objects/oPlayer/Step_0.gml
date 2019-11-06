@@ -1,3 +1,39 @@
+#region dash lock
+
+if (dash_lock == true) {
+	dash_incrementer++;
+	if (dash_incrementer >= dash_check || on_floor) {
+		dash_lock = false;
+		dash_incrementer = 0;
+		//horizontal
+		if (motionx > 0) {	//right
+			motionx = post_dash_speed;
+		}
+		else if (motionx < 0) {	//left
+			motionx = -post_dash_speed;
+		}
+		else {	//none
+			motionx = 0;
+		}
+		//vertical
+		if (motiony < 0) {	//up
+			motiony = -post_dash_speed;
+		}
+		else if (motiony > 0) {	//down
+			motiony = post_dash_speed;
+		}
+		else {	//none
+			motiony = 0;
+		}
+	}
+}
+
+if (on_floor) {
+	has_heavy_thrown = false;
+}
+
+#endregion
+
 #region picking up
 
 
@@ -102,6 +138,5 @@ ds_list_destroy(itemRadiusList)
 #region hand tracking
 
 script_execute(scr_hand_track());
-
 
 #endregion

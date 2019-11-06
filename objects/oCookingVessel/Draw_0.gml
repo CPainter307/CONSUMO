@@ -14,8 +14,3 @@ if (ds_list_size(item_list) > 0) {
 		draw_sprite_ext(ds_list_find_value(item_list, 2).sprite_index, 0, x+xval, y+yval+5+sin(get_timer()/100000), .5, .5, 0, c_white, 1)
 	}
 }
-
-
-//--------------DEBUG RADIUS
-//draw_set_alpha(.5)
-//draw_set_color(c_blue)
