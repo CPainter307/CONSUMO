@@ -1711,6 +1711,14 @@
             }
         },
         {
+            "Key": "6b5967e2-93ae-4a18-92ac-b92d9d33afa8",
+            "Value": {
+                "id": "2d9bc93f-d92d-4e85-a4a0-7c7a0feebc3d",
+                "resourcePath": "sprites\\sVesselWindow\\sVesselWindow.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "6bcfe450-6ef9-40c0-b343-1700f6f624f6",
             "Value": {
                 "id": "af45a468-6df9-46c5-93ff-45fb47dd9fde",
