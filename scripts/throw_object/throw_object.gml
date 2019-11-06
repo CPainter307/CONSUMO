@@ -10,6 +10,8 @@ var _x = argument1
 var _y = argument2
 var _spd = argument3
 
+scr_play_throw_sound()
+
 var dir = point_direction(oPlayer.x, oPlayer.y, _x, _y)
 if global.input_type == inputs.analog_stick {
 	dir = point_direction(0, 0, _x, _y)

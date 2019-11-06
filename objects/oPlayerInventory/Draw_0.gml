@@ -28,7 +28,7 @@ repeat (inv_slots) {
 	//item and slot
 	iitem = inv_grid[# 0, ii]
 	
-	switch (ii) {
+	switch (ii) {	
 		//if our mouse is holding an item
 		case pickup_slot:
 			draw_set_color(c_yellow)
@@ -39,9 +39,17 @@ repeat (inv_slots) {
 			if iitem != 0 {
 				draw_sprite_ext(iitem[1], 0, xx, yy, item_scale, item_scale, 0, c_white, 1)
 			}
+			if selected_slot == pickup_slot {
+				//set to grab cursor if hovering over an item
+				if oCursor.sprite_index != sGrabCursor {
+					oCursor.sprite_index = sGrabCursor
+				}
+			}
 		break;
+		
 		//if we are hovering over the slot
 		case selected_slot:
+			//only highlight if there's an item in the slot
 			if inv_grid[# 0, selected_slot] != 0 {
 				draw_set_alpha(.7)
 				draw_rectangle(xx-cell_size/2, yy-cell_size/2, xx+cell_size/2, yy+cell_size/2, false)
@@ -49,6 +57,12 @@ repeat (inv_slots) {
 				if iitem != 0 {
 					draw_sprite_ext(iitem[1], 0, xx, yy, item_scale, item_scale, 0, c_white, 1)
 				}
+				//set to grab cursor if hovering over an item
+				if oCursor.sprite_index != sGrabCursor {
+					oCursor.sprite_index = sGrabCursor
+				}
+			} else if oCursor.sprite_index != sPointerCursor { //set back to pointer if in a non-highlighted slot
+				oCursor.sprite_index = sPointerCursor
 			}
 		break;
 		

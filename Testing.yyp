@@ -911,6 +911,14 @@
             }
         },
         {
+            "Key": "3b3d5a50-c863-4378-9288-67369332c08c",
+            "Value": {
+                "id": "68da760c-0b7a-42fe-a757-57687ebb44cc",
+                "resourcePath": "sprites\\sPointerCursor\\sPointerCursor.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "3b868b0d-ac67-45c9-bd47-4f4138f01fa9",
             "Value": {
                 "id": "c8033c6a-5ce8-4a91-92fa-bd116d196433",
@@ -1068,6 +1076,14 @@
                 "id": "9d57f65d-8218-4d47-91d1-cce38ad7fe64",
                 "resourcePath": "scripts\/scr_play_chop_sound\/scr_play_chop_sound.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "46488402-3982-4432-b1bf-e2c097b48ba6",
+            "Value": {
+                "id": "7e9c94a7-7d9c-49c8-bcc2-39b04318a01d",
+                "resourcePath": "objects\\oCursor\\oCursor.yy",
+                "resourceType": "GMObject"
             }
         },
         {
@@ -1964,6 +1980,14 @@
                 "id": "04901527-64f7-45af-a4fc-4c20fca09dd0",
                 "resourcePath": "objects\/oGameGUI\/oGameGUI.yy",
                 "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "7dec5662-fd55-4b3b-a2bb-74f8fb080213",
+            "Value": {
+                "id": "17b059dc-5195-448e-ad15-bd3498f512e1",
+                "resourcePath": "sprites\\sGrabCursor\\sGrabCursor.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -3431,6 +3455,14 @@
             }
         },
         {
+            "Key": "d93c1336-4463-4db0-98b9-ea975ff79168",
+            "Value": {
+                "id": "8be41f52-5d96-49cc-9871-279977fd803b",
+                "resourcePath": "scripts\\scr_play_throw_sound\\scr_play_throw_sound.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "d9a401e3-03e1-462a-bd1c-a4c60ed22c44",
             "Value": {
                 "id": "be8ae500-3b34-489f-a125-52065ce67e52",
@@ -4058,6 +4090,7 @@
         "07e90023-23f9-49cd-a009-a8e7c28e0153",
         "580ccf27-0190-4471-be0a-9ecbb0bc53ed",
         "31021679-af37-447d-a2b6-b264779b99cf",
+        "d93c1336-4463-4db0-98b9-ea975ff79168",
         "c29ad4b3-24cc-4185-98ce-983c71cac0eb",
         "9490bc48-3d40-4c3c-a786-d4d443841f37",
         "ba8663ee-3034-4876-977b-e0162afcb0c8",

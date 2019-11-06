@@ -49,7 +49,10 @@ if global.input_type == inputs.keyboard {
 	//set selected slot to mouse position
 	selected_slot = m_slotx + (m_sloty*inv_slot_width)
 	if !mouse_in_inventory {
-		selected_slot = -1	
+		selected_slot = -1
+		if oCursor.sprite_index != sPointerCursor { //set back to pointer if we are outside of inventory
+			oCursor.sprite_index = sPointerCursor
+		}
 	}
 	#endregion
 } 
@@ -116,6 +119,9 @@ if pickup_slot != -1 {
 				pickup_slot = -1
 			}
 			#endregion
+		//unequip currently held item
+		} else if selected_slot == pickup_slot {
+			pickup_slot = -1	
 		//putting an item in an empty slot
 		} else if ss_item != 0 {
 			pickup_slot = selected_slot
