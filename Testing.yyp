@@ -2407,6 +2407,14 @@
             }
         },
         {
+            "Key": "9a395242-5307-471e-b660-8b528e7bab18",
+            "Value": {
+                "id": "db15052b-fe74-42c3-9fa3-9d940d9e07e0",
+                "resourcePath": "sounds\\snd_object_land\\snd_object_land.yy",
+                "resourceType": "GMSound"
+            }
+        },
+        {
             "Key": "9a79770a-43f4-44fa-b505-387bd0f86f3d",
             "Value": {
                 "id": "ddc74be7-ea37-4c72-b441-3f792dc57136",
@@ -3327,6 +3335,14 @@
             }
         },
         {
+            "Key": "d0f4fc3a-41b4-4a7b-9ea1-e1090a9fb720",
+            "Value": {
+                "id": "4e9a7639-8016-4272-b777-84f1f9251886",
+                "resourcePath": "scripts\\scr_pitchshift_sound\\scr_pitchshift_sound.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "d1ec92aa-585d-45e8-879b-efeb90049f45",
             "Value": {
                 "id": "06d7e6e9-ffd3-420c-8001-0cabd6d9a169",
@@ -4099,6 +4115,7 @@
         "580ccf27-0190-4471-be0a-9ecbb0bc53ed",
         "31021679-af37-447d-a2b6-b264779b99cf",
         "d93c1336-4463-4db0-98b9-ea975ff79168",
+        "d0f4fc3a-41b4-4a7b-9ea1-e1090a9fb720",
         "c29ad4b3-24cc-4185-98ce-983c71cac0eb",
         "9490bc48-3d40-4c3c-a786-d4d443841f37",
         "ba8663ee-3034-4876-977b-e0162afcb0c8",

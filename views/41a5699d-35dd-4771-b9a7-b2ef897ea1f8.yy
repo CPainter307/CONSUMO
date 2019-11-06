@@ -11,7 +11,8 @@
         "eee69803-dbdd-4300-b822-6d2220e875aa",
         "11706cde-6698-4b7e-8da5-7dca53e3d1fd",
         "791d49a5-f191-4df9-be37-4f43bb28dcfc",
-        "387a3fb6-4944-4cad-bc74-9ec6b2e3af7d"
+        "387a3fb6-4944-4cad-bc74-9ec6b2e3af7d",
+        "9a395242-5307-471e-b660-8b528e7bab18"
     ],
     "filterType": "GMSound",
     "folderName": "Pickup and Throw",

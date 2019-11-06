@@ -50,7 +50,7 @@ if global.input_type == inputs.keyboard {
 	selected_slot = m_slotx + (m_sloty*inv_slot_width)
 	if !mouse_in_inventory {
 		selected_slot = -1
-		if oCursor.sprite_index != sPointerCursor { //set back to pointer if we are outside of inventory
+		if oCursor.sprite_index != sPointerCursor and show_inventory { //set back to pointer if we are outside of inventory
 			oCursor.sprite_index = sPointerCursor
 		}
 	}

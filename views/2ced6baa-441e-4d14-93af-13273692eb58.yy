@@ -13,7 +13,8 @@
         "07e90023-23f9-49cd-a009-a8e7c28e0153",
         "580ccf27-0190-4471-be0a-9ecbb0bc53ed",
         "31021679-af37-447d-a2b6-b264779b99cf",
-        "d93c1336-4463-4db0-98b9-ea975ff79168"
+        "d93c1336-4463-4db0-98b9-ea975ff79168",
+        "d0f4fc3a-41b4-4a7b-9ea1-e1090a9fb720"
     ],
     "filterType": "GMScript",
     "folderName": "Sound",

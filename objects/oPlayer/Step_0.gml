@@ -63,73 +63,32 @@ if _door != noone {
 	}
 }
 
+//this lets us pick up items if click on them in the world
+if pickupRadius > 0 and !oPlayerInventory.show_inventory{
+	for (var i = 0; i < pickupRadius; i++;) {
+		var nearest_item = itemRadiusList[| i]
+		if oCursor.sprite_index != sPointerCursor {
+			oCursor.sprite_index = sPointerCursor
+		}
+		if !collision_point(mouse_x, mouse_y, nearest_item, true, false) {
+			continue;
+		}
+		if oCursor.sprite_index != sGrabCursor {
+			oCursor.sprite_index = sGrabCursor
+		}
+		if mouse_check_button_pressed(mb_left) {
+			add_to_inventory(nearest_item)
+		}
+		break
+	}
+}
+
+
 // if we press pickup and we are colliding with some holdable objects, then add the nearest one to our inventory
 if oPlayerInput.key_interact {
 	if pickupRadius > 0 {
 		var nearest_item = itemRadiusList[| 0]
-		var ni_array
-		if nearest_item.object_index == oRecipe {
-			ni_array = [nearest_item.object_index, nearest_item.sprite_index, nearest_item.name, nearest_item.hp, nearest_item.attack, nearest_item.defense, nearest_item.spd]
-			with oPlayerInventory {
-				var ds_inv = global.inventory
-				var picked_up = false
-			
-				//add item to empty slot if it doesnt already exist
-				if (!picked_up) {
-					var yy = 0; repeat (inv_slots) {
-						if ds_inv[# 0, yy] == 0 {
-							ds_inv[# 0, yy] = ni_array
-							ds_inv[# 1, yy] += 1
-							picked_up = true
-							break;
-						} else {
-							yy += 1	
-						}
-	 				}
-				}
-				//destroy item if picked up
-				if picked_up {
-					instance_destroy(nearest_item)	
-				}
-			}
-		} else {
-			ni_array = [nearest_item.object_index, nearest_item.sprite_index, nearest_item.name]
-			with oPlayerInventory {
-				var ds_inv = global.inventory
-				var picked_up = false
-			
-				//check if item already exists in inventory
-				var yy = 0; repeat (inv_slots) {
-					var ds_inv_slot = ds_inv[# 0, yy]
-					if ds_inv_slot != 0 {
-						if ds_inv_slot[0] == ni_array[0] {
-							ds_inv[# 1, yy] += 1
-							picked_up = true
-							break;
-						}
-					}
-					yy += 1
-		 		}
-			
-				//add item to empty slot if it doesnt already exist
-				if (!picked_up) {
-					var yy = 0; repeat (inv_slots) {
-						if ds_inv[# 0, yy] == 0 {
-							ds_inv[# 0, yy] = ni_array
-							ds_inv[# 1, yy] += 99  ///////// SET THIS BACK TO 1!!!
-							picked_up = true
-							break;
-						} else {
-							yy += 1	
-						}
-		 			}
-				}
-				//destroy item if picked up
-				if picked_up {
-					instance_destroy(nearest_item)	
-				}
-			}
-		} 
+		add_to_inventory(nearest_item) 
 	}
 }
 ds_list_destroy(itemRadiusList)

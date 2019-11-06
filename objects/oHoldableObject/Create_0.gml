@@ -12,6 +12,7 @@ image_xscale = .5
 image_yscale = .5
 
 pickUpSound = snd_pickup_generic;
+landSound = snd_object_land;
 
 var fix;
 fix = physics_fixture_create()
@@ -22,8 +23,10 @@ physics_fixture_set_friction(fix, 1)
 physics_fixture_set_density(fix, 0.5);
 physics_fixture_bind(fix, self)
 physics_fixture_delete(fix)
-phy_active = true 
+phy_active = true
 
 apply_gravity = true
 
 mass = 270
+
+play_hit_sound = true
