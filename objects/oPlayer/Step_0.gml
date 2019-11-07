@@ -2,25 +2,33 @@
 
 if (dash_lock == true) {
 	dash_incrementer++;
-	if (dash_incrementer >= dash_check || on_floor) {
+	var check = dash_check;
+	if (motionx != 0 && motiony != 0) {	//diagonal check
+		check = dash_check_diag;	
+	}
+	if (dash_incrementer >= check || on_floor) {
 		dash_lock = false;
 		dash_incrementer = 0;
+		var spd = post_dash_speed;
+		if (motionx != 0 && motiony != 0) {	//diagonal movement
+			spd = post_dash_speed_diag;
+		}
 		//horizontal
 		if (motionx > 0) {	//right
-			motionx = post_dash_speed;
+			motionx = spd;
 		}
 		else if (motionx < 0) {	//left
-			motionx = -post_dash_speed;
+			motionx = -spd;
 		}
 		else {	//none
 			motionx = 0;
 		}
 		//vertical
 		if (motiony < 0) {	//up
-			motiony = -post_dash_speed;
+			motiony = -spd;
 		}
 		else if (motiony > 0) {	//down
-			motiony = post_dash_speed;
+			motiony = spd;
 		}
 		else {	//none
 			motiony = 0;

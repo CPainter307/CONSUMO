@@ -108,31 +108,33 @@ with _inst {
 		}
 	}
 	//heavy throwing
-	if (!oPlayer.on_floor && oPlayerInput.key_heavy_throw && !oPlayer.has_heavy_thrown) {
-		oPlayer.motionx = 0;
-		oPlayer.motiony = 0;
-		oPlayer.dash_lock = true;
-		if (direction8) {
-			oPlayer.motionx = (-_x * _spd);
-			oPlayer.motiony = (-_y * _spd);
-		}
-		else {
-			oPlayer.motionx = (-_dirx/30);
-			oPlayer.motiony = (-_diry/30);
-		}
-		oPlayer.has_heavy_thrown = true;
-	}
+	var heavy_sign = 1;
+	//if (!oPlayer.on_floor && oPlayerInput.key_heavy_throw && !oPlayer.has_heavy_thrown) {
+	//	oPlayer.motionx = 0;
+	//	oPlayer.motiony = 0;
+	//	oPlayer.dash_lock = true;
+	//	heavy_sign = -1;
+	//	if (direction8) {
+	//		oPlayer.motionx = (_x * _spd);
+	//		oPlayer.motiony = (_y * _spd);
+	//	}
+	//	else {
+	//		oPlayer.motionx = (_dirx/30);
+	//		oPlayer.motiony = (_diry/30);
+	//	}
+	//	oPlayer.has_heavy_thrown = true;
+	//}
 	//throws object
 	apply_gravity = false
 	//reapplies gravity once it's hit a wall or 10 frames passed
 	alarm_set(0, 10)
 	if direction8 {
-		phy_speed_x = _x * _spd * 30;
-		phy_speed_y = _y * _spd * 30;
+		phy_speed_x = heavy_sign * _x * _spd * 30;
+		phy_speed_y = heavy_sign * _y * _spd * 30;
 		physics_apply_impulse(phy_position_x,phy_position_y,_x,_y);
 	} else {
-		phy_speed_x = _dirx;
-		phy_speed_y = _diry;
+		phy_speed_x = heavy_sign * _dirx;
+		phy_speed_y = heavy_sign * _diry;
 		physics_apply_impulse(phy_position_x,phy_position_y,_dirx,_diry);
 	}
 }

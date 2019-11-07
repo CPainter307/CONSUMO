@@ -125,6 +125,70 @@ if (!dash_lock) {
 	}
 }
 
+//dash
+var direction8 = global.direction8;
+var _x = 0;
+var _y = 0;
+var spd = oPlayer.dash_speed;
+if (direction8) {
+	var dir8 = scr_get_8_dir();
+	switch (dir8) {
+		case direc.right:
+			_x = 1;
+			_y = 0;
+			break;
+		case direc.up_right:
+			_x = 1;
+			_y = -1;
+			spd = oPlayer.dash_speed_diag;
+			break;
+		case direc.up:
+			_x = 0;
+			_y = -1;
+			break;
+		case direc.up_left:
+			_x = -1;
+			_y = -1;
+			spd = oPlayer.dash_speed_diag;
+			break;
+		case direc.left:
+			_x = -1;
+			_y = 0;
+			break;
+		case direc.down_left:
+			_x = -1;
+			_y = 1;
+			spd = oPlayer.dash_speed_diag;
+			break;
+		case direc.down:
+			_x = 0;
+			_y = 1;
+			break;
+		case direc.down_right:
+			_x = 1;
+			_y = 1;
+			spd = oPlayer.dash_speed_diag;
+			break;
+		default:
+			//do nothing
+	}
+}
+if (!oPlayer.on_floor && oPlayerInput.key_heavy_throw && !oPlayer.has_heavy_thrown) {
+	oPlayer.motionx = 0;
+	oPlayer.motiony = 0;
+	oPlayer.dash_lock = true;
+	//heavy_sign = -1;
+	if (direction8) {
+		oPlayer.motionx = (_x * spd);
+		oPlayer.motiony = (_y * spd);
+	}
+	else {
+		oPlayer.motionx = (_dirx/30);
+		oPlayer.motiony = (_diry/30);
+	}
+	oPlayer.has_heavy_thrown = true;
+}
+
 //collision
 
 //horizontal collision
