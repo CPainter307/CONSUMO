@@ -26,4 +26,4 @@ phy_active = true
 
 apply_gravity = true
 
-mass = 270
+mass = 1620 //originally 270

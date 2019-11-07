@@ -60,8 +60,14 @@ with _inst {
 					_y = 1;
 					break;
 				default:
-					_x = 0;
-					_y = 1;
+					if (oPlayer.player_dir == -1) {	//throw item right
+						_x = 1;
+						_y = 0;
+					}
+					else {	//throw item left
+						_x = -1;
+						_y = 0;
+					}
 					// Had to make this do something. Otherwise, a heavy throw with no directional input would shoot our character into the stratosphere
 			}
 		}
@@ -103,7 +109,14 @@ with _inst {
 					_y = 1;
 					break;
 				default:
-					//do nothing
+					if (oPlayer.player_dir == -1) {	//throw item right
+						_x = 1;
+						_y = 0;
+					}
+					else {	//throw item left
+						_x = -1;
+						_y = 0;
+					}
 			}
 		}
 	}
@@ -127,7 +140,7 @@ with _inst {
 	//throws object
 	apply_gravity = false
 	//reapplies gravity once it's hit a wall or 10 frames passed
-	alarm_set(0, 10)
+	alarm_set(0, 5) //NOTE: SHOULD BE 10 INSTEAD OF 120
 	if direction8 {
 		phy_speed_x = heavy_sign * _x * _spd * 30;
 		phy_speed_y = heavy_sign * _y * _spd * 30;

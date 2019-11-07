@@ -2,7 +2,7 @@ show_inventory = false
 inv_slots = 12
 inv_slot_width = 3
 inv_slot_height = 4
-lineToggle = true;
+lineToggle = false;
 global.inventory = ds_grid_create(2, 12)
 //var _item = [fish.object_index, fish.sprite_index, fish.name]
 

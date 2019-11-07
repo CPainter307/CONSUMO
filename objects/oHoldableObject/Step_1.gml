@@ -2,6 +2,9 @@
 if apply_gravity {
 	physics_apply_force(phy_position_x,phy_position_y,0,phy_mass*mass)
 }
+else {
+	physics_apply_force(phy_position_x,phy_position_y,0,-phy_mass*mass);
+}
 
 if !apply_gravity {
 	if alarm_get(0) <= 0 {

@@ -655,6 +655,14 @@
             }
         },
         {
+            "Key": "294cfd16-0136-4c7c-95b2-a8226594faea",
+            "Value": {
+                "id": "70c2bcdd-39fa-46c5-92a6-16a3273c908e",
+                "resourcePath": "sprites\\sTargetTempBlue\\sTargetTempBlue.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "2c27fb43-7e9c-4239-a765-c27b057171d8",
             "Value": {
                 "id": "94ebbc06-0127-4ed1-9ff2-e1083fabb568",
@@ -1719,6 +1727,14 @@
             }
         },
         {
+            "Key": "6caabd8a-3b61-49a8-89e7-01594473b02b",
+            "Value": {
+                "id": "08e8a941-5820-4dff-b837-57e61376db61",
+                "resourcePath": "sprites\\sTargetTempRed\\sTargetTempRed.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "6d7d8c51-c490-4898-bf5b-2bf84b65cbfd",
             "Value": {
                 "id": "5befbac6-4fa3-415d-8dc7-2700090a7ef5",
@@ -2532,6 +2548,14 @@
                 "id": "13f120a4-958a-44b8-994b-053a81d29f35",
                 "resourcePath": "shaders\/shHit\/shHit.yy",
                 "resourceType": "GMShader"
+            }
+        },
+        {
+            "Key": "a3f9a36b-b3b7-47f1-9fb9-1c9026feaf0f",
+            "Value": {
+                "id": "35dd908b-0bf9-440b-9897-6cac700375a0",
+                "resourcePath": "objects\\oThrowTargetTemp\\oThrowTargetTemp.yy",
+                "resourceType": "GMObject"
             }
         },
         {

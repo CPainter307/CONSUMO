@@ -9,7 +9,22 @@ if (place_meeting(x, y, oHoldableObject) && !isHit) {
 	}
 }
 
+//green timer
+if (isHit) {
+	if (hit_i < hit_timer) {
+		hit_i++;
+	}
+	else {
+		isHit = false;
+		hit_i = 0;
+	}
+}
+
+
 //sprite change
 if (isHit) {
-	sprite_index = sTargetGreen;
+	sprite_index = sTargetTempBlue;
+}
+else {
+	sprite_index = sTargetTempRed;
 }

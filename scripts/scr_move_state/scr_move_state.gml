@@ -170,7 +170,14 @@ if (direction8) {
 			spd = oPlayer.dash_speed_diag;
 			break;
 		default:
-			//do nothing
+			if (oPlayer.player_dir == -1) {	//throw item right
+				_x = 1;
+				_y = 0;
+			}
+			else {	//throw item left
+				_x = -1;
+				_y = 0;
+			}
 	}
 }
 if (!oPlayer.on_floor && oPlayerInput.key_heavy_throw && !oPlayer.has_heavy_thrown) {
