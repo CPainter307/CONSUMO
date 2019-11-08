@@ -1879,6 +1879,14 @@
             }
         },
         {
+            "Key": "763f11b7-736f-4743-8c08-1ce4c8fafed7",
+            "Value": {
+                "id": "4b361a2c-4f0f-40d7-921c-9d92ef63413f",
+                "resourcePath": "shaders\\shWhiteFlash\\shWhiteFlash.yy",
+                "resourceType": "GMShader"
+            }
+        },
+        {
             "Key": "770609e3-dbfe-4531-8c3d-986247ea7496",
             "Value": {
                 "id": "ac3dd036-fb0c-43f6-8eaa-0b279052d50f",

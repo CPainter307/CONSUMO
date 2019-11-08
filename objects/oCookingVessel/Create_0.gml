@@ -20,3 +20,5 @@ textDisappearTimer = 0;
 mealType = "";
 mealType2 = "";
 mealType3 = "";
+
+shaderBuff = 0

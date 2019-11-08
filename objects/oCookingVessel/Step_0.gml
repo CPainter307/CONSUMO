@@ -22,6 +22,9 @@ if vesselRadius > 0 {
 		ds_list_add(item_list, vesselList[| 0]);	
 		vesselList[| 0].beingCooked = true;
 		
+		//starts pot flash effect
+		shaderBuff = 1
+		
 		//play potdrop sound
 		switch (ds_list_size(item_list)) {
 			case 1:

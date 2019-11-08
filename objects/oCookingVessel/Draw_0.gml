@@ -1,6 +1,29 @@
 draw_self()
 
 if (ds_list_size(item_list) > 0) {
+
+	// pot flash effect
+	if (shaderBuff > 0) {
+		image_xscale = lerp(image_xscale, 1.5, 0.5)
+		image_yscale = lerp(image_yscale, 1.5, 0.5)
+		shaderBuff -= 0.15;
+	
+		gpu_set_blendmode(bm_add);
+	
+		shader_set(shWhiteFlash);
+		shdAlpha = shader_get_uniform(shWhiteFlash, "_alpha");
+		shader_set_uniform_f(shdAlpha, shaderBuff);
+	
+		draw_self();
+	
+		shader_reset();
+		gpu_set_blendmode(bm_normal);
+	} else {
+		image_xscale = lerp(image_xscale, 1, 0.6)
+		image_yscale = lerp(image_yscale, 1, 0.6)	
+	}
+	
+	// ingredient window
 	var yval = 75
 	var xval = 45
 	draw_sprite(sVesselWindow, 0, x, y+yval+sin(get_timer()/100000))
