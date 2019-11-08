@@ -140,7 +140,7 @@ with _inst {
 	//throws object
 	apply_gravity = false
 	//reapplies gravity once it's hit a wall or 10 frames passed
-	alarm_set(0, 5) //NOTE: SHOULD BE 10 INSTEAD OF 120
+	//alarm_set(0, 5) //NOTE: SHOULD BE 10 INSTEAD OF 120
 	if direction8 {
 		phy_speed_x = heavy_sign * _x * _spd * 30;
 		phy_speed_y = heavy_sign * _y * _spd * 30;

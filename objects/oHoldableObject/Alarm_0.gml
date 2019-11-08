@@ -1,2 +1,2 @@
 ///@desc applies gravity after thrown
-apply_gravity = false;
+//apply_gravity = false;
