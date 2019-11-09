@@ -17,7 +17,7 @@ vesselRadius = collision_circle_list(x, y, 80, oIngredient, false, true, vesselL
 
 if vesselRadius > 0 {
 	//if item is not held and pot is not full
-	if (ds_list_size(item_list) < 3) and !vesselList[| 0].apply_gravity { // if the item is currently being thrown, then it will be added to the pot
+	if (ds_list_size(item_list) < 3) { // if the item is currently being thrown, then it will be added to the pot
 		//add conditions for prepared item
 		ds_list_add(item_list, vesselList[| 0]);	
 		vesselList[| 0].beingCooked = true;

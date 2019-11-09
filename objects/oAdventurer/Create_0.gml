@@ -45,3 +45,8 @@ battleWindow.owner = self
 
 attackSprite = noone;
 idleSprite = noone;
+
+I_FRAME_LENGTH = 30
+i_frames = I_FRAME_LENGTH
+
+is_vulnerable = true
