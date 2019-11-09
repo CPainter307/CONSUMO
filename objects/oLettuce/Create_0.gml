@@ -1,8 +1,8 @@
 event_inherited();
 prepared = false;
+enum_type = ingr.oLettuce;
 name = "Lettuce ";
 type = "booster";
-ing_id = 6;
 hp = 0;
 attack = 0;
 defense = 3;
@@ -11,7 +11,8 @@ special = false;
 runeSprite = sLettuceRune;
 classification = "vegetable";
 adjective = "Green ";
-chops = 0;
-
-preppedVersion = oPreparedLettuce;
 pickUpSound = snd_pickup_herb;
+
+//sprites
+unprepared_sprite = sLettuce;
+prepared_sprite = sPreparedLettuce;
