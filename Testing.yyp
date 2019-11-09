@@ -2063,14 +2063,6 @@
             }
         },
         {
-            "Key": "7f0a756b-06a2-4172-8c69-02c5e332de50",
-            "Value": {
-                "id": "b5729379-2018-4448-bd38-2f94e54a695b",
-                "resourcePath": "objects\/oAdvStatus\/oAdvStatus.yy",
-                "resourceType": "GMObject"
-            }
-        },
-        {
             "Key": "7fda3cfd-b0d0-4792-839b-50ccaf1ec577",
             "Value": {
                 "id": "30ed9dfd-4cfe-4f82-9d68-9d003518792b",
@@ -2396,14 +2388,6 @@
                 "id": "62a90b85-9102-421d-9b6a-2b98026cb5bd",
                 "resourcePath": "sounds\/snd_hacky_voice_3\/snd_hacky_voice_3.yy",
                 "resourceType": "GMSound"
-            }
-        },
-        {
-            "Key": "97729a27-8cd0-445a-9fd9-e031d6cbd042",
-            "Value": {
-                "id": "32e7df1f-8b33-4b9d-8043-67404d42a662",
-                "resourcePath": "objects\/oArrowDown\/oArrowDown.yy",
-                "resourceType": "GMObject"
             }
         },
         {
@@ -2799,14 +2783,6 @@
             }
         },
         {
-            "Key": "acd15b18-e51e-4f24-9a3b-b6f65ac779ee",
-            "Value": {
-                "id": "f7484cf1-9c20-40e5-8eb6-82d965fd862b",
-                "resourcePath": "objects\/oAdventurerProto\/oAdventurerProto.yy",
-                "resourceType": "GMObject"
-            }
-        },
-        {
             "Key": "ae2b6714-ea5e-4ab8-8b58-97db1aabac8e",
             "Value": {
                 "id": "a9b2d93c-f02a-498a-8a26-a1d38f855a6d",
@@ -2891,6 +2867,14 @@
             "Value": {
                 "id": "12affb43-d0dc-48c7-a5b1-8890f78d799d",
                 "resourcePath": "objects\/Wizard\/Wizard.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "b388bfbf-7ad8-4c39-ad39-f3eb29e1ca79",
+            "Value": {
+                "id": "b4f55b97-aac1-4e16-92fa-9297542b2120",
+                "resourcePath": "objects\\oProjectile\\oProjectile.yy",
                 "resourceType": "GMObject"
             }
         },
@@ -3631,6 +3615,14 @@
             }
         },
         {
+            "Key": "de08985e-da86-4c33-984a-2b4fa9a64fcd",
+            "Value": {
+                "id": "9364e6a8-afd1-4cfa-90bc-b83f0b020dc1",
+                "resourcePath": "objects\\eFrogGeneral\\eFrogGeneral.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "de6db9be-abae-4a97-8c72-eb26d906c3d5",
             "Value": {
                 "id": "8a19b0f5-3db1-4a79-a919-a21418a66be5",
@@ -3991,6 +3983,14 @@
             }
         },
         {
+            "Key": "f8e94650-1409-4f29-a466-4baa8e384f23",
+            "Value": {
+                "id": "52977bd9-2c34-4489-bf18-4ccc0dbeec18",
+                "resourcePath": "sprites\\sFrogGeneral\\sFrogGeneral.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "f910e5f8-3f9f-4072-ab95-ebae909cd3b1",
             "Value": {
                 "id": "94485a8b-0d2c-4ce5-b552-4384e542006d",
@@ -4084,14 +4084,6 @@
                 "id": "53de26c0-ed53-47a6-8c90-003c5e4089ff",
                 "resourcePath": "views\/fc10538c-61dc-4803-8c0c-230ec0755d43.yy",
                 "resourceType": "GMFolder"
-            }
-        },
-        {
-            "Key": "fc57735a-0ed7-4097-b614-9c34d4ee1d01",
-            "Value": {
-                "id": "3edf4091-656c-40f8-8adf-4cf16cf67279",
-                "resourcePath": "objects\/oNeutral\/oNeutral.yy",
-                "resourceType": "GMObject"
             }
         },
         {

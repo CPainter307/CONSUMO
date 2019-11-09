@@ -1,4 +1,4 @@
-Class = "Enemy";
+ Class = "Enemy";
 
 maxHealth = 200;
 //debug only

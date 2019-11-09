@@ -1,10 +1,7 @@
 event_inherited()
 //for cutscenes
-if (startFight) {
-	global.fightStarted = true;
-} else {
-	global.fightStarted = false;	
-}
+global.fightStarted = true;
+
 
 //check if dead
 if (global.fightStarted) {

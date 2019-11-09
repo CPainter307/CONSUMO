@@ -16,6 +16,20 @@ if speedTimer > 0 {
 	battleWindow.cur_spd = speedTimer
 } 
 
+//i frames
+if place_meeting(x, y, Hitbox) and is_vulnerable {
+	is_vulnerable = false
+	i_frames = I_FRAME_LENGTH
+}
+if !is_vulnerable {
+	image_alpha = .5
+	i_frames--
+}
+if i_frames <= 0 {
+	image_alpha = 1
+	is_vulnerable = true
+}
+
 //move 1
 //This is our first attack
 if(((timer_m1) * (baseSpeed/100)) >= move_1[0] and instance_exists(Enemy))

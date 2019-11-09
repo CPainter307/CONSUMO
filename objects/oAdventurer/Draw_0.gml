@@ -1,11 +1,13 @@
-draw_set_alpha(1);
-draw_self();
 if (global.fightStarted) {
 	draw_healthbar(x-50, y+100, x+50, y+125, (currentHealth/maxHealth) * 100, c_blue, c_red, c_lime, 0, true, true)
 }
 
+draw_self()
+
+
+
 if (flash > 0)
-{
+ {
 	flash -= 0.25;
 	
 	gpu_set_blendmode(bm_add);
@@ -14,7 +16,7 @@ if (flash > 0)
 	shdAlpha1 = shader_get_uniform(shHit2, "_alpha");
 	shader_set_uniform_f(shdAlpha1, flash);
 	
-	draw_self();
+	draw_self()
 	
 	shader_reset();
 	gpu_set_blendmode(bm_normal);
@@ -30,7 +32,7 @@ if (shaderBuff > 0)
 	shdAlpha = shader_get_uniform(shBuff, "_alpha");
 	shader_set_uniform_f(shdAlpha, shaderBuff);
 	
-	draw_self();
+	draw_self()
 	
 	shader_reset();
 	gpu_set_blendmode(bm_normal);

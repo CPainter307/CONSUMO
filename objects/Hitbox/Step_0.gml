@@ -6,6 +6,9 @@ if _num > 0
 {
     for (var i = 0; i < _num; i++)
     {
+		if !_list[| i].is_vulnerable {
+			break	
+		}
 		damageToTake = 0;
 		
 		if(targetClass == _list[| i].Class)
@@ -23,5 +26,5 @@ if _num > 0
 }
 	
 ds_list_destroy(_list);
-instance_destroy();
+//instance_destroy();
 
