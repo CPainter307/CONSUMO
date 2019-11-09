@@ -8,10 +8,13 @@ objDepth = depth;
 placed = false;
 collision_type = "circle";
 
-throw_speed = 2000;
-gravity_loc = 0.25
+throw_speed = 1000;
+gravity_loc = 100;
 meter_per_pix =  0.1
 update_speed = 120
+grav = gravity_loc; // meter/sec^2
+grav = grav / meter_per_pix   //  pix/sec^2
+grav = grav /  sqr(update_speed)
 
 image_xscale = .5
 image_yscale = .5

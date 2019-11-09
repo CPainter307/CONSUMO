@@ -27,12 +27,11 @@ vy = lengthdir_y(spd,dir);
 
 
 //the gravity
-grav = oHoldableObject.gravity_loc; // meter/sec^2
-grav = grav / oHoldableObject.meter_per_pix   //  pix/sec^2
-grav = grav /  sqr(oHoldableObject.update_speed)   //  pix/step^2
+lGrav = oHoldableObject.grav; // meter/sec^2
+
 //dragging, draw the lineif(mouse_check_button(mb_left))
 count = 0;
-grav = 0.04
+
     draw_primitive_begin(pr_linelist)
     draw_vertex_color(xx,yy,c_lime,1)
     //while(0<yy<500)
@@ -42,11 +41,11 @@ grav = 0.04
 		if (count >= 300) {
 			empty = false;	
 		}
+        
+        vy+= lGrav; //add gravity to dy
 		dir = point_direction(xx, yy, xx + vx, yy + vy)
-        xx+=vx; //add dx
+		xx+=vx; //add dx
         yy+=vy; //add dy
-        vy+= grav; //add gravity to dy
-		dir = point_direction(xx, yy, xx + vx, yy + vy)
 		spd = sqrt(sqr(vx) + sqr(vy))
 		spd = spd //* damp
 		vx = lengthdir_x(spd,dir);

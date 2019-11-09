@@ -1,6 +1,6 @@
 //cancel gravity if thrown
 if apply_gravity {
-	physics_apply_force(phy_position_x,phy_position_y,0,phy_mass*mass)
+	//phy_speed_y += grav
 }
 
 if !apply_gravity {

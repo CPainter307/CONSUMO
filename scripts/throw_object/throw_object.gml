@@ -32,6 +32,7 @@ var _diry = lengthdir_y(_spd, dir)
 with _inst {
 	//physics_apply_impulse(x+_dirx, y+_diry, (_x - x) * _spd, -(y - _y) * _spd)
 	//_inst.phy_rotation= dir;
+	
 	_inst.phy_linear_velocity_x = _dirx // pixles/second
 	_inst.phy_linear_velocity_y = _diry 
 	//_inst.phy_angular_velocity = 2000
@@ -137,7 +138,7 @@ with _inst {
 		oPlayer.has_heavy_thrown = true;
 	}
 	//throws object
-	apply_gravity = false
+	//apply_gravity = false
 	//reapplies gravity once it's hit a wall or 10 frames passed
 	//alarm_set(0, 10)
 	if direction8 {
