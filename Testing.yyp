@@ -1863,6 +1863,14 @@
             }
         },
         {
+            "Key": "747c67cd-98d8-455e-add3-f59b0e9bc1a8",
+            "Value": {
+                "id": "1255348d-0747-464d-b562-d049d43893ff",
+                "resourcePath": "sprites\\sLeftArmFall\\sLeftArmFall.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "75016770-f450-49fe-aed5-07fea41f8f77",
             "Value": {
                 "id": "9260f677-e501-4851-a8ad-308300ab267a",
@@ -3207,6 +3215,14 @@
             }
         },
         {
+            "Key": "c61f1e0c-037f-49da-9413-140464b4c233",
+            "Value": {
+                "id": "6902c973-590b-4317-b987-02366a18006c",
+                "resourcePath": "sprites\\sLeftArmRun\\sLeftArmRun.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "c62414c6-6bf9-4272-a0d3-094431a8ad86",
             "Value": {
                 "id": "f90d52d7-a98a-44e1-8e40-71d283211178",
@@ -3268,6 +3284,14 @@
                 "id": "6b352eb0-0f2e-4632-b686-8a5994bc3b18",
                 "resourcePath": "sprites\\sShieldIcon\\sShieldIcon.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "c8863c8d-f0e9-4ccd-b8a7-207f900ede92",
+            "Value": {
+                "id": "a0208f8f-3e0d-4beb-8820-15430b69c712",
+                "resourcePath": "views\\c8863c8d-f0e9-4ccd-b8a7-207f900ede92.yy",
+                "resourceType": "GMFolder"
             }
         },
         {
@@ -3460,6 +3484,14 @@
                 "id": "1da2a4fb-7e14-4918-9564-d06270fe899c",
                 "resourcePath": "objects\/oPreparedMushroom\/oPreparedMushroom.yy",
                 "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "d6870327-a77f-4008-a60c-5253f4b837f0",
+            "Value": {
+                "id": "0bdcdd55-16d9-4734-8256-413fb385fa8f",
+                "resourcePath": "sprites\\sLeftArmJump\\sLeftArmJump.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -3924,6 +3956,14 @@
                 "id": "81e23860-7bb1-407c-a882-7268a95b97b8",
                 "resourcePath": "sounds\/snd_hacky_voice_4\/snd_hacky_voice_4.yy",
                 "resourceType": "GMSound"
+            }
+        },
+        {
+            "Key": "f82bba31-7185-4f35-9c15-bd5dd7e7fe80",
+            "Value": {
+                "id": "c1890438-1e9e-4136-90cb-85c46ce98151",
+                "resourcePath": "sprites\\sLeftArmIdle\\sLeftArmIdle.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
