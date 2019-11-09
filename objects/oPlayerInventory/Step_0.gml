@@ -83,7 +83,7 @@ if pickup_slot != -1
 
 if pickup_slot != -1 {
 	//if we click or close our inventory
-	if oPlayerInput.key_throw || oPlayerInput.key_heavy_throw {
+	if oPlayerInput.key_throw {
 		if !mouse_in_inventory {
 			#region drop item into the world
 			inv_grid[# 1, pickup_slot] -= 1
@@ -124,7 +124,7 @@ if pickup_slot != -1 {
 	}
 } else if (ss_item != 0  and mouse_in_inventory) {
 	//drop pickup item into new slot
-	if oPlayerInput.key_throw || oPlayerInput.key_heavy_throw {
+	if oPlayerInput.key_throw {
 		pickup_slot = selected_slot
 	}
 }

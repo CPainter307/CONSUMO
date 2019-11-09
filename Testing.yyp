@@ -1367,6 +1367,14 @@
             }
         },
         {
+            "Key": "5610c410-60fc-4551-832c-36b9744b1f8c",
+            "Value": {
+                "id": "59aa9696-ca90-4600-a273-f3e4746c304d",
+                "resourcePath": "objects\\oTempTarget\\oTempTarget.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "5666af01-5db4-4a52-87c4-97a5fe366a32",
             "Value": {
                 "id": "23dca332-989b-4e77-b1d6-63a713e7c915",
@@ -1907,6 +1915,14 @@
             "Value": {
                 "id": "61d3d7a0-b25c-478a-b962-ddebdf7e5b1d",
                 "resourcePath": "sprites\/sFrontArmR_old\/sFrontArmR_old.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "77c7153f-73c4-4fa8-83a4-f6bff72e31d4",
+            "Value": {
+                "id": "9455ee56-9155-46e2-b0cd-ec2ea0915a29",
+                "resourcePath": "sprites\\sTargetTempRed\\sTargetTempRed.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -2547,6 +2563,14 @@
             "Value": {
                 "id": "02ff0d96-7302-4a87-8da3-b5a483c450d2",
                 "resourcePath": "sprites\/sIconsNegative\/sIconsNegative.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "a1bd5354-0f0f-4ed0-a16e-87120210572e",
+            "Value": {
+                "id": "572b862a-4ee5-459d-add6-b1d6f5535474",
+                "resourcePath": "sprites\\sTargetTempBlue\\sTargetTempBlue.yy",
                 "resourceType": "GMSprite"
             }
         },
