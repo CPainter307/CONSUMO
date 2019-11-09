@@ -1,8 +1,8 @@
 event_inherited();
 prepared = false;
+enum_type = ingr.oOnion;
 name = "Onion ";
 type = "booster";
-ing_id = 3;
 hp = 0;
 attack = 0;
 defense = 5;
@@ -11,7 +11,8 @@ special = false;
 runeSprite = sOnionRune;
 classification = "vegetable";
 adjective = "Onion ";
-chops = 0;
-
-preppedVersion = oPreparedOnion;
 pickUpSound = snd_pickup_generic;
+
+//sprites
+unprepared_sprite = sOnion;
+prepared_sprite = sPreparedOnion;

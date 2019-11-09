@@ -49,26 +49,6 @@ enum menu_element_type {
 }
 
 
-//Other Unrelated Enums
-
-enum direc {
-	none,
-	right,
-	up,
-	left,
-	down,
-	up_right,
-	up_left,
-	down_left,
-	down_right
-}
-
-global.direction8 = false;
-global.switchBlue = true;
-
-//End Other Enums
-
-
 //CREATE MENU PAGES
 /*ds_menu_main = create_menu_page(
 	["New Game",	menu_element_type.script_runner,	new_game],

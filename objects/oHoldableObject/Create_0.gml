@@ -38,3 +38,4 @@ apply_gravity = true
 mass = 270
 
 play_hit_sound = true
+

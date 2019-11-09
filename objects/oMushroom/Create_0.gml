@@ -1,9 +1,9 @@
 /// @description define variables for ingredients
 event_inherited();
 prepared = false;
+enum_type = ingr.oMushroom;
 name = "Mushroom";
 type = "booster";
-ing_id = 0;
 runeSprite = sMushroomRune;
 classification = "vegetable"; //four types of classi right now: meat, vegetable, seasoning, spice
 adjective = "Shroomy ";
@@ -19,7 +19,10 @@ special = false;
 effect = "";
 modifier1 = [1, 1, 1, 1, 1, 1];
 modifier2 = [1, 1, 1, 1, 1, 1];
-preppedVersion = oPreparedMushroom;
 pickUpSound = snd_pickup_herb;
 
 beingCooked = false;
+
+//sprites
+unprepared_sprite = sMushroom;
+prepared_sprite = sPreparedMushroom;

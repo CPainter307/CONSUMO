@@ -1,9 +1,9 @@
 /// @description define variables for ingredients
 event_inherited();
 prepared = false;
+enum_type = pointer_null;
 name = "";
 type = "";
-ing_id = 0;
 runeSprite = sBlankRune;
 classification = ""; //four types of classi right now: meat, vegetable, seasoning, spice
 adjective = "";
@@ -21,3 +21,14 @@ modifier1 = [1, 1, 1, 1, 1, 1];
 modifier2 = [1, 1, 1, 1, 1, 1];
 
 beingCooked = false;
+
+//sprite indexes
+unprepared_sprite = pointer_null;
+prepared_sprite = pointer_null;
+
+//prepared timer
+prepared_check = 120;
+prepared_i = 0;
+
+//sound variables
+in_target = false;

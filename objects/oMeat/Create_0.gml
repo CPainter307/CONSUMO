@@ -1,8 +1,8 @@
 event_inherited();
 prepared = false;
+enum_type = ingr.oMeat;
 name = "Meat ";
 type = "booster";
-ing_id = 1;
 hp = 20;
 attack = 0;
 defense = 0;
@@ -11,9 +11,6 @@ special = false;
 runeSprite = sMeatRune;
 classification = "meat";
 adjective = "Meaty ";
-chops = 0;
-
-preppedVersion = oPreparedMeat;
 pickUpSound = snd_pickup_meat;
 
 var fix;
@@ -22,4 +19,8 @@ physics_fixture_set_box_shape(fix, sprite_width/4, sprite_height/4)
 physics_fixture_set_density(fix, 0.5);
 physics_fixture_bind(fix, self)
 physics_fixture_delete(fix)
-phy_active = true 
+phy_active = true
+
+//sprites
+unprepared_sprite = sMeat;
+prepared_sprite = sPreparedMeat;
