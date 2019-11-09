@@ -1,14 +1,7 @@
 if oPlayerInput.key_inventory { //TODO: change to global input
 	show_inventory = !show_inventory
-	//if global.input_type == inputs.keyboard {
-	//	inventory_x = device_mouse_x_to_gui(0)
-	//	inventory_y = device_mouse_y_to_gui(0)
-	//} else {
 	inventory_x = oPlayer.x
 	inventory_y = oPlayer.y
-	//}
-
-	//set inventory position to the mouse cursor, clamp it to window boundaries
 }
 if keyboard_check_pressed(ord("T")) {
 	if lineToggle {
@@ -101,6 +94,8 @@ if pickup_slot != -1 {
 				if _item != 0 {
 					var inst = instance_create_layer(oPlayer.x, oPlayer.y, "Objects", _item[0])
 					if inst.object_index == oRecipe {
+						inst.sprite_index = _item[1]
+						inst.name = _item[2]
 						inst.hp = _item[3]
 						inst.attack = _item[4]
 						inst.defense = _item[5]

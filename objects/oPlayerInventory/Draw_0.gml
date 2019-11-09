@@ -51,6 +51,7 @@ repeat (inv_slots) {
 		case selected_slot:
 			//only highlight if there's an item in the slot
 			if inv_grid[# 0, selected_slot] != 0 {
+				draw_text(mouse_x+30, mouse_y+30, iitem[2])
 				draw_set_alpha(.7)
 				draw_rectangle(xx-cell_size/2, yy-cell_size/2, xx+cell_size/2, yy+cell_size/2, false)
 				draw_set_alpha(1)
