@@ -2399,6 +2399,14 @@
             }
         },
         {
+            "Key": "97dae449-9ffb-49a7-86aa-e839ca75da9f",
+            "Value": {
+                "id": "92f090bc-60b0-45dc-94bc-82896f4b6c7d",
+                "resourcePath": "scripts\\scr_8_to_deg\\scr_8_to_deg.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "981696ca-2dba-46ee-b22d-726f183e7134",
             "Value": {
                 "id": "74720ac1-e39c-4481-8661-c8656aadf663",
@@ -4101,6 +4109,7 @@
         "124c3998-f431-45dd-8adf-12f96e4a974a",
         "0987e30a-49db-4390-a7b3-4169c178037e",
         "50f729e0-38c7-4aa1-9de2-8836d3145b39",
+        "97dae449-9ffb-49a7-86aa-e839ca75da9f",
         "f88fd37e-31d5-409d-886a-b3fef9b79eac",
         "12f4bc86-c556-4b55-8d68-e5f1c5590a2e",
         "6e602e98-13c8-4bc6-97e4-942142ce51e8",

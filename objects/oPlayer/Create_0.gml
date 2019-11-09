@@ -1,5 +1,5 @@
 gamepad_set_axis_deadzone(0, 0.35)
-
+physics_world_update_speed(120)
 facingRight = true;
 isLocked = false;
 state = scr_move_state;

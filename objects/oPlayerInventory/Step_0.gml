@@ -102,7 +102,7 @@ if pickup_slot != -1 {
 						inst.spd = _item[6]
 					}
 					if global.input_type == inputs.keyboard {
-						throw_object(inst, mouse_x, mouse_y, 20)
+						throw_object(inst, mouse_x, mouse_y, oHoldableObject.throw_speed)
 					} else if global.input_type == inputs.analog_stick {
 						throw_object(inst, oPlayerInput.haxis, oPlayerInput.vaxis, 20)
 					}

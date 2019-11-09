@@ -13,49 +13,26 @@ if global.input_type == inputs.analog_stick {
 		dir = point_direction(0, 0, oPlayerInput.haxis, oPlayerInput.vaxis);
 	}
 }
-spd = 20;
+spd = oHoldableObject.throw_speed; // pix/sec
+spd = spd / oHoldableObject.update_speed   // pix/step
 //start at x,y of launcher, (my sprite has the origns in the middle of the Y part of the sling)
 empty = true;
 //what are the dx,dy for movement
 	if (direction8) {
-		var dir8 = scr_get_8_dir();
-			switch (dir8) {
-				case direc.right:
-					dir = 0;
-					break;
-				case direc.up_right:
-					dir = 45;
-					break;
-				case direc.up:
-					dir = 90;
-					break;
-				case direc.up_left:
-					dir = 135;
-					break;
-				case direc.left:
-					dir = 180;
-					break;
-				case direc.down_left:
-					dir = 225;
-					break;
-				case direc.down:
-					dir = 270
-					break;
-				case direc.down_right:
-					dir = 315;
-					break;
-				default:
-					dir = 270;
-					// Had to make this do something. Otherwise, a heavy throw with no directional input would shoot our character into the stratosphere
+		dir = scr_8_to_deg();
 			}
-}
-vx = lengthdir_x(spd,dir);
+
+vx = lengthdir_x(spd,dir); // pix/sec
 vy = lengthdir_y(spd,dir);
+
+
 //the gravity
-grav = 0; 
+grav = oHoldableObject.gravity_loc; // meter/sec^2
+grav = grav / oHoldableObject.meter_per_pix   //  pix/sec^2
+grav = grav /  sqr(oHoldableObject.update_speed)   //  pix/step^2
 //dragging, draw the lineif(mouse_check_button(mb_left))
 count = 0;
-
+grav = 0.04
     draw_primitive_begin(pr_linelist)
     draw_vertex_color(xx,yy,c_lime,1)
     //while(0<yy<500)
