@@ -223,6 +223,14 @@
             }
         },
         {
+            "Key": "0f5f8926-fdab-4923-aadd-c37fc666f54f",
+            "Value": {
+                "id": "7426512e-0310-4cb8-a74b-a85f578f562b",
+                "resourcePath": "sprites\\new_cave_tileset\\new_cave_tileset.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "0f7d47b4-652c-4a61-a3f9-289cd0ec3f3e",
             "Value": {
                 "id": "c3312745-3c33-45be-a4c4-1381c072828b",
@@ -276,6 +284,14 @@
                 "id": "7b89b7f8-adb6-445e-ab82-77d812e6d55d",
                 "resourcePath": "sounds\/snd_frog_egg_voice_5\/snd_frog_egg_voice_5.yy",
                 "resourceType": "GMSound"
+            }
+        },
+        {
+            "Key": "12774657-8229-4f05-ac19-f11450cb18ef",
+            "Value": {
+                "id": "292d1fc1-7757-4ab7-ac91-3858c2c74d88",
+                "resourcePath": "tilesets\\new_cave\\new_cave.yy",
+                "resourceType": "GMTileSet"
             }
         },
         {
@@ -2839,6 +2855,14 @@
             }
         },
         {
+            "Key": "ae996bed-9ec6-4ac5-985a-495c5dbe0e1f",
+            "Value": {
+                "id": "53d56b24-0905-4ebd-ab42-7ccbf8c5b32e",
+                "resourcePath": "sprites\\new_cave_tileset_slopes\\new_cave_tileset_slopes.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "af0d7c5a-552e-437d-8417-a00471d5cd66",
             "Value": {
                 "id": "09838b79-b324-471f-92de-7c605db77981",
@@ -3524,6 +3548,14 @@
                 "id": "0bdcdd55-16d9-4734-8256-413fb385fa8f",
                 "resourcePath": "sprites\\sLeftArmJump\\sLeftArmJump.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "d6b9fd7a-1b5d-4b91-afc3-79e1e2608184",
+            "Value": {
+                "id": "e7b0bfbb-f340-43da-bff3-982625033ba4",
+                "resourcePath": "tilesets\\new_cave_slopes\\new_cave_slopes.yy",
+                "resourceType": "GMTileSet"
             }
         },
         {
