@@ -3023,6 +3023,14 @@
             }
         },
         {
+            "Key": "b7bd71f8-9a1c-4151-8b28-3ceb7814a0a7",
+            "Value": {
+                "id": "11dd1a9b-b642-49a6-adc2-c658018e5808",
+                "resourcePath": "fonts\\fTextboxFont\\fTextboxFont.yy",
+                "resourceType": "GMFont"
+            }
+        },
+        {
             "Key": "b8cad260-b86f-43f7-a7a6-723057806ef9",
             "Value": {
                 "id": "991701be-5e45-4501-8ee0-2b9022485898",

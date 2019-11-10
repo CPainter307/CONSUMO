@@ -1,7 +1,7 @@
 if (instance_exists(oPlayer) && text1) {
 	var currentTrigger = instance_create_depth(0, 0, 0, oAutoTrigger);
 	currentTrigger.t_scene_info = [
-		[cutscene_create_textbox, ["There you are! Were you going to wait all day?", "I know you're new here, but there's no time for relaxin'. Time to learn on the job."], "Old Man", voice.oldman, sOldmanPortrait],
+		[cutscene_create_textbox, ["#0There #1you#0 #2are!#0 #3Were#0 #4you#0 #5going#0 to wait #1all day#0?", "I know you're new here, but there's no time for relaxin'. Time to learn on the job. learn learn learn learn learn learn learn learn learn learn learn learn learn"], "Old Man", voice.oldman, sOldmanPortrait],
 		[cutscene_wait, .5],
 		[cutscene_create_textbox, ["You hear that, partner? We're on the job! Finally!", "Oh I can just smell the tasty treats now..."], "Hacky", voice.hacky, sHackyPortrait],
 		[cutscene_create_textbox, ["First let's get you nice and limber.", "Use " + moveString + " to move around and press " + jumpString + " to jump."], "Old Man", voice.oldman, sOldmanPortrait],
