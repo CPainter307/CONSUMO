@@ -25,7 +25,7 @@ var _dirx = lengthdir_x(_spd, dir)
 var _diry = lengthdir_y(_spd, dir)
 
 
-
+//physics_world_update_speed(120)
 
 
 

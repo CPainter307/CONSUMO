@@ -45,12 +45,12 @@ window_set_size(1920, 1080)
 has_jumped = true
 dash_lock = false
 dash_incrementer = 0;
-dash_check = 15;
-dash_check_diag = 15;
-dash_speed = 20;
+dash_check = 10; // 15
+dash_check_diag = 10; // 15
+dash_speed = 25; // 20
 dash_speed_diag = dash_speed/(sqrt(2));
-post_dash_speed = 10;
-post_dash_speed_diag = 10;
+post_dash_speed = 15; // 10
+post_dash_speed_diag = 15; // 10
 has_heavy_thrown = false;
 
 MAX_SPEED = 0
@@ -67,7 +67,6 @@ jump_buffer = 0
 on_floor = true
 jump_time = 0
 
-s_index = sPlayerIdle
 player_dir = 1
 
 hand_x = x;

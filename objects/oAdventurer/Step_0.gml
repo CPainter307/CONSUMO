@@ -1,7 +1,3 @@
-//check if dead
-if (currentHealth <= 0) {
-	instance_destroy()
-}
 
 battleWindow.cur_health = lerp(battleWindow.cur_health, (currentHealth/maxHealth)*100, 0.1)
 
@@ -91,3 +87,8 @@ if (healthThisFrame > currentHealth)
 }
 
 healthThisFrame = currentHealth;
+
+//check if dead
+if (currentHealth <= 0) {
+	instance_destroy()
+}

@@ -1,8 +1,11 @@
 #region dash lock
 
 if (dash_lock == true) {
+	var dash = instance_create_layer(x, y, "Objects", oDashEffect)
+	dash.sprite_index = sprite_index
+	dash.image_index = image_index
 	dash_incrementer++;
-	if (dash_incrementer >= dash_check || on_floor) {
+	if (on_floor || dash_incrementer >= dash_check) {
 		dash_lock = false;
 		dash_incrementer = 0;
 		//horizontal

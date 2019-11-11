@@ -4207,6 +4207,14 @@
             }
         },
         {
+            "Key": "fab86566-b247-47e1-8d68-7d2ae351d08b",
+            "Value": {
+                "id": "73f1885c-451d-4cad-bc81-2cdb8a242ce4",
+                "resourcePath": "objects\\oDashEffect\\oDashEffect.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "fc10538c-61dc-4803-8c0c-230ec0755d43",
             "Value": {
                 "id": "53de26c0-ed53-47a6-8c90-003c5e4089ff",
