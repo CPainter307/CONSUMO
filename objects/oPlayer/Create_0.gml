@@ -18,7 +18,8 @@ held_y = 0;
 pickupRadius = 0
 itemRadiusList = noone
 pickupRadiusSize = 80
-
+up_slope = false;
+down_slope = false;
 
 #macro MAX_JOG_SPEED  6
 #macro MAX_SPRINT_SPEED 11
