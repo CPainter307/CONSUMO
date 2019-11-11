@@ -1,0 +1,8 @@
+RECIPE and INGREDIENT
+[0] object_index
+[1] sprite_index
+[2] name
+[3] hp
+[4] attack
+[5] defense
+[6] spd

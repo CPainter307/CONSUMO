@@ -51,7 +51,9 @@ repeat (inv_slots) {
 		case selected_slot:
 			//only highlight if there's an item in the slot
 			if inv_grid[# 0, selected_slot] != 0 {
-				draw_text(mouse_x+30, mouse_y+30, iitem[2])
+				draw_set_font(fBattleTextThick)
+				draw_set_halign(fa_left);
+				draw_text(mouse_x+30, mouse_y+30, iitem[2]) // draw item text
 				draw_set_alpha(.7)
 				draw_rectangle(xx-cell_size/2, yy-cell_size/2, xx+cell_size/2, yy+cell_size/2, false)
 				draw_set_alpha(1)
@@ -62,6 +64,10 @@ repeat (inv_slots) {
 				if oCursor.sprite_index != sGrabCursor {
 					oCursor.sprite_index = sGrabCursor
 				}
+				
+				//draw tooltip
+				draw_tooltip(inventory_x, inventory_y, iitem)
+				
 			} else if oCursor.sprite_index != sPointerCursor { //set back to pointer if in a non-highlighted slot
 				oCursor.sprite_index = sPointerCursor
 			}
@@ -77,6 +83,8 @@ repeat (inv_slots) {
 	if iitem != 0 {
 		var c = c_white;
 		var number = inv_grid[# 1, ii];
+		draw_set_font(fBattleTextThick)
+		draw_set_halign(fa_right);
 		draw_text_color(xx, yy, string(number), c,c,c,c, 1)
 	}
 	

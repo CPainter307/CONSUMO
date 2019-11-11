@@ -1,4 +1,4 @@
-if oPlayerInput.key_inventory { //TODO: change to global input
+if oPlayerInput.key_inventory {
 	show_inventory = !show_inventory
 	inventory_x = oPlayer.x
 	inventory_y = oPlayer.y
@@ -94,6 +94,7 @@ if pickup_slot != -1 {
 				if _item != 0 {
 					var inst = instance_create_layer(oPlayer.x, oPlayer.y, "Objects", _item[0])
 					if inst.object_index == oRecipe {
+						// properties of recipe in inventory
 						inst.sprite_index = _item[1]
 						inst.name = _item[2]
 						inst.hp = _item[3]
