@@ -3,17 +3,19 @@ if (currentHealth <= 0) {
 	instance_destroy()
 }
 
+battleWindow.cur_health = lerp(battleWindow.cur_health, (currentHealth/maxHealth)*100, 0.1)
+
 if attackTimer > 0 {
 	attackTimer--
-	battleWindow.cur_atk = attackTimer
+	battleWindow.cur_atk = lerp(battleWindow.cur_atk, attackTimer, 0.3)
 }
 if defenseTimer > 0 {
 	defenseTimer--
-	battleWindow.cur_def = defenseTimer
+	battleWindow.cur_def = lerp(battleWindow.cur_def, defenseTimer, 0.3)
 } 
 if speedTimer > 0 {
 	speedTimer--
-	battleWindow.cur_spd = speedTimer
+	battleWindow.cur_spd = lerp(battleWindow.cur_spd, speedTimer, 0.3)
 } 
 
 //i frames

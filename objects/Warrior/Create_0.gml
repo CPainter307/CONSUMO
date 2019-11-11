@@ -2,7 +2,7 @@
 Class = "Adventurer";
 
 //maxHealth = 200;
-maxHealth = 250;
+maxHealth = 100;
 currentHealth = maxHealth;
 
 baseAttack = 20;

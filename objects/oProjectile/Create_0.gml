@@ -9,5 +9,5 @@ hitbox = instance_create_depth(x, y, -y, Hitbox)
 hitbox.OwnerClass = "Enemy";
 hitbox.targetClass = "Adventurer";
 hitbox.movePower = 10;
-hitbox.attack = 1;
+hitbox.attack = 20;
 hitbox.attackMultiplier = 1;
