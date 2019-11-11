@@ -2479,6 +2479,14 @@
             }
         },
         {
+            "Key": "99533abb-2c5c-4e80-bcec-59f2cca2e2ff",
+            "Value": {
+                "id": "d2a91896-d489-458c-8240-306d826e8673",
+                "resourcePath": "sprites\\sPlayerThrow\\sPlayerThrow.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "99f0e310-7688-45b7-93f2-6e9cd7c71d8f",
             "Value": {
                 "id": "b0205dbb-36ef-4a4e-9f64-52192f2cdd3f",

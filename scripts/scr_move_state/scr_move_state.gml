@@ -323,11 +323,9 @@ if (!place_meeting(x, y + 2, oWall)) {
 	on_floor = false;	
 }
 if (on_floor or up_slope or down_slope) {
-	if (motionx != 0 or up_slope or down_slope) {
-		//s_index = sPlayerRun;
+	if (motionx != 0 or up_slope or down_slope) and (sprite_index != sPlayerThrow) {
 		sprite_index = sPlayerRun
-	} else {
-		//s_index = sPlayerIdle;
+	} else if sprite_index != sPlayerThrow {
 		sprite_index = sPlayerIdle
 	}
 	
@@ -337,19 +335,15 @@ if (on_floor or up_slope or down_slope) {
 		image_speed = 1;
 	}
 } else {
-	if (motiony > 0) {
-		//s_index = sPlayerFall;
+	if (motiony > 0) and sprite_index != sPlayerThrow {
 		sprite_index = sPlayerFall
-	} else if motiony <= 0 {
-		//s_index = sPlayerJump;
+	} else if motiony <= 0 and sprite_index != sPlayerThrow {
 		sprite_index = sPlayerJump
 	}
 }
 
-if (motionx > 0) {
+if (motionx > 0) and sprite_index != sPlayerThrow{
 	player_dir = -1;
-	//image_xscale = -1
-} else if (motionx < 0) {
+} else if (motionx < 0) and sprite_index != sPlayerThrow {
 	player_dir = 1;
-	//image_xscale = 1
 }
