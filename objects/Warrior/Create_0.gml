@@ -15,6 +15,7 @@ maxdefense = 45;
 healthMultiplier = 1;
 attackMultiplier = 1;
 defenseMultiplier = 1;
+speedMultiplier = 1;
 
 move_1 = [360, 20];
 move_2 = [60, 5];

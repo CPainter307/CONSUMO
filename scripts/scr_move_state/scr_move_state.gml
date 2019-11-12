@@ -50,7 +50,7 @@ if oPlayerInput.key_jump_held and jump_time > 0 and has_jumped {
 	motiony = -JUMP_SPEED
 }
 
-if oPlayerInput.key_jump_released and has_jumped and motiony < 0{
+if oPlayerInput.key_jump_released and has_jumped and motiony < 0 {
     has_jumped = false
     motiony = lerp(motiony, 0, JUMP_FALLOFF_SPEED)
 }
@@ -74,9 +74,9 @@ if (!dash_lock) {
 				_dust_part.sprite_index = sStartRunParticle
 				_dust_part.image_xscale = -1
 			}
-			motionx += ACCELERATION
+			motionx += ACCELERATION*speedMultiplier
 			if motionx >= MAX_SPEED {
-				motionx -= ACCELERATION
+				motionx -= ACCELERATION*speedMultiplier
 				motionx = lerp(motionx, MAX_SPEED, DECCELRATION)
 				at_max_speed = true
 			}
@@ -87,9 +87,9 @@ if (!dash_lock) {
 				_dust_part.sprite_index = sStartRunParticle
 				_dust_part.image_xscale = 1
 			}
-			motionx -= ACCELERATION
+			motionx -= ACCELERATION*speedMultiplier
 			if motionx <= -MAX_SPEED {
-				motionx -= -ACCELERATION
+				motionx -= -ACCELERATION*speedMultiplier
 				motionx = lerp(motionx, -MAX_SPEED, DECCELRATION)
 				at_max_speed = true
 			}
@@ -113,14 +113,14 @@ if (!dash_lock) {
 
 	//sprinting
 	if (oPlayerInput.key_sprint_held) {
-		MAX_SPEED = MAX_SPRINT_SPEED
-		ACCELERATION = SPRINT_ACCELERATION
+		MAX_SPEED = MAX_SPRINT_SPEED*speedMultiplier
+		ACCELERATION = SPRINT_ACCELERATION*speedMultiplier
 		AIR_ACCELERATION = SPRINT_AIR_ACCELERATION
 	}
 
 	else {
-		MAX_SPEED = MAX_JOG_SPEED
-		ACCELERATION = JOG_ACCELERATION
+		MAX_SPEED = MAX_JOG_SPEED*speedMultiplier
+		ACCELERATION = JOG_ACCELERATION*speedMultiplier
 		AIR_ACCELERATION = JOG_AIR_ACCELERATION
 	}
 }

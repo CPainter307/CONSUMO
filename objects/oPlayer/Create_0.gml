@@ -1,3 +1,6 @@
+event_inherited()
+Class = "Enemy"
+
 gamepad_set_axis_deadzone(0, 0.35)
 physics_world_update_speed(120)
 facingRight = true;
@@ -72,3 +75,25 @@ player_dir = 1
 hand_x = x;
 hand_y = y;
 
+battleWindow = instance_create_depth(100, 100, -y, oBattlePortrait)
+battleWindow.owner = self
+
+battleWindow.y = window_get_height()-75
+battleWindow.scale_down = 3
+
+baseAttack = 10
+baseDefense = 10
+baseSpeed = 10
+
+attackMultiplier = 1
+defenseMultiplier = 1
+speedMultiplier = 1
+
+attackTimer = 0
+defenseTimer = 0
+speedTimer = 0
+
+currentHealth = 100
+maxHealth = currentHealth
+
+is_vulnerable = true

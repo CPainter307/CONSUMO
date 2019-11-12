@@ -7,16 +7,22 @@ defenseTimer = (defenseTimer/60) + other.defense;
 speedTimer = (speedTimer/60) + other.spd;
 
 if attackTimer > 0 {
-	baseAttack*=1.5
+	attackMultiplier*=2
 	attackTimer*=60
+} else {
+	attackMultiplier=1	
 }
 if defenseTimer > 0 {
-	baseDefense*=1.5
+	defenseMultiplier=2
 	defenseTimer*=60
+} else {
+	defenseMultiplier=1	
 }
 if speedTimer > 0 {
-	baseSpeed*=1.5
+	speedMultiplier*=2
 	speedTimer*=60
+} else {
+	speedMultiplier=1	
 }
 
 battleWindow.cur_atk = attackTimer

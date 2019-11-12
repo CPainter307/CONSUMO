@@ -26,5 +26,11 @@ if _num > 0
 }
 	
 ds_list_destroy(_list);
+
+destroy_timer++
+if destroy_timer >= destroy_time {
+	instance_destroy()	
+}
+
 //instance_destroy();
 

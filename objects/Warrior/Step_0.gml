@@ -11,7 +11,7 @@ if (global.fightStarted) {
 //	}
 
 	//move 1
-	if(((timer_m1) * (baseSpeed/100)) >= move_1[0] and instance_exists(Enemy))
+	if(((timer_m1) * (baseSpeed/100) * speedMultiplier) >= move_1[0] and instance_exists(Enemy))
 	{
 		var Hitbox_1 = instance_create_depth(Enemy.x, Enemy.y, 0, Hitbox);
 		Hitbox_1.OwnerClass = "Adventurer";
@@ -24,7 +24,7 @@ if (global.fightStarted) {
 	}
 
 	//move 2
-	if(((timer_m2) * (baseSpeed/100)) >= move_2[0] and instance_exists(Enemy))
+	if(((timer_m2) * (baseSpeed/100) * speedMultiplier) >= move_2[0] and instance_exists(Enemy))
 	{
 		var Hitbox_2 = instance_create_depth(Enemy.x, Enemy.y, 0, Hitbox);
 		Hitbox_2.OwnerClass = "Adventurer";

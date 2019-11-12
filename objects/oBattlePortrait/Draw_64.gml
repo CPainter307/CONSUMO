@@ -1,4 +1,4 @@
-var scale_down = 4
+
 var color_stat = make_color_rgb(0, 152, 220)
 var color_health = make_color_rgb(90, 197, 79)
 var color_hunger = make_color_rgb(255, 235, 87)

@@ -1,5 +1,7 @@
  Class = "Enemy";
 
+is_vulnerable = true
+
 maxHealth = 200;
 //debug only
 //maxHealth = 51;

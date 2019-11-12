@@ -8,3 +8,4 @@ max_def = 100
 max_spd = 100
 
 owner = noone
+scale_down = 4

@@ -18,6 +18,7 @@ maxhunger = 100;
 healthMultiplier = 0;
 attackMultiplier = 0;
 defenseMultiplier = 0;
+speedMultiplier = 0
 
 move_1 = [0, 0];
 move_2 = [0, 0];
@@ -37,8 +38,8 @@ healthThisFrame = currentHealth;
 flash = 0;
 shaderBuff = 0;
 
-global.fightStarted = false;
-startFight = false;
+global.fightStarted = true;
+startFight = true;
 
 battleWindow = instance_create_depth(100, 100, -y, oBattlePortrait)
 battleWindow.owner = self

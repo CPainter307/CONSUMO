@@ -102,3 +102,44 @@ ds_list_destroy(itemRadiusList)
 script_execute(scr_hand_track());
 
 #endregion
+
+//eating
+var inv_grid = global.inventory
+if keyboard_check_pressed(ord("F")) {
+	var _item = inv_grid[# 0, oPlayerInventory.pickup_slot]
+	if _item != 0 and _item[0] == oRecipe {
+		currentHealth = min(maxHealth, currentHealth+_item[3])
+		attackTimer = _item[4] * 60
+		defenseTimer = _item[5] * 60
+		speedTimer = _item[6] * 60
+		
+		battleWindow.cur_atk = attackTimer
+		battleWindow.max_atk = attackTimer
+
+		battleWindow.cur_def = defenseTimer
+		battleWindow.max_def = defenseTimer
+
+		battleWindow.cur_spd = speedTimer
+		battleWindow.max_spd = speedTimer
+	}
+}
+
+battleWindow.cur_health = lerp(battleWindow.cur_health, (currentHealth/maxHealth)*100, 0.1)
+if attackTimer > 0 {
+	attackTimer--
+	battleWindow.cur_atk = lerp(battleWindow.cur_atk, attackTimer, 0.3)
+}
+if defenseTimer > 0 {
+	defenseTimer--
+	battleWindow.cur_def = lerp(battleWindow.cur_def, defenseTimer, 0.3)
+	defenseMultiplier=2
+} else {
+	defenseMultiplier=1	
+}
+if speedTimer > 0 {
+	speedTimer--
+	battleWindow.cur_spd = lerp(battleWindow.cur_spd, speedTimer, 0.3)
+	speedMultiplier=1.5
+} else {
+	speedMultiplier=1	
+}
