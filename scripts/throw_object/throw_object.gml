@@ -25,7 +25,7 @@ var _dirx = lengthdir_x(_spd, dir)
 var _diry = lengthdir_y(_spd, dir)
 
 
-physics_world_update_speed(120)
+//physics_world_update_speed(120)
 
 
 
@@ -33,8 +33,8 @@ with _inst {
 	//physics_apply_impulse(x+_dirx, y+_diry, (_x - x) * _spd, -(y - _y) * _spd)
 	//_inst.phy_rotation= dir;
 	
-	//_inst.phy_linear_velocity_x = _dirx // pixles/second
-	//_inst.phy_linear_velocity_y = _diry 
+	_inst.phy_linear_velocity_x = _dirx // pixles/second
+	_inst.phy_linear_velocity_y = _diry 
 	//_inst.phy_angular_velocity = 2000
 
 	if global.input_type == inputs.keyboard {
@@ -146,8 +146,8 @@ with _inst {
 		//phy_speed_y = _y * _spd * 30;
 		//physics_apply_impulse(phy_position_x,phy_position_y,_x,_y);
 	} else {
-		phy_speed_x = _dirx;
-		phy_speed_y = _diry;
+		//phy_speed_x = _dirx;
+		//phy_speed_y = _diry;
 		//physics_apply_impulse(phy_position_x,phy_position_y,_dirx,_diry);
 	}
 }

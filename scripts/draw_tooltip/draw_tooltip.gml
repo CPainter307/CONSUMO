@@ -1,7 +1,6 @@
 var iitem = argument2
 
 draw_set_font(fGUITextThick)
-draw_set_halign(fa_center);
 var tt_pos_x = argument0+192
 var tt_pos_y = argument1
 var tt_buffer = 10
@@ -15,6 +14,7 @@ if iitem[0] == oRecipe {
 if string_char_at(tt_title, string_length(tt_title)) == " " {
 	tt_title = string_copy(tt_title, 1, string_length(tt_title)-1)
 }
+draw_set_halign(fa_center);
 
 var tt_max_width = string_width(tt_title)
 var tt_max_height = 200
