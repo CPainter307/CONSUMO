@@ -7,11 +7,14 @@ draw_sprite_ext(sprite_index, image_index, x, y, player_dir, 1, image_angle, c_w
 
 
 
-//draw the current item into the player's hand
-if (!(held_item == pointer_null) && !(oPlayerInventory.pickup_slot == -1)) {
-	draw_sprite_ext(held_item, 0, hand_x, hand_y, (player_dir * 0.5), 0.5, 0, c_white, 1)
+//draw the current item into the player's hand (unless they're throwing)
+if (sprite_index != sPlayerThrow) {
+	if (!(held_item == pointer_null) && !(oPlayerInventory.pickup_slot == -1)) {
+		draw_sprite_ext(held_item, 0, hand_x, hand_y, (player_dir * 0.5), 0.5, 0, c_white, 1)
+	}
 }
 
+//draw the arm over the player so that there is a layered arm
 if (sprite_index == sPlayerIdle && held_item != pointer_null && oPlayerInventory.pickup_slot != -1) {
 	draw_sprite_ext(sLeftArmIdle,image_index, x, y, player_dir, 1, image_angle, c_white, 10);
 }
