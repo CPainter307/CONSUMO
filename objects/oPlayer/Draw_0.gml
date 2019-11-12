@@ -30,3 +30,8 @@ if (sprite_index == sPlayerJump && held_item != pointer_null && oPlayerInventory
 if (sprite_index == sPlayerFall && held_item != pointer_null && oPlayerInventory.pickup_slot != -1) {
 	draw_sprite_ext(sLeftArmFall,image_index, x, y, player_dir, 1, image_angle, c_white, image_alpha);	
 }
+
+//---------------------------- UNCOMMENT FOR draw nearest item text
+//draw_set_font(fBattleTextThick)
+//if nearest_item_text != ""
+//	draw_text_outlined(nearest_item_x-5, nearest_item_y+12, BROWN_COL, OFFWHITE_COL, nearest_item_text)

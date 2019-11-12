@@ -48,10 +48,19 @@ pickupRadius = collision_circle_list(x, y, pickupRadiusSize , oHoldableObject, f
 
 //highlighting items
 if pickupRadius > 0 {
+	nearest_item_text = ""
 	for (var i = 0; i < itemRadiusList[| i]; i++) {
 		itemRadiusList[| i].highlighted = false
 	}
 	itemRadiusList[| 0].highlighted = true
+	nearest_item_text = itemRadiusList[| 0].name
+	nearest_item_x = itemRadiusList[| 0].x
+	nearest_item_y = itemRadiusList[| 0].y
+} else {
+	for (var i = 0; i < itemRadiusList[| i]; i++) {
+		itemRadiusList[| i].highlighted = false
+	}
+	nearest_item_text = ""
 }
 
 //go through doors
@@ -73,7 +82,7 @@ if pickupRadius > 0 and !oPlayerInventory.show_inventory{
 		if oCursor.sprite_index != sPointerCursor {
 			oCursor.sprite_index = sPointerCursor
 		}
-		if !collision_point(mouse_x, mouse_y, nearest_item, true, false) {
+		if !collision_circle(mouse_x, mouse_y, 8, nearest_item, false, false) {
 			continue;
 		}
 		if oCursor.sprite_index != sGrabCursor {

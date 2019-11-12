@@ -45,7 +45,7 @@ down_slope = false;
 
 window_set_size(1920, 1080)
 
-has_jumped = true
+has_jumped = false
 dash_lock = false
 dash_incrementer = 0;
 dash_check = 10; // 15
@@ -100,3 +100,8 @@ is_vulnerable = true
 
 I_FRAME_LENGTH = 120
 i_frames = I_FRAME_LENGTH
+
+//for drawing text over the nearest item
+nearest_item_x = 0
+nearest_item_y = 0
+nearest_item_text = ""

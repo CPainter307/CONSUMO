@@ -69,7 +69,7 @@ if (!dash_lock) {
 	//moving
 	if on_floor {
 		if oPlayerInput.key_right { // moving right
-			if motionx == 0 {
+			if motionx == 0 and !oPlayerInput.key_right { // fixes drawing a billion dust particles when holding a button into a wall
 				var _dust_part = instance_create_layer(x, bbox_bottom, "BGLayer", oDustParticle)
 				_dust_part.sprite_index = sStartRunParticle
 				_dust_part.image_xscale = -1
@@ -82,7 +82,7 @@ if (!dash_lock) {
 			}
 		}
 		if oPlayerInput.key_left { // moving left
-			if motionx == 0 {
+			if motionx == 0 and !oPlayerInput.key_left {
 				var _dust_part = instance_create_layer(x, bbox_bottom, "BGLayer", oDustParticle)
 				_dust_part.sprite_index = sStartRunParticle
 				_dust_part.image_xscale = 1
