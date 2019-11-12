@@ -1,9 +1,8 @@
 var iitem = argument2
 
-draw_set_font(fGUITextThick)
 var tt_pos_x = argument0+192
 var tt_pos_y = argument1
-var tt_buffer = 10
+var tt_buffer = 25
 var tt_title = iitem[2]
 var tt_type = "Ingredient"
 if iitem[0] == oRecipe {
@@ -14,10 +13,19 @@ if iitem[0] == oRecipe {
 if string_char_at(tt_title, string_length(tt_title)) == " " {
 	tt_title = string_copy(tt_title, 1, string_length(tt_title)-1)
 }
-draw_set_halign(fa_center);
 
-var tt_max_width = string_width(tt_title)
-var tt_max_height = 200
+draw_set_font(fGUITextThick)
+draw_set_halign(fa_center)
+
+var title_width = string_width(tt_title)
+
+draw_set_font(fBattleTextThin)
+var tt_max_width = max(title_width, string_width(tt_type))
+tt_max_width+=tt_buffer
+
+draw_set_font(fGUITextThick)
+
+var tt_max_height = 230
 				
 var icon_list = ds_list_create()
 for (var i = 3; i < array_length_1d(iitem); i++) {
@@ -36,13 +44,18 @@ for (var i = 3; i < array_length_1d(iitem); i++) {
 		}
 	}
 }
+
+if ds_list_size(icon_list) > 2 {
+	tt_max_height = 260	
+}
 				
 //draw box
-if ds_list_size(icon_list) > 2 { // draw the box longer if there are more icons
-	nine_slice_box(s9slice, tt_pos_x-tt_buffer, tt_pos_y, tt_pos_x+tt_max_width+tt_buffer, tt_pos_y+tt_max_height)
-} else {
-	nine_slice_box(s9slice, tt_pos_x-tt_buffer, tt_pos_y, tt_pos_x+tt_max_width+tt_buffer, tt_pos_y+tt_max_height-sprite_get_height(sHeartIconOutlined))	
-}
+//if ds_list_size(icon_list) > 2 { // draw the box longer if there are more icons
+//nine_slice_box(s9slice, tt_pos_x, tt_pos_y, tt_pos_x+tt_max_width, tt_pos_y+tt_max_height)
+nine_slice_box(s9slice, tt_pos_x, tt_pos_y, tt_max_width, tt_max_height, true)
+//} else {
+//	nine_slice_box(s9slice, tt_pos_x, tt_pos_y, tt_pos_x+tt_max_width, tt_pos_y+tt_max_height-sprite_get_height(sHeartIconOutlined))	
+//}
 				
 // draw name
 draw_text_color(tt_pos_x+(tt_max_width/2), tt_pos_y, tt_title, BROWN_COL,BROWN_COL,BROWN_COL,BROWN_COL,1)
@@ -50,7 +63,6 @@ draw_text_color(tt_pos_x+(tt_max_width/2), tt_pos_y, tt_title, BROWN_COL,BROWN_C
 var tt_title_height = string_height(tt_title)
 				
 draw_set_font(fBattleTextThin)
-draw_set_halign(fa_center);
 				
 //draw type
 draw_text_color(tt_pos_x+(tt_max_width/2), tt_pos_y+tt_title_height, tt_type, BROWN_COL,BROWN_COL,BROWN_COL,BROWN_COL,1)
@@ -58,8 +70,8 @@ draw_text_color(tt_pos_x+(tt_max_width/2), tt_pos_y+tt_title_height, tt_type, BR
 var tt_type_height = string_height(tt_type)
 				
 //draw icons
-var y_pos_1 = tt_pos_y+tt_title_height+tt_type_height+(tt_buffer*3)
-var y_pos_2 = tt_pos_y+tt_title_height+tt_type_height+(tt_buffer*3)+sprite_get_height(sHeartIconOutlined)
+var y_pos_1 = tt_pos_y+tt_title_height+tt_type_height
+var y_pos_2 = tt_pos_y+tt_title_height+tt_type_height+sprite_get_height(sHeartIconOutlined)
 				
 if ds_list_size(icon_list) == 1 { // drawing only one icon
 	draw_sprite(icon_list[| 0], 0, tt_pos_x+(tt_max_width/2), y_pos_1) // draw right in the middle
