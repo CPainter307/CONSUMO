@@ -16,7 +16,6 @@ if keyboard_check_pressed(ord("T")) {
 if show_inventory {
 	inventory_x = clamp(oPlayer.x + 80, 0, room_width)
 	inventory_y = clamp(oPlayer.y - 80, 0, room_height)	
-
 }
 if global.input_type == inputs.keyboard {
 	#region MOUSE SLOT

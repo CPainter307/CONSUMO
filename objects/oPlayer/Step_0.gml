@@ -106,21 +106,28 @@ script_execute(scr_hand_track());
 //eating
 var inv_grid = global.inventory
 if keyboard_check_pressed(ord("F")) {
-	var _item = inv_grid[# 0, oPlayerInventory.pickup_slot]
-	if _item != 0 and _item[0] == oRecipe {
-		currentHealth = min(maxHealth, currentHealth+_item[3])
-		attackTimer = _item[4] * 60
-		defenseTimer = _item[5] * 60
-		speedTimer = _item[6] * 60
+	if oPlayerInventory.pickup_slot != -1 {
+		var _item = inv_grid[# 0, oPlayerInventory.pickup_slot]
+		if _item != 0 and _item[0] == oRecipe {
+			inv_grid[# 1, oPlayerInventory.pickup_slot] -= 1 // decrement by 1
+			if inv_grid[# 1, oPlayerInventory.pickup_slot] == 0 { // destroy recipe if it was the last one
+				inv_grid[# 0, oPlayerInventory.pickup_slot] = 0
+				oPlayerInventory.pickup_slot = -1
+			}
+			currentHealth = min(maxHealth, currentHealth+_item[3])
+			attackTimer = _item[4] * 60
+			defenseTimer = _item[5] * 60
+			speedTimer = _item[6] * 60
 		
-		battleWindow.cur_atk = attackTimer
-		battleWindow.max_atk = attackTimer
+			battleWindow.cur_atk = attackTimer
+			battleWindow.max_atk = attackTimer
 
-		battleWindow.cur_def = defenseTimer
-		battleWindow.max_def = defenseTimer
+			battleWindow.cur_def = defenseTimer
+			battleWindow.max_def = defenseTimer
 
-		battleWindow.cur_spd = speedTimer
-		battleWindow.max_spd = speedTimer
+			battleWindow.cur_spd = speedTimer
+			battleWindow.max_spd = speedTimer
+		}
 	}
 }
 

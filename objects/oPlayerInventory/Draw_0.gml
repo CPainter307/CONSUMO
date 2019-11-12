@@ -85,7 +85,8 @@ repeat (inv_slots) {
 		var number = inv_grid[# 1, ii];
 		draw_set_font(fBattleTextThick)
 		draw_set_halign(fa_right);
-		draw_text_color(xx, yy, string(number), c,c,c,c, 1)
+		if number > 1
+			draw_text_color(xx, yy, string(number), c,c,c,c, 1)
 	}
 	
 	//increment
