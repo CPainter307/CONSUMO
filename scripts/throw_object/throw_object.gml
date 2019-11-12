@@ -35,7 +35,7 @@ with _inst {
 	
 	_inst.phy_linear_velocity_x = _dirx // pixles/second
 	_inst.phy_linear_velocity_y = _diry 
-	//_inst.phy_angular_velocity = 2000
+	_inst.phy_angular_velocity = 2000
 
 	if global.input_type == inputs.keyboard {
 		//changes direction vars if 8dir is on

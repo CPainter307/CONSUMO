@@ -13,8 +13,10 @@ if global.input_type == inputs.analog_stick {
 		dir = point_direction(0, 0, oPlayerInput.haxis, oPlayerInput.vaxis);
 	}
 }
-spd = oHoldableObject.throw_speed; // pix/sec
-spd = spd / oHoldableObject.update_speed   // pix/step
+if (instance_exists(oHoldableObject)) {  // THIS IS A TEMP FIX THAT FIXES A CRASH BUT MAY CAUSE A DRAW ERROR.
+	spd = oHoldableObject.throw_speed; // pix/sec
+	spd = spd / oHoldableObject.update_speed   // pix/step
+}
 //start at x,y of launcher, (my sprite has the origns in the middle of the Y part of the sling)
 empty = true;
 //what are the dx,dy for movement
