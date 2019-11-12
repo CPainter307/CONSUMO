@@ -342,8 +342,8 @@ if (on_floor or up_slope or down_slope) {
 	}
 }
 
-if (motionx > 0) and sprite_index != sPlayerThrow{
+if (motionx > 0) and sprite_index != sPlayerThrow and is_vulnerable {
 	player_dir = -1;
-} else if (motionx < 0) and sprite_index != sPlayerThrow {
+} else if (motionx < 0) and sprite_index != sPlayerThrow and is_vulnerable {
 	player_dir = 1;
 }

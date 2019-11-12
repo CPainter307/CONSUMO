@@ -3231,6 +3231,14 @@
             }
         },
         {
+            "Key": "c0db16f0-457b-4915-98b5-fb713074e661",
+            "Value": {
+                "id": "279fe43a-fd3a-4b25-a765-dc92b8aef7a4",
+                "resourcePath": "sprites\\sPlayerHurt\\sPlayerHurt.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "c104b3c1-dbeb-48ed-9406-1a71d702dfdc",
             "Value": {
                 "id": "9efd7e88-d69a-4dbd-9a33-565cc483e01c",

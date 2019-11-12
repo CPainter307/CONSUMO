@@ -5,7 +5,7 @@ diry = 0
 spd = 10
 
 hitbox = instance_create_depth(x, y, -y, Hitbox)
-hitbox.destroy_timer = 300
+hitbox.destroy_timer = -1
 
 hitbox.OwnerClass = "Enemy";
 hitbox.targetClass = "Adventurer";

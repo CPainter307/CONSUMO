@@ -134,7 +134,7 @@ if defenseTimer > 0 {
 	battleWindow.cur_def = lerp(battleWindow.cur_def, defenseTimer, 0.3)
 	defenseMultiplier=2
 } else {
-	defenseMultiplier=1	
+	defenseMultiplier=1
 }
 if speedTimer > 0 {
 	speedTimer--
@@ -142,4 +142,26 @@ if speedTimer > 0 {
 	speedMultiplier=1.5
 } else {
 	speedMultiplier=1	
+}
+
+//i frames
+if place_meeting(x, y, Hitbox) and is_vulnerable {
+	var _hitbox = instance_place(x, y, Hitbox)
+	is_vulnerable = false
+	i_frames = I_FRAME_LENGTH
+	motionx = 0
+	motiony = 0
+	motionx = ((_hitbox.x - oPlayer.x)*-1)/4
+	player_dir = sign(oPlayer.x-_hitbox.x)
+}
+if !is_vulnerable {
+	image_alpha = .5
+	i_frames--
+	if i_frames > I_FRAME_LENGTH-30 {
+		sprite_index = sPlayerHurt
+	}
+}
+if i_frames <= 0 {
+	image_alpha = 1
+	is_vulnerable = true
 }

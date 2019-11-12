@@ -1,5 +1,5 @@
 event_inherited()
-Class = "Enemy"
+Class = "Adventurer"
 
 gamepad_set_axis_deadzone(0, 0.35)
 physics_world_update_speed(120)
@@ -97,3 +97,6 @@ currentHealth = 100
 maxHealth = currentHealth
 
 is_vulnerable = true
+
+I_FRAME_LENGTH = 120
+i_frames = I_FRAME_LENGTH
