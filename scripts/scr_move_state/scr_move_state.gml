@@ -283,7 +283,7 @@ if (place_meeting(x, y+motiony, oWall) ) {
 //}
 
 //corner collision (WIP)
-/*if (place_meeting(x+motionx, y+motiony, oWall)) {
+if (place_meeting(x+motionx, y+motiony, oWall)) {
 	var inst_list = ds_list_create();
 	instance_place_list(x+motionx, y+motiony, oWall, inst_list, false);
 	for (i = 0; i < ds_list_size(inst_list); i++) {
@@ -310,7 +310,7 @@ if (place_meeting(x, y+motiony, oWall) ) {
 		motiony = 0;
 	}
 	ds_list_destroy(inst_list);
-} */
+}
 if !up_slope {
 x += motionx
 y += motiony

@@ -16,16 +16,18 @@ enum direc {
 
 enum targ_type {
 	pass,
-	fall
+	fall,
+	launch
 }
 
 enum ingr {
+	oBuffer,
 	oMeat,
 	oFish,
-	oOnion,
-	oSalt,
 	oApple,
+	oOnion,
 	oLettuce,
+	oSalt,
 	oPaprika,
 	oMushroom,
 	oRice
