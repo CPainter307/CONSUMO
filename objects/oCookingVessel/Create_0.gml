@@ -22,3 +22,5 @@ mealType2 = "";
 mealType3 = "";
 
 shaderBuff = 0
+
+pot_radius = 80
