@@ -8,7 +8,7 @@
         "f0d6ca65-bb4f-4b66-8f6d-09728f573089",
         "8227928e-4995-463c-9855-7591d6bdadac",
         "763f11b7-736f-4743-8c08-1ce4c8fafed7",
-        "0b8fecfe-fa2e-4e42-be78-8ba6f7808a25"
+        "ada3952a-93cf-4a62-b270-c2f86688466c"
     ],
     "filterType": "GMShader",
     "folderName": "shaders",

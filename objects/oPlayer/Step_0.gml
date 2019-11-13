@@ -85,6 +85,7 @@ if pickupRadius > 0 and !oPlayerInventory.show_inventory{
 		if !collision_circle(mouse_x, mouse_y, 8, nearest_item, false, false) {
 			continue;
 		}
+		nearest_item.highlighted = true
 		if oCursor.sprite_index != sGrabCursor {
 			oCursor.sprite_index = sGrabCursor
 		}
@@ -153,6 +154,10 @@ if defenseTimer > 0 {
 	defenseMultiplier=1
 }
 if speedTimer > 0 {
+	var dash = instance_create_layer(x, y, "Objects", oDashEffect)
+	dash.sprite_index = sprite_index
+	dash.image_index = image_index
+	dash.image_xscale = player_dir
 	speedTimer--
 	battleWindow.cur_spd = lerp(battleWindow.cur_spd, speedTimer, 0.3)
 	speedMultiplier=1.5
