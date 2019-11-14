@@ -19,7 +19,9 @@ if (!initial_setup) {
 		camp_red.red_present = true;
 		
 		//temp check code
-		camp_red.sprite_index = sCampfireSmallHighlight;
+		if (debug) {
+			camp_red.sprite_index = sCampfireSmallHighlight;
+		}
 	}
 
 	//check green
@@ -42,7 +44,9 @@ if (!initial_setup) {
 		camp_green.green_present = true;
 		
 		//temp check code
-		camp_green.sprite_index = sCampfireSmallHighlight;
+		if (debug) {
+			camp_green.sprite_index = sCampfireSmallHighlight;
+		}
 	}
 	
 	//mark initial setup

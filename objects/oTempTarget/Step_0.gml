@@ -24,8 +24,8 @@ if (isHit) {
 
 //sprite change
 if (isHit) {
-	sprite_index = sTargetPrepApple;
+	sprite_index = sTargetTempHit;
 }
 else {
-	sprite_index = sTargetPrepSalt;
+	sprite_index = sTargetTemp;
 }

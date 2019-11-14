@@ -9,3 +9,5 @@ mealType = "Soup";
 mealType2 = "Boiled ";
 mealType3 = "Stew";
 
+//campfire
+campfire_index = 0;

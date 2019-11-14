@@ -28,7 +28,7 @@ if (!global.campfire_link_initial_setup) {	//run until initial setup is complete
 //Pot Index Setup Tracker
 if (global.campfire_link_complete && !global.campfire_complete) {	//everything but pots are ready
 	if (pot_count == 0) {	//updates pot_count until they are created
-		pot_count = instance_number(oPotCentered);
+		pot_count = instance_number(oPot);
 	}
 	else {	//once pot_count is established
 		if (global.pot_i >= pot_count) {	//all pots have completed setup
