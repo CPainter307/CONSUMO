@@ -471,6 +471,14 @@
             }
         },
         {
+            "Key": "16dc6517-4383-4d83-a203-ef3461b7b482",
+            "Value": {
+                "id": "18639daf-5207-44e8-84ee-b7564400cb5c",
+                "resourcePath": "sprites\\sRopeHolder\\sRopeHolder.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "17a5021b-5d85-4cc1-835c-8c9c12cb7ad7",
             "Value": {
                 "id": "29f78121-cba4-43bc-9627-1b85e0733384",
@@ -732,6 +740,14 @@
                 "id": "2583b4ee-64ea-42e0-af71-fc97f8c332ed",
                 "resourcePath": "sounds\/snd_pickup_herb\/snd_pickup_herb.yy",
                 "resourceType": "GMSound"
+            }
+        },
+        {
+            "Key": "239fd731-8267-4fff-9d9b-d478606ebfdd",
+            "Value": {
+                "id": "fe44b4d5-8874-4dae-936f-b56023903625",
+                "resourcePath": "objects\\oPin\\oPin.yy",
+                "resourceType": "GMObject"
             }
         },
         {
@@ -2591,6 +2607,14 @@
             }
         },
         {
+            "Key": "8ba5ea9f-5a5f-4251-8712-2a0c3e7666b3",
+            "Value": {
+                "id": "f1f70e17-5d27-4194-a8b2-91be050d65fa",
+                "resourcePath": "objects\\oRopeHolder\\oRopeHolder.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "8bc9bc5d-63ed-4935-a20c-7bf4e14601ec",
             "Value": {
                 "id": "996e366b-061b-493b-969f-4300c2dc25af",
@@ -2716,6 +2740,14 @@
                 "id": "5ef11618-37b1-48cd-b956-02550fce1a6f",
                 "resourcePath": "views\/909b8e06-94d6-4c25-95ea-3a7837274286.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "90c87da4-f0af-4514-ac78-666c0f1436dd",
+            "Value": {
+                "id": "4d6cb22d-b87c-4c19-bf2b-474465562a82",
+                "resourcePath": "sprites\\sRope\\sRope.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -4523,6 +4555,14 @@
             "Value": {
                 "id": "e716988d-868b-4fac-b5bc-156bf9c33d0d",
                 "resourcePath": "objects\/oHoldableObject\/oHoldableObject.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "ee93ee0a-159b-4d7a-a827-1589e990b28e",
+            "Value": {
+                "id": "d7c37121-ebec-444e-8d40-be38f39ef3a9",
+                "resourcePath": "objects\\oRope\\oRope.yy",
                 "resourceType": "GMObject"
             }
         },

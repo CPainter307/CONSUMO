@@ -22,7 +22,7 @@ if collision_circle(x, y, pot_radius, oPlayer, false, true) {
 				if oCursor.sprite_index != sPotDropCursor {
 					oCursor.sprite_index = sPotDropCursor 
 				}
-				if mouse_check_button_pressed(mb_left) {
+				if mouse_check_button_pressed(mb_right) {
 					var inst = instance_create_layer(oIngredientHolder.x, oIngredientHolder.y, "Objects", ingr[0]) // create item in world
 			
 					add_to_pot(inst)
@@ -38,6 +38,10 @@ if collision_circle(x, y, pot_radius, oPlayer, false, true) {
 					oCursor.sprite_index = sPointerCursor 
 				}
 			}
+		}
+	} else {
+		if oCursor.sprite_index == sPotDropCursor {
+			oCursor.sprite_index = sPointerCursor 
 		}
 	}
 } else {
