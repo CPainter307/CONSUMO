@@ -15,21 +15,34 @@ if (ds_list_size(item_list) >= 3) {
 //pot inventory
 if collision_circle(x, y, pot_radius, oPlayer, false, true) {
 	//oPlayerInventory.show_inventory = true // show the player's inventory
-	if mouse_check_button_pressed(mb_left) and (ds_list_size(item_list) < 3) { // if we click an item and the pot isnt full
+	if (ds_list_size(item_list) < 3) { // if we click an item and the pot isnt full
 		var ingr = global.inventory[# 0, oPlayerInventory.selected_slot] // get the inventory item selected
-		if oPlayerInventory.selected_slot != -1 {
+		if oPlayerInventory.selected_slot != -1 and ingr != 0 {
 			if object_get_parent(ingr[0]) == oIngredient { // only add ingredients to pots
-				var inst = instance_create_layer(oIngredientHolder.x, oIngredientHolder.y, "Objects", ingr[0]) // create item in world
+				if oCursor.sprite_index != sPotDropCursor {
+					oCursor.sprite_index = sPotDropCursor 
+				}
+				if mouse_check_button_pressed(mb_left) {
+					var inst = instance_create_layer(oIngredientHolder.x, oIngredientHolder.y, "Objects", ingr[0]) // create item in world
 			
-				add_to_pot(inst)
+					add_to_pot(inst)
 			
-				global.inventory[# 1,  oPlayerInventory.selected_slot] -= 1 // decrement item by one
-				if global.inventory[# 1, oPlayerInventory.selected_slot] == 0 { // destroy item if it was the last one
-					global.inventory[# 0, oPlayerInventory.selected_slot] = 0
-					//oPlayerInventory.pickup_slot = -1
+					global.inventory[# 1,  oPlayerInventory.selected_slot] -= 1 // decrement item by one
+					if global.inventory[# 1, oPlayerInventory.selected_slot] == 0 { // destroy item if it was the last one
+						global.inventory[# 0, oPlayerInventory.selected_slot] = 0
+						//oPlayerInventory.pickup_slot = -1
+					}
+				}
+			} else {
+				if oCursor.sprite_index == sPotDropCursor {
+					oCursor.sprite_index = sPointerCursor 
 				}
 			}
 		}
+	}
+} else {
+	if oCursor.sprite_index == sPotDropCursor {
+		oCursor.sprite_index = sPointerCursor 
 	}
 }
 

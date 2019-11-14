@@ -41,7 +41,7 @@ repeat (inv_slots) {
 			}
 			if selected_slot == pickup_slot {
 				//set to grab cursor if hovering over an item
-				if oCursor.sprite_index != sGrabCursor {
+				if oCursor.sprite_index != sGrabCursor and oCursor.sprite_index != sPotDropCursor {
 					oCursor.sprite_index = sGrabCursor
 				}
 			}
@@ -62,7 +62,7 @@ repeat (inv_slots) {
 					draw_sprite_ext(iitem[1], 0, xx, yy, item_scale, item_scale, 0, c_white, 1)
 				}
 				//set to grab cursor if hovering over an item
-				if oCursor.sprite_index != sGrabCursor {
+				if oCursor.sprite_index != sGrabCursor and oCursor.sprite_index != sPotDropCursor {
 					oCursor.sprite_index = sGrabCursor
 				}
 				
