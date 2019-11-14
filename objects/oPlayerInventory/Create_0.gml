@@ -12,7 +12,7 @@ inventory_y = 0
 scale = 2
 
 cell_size = 32*scale
-buffer = 4
+buffer = 0
 
 m_slotx = 0
 m_sloty = 0
