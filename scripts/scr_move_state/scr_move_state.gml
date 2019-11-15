@@ -15,178 +15,180 @@ if (!dash_lock) {
 	}
 }
 
-//jumping with buffer
-if on_floor {
-    coyote_buffer = 0
-    if !has_jumped and jump_buffer < JUMP_BUFFER_LENGTH {
-		if on_floor {
-			var _dust_part = instance_create_layer(x, y+(sprite_height/2), "BGLayer", oDustParticle)
-			_dust_part.sprite_index = sJumpParticle
-		}
-        jump_time = JUMP_TIME
-        jump_buffer = JUMP_BUFFER_LENGTH
-        has_jumped = true
-    }
-	has_jumped = false // Jackson added in this line because we couldn't jump the first time we tried, and this is supposed to fix it. However, if we start seeing additional issues, try removing this line.
-}
-jump_buffer++
-
-if oPlayerInput.key_jump {
-    jump_buffer = 0
-    if !has_jumped and coyote_buffer < JUMP_BUFFER_LENGTH {  
-		if on_floor {
-			var _dust_part = instance_create_layer(x, y+(sprite_height/2), "BGLayer", oDustParticle)
-			_dust_part.sprite_index = sJumpParticle
-		}
-		jump_time = JUMP_TIME
-        coyote_buffer = JUMP_BUFFER_LENGTH
-        has_jumped = true
-    }
-}
-coyote_buffer++
-
-if oPlayerInput.key_jump_held and jump_time > 0 and has_jumped {
-    jump_time--
-	motiony = -JUMP_SPEED
-}
-
-if oPlayerInput.key_jump_released and has_jumped and motiony < 0 {
-    has_jumped = false
-    motiony = lerp(motiony, 0, JUMP_FALLOFF_SPEED)
-}
-
-if (!dash_lock) {
-	
-	//decelerate
-	if ((!oPlayerInput.key_right and motionx > 0 ) or (!oPlayerInput.key_left and motionx < 0)) { //if try to change direction mid run, the decelleration still remains, switching directions faster.
-		motionx = lerp(motionx, 0, DECCELRATION)
-		if motionx < DECCEL_CUTOFF and motionx > -DECCEL_CUTOFF {
-			motionx = 0	
-		}
-	}
-
-
-	//moving
+if (global.canMove) {
+	//jumping with buffer
 	if on_floor {
-		if oPlayerInput.key_right { // moving right
-			if motionx == 0 and !oPlayerInput.key_right { // fixes drawing a billion dust particles when holding a button into a wall
-				var _dust_part = instance_create_layer(x, bbox_bottom, "BGLayer", oDustParticle)
-				_dust_part.sprite_index = sStartRunParticle
-				_dust_part.image_xscale = -1
+	    coyote_buffer = 0
+	    if !has_jumped and jump_buffer < JUMP_BUFFER_LENGTH {
+			if on_floor {
+				var _dust_part = instance_create_layer(x, y+(sprite_height/2), "BGLayer", oDustParticle)
+				_dust_part.sprite_index = sJumpParticle
 			}
-			motionx += ACCELERATION*speedMultiplier
-			if motionx >= MAX_SPEED {
+	        jump_time = JUMP_TIME
+	        jump_buffer = JUMP_BUFFER_LENGTH
+	        has_jumped = true
+	    }
+		has_jumped = false // Jackson added in this line because we couldn't jump the first time we tried, and this is supposed to fix it. However, if we start seeing additional issues, try removing this line.
+	}
+	jump_buffer++
+
+	if oPlayerInput.key_jump {
+	    jump_buffer = 0
+	    if !has_jumped and coyote_buffer < JUMP_BUFFER_LENGTH {  
+			if on_floor {
+				var _dust_part = instance_create_layer(x, y+(sprite_height/2), "BGLayer", oDustParticle)
+				_dust_part.sprite_index = sJumpParticle
+			}
+			jump_time = JUMP_TIME
+	        coyote_buffer = JUMP_BUFFER_LENGTH
+	        has_jumped = true
+	    }
+	}
+	coyote_buffer++
+
+	if oPlayerInput.key_jump_held and jump_time > 0 and has_jumped {
+	    jump_time--
+		motiony = -JUMP_SPEED
+	}
+
+	if oPlayerInput.key_jump_released and has_jumped and motiony < 0 {
+	    has_jumped = false
+	    motiony = lerp(motiony, 0, JUMP_FALLOFF_SPEED)
+	}
+
+	if (!dash_lock) {
+	
+		//decelerate
+		if ((!oPlayerInput.key_right and motionx > 0 ) or (!oPlayerInput.key_left and motionx < 0)) { //if try to change direction mid run, the decelleration still remains, switching directions faster.
+			motionx = lerp(motionx, 0, DECCELRATION)
+			if motionx < DECCEL_CUTOFF and motionx > -DECCEL_CUTOFF {
+				motionx = 0	
+			}
+		}
+
+
+		//moving
+		if on_floor {
+			if oPlayerInput.key_right { // moving right
+				if motionx == 0 and !oPlayerInput.key_right { // fixes drawing a billion dust particles when holding a button into a wall
+					var _dust_part = instance_create_layer(x, bbox_bottom, "BGLayer", oDustParticle)
+					_dust_part.sprite_index = sStartRunParticle
+					_dust_part.image_xscale = -1
+				}
+				motionx += ACCELERATION*speedMultiplier
+				if motionx >= MAX_SPEED {
+					motionx -= ACCELERATION*speedMultiplier
+					motionx = lerp(motionx, MAX_SPEED, DECCELRATION)
+					at_max_speed = true
+				}
+			}
+			if oPlayerInput.key_left { // moving left
+				if motionx == 0 and !oPlayerInput.key_left {
+					var _dust_part = instance_create_layer(x, bbox_bottom, "BGLayer", oDustParticle)
+					_dust_part.sprite_index = sStartRunParticle
+					_dust_part.image_xscale = 1
+				}
 				motionx -= ACCELERATION*speedMultiplier
-				motionx = lerp(motionx, MAX_SPEED, DECCELRATION)
-				at_max_speed = true
+				if motionx <= -MAX_SPEED {
+					motionx -= -ACCELERATION*speedMultiplier
+					motionx = lerp(motionx, -MAX_SPEED, DECCELRATION)
+					at_max_speed = true
+				}
 			}
-		}
-		if oPlayerInput.key_left { // moving left
-			if motionx == 0 and !oPlayerInput.key_left {
-				var _dust_part = instance_create_layer(x, bbox_bottom, "BGLayer", oDustParticle)
-				_dust_part.sprite_index = sStartRunParticle
-				_dust_part.image_xscale = 1
+		} else {
+			if oPlayerInput.key_right { // moving right
+				motionx += AIR_ACCELERATION
+				if motionx >= MAX_SPEED {
+					motionx -= AIR_ACCELERATION
+					motionx = lerp(motionx, MAX_SPEED, DECCELRATION)
+				}
 			}
-			motionx -= ACCELERATION*speedMultiplier
-			if motionx <= -MAX_SPEED {
-				motionx -= -ACCELERATION*speedMultiplier
-				motionx = lerp(motionx, -MAX_SPEED, DECCELRATION)
-				at_max_speed = true
-			}
-		}
-	} else {
-		if oPlayerInput.key_right { // moving right
-			motionx += AIR_ACCELERATION
-			if motionx >= MAX_SPEED {
+			if oPlayerInput.key_left { // moving left
 				motionx -= AIR_ACCELERATION
-				motionx = lerp(motionx, MAX_SPEED, DECCELRATION)
-			}
+				if motionx <= -MAX_SPEED {
+					motionx -= -AIR_ACCELERATION
+					motionx = lerp(motionx, -MAX_SPEED, DECCELRATION)
+				}
+			}	
 		}
-		if oPlayerInput.key_left { // moving left
-			motionx -= AIR_ACCELERATION
-			if motionx <= -MAX_SPEED {
-				motionx -= -AIR_ACCELERATION
-				motionx = lerp(motionx, -MAX_SPEED, DECCELRATION)
-			}
-		}	
+
+		//sprinting
+		if (oPlayerInput.key_sprint_held) {
+			MAX_SPEED = MAX_SPRINT_SPEED*speedMultiplier
+			ACCELERATION = SPRINT_ACCELERATION*speedMultiplier
+			AIR_ACCELERATION = SPRINT_AIR_ACCELERATION
+		}
+
+		else {
+			MAX_SPEED = MAX_JOG_SPEED*speedMultiplier
+			ACCELERATION = JOG_ACCELERATION*speedMultiplier
+			AIR_ACCELERATION = JOG_AIR_ACCELERATION
+		}
 	}
 
-	//sprinting
-	if (oPlayerInput.key_sprint_held) {
-		MAX_SPEED = MAX_SPRINT_SPEED*speedMultiplier
-		ACCELERATION = SPRINT_ACCELERATION*speedMultiplier
-		AIR_ACCELERATION = SPRINT_AIR_ACCELERATION
-	}
+	//dash
+	var _x = 0;
+	var _y = 0;
+	var spd = oPlayer.dash_speed;
 
-	else {
-		MAX_SPEED = MAX_JOG_SPEED*speedMultiplier
-		ACCELERATION = JOG_ACCELERATION*speedMultiplier
-		AIR_ACCELERATION = JOG_AIR_ACCELERATION
-	}
-}
-
-//dash
-var _x = 0;
-var _y = 0;
-var spd = oPlayer.dash_speed;
-
-	var dir8 = scr_get_8_dir();
-	switch (dir8) {
-		case direc.right:
-			_x = 1;
-			_y = 0;
-			break;
-		case direc.up_right:
-			_x = 1;
-			_y = -1;
-			spd = oPlayer.dash_speed_diag;
-			break;
-		case direc.up:
-			_x = 0;
-			_y = -1;
-			break;
-		case direc.up_left:
-			_x = -1;
-			_y = -1;
-			spd = oPlayer.dash_speed_diag;
-			break;
-		case direc.left:
-			_x = -1;
-			_y = 0;
-			break;
-		case direc.down_left:
-			_x = -1;
-			_y = 1;
-			spd = oPlayer.dash_speed_diag;
-			break;
-		case direc.down:
-			_x = 0;
-			_y = 1;
-			break;
-		case direc.down_right:
-			_x = 1;
-			_y = 1;
-			spd = oPlayer.dash_speed_diag;
-			break;
-		default:
-			if (oPlayer.player_dir == -1) {
+		var dir8 = scr_get_8_dir();
+		switch (dir8) {
+			case direc.right:
 				_x = 1;
 				_y = 0;
-			}
-			else {
+				break;
+			case direc.up_right:
+				_x = 1;
+				_y = -1;
+				spd = oPlayer.dash_speed_diag;
+				break;
+			case direc.up:
+				_x = 0;
+				_y = -1;
+				break;
+			case direc.up_left:
+				_x = -1;
+				_y = -1;
+				spd = oPlayer.dash_speed_diag;
+				break;
+			case direc.left:
 				_x = -1;
 				_y = 0;
-			}
-	}
+				break;
+			case direc.down_left:
+				_x = -1;
+				_y = 1;
+				spd = oPlayer.dash_speed_diag;
+				break;
+			case direc.down:
+				_x = 0;
+				_y = 1;
+				break;
+			case direc.down_right:
+				_x = 1;
+				_y = 1;
+				spd = oPlayer.dash_speed_diag;
+				break;
+			default:
+				if (oPlayer.player_dir == -1) {
+					_x = 1;
+					_y = 0;
+				}
+				else {
+					_x = -1;
+					_y = 0;
+				}
+		}
 
-if (!oPlayer.on_floor && oPlayerInput.key_heavy_throw && !oPlayer.has_heavy_thrown) {
-	oPlayer.motionx = 0;
-	oPlayer.motiony = 0;
-	oPlayer.dash_lock = true;
-	//heavy_sign = -1;
-	oPlayer.motionx = (_x * spd);
-	oPlayer.motiony = (_y * spd);
-	oPlayer.has_heavy_thrown = true;
+	if (!oPlayer.on_floor && oPlayerInput.key_heavy_throw && !oPlayer.has_heavy_thrown) {
+		oPlayer.motionx = 0;
+		oPlayer.motiony = 0;
+		oPlayer.dash_lock = true;
+		//heavy_sign = -1;
+		oPlayer.motionx = (_x * spd);
+		oPlayer.motiony = (_y * spd);
+		oPlayer.has_heavy_thrown = true;
+	}
 }
 
 //collision

@@ -1,8 +1,8 @@
 {
-    "id": "7989797a-cb13-44b7-8f62-ffa40029bb56",
+    "id": "0516feb3-0172-4186-9ab7-cffe16d9fe98",
     "modelName": "GMScript",
     "mvc": "1.0",
-    "name": "scr_move_state",
+    "name": "cutscene_change_global_variable",
     "IsCompatibility": false,
     "IsDnD": false
 }

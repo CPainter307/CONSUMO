@@ -111,6 +111,14 @@
             }
         },
         {
+            "Key": "0516feb3-0172-4186-9ab7-cffe16d9fe98",
+            "Value": {
+                "id": "aa77fec2-8f58-4357-afb0-cf3cca77ba69",
+                "resourcePath": "scripts\\cutscene_change_global_variable\\cutscene_change_global_variable.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "05c46c17-db28-4a4d-8c77-c23305a61e22",
             "Value": {
                 "id": "7d679c86-859b-456e-bd0f-0cbc7212caea",
@@ -1967,6 +1975,14 @@
             }
         },
         {
+            "Key": "6348dd40-5339-407c-bf23-74e35c526826",
+            "Value": {
+                "id": "1d409628-235c-41eb-b70c-36760fb64c39",
+                "resourcePath": "objects\\oNewTutorial\\oNewTutorial.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "6348e7f9-8ed1-4fec-8890-6257683d31b0",
             "Value": {
                 "id": "90f07953-5aa6-4d7d-9b94-81732f7b96f5",
@@ -2548,6 +2564,14 @@
                 "id": "43c46417-a391-4ae5-938a-de4a322c2814",
                 "resourcePath": "scripts\/scr_play_frog_egg_voice_sound\/scr_play_frog_egg_voice_sound.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "8461a5ce-897a-4c7f-9b4c-a97b9e776e3e",
+            "Value": {
+                "id": "2dc6feb3-258d-489f-8747-1c736cc03410",
+                "resourcePath": "rooms\\rTutorial\\rTutorial.yy",
+                "resourceType": "GMRoom"
             }
         },
         {
@@ -4282,7 +4306,7 @@
             "Key": "d9a401e3-03e1-462a-bd1c-a4c60ed22c44",
             "Value": {
                 "id": "be8ae500-3b34-489f-a125-52065ce67e52",
-                "resourcePath": "rooms\/rTutorial\/rTutorial.yy",
+                "resourcePath": "rooms\\rOldTutorial\\rOldTutorial.yy",
                 "resourceType": "GMRoom"
             }
         },
@@ -5057,6 +5081,7 @@
         "d0f4fc3a-41b4-4a7b-9ea1-e1090a9fb720",
         "c29ad4b3-24cc-4185-98ce-983c71cac0eb",
         "9490bc48-3d40-4c3c-a786-d4d443841f37",
+        "0516feb3-0172-4186-9ab7-cffe16d9fe98",
         "ba8663ee-3034-4876-977b-e0162afcb0c8",
         "5bfc61ae-f87a-468f-8185-96602d564368",
         "b9578e71-ff32-4647-90e2-de17e5250e4c",
