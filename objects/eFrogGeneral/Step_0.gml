@@ -44,12 +44,24 @@ if (!place_meeting(x,y+motiony,oWall))
 if(place_meeting(x, y+motiony, oWall)) { 
 	while(!place_meeting(x, y+sign(motiony), oWall)) {
 		y += sign(motiony);
+		shake = shake_duration
 	}
 	motiony = 0;
 	falling = false;
 	time++;
+	
+	
 }
-
+if (shake > 0 and shake != -10) {
+	view_xport[0] = view_x + choose(-random(shake_magnitude), random(shake_magnitude))
+	view_yport[0] = view_y + choose(-random(shake_magnitude), random(shake_magnitude))
+	shake = shake - 1
+}
+else if (shake != -10) {
+		view_xport[0] = view_x
+		view_yport[0] = view_y
+		shake = -10;
+}
 //if our frog boi has been on the ground for 5 seconds, jump
 if (!falling && time == 300) {
 	time = 0;
