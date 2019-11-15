@@ -74,7 +74,7 @@ if message_end > 0 {
 	//draw text
 	while i <= string_length(text[message_current]) and i <= cutoff {
 		if string_char_at(text[message_current], i) == "#" {
-			modifier = real(string_char_at(text[page], ++i))
+			modifier = real(string_char_at(text[message_current], ++i))
 			i=++i
 		}
 		var length = 0

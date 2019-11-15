@@ -4,6 +4,7 @@ if (dash_lock == true) {
 	var dash = instance_create_layer(x, y, "Objects", oDashEffect)
 	dash.sprite_index = sprite_index
 	dash.image_index = image_index
+	dash.image_xscale = player_dir
 	dash_incrementer++;
 	if !in_air and !on_floor {
 		in_air = true
