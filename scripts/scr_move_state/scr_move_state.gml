@@ -179,11 +179,10 @@ var spd = oPlayer.dash_speed;
 			}
 	}
 
-if (!oPlayer.on_floor && oPlayerInput.key_heavy_throw && !oPlayer.has_heavy_thrown) {
+if (oPlayerInput.key_heavy_throw && !oPlayer.has_heavy_thrown) {
 	oPlayer.motionx = 0;
 	oPlayer.motiony = 0;
 	oPlayer.dash_lock = true;
-	//heavy_sign = -1;
 	oPlayer.motionx = (_x * spd);
 	oPlayer.motiony = (_y * spd);
 	oPlayer.has_heavy_thrown = true;

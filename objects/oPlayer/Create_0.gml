@@ -105,3 +105,8 @@ i_frames = I_FRAME_LENGTH
 nearest_item_x = 0
 nearest_item_y = 0
 nearest_item_text = ""
+
+dash_cd = 0
+max_dash_cd = 30
+
+in_air = false
