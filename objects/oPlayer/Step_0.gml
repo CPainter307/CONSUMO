@@ -5,7 +5,10 @@ if (dash_lock == true) {
 	dash.sprite_index = sprite_index
 	dash.image_index = image_index
 	dash_incrementer++;
-	if (on_floor || dash_incrementer >= dash_check) {
+	if !in_air and !on_floor {
+		in_air = true
+	}
+	if (dash_incrementer >= dash_check) {
 		dash_lock = false;
 		dash_incrementer = 0;
 		//horizontal
@@ -29,10 +32,20 @@ if (dash_lock == true) {
 			motiony = 0;
 		}
 	}
+} else {
+	//in_air = false	
 }
 
-if (on_floor) {
+if (on_floor) and in_air {
 	has_heavy_thrown = false;
+	in_air = false
+} else if (on_floor) and !in_air {
+	if dash_cd >= max_dash_cd {
+		has_heavy_thrown = false
+		dash_cd = 0
+	} else {
+		dash_cd++	
+	}
 }
 
 #endregion
@@ -173,6 +186,7 @@ if place_meeting(x, y, Hitbox) and is_vulnerable {
 	motionx = 0
 	motiony = 0
 	motionx = ((_hitbox.x - oPlayer.x)*-1)/4
+	motiony = ((_hitbox.x - oPlayer.x)*-1)/8
 	player_dir = sign(oPlayer.x-_hitbox.x)
 }
 if !is_vulnerable {

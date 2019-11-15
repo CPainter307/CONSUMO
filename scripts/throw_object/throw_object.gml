@@ -123,18 +123,12 @@ with _inst {
 		}
 	}
 	//heavy throwing
-	if (!oPlayer.on_floor && oPlayerInput.key_heavy_throw && !oPlayer.has_heavy_thrown) {
+	if (oPlayerInput.key_heavy_throw && !oPlayer.has_heavy_thrown) {
 		oPlayer.motionx = 0;
 		oPlayer.motiony = 0;
 		oPlayer.dash_lock = true;
-		if (direction8) {
-			oPlayer.motionx = (-_x * _spd);
-			oPlayer.motiony = (-_y * _spd);
-		}
-		else {
-			oPlayer.motionx = (-_dirx/30);
-			oPlayer.motiony = (-_diry/30);
-		}
+		oPlayer.motionx = (-_dirx/30);
+		oPlayer.motiony = (-_diry/30);
 		oPlayer.has_heavy_thrown = true;
 	}
 	//throws object
