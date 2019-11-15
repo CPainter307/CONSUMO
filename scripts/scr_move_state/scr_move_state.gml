@@ -69,7 +69,7 @@ if (!dash_lock) {
 	//moving
 	if on_floor {
 		if oPlayerInput.key_right { // moving right
-			if motionx == 0 and !oPlayerInput.key_right { // fixes drawing a billion dust particles when holding a button into a wall
+			if motionx == 0 and !place_meeting(x+1, y, oWall) { // fixes drawing a billion dust particles when holding a button into a wall
 				var _dust_part = instance_create_layer(x, bbox_bottom, "BGLayer", oDustParticle)
 				_dust_part.sprite_index = sStartRunParticle
 				_dust_part.image_xscale = -1
@@ -82,7 +82,7 @@ if (!dash_lock) {
 			}
 		}
 		if oPlayerInput.key_left { // moving left
-			if motionx == 0 and !oPlayerInput.key_left {
+			if motionx == 0 and !place_meeting(x+1, y, oWall)  {
 				var _dust_part = instance_create_layer(x, bbox_bottom, "BGLayer", oDustParticle)
 				_dust_part.sprite_index = sStartRunParticle
 				_dust_part.image_xscale = 1
@@ -341,8 +341,8 @@ if (on_floor or up_slope or down_slope) {
 	}
 }
 
-if (motionx > 0) and sprite_index != sPlayerThrow and is_vulnerable {
+if (motionx > 0) and sprite_index != sPlayerThrow {//and is_vulnerable {
 	player_dir = -1;
-} else if (motionx < 0) and sprite_index != sPlayerThrow and is_vulnerable {
+} else if (motionx < 0) and sprite_index != sPlayerThrow {//and is_vulnerable {
 	player_dir = 1;
 }
