@@ -10,6 +10,7 @@ is_above = false;
 
 grv = 0.3;
 motiony = 0;
+motionx = 0;
 falling = false;
 time = 0;
 

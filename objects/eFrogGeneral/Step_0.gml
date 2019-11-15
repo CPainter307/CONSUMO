@@ -1,5 +1,5 @@
 event_inherited()
-
+motionx = 0;
 // If health remaining is 2/3 of the max
 if (currentHealth <= ((maxHealth / 3) * 2) && currentHealth > (maxHealth / 3)) {
 	phase = 2;
@@ -48,6 +48,7 @@ if(place_meeting(x, y+motiony, oWall)) {
 	}
 	motiony = 0;
 	falling = false;
+	
 	time++;
 	
 	
@@ -68,7 +69,7 @@ if (!falling && time == 300) {
 	motiony = -20;
 	
 }
-y += motiony;
+
 
 //////////////////////////////
 //Phase 2: Slamming behavior//
@@ -76,10 +77,10 @@ y += motiony;
 if (phase == 2) {
 	if (motiony < 0 && is_above == false) {
 		if (x > oPlayer.x + sprite_width/2 && x < oPlayer.x - sprite_width/2) {
-			x += sign(oPlayer.x - x) * (abs(x - oPlayer.x)/(sprite_width)) *20 ;
+			motionx = sign(oPlayer.x - x) * (abs(x - oPlayer.x)/(sprite_width)) *20 ;
 		}
 		else {
-			x += sign(oPlayer.x - x) * 10;	
+			motionx = sign(oPlayer.x - x) * 10;	
 		}
 	}
 	if (abs(x - oPlayer.x) < 10) {
@@ -88,6 +89,14 @@ if (phase == 2) {
 	else if ((oPlayer.x > x + sprite_width/2 || oPlayer.x < x - sprite_width/2)){
 		is_above = false;
 	}
+}
+if(place_meeting(x + motionx, y, oWall)) { 
+	while(!place_meeting(x + sign(motionx), y, oWall)) {
+		x += sign(motionx);
+	}
+	motionx = 0;
+	
+	
 }
 
 //Debug trick for bring health down
@@ -98,3 +107,5 @@ if (keyboard_check(ord("H"))) currentHealth--;
 if (place_meeting(x, y, oPlayer)) {
 	//game_restart();	
 }
+y += motiony;
+x += motionx;
