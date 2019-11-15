@@ -1,12 +1,16 @@
 event_inherited()
-
+shake = 0;
 SHOOT_TIME = 120
-
+view_x = view_xport[0]
+view_y = view_xport[0]
 projectile_timer = SHOOT_TIME
-
+shake_duration = 20
+shake_magnitude = 20
 is_above = false;
+
 grv = 0.3;
 motiony = 0;
+motionx = 0;
 falling = false;
 time = 0;
 
