@@ -4,6 +4,7 @@ SHOOT_TIME = 120
 
 projectile_timer = SHOOT_TIME
 
+is_above = false;
 grv = 0.3;
 motiony = 0;
 falling = false;
