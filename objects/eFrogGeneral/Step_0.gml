@@ -56,23 +56,33 @@ if (!falling && time == 300) {
 	motiony = -20;
 	
 }
+y += motiony;
 
 //////////////////////////////
 //Phase 2: Slamming behavior//
 //////////////////////////////
 if (phase == 2) {
-	if (motiony < 0 && x != oPlayer.x) {
-		x += sign(oPlayer.x - x) * 10;	//This causes the frog to jitter back and forth once he's above the player. Still gotta add in a fix that slowly decrements his x position until he's right above the player
+	if (motiony < 0 && is_above == false) {
+		if (x > oPlayer.x + sprite_width/2 && x < oPlayer.x - sprite_width/2) {
+			x += sign(oPlayer.x - x) * (abs(x - oPlayer.x)/(sprite_width)) *20 ;
+		}
+		else {
+			x += sign(oPlayer.x - x) * 10;	
+		}
+	}
+	if (abs(x - oPlayer.x) < 10) {
+			is_above = true;
+	}
+	else if ((oPlayer.x > x + sprite_width/2 || oPlayer.x < x - sprite_width/2)){
+		is_above = false;
 	}
 }
 
 //Debug trick for bring health down
-if (keyboard_check(ord("T"))) currentHealth--;
+if (keyboard_check(ord("H"))) currentHealth--;
 
-
-y += motiony;
 #endregion
 
 if (place_meeting(x, y, oPlayer)) {
-	game_restart();	
+	//game_restart();	
 }
