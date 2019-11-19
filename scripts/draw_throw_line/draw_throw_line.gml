@@ -2,6 +2,10 @@ var direction8 = global.direction8;
 xx = oPlayer.x
 yy = oPlayer.y
 damp = 0.9967
+throw_speed = 1000;
+gravity_loc = 100;
+meter_per_pix =  0.1
+update_speed = 120
 
 //draw_self();
 //figure the mouse dir and distance for aiming and force
@@ -13,10 +17,10 @@ if global.input_type == inputs.analog_stick {
 		dir = point_direction(0, 0, oPlayerInput.haxis, oPlayerInput.vaxis);
 	}
 }
-if (instance_exists(oHoldableObject)) {  // THIS IS A TEMP FIX THAT FIXES A CRASH BUT MAY CAUSE A DRAW ERROR.
-	spd = oHoldableObject.throw_speed; // pix/sec
-	spd = spd / oHoldableObject.update_speed   // pix/step
-}
+
+spd = throw_speed; // pix/sec
+spd = spd / update_speed   // pix/step
+
 //start at x,y of launcher, (my sprite has the origns in the middle of the Y part of the sling)
 empty = true;
 //what are the dx,dy for movement

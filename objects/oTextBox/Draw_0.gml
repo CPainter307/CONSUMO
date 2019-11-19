@@ -1,7 +1,9 @@
 if alarm[1] >= 0 {
-	alpha_val = lerp(alpha_val, 0, 0.5)
+	textboxPosY = lerp(textboxPosY, end_position_y, 0.2)
+	alpha_val = lerp(alpha_val, 0, 0.2)
 } else {
-	alpha_val = lerp(alpha_val, 1, 0.5)
+	textboxPosY = lerp(textboxPosY, start_position_y, 0.2)
+	alpha_val = lerp(alpha_val, 1, 0.2)
 }
 
 //text effects
@@ -21,7 +23,7 @@ draw_set_halign(fa_center);
 draw_text_color(x+(boxWidth/2), y+yBuffer, name,BROWN_COL,BROWN_COL,BROWN_COL,BROWN_COL,alpha_val);
 
 //draw portrait
-draw_sprite_ext(portrait, 0, x+491, y-1, 1, 1, 0, c_white, alpha_val)
+draw_sprite_ext(portrait, 0, x+550, y-1, 1, 1, 0, c_white, alpha_val)
 
 //draw text
 draw_set_font(fTextboxFont)
@@ -38,10 +40,13 @@ if oPlayerInput.key_interact or oPlayerInput.key_jump {
 		cutoff = 0
 		audio_play_sound(snd_textbox_progression,1,0);
 	} else {
-		done = true
-		alarm[1] = 20
-		creator.alarm[0] = 1;
+		done = true		
+		
+		alarm[1] = 20 // set destroy timer
+		if instance_exists(creator)
+			creator.alarm[0] = 1;
 		audio_play_sound(snd_textbox_progression,1,0);
+		//instance_destroy()
 	}
 }
 
@@ -122,9 +127,19 @@ if message_end > 0 {
 
 //draw arrow
 if (cutoff >= string_length(text[message_current])) {
-	draw_sprite_ext(sArrow, 0, x+sprite_get_width(sTextbox) - 100, y+sprite_get_height(sTextbox) - 70, 1, 1, 0, c_white, alpha_val);
+	arrow_speed+=1
+	if arrow_speed % 10 == 0 {
+		arrow_animate+=1
+		arrow_speed = 0
+		if arrow_animate >= 4 {
+			arrow_animate = 0	
+		}
+	}
+	draw_sprite_ext(sArrow, arrow_animate, x+sprite_get_width(sTextbox) - 100, y+sprite_get_height(sTextbox) - 80, 1, 1, 0, c_white, alpha_val);
 }
 
 //draw skip choice
-draw_set_halign(fa_left);
-draw_text_colour(x+32, y-40, "F1 TO SKIP", OFFWHITE_COL, OFFWHITE_COL, OFFWHITE_COL, OFFWHITE_COL, alpha_val + sin(get_timer()/1000000));
+if !done {
+	draw_set_halign(fa_left);
+	draw_text_colour(x+32, y-40, "F1 TO SKIP", OFFWHITE_COL, OFFWHITE_COL, OFFWHITE_COL, OFFWHITE_COL, alpha_val + sin(get_timer()/1000000));
+}

@@ -25,6 +25,7 @@ if (instance_exists(oPlayer) && text1) {
 		[cutscene_create_textbox, ["I've put some targets in this room. All you have to do is touch them.", "#0Use #3WASD#0 to #3move#0, #3SPACE#0 to #3jump#0, and #3SHIFT#0 to #3sprint#0.", "#0You #4demi#0 can also use #3RIGHT CLICK#0 to perform a #3dash#0 to increase your distance."], "Old Man", voice.oldman, sOldmanPortrait],
 		
 		[cutscene_change_global_variable, global.canMove, true],
+		[cutscene_change_camera_target, oPlayer]
 	]
 	currentTrigger.t_skip_info = [
 		[cutscene_instance_destroy, oPlayerTarget],
@@ -35,6 +36,7 @@ if (instance_exists(oPlayer) && text1) {
 		[cutscene_instance_create, 2333, 894, "Objects", oPlayerTarget],
 		[cutscene_instance_create, 3657, 1086, "Objects", oPlayerTarget],		
 		[cutscene_change_global_variable, global.canMove, true],
+		[cutscene_change_camera_target, oPlayer]
 	]
 	text1 = false;
 	oldManText1 = true; 
@@ -77,6 +79,7 @@ if (text2) {
 		[cutscene_instance_create, 2484, 1982, "Objects", oPebble],
 		[cutscene_change_variable, oNewTutorial, "text3", true],
 		[cutscene_change_global_variable, global.canMove, true],	
+		[cutscene_change_camera_target, oPlayer]
 	]
 	currentTrigger.t_skip_info = [	
 		[cutscene_instance_create, 2560, 1982, "Objects", oPebble],
@@ -84,6 +87,7 @@ if (text2) {
 		[cutscene_instance_create, 2484, 1982, "Objects", oPebble],
 		[cutscene_change_variable, oNewTutorial, "text3", true],
 		[cutscene_change_global_variable, global.canMove, true],
+		[cutscene_change_camera_target, oPlayer]
 	]
 oldManText1 = false;
 text2 = false;
@@ -102,10 +106,12 @@ currentTrigger.t_scene_info = [
 		[cutscene_create_textbox, ["#0Why not press #3Q#0 to #3open it up#0?"], "Old Man", voice.oldman, sOldmanPortrait],
 		[cutscene_change_variable, oNewTutorial, "text4", true],
 		[cutscene_change_global_variable, global.canMove, true],	
+		[cutscene_change_camera_target, oPlayer]
 	]
 	currentTrigger.t_skip_info = [	
 		[cutscene_change_global_variable, global.canMove, true],
 		[cutscene_change_variable, oNewTutorial, "text4", true],
+		[cutscene_change_camera_target, oPlayer]
 	]
 	oldManText2 = false;
 	text3 = false;
@@ -125,10 +131,12 @@ currentTrigger.t_scene_info = [
 		[cutscene_create_textbox, ["#0As you'll see these #2pebbles#0 have no #2stats#0. Not a mite of nutrition to be found.", "#0Why not use #3LEFT CLICK#0 to hold them in your throwing hand?"], "Old Man", voice.oldman, sOldmanPortrait],		
 		[cutscene_change_variable, oNewTutorial, "text5", true],
 		[cutscene_change_global_variable, global.canMove, true],	
+		[cutscene_change_camera_target, oPlayer]
 	]
 	currentTrigger.t_skip_info = [	
 		[cutscene_change_global_variable, global.canMove, true],
 		[cutscene_change_variable, oNewTutorial, "text5", true],
+		[cutscene_change_camera_target, oPlayer]
 	]
 	oldManText3 = false;
 	text4 = false;

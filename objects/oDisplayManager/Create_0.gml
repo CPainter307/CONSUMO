@@ -3,6 +3,8 @@
 ideal_width = 1920	
 ideal_height = 1080
 
+following = oPlayer
+
 //aspect_ratio=display_get_width()/display_get_height()
 
 //ideal_width = round(ideal_height*aspect_ratio)

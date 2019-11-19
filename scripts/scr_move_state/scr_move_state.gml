@@ -189,6 +189,10 @@ if (global.canMove) {
 		oPlayer.motiony = (_y * spd);
 		oPlayer.has_heavy_thrown = true;
 	}
+} else { // we cant move
+	motionx = 0;
+	motiony = 0;
+	sprite_index = sPlayerIdle
 }
 
 //collision
@@ -325,7 +329,7 @@ if (!place_meeting(x, y + 2, oWall)) {
 	on_floor = false;	
 }
 if (on_floor or up_slope or down_slope) {
-	if (motionx != 0 or up_slope or down_slope) and (sprite_index != sPlayerThrow) {
+	if (motionx != 0 or up_slope or down_slope) and (sprite_index != sPlayerThrow) and global.canMove {
 		sprite_index = sPlayerRun
 	} else if sprite_index != sPlayerThrow {
 		sprite_index = sPlayerIdle
