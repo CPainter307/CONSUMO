@@ -322,9 +322,9 @@ if (!place_meeting(x, y + 2, oWall)) {
 	on_floor = false;	
 }
 if (on_floor or up_slope or down_slope) {
-	if (motionx != 0 or up_slope or down_slope) and (sprite_index != sPlayerThrow) {
+	if (motionx != 0 or up_slope or down_slope) and (sprite_index != sPlayerThrow) and (sprite_index != sPlayerPickup) {
 		sprite_index = sPlayerRun
-	} else if sprite_index != sPlayerThrow {
+	} else if sprite_index != sPlayerThrow and (sprite_index != sPlayerPickup) {
 		sprite_index = sPlayerIdle
 	}
 	
@@ -334,15 +334,15 @@ if (on_floor or up_slope or down_slope) {
 		image_speed = 1;
 	}
 } else {
-	if (motiony > 0) and sprite_index != sPlayerThrow {
+	if (motiony > 0) and sprite_index != sPlayerThrow and (sprite_index != sPlayerPickup) {
 		sprite_index = sPlayerFall
-	} else if motiony <= 0 and sprite_index != sPlayerThrow {
+	} else if motiony <= 0 and sprite_index != sPlayerThrow and (sprite_index != sPlayerPickup) {
 		sprite_index = sPlayerJump
 	}
 }
 
-if (motionx > 0) and sprite_index != sPlayerThrow {//and is_vulnerable {
+if (motionx > 0) and sprite_index != sPlayerThrow and sprite_index != sPlayerHurt {
 	player_dir = -1;
-} else if (motionx < 0) and sprite_index != sPlayerThrow {//and is_vulnerable {
+} else if (motionx < 0) and sprite_index != sPlayerThrow and sprite_index != sPlayerHurt {
 	player_dir = 1;
 }

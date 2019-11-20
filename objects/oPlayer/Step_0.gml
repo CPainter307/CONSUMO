@@ -4,6 +4,7 @@ if (dash_lock == true) {
 	var dash = instance_create_layer(x, y, "Objects", oDashEffect)
 	dash.sprite_index = sprite_index
 	dash.image_index = image_index
+	dash.image_xscale = player_dir
 	dash_incrementer++;
 	if !in_air and !on_floor {
 		in_air = true
@@ -180,20 +181,20 @@ if speedTimer > 0 {
 
 //i frames
 if place_meeting(x, y, Hitbox) and is_vulnerable {
-	var _hitbox = instance_place(x, y, Hitbox)
+	_hitbox = instance_place(x, y, Hitbox)
 	is_vulnerable = false
 	i_frames = I_FRAME_LENGTH
 	motionx = 0
 	motiony = 0
 	motionx = ((_hitbox.x - oPlayer.x)*-1)/4
-	motiony = ((_hitbox.x - oPlayer.x)*-1)/8
-	player_dir = sign(oPlayer.x-_hitbox.x)
+	motiony = ((_hitbox.x - oPlayer.x)*-1)/6
 }
 if !is_vulnerable {
 	image_alpha = .5
 	i_frames--
 	if i_frames > I_FRAME_LENGTH-30 {
 		sprite_index = sPlayerHurt
+		player_dir = sign(oPlayer.x-_hitbox.x)
 	}
 }
 if i_frames <= 0 {
