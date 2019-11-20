@@ -105,7 +105,7 @@ if pickup_slot != -1 {
 						oPlayer.image_index = 0
 						oPlayer.sprite_index = sPlayerThrow
 						oPlayer.player_dir = sign(oPlayer.x - mouse_x) // sets the player's direction to the direction they are throwing during the animation
-						throw_object(inst, mouse_x, mouse_y, oHoldableObject.throw_speed)
+						throw_object(inst, mouse_x, mouse_y, inst.throw_speed)
 					} else if global.input_type == inputs.analog_stick {
 						throw_object(inst, oPlayerInput.haxis, oPlayerInput.vaxis, 20)
 					}

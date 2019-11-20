@@ -2,10 +2,15 @@ var direction8 = global.direction8;
 xx = oPlayer.x
 yy = oPlayer.y
 damp = 0.9967
+
+//from oHoldableObject, used because it causes a crash when there is only one holdable in the room
 throw_speed = 1000;
 gravity_loc = 100;
 meter_per_pix =  0.1
 update_speed = 120
+grav = gravity_loc; // meter/sec^2
+grav = grav / meter_per_pix   //  pix/sec^2
+grav = grav /  sqr(update_speed)
 
 //draw_self();
 //figure the mouse dir and distance for aiming and force
@@ -33,7 +38,7 @@ vy = lengthdir_y(spd,dir);
 
 
 //the gravity
-lGrav = oHoldableObject.grav; // meter/sec^2
+lGrav = grav; // meter/sec^2
 
 //dragging, draw the lineif(mouse_check_button(mb_left))
 count = 0;
