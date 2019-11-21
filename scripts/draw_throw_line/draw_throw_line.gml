@@ -44,7 +44,7 @@ vy = lengthdir_y(spd,dir);
 
 
 //the gravity
-lGrav = oHoldableObject.grav; // meter/sec^2
+lGrav = grav; // meter/sec^2
 //dragging, draw the lineif(mouse_check_button(mb_left))
 count = 0;
     //draw_primitive_begin(pr_linelist)
