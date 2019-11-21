@@ -11,21 +11,21 @@ var _y = argument2 //mouse-Y
 var _spd = argument3
 _spd = _spd 
 
-scr_play_throw_sound()
-var dir = point_direction(oPlayer.x, oPlayer.y, _x, _y)
-if global.input_type == inputs.analog_stick {
-	dir = point_direction(0, 0, _x, _y)
-}
+	scr_play_throw_sound()
+	var dir = point_direction(oPlayer.x, oPlayer.y, _x, _y)
+	if global.input_type == inputs.analog_stick {
+		dir = point_direction(0, 0, _x, _y)
+	}
 
-if (direction8) {
-	dir = scr_8_to_deg();
-}
+	if (direction8) {
+		dir = scr_8_to_deg();
+	}
 
-var _dirx = lengthdir_x(_spd, dir)
-var _diry = lengthdir_y(_spd, dir)
+	var _dirx = lengthdir_x(_spd, dir)
+	var _diry = lengthdir_y(_spd, dir)
 
 
-//physics_world_update_speed(120)
+	//physics_world_update_speed(120)
 
 
 
@@ -145,3 +145,4 @@ with _inst {
 		//physics_apply_impulse(phy_position_x,phy_position_y,_dirx,_diry);
 	}
 }
+
