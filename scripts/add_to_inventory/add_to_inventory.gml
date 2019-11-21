@@ -1,6 +1,9 @@
 ///@arg0 nearest_item
 var nearest_item = argument0
 
+oPlayer.image_index = 0
+oPlayer.sprite_index = sPlayerPickup
+
 var ni_array
 if nearest_item.object_index == oRecipe {
 	ni_array = [nearest_item.object_index, nearest_item.sprite_index, nearest_item.name, nearest_item.hp, nearest_item.attack, nearest_item.defense, nearest_item.spd]

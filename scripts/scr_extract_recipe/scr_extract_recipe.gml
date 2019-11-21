@@ -11,7 +11,7 @@ if oPlayerInput.key_interact and place_meeting(x, y, oPlayer) {
 	var total_spd = ing1.spd + ing2.spd + ing3.spd;
 	
 	//create oRecipe
-	inst = instance_create_layer(x, y, "Objects", oRecipe); //creates oRecipe based on second item because it'll always be a full ingredient
+	inst = instance_create_layer(x, y, "Objects", oRecipe); //creates oRecipe based on second item because it'll always be a full ingredientdd
 	currentlyCooking = false;
 	
 	// add vessel bonus
@@ -50,6 +50,6 @@ if oPlayerInput.key_interact and place_meeting(x, y, oPlayer) {
 	drawText = true;
 	
 	show_debug_message("hp: " + string(inst.hp) + " atk: " + string(inst.attack) + " def: " + string(inst.defense) + " spd: " + string(inst.spd))
-	
+	add_to_inventory(inst);
 	ds_list_clear(item_list);
 }

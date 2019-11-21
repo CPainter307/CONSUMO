@@ -18,7 +18,7 @@ if collision_circle(x, y, pot_radius, oPlayer, false, true) {
 	if (ds_list_size(item_list) < 3) { // if we click an item and the pot isnt full
 		var ingr = global.inventory[# 0, oPlayerInventory.selected_slot] // get the inventory item selected
 		if oPlayerInventory.selected_slot != -1 and ingr != 0 {
-			if object_get_parent(ingr[0]) == oIngredient { // only add ingredients to pots
+			if object_get_parent(ingr[0]) == oIngredient && oIngredient.prepared { // only add ingredients to pots
 				if oCursor.sprite_index != sPotDropCursor {
 					oCursor.sprite_index = sPotDropCursor 
 				}
@@ -49,9 +49,9 @@ if collision_circle(x, y, pot_radius, oPlayer, false, true) {
 vesselList = ds_list_create()
 vesselRadius = collision_circle_list(x, y, pot_radius, oIngredient, false, true, vesselList, true)
 
-if vesselRadius > 0 {
+if vesselRadius > 0{
 	//if item is not held and pot is not full
-	if (ds_list_size(item_list) < 3) { // if the item is currently being thrown, then it will be added to the pot
+	if (ds_list_size(item_list) < 3 && vesselList[| 0].prepared) { // if the item is currently being thrown, then it will be added to the pot
 		//add conditions for prepared item
 		add_to_pot(vesselList[| 0])
 	}
