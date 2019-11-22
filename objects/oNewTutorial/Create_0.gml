@@ -19,12 +19,16 @@ text1 = true;
 text2 = false;
 text3 = false;
 text4 = false;
+text5 = false;
+text6 = false;
 
 //these variables determine what the old man says when you talk to him
 oldManText1 = false;
 oldManText2 = false;
 oldManText3 = false;
 oldManText4 = false;
+oldManText5 = false;
+oldManText6 = false;
 
 //these variables track various things the cutscene needs to know
 pebbles_exist = false;

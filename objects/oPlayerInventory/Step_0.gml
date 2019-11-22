@@ -86,37 +86,39 @@ if pickup_slot != -1 {
 	//if we click or close our inventory
 	if oPlayerInput.key_throw {
 		if !mouse_in_inventory {
-			#region drop item into the world
-			inv_grid[# 1, pickup_slot] -= 1
+			#region drop item into the world if we canMove
+			if (global.canMove) {
+				inv_grid[# 1, pickup_slot] -= 1
 		
-			//create the item
-			if instance_exists(oPlayer) {
-				var _item = inv_grid[# 0, pickup_slot]
-				if _item != 0 {
-					var inst = instance_create_layer(oPlayer.x, oPlayer.y, "Objects", _item[0])
-					if inst.object_index == oRecipe {
-						// properties of recipe in inventory
-						inst.sprite_index = _item[1]
-						inst.name = _item[2]
-						inst.hp = _item[3]
-						inst.attack = _item[4]
-						inst.defense = _item[5]
-						inst.spd = _item[6]
-					}
-					if global.input_type == inputs.keyboard {
-						oPlayer.image_index = 0
-						oPlayer.sprite_index = sPlayerThrow
-						oPlayer.player_dir = sign(oPlayer.x - mouse_x) // sets the player's direction to the direction they are throwing during the animation
-						throw_object(inst, mouse_x, mouse_y, inst.throw_speed)
-					} else if global.input_type == inputs.analog_stick {
-						throw_object(inst, oPlayerInput.haxis, oPlayerInput.vaxis, 20)
+				//create the item
+				if instance_exists(oPlayer) {
+					var _item = inv_grid[# 0, pickup_slot]
+					if _item != 0 {
+						var inst = instance_create_layer(oPlayer.x, oPlayer.y, "Objects", _item[0])
+						if inst.object_index == oRecipe {
+							// properties of recipe in inventory
+							inst.sprite_index = _item[1]
+							inst.name = _item[2]
+							inst.hp = _item[3]
+							inst.attack = _item[4]
+							inst.defense = _item[5]
+							inst.spd = _item[6]
+						}
+						if global.input_type == inputs.keyboard {
+							oPlayer.image_index = 0
+							oPlayer.sprite_index = sPlayerThrow
+							oPlayer.player_dir = sign(oPlayer.x - mouse_x) // sets the player's direction to the direction they are throwing during the animation
+							throw_object(inst, mouse_x, mouse_y, inst.throw_speed)
+						} else if global.input_type == inputs.analog_stick {
+							throw_object(inst, oPlayerInput.haxis, oPlayerInput.vaxis, 20)
+						}
 					}
 				}
-			}
-			//destroy item in inventory if it was the last one
-			if inv_grid[# 1, pickup_slot] == 0 {
-				inv_grid[# 0, pickup_slot] = 0
-				pickup_slot = -1
+				//destroy item in inventory if it was the last one
+				if inv_grid[# 1, pickup_slot] == 0 {
+					inv_grid[# 0, pickup_slot] = 0
+					pickup_slot = -1
+				}
 			}
 			#endregion
 		//unequip currently held item

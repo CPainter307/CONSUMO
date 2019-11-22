@@ -32,4 +32,7 @@ myText3[1] = "#0Why not press #3Q#0 to #3open it up#0?"
 
 myText4[0] = "#0Use #3LEFT CLICK#0 to hold those #2pebbles#0 in your throwing hand!"
 
-myText5[0] = "The client's waitin'! Get out of here!";
+myText5[0] = "#0While you're #3holding#0 an #2item#0 you can press #3LEFT CLICK#0 to #3throw#0 it in the direction of your #3mouse#0.";
+myText5[1] = "Try giving these targets a hit, boy! Show me what you're made of!";
+
+myText6[0] = "#0This is placeholder text! #4Charles#0 needs to get his act together!";

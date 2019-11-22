@@ -14,9 +14,12 @@ if (place_meeting(x, y, oPlayer)) {
 			if (oNewTutorial.oldManText4) {
 				myTextbox.text = myText4;
 			}
-			//if (oNewTutorial.oldManText5) {
-			//	myTextbox.text = myText5;
-			//}
+			if (oNewTutorial.oldManText5) {
+				myTextbox.text = myText5;
+			}
+			if (oNewTutorial.oldManText6) {
+				myTextbox.text = myText6;
+			}
 			myTextbox.creator = self;
 			myTextbox.name = myName;
 			myTextbox.voice = myVoice
