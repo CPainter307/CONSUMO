@@ -1,4 +1,4 @@
-#region dash lock
+ #region dash lock
 
 if (dash_lock == true) {
 	var dash = instance_create_layer(x, y, "Objects", oDashEffect)

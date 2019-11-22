@@ -1,6 +1,6 @@
 event_inherited()
 shake = 0;
-SHOOT_TIME = 120
+SHOOT_TIME = 400
 view_x = view_xport[0]
 view_y = view_xport[0]
 projectile_timer = SHOOT_TIME
