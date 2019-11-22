@@ -1,7 +1,9 @@
 if oPlayerInput.key_inventory {
 	show_inventory = !show_inventory
-	inventory_x = oPlayer.x
-	inventory_y = oPlayer.y
+	if instance_exists(oPlayer) {
+		inventory_x = oPlayer.x
+		inventory_y = oPlayer.y
+	}
 }
 if keyboard_check_pressed(ord("T")) {
 	if lineToggle {

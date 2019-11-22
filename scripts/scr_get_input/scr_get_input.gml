@@ -1,4 +1,5 @@
 
+
 if (global.input_type == inputs.keyboard) {
 	key_up = keyboard_check(global.key_up);
 	key_down = keyboard_check(global.key_down);
