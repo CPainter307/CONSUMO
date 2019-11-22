@@ -1,12 +1,4 @@
-if(keyboard_check_pressed(ord("1"))) {
-	room_goto(rHomeScreen)	
-}
-if(keyboard_check_pressed(ord("2"))) {
-	room_goto(rFlatSurface)	
-}
-if(keyboard_check_pressed(ord("3"))) {
-	room_goto(rTutorial)	
-}
+
 if(keyboard_check_pressed(global.hard_pause) || keyboard_check_pressed(global.key_pause) || gamepad_button_check_pressed(0, global.key_pause)) { script_execute(pause_game); }
 
 if(!global.pause) exit;

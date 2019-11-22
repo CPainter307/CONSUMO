@@ -7,7 +7,7 @@ projectile_timer = SHOOT_TIME
 shake_duration = 20
 shake_magnitude = 20
 is_above = false;
-
+target = oPlayer
 grv = 0.3;
 motiony = 0;
 motionx = 0;

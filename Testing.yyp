@@ -1591,6 +1591,14 @@
             }
         },
         {
+            "Key": "5233c24b-c240-473b-a4da-eca27be192c1",
+            "Value": {
+                "id": "0ed63896-bc8f-451f-8780-343500f6878f",
+                "resourcePath": "objects\\Demo_Button\\Demo_Button.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "527b8fe3-68e6-4004-bc79-e34aa5ea4a7e",
             "Value": {
                 "id": "cdec39b1-6a27-4ba3-9649-bd1c33d63c32",
@@ -2596,6 +2604,14 @@
                 "id": "e8f0586a-4ff3-4c84-aef2-a4535ec2c8df",
                 "resourcePath": "scripts\/draw_throw_line\/draw_throw_line.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "85eefbd8-8d66-4194-89f9-1c7ca3524d80",
+            "Value": {
+                "id": "28d19c1c-15fd-4add-89dd-34e7a6c4704e",
+                "resourcePath": "sprites\\Demo_block\\Demo_block.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -3711,6 +3727,14 @@
             }
         },
         {
+            "Key": "bc07e932-6327-4594-973e-2f71b38467fa",
+            "Value": {
+                "id": "4da6cdd5-4739-406b-b0c4-13d1d3b7d541",
+                "resourcePath": "objects\\Battle_Button\\Battle_Button.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "bc5e738b-3700-41dc-9fb3-47c9f5d26308",
             "Value": {
                 "id": "64d80e6f-4d52-4d79-b562-a4e3f5e3e6df",
@@ -4231,6 +4255,14 @@
             }
         },
         {
+            "Key": "d5cb9180-17e0-436e-a6f8-349dd847f55c",
+            "Value": {
+                "id": "4ff5a9bf-14c2-47ab-8eb0-ec94e3996cae",
+                "resourcePath": "sprites\\sprite228\\sprite228.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "d5d92beb-4e5a-46ed-9ab1-01f78d610d90",
             "Value": {
                 "id": "0856a327-9725-4f58-992c-19bed30c90a2",
@@ -4284,6 +4316,14 @@
                 "id": "c8bf0244-0511-446e-a0a5-ecedd73cc616",
                 "resourcePath": "sounds\/snd_chop_2\/snd_chop_2.yy",
                 "resourceType": "GMSound"
+            }
+        },
+        {
+            "Key": "d7ecb371-53d6-4e4d-b6c3-67104f78da07",
+            "Value": {
+                "id": "34c2b124-f857-46d1-a2bc-a1a0daede557",
+                "resourcePath": "sprites\\sWall1\\sWall1.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -5076,8 +5116,8 @@
         "27597571-57bd-4959-b49e-99e3fec0b896",
         "4fe0df13-6617-41bf-af1c-81a6487aea2c",
         "7e7ad076-bae5-485e-aaae-88a26f4b4828",
-        "b107e128-a3fc-4baa-a3ad-0cd2b9f6b60e",
         "b6533c49-094f-4662-a258-14d490b59d90",
+        "b107e128-a3fc-4baa-a3ad-0cd2b9f6b60e",
         "f08795bc-5222-4cd7-8924-a1439d61f4e4",
         "831c07c0-479d-4e71-9511-e78c2d3bd94c",
         "b282e5cc-561a-4c06-a316-1f7dda5257a2",
