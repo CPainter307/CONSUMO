@@ -16,7 +16,7 @@ scr_health_circle(x, y-(51/scale_down), 263/scale_down, 100, cur_health, -90, -1
 
 //draw_portrait
 draw_sprite_ext(sBattleWindowBG, 0, x, y, 1/scale_down, 1/scale_down, 0, c_white, 1)
-draw_sprite_ext(sLizardPortraitBattle, 0, x, y, 1/scale_down, 1/scale_down, 0, c_white, 1)
+draw_sprite_ext(portrait, 0, x, y, 1/scale_down, 1/scale_down, 0, c_white, 1)
 
 //draw outline
 draw_sprite_ext(sBattleWindowOutline, 0, x, y, 1/scale_down, 1/scale_down, 0, c_white, 1)

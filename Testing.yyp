@@ -3975,6 +3975,14 @@
             }
         },
         {
+            "Key": "c6b2d0f6-da24-4803-8664-a38f3c7b1988",
+            "Value": {
+                "id": "92df1fc5-c3b4-4072-aa9b-6b1b7a0ffbd8",
+                "resourcePath": "sprites\\sChefPortraitBattle\\sChefPortraitBattle.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "c6bb5513-ac0d-4af9-b04b-039a7e0377cc",
             "Value": {
                 "id": "3002269d-71a9-4d06-833f-ec9394a0863b",

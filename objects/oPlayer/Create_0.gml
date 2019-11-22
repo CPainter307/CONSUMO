@@ -76,6 +76,7 @@ hand_y = y;
 
 battleWindow = instance_create_depth(100, 100, -y, oBattlePortrait)
 battleWindow.owner = self
+battleWindow.portrait = sChefPortraitBattle
 
 battleWindow.y = window_get_height()-75
 battleWindow.scale_down = 3

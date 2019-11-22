@@ -9,3 +9,5 @@ max_spd = 100
 
 owner = noone
 scale_down = 4
+
+portrait = sLizardPortraitBattle
