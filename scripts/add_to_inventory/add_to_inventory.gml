@@ -30,7 +30,7 @@ if nearest_item.object_index == oRecipe {
 		}
 	}
 } else {
-	ni_array = [nearest_item.object_index, nearest_item.sprite_index, nearest_item.name, nearest_item.hp, nearest_item.attack, nearest_item.defense, nearest_item.spd]
+	ni_array = [nearest_item.object_index, nearest_item.sprite_index, nearest_item.name, nearest_item.hp, nearest_item.attack, nearest_item.defense, nearest_item.spd, nearest_item.prepared]
 	with oPlayerInventory {
 		var ds_inv = global.inventory
 		var picked_up = false
