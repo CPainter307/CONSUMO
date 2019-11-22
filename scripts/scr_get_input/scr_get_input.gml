@@ -1,4 +1,31 @@
+if(keyboard_check_pressed(ord("1"))) {
+	instance_destroy(oPlayer)
+	//room_restart()
+	
+	room_goto(rHomeScreen)	
+	
+}
+if(keyboard_check_pressed(ord("2"))) {
+	instance_destroy(oPlayer)
+	//room_restart()
 
+	room_goto(rFlatSurface)	
+	
+}
+if(keyboard_check_pressed(ord("3"))) {
+	instance_destroy(oPlayer)
+	//room_restart()
+	
+	room_goto(rTutorial)	
+	
+}
+if(keyboard_check_pressed(ord("4"))) {
+	instance_destroy(oPlayer)
+	//room_restart()//
+	
+	room_goto(rTransitionTest)	
+	
+}
 
 if (global.input_type == inputs.keyboard) {
 	key_up = keyboard_check(global.key_up);
