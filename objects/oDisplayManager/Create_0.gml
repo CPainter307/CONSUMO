@@ -1,13 +1,13 @@
 
 ////display properties
-ideal_width = 1920	
-ideal_height = 1080
+ideal_width = 640*3
+ideal_height = 360*3
 
 following = oPlayer
 
-//aspect_ratio=display_get_width()/display_get_height()
+aspect_ratio=display_get_width()/display_get_height()
 
-//ideal_width = round(ideal_height*aspect_ratio)
+ideal_width = round(ideal_height*aspect_ratio)
 
 //pixel perfect scaling
 if display_get_width() mod ideal_width != 0 {

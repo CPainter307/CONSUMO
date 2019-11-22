@@ -28,7 +28,6 @@ if (global.canMove) { //we can move
 	        jump_buffer = JUMP_BUFFER_LENGTH
 	        has_jumped = true
 	    }
-		has_jumped = false // Jackson added in this line because we couldn't jump the first time we tried, and this is supposed to fix it. However, if we start seeing additional issues, try removing this line.
 	}
 	jump_buffer++
 
@@ -51,9 +50,11 @@ if (global.canMove) { //we can move
 		motiony = -JUMP_SPEED
 	}
 
-	if oPlayerInput.key_jump_released and has_jumped and motiony < 0 {
+	if oPlayerInput.key_jump_released and has_jumped {
 	    has_jumped = false
-	    motiony = lerp(motiony, 0, JUMP_FALLOFF_SPEED)
+		if motiony < 0 { // only cut off jump if we are rising
+			motiony = lerp(motiony, 0, JUMP_FALLOFF_SPEED)
+		}
 	}
 
 	if (!dash_lock) {

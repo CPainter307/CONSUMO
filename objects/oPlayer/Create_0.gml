@@ -43,7 +43,6 @@ down_slope = false;
 #macro DASH_BUFFER_LENGTH 20
 #macro MAX_FALL_SPEED 30
 
-window_set_size(1920, 1080)
 
 has_jumped = false
 dash_lock = false
