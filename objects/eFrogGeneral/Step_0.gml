@@ -20,8 +20,8 @@ if (phase == 1) {
 	projectile_timer--
 	if projectile_timer <= 0 {
 		var inst = instance_create_layer(x, y-100, "Objects", oProjectile)
-		inst.dirx = sign(x-oPlayer.x)*-1
-		image_xscale = sign(x-oPlayer.x);
+		inst.dirx = sign(x-target.x)*-1
+		image_xscale = sign(x-target.x);
 		projectile_timer = SHOOT_TIME
 	}
 }
@@ -76,17 +76,17 @@ if (!falling && time == 300) {
 //////////////////////////////
 if (phase == 2) {
 	if (motiony < 0 && is_above == false) {
-		if (x > oPlayer.x + sprite_width/2 && x < oPlayer.x - sprite_width/2) {
-			motionx = sign(oPlayer.x - x) * (abs(x - oPlayer.x)/(sprite_width)) *20 ;
+		if (x > target.x + sprite_width/2 && x < target.x - sprite_width/2) {
+			motionx = sign(target.x - x) * (abs(x - target.x)/(sprite_width)) *20 ;
 		}
 		else {
-			motionx = sign(oPlayer.x - x) * 10;	
+			motionx = sign(target.x - x) * 10;	
 		}
 	}
-	if (abs(x - oPlayer.x) < 10) {
+	if (abs(x - target.x) < 10) {
 			is_above = true;
 	}
-	else if ((oPlayer.x > x + sprite_width/2 || oPlayer.x < x - sprite_width/2)){
+	else if ((target.x > x + sprite_width/2 || target.x < x - sprite_width/2)){
 		is_above = false;
 	}
 }
@@ -104,7 +104,7 @@ if (keyboard_check(ord("H"))) currentHealth--;
 
 #endregion
 
-if (place_meeting(x, y, oPlayer)) {
+if (place_meeting(x, y, target)) {
 	//game_restart();	
 }
 y += motiony;
