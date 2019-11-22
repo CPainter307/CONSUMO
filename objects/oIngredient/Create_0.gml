@@ -27,7 +27,7 @@ unprepared_sprite = pointer_null;
 prepared_sprite = pointer_null;
 
 //prepared timer
-prepared_check = 120;
+prepared_check = 600;
 prepared_i = 0;
 
 //sound variables

@@ -3791,6 +3791,14 @@
             }
         },
         {
+            "Key": "bfc090f5-5c1e-44bf-8373-8fdc25b83a62",
+            "Value": {
+                "id": "3893eae9-12ed-48bf-b5d0-ada441e194fd",
+                "resourcePath": "scripts\\scr_extract_recipe_name_2\\scr_extract_recipe_name_2.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "bff25437-2449-4119-a8aa-882eb4bcf888",
             "Value": {
                 "id": "33e2cb99-52bc-4e2c-b5b9-e0bcf7fe4bd1",
@@ -5073,6 +5081,7 @@
         "f9ad685f-1396-49fe-a3e2-c5117bc4d91a",
         "59e9d743-93b6-4af6-a40b-0424f69bb113",
         "a05e043a-ac1a-469a-9a6a-79ff51b24cc1",
+        "bfc090f5-5c1e-44bf-8373-8fdc25b83a62",
         "4790bf6a-2eab-4d7a-afb5-496e3477fdd8",
         "6a188d77-d797-4719-affd-2d03fc032920",
         "7066df95-76fc-4575-bb05-41397e1addb5",

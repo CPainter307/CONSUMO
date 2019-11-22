@@ -16,3 +16,11 @@ pickUpSound = snd_pickup_meat;
 //sprites
 unprepared_sprite = sFish;
 prepared_sprite = sPreparedFish;
+
+var fix;
+fix = physics_fixture_create()
+physics_fixture_set_box_shape(fix, sprite_width/4, sprite_height/4)
+physics_fixture_set_density(fix, 0.5);
+physics_fixture_bind(fix, self)
+physics_fixture_delete(fix)
+phy_active = true

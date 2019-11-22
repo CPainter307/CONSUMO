@@ -37,6 +37,14 @@ for (var i = 0; i < 3; i++) {
 	}
 }
 
+//check spices
+for (var i = 0; i < 3; i++) {
+	if (ds_list_find_value(item_list, i).classification == "fruit") {
+		inst.name += "Tropical ";
+		break;
+	}
+}
+
 //check meats *INCOMPLETE*
 var meatName = "";
 for (var i = 0; i < 3; i++) {
