@@ -13,14 +13,14 @@ if (prepared && !beingCooked) {
 	if (prepared_i == 0) {
 		sprite_index = prepared_sprite;	//prepared_i makes sure it only happens once to avoid unnecessary index asssignment
 	}
-	if (prepared_i < prepared_check) {	//increments prepared timer
-		prepared_i++;	
-	}
-	else {	//timer expired; no longer prepared
-		prepared_i = 0;
-		prepared = false;
-		sprite_index = unprepared_sprite;
-	}
+	//if (prepared_i < prepared_check) {	//increments prepared timer
+	//	prepared_i++;	
+	//}
+	//else {	//timer expired; no longer prepared
+	//	prepared_i = 0;
+	//	prepared = false;
+	//	sprite_index = unprepared_sprite;
+	//}
 }
 
 //inside target check
