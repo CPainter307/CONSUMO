@@ -23,7 +23,7 @@ draw_set_halign(fa_center);
 draw_text_color(x+(boxWidth/2), y+yBuffer, name,BROWN_COL,BROWN_COL,BROWN_COL,BROWN_COL,alpha_val);
 
 //draw portrait
-draw_sprite_ext(portrait, 0, x+550, y-1, 1, 1, 0, c_white, alpha_val)
+draw_sprite_ext(portrait, 0, x+600, y-1, 1, 1, 0, c_white, alpha_val)
 
 //draw text
 draw_set_font(fTextboxFont)
@@ -135,7 +135,7 @@ if (cutoff >= string_length(text[message_current])) {
 			arrow_animate = 0	
 		}
 	}
-	draw_sprite_ext(sArrow, arrow_animate, x+sprite_get_width(sTextbox) - 100, y+sprite_get_height(sTextbox) - 80, 1, 1, 0, c_white, alpha_val);
+	draw_sprite_ext(sArrow, arrow_animate, x+sprite_get_width(sTextbox)-100, y+sprite_get_height(sTextbox) - 80, 1, 1, 0, c_white, alpha_val);
 }
 
 //draw skip choice

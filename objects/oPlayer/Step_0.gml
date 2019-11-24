@@ -155,7 +155,7 @@ if keyboard_check_pressed(ord("F")) {
 	}
 }
 
-battleWindow.cur_health = lerp(battleWindow.cur_health, (currentHealth/maxHealth)*100, 0.1)
+battleWindow.cur_health = lerp(battleWindow.cur_health, (currentHealth/maxHealth)*100, 0.3)
 if attackTimer > 0 {
 	attackTimer--
 	battleWindow.cur_atk = lerp(battleWindow.cur_atk, attackTimer, 0.3)
@@ -177,7 +177,8 @@ if speedTimer > 0 {
 	speedMultiplier=1.5
 } else {
 	speedMultiplier=1	
-}
+} 
+
 
 //i frames
 if place_meeting(x, y, Hitbox) and is_vulnerable {
@@ -186,15 +187,19 @@ if place_meeting(x, y, Hitbox) and is_vulnerable {
 	i_frames = I_FRAME_LENGTH
 	motionx = 0
 	motiony = 0
-	motionx = ((_hitbox.x - oPlayer.x)*-1)/4
-	motiony = ((_hitbox.x - oPlayer.x)*-1)/6
+	if instance_exists(_hitbox) {
+		motionx = (sign(_hitbox.x - oPlayer.x)*-1) * KNOCKBACK_AMOUNT_X
+		motiony = -KNOCKBACK_AMOUNT_Y
+	}
 }
 if !is_vulnerable {
 	image_alpha = .5
 	i_frames--
 	if i_frames > I_FRAME_LENGTH-30 {
 		sprite_index = sPlayerHurt
-		player_dir = sign(oPlayer.x-_hitbox.x)
+		if instance_exists(_hitbox) {
+			player_dir = sign(oPlayer.x-_hitbox.x)
+		}
 	}
 }
 if i_frames <= 0 {

@@ -7,7 +7,7 @@ projectile_timer = SHOOT_TIME
 shake_duration = 20
 shake_magnitude = 20
 is_above = false;
-target = oPlayer
+target = Warrior
 grv = 0.3;
 motiony = 0;
 motionx = 0;
@@ -45,3 +45,5 @@ timer_m2 = 0;
 healthThisFrame = currentHealth;
 flash = 0;
 timer_m2 = 0;
+
+slam_hitbox = noone

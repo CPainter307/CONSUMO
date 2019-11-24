@@ -13,9 +13,9 @@ if (global.canMove) {
 	grav = grav / meter_per_pix   //  pix/sec^2
 	grav = grav /  sqr(update_speed)
 
-	draw_freq = 3
-	outline_size = 6
-	circle_size = 4
+	draw_freq = 5
+	outline_size = 4
+	circle_size = 3
 	spin_rate = 20
 	rotation_speed = 2
 

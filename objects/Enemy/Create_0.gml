@@ -22,3 +22,14 @@ timer_m2 = 0;
 
 healthThisFrame = currentHealth;
 flash = 0;
+
+contact_hitbox = instance_create_depth(x, y, -y, Hitbox)
+contact_hitbox.destroy_timer = -1
+contact_hitbox.OwnerClass = "Enemy";
+contact_hitbox.targetClass = "Adventurer";
+contact_hitbox.movePower = 10;
+contact_hitbox.attack = 20;
+contact_hitbox.attackMultiplier = 1;
+contact_hitbox.sprite_index = sprite_index
+contact_hitbox.image_xscale = .7
+contact_hitbox.image_yscale = .7

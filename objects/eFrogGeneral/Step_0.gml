@@ -1,4 +1,10 @@
 event_inherited()
+
+//dont do anything if target is dead
+if !instance_exists(target) {
+	exit	
+}
+
 motionx = 0;
 // If health remaining is 2/3 of the max
 if (currentHealth <= ((maxHealth / 3) * 2) && currentHealth > (maxHealth / 3)) {
@@ -35,6 +41,15 @@ if (!place_meeting(x,y+motiony,oWall))
 	
 	//if the frog has reached the peak of his jump, start slamming
 	if (motiony > 0) {
+		if !falling {
+			slam_hitbox = instance_create_depth(x, y, -y, Hitbox)
+			slam_hitbox.destroy_timer = -1
+		}
+		slam_hitbox.x = x
+		slam_hitbox.y = y
+		slam_hitbox.movePower = 10;
+		slam_hitbox.attack = 20;
+		slam_hitbox.attackMultiplier = 1;
 		motiony = 50;
 		falling = true;
 	}
@@ -49,10 +64,14 @@ if(place_meeting(x, y+motiony, oWall)) {
 	motiony = 0;
 	falling = false;
 	
+	if instance_exists(slam_hitbox) {
+		instance_destroy(slam_hitbox)	
+	}
+	
 	time++;
-	
-	
 }
+
+//screenshake
 if (shake > 0 and shake != -10) {
 	view_xport[0] = view_x + choose(-random(shake_magnitude), random(shake_magnitude))
 	view_yport[0] = view_y + choose(-random(shake_magnitude), random(shake_magnitude))
@@ -67,7 +86,6 @@ else if (shake != -10) {
 if (!falling && time == 300) {
 	time = 0;
 	motiony = -20;
-	
 }
 
 
@@ -85,6 +103,7 @@ if (phase == 2) {
 	}
 	if (abs(x - target.x) < 10) {
 			is_above = true;
+			
 	}
 	else if ((target.x > x + sprite_width/2 || target.x < x - sprite_width/2)){
 		is_above = false;
@@ -95,8 +114,6 @@ if(place_meeting(x + motionx, y, oWall)) {
 		x += sign(motionx);
 	}
 	motionx = 0;
-	
-	
 }
 
 //Debug trick for bring health down

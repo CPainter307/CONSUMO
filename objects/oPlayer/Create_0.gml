@@ -1,4 +1,4 @@
-event_inherited()
+ event_inherited()
 Class = "Adventurer"
 
 gamepad_set_axis_deadzone(0, 0.35)
@@ -103,10 +103,13 @@ i_frames = I_FRAME_LENGTH
 
 //for drawing text over the nearest item
 nearest_item_x = 0
-nearest_item_y = 0
+nearest_item_y = 0 
 nearest_item_text = ""
 
 dash_cd = 0
 max_dash_cd = 30
 
 in_air = false
+
+KNOCKBACK_AMOUNT_X = 20
+KNOCKBACK_AMOUNT_Y = 10
