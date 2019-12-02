@@ -7,4 +7,9 @@ if (place_meeting(x, y, oPlayer) && !isHit) {
 }
 
 //sprite change
-if (isHit) sprite_index = sPlayerTargetGreen;
+if (isHit) {
+	if (sprite_index == sPlayerTargetRed) {
+		global.playerTargeti++;
+		sprite_index = sPlayerTargetGreen;
+	}
+}

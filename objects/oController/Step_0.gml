@@ -1,6 +1,7 @@
 //Campfire Code
-if (global.campfire_pulse) {	//makes sure that pulse only happens for a single step
+if (global.campfire_pulse && global.campfire_pulse_occured) {	//makes sure that pulse only happens for a single step
 	global.campfire_pulse = false;	
+	global.campfire_pulse_occured = false;
 }
 
 //if (global.campfire_complete) {	//waits until link setup is complete
@@ -35,4 +36,12 @@ if (global.campfire_link_complete && !global.campfire_complete) {	//everything b
 			global.campfire_complete = true;	//setup is complete
 		}
 	}
+}
+
+//Player Target code
+if (keyboard_check_pressed(ord("Y")) || (global.playerTargeti >= global.playerTargetCount && global.playerTargetCount > 0 && !global.playerTargetEventTriggered)) {
+	global.playerTargetEventTriggered = true;
+	show_message("You done it.");
+	layer_background_change(layer_get_id("Cave1"), sDoneIt);
+	instance_create_layer(x, y, "BGLayer", oDoneIt);
 }

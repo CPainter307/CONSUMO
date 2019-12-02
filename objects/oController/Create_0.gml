@@ -35,11 +35,17 @@ enum ingr {
 
 global.direction8 = false;
 global.switchBlue = true;
+global.playerTargetCount = 0;
+global.playerTargeti = 0;
+global.playerTargetEventTriggered = false;
+
+global.controllerID = id;
 
 //CampFire Variables
 global.campfire_list = [pointer_null];	//array that stores IDs of campfires in rotation order
 global.campfire_list_i = 0;	//index for storing IDs in the campfire_list
 global.campfire_pulse = false;	//variable that's true for one step when all campfires should shift a spot
+global.campfire_pulse_occured = false; //true if the pot has executed the pulse code
 campfire_i = 0;	//counter for campfire_pulse
 campfire_check = 120;	//time limit to reach for pulse
 campfire_link_count = 0;	//number of links that are in the room

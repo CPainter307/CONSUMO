@@ -29,6 +29,7 @@ if (isHit) {
 }
 
 
+
 //sprite change
 if (isHit) {
 	sprite_index = sCampfireTargetHit;

@@ -16,6 +16,8 @@ if (global.campfire_pulse) {
 	var campfireID = global.campfire_list[campfire_index];
 	x = campfireID.x;
 	y = campfireID.y;
+	
+	global.campfire_pulse_occured = true;
 }
 
 //set pot indexes

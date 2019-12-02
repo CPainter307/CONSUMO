@@ -53,7 +53,13 @@ if nearest_item.object_index == oRecipe {
 			var yy = 0; repeat (inv_slots) {
 				if ds_inv[# 0, yy] == 0 {
 					ds_inv[# 0, yy] = ni_array
-					ds_inv[# 1, yy] += 1  ///////// SET THIS BACK TO 1!!!
+					
+					if (room == rDemo2) {
+						ds_inv[# 1, yy] += 99  ///////// SET THIS BACK TO 1!!!
+					}
+					else {
+						ds_inv[# 1, yy] += 1  ///////// SET THIS BACK TO 1!!!	
+					}
 					picked_up = true
 					break;
 				} else {

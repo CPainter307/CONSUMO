@@ -527,6 +527,14 @@
             }
         },
         {
+            "Key": "17dc416e-7d37-4974-b3d3-eece1e015dc8",
+            "Value": {
+                "id": "1507d44f-8b45-430f-a773-810a04e53f21",
+                "resourcePath": "sprites\\sDoneIt\\sDoneIt.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "17ea4c4c-17d8-4837-a42e-4ffdd885606c",
             "Value": {
                 "id": "029228a3-88a0-455e-9396-8af36476a541",
@@ -836,6 +844,14 @@
                 "id": "294b3381-5a94-4012-9679-6055a2ab7ee7",
                 "resourcePath": "sprites\/sHacky\/sHacky.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "26617bfd-8dfb-46e8-ae7e-9a1c32c83064",
+            "Value": {
+                "id": "c9130ff2-06e5-4878-8b81-1e15d86d37c4",
+                "resourcePath": "objects\\oDoneIt\\oDoneIt.yy",
+                "resourceType": "GMObject"
             }
         },
         {

@@ -1,4 +1,4 @@
-if (global.canMove) {
+if (global.canMove && instance_exists(oPlayer)) { //Temp crash fix
 	var direction8 = global.direction8;
 	xx = oPlayer.x
 	yy = oPlayer.y

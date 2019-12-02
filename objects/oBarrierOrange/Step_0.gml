@@ -2,9 +2,11 @@
 // You can write your code in this editor
 if (global.switchBlue)
 {
-	active = false;          
+	active = false;
+	phy_active = false;
 }
 else
 {
-	active = true;	
+	active = true;
+	phy_active = true;
 }
