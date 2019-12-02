@@ -1,5 +1,4 @@
 event_inherited();
-event_inherited();
 prepared = false;
 enum_type = ingr.oApple;
 name = "Apple ";

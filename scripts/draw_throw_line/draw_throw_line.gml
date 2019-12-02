@@ -64,7 +64,7 @@ if (global.canMove) {
 			xx+=vx; //add dx
 	        yy+=vy; //add dy
 			spd = sqrt(sqr(vx) + sqr(vy))
-			spd = spd //* damp
+			spd = spd * damp
 			vx = lengthdir_x(spd,dir);
 			vy = lengthdir_y(spd,dir);
 		

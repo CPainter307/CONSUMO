@@ -95,9 +95,12 @@ if pickup_slot != -1 {
 					var _item = inv_grid[# 0, pickup_slot]
 					if _item != 0 {
 						var inst = instance_create_layer(oPlayer.x, oPlayer.y, "Objects", _item[0])
+						inst.sprite_index = _item[1]
+						if object_get_parent(inst.object_index) == oIngredient {
+							inst.prepared = _item[7]
+						}
 						if inst.object_index == oRecipe {
 							// properties of recipe in inventory
-							inst.sprite_index = _item[1]
 							inst.name = _item[2]
 							inst.hp = _item[3]
 							inst.attack = _item[4]
