@@ -199,24 +199,26 @@ if (global.canMove) { //we can move
 up_slope = false;
 down_slope = false;
 //horizontal collision
-if (place_meeting(x, y + 5, oWall) and !place_meeting(x + sign(motionx)*10, y + 1, oWall)) {
-		down_slope = true;
-		on_floor = true
-}	
+// TEMP SLOPE REMOVAL
+//if (place_meeting(x, y + 5, oWall) and !place_meeting(x + sign(motionx)*10, y + 1, oWall)) {
+//		down_slope = true;
+//		on_floor = true
+//}	TEMP SLOPE REMOVAL
 
 if (place_meeting(x+motionx, y, oWall)) {
-	if (place_meeting(x, y + 5, oWall) and !place_meeting(x+motionx, y - abs(motionx), oWall)) {
-		dy = 0;
-			while place_meeting(x+motionx, y - dy, oWall) {
-				dy++;	
-			}
-			up_slope = true;
-			y = y - dy
-			x = x + motionx
-			motiony = 0;
-			on_floor = true
-	}
-	else {
+	// TEMP SLOPE REMOVAL
+	//if (place_meeting(x, y + 5, oWall) and !place_meeting(x+motionx, y - abs(motionx), oWall)) {
+	//	dy = 0;
+	//		while place_meeting(x+motionx, y - dy, oWall) {
+	//			dy++;	
+	//		}
+	//		up_slope = true;
+	//		y = y - dy
+	//		x = x + motionx
+	//		motiony = 0;
+	//		on_floor = true
+	//}
+	//else {  TEMP SLOPE REMOVAL
 		
 		var inst_list = ds_list_create();
 		instance_place_list(x+motionx, y, oWall, inst_list, false);
@@ -242,8 +244,7 @@ if (place_meeting(x+motionx, y, oWall)) {
 			motionx = 0;
 		}
 	ds_list_destroy(inst_list);
-	
-	}
+	//} TEMP SLOPE REMOVAL
 }
 
 
@@ -317,10 +318,12 @@ if (place_meeting(x+motionx, y+motiony, oWall)) {
 	}
 	ds_list_destroy(inst_list);
 }
-if !up_slope {
+// TEMP SLOPE REMOVAL
+//if !up_slope {
 x += motionx
 y += motiony
-}
+//}
+// TEMP SLOPE REMOVAL
 
 if (place_meeting(x, y+1, oHazard)) game_restart();
 
