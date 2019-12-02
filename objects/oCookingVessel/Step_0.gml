@@ -1,4 +1,8 @@
 /// @description 
+if instance_exists(steam) {
+	steam.x = x
+	steam.y = y-oPot.sprite_height
+}
 
 // checks to see if recipe is done
 if (ds_list_size(item_list) >= 3) {

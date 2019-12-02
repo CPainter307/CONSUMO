@@ -2,7 +2,10 @@
 if oPlayerInput.key_interact and place_meeting(x, y, oPlayer) {
 	timeline_index = 540;
 	timeline_running = false;
-	with(steam) instance_destroy();
+	with(steam) {
+		steam = noone
+		instance_destroy();	
+	}
 	
 	//add booster values to oRecipe
 	var total_hp = ing1.hp + ing2.hp + ing3.hp;
