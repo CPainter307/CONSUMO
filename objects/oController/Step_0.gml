@@ -3,15 +3,15 @@ if (global.campfire_pulse) {	//makes sure that pulse only happens for a single s
 	global.campfire_pulse = false;	
 }
 
-if (global.campfire_complete) {	//waits until link setup is complete
-	if (campfire_i < campfire_check) {	//counter to trigger campfire_pulse
-		campfire_i++;	
-	}
-	else {	//trigger the pulse & reset the timer
-		global.campfire_pulse = true;
-		campfire_i = 0;
-	}
-}
+//if (global.campfire_complete) {	//waits until link setup is complete
+//	if (campfire_i < campfire_check) {	//counter to trigger campfire_pulse
+//		campfire_i++;	
+//	}
+//	else {	//trigger the pulse & reset the timer
+//		global.campfire_pulse = true;
+//		campfire_i = 0;
+//	}
+//}
 
 //Initial Campfire_Link setup code
 if (!global.campfire_link_initial_setup) {	//run until initial setup is complete
