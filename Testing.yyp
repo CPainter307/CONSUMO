@@ -271,6 +271,14 @@
             }
         },
         {
+            "Key": "0d8969ae-ff89-48e0-9566-b90cba780fcd",
+            "Value": {
+                "id": "d3604887-e06d-464e-a200-75bd37a49e5a",
+                "resourcePath": "sprites\\sDemoRoomWhite\\sDemoRoomWhite.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "0da03493-4d80-495d-af18-8c8b981255be",
             "Value": {
                 "id": "397193bf-742c-4f96-bba8-e7f680971724",
@@ -331,6 +339,14 @@
             "Value": {
                 "id": "21e38f96-ae0c-4957-8f3f-f5170cc4a28e",
                 "resourcePath": "sprites\/sPlayer\/sPlayer.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "0faf5c66-0895-4f01-a68b-26fde744e5ab",
+            "Value": {
+                "id": "24f6be4f-b0cd-48ad-80e1-266fa7b60e61",
+                "resourcePath": "sprites\\sprite237\\sprite237.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -1108,6 +1124,14 @@
                 "id": "2feef9b0-d248-4585-8b26-4ebfa330e70c",
                 "resourcePath": "fonts\/fRecipeText\/fRecipeText.yy",
                 "resourceType": "GMFont"
+            }
+        },
+        {
+            "Key": "385aeeeb-f4b8-40a4-83b5-0879b599d77a",
+            "Value": {
+                "id": "8960cb56-f6e1-43b5-ad45-2dbe4d7bb3e5",
+                "resourcePath": "sprites\\sBossRoomWhite\\sBossRoomWhite.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -2095,6 +2119,14 @@
             }
         },
         {
+            "Key": "6a88041b-b409-4812-9ba3-f48ef84a88a7",
+            "Value": {
+                "id": "e0937876-949a-4223-b02d-42f724636a63",
+                "resourcePath": "sprites\\sBossRoomYellow\\sBossRoomYellow.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "6b109209-03bf-4df9-8556-441c60c11192",
             "Value": {
                 "id": "8d86eaaa-5396-4c10-b9eb-0f3799e858a7",
@@ -2642,7 +2674,7 @@
             "Key": "85eefbd8-8d66-4194-89f9-1c7ca3524d80",
             "Value": {
                 "id": "28d19c1c-15fd-4add-89dd-34e7a6c4704e",
-                "resourcePath": "sprites\\Demo_block\\Demo_block.yy",
+                "resourcePath": "sprites\\sDemoRoomYellow\\sDemoRoomYellow.yy",
                 "resourceType": "GMSprite"
             }
         },
