@@ -99,5 +99,5 @@ repeat (inv_slots) {
 //if we have something picked up with the mouse
 if (pickup_slot != -1) {
 	iitem = inv_grid[# 0, pickup_slot]
-	oPlayer.held_item = iitem[1]
+	oPlayer.held_items[0] = iitem[1]
 }

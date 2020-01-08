@@ -15,7 +15,7 @@ hsp = 0;
 vsp = 0;
 jumpspeed = 10;
 
-held_item = pointer_null;
+held_items = [noone, noone, noone];
 held_x = 0;
 held_y = 0;
 pickupRadius = 0
@@ -78,7 +78,7 @@ battleWindow = instance_create_depth(100, 100, -y, oBattlePortrait)
 battleWindow.owner = self
 battleWindow.portrait = sChefPortraitBattle
 
-battleWindow.y = window_get_height()-75
+battleWindow.y = window_get_height()-95
 battleWindow.scale_down = 3
 
 baseAttack = 10

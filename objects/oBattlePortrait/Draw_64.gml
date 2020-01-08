@@ -34,7 +34,7 @@ draw_sprite_ext(sStatBG, 0, x+(stat_1_x/scale_down), y+(stat_1_y/scale_down), 1/
 draw_sprite_ext(sSwordIcon, 0, x+(stat_1_x/scale_down), y+(stat_1_y/scale_down), 1/scale_down, 1/scale_down, 0, c_white, 1)
 scr_health_ring(x+(stat_1_x/scale_down), y+(stat_1_y/scale_down), 60/scale_down, 15/scale_down, max_atk, cur_atk, 90, 360, 1, color_stat)
 
-////shield
+//shield
 draw_sprite_ext(sStatBG, 0, x+(stat_2_x/scale_down), y+(stat_2_y/scale_down), 1/scale_down, 1/scale_down, 0, c_white, 1)
 draw_sprite_ext(sShieldIcon, 0, x+(stat_2_x/scale_down), y+(stat_2_y/scale_down), 1/scale_down, 1/scale_down, 0, c_white, 1)
 scr_health_ring(x+(stat_2_x/scale_down), y+(stat_2_y/scale_down), 60/scale_down, 15/scale_down, max_def, cur_def, 90, 360, 1, color_stat)

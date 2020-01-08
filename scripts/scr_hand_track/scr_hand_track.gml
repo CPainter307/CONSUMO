@@ -1,6 +1,7 @@
 //This code handles hand positions for holding food throughout our animations.
 
 //idle
+
 if (sprite_index == sPlayerIdle) {
 	
 	//facing right

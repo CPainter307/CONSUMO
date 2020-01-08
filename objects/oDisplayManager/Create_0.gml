@@ -7,7 +7,6 @@ camera_width=0;
 camera_height=0;
 zoom=1;
 max_zoom=1;
-use_sub_pixels=false;
  
 //Aspect ratio
 aspect_ratio = display_get_width()/display_get_height();
@@ -20,8 +19,6 @@ ideal_width=round(ideal_width);
 ideal_height=round(ideal_height);
  
 //Check to make sure our ideal width and height isn't an odd number, as that's usually not good.
- 
- 
 if(ideal_width & 1)
   ideal_width++;
      
@@ -54,4 +51,3 @@ display_set_gui_size(ideal_width*zoom,ideal_height*zoom);
 window_set_size(ideal_width*zoom,ideal_height*zoom);
  
 alarm[0]=1; //Center Window
-alarm[2]=1; //Change Zoom
