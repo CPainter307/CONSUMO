@@ -206,3 +206,6 @@ if i_frames <= 0 {
 	image_alpha = 1
 	is_vulnerable = true
 }
+
+//player sounds
+script_execute(scr_movement_sounds());

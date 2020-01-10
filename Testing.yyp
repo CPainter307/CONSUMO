@@ -383,6 +383,14 @@
             }
         },
         {
+            "Key": "1250e253-3809-4327-a9b2-33fefc8629e0",
+            "Value": {
+                "id": "6a64714d-d9ba-4afa-8795-0ce7f1168ba8",
+                "resourcePath": "sounds\\snd_footstep_2\\snd_footstep_2.yy",
+                "resourceType": "GMSound"
+            }
+        },
+        {
             "Key": "126227ce-8156-4ba6-a8b4-8a0949932b0f",
             "Value": {
                 "id": "7b89b7f8-adb6-445e-ab82-77d812e6d55d",
@@ -3975,6 +3983,14 @@
             }
         },
         {
+            "Key": "c1a1f1d2-312e-4458-ba5e-c21740e0a962",
+            "Value": {
+                "id": "256c8586-9966-4ec2-aa04-285f2881d909",
+                "resourcePath": "sounds\\snd_footstep_1\\snd_footstep_1.yy",
+                "resourceType": "GMSound"
+            }
+        },
+        {
             "Key": "c232e22b-4998-4c77-a496-c20b7513cf46",
             "Value": {
                 "id": "40e13bfe-be32-4727-b2fc-c94168efaedf",
@@ -4003,6 +4019,14 @@
             "Value": {
                 "id": "fd058a45-2f8c-4aec-bfe2-a1f7c300913a",
                 "resourcePath": "scripts\/create_cutscene\/create_cutscene.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "c316dce4-6035-4a72-9ae9-838d9f29e407",
+            "Value": {
+                "id": "8a9099e5-5b09-4b5d-be43-e0afeba3610f",
+                "resourcePath": "scripts\\scr_movement_sounds\\scr_movement_sounds.yy",
                 "resourceType": "GMScript"
             }
         },
@@ -5272,6 +5296,7 @@
         "31021679-af37-447d-a2b6-b264779b99cf",
         "d93c1336-4463-4db0-98b9-ea975ff79168",
         "d0f4fc3a-41b4-4a7b-9ea1-e1090a9fb720",
+        "c316dce4-6035-4a72-9ae9-838d9f29e407",
         "c29ad4b3-24cc-4185-98ce-983c71cac0eb",
         "9490bc48-3d40-4c3c-a786-d4d443841f37",
         "0516feb3-0172-4186-9ab7-cffe16d9fe98",

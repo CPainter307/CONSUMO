@@ -15,7 +15,7 @@ hsp = 0;
 vsp = 0;
 jumpspeed = 10;
 
-held_items = [noone, noone, noone];
+held_item = noone;
 held_x = 0;
 held_y = 0;
 pickupRadius = 0
@@ -113,3 +113,7 @@ in_air = false
 
 KNOCKBACK_AMOUNT_X = 20
 KNOCKBACK_AMOUNT_Y = 10
+
+//sound effect values
+step1 = false;
+step2 = false;
