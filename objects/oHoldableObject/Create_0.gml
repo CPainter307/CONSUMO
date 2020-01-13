@@ -9,7 +9,7 @@ placed = false;
 collision_type = "circle";
 
 throw_speed = 1000;
-gravity_loc = 100;
+gravity_loc = 90;
 meter_per_pix =  0.1
 update_speed = 120
 grav = gravity_loc; // meter/sec^2

@@ -6,7 +6,7 @@ if (global.canMove && instance_exists(oPlayer)) { //Temp crash fix
 
 	//from oHoldableObject, used because it causes a crash when there is only one holdable in the room
 	throw_speed = 1000;
-	gravity_loc = 100;
+	gravity_loc = 90;
 	meter_per_pix =  0.1
 	update_speed = 120
 	grav = gravity_loc; // meter/sec^2
@@ -64,7 +64,7 @@ if (global.canMove && instance_exists(oPlayer)) { //Temp crash fix
 			xx+=vx; //add dx
 	        yy+=vy; //add dy
 			spd = sqrt(sqr(vx) + sqr(vy))
-			spd = spd * damp
+		//	spd = spd * damp
 			vx = lengthdir_x(spd,dir);
 			vy = lengthdir_y(spd,dir);
 		
