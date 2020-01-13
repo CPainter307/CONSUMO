@@ -209,3 +209,6 @@ if i_frames <= 0 {
 
 //player sounds
 script_execute(scr_movement_sounds());
+
+//Charles particle testing
+part_emitter_stream(oPS, auraEmitter, global.pt_aura, 10);

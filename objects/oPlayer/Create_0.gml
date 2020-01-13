@@ -117,3 +117,6 @@ KNOCKBACK_AMOUNT_Y = 10
 //sound effect values
 step1 = false;
 step2 = false;
+
+//charles particle testing
+auraEmitter = part_emitter_create(oPS);

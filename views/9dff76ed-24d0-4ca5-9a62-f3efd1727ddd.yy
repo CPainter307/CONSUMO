@@ -23,7 +23,8 @@
         "a51fbd3a-0a30-481d-bacd-fc5c00133156",
         "97728b28-9692-4259-811a-afd7f4c404ee",
         "f7a2d471-08bf-4ed7-833c-40020c563813",
-        "2ea8e8cc-3334-49ae-810d-05554ce2f81c"
+        "2ea8e8cc-3334-49ae-810d-05554ce2f81c",
+        "a8b4fd56-eb2b-4d99-b5e8-87a3b61b80fe"
     ],
     "filterType": "GMSound",
     "folderName": "Voices",
