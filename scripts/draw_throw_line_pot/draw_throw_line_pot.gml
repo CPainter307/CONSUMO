@@ -5,8 +5,8 @@ if (global.canMove && instance_exists(oPlayer)) { //Temp crash fix
 	damp = 0.9967
 
 	//from oHoldableObject, used because it causes a crash when there is only one holdable in the room
-	throw_speed = oHoldableObject.throw_speed;
-	gravity_loc = oHoldableObject.gravity_loc;
+	throw_speed = oCookingVessel.throw_speed;
+	gravity_loc = oCookingVessel.gravity_loc;
 	meter_per_pix =  0.1
 	update_speed = 120
 	grav = gravity_loc; // meter/sec^2
@@ -29,7 +29,8 @@ if (global.canMove && instance_exists(oPlayer)) { //Temp crash fix
 			dir = point_direction(0, 0, oPlayerInput.haxis, oPlayerInput.vaxis);
 		}
 	}
-
+	xx = phy_position_x;
+	yy = phy_position_y;
 	spd = throw_speed; // pix/sec
 	spd = spd / update_speed   // pix/step
 

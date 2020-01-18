@@ -15,6 +15,14 @@ if (ds_list_size(item_list) >= 3) {
 		scr_extract_recipe(1);
 	}
 }
+if (!onFire) {
+	currentlyCooking = false;
+	timeline_running = false;
+	with(steam) {
+		steam = noone
+		instance_destroy();	
+	}
+}
 
 ////pot inventory
 //if collision_circle(x, y, pot_radius, oPlayer, false, true) {
@@ -61,7 +69,14 @@ if vesselRadius > 0 and vesselList[| 0].prepared {
 	}
 }
 
-if (ds_list_size(item_list) >= 3 && currentlyCooking == false) {	
+if collision_circle(x, y, pot_radius, oCampfire, false, true) {
+	onFire = true;
+}
+else {
+	onFire = false;	
+}
+
+if (ds_list_size(item_list) >= 3 && currentlyCooking == false && onFire) {	
 	//set list of ingredients for script
 	currentlyCooking = true;
 	ing1 = ds_list_find_value(item_list, 0);
@@ -73,5 +88,26 @@ if (ds_list_size(item_list) >= 3 && currentlyCooking == false) {
 	timeline_running = true;
 	timeline_loop = false;
 }
+//oPlayerInventory.lineToggle = true;
+if (held == true) {
+	lineToggle = true;
+	phy_position_x = oPlayer.x;
+	phy_position_y = oPlayer.y - ((oPlayer.sprite_height + sprite_height) / 2);
+	//physics_world_gravity(0, 0);
+	phy_linear_velocity_y = 0;
+	phy_linear_velocity_x = 0;
+}
+if (oPlayerInput.key_throw && held == true) {
+	lineToggle = false;
+	oPlayer.image_index = 0
+	oPlayer.sprite_index = sPlayerThrow
+	oPlayer.player_dir = sign(oPlayer.x - mouse_x) // sets the player's direction to the direction they are throwing during the animation
+	throw_object(self, mouse_x, mouse_y, throw_speed)	
+	held = false;
+	phy_fixed_rotation = true;
+	phy_angular_velocity = 0;
+	//physics_world_gravity(0, gravity_loc)
+}
 
+phy_rotation = 0;
 ds_list_destroy(vesselList)
