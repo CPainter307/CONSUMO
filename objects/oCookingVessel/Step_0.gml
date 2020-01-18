@@ -15,6 +15,14 @@ if (ds_list_size(item_list) >= 3) {
 		scr_extract_recipe(1);
 	}
 }
+if (!onFire) {
+	currentlyCooking = false;
+	timeline_running = false;
+	with(steam) {
+		steam = noone
+		instance_destroy();	
+	}
+}
 
 //pot inventory
 if collision_circle(x, y, pot_radius, oPlayer, false, true) {

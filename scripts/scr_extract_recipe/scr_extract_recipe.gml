@@ -12,10 +12,11 @@ if oPlayerInput.key_interact and place_meeting(x, y, oPlayer) {
 	var total_attack = ing1.attack + ing2.attack + ing3.attack;
 	var total_defense = ing1.defense + ing2.defense + ing3.defense;
 	var total_spd = ing1.spd + ing2.spd + ing3.spd;
-	
-	//create oRecipe
-	inst = instance_create_layer(x, y, "Objects", oRecipe); //creates oRecipe based on second item because it'll always be a full ingredientdd
 	currentlyCooking = false;
+	//create oRecipe
+
+	inst = instance_create_layer(x, y, "Objects", oRecipe); //creates oRecipe based on second item because it'll always be a full ingredientdd
+	
 	
 	// add vessel bonus
 	total_hp = total_hp + vesselHp;
@@ -40,6 +41,7 @@ if oPlayerInput.key_interact and place_meeting(x, y, oPlayer) {
 			inst.name = "Burnt " + inst.name;
 			inst.quality = 1;
 			break;
+		
 	}
 	
 	//assign to recipe
