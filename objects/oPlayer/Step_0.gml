@@ -90,7 +90,7 @@ if _door != noone {
 }
 
 //this lets us pick up items if click on them in the world
-if pickupRadius > 0 and !oPlayerInventory.show_inventory{
+if pickupRadius > 0 {
 	for (var i = 0; i < pickupRadius; i++;) {
 		var nearest_item = itemRadiusList[| i]
 		if oCursor.sprite_index != sPointerCursor {
@@ -104,7 +104,7 @@ if pickupRadius > 0 and !oPlayerInventory.show_inventory{
 			oCursor.sprite_index = sGrabCursor
 		}
 		if mouse_check_button_pressed(mb_left) {
-			add_to_inventory(nearest_item)
+			//add_to_inventory(nearest_item)
 		}
 		break
 	}
@@ -115,45 +115,58 @@ if pickupRadius > 0 and !oPlayerInventory.show_inventory{
 if oPlayerInput.key_interact {
 	if pickupRadius > 0 {
 		var nearest_item = itemRadiusList[| 0]
-		add_to_inventory(nearest_item) 
+		add_to_inventory(nearest_item)
 	}
 }
 ds_list_destroy(itemRadiusList)
 #endregion
 
-#region hand tracking
-
-script_execute(scr_hand_track());
-
-#endregion
-
-//eating
-var inv_grid = global.inventory
-if keyboard_check_pressed(ord("F")) {
-	if oPlayerInventory.pickup_slot != -1 {
-		var _item = inv_grid[# 0, oPlayerInventory.pickup_slot]
-		if _item != 0 and _item[0] == oRecipe {
-			inv_grid[# 1, oPlayerInventory.pickup_slot] -= 1 // decrement by 1
-			if inv_grid[# 1, oPlayerInventory.pickup_slot] == 0 { // destroy recipe if it was the last one
-				inv_grid[# 0, oPlayerInventory.pickup_slot] = 0
-				oPlayerInventory.pickup_slot = -1
-			}
-			currentHealth = min(maxHealth, currentHealth+_item[3])
-			attackTimer = _item[4] * 60
-			defenseTimer = _item[5] * 60
-			speedTimer = _item[6] * 60
-		
-			battleWindow.cur_atk = attackTimer
-			battleWindow.max_atk = attackTimer
-
-			battleWindow.cur_def = defenseTimer
-			battleWindow.max_def = defenseTimer
-
-			battleWindow.cur_spd = speedTimer
-			battleWindow.max_spd = speedTimer
+if oPlayerInput.key_throw {
+	for (var i = 0; i < 3; i++) {
+		if held_items[i] != noone {
+			var inst = instance_create_layer(oPlayer.x, oPlayer.y  - (i * 30), "Objects", array_get(held_items[i], 0));
+			throw_object(inst, mouse_x, mouse_y, inst.throw_speed)
+			held_items[i] = noone;
 		}
 	}
 }
+
+#region hand tracking
+
+hand_x = x;
+hand_y = y-60;
+
+//script_execute(scr_hand_track());
+
+#endregion
+
+//eating ---------------------------------------------- COMMENTED OUT FOR NOW BECAUSE NEW INVENTORY
+//var inv_grid = global.inventory
+//if keyboard_check_pressed(ord("F")) {
+//	if oPlayerInventory.pickup_slot != -1 {
+//		var _item = inv_grid[# 0, oPlayerInventory.pickup_slot]
+//		if _item != 0 and _item[0] == oRecipe {
+//			inv_grid[# 1, oPlayerInventory.pickup_slot] -= 1 // decrement by 1
+//			if inv_grid[# 1, oPlayerInventory.pickup_slot] == 0 { // destroy recipe if it was the last one
+//				inv_grid[# 0, oPlayerInventory.pickup_slot] = 0
+//				oPlayerInventory.pickup_slot = -1
+//			}
+//			currentHealth = min(maxHealth, currentHealth+_item[3])
+//			attackTimer = _item[4] * 60
+//			defenseTimer = _item[5] * 60
+//			speedTimer = _item[6] * 60
+		
+//			battleWindow.cur_atk = attackTimer
+//			battleWindow.max_atk = attackTimer
+
+//			battleWindow.cur_def = defenseTimer
+//			battleWindow.max_def = defenseTimer
+
+//			battleWindow.cur_spd = speedTimer
+//			battleWindow.max_spd = speedTimer
+//		}
+//	}
+//}
 
 battleWindow.cur_health = lerp(battleWindow.cur_health, (currentHealth/maxHealth)*100, 0.3)
 if attackTimer > 0 {

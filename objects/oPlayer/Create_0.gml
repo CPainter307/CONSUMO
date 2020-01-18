@@ -15,9 +15,9 @@ hsp = 0;
 vsp = 0;
 jumpspeed = 10;
 
-held_item = noone;
+held_items = [noone, noone, noone];
 held_x = 0;
-held_y = 0;
+held_y = -45;
 pickupRadius = 0
 itemRadiusList = noone
 pickupRadiusSize = 80

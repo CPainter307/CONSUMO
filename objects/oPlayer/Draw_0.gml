@@ -11,27 +11,30 @@ draw_sprite_ext(sprite_index, image_index, x, y, player_dir, 1, image_angle, c_w
 
 //draw the current item into the player's hand (unless they're throwing)
 if (sprite_index != sPlayerThrow and sprite_index != sPlayerPickup) {
-	if (!(held_item == pointer_null) && !(oPlayerInventory.pickup_slot == -1)) {
-		draw_sprite_ext(held_items[0], 0, hand_x, hand_y, (player_dir * 0.5), 0.5, 0, c_white, image_alpha) //Changed the call for held_item to held_items[0] since that's where we can find the sprite now
+	for(var i = 0; i < 3; i++) {
+		if held_items[i] != noone {
+			//draw_throw_line()
+			draw_sprite_ext(array_get(held_items[i] , 1), 0, hand_x, hand_y - (i * 30), (player_dir * 0.5), 0.5, 0, c_white, image_alpha)
+		}
 	}
 }
 
-//draw the arm over the player so that there is a layered arm
-if (sprite_index == sPlayerIdle && held_item != pointer_null && oPlayerInventory.pickup_slot != -1) {
-	draw_sprite_ext(sLeftArmIdle,image_index, x, y, player_dir, 1, image_angle, c_white, image_alpha);
-}
+////draw the arm over the player so that there is a layered arm
+//if (sprite_index == sPlayerIdle && held_item != noone && oPlayerInventory.pickup_slot != -1) {
+//	draw_sprite_ext(sLeftArmIdle,image_index, x, y, player_dir, 1, image_angle, c_white, image_alpha);
+//}
 
-if (sprite_index == sPlayerRun && held_item != pointer_null && oPlayerInventory.pickup_slot != -1) {
-	draw_sprite_ext(sLeftArmRun,image_index, x, y, player_dir, 1, image_angle, c_white, image_alpha);
-}
+//if (sprite_index == sPlayerRun && held_item != pointer_null && oPlayerInventory.pickup_slot != -1) {
+//	draw_sprite_ext(sLeftArmRun,image_index, x, y, player_dir, 1, image_angle, c_white, image_alpha);
+//}
 
-if (sprite_index == sPlayerJump && held_item != pointer_null && oPlayerInventory.pickup_slot != -1) {
-	draw_sprite_ext(sLeftArmJump,image_index, x, y, player_dir, 1, image_angle, c_white, image_alpha);	
-}
+//if (sprite_index == sPlayerJump && held_item != pointer_null && oPlayerInventory.pickup_slot != -1) {
+//	draw_sprite_ext(sLeftArmJump,image_index, x, y, player_dir, 1, image_angle, c_white, image_alpha);	
+//}
 
-if (sprite_index == sPlayerFall && held_item != pointer_null && oPlayerInventory.pickup_slot != -1) {
-	draw_sprite_ext(sLeftArmFall,image_index, x, y, player_dir, 1, image_angle, c_white, image_alpha);	
-}
+//if (sprite_index == sPlayerFall && held_item != pointer_null && oPlayerInventory.pickup_slot != -1) {
+//	draw_sprite_ext(sLeftArmFall,image_index, x, y, player_dir, 1, image_angle, c_white, image_alpha);	
+//}
 
 //---------------------------- UNCOMMENT FOR draw nearest item text
 //draw_set_font(fBattleTextThick)
