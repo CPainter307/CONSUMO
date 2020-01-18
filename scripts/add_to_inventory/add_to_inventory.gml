@@ -10,8 +10,8 @@ ni_array = [nearest_item.object_index, nearest_item.sprite_index, nearest_item.n
 	
 //add item to empty slot if it doesnt already exist
 for (var i = 0; i < 3; i++) {
-	if held_items[i] == noone {
-		held_items[i] = ni_array;
+	if oPlayer.held_items[i] == noone {
+		oPlayer.held_items[i] = ni_array;
 		break;
 	}
 }
