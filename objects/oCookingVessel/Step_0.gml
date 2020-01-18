@@ -64,7 +64,14 @@ if vesselRadius > 0 and vesselList[| 0].prepared {
 	}
 }
 
-if (ds_list_size(item_list) >= 3 && currentlyCooking == false) {	
+if collision_circle(x, y, pot_radius, oCampfire, false, true) {
+	onFire = true;
+}
+else {
+	onFire = false;	
+}
+
+if (ds_list_size(item_list) >= 3 && currentlyCooking == false && onFire) {	
 	//set list of ingredients for script
 	currentlyCooking = true;
 	ing1 = ds_list_find_value(item_list, 0);
