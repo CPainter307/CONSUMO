@@ -1191,6 +1191,14 @@
             }
         },
         {
+            "Key": "382b0675-ecf2-4720-b179-a38875216188",
+            "Value": {
+                "id": "c971b11e-60f8-4dea-a651-1baf6fe2f1ab",
+                "resourcePath": "scripts\\draw_throw_line_pot\\draw_throw_line_pot.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "385aeeeb-f4b8-40a4-83b5-0879b599d77a",
             "Value": {
                 "id": "8960cb56-f6e1-43b5-ad45-2dbe4d7bb3e5",
@@ -5378,6 +5386,7 @@
         "b6b6b1bc-5277-400f-bb19-ec96fbb8e940",
         "814f960a-ad3e-4a88-bf3f-9038dbc728dc",
         "8539600f-1a81-4a8b-81b2-efb003fec0d1",
+        "382b0675-ecf2-4720-b179-a38875216188",
         "2e2bbeb5-41a0-4ff1-b614-af704a6f6adb",
         "4426b866-afa5-4eb2-90c3-7476a3bf2e21",
         "7f07d631-0ede-47b2-8017-1b15c919e0ff",
