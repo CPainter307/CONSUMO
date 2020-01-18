@@ -18,6 +18,9 @@ if (ds_list_size(item_list) >= 3) {
 
 //pot inventory
 if collision_circle(x, y, pot_radius, oPlayer, false, true) {
+	if (oPlayerInput.key_interact and held == false) {
+		held = true;	
+	}
 	//oPlayerInventory.show_inventory = true // show the player's inventory
 	if (ds_list_size(item_list) < 3) { // if we click an item and the pot isnt full
 		var ingr = global.inventory[# 0, oPlayerInventory.selected_slot] // get the inventory item selected
@@ -73,5 +76,25 @@ if (ds_list_size(item_list) >= 3 && currentlyCooking == false) {
 	timeline_running = true;
 	timeline_loop = false;
 }
-
+//oPlayerInventory.lineToggle = true;
+if (held == true) {
+	lineToggle = true;
+	phy_position_x = oPlayer.x;
+	phy_position_y = oPlayer.y - ((oPlayer.sprite_height + sprite_height) / 2);
+	physics_world_gravity(0, 0);
+	phy_linear_velocity_y = 0;
+	phy_linear_velocity_x = 0;
+}
+if (oPlayerInput.key_throw && held == true) {
+	lineToggle = false;
+	oPlayer.image_index = 0
+	oPlayer.sprite_index = sPlayerThrow
+	oPlayer.player_dir = sign(oPlayer.x - mouse_x) // sets the player's direction to the direction they are throwing during the animation
+	throw_object(self, mouse_x, mouse_y, throw_speed)	
+	held = false;
+	phy_fixed_rotation = true;
+	phy_angular_velocity = 0;
+	physics_world_gravity(0, gravity_loc)
+}
+phy_rotation = 0;
 ds_list_destroy(vesselList)

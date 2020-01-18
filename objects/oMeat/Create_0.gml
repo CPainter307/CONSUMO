@@ -1,5 +1,5 @@
 event_inherited();
-prepared = false;
+prepared = true;
 enum_type = ingr.oMeat;
 name = "Meat ";
 type = "booster";

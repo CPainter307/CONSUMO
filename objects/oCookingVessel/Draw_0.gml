@@ -1,5 +1,7 @@
 draw_self()
-
+if (lineToggle) {
+	draw_throw_line()
+}
 if (ds_list_size(item_list) > 0) {
 
 	// pot flash effect
