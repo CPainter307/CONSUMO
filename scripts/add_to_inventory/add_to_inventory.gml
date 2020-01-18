@@ -58,7 +58,7 @@ if nearest_item.object_index == oRecipe {
 						ds_inv[# 1, yy] += 99  ///////// SET THIS BACK TO 1!!!
 					}
 					else {
-						ds_inv[# 1, yy] += 1  ///////// SET THIS BACK TO 1!!!	
+						ds_inv[# 1, yy] += 10  ///////// SET THIS BACK TO 1!!!	
 					}
 					picked_up = true
 					break;

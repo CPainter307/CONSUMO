@@ -81,7 +81,7 @@ if (held == true) {
 	lineToggle = true;
 	phy_position_x = oPlayer.x;
 	phy_position_y = oPlayer.y - ((oPlayer.sprite_height + sprite_height) / 2);
-	physics_world_gravity(0, 0);
+	//physics_world_gravity(0, 0);
 	phy_linear_velocity_y = 0;
 	phy_linear_velocity_x = 0;
 }
@@ -94,7 +94,8 @@ if (oPlayerInput.key_throw && held == true) {
 	held = false;
 	phy_fixed_rotation = true;
 	phy_angular_velocity = 0;
-	physics_world_gravity(0, gravity_loc)
+	//physics_world_gravity(0, gravity_loc)
 }
+
 phy_rotation = 0;
 ds_list_destroy(vesselList)
