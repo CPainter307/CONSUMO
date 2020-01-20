@@ -43,6 +43,7 @@ if (global.input_type == inputs.keyboard) {
 	key_sprint_held = keyboard_check(global.key_sprint);
 	key_throw = mouse_check_button_pressed(global.key_throw);
 	key_heavy_throw = mouse_check_button_pressed(global.key_heavy_throw);
+	key_dash = keyboard_check_pressed(global.key_dash);
 }
 
 

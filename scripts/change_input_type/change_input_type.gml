@@ -16,6 +16,7 @@ switch (argument0) {
 		global.key_interact		= ord("E");
 		global.key_inventory	= ord("Q");
 		global.key_room_reset	= ord("K");
+		global.key_dash      	= ord("R");
 		global.key_pause		= vk_escape;
 		global.key_sprint		= vk_shift;
 		global.key_throw		= mb_left;

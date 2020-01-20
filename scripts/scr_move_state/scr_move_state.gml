@@ -181,7 +181,7 @@ if (global.canMove) { //we can move
 				}
 		}
 
-	if (oPlayerInput.key_heavy_throw && !oPlayer.has_heavy_thrown) {
+	if (oPlayerInput.key_dash && !oPlayer.has_heavy_thrown) {
 		oPlayer.motionx = 0;
 		oPlayer.motiony = 0;
 		oPlayer.dash_lock = true;

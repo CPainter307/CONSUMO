@@ -41,8 +41,9 @@ shaderBuff = 0;
 global.fightStarted = true;
 startFight = true;
 
-battleWindow = instance_create_depth(100, 100, -y, oBattlePortrait)
+battleWindow = instance_create_depth(50, 50, -y, oBattlePortrait)
 battleWindow.owner = self
+battleWindow.scale_down = 6
 
 attackSprite = noone;
 idleSprite = noone;
