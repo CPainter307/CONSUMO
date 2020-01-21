@@ -209,7 +209,12 @@ if !is_vulnerable {
 	image_alpha = .5
 	i_frames--
 	if i_frames > I_FRAME_LENGTH-30 {
-		sprite_index = sPlayerHurt
+		sprite_index = sPlayerHurt;
+		for(var i = 0; i < 3; i++) {
+			if held_items[i] != noone {
+				sprite_index = sPlayerHurtHolding;
+			}
+		}
 		if instance_exists(_hitbox) {
 			player_dir = sign(oPlayer.x-_hitbox.x)
 		}

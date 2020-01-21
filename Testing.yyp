@@ -1423,6 +1423,14 @@
             }
         },
         {
+            "Key": "44572d7a-2043-49c5-890b-cf6088b2e703",
+            "Value": {
+                "id": "d2473e27-36ba-4241-a61d-0ee96707b66f",
+                "resourcePath": "sprites\\sPlayerIdleHolding\\sPlayerIdleHolding.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "44c710d8-8ce3-4fd2-968e-19b6e66c37c4",
             "Value": {
                 "id": "d1c8214f-494e-4e97-ae1f-f4084cae06a8",
@@ -3695,6 +3703,14 @@
             }
         },
         {
+            "Key": "b19e245b-c26f-4adf-b50e-0ac8dd966587",
+            "Value": {
+                "id": "301482c2-f64f-4134-b0ce-a0af6d45feec",
+                "resourcePath": "sprites\\sPlayerHurtHolding\\sPlayerHurtHolding.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "b21bfce7-ad9f-4db1-81b0-7d9765550a91",
             "Value": {
                 "id": "23601d08-6570-4aae-b931-60c1b385e255",
@@ -4471,6 +4487,14 @@
             }
         },
         {
+            "Key": "d5c2b77d-76ed-4501-92a0-8c15ddf468e8",
+            "Value": {
+                "id": "dbdc4e19-c26c-42d9-a372-e46fae2ed956",
+                "resourcePath": "sprites\\sPlayerFallHolding\\sPlayerFallHolding.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "d5d92beb-4e5a-46ed-9ab1-01f78d610d90",
             "Value": {
                 "id": "0856a327-9725-4f58-992c-19bed30c90a2",
@@ -4811,6 +4835,14 @@
             "Value": {
                 "id": "35971700-d75f-4299-b7af-2bb72b310d79",
                 "resourcePath": "sprites\/sIconsPositive\/sIconsPositive.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "e7cac06b-68e4-4591-affb-b2f06cf59a1d",
+            "Value": {
+                "id": "09c417fa-81c4-4da7-8eea-a33662116ba2",
+                "resourcePath": "sprites\\sPlayerJumpHolding\\sPlayerJumpHolding.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -5324,6 +5356,14 @@
                 "id": "773fd058-fe1b-4a34-b460-e9fdf6e97994",
                 "resourcePath": "views\/ff2f2cac-144d-438d-87e0-27c41f18f8a2.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "ff69cce1-a1bb-4289-a532-93997c543023",
+            "Value": {
+                "id": "4cb9e2f1-4b34-4609-b841-3029fe26a530",
+                "resourcePath": "sprites\\sPlayerRunHolding\\sPlayerRunHolding.yy",
+                "resourceType": "GMSprite"
             }
         },
         {

@@ -333,9 +333,19 @@ if (!place_meeting(x, y + 2, oWall)) {
 }
 if (on_floor or up_slope or down_slope) {
 	if (motionx != 0 or up_slope or down_slope) and (sprite_index != sPlayerThrow) and (sprite_index != sPlayerPickup) and global.canMove {
-		sprite_index = sPlayerRun
+		sprite_index = sPlayerRun;
+		for(var i = 0; i < 3; i++) {
+			if held_items[i] != noone {
+				sprite_index = sPlayerRunHolding;
+			} 
+		}
 	} else if sprite_index != sPlayerThrow and (sprite_index != sPlayerPickup) {
-		sprite_index = sPlayerIdle
+		sprite_index = sPlayerIdle;
+		for(var i = 0; i < 3; i++) {
+			if held_items[i] != noone {
+				sprite_index = sPlayerIdleHolding;
+			} 
+		}
 	}
 	
 	if (oPlayerInput.key_sprint_held) {
@@ -345,14 +355,24 @@ if (on_floor or up_slope or down_slope) {
 	}
 } else {
 	if (motiony > 0) and sprite_index != sPlayerThrow and (sprite_index != sPlayerPickup) {
-		sprite_index = sPlayerFall
+		sprite_index = sPlayerFall;
+		for(var i = 0; i < 3; i++) {
+			if held_items[i] != noone {
+				sprite_index = sPlayerFallHolding;
+			}
+		}
 	} else if motiony <= 0 and sprite_index != sPlayerThrow and (sprite_index != sPlayerPickup) {
-		sprite_index = sPlayerJump
+		sprite_index = sPlayerJump;
+		for(var i = 0; i < 3; i++) {
+			if held_items[i] != noone {
+				sprite_index = sPlayerJumpHolding;
+			}
+		}
 	}
 }
 
-if (motionx > 0) and sprite_index != sPlayerThrow and sprite_index != sPlayerHurt {
+if (motionx > 0) and sprite_index != sPlayerThrow and (sprite_index != sPlayerHurt or sprite_index != sPlayerHurtHolding) {
 	player_dir = -1;
-} else if (motionx < 0) and sprite_index != sPlayerThrow and sprite_index != sPlayerHurt {
+} else if (motionx < 0) and sprite_index != sPlayerThrow and (sprite_index != sPlayerHurt or sprite_index != sPlayerHurtHolding) {
 	player_dir = 1;
 }
