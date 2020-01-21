@@ -1,7 +1,7 @@
 ///@description this script handles sounds the player makes (footsteps, jumping, landing, etc)
 
 //walking/sprinting sounds
-if (sprite_index == sPlayerRun) {
+if (sprite_index == sPlayerRun or sprite_index == sPlayerRunHolding) {
 	if (floor(image_index) == 0) {
 		step1 = true;
 		step2 = true;
