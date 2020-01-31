@@ -104,6 +104,8 @@ if (!oPlayerInput.key_sprint_held && held == true) {  // ---------oPlayerInput.k
 
 if ((phy_speed_x != 0 or phy_speed != 0) and !held) {
 	sprite_index = sPottyThrown;
+	if (phy_speed_x > 0) image_xscale = 1;
+	else image_xscale = -1;
 }
 
 phy_rotation = 0;
