@@ -37,7 +37,7 @@ landSound = snd_object_land;
 var fix;
 
 fix = physics_fixture_create()
-physics_fixture_set_circle_shape(fix, 8)
+physics_fixture_set_circle_shape(fix, sprite_get_width(sPottyDormant) / 2)
 physics_fixture_set_linear_damping(fix, 0)
 physics_fixture_set_angular_damping(fix, 100000)
 physics_fixture_set_friction(fix, 0.5)
@@ -54,5 +54,7 @@ apply_gravity = true
 mass = 270
 
 play_hit_sound = true
+
+
 
 outline_init()

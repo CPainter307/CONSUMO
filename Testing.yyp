@@ -575,6 +575,14 @@
             }
         },
         {
+            "Key": "18e0c0ff-9e06-49e7-8e4b-c5993f1f0858",
+            "Value": {
+                "id": "d3d4b0fe-8cc6-4013-8882-011c65e5973e",
+                "resourcePath": "sprites\\sPottyThrown\\sPottyThrown.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "1915348f-497c-4576-8135-3f64fc580f1a",
             "Value": {
                 "id": "df120f56-4a0d-49a1-9e16-84ef705e945d",
@@ -1044,6 +1052,22 @@
                 "id": "e62b1347-6569-42dc-b60b-30950296f311",
                 "resourcePath": "objects\/oRice\/oRice.yy",
                 "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "2f2644b0-7af4-423a-8fcb-f22121a596c3",
+            "Value": {
+                "id": "3e87676a-e3c7-457e-b107-a481c8784cd4",
+                "resourcePath": "sprites\\sPottyHeld\\sPottyHeld.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "2f7662e0-99b1-41ff-b2cd-45b3f9eaaf82",
+            "Value": {
+                "id": "d0d47fe3-932f-414c-a974-e6b9ad624f9b",
+                "resourcePath": "views\\2f7662e0-99b1-41ff-b2cd-45b3f9eaaf82.yy",
+                "resourceType": "GMFolder"
             }
         },
         {
@@ -1575,6 +1599,14 @@
             }
         },
         {
+            "Key": "4de3ad58-2693-4eaa-9ad1-96e55def906a",
+            "Value": {
+                "id": "7814687c-7a13-47c9-8cc0-fc3f7f61d1c6",
+                "resourcePath": "sprites\\sPottyPop\\sPottyPop.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "4dfdb2f2-638c-49cb-9b39-0569b89a9a90",
             "Value": {
                 "id": "d821626a-1ac8-44c1-9036-fd9522ce9b6a",
@@ -2044,6 +2076,14 @@
                 "id": "5a9bed74-e5f5-424b-8c3b-0095bcf79fdb",
                 "resourcePath": "tilesets\/tileset2\/tileset2.yy",
                 "resourceType": "GMTileSet"
+            }
+        },
+        {
+            "Key": "616d8cf9-467f-4954-9688-991e1495225b",
+            "Value": {
+                "id": "2ccbb01b-f13d-41bd-a5d3-fc684d12578b",
+                "resourcePath": "sprites\\sPottySurprised\\sPottySurprised.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -2620,6 +2660,14 @@
                 "id": "e075726c-5fe9-40a5-a422-eed780c46533",
                 "resourcePath": "views\/7e8df9f6-9e53-4ae9-aaee-6a2b7a0a8e03.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "7ec153fc-ff4c-45de-9549-6c3b05ed09b9",
+            "Value": {
+                "id": "fa7fe689-4123-4f24-80b4-970bd8eb157a",
+                "resourcePath": "sprites\\sPottyGlowing\\sPottyGlowing.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -3383,6 +3431,14 @@
             }
         },
         {
+            "Key": "a2342efb-4d22-424b-b831-51df46a1b5ec",
+            "Value": {
+                "id": "5bcae77d-5dca-4aac-b9dc-e64ade6076fa",
+                "resourcePath": "sprites\\sPottyDormant\\sPottyDormant.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "a2b203b0-b23d-4325-a61e-f5dbe43462c7",
             "Value": {
                 "id": "ff9f3387-4196-4fde-b8b4-53c7829295d4",
@@ -3395,6 +3451,14 @@
             "Value": {
                 "id": "b70b4a8a-8e6c-4131-8a6f-8602a1a922c7",
                 "resourcePath": "sprites\/sPlayerRun\/sPlayerRun.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "a3bfbbf8-0f23-45fc-8765-c5b81c5f6b17",
+            "Value": {
+                "id": "074bc5b4-025d-42a6-854c-4b105cc24436",
+                "resourcePath": "sprites\\sPottyCooking\\sPottyCooking.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -5060,6 +5124,14 @@
                 "id": "2390c676-1373-4bb8-a358-9422962232e0",
                 "resourcePath": "objects\/oTransition\/oTransition.yy",
                 "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "f28f6b5c-03a8-4c63-ad59-c19149bd94be",
+            "Value": {
+                "id": "64f9a726-f652-4e97-b5af-2f3c65ff3257",
+                "resourcePath": "views\\f28f6b5c-03a8-4c63-ad59-c19149bd94be.yy",
+                "resourceType": "GMFolder"
             }
         },
         {

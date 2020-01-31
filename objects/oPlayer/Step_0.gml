@@ -207,12 +207,15 @@ if place_meeting(x, y, Hitbox) and is_vulnerable {
 }
 if !is_vulnerable {
 	image_alpha = .5
+	if (i_frames = I_FRAME_LENGTH) {
+		audio_play_sound(snd_player_hurt, 1, 0)
+	}
 	i_frames--
 	if i_frames > I_FRAME_LENGTH-30 {
-		sprite_index = sPlayerHurt;
+		sprite_index = sPlayerHurt
 		for(var i = 0; i < 3; i++) {
 			if held_items[i] != noone {
-				sprite_index = sPlayerHurtHolding;
+				sprite_index = sPlayerHurtHolding
 			}
 		}
 		if instance_exists(_hitbox) {

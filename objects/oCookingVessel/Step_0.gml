@@ -1,4 +1,8 @@
 /// @description 
+if (phy_speed_x = 0 and phy_speed_y = 0) {
+	sprite_index = sPottyDormant;
+}
+
 if instance_exists(steam) {
 	steam.x = x
 	steam.y = y-oPot.sprite_height
@@ -48,6 +52,7 @@ if vesselRadius > 0 /*and vesselList[| 0].prepared*/ {
 
 if collision_circle(x, y, pot_radius, oCampfire, false, true) {
 	onFire = true;
+	sprite_index = sPottyGlowing;
 }
 else {
 	onFire = false;	
@@ -66,10 +71,20 @@ if (ds_list_size(item_list) >= 3 && currentlyCooking == false && onFire) {
 	timeline_loop = false;
 }
 
+if (currentlyCooking) {
+	sprite_index = sPottyCooking;
+}
+
 if (held == true) {
 	lineToggle = true;
+	sprite_index = sPottyHeld;
+		if (oPlayer.player_dir == 1) {
+			image_xscale = -1;
+		} else {
+			image_xscale = 1;
+		}
 	phy_position_x = oPlayer.x + (-20 * sign(oPlayer.player_dir));
-	phy_position_y = oPlayer.y;  //((oPlayer.sprite_height + sprite_height) / 2);
+	phy_position_y = oPlayer.y - 15;  //((oPlayer.sprite_height + sprite_height) / 2);
 	//physics_world_gravity(0, 0);
 	phy_linear_velocity_y = 0;
 	phy_linear_velocity_x = 0;
@@ -79,11 +94,16 @@ if (!oPlayerInput.key_sprint_held && held == true) {  // ---------oPlayerInput.k
 	oPlayer.image_index = 0
 	oPlayer.sprite_index = sPlayerThrow
 	oPlayer.player_dir = sign(oPlayer.x - mouse_x) // sets the player's direction to the direction they are throwing during the animation
+	image_xscale = -sign(x - mouse_x) //sets the pot's direction to the direction they're thrown
 	throw_object(self, mouse_x, mouse_y, throw_speed)	
 	held = false;
 	phy_fixed_rotation = true;
 	phy_angular_velocity = 0;
 	//physics_world_gravity(0, gravity_loc)
+}
+
+if ((phy_speed_x != 0 or phy_speed != 0) and !held) {
+	sprite_index = sPottyThrown;
 }
 
 phy_rotation = 0;
