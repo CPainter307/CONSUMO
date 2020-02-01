@@ -1,6 +1,7 @@
 /// @description 
-if (phy_speed_x = 0 and phy_speed_y = 0) {
-	sprite_index = sPottyDormant;
+if (phy_speed_x == 0 and phy_speed_y == 0) {
+	if !onFire
+		sprite_index = sPottyDormant;
 }
 
 if instance_exists(steam) {
@@ -51,8 +52,9 @@ if vesselRadius > 0 /*and vesselList[| 0].prepared*/ {
 }
 
 if collision_circle(x, y, pot_radius, oCampfire, false, true) {
+	if !currentlyCooking
+		sprite_index = sPottyGlowing;
 	onFire = true;
-	sprite_index = sPottyGlowing;
 }
 else {
 	onFire = false;	
@@ -72,7 +74,9 @@ if (ds_list_size(item_list) >= 3 && currentlyCooking == false && onFire) {
 }
 
 if (currentlyCooking) {
-	sprite_index = sPottyCooking;
+	if onFire {
+		sprite_index = sPottyCooking;
+	}
 }
 
 if (held == true) {
@@ -104,8 +108,12 @@ if (!oPlayerInput.key_sprint_held && held == true) {  // ---------oPlayerInput.k
 
 if ((phy_speed_x != 0 or phy_speed != 0) and !held) {
 	sprite_index = sPottyThrown;
-	if (phy_speed_x > 0) image_xscale = 1;
-	else image_xscale = -1;
+	if (phy_speed_x > 0) {
+		image_xscale = 1;
+	}
+	else {
+		image_xscale = -1;
+	}
 }
 
 phy_rotation = 0;
