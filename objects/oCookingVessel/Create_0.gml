@@ -1,4 +1,6 @@
 item_grid = ds_grid_create(5, 3);
+ds_grid_clear(item_grid, noone);
+
 steam = noone;
 ing1 = noone;
 ing2 = noone;

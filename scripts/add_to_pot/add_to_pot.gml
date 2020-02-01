@@ -10,9 +10,10 @@ for (var i = 0; i < ds_grid_height(item_grid); i++) {
 		ds_grid_set(item_grid, 2, i, ing.attack);
 		ds_grid_set(item_grid, 3, i, ing.defense);
 		ds_grid_set(item_grid, 4, i, ing.spd);
-		instance_destroy(ing);
+		break;
 	}
-}		
+}	
+instance_destroy(ing);
 
 //starts pot flash effect
 shaderBuff = 1
