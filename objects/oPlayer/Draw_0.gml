@@ -14,7 +14,11 @@ if (sprite_index != sPlayerThrow and sprite_index != sPlayerPickup) {
 	for(var i = 0; i < 3; i++) {
 		if held_items[i] != noone {
 			//draw_throw_line()
-			draw_sprite_ext(array_get(held_items[i] , 1), 0, hand_x, hand_y - (i * 30), (player_dir * 0.5), 0.5, 0, c_white, image_alpha)
+			if array_get(held_items[i], 0) == oRecipe {
+				draw_sprite_ext(array_get(held_items[i] , 1), 0, x + (-20 * sign(oPlayer.player_dir)), y - 15, (player_dir * 0.5), 0.5, 0, c_white, image_alpha)
+			} else {
+				draw_sprite_ext(array_get(held_items[i] , 1), 0, hand_x, hand_y - (i * 30), (player_dir * 0.5), 0.5, 0, c_white, image_alpha)
+			}
 		}
 	}
 }
@@ -37,6 +41,6 @@ if (sprite_index != sPlayerThrow and sprite_index != sPlayerPickup) {
 //}
 
 //---------------------------- UNCOMMENT FOR draw nearest item text
-//draw_set_font(fBattleTextThick)
-//if nearest_item_text != ""
-//	draw_text_outlined(nearest_item_x-5, nearest_item_y+12, BROWN_COL, OFFWHITE_COL, nearest_item_text)
+draw_set_font(fBattleTextThick)
+if nearest_item_text != ""
+	draw_text_outlined(nearest_item_x-5, nearest_item_y+12, BROWN_COL, OFFWHITE_COL, nearest_item_text)

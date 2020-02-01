@@ -35,8 +35,8 @@ if (!onFire) {
 
 //pot inventory
 if collision_circle(x, y, pot_radius, oPlayer, false, true) {
-	if (oPlayerInput.key_interact and held == false) { // ---------oPlayerInput.key_interact <-> oPlayerInput.key_sprint_held
-		held = true;	
+	if (oPlayerInput.key_interact and !held and !is_holding_items()) { // ---------oPlayerInput.key_interact <-> oPlayerInput.key_sprint_held
+		held = true;
 	}
 }
 
@@ -79,21 +79,22 @@ if (currentlyCooking) {
 	}
 }
 
-if (held == true) {
+if held/* and !is_holding_items() and !oPlayer.holding_big_item*/ {
 	lineToggle = true;
 	sprite_index = sPottyHeld;
-		if (oPlayer.player_dir == 1) {
-			image_xscale = -1;
-		} else {
-			image_xscale = 1;
-		}
+	if (oPlayer.player_dir == 1) {
+		image_xscale = -1;
+	} else {
+		image_xscale = 1;
+	}
 	phy_position_x = oPlayer.x + (-20 * sign(oPlayer.player_dir));
-	phy_position_y = oPlayer.y - 15;  //((oPlayer.sprite_height + sprite_height) / 2);
-	//physics_world_gravity(0, 0);
-	phy_linear_velocity_y = 0;
+	phy_position_y = oPlayer.y - 15;
+	
 	phy_linear_velocity_x = 0;
+	phy_linear_velocity_y = 0;
 }
-if (oPlayerInput.key_throw && held == true) {  // ---------oPlayerInput.key_throw <-> !oPlayerInput.key_sprint_held
+if (oPlayerInput.key_throw && held) {  // ---------oPlayerInput.key_throw <-> !oPlayerInput.key_sprint_held
+	oPlayer.holding_big_item = false
 	lineToggle = false;
 	oPlayer.image_index = 0
 	oPlayer.sprite_index = sPlayerThrow
@@ -110,11 +111,16 @@ if ((phy_speed_x != 0 or phy_speed != 0) and !held) {
 	sprite_index = sPottyThrown;
 	if (phy_speed_x > 0) {
 		image_xscale = 1;
-	}
-	else {
+	}else {
 		image_xscale = -1;
 	}
 }
+
+
+if held {
+	oPlayer.holding_big_item = true
+}
+show_debug_message(string(oPlayer.holding_big_item))
 
 phy_rotation = 0;
 ds_list_destroy(vesselList)

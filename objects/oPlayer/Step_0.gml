@@ -110,12 +110,26 @@ if pickupRadius > 0 {
 	}
 }
 
-
-// if we press pickup and we are colliding with some holdable objects, then add the nearest one to our inventory
-if oPlayerInput.key_heavy_throw {
+// if we press pickup and we are colliding with some holdable objects, then add the nearest one to our held items
+if oPlayerInput.key_heavy_throw and !holding_big_item and !are_hands_full() {
 	if pickupRadius > 0 {
 		var nearest_item = itemRadiusList[| 0]
-		add_to_inventory(nearest_item)
+		var holding_recipe = false
+		if nearest_item.object_index == oRecipe {
+			for (var i = 0; i < 3; i++) {
+				if held_items[i] != noone {
+					if held_items[i].object_index == oRecipe {
+						holding_recipe = true
+					}
+				}
+			}
+			if !holding_recipe and !is_holding_items() {
+				add_to_inventory(nearest_item)
+				holding_big_item = true
+			}
+		} else {
+			add_to_inventory(nearest_item)
+		}
 	}
 }
 ds_list_destroy(itemRadiusList)
@@ -124,6 +138,7 @@ ds_list_destroy(itemRadiusList)
 if oPlayerInput.key_throw {
 	for (var i = 0; i < 3; i++) {
 		if held_items[i] != noone {
+			holding_big_item = false
 			var inst = instance_create_layer(oPlayer.x, oPlayer.y  - (i * 30), "Objects", array_get(held_items[i], 0));
 			throw_object(inst, mouse_x, mouse_y, inst.throw_speed)
 			held_items[i] = noone;
