@@ -1,13 +1,3 @@
-//var inst_list = ds_list_create();
-//	instance_place_list(x, y, oPotCentered, inst_list, false);
-//	for (i = 0; i < ds_list_size(inst_list); i++) {	//runs for each instance of oHoldableObject
-//		var inst = inst_list[| i];
-		
-		
-		
-		
-//	}
-	
 //	//garbage collection
 //	ds_list_destroy(inst_list);
 

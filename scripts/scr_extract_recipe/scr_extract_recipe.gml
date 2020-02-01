@@ -8,25 +8,21 @@ with(steam) {
 }
 	
 //add booster values to oRecipe
-var total_hp = ing1.hp + ing2.hp + ing3.hp;
-var total_attack = ing1.attack + ing2.attack + ing3.attack;
-var total_defense = ing1.defense + ing2.defense + ing3.defense;
-var total_spd = ing1.spd + ing2.spd + ing3.spd;
+var total_hp = ds_grid_get_sum(item_grid, 1, 0, 1, 2);
+var total_attack = ds_grid_get_sum(item_grid, 2, 0, 2, 2);
+var total_defense = ds_grid_get_sum(item_grid, 3, 0, 3, 2);
+var total_spd = ds_grid_get_sum(item_grid, 4, 0, 4, 2);
 currentlyCooking = false;
 //create oRecipe
 
 inst = instance_create_layer(x, y, "Objects", oRecipe); //creates oRecipe based on second item because it'll always be a full ingredientdd
 	
 	
-// add vessel bonus
-total_hp = total_hp + vesselHp;
-total_attack = total_attack + vesselAttack;
-total_defense = total_defense + vesselDefense;
-total_spd = total_spd + vesselSpeed;
+// add vessel name
 inst.mealName = mealType;
 
 //name recipe
-scr_extract_recipe_name();
+//scr_extract_recipe_name(); (teehee - come back to this Charles)
 	
 //add quality bonus
 switch (argument0) {
@@ -56,4 +52,4 @@ drawText = true;
 	
 show_debug_message("hp: " + string(inst.hp) + " atk: " + string(inst.attack) + " def: " + string(inst.defense) + " spd: " + string(inst.spd))
 add_to_inventory(inst);
-ds_list_clear(item_list);
+ds_grid_clear(item_grid, noone);

@@ -1,4 +1,4 @@
-item_list = ds_list_create();
+item_grid = ds_grid_create(5, 3);
 steam = noone;
 ing1 = noone;
 ing2 = noone;
