@@ -112,7 +112,7 @@ if pickupRadius > 0 {
 
 
 // if we press pickup and we are colliding with some holdable objects, then add the nearest one to our inventory
-if oPlayerInput.key_interact {
+if oPlayerInput.key_heavy_throw {
 	if pickupRadius > 0 {
 		var nearest_item = itemRadiusList[| 0]
 		add_to_inventory(nearest_item)

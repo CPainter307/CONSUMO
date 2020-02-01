@@ -13,13 +13,13 @@ if instance_exists(steam) {
 if (ds_list_size(item_list) >= 3) {
 	// JUST RIGHT
 	if (timeline_position >= 270 and timeline_position < 540) {
-		if oPlayerInput.key_interact and place_meeting(x, y, oPlayer) { // ---------oPlayerInput.key_heavy_throw <-> oPlayerInput.key_interact
+		if oPlayerInput.key_heavy_throw and place_meeting(x, y, oPlayer) { // ---------oPlayerInput.key_heavy_throw <-> oPlayerInput.key_interact
 			scr_extract_recipe(0);
 		}
 	}
 	//burnt
 	else if (timeline_position >= 540) {
-		if oPlayerInput.key_interact and place_meeting(x, y, oPlayer) { // ---------oPlayerInput.key_heavy_throw <-> oPlayerInput.key_interact
+		if oPlayerInput.key_heavy_throw and place_meeting(x, y, oPlayer) { // ---------oPlayerInput.key_heavy_throw <-> oPlayerInput.key_interact
 			scr_extract_recipe(1);
 		}
 	}
@@ -35,7 +35,7 @@ if (!onFire) {
 
 //pot inventory
 if collision_circle(x, y, pot_radius, oPlayer, false, true) {
-	if (oPlayerInput.key_sprint_held and held == false) { // ---------oPlayerInput.key_interact <-> oPlayerInput.key_sprint_held
+	if (oPlayerInput.key_interact and held == false) { // ---------oPlayerInput.key_interact <-> oPlayerInput.key_sprint_held
 		held = true;	
 	}
 }
@@ -93,7 +93,7 @@ if (held == true) {
 	phy_linear_velocity_y = 0;
 	phy_linear_velocity_x = 0;
 }
-if (!oPlayerInput.key_sprint_held && held == true) {  // ---------oPlayerInput.key_throw <-> !oPlayerInput.key_sprint_held
+if (oPlayerInput.key_throw && held == true) {  // ---------oPlayerInput.key_throw <-> !oPlayerInput.key_sprint_held
 	lineToggle = false;
 	oPlayer.image_index = 0
 	oPlayer.sprite_index = sPlayerThrow
