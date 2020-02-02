@@ -24,7 +24,7 @@ if (!ds_grid_value_exists(item_grid, 0, 0, 0, 2, noone)) {
 		}
 	}
 }
-if (!onFire) {
+if (!onFire || held) {
 	currentlyCooking = false;
 	timeline_running = false;
 	with(steam) {
@@ -60,7 +60,7 @@ else {
 	onFire = false;	
 }
 
-if (!ds_grid_value_exists(item_grid, 0, 0, 0, 2, noone) && currentlyCooking == false && onFire) {	
+if (!ds_grid_value_exists(item_grid, 0, 0, 0, 2, noone) && currentlyCooking == false && onFire && !held) {	
 	//set list of ingredients for script
 	currentlyCooking = true;
 
