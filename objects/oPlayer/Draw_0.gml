@@ -23,22 +23,22 @@ if (sprite_index != sPlayerThrow and sprite_index != sPlayerPickup) {
 	}
 }
 
-//draw the arms over the player if they're holding something big
-if (sprite_index == sPlayerIdleHoldingBig) {
-	draw_sprite_ext(sBigHoldingArmIdle, image_index, x, y, player_dir, 1, image_angle, c_white, image_alpha);	
-}
+////draw the arms over the player if they're holding something big
+//if (sprite_index == sPlayerIdleHoldingBig) {
+//	draw_sprite_ext(sBigHoldingArmIdle, image_index, x, y, player_dir, 1, image_angle, c_white, image_alpha);	
+//}
 
-if (sprite_index == sPlayerRunHoldingBig) {
-	draw_sprite_ext(sBigHoldingArmRun, image_index, x, y, player_dir, 1, image_angle, c_white, image_alpha);	
-}
+//if (sprite_index == sPlayerRunHoldingBig) {
+//	draw_sprite_ext(sBigHoldingArmRun, image_index, x, y, player_dir, 1, image_angle, c_white, image_alpha);	
+//}
 
-if (sprite_index == sPlayerJumpHoldingBig) {
-	draw_sprite_ext(sBigHoldingArmJump, image_index, x, y, player_dir, 1, image_angle, c_white, image_alpha);		
-}
+//if (sprite_index == sPlayerJumpHoldingBig) {
+//	draw_sprite_ext(sBigHoldingArmJump, image_index, x, y, player_dir, 1, image_angle, c_white, image_alpha);		
+//}
 
-if (sprite_index == sPlayerFallHoldingBig or sprite_index == sPlayerHurtHoldingBig) {
-	draw_sprite_ext(sBigHoldingArmFall, image_index, x, y, player_dir, 1, image_angle, c_white, image_alpha);	
-}
+//if (sprite_index == sPlayerFallHoldingBig or sprite_index == sPlayerHurtHoldingBig) {
+//	draw_sprite_ext(sBigHoldingArmFall, image_index, x, y, player_dir, 1, image_angle, c_white, image_alpha);	
+//}
 
 
 ////draw the arm over the player so that there is a layered arm when holding one item (OLD)

@@ -26,7 +26,8 @@
         "8539600f-1a81-4a8b-81b2-efb003fec0d1",
         "382b0675-ecf2-4720-b179-a38875216188",
         "2e2bbeb5-41a0-4ff1-b614-af704a6f6adb",
-        "4426b866-afa5-4eb2-90c3-7476a3bf2e21"
+        "4426b866-afa5-4eb2-90c3-7476a3bf2e21",
+        "ba3cc25a-66ab-4925-b20f-72d24e97bddc"
     ],
     "filterType": "GMScript",
     "folderName": "Helper Scripts",

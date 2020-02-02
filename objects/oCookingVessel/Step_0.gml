@@ -78,6 +78,7 @@ if (currentlyCooking) {
 }
 
 if held/* and !is_holding_items() and !oPlayer.holding_big_item*/ {
+	scr_offset_pot();
 	lineToggle = true;
 	sprite_index = sPottyHeld;
 	if (oPlayer.player_dir == 1) {
@@ -85,8 +86,8 @@ if held/* and !is_holding_items() and !oPlayer.holding_big_item*/ {
 	} else {
 		image_xscale = 1;
 	}
-	phy_position_x = oPlayer.x + (-20 * sign(oPlayer.player_dir));
-	phy_position_y = oPlayer.y - 15;
+	phy_position_x = oPlayer.x + (-20 * sign(oPlayer.player_dir)) + x_offset;
+	phy_position_y = oPlayer.y - 15 + y_offset;
 	
 	phy_linear_velocity_x = 0;
 	phy_linear_velocity_y = 0;

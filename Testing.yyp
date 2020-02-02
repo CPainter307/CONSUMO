@@ -4103,6 +4103,14 @@
             }
         },
         {
+            "Key": "ba3cc25a-66ab-4925-b20f-72d24e97bddc",
+            "Value": {
+                "id": "546c7da6-539e-4c4c-907b-dc87a8fe96da",
+                "resourcePath": "scripts\\scr_offset_pot\\scr_offset_pot.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "ba8663ee-3034-4876-977b-e0162afcb0c8",
             "Value": {
                 "id": "6070ebec-bb33-4960-9114-857c0bc13522",
@@ -5669,6 +5677,7 @@
         "382b0675-ecf2-4720-b179-a38875216188",
         "2e2bbeb5-41a0-4ff1-b614-af704a6f6adb",
         "4426b866-afa5-4eb2-90c3-7476a3bf2e21",
+        "ba3cc25a-66ab-4925-b20f-72d24e97bddc",
         "7f07d631-0ede-47b2-8017-1b15c919e0ff",
         "745d1ab5-9428-428d-9fc5-669ea6876347",
         "68d9a4a4-a989-495b-bc21-2320d40a7ad6",

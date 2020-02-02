@@ -39,3 +39,22 @@ if (ds_grid_get(item_grid, 0, 0) != noone) {
 		draw_sprite_ext(ds_grid_get(item_grid, 5, 2), 0, x+xval, y+yval+5+sin(get_timer()/100000), 1, 1, 0, c_white, 1)
 	}
 }
+
+//draw the arms over the player if they're holding something big
+if (held) {
+	if (oPlayer.sprite_index == sPlayerIdleHoldingBig) {
+		draw_sprite_ext(sBigHoldingArmIdle, oPlayer.image_index, oPlayer.x, oPlayer.y, oPlayer.player_dir, 1, image_angle, c_white, image_alpha);	
+	}
+
+	if (oPlayer.sprite_index == sPlayerRunHoldingBig) {
+		draw_sprite_ext(sBigHoldingArmRun, oPlayer.image_index, oPlayer.x, oPlayer.y, oPlayer.player_dir, 1, image_angle, c_white, image_alpha);	
+	}
+
+	if (oPlayer.sprite_index == sPlayerJumpHoldingBig) {
+		draw_sprite_ext(sBigHoldingArmJump, oPlayer.image_index, oPlayer.x, oPlayer.y, oPlayer.player_dir, 1, image_angle, c_white, image_alpha);		
+	}
+
+	if (oPlayer.sprite_index == sPlayerFallHoldingBig or oPlayer.sprite_index == sPlayerHurtHoldingBig) {
+		draw_sprite_ext(sBigHoldingArmFall, oPlayer.image_index, oPlayer.x, oPlayer.y, oPlayer.player_dir, 1, image_angle, c_white, image_alpha);	
+	}
+}

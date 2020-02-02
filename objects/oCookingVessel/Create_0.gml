@@ -32,6 +32,8 @@ grav = grav / meter_per_pix   //  pix/sec^2
 grav = grav /  sqr(update_speed)
 
 held = false;
+x_offset = 0;
+y_offset = 0;
 
 pickUpSound = snd_pickup_generic;
 landSound = snd_object_land;
