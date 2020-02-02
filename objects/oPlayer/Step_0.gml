@@ -233,6 +233,7 @@ if !is_vulnerable {
 				sprite_index = sPlayerHurtHolding
 			}
 		}
+		if holding_big_item sprite_index = sPlayerHurtHoldingBig
 		if instance_exists(_hitbox) {
 			player_dir = sign(oPlayer.x-_hitbox.x)
 		}

@@ -30,12 +30,12 @@ if (ds_grid_get(item_grid, 0, 0) != noone) {
 	var xval = 45
 	draw_sprite(sVesselWindow, 0, x, y+yval+sin(get_timer()/100000))
 	if (ds_grid_get(item_grid, 0, 0) != noone) { //draw first ingredient
-		draw_sprite_ext(ds_grid_get(item_grid, 5, 0), 0, x-xval, y+yval+5+sin(get_timer()/100000), .5, .5, 0, c_white, 1)
+		draw_sprite_ext(ds_grid_get(item_grid, 5, 0), 0, x-xval, y+yval+5+sin(get_timer()/100000), 1, 1, 0, c_white, 1)
 	}
 	if (ds_grid_get(item_grid, 0, 1) != noone) { //draw second ingredient
-		draw_sprite_ext(ds_grid_get(item_grid, 5, 1), 0, x, y+yval+5+sin(get_timer()/100000), .5, .5, 0, c_white, 1)
+		draw_sprite_ext(ds_grid_get(item_grid, 5, 1), 0, x, y+yval+5+sin(get_timer()/100000), 1, 1, 0, c_white, 1)
 	}
 	if (ds_grid_get(item_grid, 0, 2) != noone) { //draw third ingredient
-		draw_sprite_ext(ds_grid_get(item_grid, 5, 2), 0, x+xval, y+yval+5+sin(get_timer()/100000), .5, .5, 0, c_white, 1)
+		draw_sprite_ext(ds_grid_get(item_grid, 5, 2), 0, x+xval, y+yval+5+sin(get_timer()/100000), 1, 1, 0, c_white, 1)
 	}
 }

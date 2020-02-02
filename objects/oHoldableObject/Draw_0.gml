@@ -11,10 +11,10 @@ if highlighted {
 	outline_end()
 	gpu_set_blendmode(bm_normal);
 	
-	image_xscale = lerp(image_xscale, .6, 0.3)
-	image_yscale = lerp(image_yscale, .6, 0.3)
+	image_xscale = lerp(image_xscale, 1.1, 0.3)
+	image_yscale = lerp(image_yscale, 1.1, 0.3)
 } else {
-	image_xscale = lerp(image_xscale, .5, 0.3)
-	image_yscale = lerp(image_yscale, .5, 0.3)
+	image_xscale = lerp(image_xscale, 1, 0.3)
+	image_yscale = lerp(image_yscale, 1, 0.3)
 	draw_self()	
 }
