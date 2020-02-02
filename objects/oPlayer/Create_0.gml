@@ -16,6 +16,7 @@ vsp = 0;
 jumpspeed = 10;
 
 held_items = [noone, noone, noone];
+holding_big_item = false
 held_x = 0;
 held_y = -45;
 pickupRadius = 0
