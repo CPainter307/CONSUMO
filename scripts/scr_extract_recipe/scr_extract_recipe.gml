@@ -56,7 +56,11 @@ textDisappearTimer = 0;
 drawText = true;
 	
 show_debug_message("hp: " + string(inst.hp) + " atk: " + string(inst.attack) + " def: " + string(inst.defense) + " spd: " + string(inst.spd))
+
+//clear grid
 ds_grid_clear(item_grid, noone);
+
+//holding_big_item
 if !is_holding_items() and !oPot.held {
 	oPlayer.holding_big_item = true
 	add_to_inventory(inst);

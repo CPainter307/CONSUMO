@@ -46,7 +46,7 @@ event_inherited();
 						break;
 					case 1:
 						broth_sprite = sBrothFugi;
-						break;
+						break; 
 					case 2:
 						topping_sprite = sToppingFugi;
 						break;
@@ -75,3 +75,4 @@ event_inherited();
 	}
 
 //}
+

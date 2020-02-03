@@ -140,6 +140,15 @@ if oPlayerInput.key_throw {
 		if held_items[i] != noone {
 			holding_big_item = false
 			var inst = instance_create_layer(oPlayer.x, oPlayer.y  - (i * 30), "Objects", array_get(held_items[i], 0));
+			//assign values back to recipe
+			if (inst.object_index == oRecipe) {
+				inst.name = array_get(held_items[i], 2);
+				inst.hp = array_get(held_items[i], 3);
+				inst.attack = array_get(held_items[i], 4);
+				inst.defense = array_get(held_items[i], 5);
+				inst.spd = array_get(held_items[i], 6);
+				inst.ing = array_get(held_items[i], 7);
+			}
 			throw_object(inst, mouse_x, mouse_y, inst.throw_speed)
 			held_items[i] = noone;
 		}
@@ -246,6 +255,3 @@ if i_frames <= 0 {
 
 //player sounds
 script_execute(scr_movement_sounds());
-
-//Charles particle testing
-part_emitter_stream(oPS, auraEmitter, global.pt_aura, 10);
