@@ -25,6 +25,8 @@ pickupRadiusSize = 80
 up_slope = false;
 down_slope = false;
 
+second_hitbox = self
+second_hitbox_collision = false
 #macro MAX_JOG_SPEED  6
 #macro MAX_SPRINT_SPEED 11
 #macro SPRINT_ACCELERATION  .3

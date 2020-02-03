@@ -35,8 +35,12 @@ if (!onFire || held) {
 
 //pot inventory
 if collision_circle(x, y, pot_radius, oPlayer, false, true) {
-	if (oPlayerInput.key_interact and !held and !is_holding_items()) { // ---------oPlayerInput.key_interact <-> oPlayerInput.key_sprint_held
+	if (oPlayerInput.key_interact and !held and !is_holding_items() && oPlayer.holding_big_item == false) { // ---------oPlayerInput.key_interact <-> oPlayerInput.key_sprint_held
 		held = true;
+		oPlayer.holding_big_item = true;
+		oPlayer.second_hitbox = self;
+		
+		
 	}
 }
 
@@ -99,8 +103,10 @@ if (oPlayerInput.key_throw && held) {  // ---------oPlayerInput.key_throw <-> !o
 	oPlayer.sprite_index = sPlayerThrow
 	oPlayer.player_dir = sign(oPlayer.x - mouse_x) // sets the player's direction to the direction they are throwing during the animation
 	image_xscale = -sign(x - mouse_x) //sets the pot's direction to the direction they're thrown
-	throw_object(self, mouse_x, mouse_y, throw_speed)	
+	throw_object(oPlayer.second_hitbox, mouse_x, mouse_y, throw_speed)	
 	held = false;
+	oPlayer.second_hitbox = oPlayer;
+	oPlayer.holding_big_item = false;
 	phy_fixed_rotation = true;
 	phy_angular_velocity = 0;
 	//physics_world_gravity(0, gravity_loc)
