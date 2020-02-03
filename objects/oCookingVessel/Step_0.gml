@@ -10,27 +10,26 @@ if instance_exists(steam) {
 }
 
 // checks to see if recipe is done
-if (!ds_grid_value_exists(item_grid, 0, 0, 0, 2, noone)) {
+if (!ds_grid_value_exists(item_grid, 0, 0, 0, 2, noone) && currentlyCooking) {
 	// JUST RIGHT
 	if (timeline_position >= 270 and timeline_position < 540) {
 		if oPlayerInput.key_heavy_throw and place_meeting(x, y, oPlayer) { // ---------oPlayerInput.key_heavy_throw <-> oPlayerInput.key_interact
 			scr_extract_recipe(0);
+			timeline_position = 0;
 		}
 	}
 	//burnt
 	else if (timeline_position >= 540) {
 		if oPlayerInput.key_heavy_throw and place_meeting(x, y, oPlayer) { // ---------oPlayerInput.key_heavy_throw <-> oPlayerInput.key_interact
 			scr_extract_recipe(1);
+			timeline_position = 0;
 		}
 	}
 }
 if (!onFire || held) {
 	currentlyCooking = false;
 	timeline_running = false;
-	with(steam) {
-		steam = noone
-		instance_destroy();	
-	}
+	steam.image_alpha = 0;	
 }
 
 //pot inventory
@@ -56,8 +55,9 @@ if vesselRadius > 0 /*and vesselList[| 0].prepared*/ {
 }
 
 if collision_circle(x, y, pot_radius, oCampfire, false, true) {
-	if !currentlyCooking
+	if (!currentlyCooking) {
 		sprite_index = sPottyGlowing;
+	}
 	onFire = true;
 }
 else {
@@ -70,15 +70,13 @@ if (!ds_grid_value_exists(item_grid, 0, 0, 0, 2, noone) && currentlyCooking == f
 
 	//run timeline
 	timeline_index = tl_cooking;
-	timeline_position = 0;
 	timeline_running = true;
 	timeline_loop = false;
 }
 
 if (currentlyCooking) {
-	if onFire {
-		sprite_index = sPottyCooking;
-	}
+	sprite_index = sPottyCooking;
+	steam.image_alpha = 1;
 }
 
 if held/* and !is_holding_items() and !oPlayer.holding_big_item*/ {

@@ -55,7 +55,7 @@ switch (argument0) {
 textDisappearTimer = 0;
 drawText = true;
 	
-show_debug_message("hp: " + string(inst.hp) + " atk: " + string(inst.attack) + " def: " + string(inst.defense) + " spd: " + string(inst.spd))
+show_message("hp: " + string(inst.hp) + " atk: " + string(inst.attack) + " def: " + string(inst.defense) + " spd: " + string(inst.spd))
 
 //clear grid
 ds_grid_clear(item_grid, noone);

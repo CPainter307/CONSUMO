@@ -38,6 +38,8 @@ y_offset = 0;
 pickUpSound = snd_pickup_generic;
 landSound = snd_object_land;
 
+steam = instance_create_layer(x, y-oPot.sprite_height, "Objects", oSteam);
+
 var fix;
 
 fix = physics_fixture_create()
