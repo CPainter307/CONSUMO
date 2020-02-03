@@ -148,6 +148,9 @@ if oPlayerInput.key_throw {
 				inst.defense = array_get(held_items[i], 5);
 				inst.spd = array_get(held_items[i], 6);
 				inst.ing = array_get(held_items[i], 7);
+				inst.bowl_sprite = array_get(held_items[i], 8);
+				inst.broth_sprite = array_get(held_items[i], 9);
+				inst.topping_sprite = array_get(held_items[i], 10);
 			}
 			throw_object(inst, mouse_x, mouse_y, inst.throw_speed)
 			held_items[i] = noone;

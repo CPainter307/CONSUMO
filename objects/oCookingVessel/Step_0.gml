@@ -60,7 +60,7 @@ if collision_circle(x, y, pot_radius, oCampfire, false, true) {
 	}
 	onFire = true;
 }
-else {
+else { 
 	onFire = false;	
 }
 
@@ -79,7 +79,7 @@ if (currentlyCooking) {
 	steam.image_alpha = 1;
 }
 
-if held/* and !is_holding_items() and !oPlayer.holding_big_item*/ {
+if held/* and !is_hol ding_items() and !oPlayer.holding_big_item*/ {
 	scr_offset_pot();
 	lineToggle = true;
 	sprite_index = sPottyHeld;

@@ -2,10 +2,8 @@
 
 timeline_index = 540;
 timeline_running = false;
-with(steam) {
-	steam = noone
-	instance_destroy();	
-}
+
+steam.image_alpha = 0;
 	
 //add booster values to oRecipe
 var total_hp = ds_grid_get_sum(item_grid, 1, 0, 1, 2);
@@ -49,6 +47,72 @@ switch (argument0) {
 	inst.ing[0] = ds_grid_get(item_grid, 0, 0);
 	inst.ing[1] = ds_grid_get(item_grid, 0, 1);
 	inst.ing[2] = ds_grid_get(item_grid, 0, 2);
+	for (var i = 0; i < 3; i++) {
+		switch (string(inst.ing[i])) {
+			case "Bosco Berry":
+				switch (i) {
+					case 0:
+						inst.bowl_sprite = sBowlBosco;
+						break;
+					case 1:
+						inst.broth_sprite = sBrothBosco;
+						break;
+					case 2:
+						inst.topping_sprite = sToppingBosco;
+						break;
+					default:
+						//do nothing
+				}
+				break;
+			case "Spider Squirrel Leg":
+				switch(i) {
+					case 0:
+						inst.bowl_sprite = sBowlSpider;
+						break;
+					case 1:
+						inst.broth_sprite = sBrothSpider;
+						break;
+					case 2:
+						inst.topping_sprite = sToppingSpider;
+						break;
+					default:
+						//do nothing
+				}
+				break;
+			case "Fugi Nut":
+				switch(i) {
+					case 0:
+						inst.bowl_sprite = sBowlFugi;
+						break;
+					case 1:
+						inst.broth_sprite = sBrothFugi;
+						break; 
+					case 2:
+						inst.topping_sprite = sToppingFugi;
+						break;
+					default:
+						//do nothing
+				}
+				break;
+			case "Goldenshroom":
+				switch(i) {
+					case 0:
+						inst.bowl_sprite = sBowlGolden;
+						break;
+					case 1:
+						inst.broth_sprite = sBrothGolden;
+						break;
+					case 2:
+						inst.topping_sprite = sToppingGolden;
+						break;
+					default:
+						//do nothing
+				}
+				break;
+			default:
+				//do nothing
+		}
+	}
 
 	
 //show recipe quality
