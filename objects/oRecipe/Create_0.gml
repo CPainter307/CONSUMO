@@ -17,3 +17,6 @@ physics_fixture_set_density(fix, 0.5);
 physics_fixture_bind(fix, self)
 physics_fixture_delete(fix)
 phy_active = true
+bowl_sprite = sBowl;
+broth_sprite = sBroth;
+topping_sprite = sTopping;
