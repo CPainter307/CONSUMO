@@ -36,15 +36,20 @@ switch (argument0) {
 		total_spd *= 0;
 		inst.name = "Burnt " + inst.name;
 		inst.quality = 1;
-		break;
-		
+		break;		
 }
 	
 //assign to recipe
-inst.hp = total_hp;
-inst.attack = total_attack;
-inst.defense = total_defense;
-inst.spd = total_spd;
+	//stats
+	inst.hp = total_hp;
+	inst.attack = total_attack;
+	inst.defense = total_defense;
+	inst.spd = total_spd;
+	//ingredient names
+	inst.ing[0] = ds_grid_get(item_grid, 0, 0);
+	inst.ing[1] = ds_grid_get(item_grid, 0, 1);
+	inst.ing[2] = ds_grid_get(item_grid, 0, 2);
+
 	
 //show recipe quality
 textDisappearTimer = 0;

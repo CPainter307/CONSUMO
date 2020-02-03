@@ -6,6 +6,7 @@ attack = 0;
 defense = 0;
 spd = 0;
 pickUpSound = snd_pot_drop_1;
+ing = [noone, noone, noone];
 
 //0 = raw, 1 = undercooked, 2 = perfect, 3 = burnt
 quality = 0;

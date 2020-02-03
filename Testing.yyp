@@ -71,6 +71,14 @@
             }
         },
         {
+            "Key": "01b18ec8-2f90-4846-9acf-eb6ec0387e7d",
+            "Value": {
+                "id": "007d9ce0-c3c7-4b76-9494-b9a03459d59c",
+                "resourcePath": "views\/01b18ec8-2f90-4846-9acf-eb6ec0387e7d.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
             "Key": "01c076b3-c5de-4d23-9725-d9a624edf3a7",
             "Value": {
                 "id": "f6ded5d0-e1af-4fc4-a6d6-afbbd84f30aa",
@@ -719,6 +727,14 @@
             }
         },
         {
+            "Key": "1c2709b5-c068-41d0-9c44-e7edb5f86ce2",
+            "Value": {
+                "id": "28e51924-f788-4c86-8786-2b4356bd57be",
+                "resourcePath": "sprites\/sToppingGolden\/sToppingGolden.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "1cc0df2a-b5fc-4831-81c7-1cebc4e39eb0",
             "Value": {
                 "id": "98ff98cc-7136-493f-9874-ec56d4a7bf18",
@@ -1343,6 +1359,14 @@
             }
         },
         {
+            "Key": "3b92c872-a47b-4201-a18e-fc6446e1a35e",
+            "Value": {
+                "id": "beb77929-45be-45c0-92d6-86d181fe92bd",
+                "resourcePath": "sprites\/sBrothFugi\/sBrothFugi.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "3cf49b30-e5e1-4929-a6c1-c789c3915629",
             "Value": {
                 "id": "abaa1d75-a4f6-49ba-90f5-52dc4ea2c928",
@@ -1532,6 +1556,14 @@
                 "id": "9d57f65d-8218-4d47-91d1-cce38ad7fe64",
                 "resourcePath": "scripts\/scr_play_chop_sound\/scr_play_chop_sound.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "457baed1-d349-4e16-a58e-d0470b571e24",
+            "Value": {
+                "id": "58304adc-ae93-40db-91ea-bfbb0a045ed1",
+                "resourcePath": "sprites\/sToppingFugi\/sToppingFugi.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -2319,6 +2351,14 @@
             }
         },
         {
+            "Key": "66e63c04-c070-4219-a80f-00aae3974154",
+            "Value": {
+                "id": "266b7d2d-7a21-4cf5-92dd-7432ecf8e10a",
+                "resourcePath": "sprites\/sBowlFugi\/sBowlFugi.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "68bf10b9-6036-40ea-b97a-613a65c66883",
             "Value": {
                 "id": "fed3d5bd-9797-4b01-bacd-2b626f849ebb",
@@ -2396,6 +2436,14 @@
                 "id": "af45a468-6df9-46c5-93ff-45fb47dd9fde",
                 "resourcePath": "objects\/oPrepTable\/oPrepTable.yy",
                 "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "6c923b50-11cb-4a75-b1e4-6d7ec520e89b",
+            "Value": {
+                "id": "db7fe3e8-7846-42e2-be7c-3c000957a259",
+                "resourcePath": "sprites\/sBrothSpider\/sBrothSpider.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -3207,6 +3255,14 @@
             }
         },
         {
+            "Key": "90f2a7f4-6bc7-44a7-8445-e99fbbc3d2a6",
+            "Value": {
+                "id": "11a13a42-a75b-4ca2-a2d7-7d084d3f1349",
+                "resourcePath": "sprites\/sBrothBosco\/sBrothBosco.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "9119b7f2-efa6-4206-becd-28b9b258a8cd",
             "Value": {
                 "id": "3902d847-71ef-4adc-a1f7-618b844a3ebe",
@@ -3511,11 +3567,27 @@
             }
         },
         {
+            "Key": "9d4b0af8-0bf7-47bd-87d0-20785121f065",
+            "Value": {
+                "id": "d9587fdd-e5fb-4a3c-952b-eddbf2bda9a0",
+                "resourcePath": "views\/9d4b0af8-0bf7-47bd-87d0-20785121f065.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
             "Key": "9dff76ed-24d0-4ca5-9a62-f3efd1727ddd",
             "Value": {
                 "id": "32d1fd27-f22a-4764-ac99-3a02d23a8018",
                 "resourcePath": "views\/9dff76ed-24d0-4ca5-9a62-f3efd1727ddd.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "9e681f20-a474-44d5-9451-0d2fa7620954",
+            "Value": {
+                "id": "eea5ac9e-53c3-4aae-8d84-07e320c96621",
+                "resourcePath": "sprites\/sBowlSpider\/sBowlSpider.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -3903,6 +3975,14 @@
             }
         },
         {
+            "Key": "af61dd5d-52fd-48c4-b596-4b1700e87337",
+            "Value": {
+                "id": "9912a405-9a23-426c-9a6d-09af300e5848",
+                "resourcePath": "sprites\/sToppingBosco\/sToppingBosco.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "afa8c8b5-e10b-4dde-81ba-4f243f430fde",
             "Value": {
                 "id": "905327c2-7994-42bb-8aca-051c21c911ad",
@@ -3988,6 +4068,14 @@
                 "id": "6db185ee-c3a9-4696-93f7-e0b3df5d88bb",
                 "resourcePath": "scripts\/scr_draw_icons\/scr_draw_icons.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "b2ef074d-2a60-4943-b8b9-1489751a1ac9",
+            "Value": {
+                "id": "2610d46a-a0e0-4ea7-98ff-f529b7d707da",
+                "resourcePath": "views\/b2ef074d-2a60-4943-b8b9-1489751a1ac9.yy",
+                "resourceType": "GMFolder"
             }
         },
         {
@@ -4383,6 +4471,14 @@
             }
         },
         {
+            "Key": "c2969cac-dac3-431e-8636-bfce93870884",
+            "Value": {
+                "id": "eb77bb02-6807-4339-aece-564e2eee6818",
+                "resourcePath": "views\/c2969cac-dac3-431e-8636-bfce93870884.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
             "Key": "c29ad4b3-24cc-4185-98ce-983c71cac0eb",
             "Value": {
                 "id": "fd058a45-2f8c-4aec-bfe2-a1f7c300913a",
@@ -4647,6 +4743,14 @@
             }
         },
         {
+            "Key": "ce458027-bc6e-456d-a8f8-6f589692752e",
+            "Value": {
+                "id": "5a188c62-f058-41d2-a01f-f0fdb7879de3",
+                "resourcePath": "sprites\/sToppingSpider\/sToppingSpider.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "cedc1511-b8a4-4a98-9306-34eb98dff9de",
             "Value": {
                 "id": "877c4b91-5bd1-4d63-80c7-0e9011ffdf07",
@@ -4667,6 +4771,14 @@
             "Value": {
                 "id": "01353c7a-bc82-4946-890e-d5574f4c8397",
                 "resourcePath": "sprites\/sPaprikaRune\/sPaprikaRune.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "d0a45bff-e1e1-47ed-9e28-7c13708ef30a",
+            "Value": {
+                "id": "b1774720-9a75-43b1-9dd8-acf13908c6f4",
+                "resourcePath": "sprites\/sBrothGolden\/sBrothGolden.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -4959,6 +5071,14 @@
             }
         },
         {
+            "Key": "dd4cb929-6dfa-4f7a-99a3-4c8bc88fc868",
+            "Value": {
+                "id": "51fd44fa-c7df-47dc-947c-a74cd776c617",
+                "resourcePath": "sprites\/sBowlGolden\/sBowlGolden.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "de025adc-c3aa-4161-85e4-cfe3e6c5d2eb",
             "Value": {
                 "id": "4a88bc11-0304-4edf-87e5-c85a6bdc600d",
@@ -5052,6 +5172,14 @@
                 "id": "74ba65f0-3052-4ecb-a5a6-21c4f3b3a852",
                 "resourcePath": "views\/e263eb78-97f4-4b51-a679-b064fb13dcc1.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "e2c70e2f-28de-41fc-aaab-f69d90e35ffc",
+            "Value": {
+                "id": "6a946df8-27aa-4ad1-bce8-389e1d9bc806",
+                "resourcePath": "sprites\/sBowlBosco\/sBowlBosco.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
