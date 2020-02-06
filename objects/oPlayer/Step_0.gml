@@ -115,7 +115,7 @@ if oPlayerInput.key_heavy_throw and !holding_big_item and !are_hands_full() {
 	if pickupRadius > 0 {
 		var nearest_item = itemRadiusList[| 0]
 		var holding_recipe = false
-		if nearest_item.object_index == oRecipe {
+		if nearest_item.object_index == oRecipe and !is_holding_items() {
 			for (var i = 0; i < 3; i++) {
 				if held_items[i] != noone {
 					if held_items[i].object_index == oRecipe {
@@ -127,7 +127,7 @@ if oPlayerInput.key_heavy_throw and !holding_big_item and !are_hands_full() {
 				add_to_inventory(nearest_item)
 				holding_big_item = true
 			}
-		} else {
+		} else if nearest_item.object_index != oRecipe {
 			add_to_inventory(nearest_item)
 		}
 	}
