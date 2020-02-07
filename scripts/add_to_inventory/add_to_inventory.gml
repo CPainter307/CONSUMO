@@ -1,6 +1,12 @@
 ///@arg0 nearest_item
 var nearest_item = argument0
 
+if nearest_item.object_index == oPot {
+	oCookingVessel.held = true;
+	oPlayer.holding_big_item = true;
+	exit
+}
+
 oPlayer.image_index = 0
 oPlayer.sprite_index = sPlayerPickup
 

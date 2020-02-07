@@ -11,3 +11,5 @@ mealType3 = "Stew";
 
 //campfire
 campfire_index = 0;
+
+name = ""

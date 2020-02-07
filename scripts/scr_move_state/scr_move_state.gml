@@ -71,7 +71,7 @@ if (global.canMove) { //we can move
 		//moving
 		if on_floor {
 			if oPlayerInput.key_right { // moving right
-				if motionx == 0 and !dual_place_meeting(1, 0, second_hitbox, oWall)  { // fixes drawing a billion dust particles when holding a button into a wall
+				if motionx == 0 and !place_meeting(1 + x, 0 + y, oWall)  { // fixes drawing a billion dust particles when holding a button into a wall
 					var _dust_part = instance_create_layer(x, bbox_bottom, "BGLayer", oDustParticle)
 					_dust_part.sprite_index = sStartRunParticle
 					_dust_part.image_xscale = -1
@@ -84,7 +84,7 @@ if (global.canMove) { //we can move
 				}
 			}
 			if oPlayerInput.key_left { // moving left
-				if motionx == 0 and !dual_place_meeting(1, 0, second_hitbox, oWall)  {
+				if motionx == 0 and !place_meeting(1 + x, 0 + y, oWall)  {
 					var _dust_part = instance_create_layer(x, bbox_bottom, "BGLayer", oDustParticle)
 					_dust_part.sprite_index = sStartRunParticle
 					_dust_part.image_xscale = 1
@@ -205,7 +205,7 @@ down_slope = false;
 //		on_floor = true
 //}	TEMP SLOPE REMOVAL
 
-if (dual_place_meeting(motionx, 0, second_hitbox, oWall)) {
+if (place_meeting(x + motionx, y + 0, oWall)) {
 	// TEMP SLOPE REMOVAL
 	//if (place_meeting(x, y + 5, oWall) and !place_meeting(x+motionx, y - abs(motionx), oWall)) {
 	//	dy = 0;
@@ -225,7 +225,7 @@ if (dual_place_meeting(motionx, 0, second_hitbox, oWall)) {
 		for (i = 0; i < ds_list_size(inst_list); i++) {
 			var inst = inst_list[| i];
 			if (inst.active) {
-				while (!dual_place_meeting(sign(motionx), 0, second_hitbox, inst)) {
+				while (!place_meeting(sign(motionx) + x, 0 + y, inst)) {
 					x += sign(motionx);
 				}
 			}
@@ -250,14 +250,14 @@ if (dual_place_meeting(motionx, 0, second_hitbox, oWall)) {
 
 
 //vertical collision
-if (dual_place_meeting(0, motiony, second_hitbox, oWall) ) {
+if (place_meeting(0 + x, motiony + y, oWall) ) {
 	//if (!up_slope) {
 	var inst_list = ds_list_create();
 	instance_place_list(x, y+motiony, oWall, inst_list, false);
 	for (i = 0; i < ds_list_size(inst_list); i++) {
 		var inst = inst_list[| i];
 		if (inst.active) {
-			while (!dual_place_meeting(0, sign(motiony), second_hitbox, inst)) {
+			while (!place_meeting(0 + x, sign(motiony) + y, inst)) {
 			    y += sign(motiony);
 			}
 			if (sign(motiony) > 0) {
@@ -291,13 +291,13 @@ if (dual_place_meeting(0, motiony, second_hitbox, oWall) ) {
 //}
 
 //corner collision (WIP)
-if (dual_place_meeting(motionx, motiony, second_hitbox, oWall)) {
+if (place_meeting(motionx + x, motiony + y, oWall)) {
 	var inst_list = ds_list_create();
 	instance_place_list(x+motionx, y+motiony, oWall, inst_list, false);
 	for (i = 0; i < ds_list_size(inst_list); i++) {
 		var inst = inst_list[| i];
 		if (inst.active) {
-			while (!dual_place_meeting(sign(motionx), sign(motiony), second_hitbox, inst)) {
+			while (!place_meeting(sign(motionx) + x, sign(motiony) + y, inst)) {
 				x += sign(motionx);
 				y += sign(motiony);
 			}
@@ -326,10 +326,10 @@ y += motiony
 //}
 // TEMP SLOPE REMOVAL
 
-if (dual_place_meeting(0, 1, second_hitbox, oHazard)) game_restart();
+if (place_meeting(0 + x, 1 + y, oHazard)) game_restart();
 
 //animation (new)
-if (!dual_place_meeting(0, 2, second_hitbox, oWall)) {
+if (!place_meeting(0 + x, 2 + y, oWall)) {
 	on_floor = false;	
 }
 if (on_floor or up_slope or down_slope) {

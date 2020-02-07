@@ -1,3 +1,5 @@
+event_inherited()
+
 item_grid = ds_grid_create(6, 3);
 ds_grid_clear(item_grid, noone);
 
@@ -61,6 +63,4 @@ mass = 270
 
 play_hit_sound = true
 
-
-
-outline_init()
+name = ""
