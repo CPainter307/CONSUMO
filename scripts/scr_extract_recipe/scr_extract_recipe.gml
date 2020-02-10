@@ -64,7 +64,7 @@ switch (argument0) {
 						//do nothing
 				}
 				break;
-			case "Spider Squirrel Leg":
+			case "Squipple Leg":
 				switch(i) {
 					case 0:
 						inst.bowl_sprite = sBowlSpider;

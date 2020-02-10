@@ -258,3 +258,6 @@ if i_frames <= 0 {
 
 //player sounds
 script_execute(scr_movement_sounds());
+
+//track hands
+scr_offset_pot()

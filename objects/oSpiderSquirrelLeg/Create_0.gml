@@ -2,14 +2,14 @@
 event_inherited();
 prepared = false;
 enum_type = pointer_null;
-name = "Spider Squirrel Leg";
+name = "Squipple Leg";
 type = "meat";
 runeSprite = sBlankRune;
 classification = ""; //four types of classi right now: meat, vegetable, seasoning, spice
 chops = 0;
 
 adjective = "Meaty"
-half_name = "Squirrel"
+half_name = "Squipple"
 
 hp = 0;
 attack = 5;

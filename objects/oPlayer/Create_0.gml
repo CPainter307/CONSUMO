@@ -120,5 +120,5 @@ KNOCKBACK_AMOUNT_Y = 10
 step1 = false;
 step2 = false;
 
-//charles particle testing
-auraEmitter = part_emitter_create(oPS);
+x_offset = 0;
+y_offset = 0;

@@ -15,9 +15,9 @@ if (sprite_index != sPlayerThrow and sprite_index != sPlayerPickup) {
 		if held_items[i] != noone {
 			//draw_throw_line()
 			if array_get(held_items[i], 0) == oRecipe {
-				draw_sprite_ext(array_get(held_items[i] , 8), 0, x + (-20 * sign(oPlayer.player_dir)), y, (player_dir), 1, 0, c_white, image_alpha)
-				draw_sprite_ext(array_get(held_items[i] , 9), 0, x + (-20 * sign(oPlayer.player_dir)), y , (player_dir), 1, 0, c_white, image_alpha)
-				draw_sprite_ext(array_get(held_items[i] , 10), 0, x + (-20 * sign(oPlayer.player_dir)), y, (player_dir), 1, 0, c_white, image_alpha)
+				draw_sprite_ext(array_get(held_items[i] , 8), 0, x + (-20 * sign(oPlayer.player_dir)) + x_offset, y + 2 + y_offset, (player_dir), 1, 0, c_white, image_alpha)
+				draw_sprite_ext(array_get(held_items[i] , 9), 0, x + (-20 * sign(oPlayer.player_dir)) + x_offset, y + 2 + y_offset, (player_dir), 1, 0, c_white, image_alpha)
+				draw_sprite_ext(array_get(held_items[i] , 10), 0, x + (-20 * sign(oPlayer.player_dir)) + x_offset, y + 2 + y_offset, (player_dir), 1, 0, c_white, image_alpha)
 			} else {
 				draw_sprite_ext(array_get(held_items[i] , 1), 0, hand_x, hand_y - (i * 35), (player_dir), 1, 0, c_white, image_alpha)
 			}
@@ -25,22 +25,22 @@ if (sprite_index != sPlayerThrow and sprite_index != sPlayerPickup) {
 	}
 }
 
-////draw the arms over the player if they're holding something big
-//if (sprite_index == sPlayerIdleHoldingBig) {
-//	draw_sprite_ext(sBigHoldingArmIdle, image_index, x, y, player_dir, 1, image_angle, c_white, image_alpha);	
-//}
+//draw the arms over the player if they're holding something big
+if (sprite_index == sPlayerIdleHoldingBig) {
+	draw_sprite_ext(sBigHoldingArmIdle, image_index, x, y, player_dir, 1, image_angle, c_white, image_alpha);	
+}
 
-//if (sprite_index == sPlayerRunHoldingBig) {
-//	draw_sprite_ext(sBigHoldingArmRun, image_index, x, y, player_dir, 1, image_angle, c_white, image_alpha);	
-//}
+if (sprite_index == sPlayerRunHoldingBig) {
+	draw_sprite_ext(sBigHoldingArmRun, image_index, x, y, player_dir, 1, image_angle, c_white, image_alpha);	
+}
 
-//if (sprite_index == sPlayerJumpHoldingBig) {
-//	draw_sprite_ext(sBigHoldingArmJump, image_index, x, y, player_dir, 1, image_angle, c_white, image_alpha);		
-//}
+if (sprite_index == sPlayerJumpHoldingBig) {
+	draw_sprite_ext(sBigHoldingArmJump, image_index, x, y, player_dir, 1, image_angle, c_white, image_alpha);		
+}
 
-//if (sprite_index == sPlayerFallHoldingBig or sprite_index == sPlayerHurtHoldingBig) {
-//	draw_sprite_ext(sBigHoldingArmFall, image_index, x, y, player_dir, 1, image_angle, c_white, image_alpha);	
-//}
+if (sprite_index == sPlayerFallHoldingBig or sprite_index == sPlayerHurtHoldingBig) {
+	draw_sprite_ext(sBigHoldingArmFall, image_index, x, y, player_dir, 1, image_angle, c_white, image_alpha);	
+}
 
 
 ////draw the arm over the player so that there is a layered arm when holding one item (OLD)
