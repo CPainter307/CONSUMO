@@ -6,12 +6,16 @@ oPlayer.sprite_index = sPlayerPickup
 
 var ni_array
 
-ni_array = [nearest_item.object_index, nearest_item.sprite_index, nearest_item.name, nearest_item.hp, nearest_item.attack, nearest_item.defense, nearest_item.spd]
 
-if (nearest_item.object_index == oRecipe) ni_array = [nearest_item.object_index, nearest_item.sprite_index, nearest_item.name, 
-										 nearest_item.hp, nearest_item.attack, nearest_item.defense, nearest_item.spd, nearest_item.ing, nearest_item.broth_sprite,
-										 nearest_item.bowl_sprite, nearest_item.topping_sprite]
-	
+if (nearest_item.object_index == oRecipe) {
+	ni_array = [nearest_item.object_index, nearest_item.sprite_index, nearest_item.name, 
+	nearest_item.hp, nearest_item.attack, nearest_item.defense, nearest_item.spd, nearest_item.ing, nearest_item.broth_sprite,
+	nearest_item.bowl_sprite, nearest_item.topping_sprite]
+} else {										 
+	ni_array = [nearest_item.object_index, nearest_item.sprite_index, nearest_item.name, nearest_item.hp, nearest_item.attack, nearest_item.defense, nearest_item.spd,
+	nearest_item.adjective, nearest_item.half_name]
+}
+
 //add item to empty slot if it doesnt already exist
 for (var i = 0; i < 3; i++) {
 	if oPlayer.held_items[i] == noone {

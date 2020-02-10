@@ -1,123 +1,76 @@
-var recipeName = "";
-var containsGrain = false;
+//if all three inst.ingredients are the same usinst.ing variables:
+//	all_different
+//	two_same01
+//	two_same02
+//	two_same12
+//	all_same
 
-//check for meat and vegetable
-var meatAndVeggie = false;
-var isMeat = false;
-var isVeggie = false;
+// helpful notes
+//
+//	the value stored in ing[] is the ingredient's name
+//	the value stored in ds_grid_get(item_grid, 6, i) is the ingredient's adjective
+//	the value stored in ds_grid_get(item_grid, 7, i) is the ingredient's half_name
 
-for (var i = 0; i < 3; i++) {
-	if (ds_list_find_value(item_list, i).classification == "meat") {
-		isMeat = true;
-	}
-	if (ds_list_find_value(item_list, i).classification == "vegetable") {
-		isVeggie = true;
-	}
-}
-if (isMeat && isVeggie) {
-	meatAndVeggie = true;
-}
+//assume all three are different
+all_different = true
 
-//cooking with multiple ingredients//
-var numOfNouns = 0;
-
-//check seasonings
-for (var i = 0; i < 3; i++) {
-	if (ds_list_find_value(item_list, i).classification == "seasoning") {
-		inst.name += "Seasoned ";
-		break;
-	}
-}
-
-//check spices
-for (var i = 0; i < 3; i++) {
-	if (ds_list_find_value(item_list, i).classification == "spice") {
-		inst.name += "Spicy ";
-		break;
-	}
-}
-
-//check spices
-for (var i = 0; i < 3; i++) {
-	if (ds_list_find_value(item_list, i).classification == "fruit") {
-		inst.name += "Tropical ";
-		break;
-	}
-}
-
-//check meats *INCOMPLETE*
-var meatName = "";
-for (var i = 0; i < 3; i++) {
-	if (ds_list_find_value(item_list, i).classification == "meat") {
-		meatName = ds_list_find_value(item_list, i).name;
-		if (numOfNouns != 0) {
-			var str = string_copy(inst.name, string_length(inst.name) - string_length(meatName), string_length(inst.name));
-			str = string_delete(str, string_length(str), 1)
-			if (str != meatName) {
-				inst.name = inst.name + "& " + meatName + " ";
-			}
-		}
-		if (numOfNouns == 0) {
-			inst.name = inst.name + meatName + " ";
-			numOfNouns++;
-		}
-	}
-}
-
-//check vegetables
-for (var i = 0; i < 3; i++) {
-	if (ds_list_find_value(item_list, i).classification == "vegetable") {
-		if (meatAndVeggie) {
-			inst.name += "& Vegetable ";
-			break;
-		}
-		if (!meatAndVeggie) {
-			inst.name += "Vegetable ";		
-			break;
-		}
-	}
-
-}
-
-//check for grain type
-for (var i = 0; i < 3; i++) {
-	if (ds_list_find_value(item_list, i).classification == "grain") {
-		containsGrain = true;
+//determine flags (probably not the prettiest way to do this, sorry)
+if (inst.ing[0] == inst.ing[1]) {
+	all_different = false
+	two_same01 = true
 	
+	if (inst.ing[0] == inst.ing[2]) {
+		two_same01 = false
+		all_same = true
 	}
 }
 
-//add meal name
-if (containsGrain) {
-	inst.name += mealType3;
-}
-else {
-	//add cooking type
-	inst.name += mealType;
-}
-
-
-if string_pos("Vegetable", inst.name) != 0 || string_pos("Seasoned", inst.name) != 0
-{
-	inst.sprite_index = sWhiteSoup; //This line sets our newly cooked meal to be white soup
-}
-if string_pos("Fish", inst.name) != 0
-{
-	inst.sprite_index = sGreenSoup;	
-}
-if string_pos("Meat", inst.name) != 0
-{
-	inst.sprite_index = sBrownSoup;	
-}
-if string_pos("Stew", inst.name) != 0
-{
-	inst.sprite_index = sOrangeSoup;
-}
-
-//for cooking single objects
-for (var i = 0; i < 3; i++) {
-	if (!ds_list_find_value(item_list, i).prepared) {
-		inst.name = mealType2 + ds_list_find_value(item_list, i).name;
-		break;
+if (inst.ing[0] == inst.ing[2]) {
+	all_different = false
+	two_same02 = true
+	
+	if (inst.ing[1] == inst.ing[2]) {
+		two_same02 = false
+		all_same = true
 	}
 }
+
+if (inst.ing[1] == inst.ing[2]) {
+	all_different = false
+	two_same12 = true
+	
+	if (inst.ing[0] == inst.ing[2]) {
+		two_same12= false
+		all_same = true
+	}
+}
+
+//apply names to oRecipe
+if (all_different) {
+	inst.name = ds_grid_get(item_grid, 6, 0) + " " + inst.ing[1] + " " + ds_grid_get(item_grid, 7, 2)
+}
+
+if (two_same01) {
+	inst.name = ds_grid_get(item_grid, 6, 2) + " " + inst.ing[0]
+}
+
+if (two_same02) {
+	inst.name = ds_grid_get(item_grid, 6, 1) + " " + inst.ing[0]
+}
+
+if (two_same12) {
+	inst.name = ds_grid_get(item_grid, 6, 0) + " " + inst.ing[1]	
+}
+
+if (all_same) {
+	inst.name = inst.ing[0]
+}
+
+//last step - add "Soup" to the end and clear flags
+inst.name = inst.name + " Soup"
+
+all_different = false
+two_same01 = false
+two_same02 = false
+two_same12 = false
+all_same = false

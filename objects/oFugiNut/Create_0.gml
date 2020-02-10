@@ -6,8 +6,10 @@ name = "Fugi Nut";
 type = "nut";
 runeSprite = sBlankRune;
 classification = ""; //four types of classi right now: meat, vegetable, seasoning, spice
-adjective = "";
 chops = 0;
+
+adjective = "Nutty"
+half_name = "Fugi"
 
 hp = 0;
 attack = 0;

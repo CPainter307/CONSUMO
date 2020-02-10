@@ -18,9 +18,6 @@ inst = instance_create_layer(x, y, "Objects", oRecipe); //creates oRecipe based 
 	
 // add vessel name
 inst.mealName = mealType;
-
-//name recipe
-//scr_extract_recipe_name(); (teehee - come back to this Charles)
 	
 //add quality bonus
 switch (argument0) {
@@ -47,6 +44,9 @@ switch (argument0) {
 	inst.ing[0] = ds_grid_get(item_grid, 0, 0);
 	inst.ing[1] = ds_grid_get(item_grid, 0, 1);
 	inst.ing[2] = ds_grid_get(item_grid, 0, 2);
+	//name recipe
+	scr_extract_recipe_name()
+	//apply sprites
 	for (var i = 0; i < 3; i++) {
 		switch (string(inst.ing[i])) {
 			case "Bosco Berry":
@@ -118,8 +118,9 @@ switch (argument0) {
 //show recipe quality
 textDisappearTimer = 0;
 drawText = true;
-	
-show_message("hp: " + string(inst.hp) + " atk: " + string(inst.attack) + " def: " + string(inst.defense) + " spd: " + string(inst.spd))
+
+//debug message
+show_message("name: " + inst.name + " hp: " + string(inst.hp) + " atk: " + string(inst.attack) + " def: " + string(inst.defense) + " spd: " + string(inst.spd))
 
 //clear grid
 ds_grid_clear(item_grid, noone);

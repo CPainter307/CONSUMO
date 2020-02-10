@@ -6,8 +6,10 @@ name = "Spider Squirrel Leg";
 type = "meat";
 runeSprite = sBlankRune;
 classification = ""; //four types of classi right now: meat, vegetable, seasoning, spice
-adjective = "";
 chops = 0;
+
+adjective = "Meaty"
+half_name = "Squirrel"
 
 hp = 0;
 attack = 5;

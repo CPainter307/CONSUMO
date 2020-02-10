@@ -6,8 +6,10 @@ name = "Goldenshroom";
 type = "fungus";
 runeSprite = sBlankRune;
 classification = ""; //four types of classi right now: meat, vegetable, seasoning, spice
-adjective = "";
 chops = 0;
+
+adjective = "Shroomy"
+half_name = "Shroom"
 
 hp = 0;
 attack = 0;

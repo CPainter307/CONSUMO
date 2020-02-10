@@ -1,4 +1,4 @@
-item_grid = ds_grid_create(6, 3);
+item_grid = ds_grid_create(8, 3);
 ds_grid_clear(item_grid, noone);
 
 steam = noone;
@@ -60,6 +60,13 @@ apply_gravity = true
 mass = 270
 
 play_hit_sound = true
+
+//naming variables
+all_different = false;
+two_same01 = false;
+two_same02 = false;
+two_same12 = false;
+all_same = false;
 
 
 

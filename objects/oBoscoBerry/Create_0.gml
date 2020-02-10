@@ -6,8 +6,10 @@ name = "Bosco Berry";
 type = "fruit";
 runeSprite = sBlankRune;
 classification = ""; //four types of classi right now: meat, vegetable, seasoning, spice
-adjective = "";
 chops = 0;
+
+adjective = "Sweet"
+half_name = "Berry"
 
 hp = 20;
 attack = 0;
