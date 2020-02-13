@@ -1,3 +1,5 @@
+event_inherited()
+
 /// @description 
 if (phy_speed_x == 0 and phy_speed_y == 0) {
 	if !onFire
@@ -37,9 +39,6 @@ if collision_circle(x, y, pot_radius, oPlayer, false, true) {
 	if (oPlayerInput.key_interact and !held and !is_holding_items() && oPlayer.holding_big_item == false) { // ---------oPlayerInput.key_interact <-> oPlayerInput.key_sprint_held
 		held = true;
 		oPlayer.holding_big_item = true;
-		oPlayer.second_hitbox = self;
-		
-		
 	}
 }
 
@@ -98,12 +97,11 @@ if (oPlayerInput.key_throw && held) {  // ---------oPlayerInput.key_throw <-> !o
 	oPlayer.holding_big_item = false
 	lineToggle = false;
 	oPlayer.image_index = 0
-	oPlayer.sprite_index = sPlayerThrow
 	oPlayer.player_dir = sign(oPlayer.x - mouse_x) // sets the player's direction to the direction they are throwing during the animation
 	image_xscale = -sign(x - mouse_x) //sets the pot's direction to the direction they're thrown
-	throw_object(oPlayer.second_hitbox, mouse_x, mouse_y, throw_speed)	
+	throw_object(self, mouse_x, mouse_y, throw_speed)	
 	held = false;
-	oPlayer.second_hitbox = oPlayer;
+	//oPlayer.second_hitbox = oPlayer;
 	oPlayer.holding_big_item = false;
 	phy_fixed_rotation = true;
 	phy_angular_velocity = 0;
@@ -114,7 +112,7 @@ if ((phy_speed_x != 0 or phy_speed != 0) and !held) {
 	sprite_index = sPottyThrown;
 	if (phy_speed_x > 0) {
 		image_xscale = 1;
-	}else {
+	} else {
 		image_xscale = -1;
 	}
 }
@@ -122,8 +120,8 @@ if ((phy_speed_x != 0 or phy_speed != 0) and !held) {
 
 if held {
 	oPlayer.holding_big_item = true
+	highlighted = false
 }
-show_debug_message(string(oPlayer.holding_big_item))
 
 phy_rotation = 0;
 ds_list_destroy(vesselList)

@@ -104,7 +104,7 @@ if pickupRadius > 0 {
 			oCursor.sprite_index = sGrabCursor
 		}
 		if mouse_check_button_pressed(mb_left) {
-			//add_to_inventory(nearest_item)
+			add_to_inventory(nearest_item)
 		}
 		break
 	}
@@ -245,7 +245,9 @@ if !is_vulnerable {
 				sprite_index = sPlayerHurtHolding
 			}
 		}
-		if holding_big_item sprite_index = sPlayerHurtHoldingBig
+		if holding_big_item {
+			sprite_index = sPlayerHurtHoldingBig
+		}
 		if instance_exists(_hitbox) {
 			player_dir = sign(oPlayer.x-_hitbox.x)
 		}
@@ -254,6 +256,12 @@ if !is_vulnerable {
 if i_frames <= 0 {
 	image_alpha = 1
 	is_vulnerable = true
+}
+
+if holding_big_item {
+	mask_index = sPlayerIdleHoldingBig
+} else {
+	mask_index = sPlayer
 }
 
 //player sounds

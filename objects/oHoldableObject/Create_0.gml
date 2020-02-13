@@ -24,7 +24,13 @@ landSound = snd_object_land;
 
 var fix;
 fix = physics_fixture_create()
-physics_fixture_set_circle_shape(fix, 8)
+//physics_fixture_set_circle_shape(fix, 8)
+physics_fixture_set_polygon_shape(fix);
+physics_fixture_add_point(fix, -25, 10);
+physics_fixture_add_point(fix, -10, -20);
+physics_fixture_add_point(fix, 10, -20);
+physics_fixture_add_point(fix, 25, 10);
+physics_fixture_add_point(fix, 0, 20);
 physics_fixture_set_linear_damping(fix, 0)
 physics_fixture_set_angular_damping(fix, 1)
 physics_fixture_set_friction(fix, 1)

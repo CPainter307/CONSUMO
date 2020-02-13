@@ -1,4 +1,6 @@
-item_grid = ds_grid_create(8, 3);
+event_inherited()
+
+item_grid = ds_grid_create(6, 3);
 ds_grid_clear(item_grid, noone);
 
 steam = noone;
@@ -71,3 +73,4 @@ all_same = false;
 
 
 outline_init()
+name = ""
