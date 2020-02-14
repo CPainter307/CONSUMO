@@ -3967,6 +3967,14 @@
             }
         },
         {
+            "Key": "aeb5c9b7-5791-40ad-82b5-644765c59b8d",
+            "Value": {
+                "id": "946c134e-dfe8-4e25-822f-efebd073dab6",
+                "resourcePath": "scripts\\field_of_view_zoom\\field_of_view_zoom.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "af0d7c5a-552e-437d-8417-a00471d5cd66",
             "Value": {
                 "id": "09838b79-b324-471f-92de-7c605db77981",
@@ -5856,6 +5864,7 @@
         "ba3cc25a-66ab-4925-b20f-72d24e97bddc",
         "5edadde6-45c3-4628-923d-ab128f59c5be",
         "7b636cc3-a243-4780-893f-97e8dafc103b",
+        "aeb5c9b7-5791-40ad-82b5-644765c59b8d",
         "7f07d631-0ede-47b2-8017-1b15c919e0ff",
         "745d1ab5-9428-428d-9fc5-669ea6876347",
         "68d9a4a4-a989-495b-bc21-2320d40a7ad6",

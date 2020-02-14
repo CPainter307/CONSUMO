@@ -1,4 +1,5 @@
 #macro view view_camera[0]
+field_of_view_zoom();
 camera_set_view_size(view, camera_width, camera_height)
 
 if instance_exists(following) {
