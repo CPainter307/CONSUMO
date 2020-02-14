@@ -50,4 +50,8 @@ surface_resize(application_surface,ideal_width,ideal_height);
 display_set_gui_size(ideal_width*zoom,ideal_height*zoom);
 window_set_size(ideal_width*zoom,ideal_height*zoom);
  
+shake_length = 0;
+shake_magnitude = 0;
+shake_remain = 0;
+ 
 alarm[0]=1; //Center Window

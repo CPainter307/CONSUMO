@@ -72,15 +72,11 @@ if(place_meeting(x, y+motiony, oWall)) {
 }
 
 //screenshake
-if (shake > 0 and shake != -10) {
-	view_xport[0] = view_x + choose(-random(shake_magnitude), random(shake_magnitude))
-	view_yport[0] = view_y + choose(-random(shake_magnitude), random(shake_magnitude))
-	shake = shake - 1
-}
-else if (shake != -10) {
-		view_xport[0] = view_x
-		view_yport[0] = view_y
-		shake = -10;
+if (shake > 0) {
+	scr_screenshake(20, 30)
+	shake -= 1
+} else {
+	shake = 0	
 }
 //if our frog boi has been on the ground for 5 seconds, jump
 if (!falling && time == 300) {
