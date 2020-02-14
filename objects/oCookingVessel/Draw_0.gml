@@ -6,8 +6,8 @@ if (ds_grid_get(item_grid, 0, 0) != noone) {
 
 	// pot flash effect
 	if (shaderBuff > 0) {
-		//image_xscale = lerp(image_xscale, 1.5, 0.5)
-		//image_yscale = lerp(image_yscale, 1.5, 0.5)
+		image_xscale = lerp(image_xscale, 1.5, 0.5)
+		image_yscale = lerp(image_yscale, 1.5, 0.5)
 		shaderBuff -= 0.15;
 	
 		gpu_set_blendmode(bm_add);
@@ -21,8 +21,8 @@ if (ds_grid_get(item_grid, 0, 0) != noone) {
 		shader_reset();
 		gpu_set_blendmode(bm_normal);
 	} else {
-		//image_xscale = lerp(image_xscale, 1, 0.6)
-		//image_yscale = lerp(image_yscale, 1, 0.6)	
+		image_xscale = lerp(image_xscale, 1, 0.6)
+		image_yscale = lerp(image_yscale, 1, 0.6)	
 	}
 	
 	// ingredient window

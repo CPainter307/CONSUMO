@@ -93,20 +93,22 @@ if _door != noone {
 if pickupRadius > 0 {
 	for (var i = 0; i < pickupRadius; i++;) {
 		var nearest_item = itemRadiusList[| i]
-		if oCursor.sprite_index != sPointerCursor {
-			oCursor.sprite_index = sPointerCursor
+		if nearest_item.object_index != oPot {
+			if oCursor.sprite_index != sPointerCursor {
+				oCursor.sprite_index = sPointerCursor
+			}
+			if !collision_circle(mouse_x, mouse_y, 8, nearest_item, false, false) {
+				continue;
+			}
+			nearest_item.highlighted = true
+			if oCursor.sprite_index != sGrabCursor {
+				oCursor.sprite_index = sGrabCursor
+			}
+			if mouse_check_button_pressed(mb_left) {
+				add_to_inventory(nearest_item)
+			}
+			break
 		}
-		if !collision_circle(mouse_x, mouse_y, 8, nearest_item, false, false) {
-			continue;
-		}
-		nearest_item.highlighted = true
-		if oCursor.sprite_index != sGrabCursor {
-			oCursor.sprite_index = sGrabCursor
-		}
-		if mouse_check_button_pressed(mb_left) {
-			add_to_inventory(nearest_item)
-		}
-		break
 	}
 }
 
@@ -114,21 +116,23 @@ if pickupRadius > 0 {
 if oPlayerInput.key_heavy_throw and !holding_big_item and !are_hands_full() {
 	if pickupRadius > 0 {
 		var nearest_item = itemRadiusList[| 0]
-		var holding_recipe = false
-		if nearest_item.object_index == oRecipe and !is_holding_items() {
-			for (var i = 0; i < 3; i++) {
-				if held_items[i] != noone {
-					if held_items[i].object_index == oRecipe {
-						holding_recipe = true
+		if nearest_item.object_index != oPot {
+			var holding_recipe = false
+			if nearest_item.object_index == oRecipe and !is_holding_items() {
+				for (var i = 0; i < 3; i++) {
+					if held_items[i] != noone {
+						if held_items[i].object_index == oRecipe {
+							holding_recipe = true
+						}
 					}
 				}
-			}
-			if !holding_recipe and !is_holding_items() {
+				if !holding_recipe and !is_holding_items() {
+					add_to_inventory(nearest_item)
+					holding_big_item = true
+				}
+			} else if nearest_item.object_index != oRecipe {
 				add_to_inventory(nearest_item)
-				holding_big_item = true
 			}
-		} else if nearest_item.object_index != oRecipe {
-			add_to_inventory(nearest_item)
 		}
 	}
 }

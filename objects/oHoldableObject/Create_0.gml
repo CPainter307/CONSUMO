@@ -16,8 +16,6 @@ grav = gravity_loc; // meter/sec^2
 grav = grav / meter_per_pix   //  pix/sec^2
 grav = grav /  sqr(update_speed)
 
-image_xscale = .5
-image_yscale = .5
 
 pickUpSound = snd_pickup_generic;
 landSound = snd_object_land;
