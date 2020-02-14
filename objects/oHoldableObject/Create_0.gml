@@ -1,4 +1,5 @@
 /// @description Initializes variables all holdable objects will have.
+my_sprite_index = sprite_index
 name = ""
 followingL = false;
 followingR = false;

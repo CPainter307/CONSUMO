@@ -1,5 +1,6 @@
 /// @description define variables for ingredients
 event_inherited();
+my_sprite_index = sprite_index
 prepared = false;
 enum_type = pointer_null;
 name = "";

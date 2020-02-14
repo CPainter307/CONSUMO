@@ -7,5 +7,6 @@ if oPlayer.pickupRadius <= 0 {
 
 //play sound
 scr_play_pickup_sound(pickUpSound);
+//one_way_platform_phase()
 
 

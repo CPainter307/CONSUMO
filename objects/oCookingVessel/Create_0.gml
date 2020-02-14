@@ -2,7 +2,7 @@ event_inherited()
 
 item_grid = ds_grid_create(8, 3);
 ds_grid_clear(item_grid, noone);
-
+my_sprite_index = sprite_index
 steam = noone;
 ing1 = noone;
 ing2 = noone;
@@ -48,7 +48,7 @@ fix = physics_fixture_create()
 physics_fixture_set_circle_shape(fix, sprite_get_width(sPottyDormant) / 2)
 physics_fixture_set_linear_damping(fix, 0)
 physics_fixture_set_angular_damping(fix, 100000)
-physics_fixture_set_friction(fix, 0.5)
+physics_fixture_set_friction(fix, 0.005)
 physics_fixture_set_density(fix, 0.5);
 physics_fixture_bind(fix, self)
 physics_fixture_delete(fix)

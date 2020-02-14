@@ -1,8 +1,8 @@
 {
-    "id": "8539600f-1a81-4a8b-81b2-efb003fec0d1",
+    "id": "d052d78f-4e68-4c31-b56f-961c3a14db67",
     "modelName": "GMScript",
     "mvc": "1.0",
-    "name": "draw_throw_line",
+    "name": "one_way_platform_phase",
     "IsCompatibility": false,
     "IsDnD": false
 }

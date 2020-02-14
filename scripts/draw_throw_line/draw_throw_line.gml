@@ -73,8 +73,8 @@ if (global.canMove && instance_exists(oPlayer)) { //Temp crash fix
 				empty = false;
 				//For some reason, the image speed has to be set to a really low value
 				//image_speed = 0.15; //Animates the reticle
-				image_angle+=rotation_speed
-				draw_sprite_ext(sReticle, 0, xx, yy, 1+sin(get_timer()/100000)/spin_rate, 1+sin(get_timer()/100000)/spin_rate, image_angle, c_white, 1) //somehow animate 
+				target_image_angle+=rotation_speed
+				draw_sprite_ext(sReticle, 0, xx, yy, 1+sin(get_timer()/100000)/spin_rate, 1+sin(get_timer()/100000)/spin_rate, target_image_angle, c_white, 1) //somehow animate 
 			}
 			else if count % draw_freq == 0 {
 				draw_circle_color(xx, yy, outline_size, c_white, c_white, false)

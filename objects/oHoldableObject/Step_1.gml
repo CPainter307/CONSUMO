@@ -9,6 +9,7 @@ if !apply_gravity {
 	}
 	
 }
+one_way_platform_phase()
 
 if place_meeting(phy_position_x, phy_position_y, oWall) {
 	apply_gravity = true

@@ -55,6 +55,7 @@ if (on_floor) and in_air {
 
 
 part_emitter_region(global.ps, em, x-42.5, x+42.5, y+60, y+70, ps_shape_ellipse, ps_distr_gaussian);
+
 script_execute(state);
 
 itemRadiusList = ds_list_create()

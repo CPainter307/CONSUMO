@@ -4767,6 +4767,14 @@
             }
         },
         {
+            "Key": "d052d78f-4e68-4c31-b56f-961c3a14db67",
+            "Value": {
+                "id": "1cc302ae-e8be-4bba-8bdf-4263577759d7",
+                "resourcePath": "scripts\\one_way_platform_phase\\one_way_platform_phase.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "d05d185c-85fc-410a-a1e8-81219b45574c",
             "Value": {
                 "id": "01353c7a-bc82-4946-890e-d5574f4c8397",
@@ -5865,6 +5873,7 @@
         "5edadde6-45c3-4628-923d-ab128f59c5be",
         "7b636cc3-a243-4780-893f-97e8dafc103b",
         "aeb5c9b7-5791-40ad-82b5-644765c59b8d",
+        "d052d78f-4e68-4c31-b56f-961c3a14db67",
         "7f07d631-0ede-47b2-8017-1b15c919e0ff",
         "745d1ab5-9428-428d-9fc5-669ea6876347",
         "68d9a4a4-a989-495b-bc21-2320d40a7ad6",

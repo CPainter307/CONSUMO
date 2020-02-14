@@ -12,3 +12,4 @@ mealType3 = "Stew";
 thisPot = instance_nearest(x, y, oPot)
 
 y = thisPot.y - 25;
+my_sprite_index = sprite_index

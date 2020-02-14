@@ -1,4 +1,5 @@
  event_inherited()
+
 Class = "Adventurer"
 
 gamepad_set_axis_deadzone(0, 0.35)
@@ -14,7 +15,7 @@ part_emitter_region(global.ps, em, x-42.5, x+42.5, y+60, y+70, ps_shape_ellipse,
 hsp = 0;
 vsp = 0;
 jumpspeed = 10;
-
+target_image_angle = 0;
 held_items = [noone, noone, noone];
 holding_big_item = false
 held_x = 0;
