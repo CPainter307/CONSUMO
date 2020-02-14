@@ -27,7 +27,7 @@ if(ideal_height & 1)
  
    
 max_zoom = floor(display_get_width()/ideal_width);
- 
+min_zoom = max_zoom / 20
 camera_width = ideal_width
 camera_height = ideal_height
  
