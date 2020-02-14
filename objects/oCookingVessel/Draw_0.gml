@@ -1,4 +1,4 @@
-event_inherited()
+draw_self()
 if (lineToggle) {
 	draw_throw_line_pot()
 }
