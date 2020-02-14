@@ -120,13 +120,16 @@ textDisappearTimer = 0;
 drawText = true;
 
 //debug message
-show_message("name: " + inst.name + " hp: " + string(inst.hp) + " atk: " + string(inst.attack) + " def: " + string(inst.defense) + " spd: " + string(inst.spd))
+//show_message("name: " + inst.name + " hp: " + string(inst.hp) + " atk: " + string(inst.attack) + " def: " + string(inst.defense) + " spd: " + string(inst.spd))
 
 //clear grid
 ds_grid_clear(item_grid, noone);
 
-//holding_big_item
-if !is_holding_items() and !oPot.held {
-	oPlayer.holding_big_item = true
-	add_to_inventory(inst);
-}
+throw_object(inst, x, y-50, 1000, oPot)
+
+// COMMENTED OUT WHILE MAKING STUFF SHOOT OUT OF POT, UNCOMMENT FOR TAKING THINGS OUT NORMALLY
+////holding_big_item
+//if !is_holding_items() and !oPot.held {
+//	oPlayer.holding_big_item = true
+//	add_to_inventory(inst);
+//}

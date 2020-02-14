@@ -9,10 +9,11 @@ var _inst = argument0
 var _x = argument1  //mouse_x
 var _y = argument2 //mouse-Y
 var _spd = argument3
+var _throw_from = argument4
 _spd = _spd 
 
 scr_play_throw_sound()
-var dir = point_direction(oPlayer.x, oPlayer.y, _x, _y)
+var dir = point_direction(_throw_from.x, _throw_from.y, _x, _y)
 if global.input_type == inputs.analog_stick {
 	dir = point_direction(0, 0, _x, _y)
 }
