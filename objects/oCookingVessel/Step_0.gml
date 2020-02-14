@@ -15,14 +15,14 @@ if instance_exists(steam) {
 if (!ds_grid_value_exists(item_grid, 0, 0, 0, 2, noone) && currentlyCooking) {
 	// JUST RIGHT
 	if (timeline_position >= 270 and timeline_position < 540) {
-		if oPlayerInput.key_heavy_throw and place_meeting(x, y, oPlayer) { // ---------oPlayerInput.key_heavy_throw <-> oPlayerInput.key_interact
+		if keyboard_check_pressed(ord("Q"))/*oPlayerInput.key_heavy_throw and place_meeting(x, y, oPlayer)*/ { // ---------oPlayerInput.key_heavy_throw <-> oPlayerInput.key_interact
 			scr_extract_recipe(0);
 			timeline_position = 0;
 		}
 	}
 	//burnt
 	else if (timeline_position >= 540) {
-		if oPlayerInput.key_heavy_throw and place_meeting(x, y, oPlayer) { // ---------oPlayerInput.key_heavy_throw <-> oPlayerInput.key_interact
+		if keyboard_check_pressed(ord("Q"))/*oPlayerInput.key_heavy_throw and place_meeting(x, y, oPlayer)*/ { // ---------oPlayerInput.key_heavy_throw <-> oPlayerInput.key_interact
 			scr_extract_recipe(1);
 			timeline_position = 0;
 		}
@@ -93,13 +93,14 @@ if held/* and !is_hol ding_items() and !oPlayer.holding_big_item*/ {
 	phy_linear_velocity_x = 0;
 	phy_linear_velocity_y = 0;
 }
-if (oPlayerInput.key_throw && held) {  // ---------oPlayerInput.key_throw <-> !oPlayerInput.key_sprint_held
+if ((oPlayerInput.key_throw || oPlayerInput.key_heavy_throw) && held) {  // ---------oPlayerInput.key_throw <-> !oPlayerInput.key_sprint_held
 	oPlayer.holding_big_item = false
 	lineToggle = false;
 	oPlayer.image_index = 0
 	oPlayer.player_dir = sign(oPlayer.x - mouse_x) // sets the player's direction to the direction they are throwing during the animation
 	image_xscale = -sign(x - mouse_x) //sets the pot's direction to the direction they're thrown
-	throw_object(self, mouse_x, mouse_y, throw_speed)	
+	if oPlayerInput.key_throw
+		throw_object(self, mouse_x, mouse_y, throw_speed, oPlayer)	
 	held = false;
 	//oPlayer.second_hitbox = oPlayer;
 	oPlayer.holding_big_item = false;

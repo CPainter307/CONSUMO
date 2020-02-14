@@ -113,7 +113,7 @@ if pickupRadius > 0 {
 }
 
 // if we press pickup and we are colliding with some holdable objects, then add the nearest one to our held items
-if oPlayerInput.key_heavy_throw and !holding_big_item and !are_hands_full() {
+if oPlayerInput.key_interact and !holding_big_item and !are_hands_full() {
 	if pickupRadius > 0 {
 		var nearest_item = itemRadiusList[| 0]
 		if nearest_item.object_index != oPot {
@@ -139,8 +139,8 @@ if oPlayerInput.key_heavy_throw and !holding_big_item and !are_hands_full() {
 ds_list_destroy(itemRadiusList)
 #endregion
 
-if oPlayerInput.key_throw {
-	for (var i = 0; i < 3; i++) {
+if oPlayerInput.key_throw || oPlayerInput.key_heavy_throw {
+	for (var i = 2; i >= 0; i--) {
 		if held_items[i] != noone {
 			holding_big_item = false
 			var inst = instance_create_layer(oPlayer.x, oPlayer.y  - (i * 30), "Objects", array_get(held_items[i], 0));
@@ -156,8 +156,12 @@ if oPlayerInput.key_throw {
 				inst.broth_sprite = array_get(held_items[i], 9);
 				inst.topping_sprite = array_get(held_items[i], 10);
 			}
-			throw_object(inst, mouse_x, mouse_y, inst.throw_speed)
 			held_items[i] = noone;
+			if oPlayerInput.key_throw {
+				throw_object(inst, mouse_x, mouse_y, inst.throw_speed, oPlayer)
+			} else {
+				break
+			}
 		}
 	}
 }
