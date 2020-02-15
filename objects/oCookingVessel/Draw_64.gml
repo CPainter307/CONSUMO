@@ -11,7 +11,7 @@ if timeline_position < 270 {
 		draw_sprite_ext(ds_grid_get(item_grid, 5, 1), 0, xval, yval, 1, 1, 0, c_white, 1)
 	}
 	if (ds_grid_get(item_grid, 0, 2) != noone) { //draw third ingredient
-		draw_sprite_ext(ds_grid_get(item_grid, 5, 1), 0, xval+sprite_get_width(sVesselWindow)/2 - xbuff, yval, 1, 1, 0, c_white, 1)
+		draw_sprite_ext(ds_grid_get(item_grid, 5, 2), 0, xval+sprite_get_width(sVesselWindow)/2 - xbuff, yval, 1, 1, 0, c_white, 1)
 	}
 } else {
 	draw_sprite(sVesselWindow, 0, xval, yval)

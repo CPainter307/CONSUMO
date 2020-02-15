@@ -22,12 +22,12 @@ draw_sprite_ext(portrait, 0, x, y, 1/scale_down, 1/scale_down, 0, c_white, 1)
 draw_sprite_ext(sBattleWindowOutline, 0, x, y, 1/scale_down, 1/scale_down, 0, c_white, 1)
 
 //draw stat circles
-var stat_1_x = 363
-var stat_1_y = -211
-var stat_2_x = 408   
-var stat_2_y = -22
-var stat_3_x = 363
-var stat_3_y = 166
+stat_1_x = 363
+stat_1_y = -211
+stat_2_x = 408   
+stat_2_y = -22
+stat_3_x = 363
+stat_3_y = 166
 
 //sword
 draw_sprite_ext(sStatBG, 0, x+(stat_1_x/scale_down), y+(stat_1_y/scale_down), 1/scale_down, 1/scale_down, 0, c_white, 1)

@@ -1,4 +1,4 @@
-if draw_gui {
+if !draw_gui {
 	exit
 }
 

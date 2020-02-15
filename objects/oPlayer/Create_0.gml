@@ -78,11 +78,11 @@ player_dir = 1
 hand_x = x;
 hand_y = y;
 
-battleWindow = instance_create_depth(50, window_get_height()-50, -y, oBattlePortrait)
+battleWindow = instance_create_depth((sprite_get_width(sBattleWindowOutline)/4/2)+20, window_get_height()-(sprite_get_height(sBattleWindowOutline)/4/2)-20, -y, oBattlePortrait)
 battleWindow.owner = self
 battleWindow.portrait = sChefPortraitBattle
 
-battleWindow.scale_down = 5
+battleWindow.scale_down = 3
 
 baseAttack = 10
 baseDefense = 10

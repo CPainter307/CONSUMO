@@ -2,7 +2,7 @@ event_inherited();
 
 ///Properties
 ideal_width=0; //Doesn't matter because we are going to calculate this.
-ideal_height=400;
+ideal_height=1080;
 camera_width=0;
 camera_height=0;
 zoom=1;
