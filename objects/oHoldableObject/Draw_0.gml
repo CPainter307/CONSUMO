@@ -1,4 +1,12 @@
 if highlighted {
+	//draw the E
+	draw_sprite_ext(sButtonE, 0, x, y-(sprite_height/2)-30+sin(get_timer()/100000), 1, 1, 0, c_white, 1)
+	
+	//dont do the outline stuff if we're the pot
+	if object_index == oPot {
+		exit	
+	}
+	
 	outline_start(4, c_white, sprite_index, 4)
 	
 	draw_self()
@@ -14,6 +22,9 @@ if highlighted {
 	image_xscale = lerp(image_xscale, 1.1 * sign(image_xscale), 0.3)
 	image_yscale = lerp(image_yscale, 1.1 * sign(image_yscale), 0.3)
 } else {
+	if object_index == oPot {
+		exit	
+	}
 	image_xscale = lerp(image_xscale, 1 * sign(image_xscale), 0.3)
 	image_yscale = lerp(image_yscale, 1 * sign(image_yscale), 0.3)
 	outline_end()

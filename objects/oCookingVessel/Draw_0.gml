@@ -1,3 +1,4 @@
+event_inherited()
 draw_self()
 if (lineToggle) {
 	draw_throw_line_pot()
@@ -60,9 +61,9 @@ if (held) {
 }
 
 //debug pot radius
-draw_set_alpha(0.3)
-if held {
-	draw_ellipse(x-(sprite_get_width(sPottyDormant)/2), y-10, x+(sprite_get_width(sPottyDormant)/2), y+10, false)
-} else {
-	draw_circle(x, y, pot_radius, false)
-}
+//draw_set_alpha(0.3)
+//if held {
+//	draw_ellipse(x-(sprite_get_width(sPottyDormant)/2), y-10, x+(sprite_get_width(sPottyDormant)/2), y+10, false)
+//} else {
+//	draw_circle(x, y, pot_radius, false)
+//}

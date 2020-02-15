@@ -5,7 +5,7 @@ timeline_position = 0
 //clear grid
 for (var i = 2; i >= 0; i--) {
 	if ds_grid_get(item_grid, 0, i) != noone {
-		inst = instance_create_layer(x, y-60, "Objects", ds_grid_get(item_grid, 8, i))
+		inst = instance_create_layer(x, y-70, "Objects", ds_grid_get(item_grid, 8, i))
 		throw_object(inst, x, y-50, 1000, oPot)
 		ds_grid_set_region(item_grid, 0, i, 8, i, noone)
 		break

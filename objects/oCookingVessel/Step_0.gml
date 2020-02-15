@@ -1,7 +1,7 @@
 event_inherited()
 
 if (phy_speed_x == 0 and phy_speed_y == 0) {
-	if !onFire
+	if !onFire and sprite_index != sPottyPop
 		sprite_index = sPottyDormant;
 }
 
@@ -17,6 +17,8 @@ if (!ds_grid_value_exists(item_grid, 0, 0, 0, 2, noone)) {
 	if (timeline_position >= 270 and timeline_position < 540) {
 		if keyboard_check_pressed(ord("Q"))/*oPlayerInput.key_heavy_throw and place_meeting(x, y, oPlayer)*/ {
 			scr_extract_recipe(0);
+			image_index = 0
+			sprite_index = sPottyPop
 			timeline_position = 0;
 		}
 	}
@@ -24,12 +26,16 @@ if (!ds_grid_value_exists(item_grid, 0, 0, 0, 2, noone)) {
 	else if (timeline_position >= 540) {
 		if keyboard_check_pressed(ord("Q"))/*oPlayerInput.key_heavy_throw and place_meeting(x, y, oPlayer)*/ {
 			scr_extract_recipe(1);
+			image_index = 0
+			sprite_index = sPottyPop
 			timeline_position = 0;
 		}
 	}
 }
 
-if keyboard_check_pressed(ord("Q")) {
+if keyboard_check_pressed(ord("Q")) and !ds_grid_value_exists(item_grid, 0, 0, 0, 0, noone) {
+	image_index = 0
+	sprite_index = sPottyPop
 	scr_extract_ingr()
 }
 
@@ -70,7 +76,7 @@ if campfireRadius > 0 {
 	phy_position_x = lerp(phy_position_x, campfireList[| 0].x, 0.5)
 	phy_position_y = lerp(phy_position_y, campfireList[| 0].y, 0.5)
 	phy_rotation = lerp(phy_rotation, 0, 0.1)
-	if (!currentlyCooking) {
+	if (!currentlyCooking and sprite_index != sPottyPop) {
 		sprite_index = sPottyGlowing;
 	}
 	onFire = true;
@@ -88,7 +94,7 @@ if (!ds_grid_value_exists(item_grid, 0, 0, 0, 2, noone) && !currentlyCooking && 
 	timeline_loop = false;
 }
 
-if (currentlyCooking) {
+if (currentlyCooking and sprite_index != sPottyPop) {
 	sprite_index = sPottyCooking;
 	steam.image_alpha = 1;
 }
@@ -96,7 +102,8 @@ if (currentlyCooking) {
 if held/* and !is_hol ding_items() and !oPlayer.holding_big_item*/ {
 	scr_offset_pot();
 	lineToggle = true;
-	sprite_index = sPottyHeld;
+	if sprite_index != sPottyPop
+		sprite_index = sPottyHeld;
 	if (oPlayer.player_dir == 1) {
 		image_xscale = -1;
 	} else {
@@ -124,7 +131,8 @@ if ((oPlayerInput.key_throw || oPlayerInput.key_heavy_throw) && held) {
 }
 
 if ((phy_speed_x != 0 or phy_speed != 0) and !held and !onFire) {
-	sprite_index = sPottyThrown;
+	if sprite_index != sPottyPop
+		sprite_index = sPottyThrown;
 	if (phy_speed_x > 0) {
 		image_xscale = 1;
 	} else {

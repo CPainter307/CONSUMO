@@ -24,7 +24,7 @@ mealType3 = "";
 
 shaderBuff = 0
 onFire = false;
-pot_radius = 40
+pot_radius = 50
 throw_speed = 1000;
 gravity_loc = 150;
 meter_per_pix =  0.1
