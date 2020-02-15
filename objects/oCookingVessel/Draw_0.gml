@@ -60,6 +60,13 @@ if (held) {
 	}
 }
 
+//WIP hold to pick up graphic
+if (pick_up_timer > 0) {
+	var perc
+	perc = (pick_up_timer/40) * 100
+	draw_healthbar(x - 40, y - 80, x + 40, y + 80, perc, c_gray, c_green, c_green, 3, true, true)
+}
+
 //debug pot radius
 //draw_set_alpha(0.3)
 //if held {

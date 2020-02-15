@@ -47,7 +47,12 @@ if (!onFire || held) {
 
 //pot inventory
 if collision_circle(x, y, pot_radius, oPlayer, false, true) {
-	if (oPlayerInput.key_interact and !held and !is_holding_items() && oPlayer.holding_big_item == false) {
+	if (oPlayerInput.key_interact_held and !held and !is_holding_items() && oPlayer.holding_big_item == false) {
+		pick_up_timer++
+	} else {
+		pick_up_timer = 0
+	}
+	if (pick_up_timer = 40) {
 		held = true;
 		oPlayer.holding_big_item = true;
 	}

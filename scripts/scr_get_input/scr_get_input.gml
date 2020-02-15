@@ -37,6 +37,7 @@ if (global.input_type == inputs.keyboard) {
 	key_jump_released = keyboard_check_released(global.key_jump);
 	key_locked = keyboard_check(global.key_lock);
 	key_interact = keyboard_check_pressed(global.key_interact);
+	key_interact_held = keyboard_check(global.key_interact);
 	mouse_dir = point_direction(x, y, mouse_x, mouse_y);
 	key_inventory = keyboard_check_pressed(global.key_inventory);
 	key_room_reset = keyboard_check_pressed(global.key_room_reset);

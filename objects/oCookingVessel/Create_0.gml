@@ -75,6 +75,9 @@ all_same = false;
 //for rotation
 overtipped = false
 
+//new pick up timer
+pick_up_timer = 0
+
 
 outline_init()
 name = ""
