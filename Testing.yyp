@@ -1263,6 +1263,14 @@
             }
         },
         {
+            "Key": "3704df46-3d6e-445c-ab04-1a136d30b2af",
+            "Value": {
+                "id": "e66b7707-05d5-41d2-8944-2bea20fe895f",
+                "resourcePath": "scripts\\ease\\ease.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "3720b116-d27f-4839-bcc4-34695369503e",
             "Value": {
                 "id": "0d59fc3b-daf8-4b3b-96c0-b0f3b0120f0c",
@@ -2331,6 +2339,14 @@
             "Value": {
                 "id": "b6b96eaf-f6fa-487c-b702-0ea6833161e8",
                 "resourcePath": "objects\/oSalt\/oSalt.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "645d4073-8ef7-4689-bf8f-b0d6d16d86e2",
+            "Value": {
+                "id": "a9552d33-379f-45f1-a291-d38eeb23d3ff",
+                "resourcePath": "objects\\oBuffIcon\\oBuffIcon.yy",
                 "resourceType": "GMObject"
             }
         },
@@ -5943,7 +5959,8 @@
         "b545f798-3391-409f-bf1a-819032e8aa95",
         "028a5c78-f2cd-4144-bfe2-19e227344076",
         "d3de394c-79c0-4c01-a27b-cbd4adbed761",
-        "fe53928b-b172-47df-9f24-ae3a037a8aa4"
+        "fe53928b-b172-47df-9f24-ae3a037a8aa4",
+        "3704df46-3d6e-445c-ab04-1a136d30b2af"
     ],
     "tutorial": ""
 }

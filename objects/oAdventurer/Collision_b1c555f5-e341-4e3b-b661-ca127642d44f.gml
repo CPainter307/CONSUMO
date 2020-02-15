@@ -1,5 +1,9 @@
-if (maxHealth > currentHealth) {
-	currentHealth += other.hp;
+
+currentHealth = min(other.hp+currentHealth, maxHealth)
+if other.hp > 0 {
+	var _h = instance_create_layer(x+50, y, "game", oBuffIcon)
+	_h.icon = sHeartIconOutlined
+	_h.buff_amount = string(other.hp)
 }
 
 attackTimer = (attackTimer/60) + other.attack;
@@ -7,18 +11,29 @@ defenseTimer = (defenseTimer/60) + other.defense;
 speedTimer = (speedTimer/60) + other.spd;
 
 if attackTimer > 0 {
+	var inst = instance_create_layer(x+50, y, "game", oBuffIcon)
+	inst.icon = sSwordIconOutlined
+	inst.buff_amount = string(attackTimer) + "s"
 	attackMultiplier*=2
 	attackTimer*=60
 } else {
 	attackMultiplier=1	
 }
+
 if defenseTimer > 0 {
+	var inst = instance_create_layer(x+50, y, "game", oBuffIcon)
+	inst.icon = sShieldIconOutlined
+	inst.buff_amount = string(defenseTimer) + "s"
 	defenseMultiplier=2
 	defenseTimer*=60
 } else {
 	defenseMultiplier=1	
 }
+
 if speedTimer > 0 {
+	var inst = instance_create_layer(x+50, y, "game", oBuffIcon)
+	inst.icon = sShoeIconOutlined
+	inst.buff_amount = string(speedTimer) + "s"
 	speedMultiplier*=2
 	speedTimer*=60
 } else {

@@ -1,7 +1,7 @@
 Class = "";
 
 maxHealth = 100;
-currentHealth = 50;
+currentHealth = maxHealth;
 
 baseAttack = 0;
 attackTimer = 0;
