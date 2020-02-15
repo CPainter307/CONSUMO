@@ -1,8 +1,8 @@
 event_inherited()
 
-item_grid = ds_grid_create(8, 3);
+item_grid = ds_grid_create(9, 3);
 ds_grid_clear(item_grid, noone);
-my_sprite_index = sprite_index
+
 steam = noone;
 ing1 = noone;
 ing2 = noone;
@@ -24,7 +24,7 @@ mealType3 = "";
 
 shaderBuff = 0
 onFire = false;
-pot_radius = 60
+pot_radius = 40
 throw_speed = 1000;
 gravity_loc = 150;
 meter_per_pix =  0.1
@@ -42,21 +42,22 @@ landSound = snd_object_land;
 
 steam = instance_create_layer(x, y-oPot.sprite_height, "Objects", oSteam);
 
-var fix;
+
+//var fix;
 
 fix = physics_fixture_create()
-physics_fixture_set_circle_shape(fix, sprite_get_width(sPottyDormant) / 2)
-physics_fixture_set_linear_damping(fix, 0)
-physics_fixture_set_angular_damping(fix, 100000)
-physics_fixture_set_friction(fix, 0.5)
-physics_fixture_set_density(fix, 0.5);
-physics_fixture_bind(fix, self)
-physics_fixture_delete(fix)
+////physics_fixture_set_circle_shape(fix, sprite_get_width(sPottyDormant) / 2)
+//physics_fixture_set_box_shape(fix, 1, 1)
+//physics_fixture_set_linear_damping(fix, 0)
+//physics_fixture_set_angular_damping(fix, 100000)
+//physics_fixture_set_friction(fix, 0.5)
+//physics_fixture_set_density(fix, 0.5);
+//physics_fixture_bind(fix, self)
+//physics_fixture_delete(fix)
 
-phy_active = true
-phy_fixed_rotation = true;
+//phy_fixed_rotation = true;
 
-physics_world_gravity(0, gravity_loc)
+//physics_world_gravity(0, gravity_loc)
 apply_gravity = true
 
 mass = 270
@@ -70,6 +71,9 @@ two_same02 = false;
 two_same12 = false;
 all_same = false;
 
+
+//for rotation
+overtipped = false
 
 
 outline_init()

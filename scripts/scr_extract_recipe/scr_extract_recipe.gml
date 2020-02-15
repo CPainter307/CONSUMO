@@ -11,10 +11,9 @@ var total_attack = ds_grid_get_sum(item_grid, 2, 0, 2, 2);
 var total_defense = ds_grid_get_sum(item_grid, 3, 0, 3, 2);
 var total_spd = ds_grid_get_sum(item_grid, 4, 0, 4, 2);
 currentlyCooking = false;
-//create oRecipe
 
+//create oRecipe
 inst = instance_create_layer(x, y, "Objects", oRecipe); //creates oRecipe based on second item because it'll always be a full ingredientdd
-	
 	
 // add vessel name
 inst.mealName = mealType;

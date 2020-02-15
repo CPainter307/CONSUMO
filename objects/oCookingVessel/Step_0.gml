@@ -1,6 +1,5 @@
 event_inherited()
 
-/// @description 
 if (phy_speed_x == 0 and phy_speed_y == 0) {
 	if !onFire
 		sprite_index = sPottyDormant;
@@ -11,23 +10,29 @@ if instance_exists(steam) {
 	steam.y = y-oPot.sprite_height
 }
 
+
 // checks to see if recipe is done
-if (!ds_grid_value_exists(item_grid, 0, 0, 0, 2, noone) && currentlyCooking) {
+if (!ds_grid_value_exists(item_grid, 0, 0, 0, 2, noone)) {
 	// JUST RIGHT
 	if (timeline_position >= 270 and timeline_position < 540) {
-		if keyboard_check_pressed(ord("Q"))/*oPlayerInput.key_heavy_throw and place_meeting(x, y, oPlayer)*/ { // ---------oPlayerInput.key_heavy_throw <-> oPlayerInput.key_interact
+		if keyboard_check_pressed(ord("Q"))/*oPlayerInput.key_heavy_throw and place_meeting(x, y, oPlayer)*/ {
 			scr_extract_recipe(0);
 			timeline_position = 0;
 		}
 	}
 	//burnt
 	else if (timeline_position >= 540) {
-		if keyboard_check_pressed(ord("Q"))/*oPlayerInput.key_heavy_throw and place_meeting(x, y, oPlayer)*/ { // ---------oPlayerInput.key_heavy_throw <-> oPlayerInput.key_interact
+		if keyboard_check_pressed(ord("Q"))/*oPlayerInput.key_heavy_throw and place_meeting(x, y, oPlayer)*/ {
 			scr_extract_recipe(1);
 			timeline_position = 0;
 		}
 	}
 }
+
+if keyboard_check_pressed(ord("Q")) {
+	scr_extract_ingr()
+}
+
 if (!onFire || held) {
 	currentlyCooking = false;
 	timeline_running = false;
@@ -36,7 +41,7 @@ if (!onFire || held) {
 
 //pot inventory
 if collision_circle(x, y, pot_radius, oPlayer, false, true) {
-	if (oPlayerInput.key_interact and !held and !is_holding_items() && oPlayer.holding_big_item == false) { // ---------oPlayerInput.key_interact <-> oPlayerInput.key_sprint_held
+	if (oPlayerInput.key_interact and !held and !is_holding_items() && oPlayer.holding_big_item == false) {
 		held = true;
 		oPlayer.holding_big_item = true;
 	}
@@ -44,6 +49,8 @@ if collision_circle(x, y, pot_radius, oPlayer, false, true) {
 
 vesselList = ds_list_create()
 vesselRadius = collision_circle_list(x, y, pot_radius, oIngredient, false, true, vesselList, true)
+campfireList = ds_list_create()
+campfireRadius = collision_circle_list(x, y, pot_radius, oCampfire, false, true, campfireList, true)
 //if pot is held, only accept items on top
 if held {
 	vesselRadius = collision_ellipse_list(x-(sprite_get_width(sPottyDormant)/2), y-10, x+(sprite_get_width(sPottyDormant)/2), y+10, oIngredient, false, true, vesselList, true)
@@ -51,24 +58,27 @@ if held {
 
 
 if vesselRadius > 0 /*and vesselList[| 0].prepared*/ {
-	//if item is not held and pot is not full
+	// if item is not held and pot is not full
 	// if the item is currently being thrown, then it will be added to the pot
 	if (ds_grid_value_exists(item_grid, 0, 0, 0, 2, noone)) {
 		add_to_pot(vesselList[| 0])
 	}
 }
 
-if collision_circle(x, y, pot_radius, oCampfire, false, true) {
+if campfireRadius > 0 {
+	//snap to pot
+	phy_position_x = lerp(phy_position_x, campfireList[| 0].x, 0.5)
+	phy_position_y = lerp(phy_position_y, campfireList[| 0].y, 0.5)
+	phy_rotation = lerp(phy_rotation, 0, 0.1)
 	if (!currentlyCooking) {
 		sprite_index = sPottyGlowing;
 	}
 	onFire = true;
-}
-else { 
+} else { 
 	onFire = false;	
 }
 
-if (!ds_grid_value_exists(item_grid, 0, 0, 0, 2, noone) && currentlyCooking == false && onFire && !held) {	
+if (!ds_grid_value_exists(item_grid, 0, 0, 0, 2, noone) && !currentlyCooking && onFire && !held) {	
 	//set list of ingredients for script
 	currentlyCooking = true;
 
@@ -98,23 +108,22 @@ if held/* and !is_hol ding_items() and !oPlayer.holding_big_item*/ {
 	phy_linear_velocity_x = 0;
 	phy_linear_velocity_y = 0;
 }
-if ((oPlayerInput.key_throw || oPlayerInput.key_heavy_throw) && held) {  // ---------oPlayerInput.key_throw <-> !oPlayerInput.key_sprint_held
+if ((oPlayerInput.key_throw || oPlayerInput.key_heavy_throw) && held) {
 	oPlayer.holding_big_item = false
 	lineToggle = false;
 	oPlayer.image_index = 0
 	oPlayer.player_dir = sign(oPlayer.x - mouse_x) // sets the player's direction to the direction they are throwing during the animation
 	image_xscale = -sign(x - mouse_x) //sets the pot's direction to the direction they're thrown
-	if oPlayerInput.key_throw
+	if oPlayerInput.key_throw {
 		throw_object(self, mouse_x, mouse_y, throw_speed, oPlayer)	
+	}
 	held = false;
-	//oPlayer.second_hitbox = oPlayer;
 	oPlayer.holding_big_item = false;
-	phy_fixed_rotation = true;
-	phy_angular_velocity = 0;
-	//physics_world_gravity(0, gravity_loc)
+	//phy_fixed_rotation = true;
+	//phy_angular_velocity = 0;
 }
 
-if ((phy_speed_x != 0 or phy_speed != 0) and !held) {
+if ((phy_speed_x != 0 or phy_speed != 0) and !held and !onFire) {
 	sprite_index = sPottyThrown;
 	if (phy_speed_x > 0) {
 		image_xscale = 1;
@@ -123,12 +132,20 @@ if ((phy_speed_x != 0 or phy_speed != 0) and !held) {
 	}
 }
 
-
 if held {
 	oPlayer.holding_big_item = true
 	highlighted = false
 }
 
-phy_rotation = 0;
+//dont tip past 45 degrees
+if phy_rotation > 45 or phy_rotation < -45 {
+	overtipped = true
+}
+if overtipped {
+	phy_rotation = lerp(phy_rotation, 0, 0.1)
+	if phy_rotation == 0 {
+		overtipped = false	
+	}
+}
 ds_list_destroy(vesselList)
-//one_way_platform_phase()
+ds_list_destroy(campfireList)

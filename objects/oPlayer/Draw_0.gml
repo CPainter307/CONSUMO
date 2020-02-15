@@ -7,8 +7,6 @@
 //draws the player
 draw_sprite_ext(sprite_index, image_index, x, y, player_dir, 1, image_angle, c_white, image_alpha)
 
-
-
 //draw the current item into the player's hand (unless they're throwing)
 if (sprite_index != sPlayerThrow and sprite_index != sPlayerPickup) {
 	for(var i = 0; i < 3; i++) {

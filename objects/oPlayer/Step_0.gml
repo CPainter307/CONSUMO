@@ -167,14 +167,10 @@ if oPlayerInput.key_throw || oPlayerInput.key_heavy_throw {
 	}
 }
 
-#region hand tracking
-
+//hand tracking
 hand_x = x;
 hand_y = y-60;
 
-//script_execute(scr_hand_track());
-
-#endregion
 
 //eating ---------------------------------------------- COMMENTED OUT FOR NOW BECAUSE NEW INVENTORY
 //var inv_grid = global.inventory
@@ -267,14 +263,16 @@ if i_frames <= 0 {
 	is_vulnerable = true
 }
 
+//makes it so pot doesnt go into wall
 if holding_big_item {
+	image_xscale = player_dir
 	mask_index = sPlayerIdleHoldingBig
 } else {
 	mask_index = sPlayer
 }
 
 //player sounds
-script_execute(scr_movement_sounds());
+scr_movement_sounds()
 
 //track hands
 scr_offset_pot()

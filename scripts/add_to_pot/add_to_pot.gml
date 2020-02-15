@@ -13,6 +13,7 @@ for (var i = 0; i < ds_grid_height(item_grid); i++) {
 		ds_grid_set(item_grid, 5, i, ing.unprepared_sprite);
 		ds_grid_set(item_grid, 6, i, ing.adjective);
 		ds_grid_set(item_grid, 7, i, ing.half_name);
+		ds_grid_set(item_grid, 8, i, ing.object_index);
 		
 		//starts pot flash effect
 		shaderBuff = 1
