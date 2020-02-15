@@ -1,4 +1,5 @@
-
+x = device_mouse_x(0)
+y = device_mouse_y(0)
 if mouse_check_button(mb_left) {
 	image_index = 1
 }
@@ -15,5 +16,3 @@ if sprite_index == sPointerCursor {
 	image_speed = 2
 }
 
-x = device_mouse_x(0)
-y = device_mouse_y(0)

@@ -58,3 +58,11 @@ if (held) {
 		draw_sprite_ext(sBigHoldingArmFall, oPlayer.image_index, oPlayer.x, oPlayer.y, oPlayer.player_dir, 1, image_angle, c_white, image_alpha);	
 	}
 }
+
+//debug pot radius
+//draw_set_alpha(0.3)
+//if held {
+//	draw_ellipse(x-(sprite_get_width(sPottyDormant)/2), y-10, x+(sprite_get_width(sPottyDormant)/2), y+10, false)
+//} else {
+//	draw_circle(x, y, pot_radius, false)
+//}

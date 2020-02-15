@@ -44,6 +44,11 @@ if collision_circle(x, y, pot_radius, oPlayer, false, true) {
 
 vesselList = ds_list_create()
 vesselRadius = collision_circle_list(x, y, pot_radius, oIngredient, false, true, vesselList, true)
+//if pot is held, only accept items on top
+if held {
+	vesselRadius = collision_ellipse_list(x-(sprite_get_width(sPottyDormant)/2), y-10, x+(sprite_get_width(sPottyDormant)/2), y+10, oIngredient, false, true, vesselList, true)
+}
+
 
 if vesselRadius > 0 /*and vesselList[| 0].prepared*/ {
 	//if item is not held and pot is not full
