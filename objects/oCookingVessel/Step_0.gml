@@ -47,15 +47,18 @@ if (!onFire || held) {
 
 //pot inventory
 if collision_circle(x, y, pot_radius, oPlayer, false, true) {
-	if (oPlayerInput.key_interact_held and !held and !is_holding_items() && oPlayer.holding_big_item == false) {
-		pick_up_timer++
-	} else {
-		pick_up_timer = 0
-	}
-	if (pick_up_timer = 40) {
+	if (oPlayerInput.key_interact_held and !held and !is_holding_items() and !oPlayer.holding_big_item) {
 		held = true;
 		oPlayer.holding_big_item = true;
 	}
+	//	pick_up_timer++
+	//} else {
+	//	pick_up_timer = 0
+	//}
+	//if (pick_up_timer >= pick_up_timer_max) {
+	//	held = true;
+	//	oPlayer.holding_big_item = true;
+	//}
 }
 
 vesselList = ds_list_create()
@@ -135,19 +138,24 @@ if ((oPlayerInput.key_throw || oPlayerInput.key_heavy_throw) && held) {
 	//phy_angular_velocity = 0;
 }
 
-if ((phy_speed_x != 0 or phy_speed != 0) and !held and !onFire) {
+if (phy_speed_x != 0 or phy_speed != 0) and !held and !onFire {
 	if sprite_index != sPottyPop
 		sprite_index = sPottyThrown;
-	if (phy_speed_x > 0) {
+	if (phy_speed_x > 1) {
 		image_xscale = 1;
-	} else {
+	} else if phy_speed_x < -1 {
 		image_xscale = -1;
 	}
 }
 
 if held {
+	mask_index = -1
+	phy_active = false
 	oPlayer.holding_big_item = true
 	highlighted = false
+} else {
+	mask_index = sPottyDormant	
+	phy_active = true
 }
 
 //dont tip past 45 degrees

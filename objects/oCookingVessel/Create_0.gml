@@ -76,7 +76,8 @@ all_same = false;
 overtipped = false
 
 //new pick up timer
-pick_up_timer = 0
+//pick_up_timer = 0
+//pick_up_timer_max = 20
 
 
 outline_init()

@@ -263,13 +263,13 @@ if i_frames <= 0 {
 	is_vulnerable = true
 }
 
-//makes it so pot doesnt go into wall
-if holding_big_item {
-	image_xscale = player_dir
-	mask_index = sPlayerIdleHoldingBig
-} else {
-	mask_index = sPlayer
-}
+////makes it so pot doesnt go into wall
+//if holding_big_item {
+//	image_xscale = player_dir
+//	mask_index = sPlayerIdleHoldingBig
+//} else {
+//	mask_index = sPlayer
+//}
 
 //player sounds
 scr_movement_sounds()

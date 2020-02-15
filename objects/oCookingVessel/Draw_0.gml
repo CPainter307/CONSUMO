@@ -22,8 +22,8 @@ if (ds_grid_get(item_grid, 0, 0) != noone) {
 		shader_reset();
 		gpu_set_blendmode(bm_normal);
 	} else {
-		image_xscale = lerp(image_xscale, 1, 0.6)
-		image_yscale = lerp(image_yscale, 1, 0.6)	
+		image_xscale = lerp(image_xscale, 1 * sign(image_xscale), 0.6)
+		image_yscale = lerp(image_yscale, 1 * sign(image_yscale), 0.6)	
 	}
 	
 	// ingredient window
@@ -59,13 +59,14 @@ if (held) {
 		draw_sprite_ext(sBigHoldingArmFall, oPlayer.image_index, oPlayer.x, oPlayer.y, oPlayer.player_dir, 1, image_angle, c_white, image_alpha);	
 	}
 }
+draw_point(x, y+(sprite_height/2)+5)
 
 //WIP hold to pick up graphic
-if (pick_up_timer > 0) {
-	var perc
-	perc = (pick_up_timer/40) * 100
-	draw_healthbar(x - 40, y - 80, x + 40, y + 80, perc, c_gray, c_green, c_green, 3, true, true)
-}
+//if (pick_up_timer > 0 and highlighted) {
+//	var perc
+//	perc = (pick_up_timer/pick_up_timer_max) * 100
+//	scr_health_ring(x, y+10/*-(sprite_height/2)-30+sin(get_timer()/100000)*/, 20, 10, 100, perc, 90, 360+90, 1, c_white)
+//}
 
 //debug pot radius
 //draw_set_alpha(0.3)
