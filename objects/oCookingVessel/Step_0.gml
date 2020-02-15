@@ -14,6 +14,7 @@ if instance_exists(steam) {
 // checks to see if recipe is done
 if (!ds_grid_value_exists(item_grid, 0, 0, 0, 2, noone)) {
 	// JUST RIGHT
+	cooking_progress = timeline_position
 	if (timeline_position >= 270 and timeline_position < 540) {
 		if keyboard_check_pressed(ord("Q"))/*oPlayerInput.key_heavy_throw and place_meeting(x, y, oPlayer)*/ {
 			scr_extract_recipe(0);
@@ -159,7 +160,7 @@ if held {
 }
 
 //dont tip past 45 degrees
-if phy_rotation > 45 or phy_rotation < -45 {
+if phy_rotation > 20 or phy_rotation < -20 {
 	overtipped = true
 }
 if overtipped {

@@ -1,7 +1,43 @@
+var xval = display_get_gui_width()/2
+var yval = display_get_gui_height()-(sprite_get_height(sVesselWindow)/2)-10
+var xbuff = 20
+
+if timeline_position < 270 {
+	if (ds_grid_get(item_grid, 0, 0) != noone) { //draw first ingredient
+		draw_sprite(sVesselWindow, 0, xval, yval)
+		draw_sprite_ext(ds_grid_get(item_grid, 5, 0), 0, xval-sprite_get_width(sVesselWindow)/2 + xbuff, yval, 1, 1, 0, c_white, 1)
+	}
+	if (ds_grid_get(item_grid, 0, 1) != noone) { //draw second ingredient
+		draw_sprite_ext(ds_grid_get(item_grid, 5, 1), 0, xval, yval, 1, 1, 0, c_white, 1)
+	}
+	if (ds_grid_get(item_grid, 0, 2) != noone) { //draw third ingredient
+		draw_sprite_ext(ds_grid_get(item_grid, 5, 1), 0, xval+sprite_get_width(sVesselWindow)/2 - xbuff, yval, 1, 1, 0, c_white, 1)
+	}
+} else {
+	draw_sprite(sVesselWindow, 0, xval, yval)
+	if (ds_grid_get(item_grid, 0, 2) != noone) {
+		draw_set_font(fBattleTextThick)
+		draw_set_color(BROWN_COL)
+		draw_text(xval-(string_width("???")/4), yval-(string_height("???")/2), "???")	
+	}
+}
+
+if (ds_grid_get(item_grid, 0, 2) != noone) {
+	var _col = c_white
+	if (timeline_position >= 270 and timeline_position < 540) {
+		_col = c_green
+	} else if (timeline_position >= 540) {
+		_col = c_red	
+	}
+	draw_circle_color(xval+(sprite_get_width(sVesselWindow)/2)+50, yval, 20, c_gray, c_gray, false)
+	draw_circle_color(xval+(sprite_get_width(sVesselWindow)/2)+50, yval, 30, c_dkgray, c_gray, false)
+	scr_health_ring(xval+(sprite_get_width(sVesselWindow)/2)+50, yval, 20, 10, 540, timeline_position, 0, 360, 1, _col)
+}
+
 if (drawText and textDisappearTimer < 120 and instance_exists(inst)) {
 	
-	var xpos = camera_get_view_width(view_camera[0]) / 2;
-	var ypos = camera_get_view_height(view_camera[0]) / 1.1;
+	var xpos = display_get_gui_width()/2
+	var ypos = display_get_gui_height()-50
 	if (inst.hp > 0) var stathp = sMealWindowInc;
 	else if (inst.hp < 0) var stathp = sMealWindowDec;
 	else var stathp = sMealWindowNeutral;

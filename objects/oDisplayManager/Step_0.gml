@@ -14,6 +14,7 @@ if keyboard_check_pressed(ord("Z")) {
 	
 	else {
 		window_set_size(ideal_width*zoom, ideal_height*zoom)
+		display_set_gui_size(ideal_width*zoom,ideal_height*zoom);
 		surface_resize(application_surface,ideal_width*zoom,ideal_height*zoom);	
 	}
 	
@@ -32,6 +33,7 @@ if keyboard_check_pressed(ord("X")) {
 	
 	else {
 		window_set_size(ideal_width*zoom, ideal_height*zoom)
+		display_set_gui_size(ideal_width*zoom,ideal_height*zoom);
 		surface_resize(application_surface,ideal_width*zoom,ideal_height*zoom);	
 	}
 	

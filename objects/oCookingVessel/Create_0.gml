@@ -78,6 +78,7 @@ overtipped = false
 //new pick up timer
 //pick_up_timer = 0
 //pick_up_timer_max = 20
+cooking_progress = 0
 
 
 outline_init()

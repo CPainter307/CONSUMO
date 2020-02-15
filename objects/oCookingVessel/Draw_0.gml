@@ -59,7 +59,6 @@ if (held) {
 		draw_sprite_ext(sBigHoldingArmFall, oPlayer.image_index, oPlayer.x, oPlayer.y, oPlayer.player_dir, 1, image_angle, c_white, image_alpha);	
 	}
 }
-draw_point(x, y+(sprite_height/2)+5)
 
 //WIP hold to pick up graphic
 //if (pick_up_timer > 0 and highlighted) {
