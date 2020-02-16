@@ -5,6 +5,22 @@ if (global.fightStarted) {
 draw_self()
 
 
+if point_in_rectangle(x, y, camera_get_view_x(view), camera_get_view_y(view), oDisplayManager.camera_width+camera_get_view_x(view), oDisplayManager.camera_height+camera_get_view_y(view)) {
+	battleWindow.draw_gui = false
+	battleWindow.x = lerp(battleWindow.x, x+100, 0.2)
+	battleWindow.y = lerp(battleWindow.y, y-100, 0.2)
+} else {
+	battleWindow.draw_gui = true
+	battleWindow.x = lerp(battleWindow.x, (sprite_get_width(sBattleWindowOutline)/4/2)+20, 0.2)
+	battleWindow.y = lerp(battleWindow.y, (sprite_get_height(sBattleWindowOutline)/4/2)+20, 0.2)
+}
+with battleWindow {
+	if collision_circle(x, y, sprite_get_width(sBattleWindowOutline)/4/2, oPlayer, false, true) {
+		alpha = lerp(alpha, 0.2, 0.5)
+	} else {
+		alpha = lerp(alpha, 1, 0.5)
+	}
+}
 
 if (flash > 0)
  {

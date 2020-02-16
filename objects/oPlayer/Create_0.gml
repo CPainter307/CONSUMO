@@ -82,8 +82,6 @@ battleWindow = instance_create_depth((sprite_get_width(sBattleWindowOutline)/4/2
 battleWindow.owner = self
 battleWindow.portrait = sChefPortraitBattle
 
-battleWindow.scale_down = 3
-
 baseAttack = 10
 baseDefense = 10
 baseSpeed = 10

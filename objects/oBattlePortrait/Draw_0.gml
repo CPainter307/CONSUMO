@@ -1,6 +1,8 @@
-if !draw_gui {
+if draw_gui {
 	exit	
 }
+
+draw_set_alpha(alpha)
 
 var color_stat_atk = make_color_rgb(196, 36, 48)
 var color_stat_def = make_color_rgb(45, 3, 217)
@@ -58,3 +60,4 @@ if cur_spd > 0 {
 	draw_sprite_ext(sShoeIconOutlined, 0, x+(stat_3_x/scale_down), y+(stat_3_y/scale_down), 1/scale_down, 1/scale_down, 0, c_white, 1)
 	scr_health_ring(x+(stat_3_x/scale_down), y+(stat_3_y/scale_down), 60/scale_down, 15/scale_down, max_spd, cur_spd, 90, 360, 1, color_stat_spd)
 }
+draw_set_alpha(1)

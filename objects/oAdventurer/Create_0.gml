@@ -2,6 +2,7 @@ Class = "";
 
 maxHealth = 100;
 currentHealth = maxHealth;
+previousHealth = currentHealth
 
 baseAttack = 0;
 attackTimer = 0;
@@ -43,7 +44,7 @@ startFight = true;
 
 battleWindow = instance_create_depth((sprite_get_width(sBattleWindowOutline)/4/2)+20, (sprite_get_height(sBattleWindowOutline)/4/2)+20, -y, oBattlePortrait)
 battleWindow.owner = self
-battleWindow.scale_down = 4
+battleWindow.scale_down = oDisplayManager.scale_factor
 
 attackSprite = noone;
 idleSprite = noone;

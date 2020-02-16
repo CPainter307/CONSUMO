@@ -4,7 +4,7 @@ if other.hp > 0 {
 	var _h = instance_create_layer(x+50, y, "game", oBuffIcon)
 	_h.icon = sHeartIconOutlined
 	_h.buff_amount = string(other.hp)
-	var _hg = instance_create_layer(battleWindow.x-50, (battleWindow.y+(300/4)), "game", oBuffIcon)
+	var _hg = instance_create_layer(battleWindow.x, (battleWindow.y+(300/battleWindow.scale_down)), "game", oBuffIcon)
 	_hg.move_icon = false
 	_hg.draw_gui = true
 	_hg.icon = sHeartIconOutlined
@@ -19,7 +19,7 @@ if attackTimer > 0 {
 	var inst = instance_create_layer(x+50, y, "game", oBuffIcon)
 	inst.icon = sSwordIconOutlined
 	inst.buff_amount = string(attackTimer) + "s"
-	var _hg = instance_create_layer((battleWindow.x+(battleWindow.stat_1_x/4))+20, (battleWindow.y+(battleWindow.stat_1_y/4))-5, "game", oBuffIcon)
+	var _hg = instance_create_layer((battleWindow.x+(battleWindow.stat_1_x/battleWindow.scale_down)), (battleWindow.y+(battleWindow.stat_1_y/battleWindow.scale_down)), "game", oBuffIcon)
 	_hg.move_icon = false
 	_hg.draw_gui = true
 	_hg.icon = sSwordIconOutlined
@@ -34,7 +34,7 @@ if defenseTimer > 0 {
 	var inst = instance_create_layer(x+50, y, "game", oBuffIcon)
 	inst.icon = sShieldIconOutlined
 	inst.buff_amount = string(defenseTimer) + "s"
-	var _hg = instance_create_layer((battleWindow.x+(battleWindow.stat_2_x/4))+20, (battleWindow.y+(battleWindow.stat_2_y/4))-5, "game", oBuffIcon)
+	var _hg = instance_create_layer((battleWindow.x+(battleWindow.stat_2_x/battleWindow.scale_down)), (battleWindow.y+(battleWindow.stat_2_y/battleWindow.scale_down)), "game", oBuffIcon)
 	_hg.move_icon = false
 	_hg.draw_gui = true
 	_hg.icon = sShieldIconOutlined
@@ -49,7 +49,7 @@ if speedTimer > 0 {
 	var inst = instance_create_layer(x+50, y, "game", oBuffIcon)
 	inst.icon = sShoeIconOutlined
 	inst.buff_amount = string(speedTimer) + "s"
-	var _hg = instance_create_layer((battleWindow.x+(battleWindow.stat_3_x/4))+20, (battleWindow.y+(battleWindow.stat_3_y/4))-5, "game", oBuffIcon)
+	var _hg = instance_create_layer((battleWindow.x+(battleWindow.stat_3_x/battleWindow.scale_down)), (battleWindow.y+(battleWindow.stat_3_y/battleWindow.scale_down)), "game", oBuffIcon)
 	_hg.move_icon = false
 	_hg.draw_gui = true
 	_hg.icon = sShoeIconOutlined

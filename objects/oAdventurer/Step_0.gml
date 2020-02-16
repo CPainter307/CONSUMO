@@ -1,18 +1,15 @@
-
-battleWindow.cur_health = lerp(battleWindow.cur_health, (currentHealth/maxHealth)*100, 0.1)
-
 if attackTimer > 0 {
 	attackTimer--
-	battleWindow.cur_atk = lerp(battleWindow.cur_atk, attackTimer, 0.3)
 }
 if defenseTimer > 0 {
 	defenseTimer--
-	battleWindow.cur_def = lerp(battleWindow.cur_def, defenseTimer, 0.3)
 } 
 if speedTimer > 0 {
 	speedTimer--
-	battleWindow.cur_spd = lerp(battleWindow.cur_spd, speedTimer, 0.3)
 } 
+battleWindow.cur_atk = lerp(battleWindow.cur_atk, attackTimer, 0.5)
+battleWindow.cur_def = lerp(battleWindow.cur_def, defenseTimer, 0.5)
+battleWindow.cur_spd = lerp(battleWindow.cur_spd, speedTimer, 0.5)
 
 //i frames
 if place_meeting(x, y, Hitbox) and is_vulnerable {
@@ -30,8 +27,7 @@ if i_frames <= 0 {
 
 //move 1
 //This is our first attack
-if(((timer_m1) * (baseSpeed/100) * speedMultiplier) >= move_1[0] and instance_exists(Enemy))
-{
+if(((timer_m1) * (baseSpeed/100) * speedMultiplier) >= move_1[0] and instance_exists(Enemy)) {
 	var Hitbox_1 = instance_create_depth(Enemy.x, Enemy.y, 0, Hitbox);
 	Hitbox_1.OwnerClass = "Adventurer";
 	Hitbox_1.targetClass = "Enemy";
@@ -47,8 +43,7 @@ if(((timer_m1) * (baseSpeed/100) * speedMultiplier) >= move_1[0] and instance_ex
 
 //move 2
 //This is our second attack
-if(((timer_m2) * (baseSpeed/100) * speedMultiplier) >= move_2[0] and instance_exists(Enemy))
-{
+if(((timer_m2) * (baseSpeed/100) * speedMultiplier) >= move_2[0] and instance_exists(Enemy)) {
 	var Hitbox_2 = instance_create_depth(Enemy.x, Enemy.y, 0, Hitbox);
 	Hitbox_2.OwnerClass = "Adventurer";
 	Hitbox_2.targetClass = "Enemy";
@@ -76,17 +71,24 @@ if (!stallHunger and hunger >= 0) {
 }
 
 //If we're at the end of our attack animation, change to idle animation
-if (sprite_index == attackSprite) && (image_index == sprite_get_number(attackSprite) - 1)
-		{
-			sprite_index = idleSprite;	
-		}
+if (sprite_index == attackSprite) && (image_index == sprite_get_number(attackSprite) - 1) {
+	sprite_index = idleSprite;	
+}
 
-if (healthThisFrame > currentHealth)
-{
+if (healthThisFrame > currentHealth) {
 	flash = 1;
 }
 
 healthThisFrame = currentHealth;
+
+if previousHealth > currentHealth { // took damage
+	battleWindow.prev_health = lerp(battleWindow.prev_health, (previousHealth/maxHealth)*100, 0.4)
+	battleWindow.cur_health = lerp(battleWindow.cur_health, (currentHealth/maxHealth)*100, 0.4)
+	battleWindow.cur_healed = lerp(battleWindow.cur_health, (currentHealth/maxHealth)*100, 0.4)
+} else { // healed
+	battleWindow.cur_healed = lerp(battleWindow.cur_health, (currentHealth/maxHealth)*100, 0.4)
+}
+	
 
 //check if dead
 if (currentHealth <= 0) {

@@ -20,6 +20,7 @@ if _num > 0
 		{
 			var d = instance_create_depth(_list[| i].x + random_range(_list[| i].sprite_width/-2.5, _list[| i].sprite_width/2.5), _list[| i].y +  random_range(_list[| i].sprite_height/-3, _list[| i].sprite_height/3), -1, DamageText);
 			d.TD = damageToTake;
+			_list[| i].previousHealth = _list[| i].currentHealth
 			_list[| i].currentHealth -= damageToTake;
 		}
     }			

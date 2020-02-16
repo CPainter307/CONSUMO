@@ -2,11 +2,12 @@ event_inherited();
 
 ///Properties
 ideal_width=0; //Doesn't matter because we are going to calculate this.
-ideal_height=1080;
+ideal_height=600;
 camera_width=0;
 camera_height=0;
 zoom=1;
 max_zoom=1;
+scale_factor = ideal_height/130
  
 //Aspect ratio
 aspect_ratio = display_get_width()/display_get_height();

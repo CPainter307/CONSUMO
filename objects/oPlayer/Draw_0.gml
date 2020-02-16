@@ -3,6 +3,8 @@
 //draw_circle_color(x, y, pickupRadiusSize, c_aqua, c_aqua, false)
 //draw_set_alpha(1)
 
+//scale battle portrait
+battleWindow.scale_down = oDisplayManager.scale_factor
 
 //draws the player
 draw_sprite_ext(sprite_index, image_index, x, y, player_dir, 1, image_angle, c_white, image_alpha)
