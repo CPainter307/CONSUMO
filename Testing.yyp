@@ -2599,6 +2599,14 @@
             }
         },
         {
+            "Key": "727bbbac-d8d8-4779-9956-8771e2bc9390",
+            "Value": {
+                "id": "bb47abdb-5dcf-40d4-973e-1457726f91ae",
+                "resourcePath": "sprites\\sPottyHoldMe\\sPottyHoldMe.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "739076a7-561e-4d41-a135-865b0e6f2e29",
             "Value": {
                 "id": "3ba378e6-4a52-45b3-91cb-7c288297b887",

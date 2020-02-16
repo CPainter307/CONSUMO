@@ -11,7 +11,8 @@
         "a3bfbbf8-0f23-45fc-8765-c5b81c5f6b17",
         "7ec153fc-ff4c-45de-9549-6c3b05ed09b9",
         "616d8cf9-467f-4954-9688-991e1495225b",
-        "4de3ad58-2693-4eaa-9ad1-96e55def906a"
+        "4de3ad58-2693-4eaa-9ad1-96e55def906a",
+        "727bbbac-d8d8-4779-9956-8771e2bc9390"
     ],
     "filterType": "GMSprite",
     "folderName": "Potty",
