@@ -81,6 +81,7 @@ hand_y = y;
 battleWindow = instance_create_depth((sprite_get_width(sBattleWindowOutline)/4/2)+20, window_get_height()-(sprite_get_height(sBattleWindowOutline)/4/2)-20, -y, oBattlePortrait)
 battleWindow.owner = self
 battleWindow.portrait = sChefPortraitBattle
+battleWindow.visible = false
 
 baseAttack = 10
 baseDefense = 10

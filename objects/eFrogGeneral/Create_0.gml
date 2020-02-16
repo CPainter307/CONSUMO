@@ -46,4 +46,5 @@ healthThisFrame = currentHealth;
 flash = 0;
 timer_m2 = 0;
 
+proj_hitbox = noone
 slam_hitbox = noone

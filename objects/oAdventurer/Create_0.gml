@@ -42,9 +42,21 @@ shaderBuff = 0;
 global.fightStarted = true;
 startFight = true;
 
-battleWindow = instance_create_depth((sprite_get_width(sBattleWindowOutline)/4/2)+20, (sprite_get_height(sBattleWindowOutline)/4/2)+20, -y, oBattlePortrait)
+var sf = oDisplayManager.scale_factor*1.2
+var buff = 50
+win1_x = (sprite_get_width(sBattleWindowOutline))/sf
+win1_y = sprite_get_height(sBattleWindowOutline)/sf
+battleWindow = instance_create_depth(win1_x, win1_y, -y, oBattlePortrait)
 battleWindow.owner = self
-battleWindow.scale_down = oDisplayManager.scale_factor
+battleWindow.scale_down = sf
+
+// ------------------------------------- MULTIPLE BATTLE WINDOWS
+//battleWindow2 = instance_create_depth(win1_x*2+buff, win1_y, -y, oBattlePortrait)
+//battleWindow2.owner = self
+//battleWindow2.scale_down = sf
+//battleWindow3 = instance_create_depth(win1_x*4, win1_y, -y, oBattlePortrait)
+//battleWindow3.owner = self
+//battleWindow3.scale_down = sf
 
 attackSprite = noone;
 idleSprite = noone;

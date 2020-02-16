@@ -25,8 +25,8 @@ if (currentHealth <= (maxHealth / 3)) {
 if (phase == 1) {
 	projectile_timer--
 	if projectile_timer <= 0 {
-		var inst = instance_create_layer(x, y-100, "Objects", oProjectile)
-		inst.dirx = sign(x-target.x)*-1
+		proj_hitbox = instance_create_layer(x, y-100, "Objects", oProjectile)
+		proj_hitbox.dirx = sign(x-target.x)*-1
 		image_xscale = sign(x-target.x);
 		projectile_timer = SHOOT_TIME
 	}
