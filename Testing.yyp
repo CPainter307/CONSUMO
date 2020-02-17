@@ -247,6 +247,14 @@
             }
         },
         {
+            "Key": "09daf7c7-48cf-4aba-a958-3a56ff693aeb",
+            "Value": {
+                "id": "89f0dcaf-9cbc-41b4-bb6d-dfc78357352e",
+                "resourcePath": "objects\\oOffscreenPointer\\oOffscreenPointer.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "09e89aaf-6b53-4cd4-9b19-af1140806785",
             "Value": {
                 "id": "f8f21dab-c18e-4f69-aabb-b266568e9946",
@@ -3972,6 +3980,14 @@
                 "id": "4de588ae-e4c5-4028-b8f3-9562c4216f11",
                 "resourcePath": "views\/ada3952a-93cf-4a62-b270-c2f86688466c.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "adbe9ba8-6136-410d-b35e-8d5dd8cab659",
+            "Value": {
+                "id": "51c0077d-255a-4289-9ce5-bf71b2b4bdde",
+                "resourcePath": "sprites\\sOffscreenBubble\\sOffscreenBubble.yy",
+                "resourceType": "GMSprite"
             }
         },
         {

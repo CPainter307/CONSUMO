@@ -63,4 +63,4 @@ if (sprite_index == sPlayerFallHoldingBig or sprite_index == sPlayerHurtHoldingB
 //---------------------------- UNCOMMENT FOR draw nearest item text
 draw_set_font(fBattleTextThick)
 if nearest_item_text != ""
-	draw_text_outlined(nearest_item_x-5, nearest_item_y+12, BROWN_COL, OFFWHITE_COL, nearest_item_text)
+	draw_text_outlined(nearest_item_x-(string_width(nearest_item_text)/2), nearest_item_y+25, BROWN_COL, OFFWHITE_COL, nearest_item_text)

@@ -4,7 +4,7 @@ if other.hp > 0 {
 	var _h = instance_create_layer(x+50, y, "game", oBuffIcon)
 	_h.icon = sHeartIconOutlined
 	_h.buff_amount = string(other.hp)
-	var _hg = instance_create_layer(battleWindow.x, (battleWindow.y+(300/battleWindow.scale_down)), "game", oBuffIcon)
+	var _hg = instance_create_layer(battleWindow.x-20, (battleWindow.y+(300/battleWindow.scale_down)), "game", oBuffIcon)
 	_hg.move_icon = false
 	_hg.draw_gui = true
 	_hg.icon = sHeartIconOutlined

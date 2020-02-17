@@ -25,3 +25,5 @@ timer_m2 = 0;
 
 attackSprite = sRogueAttacking;
 idleSprite = sRogueIdle;
+
+instance_create_depth(x, y, -y, oOffscreenPointer)
