@@ -48,6 +48,7 @@ if (!onFire || held) {
 
 //pot inventory
 if collision_circle(x, y, pot_radius, oPlayer, false, true) {
+	sprite_index = sPottyHoldMe
 	if (oPlayerInput.key_interact_held and !held and !is_holding_items() and !oPlayer.holding_big_item) {
 		held = true;
 		oPlayer.holding_big_item = true;
@@ -60,6 +61,8 @@ if collision_circle(x, y, pot_radius, oPlayer, false, true) {
 	//	held = true;
 	//	oPlayer.holding_big_item = true;
 	//}
+} else {
+	sprite_index = sPottyDormant	
 }
 
 vesselList = ds_list_create()
@@ -85,7 +88,7 @@ if campfireRadius > 0 {
 	phy_position_x = lerp(phy_position_x, campfireList[| 0].x, 0.5)
 	phy_position_y = lerp(phy_position_y, campfireList[| 0].y, 0.5)
 	phy_rotation = lerp(phy_rotation, 0, 0.1)
-	if (!currentlyCooking and sprite_index != sPottyPop) {
+	if (!currentlyCooking and sprite_index != sPottyPop and sprite_index != sPottyHoldMe) {
 		sprite_index = sPottyGlowing;
 	}
 	onFire = true;
@@ -103,7 +106,7 @@ if (!ds_grid_value_exists(item_grid, 0, 0, 0, 2, noone) && !currentlyCooking && 
 	timeline_loop = false;
 }
 
-if (currentlyCooking and sprite_index != sPottyPop) {
+if (currentlyCooking and sprite_index != sPottyPop and sprite_index != sPottyHoldMe) {
 	sprite_index = sPottyCooking;
 	steam.image_alpha = 1;
 }
