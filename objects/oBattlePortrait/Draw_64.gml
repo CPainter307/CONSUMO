@@ -38,23 +38,37 @@ stat_2_y = -22
 stat_3_x = 363
 stat_3_y = 166
 
-//sword
+//controls animation of stat bubbles
 if cur_atk > 0 {
-	draw_sprite_ext(sStatBG, 0, x+(stat_1_x/scale_down), y+(stat_1_y/scale_down), 1/scale_down, 1/scale_down, 0, c_white, 1)
-	draw_sprite_ext(sSwordIconOutlined, 0, x+(stat_1_x/scale_down), y+(stat_1_y/scale_down), 1/scale_down, 1/scale_down, 0, c_white, 1)
-	scr_health_ring(x+(stat_1_x/scale_down), y+(stat_1_y/scale_down), 60/scale_down, 15/scale_down, max_atk, cur_atk, 90, 360, 1, color_stat_atk)
+	t1++
+	s1 = ease("out-bounce", t1, s1, 1, 30)
+} else {
+	s1 = lerp(s1, 0, 0.5)
 }
+if cur_def > 0 {
+	t2++
+	s2 = ease("out-bounce", t2, s2, 1, 30)
+} else {
+	s2 = lerp(s2, 0, 0.5)
+}
+if cur_spd > 0 {
+	t3++
+	s3 = ease("out-bounce", t3, s3, 1, 30)
+} else {
+	s3 = lerp(s3, 0, 0.5)
+}
+
+//sword
+draw_sprite_ext(sStatBG, 0, x+(stat_1_x/scale_down), y+(stat_1_y/scale_down), s1/scale_down, s1/scale_down, 0, c_white, 1)
+draw_sprite_ext(sSwordIconOutlined, 0, x+(stat_1_x/scale_down), y+(stat_1_y/scale_down), s1/scale_down, s1/scale_down, 0, c_white, 1)
+scr_health_ring(x+(stat_1_x/scale_down), y+(stat_1_y/scale_down), (60*s1)/scale_down, (15*s1)/scale_down, max_atk, cur_atk, 90, 360, 1, color_stat_atk)
 
 //shield
-if cur_def > 0 {
-	draw_sprite_ext(sStatBG, 0, x+(stat_2_x/scale_down), y+(stat_2_y/scale_down), 1/scale_down, 1/scale_down, 0, c_white, 1)
-	draw_sprite_ext(sShieldIconOutlined, 0, x+(stat_2_x/scale_down), y+(stat_2_y/scale_down), 1/scale_down, 1/scale_down, 0, c_white, 1)
-	scr_health_ring(x+(stat_2_x/scale_down), y+(stat_2_y/scale_down), 60/scale_down, 15/scale_down, max_def, cur_def, 90, 360, 1, color_stat_def)
-}
+draw_sprite_ext(sStatBG, 0, x+(stat_2_x/scale_down), y+(stat_2_y/scale_down), s2/scale_down, s2/scale_down, 0, c_white, 1)
+draw_sprite_ext(sShieldIconOutlined, 0, x+(stat_2_x/scale_down), y+(stat_2_y/scale_down), s2/scale_down, s2/scale_down, 0, c_white, 1)
+scr_health_ring(x+(stat_2_x/scale_down), y+(stat_2_y/scale_down), (60*s2)/scale_down, (15*s2)/scale_down, max_def, cur_def, 90, 360, 1, color_stat_def)
 
 //shoe
-if cur_spd > 0 {
-	draw_sprite_ext(sStatBG, 0, x+(stat_3_x/scale_down), y+(stat_3_y/scale_down), 1/scale_down, 1/scale_down, 0, c_white, 1)
-	draw_sprite_ext(sShoeIconOutlined, 0, x+(stat_3_x/scale_down), y+(stat_3_y/scale_down), 1/scale_down, 1/scale_down, 0, c_white, 1)
-	scr_health_ring(x+(stat_3_x/scale_down), y+(stat_3_y/scale_down), 60/scale_down, 15/scale_down, max_spd, cur_spd, 90, 360, 1, color_stat_spd)
-}
+draw_sprite_ext(sStatBG, 0, x+(stat_3_x/scale_down), y+(stat_3_y/scale_down), s3/scale_down, s3/scale_down, 0, c_white, 1)
+draw_sprite_ext(sShoeIconOutlined, 0, x+(stat_3_x/scale_down), y+(stat_3_y/scale_down), s3/scale_down, s3/scale_down, 0, c_white, 1)
+scr_health_ring(x+(stat_3_x/scale_down), y+(stat_3_y/scale_down), (60*s3)/scale_down, (15*s3)/scale_down, max_spd, cur_spd, 90, 360, 1, color_stat_spd)

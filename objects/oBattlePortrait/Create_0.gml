@@ -16,3 +16,9 @@ portrait = sLizardPortraitBattle
 
 draw_gui = true
 alpha = 1
+s1 = 0
+s2 = 0
+s3 = 0
+t1 = 0
+t2 = 0
+t3 = 0

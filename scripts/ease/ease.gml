@@ -5,6 +5,38 @@
 /// @param end_pos
 /// @param end_time
 
+//linear
+//in-quad
+//out-quad
+//in-out-quad
+//in-cubic
+//out-cubic
+//in-out-cubic
+//in-quart
+//out-quart
+//in-out-quart
+//in-quint
+//out-quint
+//in-out-quint
+//in-sine
+//in-out-sine
+//in-circ
+//out-circ
+//in-out-circ
+//in-expo
+//in-out-expo	in-elastic
+//out-elastic
+//in-out-elastic
+//in-back
+//out-back
+//in-out-back
+//in-bounce
+//out-bounce
+//in-out-bounce
+
+
+
+
 var type		= argument[0]
 var curr_time		= argument[1]
 var start_pos		= argument[2]
