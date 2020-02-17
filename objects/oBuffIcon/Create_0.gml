@@ -11,6 +11,7 @@ finished_scale_up = false
 
 _scale = 1
 _scale_icon = .2
+_scale_factor = oDisplayManager.scale_factor/2
 
 move_icon = true
 draw_gui = false
