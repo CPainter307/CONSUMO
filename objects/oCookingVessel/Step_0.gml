@@ -49,6 +49,8 @@ if (!onFire || held) {
 //pot inventory
 if collision_circle(x, y, pot_radius, oPlayer, false, true) {
 	sprite_index = sPottyHoldMe
+	if (oPlayer.x > x) image_xscale = 1;
+	if (oPlayer.x < x) image_xscale = -1;
 	if (oPlayerInput.key_interact_held and !held and !is_holding_items() and !oPlayer.holding_big_item) {
 		held = true;
 		oPlayer.holding_big_item = true;
