@@ -30,11 +30,6 @@ timer_m2 = 0;
 stallHunger = false;
 stallHungerTimer = 0;
 
-h = noone;
-a = noone;
-d = noone;
-s = noone;
-
 healthThisFrame = currentHealth;
 flash = 0;
 shaderBuff = 0;
@@ -43,7 +38,6 @@ global.fightStarted = true;
 startFight = true;
 
 var sf = oDisplayManager.scale_factor*1.2
-var buff = 50
 win1_x = (sprite_get_width(sBattleWindowOutline))/sf
 win1_y = sprite_get_height(sBattleWindowOutline)/sf
 battleWindow = instance_create_depth(win1_x, win1_y, -y, oBattlePortrait)

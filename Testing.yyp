@@ -4023,6 +4023,14 @@
             }
         },
         {
+            "Key": "aed1dc43-e432-488d-9ab8-442a2fec9d60",
+            "Value": {
+                "id": "5bf4e999-72cb-489e-aad8-1d59ccfb96ce",
+                "resourcePath": "scripts\\player_animation_control\\player_animation_control.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "af0d7c5a-552e-437d-8417-a00471d5cd66",
             "Value": {
                 "id": "09838b79-b324-471f-92de-7c605db77981",
@@ -5894,6 +5902,7 @@
         "0987e30a-49db-4390-a7b3-4169c178037e",
         "50f729e0-38c7-4aa1-9de2-8836d3145b39",
         "97dae449-9ffb-49a7-86aa-e839ca75da9f",
+        "aed1dc43-e432-488d-9ab8-442a2fec9d60",
         "f88fd37e-31d5-409d-886a-b3fef9b79eac",
         "12f4bc86-c556-4b55-8d68-e5f1c5590a2e",
         "6e602e98-13c8-4bc6-97e4-942142ce51e8",

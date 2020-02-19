@@ -56,7 +56,10 @@ if (on_floor) and in_air {
 
 part_emitter_region(global.ps, em, x-42.5, x+42.5, y+60, y+70, ps_shape_ellipse, ps_distr_gaussian);
 
-script_execute(state);
+if global.in_control == object_index {
+	script_execute(state);
+	player_animation_control()
+}
 
 itemRadiusList = ds_list_create()
 pickupRadius = collision_circle_list(x, y, pickupRadiusSize , oHoldableObject, false, true, itemRadiusList, true)

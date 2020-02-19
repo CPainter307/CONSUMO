@@ -6,7 +6,7 @@ if defenseTimer > 0 {
 } 
 if speedTimer > 0 {
 	speedTimer--
-} 
+}
 battleWindow.cur_atk = lerp(battleWindow.cur_atk, attackTimer, 0.5)
 battleWindow.cur_def = lerp(battleWindow.cur_def, defenseTimer, 0.5)
 battleWindow.cur_spd = lerp(battleWindow.cur_spd, speedTimer, 0.5)

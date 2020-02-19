@@ -1,9 +1,11 @@
 
 currentHealth = min(other.hp+currentHealth, maxHealth)
 if other.hp > 0 {
+	//creates a buff icon in the world next to the adventurer
 	var _h = instance_create_layer(x+50, y, "game", oBuffIcon)
 	_h.icon = sHeartIconOutlined
 	_h.buff_amount = string(other.hp)
+	//creates a buff icon display on the gui, repeated below
 	var _hg = instance_create_layer(battleWindow.x-20, (battleWindow.y+(300/battleWindow.scale_down)), "game", oBuffIcon)
 	_hg.move_icon = false
 	_hg.draw_gui = true
@@ -11,6 +13,7 @@ if other.hp > 0 {
 	_hg.buff_amount = string(other.hp)
 }
 
+//set timers
 attackTimer = (attackTimer/60) + other.attack;
 defenseTimer = (defenseTimer/60) + other.defense;
 speedTimer = (speedTimer/60) + other.spd;
@@ -75,13 +78,11 @@ if (hunger >= maxhunger) {
 	stallHunger = true;
 }
 
-if (other.hp < 0 || other.attack < 0 || other.defense < 0 || other.spd < 0)
-{
+if (other.hp < 0 || other.attack < 0 || other.defense < 0 || other.spd < 0) {
 	flash = 3;	
-}
-else
-{
+} else {
 	shaderBuff = 1;	
 }
 
+// destroy recipe
 with (other) instance_destroy();	
