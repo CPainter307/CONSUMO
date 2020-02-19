@@ -86,14 +86,16 @@ if vesselRadius > 0 /*and vesselList[| 0].prepared*/ {
 }
 
 if campfireRadius > 0 {
-	//snap to pot
-	phy_position_x = lerp(phy_position_x, campfireList[| 0].x, 0.5)
-	phy_position_y = lerp(phy_position_y, campfireList[| 0].y, 0.5)
-	phy_rotation = lerp(phy_rotation, 0, 0.1)
-	if (!currentlyCooking and sprite_index != sPottyPop and sprite_index != sPottyHoldMe) {
-		sprite_index = sPottyGlowing;
+	//snap to fireplace
+	if !collision_circle(campfireList[| 0].x, campfireList[| 0].y, pot_radius, oPlayer, false, true) {
+		phy_position_x = lerp(phy_position_x, campfireList[| 0].x, 0.5)
+		phy_position_y = lerp(phy_position_y, campfireList[| 0].y, 0.5)
+		phy_rotation = lerp(phy_rotation, 0, 0.1)
+		if (!currentlyCooking and sprite_index != sPottyPop and sprite_index != sPottyHoldMe) {
+			sprite_index = sPottyGlowing;
+		}
+		onFire = true;
 	}
-	onFire = true;
 } else { 
 	onFire = false;	
 }
@@ -140,8 +142,6 @@ if ((oPlayerInput.key_throw || oPlayerInput.key_heavy_throw) && held) {
 	}
 	held = false;
 	oPlayer.holding_big_item = false;
-	//phy_fixed_rotation = true;
-	//phy_angular_velocity = 0;
 }
 
 if (phy_speed_x != 0 or phy_speed != 0) and !held and !onFire {
