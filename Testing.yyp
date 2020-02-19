@@ -2159,6 +2159,14 @@
             }
         },
         {
+            "Key": "5ed79767-4c5b-4043-a723-c206fd2c19e3",
+            "Value": {
+                "id": "de82fbb5-594f-4883-99cd-e6350c0e10d2",
+                "resourcePath": "scripts\\scr_adventurer_eat_recipe\\scr_adventurer_eat_recipe.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "5edadde6-45c3-4628-923d-ab128f59c5be",
             "Value": {
                 "id": "40779c5c-436b-4914-b549-756cd1615d34",
@@ -5950,6 +5958,7 @@
         "4790bf6a-2eab-4d7a-afb5-496e3477fdd8",
         "6a188d77-d797-4719-affd-2d03fc032920",
         "1256b5c8-e010-4353-b9c1-187ae4f3766a",
+        "5ed79767-4c5b-4043-a723-c206fd2c19e3",
         "7066df95-76fc-4575-bb05-41397e1addb5",
         "4795c1a0-d39f-4437-b9cf-8933c0998915",
         "1a861576-1b4c-4092-b99e-2f039ed29f26",

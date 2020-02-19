@@ -1,3 +1,8 @@
+current_recipe = instance_place(x, y, oRecipe)
+if current_recipe { 
+	scr_adventurer_eat_recipe()	
+}
+
 if attackTimer > 0 {
 	attackTimer--
 }
