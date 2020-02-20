@@ -21,9 +21,7 @@ grav = grav /  sqr(update_speed)
 pickUpSound = snd_pickup_generic;
 landSound = snd_object_land;
 
-var fix;
 fix = physics_fixture_create()
-//physics_fixture_set_circle_shape(fix, 8)
 physics_fixture_set_polygon_shape(fix);
 physics_fixture_add_point(fix, -25, 10);
 physics_fixture_add_point(fix, -10, -20);
@@ -34,8 +32,10 @@ physics_fixture_set_linear_damping(fix, 0)
 physics_fixture_set_angular_damping(fix, 1)
 physics_fixture_set_friction(fix, 1)
 physics_fixture_set_density(fix, 0.5);
-physics_fixture_bind(fix, self)
-physics_fixture_delete(fix)
+physics_fixture_set_sensor(fix, false)
+my_fix = physics_fixture_bind(fix, self)
+//physics_fixture_delete(fix)
+
 phy_active = true
 physics_world_gravity(0, gravity_loc)
 apply_gravity = true

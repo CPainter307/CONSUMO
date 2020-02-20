@@ -68,3 +68,4 @@ has_heavy_thrown = false;
 
 // we need this because platforms are really funky, and need a specific position to work for some reason
 platform_offset = 13
+default_sprite = sprite_index

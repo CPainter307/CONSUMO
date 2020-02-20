@@ -2,6 +2,7 @@ event_inherited()
 //for cutscenes
 global.fightStarted = true;
 
+//controllable rogue (debug purposes)
 if global.in_control == object_index {
 	scr_move_state()
 }

@@ -20,7 +20,7 @@ if (!dash_lock) {
 var plat = collision_circle(x, y, 80, oOneWayPlatform, false, true)
 if plat {
 	plat.mask_index = sPlatform	
-	if floor(y + (sprite_get_height(sprite_index)/2) - platform_offset) > plat.y  || oPlayerInput.key_down {//|| oPlayer.motiony < 0) {
+	if floor(y + (sprite_get_height(default_sprite)/2) - platform_offset) > plat.y  || oPlayerInput.key_down {//|| oPlayer.motiony < 0) {
 		plat.mask_index = -1
 	}
 }
