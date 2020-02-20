@@ -1,4 +1,4 @@
-
+following = global.in_control
 if keyboard_check_pressed(ord("Z")) {
 	zoom ++;
 	if zoom>max_zoom {

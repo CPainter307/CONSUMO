@@ -27,6 +27,14 @@ if(keyboard_check_pressed(ord("4"))) {
 	
 }
 
+if keyboard_check_pressed(ord("P")) {
+	if global.in_control == Warrior	{
+		global.in_control = oPlayer	
+	} else if global.in_control == oPlayer {
+		global.in_control = Warrior	
+	}
+}
+
 if (global.input_type == inputs.keyboard) {
 	key_up = keyboard_check(global.key_up);
 	key_down = keyboard_check(global.key_down);

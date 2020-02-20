@@ -1,3 +1,8 @@
+current_recipe = instance_place(x, y, oRecipe)
+if current_recipe { 
+	scr_adventurer_eat_recipe()	
+}
+
 if attackTimer > 0 {
 	attackTimer--
 }
@@ -6,7 +11,7 @@ if defenseTimer > 0 {
 } 
 if speedTimer > 0 {
 	speedTimer--
-} 
+}
 battleWindow.cur_atk = lerp(battleWindow.cur_atk, attackTimer, 0.5)
 battleWindow.cur_def = lerp(battleWindow.cur_def, defenseTimer, 0.5)
 battleWindow.cur_spd = lerp(battleWindow.cur_spd, speedTimer, 0.5)

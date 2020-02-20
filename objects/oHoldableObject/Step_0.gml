@@ -8,4 +8,14 @@ if oPlayer.pickupRadius <= 0 {
 //play sound
 scr_play_pickup_sound(pickUpSound);
 
+//collision with one way platforms
+var plat = collision_circle(x, y, 50, oOneWayPlatform, false, true)
 
+if plat { // we're near the platform
+	physics_remove_fixture(self, my_fix)
+	physics_fixture_set_sensor(fix, false)
+	if floor(y + (sprite_get_height(sprite_index)/2) - 5) > plat.y { // we're right below the platform
+		physics_fixture_set_sensor(fix, true)
+	}
+	my_fix = physics_fixture_bind(fix, self)
+}

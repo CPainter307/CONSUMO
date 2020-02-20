@@ -26,8 +26,6 @@ pickupRadiusSize = 80
 up_slope = false;
 down_slope = false;
 
-second_hitbox = self
-second_hitbox_collision = false
 #macro MAX_JOG_SPEED  6
 #macro MAX_SPRINT_SPEED 11
 #macro SPRINT_ACCELERATION  .3
@@ -122,3 +120,7 @@ step2 = false;
 
 x_offset = 0;
 y_offset = 0;
+
+// we need this because platforms are really funky, and need a specific position to work for some reason
+platform_offset = 5
+default_sprite = sprite_index

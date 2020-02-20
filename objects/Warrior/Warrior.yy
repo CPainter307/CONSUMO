@@ -25,7 +25,7 @@
             "m_owner": "05c46c17-db28-4a4d-8c77-c23305a61e22"
         }
     ],
-    "maskSpriteId": "00000000-0000-0000-0000-000000000000",
+    "maskSpriteId": "78a43033-c60d-4327-b1a0-a2c56ac3e780",
     "overriddenProperties": null,
     "parentObjectId": "a58ded2c-97b4-4b9b-93ec-8cca274f515e",
     "persistent": false,
@@ -35,7 +35,7 @@
     "physicsGroup": 0,
     "physicsKinematic": false,
     "physicsLinearDamping": 0,
-    "physicsObject": true,
+    "physicsObject": false,
     "physicsRestitution": 0,
     "physicsSensor": true,
     "physicsShape": 1,

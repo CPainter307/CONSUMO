@@ -2215,6 +2215,14 @@
             }
         },
         {
+            "Key": "5ed79767-4c5b-4043-a723-c206fd2c19e3",
+            "Value": {
+                "id": "de82fbb5-594f-4883-99cd-e6350c0e10d2",
+                "resourcePath": "scripts\\scr_adventurer_eat_recipe\\scr_adventurer_eat_recipe.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "5edadde6-45c3-4628-923d-ab128f59c5be",
             "Value": {
                 "id": "40779c5c-436b-4914-b549-756cd1615d34",
@@ -4099,6 +4107,14 @@
             "Value": {
                 "id": "946c134e-dfe8-4e25-822f-efebd073dab6",
                 "resourcePath": "scripts\\field_of_view_zoom\\field_of_view_zoom.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "aed1dc43-e432-488d-9ab8-442a2fec9d60",
+            "Value": {
+                "id": "5bf4e999-72cb-489e-aad8-1d59ccfb96ce",
+                "resourcePath": "scripts\\player_animation_control\\player_animation_control.yy",
                 "resourceType": "GMScript"
             }
         },
@@ -5990,6 +6006,7 @@
         "0987e30a-49db-4390-a7b3-4169c178037e",
         "50f729e0-38c7-4aa1-9de2-8836d3145b39",
         "97dae449-9ffb-49a7-86aa-e839ca75da9f",
+        "aed1dc43-e432-488d-9ab8-442a2fec9d60",
         "f88fd37e-31d5-409d-886a-b3fef9b79eac",
         "12f4bc86-c556-4b55-8d68-e5f1c5590a2e",
         "6e602e98-13c8-4bc6-97e4-942142ce51e8",
@@ -6037,6 +6054,7 @@
         "4790bf6a-2eab-4d7a-afb5-496e3477fdd8",
         "6a188d77-d797-4719-affd-2d03fc032920",
         "1256b5c8-e010-4353-b9c1-187ae4f3766a",
+        "5ed79767-4c5b-4043-a723-c206fd2c19e3",
         "7066df95-76fc-4575-bb05-41397e1addb5",
         "4795c1a0-d39f-4437-b9cf-8933c0998915",
         "1a861576-1b4c-4092-b99e-2f039ed29f26",
