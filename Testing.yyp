@@ -63,6 +63,14 @@
             }
         },
         {
+            "Key": "018fd9d6-40af-49b0-b98d-03f3cc470ecc",
+            "Value": {
+                "id": "2d54deeb-457b-47ac-bdd2-bd68d72014f5",
+                "resourcePath": "views\\018fd9d6-40af-49b0-b98d-03f3cc470ecc.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
             "Key": "01aa1b50-beaa-4420-a673-fd0193acb779",
             "Value": {
                 "id": "639b35d8-d821-4cbf-8ff3-856e7e8e0721",
@@ -639,6 +647,14 @@
             }
         },
         {
+            "Key": "19a38ad0-baa7-4cdc-a8c4-2f8a6325120d",
+            "Value": {
+                "id": "a809e955-a8df-4765-9c21-82fa31d89b80",
+                "resourcePath": "sprites\\sWarriorPortraitBattle\\sWarriorPortraitBattle.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "19f7c04c-6648-4b90-a78e-527ccb6c0fd5",
             "Value": {
                 "id": "71f1e1d5-a086-4bef-b605-f69cd819dd47",
@@ -836,6 +852,14 @@
                 "id": "970c7948-6044-4a8a-8866-487165843880",
                 "resourcePath": "scripts\/reach_tween\/reach_tween.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "208f4b2b-3dfd-4232-827f-2c0f1ea3263f",
+            "Value": {
+                "id": "9ea705f1-f63b-4f5b-bc83-512dfc53d7f4",
+                "resourcePath": "sprites\\sWarriorPortrait\\sWarriorPortrait.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -1076,6 +1100,14 @@
                 "id": "28515f15-8a34-4cb1-bd15-d88579d39591",
                 "resourcePath": "sounds\/snd_menu_confirm\/snd_menu_confirm.yy",
                 "resourceType": "GMSound"
+            }
+        },
+        {
+            "Key": "2d993ee4-dcc7-4d6c-8247-a3eaddbd2a5c",
+            "Value": {
+                "id": "372ad6ad-48a0-402c-aa71-102496c33e41",
+                "resourcePath": "sprites\\sWizardPortraitBattle\\sWizardPortraitBattle.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -1695,6 +1727,14 @@
             }
         },
         {
+            "Key": "4c8a06f0-3f51-4f63-bc7c-857517d70581",
+            "Value": {
+                "id": "444afce7-b767-421a-a413-858979527945",
+                "resourcePath": "sprites\\sWarriorBattlePortrait\\sWarriorBattlePortrait.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "4ce9a874-b69d-4afb-ad96-0e0e76576f98",
             "Value": {
                 "id": "98c20346-a336-4de0-9048-3e6546220e22",
@@ -1807,6 +1847,14 @@
             }
         },
         {
+            "Key": "50522aa1-7780-40bb-a721-d5a52af1d41b",
+            "Value": {
+                "id": "e3573d1d-ccaa-4373-84e9-098672ac2a7f",
+                "resourcePath": "sprites\\sWizardIdle\\sWizardIdle.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "50f729e0-38c7-4aa1-9de2-8836d3145b39",
             "Value": {
                 "id": "2a4a2025-0571-4672-85c7-64483303dfea",
@@ -1884,6 +1932,14 @@
                 "id": "409c9028-1d72-4d6c-802f-169cb3189015",
                 "resourcePath": "views\/52db4a42-54ef-4467-b4c4-412b78846f15.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "52efcc72-c81d-4e96-9c01-ff58000f4e01",
+            "Value": {
+                "id": "d5cfbb7e-65c4-4eb7-ba28-46e1ad76add9",
+                "resourcePath": "sprites\\sWizardBattlePortrait\\sWizardBattlePortrait.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -2439,6 +2495,14 @@
             }
         },
         {
+            "Key": "6aa2e8c8-13c8-47a5-b34f-0eaa36634f60",
+            "Value": {
+                "id": "c4f0e2cc-c085-4ada-91c9-0b281afba52e",
+                "resourcePath": "sprites\\sWizardPortrait\\sWizardPortrait.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "6b109209-03bf-4df9-8556-441c60c11192",
             "Value": {
                 "id": "8d86eaaa-5396-4c10-b9eb-0f3799e858a7",
@@ -2619,6 +2683,14 @@
             "Value": {
                 "id": "3ba378e6-4a52-45b3-91cb-7c288297b887",
                 "resourcePath": "sprites\/sFrontArmL\/sFrontArmL.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "7421d72a-5910-4f49-8aed-ff53e6fe9b84",
+            "Value": {
+                "id": "2e8a2c89-a13c-4034-b96c-583043068918",
+                "resourcePath": "sprites\\sWarriorAttacking\\sWarriorAttacking.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -3196,6 +3268,14 @@
                 "id": "2fa5d116-4d91-4fb0-a3d3-94819a064eac",
                 "resourcePath": "sprites\/sPotRadius\/sPotRadius.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "8d291b4c-9718-46e4-bca0-33ab5476b660",
+            "Value": {
+                "id": "35414a9e-6924-4896-860f-fa136cf26fc4",
+                "resourcePath": "views\\8d291b4c-9718-46e4-bca0-33ab5476b660.yy",
+                "resourceType": "GMFolder"
             }
         },
         {
@@ -4255,6 +4335,14 @@
             }
         },
         {
+            "Key": "b889ba4a-a2a8-4ecb-8b9b-4f8977fad6b7",
+            "Value": {
+                "id": "23a4c165-0fce-4b03-b863-787dab19095f",
+                "resourcePath": "sprites\\sWizardAttacking\\sWizardAttacking.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "b8cad260-b86f-43f7-a7a6-723057806ef9",
             "Value": {
                 "id": "991701be-5e45-4501-8ee0-2b9022485898",
@@ -5284,6 +5372,14 @@
                 "id": "6499fe86-55ba-4b2d-b973-694ba59487ab",
                 "resourcePath": "views\/e5d3f1c4-ff77-410e-a619-ad3107e45c5b.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "e61ab8c9-d973-4919-acc6-eec9fe2d05b0",
+            "Value": {
+                "id": "c85ca40c-eaa3-48d7-9f70-9d59fd728f5a",
+                "resourcePath": "sprites\\sWarriorIdle\\sWarriorIdle.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
