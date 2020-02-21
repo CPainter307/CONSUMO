@@ -11,7 +11,7 @@
 //}
 //one_way_platform_phase()
 
-//if place_meeting(phy_position_x, phy_position_y, oWall) {
+//if place_meeting(phy_position_x, phy_position_y, oCollidable) {
 //	apply_gravity = true
 //	//----------------------------------UNCOMMENT FOR LANDING SOUNDS
 ////	if play_hit_sound {

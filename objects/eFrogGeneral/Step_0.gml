@@ -34,7 +34,7 @@ if (phase == 1) {
 
 #region collision
 //collision
-if (!place_meeting(x,y+motiony,oWall))
+if (!place_meeting(x,y+motiony,oCollidable))
 {
 	//add gravity
 	motiony += grv;
@@ -56,8 +56,8 @@ if (!place_meeting(x,y+motiony,oWall))
 }
 
 //if the frog has touched the ground
-if(place_meeting(x, y+motiony, oWall)) { 
-	while(!place_meeting(x, y+sign(motiony), oWall)) {
+if(place_meeting(x, y+motiony, oCollidable)) { 
+	while(!place_meeting(x, y+sign(motiony), oCollidable)) {
 		y += sign(motiony);
 		shake = shake_duration
 	}
@@ -105,8 +105,8 @@ if (phase == 2) {
 		is_above = false;
 	}
 }
-if(place_meeting(x + motionx, y, oWall)) { 
-	while(!place_meeting(x + sign(motionx), y, oWall)) {
+if(place_meeting(x + motionx, y, oCollidable)) { 
+	while(!place_meeting(x + sign(motionx), y, oCollidable)) {
 		x += sign(motionx);
 	}
 	motionx = 0;

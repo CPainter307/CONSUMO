@@ -164,7 +164,7 @@ if held {
 	phy_active = true
 }
 
-//dont tip past 45 degrees
+//dont tip past 20 degrees
 if phy_rotation > 20 or phy_rotation < -20 {
 	overtipped = true
 }
@@ -174,5 +174,23 @@ if overtipped {
 		overtipped = false	
 	}
 }
+
 ds_list_destroy(vesselList)
 ds_list_destroy(campfireList)
+
+//collision with one way platforms
+var plat = collision_circle(x, y, 70, oOneWayPlatform, false, true)
+var wall = collision_circle(x, y, 70, oWall, false, true)
+
+if plat and !wall { // we're near the platform
+	physics_remove_fixture(self, my_fix)
+	physics_fixture_set_sensor(fix, false)
+	if floor(y + (sprite_get_height(sprite_index)/2) - 25) > plat.y { // we're right below the platform
+		physics_fixture_set_sensor(fix, true)
+	}
+	my_fix = physics_fixture_bind(fix, self)
+} else {
+	physics_remove_fixture(self, my_fix)
+	physics_fixture_set_sensor(fix, false)
+	my_fix = physics_fixture_bind(fix, self)
+}

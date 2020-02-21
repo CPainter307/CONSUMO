@@ -81,7 +81,7 @@ if (global.canMove) { //we can move
 		//moving
 		if on_floor {
 			if oPlayerInput.key_right { // moving right
-				if motionx == 0 and !place_meeting(1 + x, 0 + y, oWall)  { // fixes drawing a billion dust particles when holding a button into a wall
+				if motionx == 0 and !place_meeting(1 + x, 0 + y, oCollidable)  { // fixes drawing a billion dust particles when holding a button into a wall
 					var _dust_part = instance_create_layer(x, bbox_bottom, "BGLayer", oDustParticle)
 					_dust_part.sprite_index = sStartRunParticle
 					_dust_part.image_xscale = -1
@@ -94,7 +94,7 @@ if (global.canMove) { //we can move
 				}
 			}
 			if oPlayerInput.key_left { // moving left
-				if motionx == 0 and !place_meeting(1 + x, 0 + y, oWall)  {
+				if motionx == 0 and !place_meeting(1 + x, 0 + y, oCollidable)  {
 					var _dust_part = instance_create_layer(x, bbox_bottom, "BGLayer", oDustParticle)
 					_dust_part.sprite_index = sStartRunParticle
 					_dust_part.image_xscale = 1
@@ -210,16 +210,16 @@ up_slope = false;
 down_slope = false;
 //horizontal collision
 // TEMP SLOPE REMOVAL
-//if (place_meeting(x, y + 5, oWall) and !place_meeting(x + sign(motionx)*10, y + 1, oWall)) {
+//if (place_meeting(x, y + 5, oCollidable) and !place_meeting(x + sign(motionx)*10, y + 1, oCollidable)) {
 //		down_slope = true;
 //		on_floor = true
 //}	TEMP SLOPE REMOVAL
 
-if (place_meeting(x + motionx, y + 0, oWall)) {
+if (place_meeting(x + motionx, y + 0, oCollidable)) {
 	// TEMP SLOPE REMOVAL
-	//if (place_meeting(x, y + 5, oWall) and !place_meeting(x+motionx, y - abs(motionx), oWall)) {
+	//if (place_meeting(x, y + 5, oCollidable) and !place_meeting(x+motionx, y - abs(motionx), oCollidable)) {
 	//	dy = 0;
-	//		while place_meeting(x+motionx, y - dy, oWall) {
+	//		while place_meeting(x+motionx, y - dy, oCollidable) {
 	//			dy++;	
 	//		}
 	//		up_slope = true;
@@ -231,7 +231,7 @@ if (place_meeting(x + motionx, y + 0, oWall)) {
 	//else {  TEMP SLOPE REMOVAL
 		
 		var inst_list = ds_list_create();
-		instance_place_list(x+motionx, y, oWall, inst_list, false);
+		instance_place_list(x+motionx, y, oCollidable, inst_list, false);
 		for (i = 0; i < ds_list_size(inst_list); i++) {
 			var inst = inst_list[| i];
 			if (inst.active) {
@@ -242,7 +242,7 @@ if (place_meeting(x + motionx, y + 0, oWall)) {
 		}
 	
 		var any_active = false;
-		instance_place_list(x+motionx, y, oWall, inst_list, false);
+		instance_place_list(x+motionx, y, oCollidable, inst_list, false);
 		for (i = 0; i < ds_list_size(inst_list); i++) {
 			var inst = inst_list[| i];
 			if (inst.active) {
@@ -260,10 +260,10 @@ if (place_meeting(x + motionx, y + 0, oWall)) {
 
 
 //vertical collision
-if (place_meeting(0 + x, motiony + y, oWall) ) {
+if (place_meeting(0 + x, motiony + y, oCollidable) ) {
 	//if (!up_slope) {
 	var inst_list = ds_list_create();
-	instance_place_list(x, y+motiony, oWall, inst_list, false);
+	instance_place_list(x, y+motiony, oCollidable, inst_list, false);
 	for (i = 0; i < ds_list_size(inst_list); i++) {
 		var inst = inst_list[| i];
 		if (inst.active) {
@@ -280,7 +280,7 @@ if (place_meeting(0 + x, motiony + y, oWall) ) {
 		}
 	}
 	var any_active = false;
-	instance_place_list(x, y+motiony, oWall, inst_list, false);
+	instance_place_list(x, y+motiony, oCollidable, inst_list, false);
 	for (i = 0; i < ds_list_size(inst_list); i++) {
 		var inst = inst_list[| i];
 		if (inst.active) {
@@ -301,9 +301,9 @@ if (place_meeting(0 + x, motiony + y, oWall) ) {
 //}
 
 //corner collision (WIP)
-if (place_meeting(motionx + x, motiony + y, oWall)) {
+if (place_meeting(motionx + x, motiony + y, oCollidable)) {
 	var inst_list = ds_list_create();
-	instance_place_list(x+motionx, y+motiony, oWall, inst_list, false);
+	instance_place_list(x+motionx, y+motiony, oCollidable, inst_list, false);
 	for (i = 0; i < ds_list_size(inst_list); i++) {
 		var inst = inst_list[| i];
 		if (inst.active) {
@@ -315,7 +315,7 @@ if (place_meeting(motionx + x, motiony + y, oWall)) {
 	}
 	
 	var any_active = false;
-	instance_place_list(x+motionx, y+motiony, oWall, inst_list, false);
+	instance_place_list(x+motionx, y+motiony, oCollidable, inst_list, false);
 	for (i = 0; i < ds_list_size(inst_list); i++) {
 		var inst = inst_list[| i];
 		if (inst.active) {
@@ -339,7 +339,7 @@ y += motiony
 if (place_meeting(0 + x, 1 + y, oHazard)) game_restart();
 
 //animation (new)
-if (!place_meeting(0 + x, 2 + y, oWall)) {
+if (!place_meeting(0 + x, 2 + y, oCollidable)) {
 	on_floor = false;	
 }
 

@@ -70,7 +70,7 @@ if (global.canMove && instance_exists(oPlayer)) { //Temp crash fix
 			vy = lengthdir_y(spd,dir);
 		
 
-			if (instance_position(xx, yy, oWall)) {
+			if (instance_position(xx, yy, oCollidable)) {
 				empty = false;
 				//For some reason, the image speed has to be set to a really low value
 				//image_speed = 0.15; //Animates the reticle

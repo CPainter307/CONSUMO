@@ -1,0 +1,28 @@
+Converting GML script: ${project_dir}\scripts\scr_createPath\scr_createPath.gml
+Converted description /// @description This script creates a path to the target using A* pathfinding
+
+Converting GML script: ${project_dir}\objects\obj_control\Create_0.gml
+Converted description /// @description Settings
+
+Converting GML script: ${project_dir}\objects\obj_control\Draw_0.gml
+Converted description /// @description Draw items
+
+Converting GML script: ${project_dir}\objects\obj_pathRunner\Create_0.gml
+Converted description /// @description Settings
+
+Converting GML script: ${project_dir}\objects\obj_pathRunner\Step_0.gml
+Converted description /// @description Meat and potatoes
+Converted string - line 19: 'D' -> "D"
+Converted string - line 19: 'A' -> "A"
+Converted string - line 20: 'S' -> "S"
+Converted string - line 20: 'W' -> "W"
+
+Converting GML script: ${project_dir}\objects\obj_pathRunner\Draw_0.gml
+Converted description /// @description Draw items and path
+
+Converting GML script: ${project_dir}\objects\obj_obstacle\Create_0.gml
+Converted description /// @description Settings
+
+Added compatibility script 'instance/instance_create.gml'
+Added compatibility script 'object/object_get_depth.gml'
+Added compatibility script '__global_object_depths.gml'

@@ -29,65 +29,30 @@
     "overriddenProperties": null,
     "parentObjectId": "bc8152a0-b3e4-4b30-b47e-2341c16ab93e",
     "persistent": false,
-    "physicsAngularDamping": 100,
-    "physicsDensity": 1,
-    "physicsFriction": 20,
+    "physicsAngularDamping": 0.1,
+    "physicsDensity": 0.5,
+    "physicsFriction": 0.2,
     "physicsGroup": 0,
     "physicsKinematic": false,
-    "physicsLinearDamping": 0.5,
-    "physicsObject": true,
-    "physicsRestitution": 0,
+    "physicsLinearDamping": 0.1,
+    "physicsObject": false,
+    "physicsRestitution": 0.1,
     "physicsSensor": false,
-    "physicsShape": 2,
+    "physicsShape": 0,
     "physicsShapePoints": [
         {
-            "id": "b6171749-20c8-4e85-a9aa-aee8988ec41e",
-            "modelName": "GMPoint",
-            "mvc": "1.0",
-            "x": 16,
-            "y": 50
-        },
-        {
-            "id": "b207eeaf-87cc-4bac-a37e-e97e9ed8b5a5",
-            "modelName": "GMPoint",
-            "mvc": "1.0",
-            "x": 14,
-            "y": 36
-        },
-        {
-            "id": "55071ac3-7ee6-4fc4-bcf5-dfd59d6b0268",
+            "id": "03e4f8a6-4260-4d2b-8165-c09b945219a1",
             "modelName": "GMPoint",
             "mvc": "1.0",
             "x": 31,
-            "y": 23
+            "y": 31
         },
         {
-            "id": "5bffdb4c-ae75-4e40-8ab2-90de27e083c6",
+            "id": "069ba846-7d7e-4745-bf47-62101b66157d",
             "modelName": "GMPoint",
             "mvc": "1.0",
-            "x": 48,
-            "y": 36
-        },
-        {
-            "id": "9db4d1c7-02da-48bb-a979-e67ba4947f7a",
-            "modelName": "GMPoint",
-            "mvc": "1.0",
-            "x": 46,
-            "y": 50
-        },
-        {
-            "id": "86238aec-89a0-4cfd-83fe-e396079c8cc7",
-            "modelName": "GMPoint",
-            "mvc": "1.0",
-            "x": 43,
-            "y": 63
-        },
-        {
-            "id": "a73a878a-d162-4f55-a641-3eb9a7bfe1a7",
-            "modelName": "GMPoint",
-            "mvc": "1.0",
-            "x": 19,
-            "y": 63
+            "x": 7,
+            "y": 31
         }
     ],
     "physicsStartAwake": true,

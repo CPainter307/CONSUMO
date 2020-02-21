@@ -42,23 +42,24 @@ landSound = snd_object_land;
 
 steam = instance_create_layer(x, y-oPot.sprite_height, "Objects", oSteam);
 
-
-//var fix;
-
 fix = physics_fixture_create()
-////physics_fixture_set_circle_shape(fix, sprite_get_width(sPottyDormant) / 2)
-//physics_fixture_set_box_shape(fix, 1, 1)
-//physics_fixture_set_linear_damping(fix, 0)
-//physics_fixture_set_angular_damping(fix, 100000)
-//physics_fixture_set_friction(fix, 0.5)
-//physics_fixture_set_density(fix, 0.5);
-//physics_fixture_bind(fix, self)
-//physics_fixture_delete(fix)
+physics_fixture_set_polygon_shape(fix);
+physics_fixture_add_point(fix, 7, 23);
+physics_fixture_add_point(fix, 10, 12);
+physics_fixture_add_point(fix, 20, 12);
+physics_fixture_add_point(fix, 25, 23);
+physics_fixture_add_point(fix, 22, 32);
+physics_fixture_add_point(fix, 9, 32);
+physics_fixture_set_linear_damping(fix, 0)
+physics_fixture_set_angular_damping(fix, 1000000)
+physics_fixture_set_friction(fix, .4)
+physics_fixture_set_density(fix, 0.5);
+physics_fixture_set_sensor(fix, false)
+my_fix = physics_fixture_bind(fix, self)
 
-//phy_fixed_rotation = true;
-
-//physics_world_gravity(0, gravity_loc)
 apply_gravity = true
+
+physics_world_gravity(0, gravity_loc)
 
 mass = 270
 
@@ -79,6 +80,7 @@ overtipped = false
 //pick_up_timer = 0
 //pick_up_timer_max = 20
 cooking_progress = 0
+//phy_fixed_rotation = true
 
 
 outline_init()
