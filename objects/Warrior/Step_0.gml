@@ -2,27 +2,6 @@ event_inherited()
 //for cutscenes
 global.fightStarted = true;
 
-if keyboard_check_pressed(ord("S"))
-{
-     /// Reset all variable when we build a new path because enemy might be in path when we press S
-     speed_h = 0;
-     speed_v = 0;
-     if path_exists(path_building) {
-         //path_delete (path_building);
-     }
-     path_point = 0 ;
-     action = 0 ;
-     jump_action = 0 ;
-
-    scr_fill_the_grid(floor(x/oGrid.cell_width), floor(y/oGrid.cell_height), floor(oPlayer.x/oGrid.cell_width), floor(oPlayer.y/oGrid.cell_height));
-}
-
-// Follow the path if path exists
-if path_exists(path_building)
-{
-    scr_follow_the_path(path_building);
-}
-
 //controllable rogue (debug purposes)
 if global.in_control == object_index {
 	//scr_move_state()
