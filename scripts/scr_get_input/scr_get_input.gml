@@ -26,6 +26,10 @@ if(keyboard_check_pressed(ord("4"))) {
 	room_goto(rTransitionTest)	
 	
 }
+if(keyboard_check_pressed(ord("5"))) {
+	instance_destroy(oPlayer)
+	room_goto(rDebug)
+}
 
 if keyboard_check_pressed(ord("P")) {
 	if global.in_control == Warrior	{

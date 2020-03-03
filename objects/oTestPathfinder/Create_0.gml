@@ -15,3 +15,6 @@ speed_h = 0 ;
 action = 0 ;
 path_point = 0 ;
 jump_action = 0 ;
+
+jump_height = 7
+jump_width = 7

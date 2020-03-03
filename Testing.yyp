@@ -3551,6 +3551,14 @@
             }
         },
         {
+            "Key": "967fdeb0-cd5f-43c5-a206-75c814eb83dc",
+            "Value": {
+                "id": "19c1cfe2-cca3-4702-a902-36ccf2691aff",
+                "resourcePath": "rooms\\rDebug\\rDebug.yy",
+                "resourceType": "GMRoom"
+            }
+        },
+        {
             "Key": "96d292b5-c23d-4370-93c1-6b2321dcb026",
             "Value": {
                 "id": "12eb1113-936c-47c3-af58-1478b64a7db1",

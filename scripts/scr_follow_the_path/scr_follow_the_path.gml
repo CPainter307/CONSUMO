@@ -11,7 +11,6 @@ if action == 0 {
     } else {
         /// Check if the next point is horizontal jump / jump over a void.
         if path_get_point_y(argument0, path_point) == path_get_point_y(argument0, path_point+1) && path_get_point_x(argument0, path_point) + 2*oGrid.cell_width*path_direction == path_get_point_x(argument0, path_point+1) {
-	        show_message("test")
 			speed_h = max_speed * path_direction 
 	        speed_v = jump_height *0.7 
 	        action = 1
@@ -27,7 +26,7 @@ if action == 0 {
             } else {
                 /// Check if the next point is a diagonal jum /big jump
                 if path_get_point_x(argument0, path_point) == path_get_point_x(argument0, path_point+1)-oGrid.cell_width*2*path_direction && path_get_point_y(argument0, path_point) == path_get_point_y(argument0, path_point+1)+oGrid.cell_height {
-	                speed_h = max_speed * path_direction * 0.625 
+					speed_h = max_speed * path_direction * 0.625 
 	                speed_v = jump_height * 1.1 
 	                action = 1
                 } else {
