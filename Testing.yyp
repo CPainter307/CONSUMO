@@ -2103,6 +2103,14 @@
             }
         },
         {
+            "Key": "57dbf496-4c10-4c64-88e9-175ab9fbc0e2",
+            "Value": {
+                "id": "92e5ad34-70bb-432b-b604-61a614e2104d",
+                "resourcePath": "objects\\oBuffParticles\\oBuffParticles.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "57fa6eff-dff0-4978-b545-31225c005ba3",
             "Value": {
                 "id": "0c98e16b-3e7a-423f-a29a-4fd428e56ea9",
@@ -4543,6 +4551,14 @@
             }
         },
         {
+            "Key": "bcbc5d27-8bd3-4d9a-9331-458be650b740",
+            "Value": {
+                "id": "801bcb4f-d999-4d32-a2db-0245d0c74f4f",
+                "resourcePath": "scripts\\scr_emit_buff_particles\\scr_emit_buff_particles.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "bd99fbd9-bc0d-46fd-a0fa-1d5a850ad216",
             "Value": {
                 "id": "3b695451-b5d4-466d-944a-75b8830b6e63",
@@ -6189,7 +6205,8 @@
         "3704df46-3d6e-445c-ab04-1a136d30b2af",
         "5a1d4d76-584b-45ff-97cf-025d52a085ae",
         "fd39d9cc-f121-4ddf-83c3-9e80bf84714a",
-        "84a0bd2f-097f-404f-afc2-8dd433100afe"
+        "84a0bd2f-097f-404f-afc2-8dd433100afe",
+        "bcbc5d27-8bd3-4d9a-9331-458be650b740"
     ],
     "tutorial": ""
 }

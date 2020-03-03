@@ -1,34 +1,24 @@
 {
-    "id": "c71a70a7-88cf-4229-88ac-f69373397f2d",
+    "id": "57dbf496-4c10-4c64-88e9-175ab9fbc0e2",
     "modelName": "GMObject",
     "mvc": "1.0",
-    "name": "oPS",
+    "name": "oBuffParticles",
     "eventList": [
         {
-            "id": "95e76439-d9b2-4feb-8ae8-8e1889fa102a",
+            "id": "3f7a808e-c08f-4f14-9182-83dff50e75e7",
             "modelName": "GMEvent",
             "mvc": "1.0",
             "IsDnD": false,
             "collisionObjectId": "00000000-0000-0000-0000-000000000000",
             "enumb": 0,
             "eventtype": 0,
-            "m_owner": "c71a70a7-88cf-4229-88ac-f69373397f2d"
-        },
-        {
-            "id": "c53e2b58-d0a3-4133-9630-785bfcdf72d7",
-            "modelName": "GMEvent",
-            "mvc": "1.0",
-            "IsDnD": false,
-            "collisionObjectId": "00000000-0000-0000-0000-000000000000",
-            "enumb": 3,
-            "eventtype": 7,
-            "m_owner": "c71a70a7-88cf-4229-88ac-f69373397f2d"
+            "m_owner": "57dbf496-4c10-4c64-88e9-175ab9fbc0e2"
         }
     ],
     "maskSpriteId": "00000000-0000-0000-0000-000000000000",
     "overriddenProperties": null,
     "parentObjectId": "00000000-0000-0000-0000-000000000000",
-    "persistent": true,
+    "persistent": false,
     "physicsAngularDamping": 0.1,
     "physicsDensity": 0.5,
     "physicsFriction": 0.2,

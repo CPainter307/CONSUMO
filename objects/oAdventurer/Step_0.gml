@@ -99,3 +99,6 @@ if previousHealth > currentHealth { // took damage
 if (currentHealth <= 0) {
 	instance_destroy()
 }
+
+//emit proper particles
+scr_emit_buff_particles(attackTimer > 0, defenseTimer > 0, speedTimer > 0);
