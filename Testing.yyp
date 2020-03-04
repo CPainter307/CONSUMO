@@ -1671,6 +1671,14 @@
             }
         },
         {
+            "Key": "48763281-758c-442c-8f0e-510b092ff0fe",
+            "Value": {
+                "id": "0cc65b53-beda-495b-b87c-d4be08e4d2ad",
+                "resourcePath": "sprites\\sBowlBurnt\\sBowlBurnt.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "493ea248-e4f1-46ed-bc9a-b16b2f909bb3",
             "Value": {
                 "id": "fc22b2c5-c9ea-49f5-ae0a-c54c8897070c",
@@ -2039,6 +2047,14 @@
             }
         },
         {
+            "Key": "565bce88-cb20-4af4-b884-928c8b441376",
+            "Value": {
+                "id": "f23bff1c-9357-48b5-b005-8d92badf1e1a",
+                "resourcePath": "sprites\\sBrothBurnt\\sBrothBurnt.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "5666af01-5db4-4a52-87c4-97a5fe366a32",
             "Value": {
                 "id": "23dca332-989b-4e77-b1d6-63a713e7c915",
@@ -2139,6 +2155,14 @@
             "Value": {
                 "id": "3c9b8f8e-e679-4e7d-a649-e5131687203d",
                 "resourcePath": "sprites\/sBrownSoup\/sBrownSoup.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "5924acff-6388-4905-b053-9b7998aa1a4d",
+            "Value": {
+                "id": "b7cac39a-55d5-485f-bfee-85902d0d95ac",
+                "resourcePath": "sprites\\sToppingBurnt\\sToppingBurnt.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -5076,6 +5100,14 @@
                 "id": "d73eff2d-54cf-4ea4-9d0f-08aa65b17f13",
                 "resourcePath": "sprites\/sTargetPrepFall\/sTargetPrepFall.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "d3b76d55-0159-432e-ae0a-1edbec4c334f",
+            "Value": {
+                "id": "0ee7ff16-b109-4204-8fe1-b270f3dcef62",
+                "resourcePath": "views\\d3b76d55-0159-432e-ae0a-1edbec4c334f.yy",
+                "resourceType": "GMFolder"
             }
         },
         {

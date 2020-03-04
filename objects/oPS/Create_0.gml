@@ -87,3 +87,23 @@ global.pe_DefenseBuff = part_emitter_create(global.ps);
 global.pe_SpeedBuff = part_emitter_create(global.ps);
 
 #endregion
+
+#region BOWLS
+
+global.pt_BowlToss = part_type_create();
+part_type_shape(global.pt_BowlToss, pt_shape_pixel);
+part_type_sprite(global.pt_BowlToss, sBowlBurnt, 1, 0, 0);
+part_type_size(global.pt_BowlToss, 1, 1, 0, 0);
+part_type_scale(global.pt_BowlToss, 1, 1);
+part_type_orientation(global.pt_BowlToss, -350, 359, 9, 0, 0);
+part_type_color3(global.pt_BowlToss, 16777215, 16777215, 16777215);
+part_type_alpha3(global.pt_BowlToss, 1, 1, 0);
+part_type_blend(global.pt_BowlToss, 0);
+part_type_life(global.pt_BowlToss, 40, 40);
+part_type_speed(global.pt_BowlToss, 11, 11, 0, 0);
+part_type_direction(global.pt_BowlToss, 34, 144, 0, 0);
+part_type_gravity(global.pt_BowlToss, 0.50, 270);
+
+global.pe_BowlToss = part_emitter_create(global.ps);
+
+#endregion

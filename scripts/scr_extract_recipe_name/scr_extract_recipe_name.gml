@@ -47,23 +47,23 @@ if (inst.ing[1] == inst.ing[2]) {
 
 //apply names to oRecipe
 if (all_different) {
-	inst.name = ds_grid_get(item_grid, 6, 0) + " " + inst.ing[1] + " " + ds_grid_get(item_grid, 7, 2)
+	inst.name = inst.name + ds_grid_get(item_grid, 6, 0) + " " + inst.ing[1] + " " + ds_grid_get(item_grid, 7, 2)
 }
 
 if (two_same01) {
-	inst.name = ds_grid_get(item_grid, 6, 2) + " " + inst.ing[0]
+	inst.name = inst.name + ds_grid_get(item_grid, 6, 2) + " " + inst.ing[0]
 }
 
 if (two_same02) {
-	inst.name = ds_grid_get(item_grid, 6, 1) + " " + inst.ing[0]
+	inst.name = inst.name + ds_grid_get(item_grid, 6, 1) + " " + inst.ing[0]
 }
 
 if (two_same12) {
-	inst.name = ds_grid_get(item_grid, 6, 0) + " " + inst.ing[1]	
+	inst.name = inst.name + ds_grid_get(item_grid, 6, 0) + " " + inst.ing[1]	
 }
 
 if (all_same) {
-	inst.name = inst.ing[0]
+	inst.name = inst.name + inst.ing[0]
 }
 
 //last step - add "Soup" to the end and clear flags

@@ -11,7 +11,8 @@
         "b2ef074d-2a60-4943-b8b9-1489751a1ac9",
         "9d4b0af8-0bf7-47bd-87d0-20785121f065",
         "01b18ec8-2f90-4846-9acf-eb6ec0387e7d",
-        "c2969cac-dac3-431e-8636-bfce93870884"
+        "c2969cac-dac3-431e-8636-bfce93870884",
+        "d3b76d55-0159-432e-ae0a-1edbec4c334f"
     ],
     "filterType": "GMSprite",
     "folderName": "Layered Soups",
