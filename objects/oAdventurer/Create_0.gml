@@ -59,3 +59,7 @@ I_FRAME_LENGTH = 30
 i_frames = I_FRAME_LENGTH
 
 is_vulnerable = true
+
+path_building = noone
+
+walking_on = oCollidable

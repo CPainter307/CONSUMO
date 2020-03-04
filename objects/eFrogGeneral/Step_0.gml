@@ -1,11 +1,26 @@
 event_inherited()
 
+//change target
+for (var i = 0; i < ds_list_size(oParty.allAdventurers); i++) {
+	if instance_exists(ds_list_find_value(oParty.allAdventurers, i)) {
+		target = ds_list_find_value(oParty.allAdventurers, i)
+	}
+}
+
 //dont do anything if target is dead
 if !instance_exists(target) {
 	exit	
 }
 
+//change collision for one way platforms
+if target.walking_on == oOneWayPlatform {
+	collidable = oCollidable
+} else {
+	collidable = oWall	
+}
+
 motionx = 0;
+
 // If health remaining is 2/3 of the max
 if (currentHealth <= ((maxHealth / 3) * 2) && currentHealth > (maxHealth / 3)) {
 	phase = 2;
@@ -34,7 +49,7 @@ if (phase == 1) {
 
 #region collision
 //collision
-if (!place_meeting(x,y+motiony,oCollidable))
+if (!place_meeting(x,y+motiony,collidable))
 {
 	//add gravity
 	motiony += grv;
@@ -56,8 +71,8 @@ if (!place_meeting(x,y+motiony,oCollidable))
 }
 
 //if the frog has touched the ground
-if(place_meeting(x, y+motiony, oCollidable)) { 
-	while(!place_meeting(x, y+sign(motiony), oCollidable)) {
+if(place_meeting(x, y+motiony, collidable)) { 
+	while(!place_meeting(x, y+sign(motiony), collidable)) {
 		y += sign(motiony);
 		shake = shake_duration
 	}
@@ -105,8 +120,8 @@ if (phase == 2) {
 		is_above = false;
 	}
 }
-if(place_meeting(x + motionx, y, oCollidable)) { 
-	while(!place_meeting(x + sign(motionx), y, oCollidable)) {
+if(place_meeting(x + motionx, y, collidable)) { 
+	while(!place_meeting(x + sign(motionx), y, collidable)) {
 		x += sign(motionx);
 	}
 	motionx = 0;

@@ -5642,7 +5642,7 @@
             "Key": "f02e5b50-8c6f-417d-a4f8-c274ea9c729f",
             "Value": {
                 "id": "3e9b3ed9-f688-4590-b6db-9c677917a9d8",
-                "resourcePath": "objects\/Monk\/Monk.yy",
+                "resourcePath": "objects\\Rogue\\Rogue.yy",
                 "resourceType": "GMObject"
             }
         },

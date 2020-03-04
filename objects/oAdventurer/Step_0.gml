@@ -99,3 +99,35 @@ if previousHealth > currentHealth { // took damage
 if (currentHealth <= 0) {
 	instance_destroy()
 }
+
+// Follow the path if path exists
+if path_exists(path_building) {
+    scr_follow_the_path(path_building);
+}
+
+if !place_meeting(x, y+1, oCollidable) {
+	motiony = motiony + 10	
+} else {
+	if place_meeting(x, y+1, oOneWayPlatform) {
+		walking_on = oOneWayPlatform
+	} else {
+		walking_on = oCollidable
+	}
+}
+//Collision horizontal with object Collision
+if place_meeting(x+motionx, y, oCollidable) {
+    while !place_meeting(x+sign(motionx), y, oCollidable) {
+        x += sign(motionx);
+    }
+    motionx = 0;
+}
+x += motionx;
+
+// Collision vertical with object Collision
+if place_meeting(x, y+motiony, oCollidable) {
+    while !place_meeting(x, y+sign(motiony), oCollidable) {
+        y += sign(motiony);
+    }
+    motiony = 0;
+}
+y += motiony;
