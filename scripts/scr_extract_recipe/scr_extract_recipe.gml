@@ -113,6 +113,13 @@ switch (argument0) {
 		}
 	}
 
+//if the food was burnt, apply burnt sprite
+if (string_pos("Burnt", inst.name) != 0) {
+	inst.bowl_sprite = sBowlBurnt;
+	inst.broth_sprite = sBrothBurnt;
+	inst.topping_sprite = sToppingBurnt;
+}
+
 	
 //show recipe quality
 textDisappearTimer = 0;

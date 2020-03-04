@@ -1,6 +1,6 @@
 //mask_index = -1
 event_inherited()
-sprite_index = -1
+alarm[0] = 10
 active = true
 
 //var fix;

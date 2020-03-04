@@ -156,8 +156,8 @@ if oPlayerInput.key_throw || oPlayerInput.key_heavy_throw {
 				inst.defense = array_get(held_items[i], 5);
 				inst.spd = array_get(held_items[i], 6);
 				inst.ing = array_get(held_items[i], 7);
-				inst.bowl_sprite = array_get(held_items[i], 8);
-				inst.broth_sprite = array_get(held_items[i], 9);
+				inst.bowl_sprite = array_get(held_items[i], 9);
+				inst.broth_sprite = array_get(held_items[i], 8);
 				inst.topping_sprite = array_get(held_items[i], 10);
 			}
 			held_items[i] = noone;

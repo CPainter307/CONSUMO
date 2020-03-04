@@ -1,7 +1,7 @@
 {
     "id": "382f068e-37a7-4202-a00b-124af48abebf",
     "modelName": "GMExtension",
-    "mvc": "1.0",
+    "mvc": "1.2",
     "name": "A_Star_Pathfinding",
     "IncludedResources": [
         "Sprites\\spr_player",
@@ -28,6 +28,7 @@
     "copyToTargets": -1,
     "date": "2020-22-20 06:02:49",
     "description": "",
+    "exportToGame": true,
     "extensionName": "",
     "files": [
         
@@ -48,9 +49,12 @@
     "maccompilerflags": "",
     "maclinkerflags": "",
     "macsourcedir": "",
+    "options": null,
+    "optionsFile": "options.json",
     "packageID": "com.bojackstudios.AStartPathfinding",
     "productID": "ACBD3CFF4E539AD869A0E8E3B4B022DD",
     "sourcedir": "",
+    "supportedTargets": -1,
     "tvosProps": false,
     "tvosSystemFrameworkEntries": [
         

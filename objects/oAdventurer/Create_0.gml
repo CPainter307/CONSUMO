@@ -60,6 +60,17 @@ i_frames = I_FRAME_LENGTH
 
 is_vulnerable = true
 
+//Buff Particle Information
+alternate = false //used for double particle creation 
+partNum = 0 //used for triple particle creation. 0 = attack, 1 = defense, 2 = speed
+
+//Soup Particle Information
+lastBowl = sBowlBurnt
+
+
+
+
+
 path_building = noone
 
 walking_on = oCollidable

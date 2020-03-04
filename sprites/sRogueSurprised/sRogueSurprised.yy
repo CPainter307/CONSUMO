@@ -65,6 +65,6 @@
     "textureGroupId": "1225f6b0-ac20-43bd-a82e-be73fa0b6f4f",
     "type": 0,
     "width": 87,
-    "xorig": 73,
-    "yorig": 81
+    "xorig": 38,
+    "yorig": 62
 }

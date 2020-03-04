@@ -1,5 +1,9 @@
 current_recipe = instance_place(x, y, oRecipe)
-if current_recipe { 
+if current_recipe {
+	lastBowl = instance_place(x, y, oRecipe).bowl_sprite //still kinda weird for some reason
+	part_type_sprite(global.pt_BowlToss, lastBowl, 1, 0, 0);
+	part_emitter_burst(global.ps, global.pe_BowlToss, global.pt_BowlToss, 1);
+	part_emitter_region(global.ps, global.pe_BowlToss, x-8, x+8, y-8, y+8, ps_shape_rectangle, ps_distr_linear);
 	scr_adventurer_eat_recipe()	
 }
 
@@ -99,6 +103,10 @@ if previousHealth > currentHealth { // took damage
 if (currentHealth <= 0) {
 	instance_destroy()
 }
+
+//emit proper particles
+scr_emit_buff_particles(attackTimer > 0, defenseTimer > 0, speedTimer > 0);
+
 
 // Follow the path if path exists
 if path_exists(path_building) {
