@@ -21,23 +21,17 @@ if target.walking_on == oOneWayPlatform {
 
 motionx = 0;
 
-// If health remaining is 2/3 of the max
-if (currentHealth <= ((maxHealth / 3) * 2) && currentHealth > (maxHealth / 3)) {
+// If health remaining is half of the max
+if (currentHealth <= maxHealth / 2) {
 	phase = 2;
 	show_debug_message("Entered phase 2");
-	draw_text(x,y,"2");
 }
 
-// If health remaing is 1/3 of the max
-if (currentHealth <= (maxHealth / 3)) {
-	phase = 3;	
-	show_debug_message("Entered phase 3");
-	draw_text(x,y,"3");
-}
 ////////////////////////////////
 //Phase 1: Projectile behavior//
 ////////////////////////////////
 if (phase == 1) {
+	jumpWait = 300;
 	projectile_timer--
 	if projectile_timer <= 0 {
 		proj_hitbox = instance_create_layer(x, y-100, "Objects", oProjectile)
@@ -94,32 +88,44 @@ if (shake > 0) {
 	shake = 0	
 }
 //if our frog boi has been on the ground for 5 seconds, jump
-if (!falling && time == 300) {
+if (!falling && time >= jumpWait) {
 	time = 0;
 	motiony = -20;
 }
 
+////////////////
+//Phase 2: TBD//
+////////////////
 
-//////////////////////////////
-//Phase 2: Slamming behavior//
-//////////////////////////////
 if (phase == 2) {
-	if (motiony < 0 && is_above == false) {
-		if (x > target.x + sprite_width/2 && x < target.x - sprite_width/2) {
-			motionx = sign(target.x - x) * (abs(x - target.x)/(sprite_width)) *20 ;
+	jumpWait = 60;
+	if (instance_exists(oOneWayPlatform)) {
+		target = instance_nearest(x,y,oOneWayPlatform);
+		if (motiony < 0 && is_above == false) {
+			if (x > target.x + sprite_width/2 && x < target.x - sprite_width/2) {
+				motionx = sign(target.x - x) * (abs(x - target.x)/(sprite_width)) *20 ;
+			}
+			else {
+				motionx = sign(target.x - x) * 10;	
+			}
 		}
-		else {
-			motionx = sign(target.x - x) * 10;	
-		}
-	}
-	if (abs(x - target.x) < 10) {
-			is_above = true;
+		if (abs(x - target.x) < 10) {
+				is_above = true;
 			
+		}
+		else if ((target.x > x + sprite_width/2 || target.x < x - sprite_width/2)){
+			is_above = false;
+		}
+		if (place_meeting(x, y+1, oOneWayPlatform)) instance_destroy(target);
 	}
-	else if ((target.x > x + sprite_width/2 || target.x < x - sprite_width/2)){
-		is_above = false;
+	else {
+		jumpWait = 120;
+		if (motiony < 0 && !((xstart - 5) < x && (xstart + 5) > x)) {
+			motionx = sign(xstart - x) * 10;
+		}
 	}
 }
+
 if(place_meeting(x + motionx, y, collidable)) { 
 	while(!place_meeting(x + sign(motionx), y, collidable)) {
 		x += sign(motionx);

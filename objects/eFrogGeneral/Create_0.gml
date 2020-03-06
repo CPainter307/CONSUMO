@@ -1,4 +1,5 @@
 event_inherited()
+xstart = x;
 shake = 0;
 SHOOT_TIME = 400
 view_x = view_xport[0]
@@ -13,6 +14,7 @@ motiony = 0;
 motionx = 0;
 falling = false;
 time = 0;
+jumpWait = 300;
 
 phase = 1;
 
