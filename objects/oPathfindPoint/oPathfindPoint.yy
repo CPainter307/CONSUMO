@@ -1,33 +1,33 @@
 {
-    "id": "f02e5b50-8c6f-417d-a4f8-c274ea9c729f",
+    "id": "d46b25ed-9430-4029-8708-f7a497497941",
     "modelName": "GMObject",
     "mvc": "1.0",
-    "name": "Rogue",
+    "name": "oPathfindPoint",
     "eventList": [
         {
-            "id": "50255d5d-a84f-42c5-a533-fecc29cade34",
+            "id": "b24f5a8b-3de9-4197-8d2c-347203aafc47",
             "modelName": "GMEvent",
             "mvc": "1.0",
             "IsDnD": false,
             "collisionObjectId": "00000000-0000-0000-0000-000000000000",
             "enumb": 0,
             "eventtype": 0,
-            "m_owner": "f02e5b50-8c6f-417d-a4f8-c274ea9c729f"
+            "m_owner": "d46b25ed-9430-4029-8708-f7a497497941"
         },
         {
-            "id": "d5d48c87-e54a-4ceb-917d-7c43ce8f6a17",
+            "id": "b1ebd7dd-4464-4c26-adcf-6c65a7b30167",
             "modelName": "GMEvent",
             "mvc": "1.0",
             "IsDnD": false,
             "collisionObjectId": "00000000-0000-0000-0000-000000000000",
             "enumb": 0,
             "eventtype": 3,
-            "m_owner": "f02e5b50-8c6f-417d-a4f8-c274ea9c729f"
+            "m_owner": "d46b25ed-9430-4029-8708-f7a497497941"
         }
     ],
-    "maskSpriteId": "e61ab8c9-d973-4919-acc6-eec9fe2d05b0",
+    "maskSpriteId": "00000000-0000-0000-0000-000000000000",
     "overriddenProperties": null,
-    "parentObjectId": "a58ded2c-97b4-4b9b-93ec-8cca274f515e",
+    "parentObjectId": "00000000-0000-0000-0000-000000000000",
     "persistent": false,
     "physicsAngularDamping": 0.1,
     "physicsDensity": 0.5,
@@ -41,8 +41,10 @@
     "physicsShape": 1,
     "physicsShapePoints": null,
     "physicsStartAwake": true,
-    "properties": null,
+    "properties": [
+        
+    ],
     "solid": false,
-    "spriteId": "78a43033-c60d-4327-b1a0-a2c56ac3e780",
+    "spriteId": "00000000-0000-0000-0000-000000000000",
     "visible": true
 }

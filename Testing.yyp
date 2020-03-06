@@ -5119,6 +5119,14 @@
             }
         },
         {
+            "Key": "d46b25ed-9430-4029-8708-f7a497497941",
+            "Value": {
+                "id": "32a298bf-e3a9-449e-bd5e-a11b7376ec95",
+                "resourcePath": "objects\\oPathfindPoint\\oPathfindPoint.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "d49d19b1-5c8a-4263-bd72-e607985ebd18",
             "Value": {
                 "id": "023060ef-3c07-4732-b466-b6729382fc24",

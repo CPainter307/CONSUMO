@@ -67,10 +67,6 @@ partNum = 0 //used for triple particle creation. 0 = attack, 1 = defense, 2 = sp
 //Soup Particle Information
 lastBowl = sBowlBurnt
 
-
-
-
-
 path_building = noone
 
 walking_on = oCollidable

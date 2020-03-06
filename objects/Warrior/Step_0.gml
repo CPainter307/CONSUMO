@@ -4,7 +4,7 @@ global.fightStarted = true;
 
 //controllable rogue (debug purposes)
 if global.in_control == object_index {
-	scr_move_state()
+	//scr_move_state()
 }
 
 //check if dead
@@ -63,3 +63,8 @@ if (healthThisFrame > currentHealth)
 }
 
 healthThisFrame = currentHealth;
+
+// pathfinding
+var inst = instance_furthest(x, y, oPathfindPoint)
+x = lerp(x, inst.x, 0.1)
+y = lerp(y, inst.y, 0.1)
