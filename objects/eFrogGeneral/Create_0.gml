@@ -15,7 +15,7 @@ motionx = 0;
 falling = false;
 time = 0;
 jumpWait = 300;
-
+x_speed = 50;
 phase = 1;
 
 //AS IT STANDS RIGHT NOW, EVERYTHING BELOW THIS LINE HAS BEEN COPIED FROM eFrogEgg

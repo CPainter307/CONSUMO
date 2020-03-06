@@ -98,16 +98,21 @@ if (!falling && time >= jumpWait) {
 ////////////////
 
 if (phase == 2) {
+	if (motiony < 0) {
+		collidable = oWall;	
+	}
+	else {
+		collidable = oCollidable;	
+	}
 	jumpWait = 60;
 	if (instance_exists(oOneWayPlatform)) {
 		target = instance_nearest(x,y,oOneWayPlatform);
 		if (motiony < 0 && is_above == false) {
-			if (x > target.x + sprite_width/2 && x < target.x - sprite_width/2) {
-				motionx = sign(target.x - x) * (abs(x - target.x)/(sprite_width)) *20 ;
+			x_speed = abs(target.x - x) / 50;
+			if (x_speed < 20) {
+				x_speed = 20;
 			}
-			else {
-				motionx = sign(target.x - x) * 10;	
-			}
+			motionx = sign(target.x - x) * x_speed;
 		}
 		if (abs(x - target.x) < 10) {
 				is_above = true;
@@ -116,10 +121,12 @@ if (phase == 2) {
 		else if ((target.x > x + sprite_width/2 || target.x < x - sprite_width/2)){
 			is_above = false;
 		}
-		if (place_meeting(x, y+1, oOneWayPlatform)) instance_destroy(target);
+		if (place_meeting(x, y+1, oOneWayPlatform) && motiony > 0) {
+			instance_destroy(target);
+		}
 	}
 	else {
-		jumpWait = 120;
+		jumpWait = 90;
 		if (motiony < 0 && !((xstart - 5) < x && (xstart + 5) > x)) {
 			motionx = sign(xstart - x) * 10;
 		}
