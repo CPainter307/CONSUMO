@@ -13,10 +13,12 @@ if !instance_exists(target) {
 }
 
 //change collision for one way platforms
-if target.walking_on == oOneWayPlatform {
-	collidable = oCollidable
-} else {
-	collidable = oWall	
+if (phase != 2) {
+	if target.walking_on == oOneWayPlatform {
+		collidable = oCollidable
+	} else {
+		collidable = oWall	
+	} 
 }
 
 motionx = 0;
@@ -98,12 +100,9 @@ if (!falling && time >= jumpWait) {
 ////////////////
 
 if (phase == 2) {
-	if (motiony < 0) {
+
 		collidable = oWall;	
-	}
-	else {
-		collidable = oCollidable;	
-	}
+	
 	jumpWait = 60;
 	if (instance_exists(oOneWayPlatform)) {
 		target = instance_nearest(x,y,oOneWayPlatform);
@@ -123,6 +122,7 @@ if (phase == 2) {
 		}
 		if (place_meeting(x, y+1, oOneWayPlatform) && motiony > 0) {
 			instance_destroy(target);
+			motiony = 0;
 		}
 	}
 	else {
